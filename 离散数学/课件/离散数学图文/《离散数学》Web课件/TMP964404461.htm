@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>离散数学</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script>
+<!--
+lstart=200
+loop=true
+speed=350 
+pr_step=5 
+
+function makeObj(obj,nest){
+nest=(!nest) ? '':'document.'+nest+'.'
+this.css=(document.layers) ? eval(nest+'document.'+obj):eval(obj+'.style')
+    this.scrollHeight=document.layers?this.css.document.height:eval(obj+'.offsetHeight')
+    this.up=goUp
+this.obj = obj + "Object"
+eval(this.obj + "=this")
+return this
+}
+function goUp(speed){
+    if(parseInt(this.css.top)>-this.scrollHeight){
+        this.css.top=parseInt(this.css.top)-pr_step
+        setTimeout(this.obj+".up("+speed+")",speed)
+    }else if(loop) {
+        this.css.top=lstart
+        eval(this.obj+".up("+speed+")")
+    }
+}
+function slideInit(){
+    oSlide=makeObj('divNews','divCont')
+    oSlide.css.top=lstart
+    oSlide.up(speed)
+}
+onload=slideInit
+//-->
+</script> 
+</head>
+
+<body bgcolor="#000000" link="#CCCCCC" vlink="#CCCCCC" alink="#CCCCCC" background="Image/shoudi.gif">
+<div id="Layer1" style="position:absolute; left:208px; top:212px; width:499px; height:98px; z-index:1"><a href="Content.htm"><img src="IMAGE/lisanshuxue.gif" width="500" height="100" border="0"></a></div>
+<div id="Layer2" style="position:absolute; left:329px; top:293px; width:6px; height:301px; z-index:4"><img src="Image/shuxian.gif" width="7" height="335"></div>
+<div id="Layer3" style="position:absolute; left:301px; top:550px; width:260px; height:5px; z-index:5"><img src="Image/hengxian.gif" width="260" height="7"></div>
+<div id="Layer4" style="position:absolute; left:422px; top:584px; width:294px; height:27px; z-index:6"> 
+  <div align="center"> <font color="#FFFFFF" size="-1">建议使用800*600分辨率，IE4.0或以上版本浏览
+欢迎提出宝贵意见，有任何问题，请告知<a href="mailto:xjwang@bupt.edu.cn">王小捷</a></font> 
+  </div>
+</div>
+<div id="Layer7" style="position:absolute; left:566px; top:538px; width:192px; height:24px; z-index:7"><img src="Image/sanjiao.gif" width="204" height="25"></div>
+<div id="Layer6" style="position:absolute; left:513px; top:368px; width:96px; height:16px; z-index:8"> 
+  <script language="JavaScript1.2">
+
+var marqueewidth=250
+var marqueeheight=100
+var speed=3
+var marqueecontents='<font face="Arial"color="#C4644D"><strong><big><a href="content-0.htm">内容简介</a><br><br><a href="aim.htm">教学目的</a><br><br><a href="request.htm">教学要求<br><br><a href="timetable.htm">课时安排<br><br><a href="reference.htm">参考资料</a></big></strong></font>'
+
+if (document.all)
+document.write('<marquee direction="up" scrollAmount='+speed+' style="width:'+marqueewidth+';height:'+marqueeheight+'">'+marqueecontents+'</marquee>')
+
+function regenerate(){
+window.location.reload()
+}
+function regenerate2(){
+if (document.layers){
+setTimeout("window.onresize=regenerate",450)
+intializemarquee()
+}
+}
+
+function intializemarquee(){
+document.cmarquee01.document.cmarquee02.document.write(marqueecontents)
+document.cmarquee01.document.cmarquee02.document.close()
+thelength=document.cmarquee01.document.cmarquee02.document.height
+scrollit()
+}
+
+function scrollit(){
+if (document.cmarquee01.document.cmarquee02.top>=thelength*(-1)){
+document.cmarquee01.document.cmarquee02.top-=speed
+setTimeout("scrollit()",100)
+}
+else{
+document.cmarquee01.document.cmarquee02.top=marqueeheight
+scrollit()
+}
+}
+
+window.onload=regenerate2
+</script>
+  <font color="#CC99FF"> </font></div>
+<div id="Layer5" style="position:absolute; left:321px; top:29px; width:25px; height:252px; z-index:2"><img src="IMAGE/yuancheng-1.gif" width="25" height="254"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%" align="center">
+  <tr>
+    <td>
+      <div align="center"> </div>
+    </td>
+  </tr>
+</table>
+

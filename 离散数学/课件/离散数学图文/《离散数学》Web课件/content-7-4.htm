@@ -1,0 +1,163 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+.unnamed1 {  font-size: 9pt; line-height: 17pt}
+.unnamed2 {  font-size: 10pt; font-weight: bold}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" background="IMAGE/Di.gif">
+<table width="75%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> 
+      <p><a name="content-7-4"></a><span class="unnamed1">本节将介绍几种特殊图，包括：</span></p>
+      <p><span class="unnamed1"><a href="#content-7-4-1">平面图</a></span></p>
+      <p><span class="unnamed1"><a href="#content-7-4-2">二分图</a></span></p>
+      <p><span class="unnamed1"><a href="#content-7-4-3">树</a></span></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><a name="content-7-4-1"></a><span class="unnamed2">平面图</span></p>
+      <p><span class="unnamed1">预备概念：在一张纸上画图的图解时常常会发现，不仅需要允许各条边在交点上相交，而且还应允许各条边在某些点上相交。这样的点称为交叉点，而相交的边，说成是相互交叉的边。</span></p>
+      <p><span class="unnamed1">定义：在一个平面图上，如果能够画出<a href="content-7-1.htm#content-7-1-1-wuxiangtu">无向图</a> 
+        G 的图解，其中并没有任何交叉，则称图 G 是个平面图；否则，就是个非平面图。</span></p>
+      <p><span class="unnamed1">相关概念：<br>
+        </span><span class="unnamed1">1.设 <!-- #BeginLibraryItem "/Library/G-1.lbi" --><span class="unnamed1"><!-- #BeginLibraryItem "/Library/G1.lbi" --><img src="image/g1.GIF" width="22" height="29"><!-- #EndLibraryItem --> </span><!-- #EndLibraryItem -->和 
+        <!-- #BeginLibraryItem "/Library/G_2.lbi" --><span class="unnamed1"><img src="IMAGE/G-2.gif" width="21" height="23"></span><!-- #EndLibraryItem --> 
+        是两个<a href="content-7-1.htm#content-7-1-1-wuxiangtu">无向图</a>。如果 <!-- #BeginLibraryItem "/Library/G-1.lbi" --><span class="unnamed1"><!-- #BeginLibraryItem "/Library/G1.lbi" --><img src="image/g1.GIF" width="22" height="29"><!-- #EndLibraryItem --> </span><!-- #EndLibraryItem -->和 
+        <!-- #BeginLibraryItem "/Library/G_2.lbi" --><span class="unnamed1"><img src="IMAGE/G-2.gif" width="21" height="23"></span><!-- #EndLibraryItem --> 
+        是<a href="content-7-1.htm#content-7-1-3-tonggou">同构</a>的，或者是通过反复插入和(或)删除次数为二的结点，能够把 
+        <!-- #BeginLibraryItem "/Library/G-1.lbi" --><span class="unnamed1"><!-- #BeginLibraryItem "/Library/G1.lbi" --><img src="image/g1.GIF" width="22" height="29"><!-- #EndLibraryItem --> </span><!-- #EndLibraryItem -->和 
+        <!-- #BeginLibraryItem "/Library/G_2.lbi" --><span class="unnamed1"><img src="IMAGE/G-2.gif" width="21" height="23"></span><!-- #EndLibraryItem --> 
+        转化成同构的图，则称 <!-- #BeginLibraryItem "/Library/G-1.lbi" --><span class="unnamed1"><!-- #BeginLibraryItem "/Library/G1.lbi" --><img src="image/g1.GIF" width="22" height="29"><!-- #EndLibraryItem --></span><!-- #EndLibraryItem --> 
+        和 <!-- #BeginLibraryItem "/Library/G_2.lbi" --><span class="unnamed1"><img src="IMAGE/G-2.gif" width="21" height="23"></span><!-- #EndLibraryItem --> 
+        在次数为二的结点内是同构的。<br>
+        </span><span class="unnamed1">2.多边形的图的归纳法定义如下：一个多边形是个多边形的图。设 G=&lt;V,E&gt; 
+        是个多边形的图，再设 P=<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/u1.lbi" --><span class="unnamed1"><img src="IMAGE/u1.gif" width="16" height="23"></span><!-- #EndLibraryItem -->，<!-- #BeginLibraryItem "/Library/u2.lbi" --><span class="unnamed1"><img src="IMAGE/u2.gif" width="19" height="23"></span><!-- #EndLibraryItem -->...<!-- #BeginLibraryItem "/Library/ul-1.lbi" --><span class="unnamed1"><img src="IMAGE/ul-1.gif" width="25" height="24"></span><!-- #EndLibraryItem -->，<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --> 
+        是条长度为 l<!-- #BeginLibraryItem "/Library/dayudengyu.lbi" --><span class="unnamed1"><img src="IMAGE/dayudengyu.gif" width="13" height="16"></span><!-- #EndLibraryItem -->1 
+        的任何<a href="content-7-1#content-7-1-1-wuxiangtu">基本路径</a>，它不与图 G 中任一路径交叉，且有 
+        <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->V，但是对于 
+        n=1,2,...,l-1 来说 <!-- #BeginLibraryItem "/Library/un.lbi" --><span class="unnamed1"><img src="IMAGE/un.gif" width="19" height="24"></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/bushuyu.lbi" --><img src="image/bushuyu.gif" width="18" height="23"><!-- #EndLibraryItem -->V，于是，由图 
+        G 和 P 所构成的图 G'=&lt;V',E'&gt; 也是一个多边形的图，其中的</span></p>
+      <p><span class="unnamed1">V'=V<!-- #BeginLibraryItem "/Library/bing.lbi" --><img src="image/bing.gif" width="22" height="28"><!-- #EndLibraryItem -->{<!-- #BeginLibraryItem "/Library/u1.lbi" --><span class="unnamed1"><img src="IMAGE/u1.gif" width="16" height="23"></span><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/u2.lbi" --><span class="unnamed1"><img src="IMAGE/u2.gif" width="19" height="23"></span><!-- #EndLibraryItem -->,...,<!-- #BeginLibraryItem "/Library/ul-1.lbi" --><span class="unnamed1"><img src="IMAGE/ul-1.gif" width="25" height="24"></span><!-- #EndLibraryItem -->}, 
+        E' =E<!-- #BeginLibraryItem "/Library/bing.lbi" --><img src="image/bing.gif" width="22" height="28"><!-- #EndLibraryItem --> 
+        {{<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/u1.lbi" --><span class="unnamed1"><img src="IMAGE/u1.gif" width="16" height="23"></span><!-- #EndLibraryItem -->},{<!-- #BeginLibraryItem "/Library/u1.lbi" --><span class="unnamed1"><img src="IMAGE/u1.gif" width="16" height="23"></span><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/u2.lbi" --><span class="unnamed1"><img src="IMAGE/u2.gif" width="19" height="23"></span><!-- #EndLibraryItem -->},...,{<!-- #BeginLibraryItem "/Library/ul-1.lbi" --><span class="unnamed1"><img src="IMAGE/ul-1.gif" width="25" height="24"></span><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->}} 
+        </span></p>
+      <p><span class="unnamed1">多边形的图是个平面图(或<a href="content-7-1.htm#content-7-1-1-duochongbiantu">多重边图</a>，因为允许长度为二的循环存在)，它能够把平面划分成数个区域，每一个区域都是由一个多边形定界。<br>
+        3.包含有多边形的图 G 的所有的面的边界的多边形，称为 G 的极大<a href="content-7-1.htm#content-7-1-3-jibenxunhuan">基本循环</a>。<br>
+        4.如果图 G 的两个面共有一条边，则称这样的两个面是邻接的面。<br>
+        </span><span class="unnamed1">5.如果多边形的<a href="content-7-1.htm#content-7-1-1-wuxiangtu">无向图</a> 
+        G 的对偶 G* 同构于 G，则称 G 是自对偶图。<br>
+        </span><span class="unnamed1">6.性质：设 G=&lt;V,E&gt; 是个具有 k 个面(包含无限面)的 (n,m) 
+        多边形的平面图，则 n-m+k=2。</span></p>
+      <p><span class="unnamed1"><a href="#content-7-4">返回</a></span></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><a name="content-7-4-2"></a><span class="unnamed2">二分图</span></p>
+      <p><span class="unnamed1">定义：给定一个<a href="content-7-1.htm#content-7-1-1-wuxiangtu">无向图</a> 
+        G=&lt;V,E&gt;，且有<!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/shuyu_zhenziji.lbi" --><img src="image/shuyu_zhenziji.gif" width="23" height="18"><!-- #EndLibraryItem -->V 
+        和 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/shuyu_zhenziji.lbi" --><img src="image/shuyu_zhenziji.gif" width="23" height="18"><!-- #EndLibraryItem -->V。如果能够把 
+        G 中的每一条边都表示成 x=&lt;<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->&gt;，且有 
+        <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        和 <!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem -->，则势必将把结点集合 
+        V 划分成子集 <!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        和 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem -->：<br>
+        </span><span class="unnamed1">(a)具有结点子集 <!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        和 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem --> 
+        的<a href="content-7-1.htm#content-7-1-1-wuxiangtu">无向图</a> G，通常称为偶图或二分图；<br>
+        </span><span class="unnamed1">(b)集合<!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        和 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem -->，称为图 
+        G 的互补结点子集。</span></p>
+      <p><span class="unnamed1">显然，二分图 G 的每一条边都<a href="content-6-2-3.htm#content-6-2-3-tonggou">连通</a> 
+        <!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        中的某一个结点与 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem --> 
+        中的每一个结点。</span></p>
+      <p class="unnamed1">相关概念：<br>
+        <span class="unnamed1">设 G=&lt;V,E&gt; 是个具有互补结点子集 <!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        和 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem --> 
+        的二分图，其中的 <!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem -->={<!-- #BeginLibraryItem "/Library/v1.lbi" --><img src="IMAGE/v1.gif" width="16" height="23"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/v2.lbi" --><img src="IMAGE/v2.gif" width="17" height="23"><!-- #EndLibraryItem -->,...,<!-- #BeginLibraryItem "/Library/vq.lbi" --><span class="unnamed1"><img src="IMAGE/vq.gif" width="17" height="25"></span><!-- #EndLibraryItem -->}，再设 
+        <!-- #BeginLibraryItem "/Library/v1.lbi" --><img src="IMAGE/v1.gif" width="16" height="23"><!-- #EndLibraryItem -->',<!-- #BeginLibraryItem "/Library/v2.lbi" --><img src="IMAGE/v2.gif" width="17" height="23"><!-- #EndLibraryItem -->',...,<!-- #BeginLibraryItem "/Library/vq.lbi" --><span class="unnamed1"><img src="IMAGE/vq.gif" width="17" height="25"></span><!-- #EndLibraryItem -->'是子集<!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem -->中的 
+        q 个不同的元素。于是由 q 条边 {<!-- #BeginLibraryItem "/Library/v1.lbi" --><img src="IMAGE/v1.gif" width="16" height="23"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/v1.lbi" --><img src="IMAGE/v1.gif" width="16" height="23"><!-- #EndLibraryItem -->'},{<!-- #BeginLibraryItem "/Library/v2.lbi" --><img src="IMAGE/v2.gif" width="17" height="23"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/v2.lbi" --><img src="IMAGE/v2.gif" width="17" height="23"><!-- #EndLibraryItem -->'},...,{<!-- #BeginLibraryItem "/Library/vq.lbi" --><span class="unnamed1"><img src="IMAGE/vq.gif" width="17" height="25"></span><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vq.lbi" --><span class="unnamed1"><img src="IMAGE/vq.gif" width="17" height="25"></span><!-- #EndLibraryItem -->'}所构成的 
+        G 的一个子图称为从 <!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem --> 
+        的匹配。</span></p>
+      <p><span class="unnamed1">相关性质：<br>
+        </span><span class="unnamed1">定理1：<a href="#content-7-1-1-wuxiangtu">无向图</a> 
+        G=&lt;V,E&gt; 中的所有<a href="content-6-2-3.htm#content-6-2-3-tonggou">循环</a>的长度都为偶数,当且仅当 
+        G 是一个二分图。<br>
+        </span><span class="unnamed1">定理2：设 G=&lt;V,E&gt; 是一个二分图，它具有互补结点子集 <!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        和 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem -->，于是对于 
+        k=1,2,...,#<!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --></span><span class="unnamed1">来说，<!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        中的每 k 个结点至少<a href="content-7-1.htm#content-7-1-3-jibenlujing">连通</a> 
+        <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem --> 
+        中的 k 个结点，当且仅当 G 中有一个从 <!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem --> 
+        的匹配。这个条件通常称为相异性条件。<br>
+        </span><span class="unnamed1">定理3：设 G=&lt;V,E&gt; 是一个无向二分图，它具有互补结点子集 <!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        和 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem -->。对于 
+        t 是大于 0 的整数来说，如果：<br>
+        </span><span class="unnamed1">(a)<!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        中的每一个结点，至少有 t 条与其相联系的边；<br>
+        </span><span class="unnamed1">(b)<!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem --> 
+        中的每一个结点，至少有t条与其相联系的边；<br>
+        </span><span class="unnamed1">则 G 必定有从 <!-- #BeginLibraryItem "/Library/V_1.lbi" --><span class="unnamed1"><img src="IMAGE/V%201.gif" width="23" height="24"></span><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/V_2.lbi" --><span class="unnamed1"><img src="IMAGE/V_2.gif" width="19" height="23"></span><!-- #EndLibraryItem --> 
+        的匹配。</span></p>
+      <p><span class="unnamed1"><a href="#content-7-4">返回</a></span></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p class="unnamed2"><a name="content-7-4-3"></a>树</p>
+      <p><span class="unnamed1">定义：设 T=&lt;V,E&gt; 是一个 <a href="content-7-1.htm#content-7-1-4-liantong">连通</a> 
+        <a href="content-7-1.htm#content-7-1-1-wuxiangtu">无向图</a>，如果 T 中没有任何<a href="content-7-1.htm#content-7-1-3-xunhuan">循环</a>，则称 
+        T 是棵树。</span></p>
+      <p><span class="unnamed1">相关概念：<br>
+        设 F 是一个没有<a href="content-7-1.htm#content-7-1-3-xunhuan">循环</a>的<a href="content-7-1.htm#content-7-1-1-wuxiangtu">无向图</a>。如果 
+        F 中的每一个分图都是一棵树，则称 F 是个森林。<br>
+        一棵有向树是一个没有任何循环的<a href="content-7-1.htm#content-7-1-1-youxiangtu">有向图</a>，其中的一个结点的<a href="content-7-1.htm#content-7-1-1-rudu">入度</a>为零，并称它为树的根，而其余的所有结点的<a href="content-7-1.htm#content-7-1-1-rudu">入度</a>都为一。<br>
+        每一棵有向树都必定至少有一个结点。一个孤立的结点，也是一棵有向树。<br>
+        在有向树中，<a href="content-7-1.htm#content-7-1-1-chudu">出度</a>为零的结点称为终止结点或叶；其他<a href="content-7-1.htm#content-7-1-1-rudu">入度</a>和<a href="content-7-1.htm#content-7-1-1-chudu">出度</a>都不为零的结点称为分支结点；任何结点的级是从树根出发的<a href="content-7-1.htm#content-7-1-3-lujing">路径</a>长度。<br>
+        在一棵有向树中，在每一级上如果都给各结点指定好次序，则这样的树称为有序树。<br>
+        在有向树中，如果：<br>
+        (a)如果每一个结点的<a href="content-7-1.htm#content-7-1-1-chudu">出度</a>都小于或等于 
+        m，则称这种树为 m 元树；<br>
+        </span><span class="unnamed1">(b)如果每一个结点的<a href="content-7-1.htm#content-7-1-3-xunhuan">出度</a>都等于 
+        m 或者等于 0，则称这种树为完全 m 元树。<br>
+        </span><span class="unnamed1">在m元树中，如果给任何结点的 m 个(或少于 m 个)子辈，都分别指定好 m 个不同的固定位置，则称这样的树是位置 
+        m 元树。<br>
+        </span><span class="unnamed1">当 m=2 时的 m 元树和完全 m 元树分别称为二元树和完全二元树。</span></p>
+      <p><span class="unnamed1"><span class="unnamed1">相关性质：</span><br>
+        <span class="unnamed1">性质</span>1：在有向树中，所有的<a href="content-7-1.htm#content-7-1-3-lujing">路径</a>都是<a href="content-7-1.htm#content-7-1-3-jibenlujing">基本路径</a>。因为有向树中没有任何<a href="content-7-1.htm#content-7-1-3-xunhuan">循环</a>，左翼从其中的任何结点到另外一个结点如果存在<a href="content-7-1.htm#content-7-1-3-lujing">路径</a>的话，则路径的长度就是这两个结点间的距离。因此，有向树的根的级为零；任何结点的级等于从根到该结点的距离。<br>
+        <span class="unnamed1">性质</span>2：设 T=&lt;V,E&gt; 是一棵树，并且有任意不同的结点 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->V，于是应有：<br>
+        </span><span class="unnamed1">(a)仅有一条<a href="content-7-1.htm#content-7-1-3-jibenlujing">基本路径</a>连通结点<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->和<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->；<br>
+        </span><span class="unnamed1">(b)如果给树 T 附加上一条边{<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->}，则由此而构成的图仅有一个<a href="content-7-1.htm#content-7-1-3-jibenxunhuan">基本循环</a>。<br>
+        </span><span class="unnamed1"><span class="unnamed1">性质</span>3：在一棵 (n,m) 
+        树中，应有 m=n-1。<br>
+        </span><span class="unnamed1"><span class="unnamed1">性质</span>4：二元树的每一个结点 
+        v 都至多有两棵子树，它们分别称作 v 的左子树和右子树。如果结点 v 仅有一棵子树，则称它是左子树或右子树均可。在二元树的图解中，结点 v 
+        的左子树应画在 v 的左下方，结点 v 的右子树应画在 v 的右下方。</span></p>
+      <p><span class="unnamed1"><a href="#content-7-4">返回</a></span></p>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>
+

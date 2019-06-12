@@ -1,0 +1,80 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+.unnamed1 {  font-size: 9pt; line-height: 17pt}
+.unnamed2 {  font-size: 10pt; font-weight: bold}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" background="IMAGE/Di.gif">
+<table width="75%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td> 
+      <p class="unnamed1"><a name="content-7-2"></a>本节介绍图的两种矩表示方法，它们分别是：</p>
+      <p class="unnamed1"><a href="#content-7-2-1">邻接矩阵</a></p>
+      <p class="unnamed1"><a href="#content-7-2-2">可达性矩阵</a></p>
+      <p class="unnamed1">两种表示方法具有内在的联系，可以互相转化。</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p class="unnamed2"><a name="content-7-2-1"></a>邻接矩阵</p>
+      <p><span class="unnamed1">定义1：设 G=&lt;V,E&gt; 是一个<a href="content-7-1.htm#content-7-1-1-jiandantu">简单</a> 
+        <a href="content-7-1.htm#content-7-1-1-youxiangtu">有向图</a>，其中的结点集合 V= 
+        <!-- #BeginLibraryItem "/Library/v juzhen.lbi" --><span class="unnamed1"><img src="IMAGE/v%20juzhen.gif" width="85" height="24"></span><!-- #EndLibraryItem --> 
+        ，并且假定各结点已经有了从结点 <!-- #BeginLibraryItem "/Library/v1.lbi" --><img src="IMAGE/v1.gif" width="16" height="23"><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/vn.lbi" --><img src="IMAGE/vn.gif" width="17" height="24"><!-- #EndLibraryItem --> 
+        的次序。试定义一个 n<!-- #BeginLibraryItem "/Library/CHENG.lbi" --><img src="image/cheng%20.GIF" width="12" height="12"><!-- #EndLibraryItem -->n 
+        的矩阵 A，使得其中的元素：<br>
+        </span><span class="unnamed1"><!-- #BeginLibraryItem "/Library/aij.lbi" --><span class="unnamed1"><img src="IMAGE/aij.gif" width="20" height="25"></span><!-- #EndLibraryItem --> 
+        = 1 当&lt;<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->&gt;<!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->E 
+        <br>
+        </span><span class="unnamed1"><!-- #BeginLibraryItem "/Library/aij.lbi" --><span class="unnamed1"><img src="IMAGE/aij.gif" width="20" height="25"></span><!-- #EndLibraryItem --> 
+        = 0 当&lt;<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->&gt;<!-- #BeginLibraryItem "/Library/bushuyu.lbi" --><img src="image/bushuyu.gif" width="18" height="23"><!-- #EndLibraryItem -->E<br>
+        </span><span class="unnamed1">则称这样的矩阵 A 是图 G 的邻接矩阵。</span></p>
+      <p><span class="unnamed1">相关概念：<br>
+        元素或为 0 或为 1 的任何矩阵，都称为比特矩阵或布尔矩阵。</span></p>
+      <p><span class="unnamed1">定理1：设 G=&lt;V,E&gt; 是一个<a href="content-7-1.htm#content-7-1-1-jiandantu">简单</a> 
+        <a href="content-7-1.htm#content-7-1-1-youxiangtu">有向图</a>，并且 A 是 G 的邻接矩阵，对于 
+        m=1,2,3,...来说，矩阵 <!-- #BeginLibraryItem "/Library/A de m cimi.lbi" --><span class="unnamed1"><img src="IMAGE/A%20de%20m%20cimi.gif" width="24" height="20"></span><!-- #EndLibraryItem --></span><span class="unnamed1">中的 
+        (i,j) 元素的值，等于从 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --> 
+        长度为 m 的<a href="content-7-1.htm#content-7-1-3-lujing">路径</a>数目。</span></p>
+      <p class="unnamed1"><a href="#content-7-2">返回</a></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><a name="#content-7-2-2"></a><span class="unnamed2">可达性矩阵</span></p>
+      <p><span class="unnamed1">给定一个<a href="content-7-1.htm#content-7-1-1-jiandantu">简单</a> 
+        <a href="content-7-1.htm#content-7-1-1-youxiangtu">有向图</a> G=&lt;V,E&gt; 
+        其中 #V=n，并且假定 G 中的各结点是有序的。定义一个 n<!-- #BeginLibraryItem "/Library/CHENG.lbi" --><img src="image/cheng%20.GIF" width="12" height="12"><!-- #EndLibraryItem -->n 
+        的<a href="content-7-1.htm#content-7-1-3-lujing">路径</a>矩阵P,使得其元素为</span></p>
+      <p><span class="unnamed1"><!-- #BeginLibraryItem "/Library/pij.lbi" --><span class="unnamed1"><img src="IMAGE/pij.gif" width="21" height="25"></span><!-- #EndLibraryItem -->=1， 
+        如果从 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --> 
+        至少存在一条<a href="content-7-1.htm#content-7-1-3-lujing">路径</a>；.</span></p>
+      <p><span class="unnamed1"><!-- #BeginLibraryItem "/Library/pij.lbi" --><span class="unnamed1"><img src="IMAGE/pij.gif" width="21" height="25"></span><!-- #EndLibraryItem -->=0， 
+        如果从 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --> 
+        不存在任何<a href="content-7-1.htm#content-7-1-3-lujing">路径</a>。</span></p>
+      <p><a href="#content-7-2" class="unnamed1">返回</a> </p>
+      <p>&nbsp;</p>
+</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<p>&nbsp; </p>
+</body>
+</html>
+

@@ -1,0 +1,186 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+.unnamed2 {  font-size: 10pt; font-weight: bold}
+.unnamed1 {  font-size: 9pt; line-height: 17pt}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" background="IMAGE/Di.gif">
+<p>&nbsp;</p>
+<table width="85%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td> 
+      <p class="unnamed1"><a name="content-7-1"></a>本节的内容分为四个知识点，它们一起组成了本节循续渐进的四个部分。这四个部分分别是：</p>
+      <p class="unnamed1"><a href="#content-7-1-1">图的基本定义和一些基本概念</a></p>
+      <p class="unnamed1"><a href="#content-7-1-2">子图与图的同构</a></p>
+      <p class="unnamed1"><a href="#content-7-1-3">路径和循环</a></p>
+      <p class="unnamed1"><a href="#content-7-1-4">图的连通性</a></p>
+      <p class="unnamed1">&nbsp;</p>
+      <p class="unnamed1">&nbsp;</p>
+      <p class="unnamed1">&nbsp;</p>
+      <p class="unnamed1">&nbsp;</p>
+      <p class="unnamed1">&nbsp;</p>
+      <p class="unnamed1">&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><span class="unnamed2"><a name="#content-7-1-1"></a>图的基本定义和一些基本概念</span>:</p>
+      <p class="unnamed1">本部分先给出图的形式化定义，然后分结点、边和图介绍基本概念，最后给出一个量化的结点数和边数的关系。</p>
+      <p><span class="unnamed1">定义：称 G=&lt;V,E,<!-- #BeginLibraryItem "/Library/fai.lbi" --><img src="IMAGE/fai.gif" width="13" height="21"><!-- #EndLibraryItem -->&gt; 
+        为图，若其中<br>
+        </span><span class="unnamed1">(1)V={<!-- #BeginLibraryItem "/Library/v1.lbi" --><img src="IMAGE/v1.gif" width="16" height="23"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/v2.lbi" --><img src="IMAGE/v2.gif" width="17" height="23"><!-- #EndLibraryItem -->,...,<!-- #BeginLibraryItem "/Library/vn.lbi" --><img src="IMAGE/vn.gif" width="17" height="24"><!-- #EndLibraryItem -->}是个有限非空的结点集合，常称为 
+        G 的结点集合。<br>
+        </span><span class="unnamed1"> (2)E 是 G 的有限的边集合。<br>
+        </span><span class="unnamed1">(3)<!-- #BeginLibraryItem "/Library/fai.lbi" --><img src="IMAGE/fai.gif" width="13" height="21"><!-- #EndLibraryItem --> 
+        是从边集合 E 到 V 中的有序或无序的元素偶集合的映射</span></p>
+      <p><span class="unnamed1">有关<span class="unnamed2">结点</span>的几个基本概念：<br>
+        1 由一条边联接起来的任何结点偶对,称为邻接结点.<br>
+        2 设 G=&lt;V,E&gt; 是一个图,并且 x<!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->E 
+        是一条有向边，它与有序偶&lt;<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->&gt;相关联，亦即 
+        x=&lt;<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->&gt;。于是,可以把边 
+        x<!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->E 
+        说成是起始于结点<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->，终止于结点<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->。与此相对应，把结点 
+        <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->称为边 
+        x 的起始结点或始点；把结点<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->称为边 
+        x 的终止结点或终点。<br>
+        3 在有向图 G=&lt;V,E&gt; 中,对于任何结点 v<!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->V 
+        来说，以结点 v 为始点的边的条数。称为结点 v 的引出次数或<span class="unnamed2"><a name="content-7-1-1-chudu"></a>出度</span>；以结点 
+        v 为终点的边数，称为结点 v 的引入次数或<a name="content-7-1-1-rudu"></a><span class="unnamed2">入度</span>。结点 
+        v 的引入次数与引出次数之和，称为结点 v 的次数或度数，并记作 deg(v)。<br>
+        4 在无向图 G=&lt;V,E&gt;中，结点 v<!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->V 
+        的次数或度数，等于与结点 v 相联系的边数，也记作deg(v)。 显然孤立结点的次数为零。</span></p>
+      <p class="unnamed1">&nbsp;</p>
+      <p class="unnamed1">有关<span class="unnamed2">边</span>的几个基本概念：<br>
+        <span class="unnamed1">1 在图 G=&lt;V,E&gt;中,与 V<!-- #BeginLibraryItem "/Library/CHENG.lbi" --><img src="image/cheng%20.GIF" width="12" height="12"><!-- #EndLibraryItem -->V 
+        中的有序偶相联系的边 x=&lt;<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->&gt;,称为图 
+        G 的有向边</span>；而<span class="unnamed1">与 V 中的结点的无序偶对相关联的边 x=&lt;<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->&gt;,称为图 
+        G 的无向边</span>。<br>
+        2 <span class="unnamed1">联接结点 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --> 
+        和 <!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --> 
+        的边 x<!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->E，无论它是有向的或无向的，都称作与结点 
+        <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --> 
+        和 <!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --> 
+        相联系的边。联系同一个结点的两个不同的边，称为互为邻接的边。<br>
+        3 </span><span class="unnamed1">在图 G=&lt;V,E&gt;中，关联结点 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->V 
+        到该结点 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --> 
+        本身的边，通常称为闭路。<br>
+        4 在有向图中，在结点偶对之间，应把方向相反的两条边，看成是不同的边，方向相同的两条边或更多条边，称为平行边或多重边。</span></p>
+      <p>&nbsp;</p>
+      <p class="unnamed1">有关<span class="unnamed2">图</span>的几个基本概念：<br>
+        <span class="unnamed1">1 具有n个结点和m条边的图,通常称为(n,m)图。<br>
+        2 每一条边都是有向边的图,称为<span class="unnamed2"><a name="content-7-1-1-youxiangtu"></a>有向图</span>；每一条边都是无向边的图，称为<a name="content-7-1-1-wuxiangtu"></a><span class="unnamed2">无向图</span>；一些边是有向边，而其余的边是无向边的图，称为混合图。 
+        <br>
+        3 在一个 (n,m)无向图中,如果 n 个结点中的每一个都邻接于其它的 n-1 个结点,则称这样的图为无向完全图。在(n,m)无向完全图中，应有 
+        m=n(n-1)/2 。如果在图的每一对结点之间，都有且仅有一对方向相反的有向边，则称为有向完全图。<br>
+        4 含有平行边的图，称为<a name="content-7-1-1-duochongbiantu"></a><span class="unnamed2">多重边图</span>。<br>
+        5 </span><span class="unnamed1">在图 G 中，如果没有闭路和平行边，则称图 G 是个<a name="content-7-1-1-jiandantu"></a><span class="unnamed2">简单图</span>。<br>
+        6 </span><span class="unnamed1">给每一条边都指定了权的图，称为有权图。<br>
+        7 </span><span class="unnamed1">在一个图中，不与任何边相联的结点，称为孤立结点。仅包含孤立结点的图，称为零图，并可说成是个 
+        (n,0) 图。<br>
+        8 </span><span class="unnamed1">在一个图中，如果仅有一个孤立结点，则称它为平凡图，并可表示成(1,0)图。<br>
+        9 </span><span class="unnamed1">每个结点都具有同样次数 d 的无向图，称为 d 次正则无向图。</span></p>
+      <p>&nbsp;</p>
+      <p><span class="unnamed1">一个基本性质：</span></p>
+      <p><span class="unnamed1"><span class="unnamed1">定理：</span></span><span class="unnamed1">设 
+        G=&lt;V,E&gt; 是一个 (n,m) 无向图，其中的结点集合 V={<!-- #BeginLibraryItem "/Library/v1.lbi" --><img src="IMAGE/v1.gif" width="16" height="23"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/v2.lbi" --><img src="IMAGE/v2.gif" width="17" height="23"><!-- #EndLibraryItem -->,....<!-- #BeginLibraryItem "/Library/vn.lbi" --><img src="IMAGE/vn.gif" width="17" height="24"><!-- #EndLibraryItem -->} 
+        于是应有 <img src="IMAGE/xigemavi.gif" width="108" height="45"></span></p>
+      <p><a href="#content-7-1" class="unnamed1">返回</a></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><a name="content-7-1-2"></a><span class="unnamed2">子图与图的同构</span> </p>
+      <p class="unnamed1">本部分先引入子图，在此基础上定义补图，最后介绍两个图之间的同构关系。</p>
+      <p><span class="unnamed1">定义1：设 G=&lt;V,E&gt; 和 G'=&lt;V',E'&gt; 是两个图。<br>
+        </span><span class="unnamed1">(1)如果有 V'<!-- #BeginLibraryItem "/Library/baohan.lbi" --><img src="image/baohan.gif" width="23" height="22"><!-- #EndLibraryItem --> 
+        V 和 E'<!-- #BeginLibraryItem "/Library/baohan.lbi" --><img src="image/baohan.gif" width="23" height="22"><!-- #EndLibraryItem --> 
+        E,则称 G'是图 G 的子图。<br>
+        </span><span class="unnamed1">(2)如果有 V'<!-- #BeginLibraryItem "/Library/baohan.lbi" --><img src="image/baohan.gif" width="23" height="22"><!-- #EndLibraryItem -->V 
+        和 E'<!-- #BeginLibraryItem "/Library/baohan.lbi" --><img src="image/baohan.gif" width="23" height="22"><!-- #EndLibraryItem --> 
+        E,并且有 E'<!-- #BeginLibraryItem "/Library/BUDENG.lbi" --><img src="image/budeng.GIF" width="14" height="14"><!-- #EndLibraryItem -->E，则称 
+        G' 是图 G 的真子图。<br>
+        </span><span class="unnamed1">(3)如果有 V'=V 和 E'<!-- #BeginLibraryItem "/Library/baohan.lbi" --><img src="image/baohan.gif" width="23" height="22"><!-- #EndLibraryItem --> 
+        E，则称 G'是图 G 的生成子图。</span></p>
+      <p><span class="unnamed1">显然，图 G 的生成子图也是 G 的子图。如果 V'=V 和 E'=E，亦即 G 的生成子图 
+        G' 是图 G 的本身，则 G'也是 G 的子图。如果 V'=V，和 E'=<!-- #BeginLibraryItem "/Library/KONG.lbi" --><img src="image/kong.GIF" width="16" height="15"><!-- #EndLibraryItem -->，亦即 
+        G' 是个零图，则生成子图 G' 也是 G 的子图。上述的两种子图，都称作平凡子图。<br>
+        </span><span class="unnamed1">定义2：设 G'=&lt;V',E'&gt; 是图 G=&lt;V,E&gt; 
+        的子图，并且给定另外一个图 G&quot;=&lt;V&quot;,E&quot;&gt;。如果有 E&quot;=E-E'，并且 V&quot; 
+        中仅包含 E&quot; 中的边所关联的各结点和 G' 中没有的 G 中的孤立结点，则相对于图 G 来说，称图 G&quot; 是子图 G' 
+        的补图。<br>
+        </span><span class="unnamed1">定义3：给定一个图 G=&lt;V,E&gt;。由图 G 中的所有结点和所有能使 
+        G 成为完全图的边所构成的图，称为相对于完全图的 G 的补图。</span></p>
+      <p><span class="unnamed1">定义2：设 G'=&lt;V',E'&gt; 和 G=&lt;V,E&gt; 是两个无向图。从 
+        G 到 G'，如果存在一个从 V 到 V' 的一对一映满的映射，又x'={g(<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->),g(<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->)}是图 
+        G' 中的一条边。当且仅当 x={<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->} 
+        是图 G 中的一条边，那么就称图 G 同构于图 G&quot;。 显然，如果 G 同构于 G'，则 G'必定同构于 G。因此可以说 G 和 
+        G'是互为<span class="unnamed2"><a name="content-7-1-3-tonggou"></a>同构</span>的。</span></p>
+      <p class="unnamed1"><a href="#content-7-1">返回</a></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><a name="content-7-1-3"></a><span class="unnamed2">路径和循环</span></p>
+      <p class="unnamed1">本部分定义图中的两个重要概念：路径和循环。</p>
+      <p><span class="unnamed1">定义1：</span><span class="unnamed1">给定有向图 G 中的任何一个边序列，如果其中的任何一条边的终点都是继之出现的边(如果存在的话)的始点，则称这样的边的序列是图 
+        G 的<span class="unnamed2"><a name="content-7-1-3-lujing"></a>路径</span>。 
+        <br>
+        相关概念： <br>
+        </span><span class="unnamed1">路径中的边的条数，称为路径的长度。<br>
+        </span><span class="unnamed1">在有向图中，若路径序列中的各条边全都是互不相同的，称为此路径为简单路径。<br>
+        </span><span class="unnamed1">在有向图中，穿程路径序列中的每一个结点仅出现一次的路径，称为<a name="content-7-1-3-jibenlujing"></a><span class="unnamed2">基本路径</span>。</span></p>
+      <p><span class="unnamed1">定义2：在有向图 G 中，</span><span class="unnamed1">起始和终止于同一个结点的路径，称为<a name="content-7-1-3-xunhuan"></a><span class="unnamed2">循环</span>或回路。<br>
+        相关概念： <br>
+        </span><span class="unnamed1">在一个循环中，如果它的每条边在构成循环的路径上都仅出现一次(端点结点除外)，亦即它的路径是简单的，则称此循环为简单循环。<br>
+        </span><span class="unnamed1">在一个循环中，如果它的每个结点在构成循环的路径上都仅出现一次，亦即它的路径是基本的，则称此循环为<a name="content-7-1-3-jibenxunhuan"></a><span class="unnamed2">基本循环</span>。<br>
+        </span><span class="unnamed1">应该说明,在循环中,甚至在基本循环中,从路径的观点看,作为始点的结点至少会出现两次。</span></p>
+      <p><span class="unnamed1">定义3：没有任何循环的简单有向图，称为非循环图。</span><span class="unnamed1">显然，任何非循环图都没有闭路.</span></p>
+      <p><span class="unnamed1">定义4：</span><span class="unnamed1">设 G=&lt;V,E&gt; 
+        是一个简单有向图，并且有结点 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->V，从结点 
+        <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --> 
+        如果存在任何一条路径的话，则称从结点 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --> 
+        是可达的。</span></p>
+      <p><span class="unnamed1">定义5：从结点 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --> 
+        如果是可达的，则从 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem --> 
+        到 <!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --> 
+        的长度为最短的路径通常称为测地线，测地线的长度称为距离，并记作 d&lt;<!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem -->&gt;。</span></p>
+      <p><span class="unnamed1">定理1：设 G=&lt;V,E&gt; 是一个简单有向图，并且有 #V=n，于是应有：<br>
+        </span><span class="unnamed1">(1) 任何基本路径的长度,都小于或等于 n-1。<br>
+        </span><span class="unnamed1">(2) 任何基本循环的长度,都不超过 n。</span></p>
+      <p><span class="unnamed1"><a href="#content-7-1">返回</a></span></p>
+      <p>&nbsp; </p>
+      <p>&nbsp;</p>
+      <p><a name="content-7-1-4"></a><span class="unnamed2">图的连通性</span></p>
+      <p><span class="unnamed1">定义1：在无向图G=&lt;V,E&gt;中,如果任何两个结点 <!-- #BeginLibraryItem "/Library/vi.lbi" --><img src="IMAGE/vi.gif" width="16" height="24"><!-- #EndLibraryItem -->,<!-- #BeginLibraryItem "/Library/vj.lbi" --><img src="IMAGE/vj.gif" width="17" height="25"><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/shuyu.lbi" --><img src="image/shuyu.gif" width="18" height="18"><!-- #EndLibraryItem -->V 
+        都是相互可达的.则称此无向图 G 是<a name="content-7-1-4-liantong"></a><span class="unnamed2">连通</span>的。 
+        </span><span class="unnamed1">如果把有向图作为无向图来对<span class="unnamed1">待时是<span class="unnamed1">连通</span></span>的，则称这个有向图是<a name="content-7-1-4-ruoliantong"></a><span class="unnamed2">弱连通</span>的。</span></p>
+      <p><span class="unnamed1">定义2：设 G=&lt;V,E&gt; 是一个简单有向图，<br>
+        </span><span class="unnamed1">(1) 在图 G 中的任何结点偶对中，如果至少从一个结点到另一个结点是可达的，则称 
+        G 是单向连通的。<br>
+        </span><span class="unnamed1">(2) 对于图 G 中的任何结点偶对中，如果两个结点都是相互可达的，则称 G 是强连通的。</span></p>
+      <p><span class="unnamed1">定义3：设 G=&lt;V,E&gt; 是一个简单有向图，且 G'是 G 的子图。对于某一种性质来说，如果再没有包含子图 
+        G'的子图具有给定的性质，则称子图 G'是相对于该性质的极大子图。</span></p>
+      <p><span class="unnamed1">定义4：设 G=&lt;V,E&gt; 是一个简单有向图，<br>
+        </span><span class="unnamed1">(1) G 的极大强连通子图，称为图 G 的强分图；<br>
+        </span><span class="unnamed1">(2) G 的极大单向连通子图，称为图 G 的单向分图；<br>
+        </span><span class="unnamed1">(3) G 的极大弱连通子图，称为图 G 的弱分图。.</span></p>
+      <p><span class="unnamed1">定理1：在简单有向图 G=&lt;V,E&gt;中，每一个结点都恰处于一个强分图之中。</span></p>
+      <p><span class="unnamed1"><a href="#content-7-1">返回</a></span></p>
+      <p>&nbsp;</p>
+</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
