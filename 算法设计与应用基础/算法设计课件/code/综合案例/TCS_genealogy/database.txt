@@ -1,0 +1,1782 @@
+# Theory of Computation Ph.D. Genealogy Database
+# Last Updated July 22, 1996
+#
+# The original version of this database was created by David Johnson.  See
+# D. S. Johnson, "The Genealogy of Theoretical Computer Science", SIGACT News,
+# Vol. 16, No. 2, pp. 36-44, 1984.  Reprinted in Bulletin of the EATCS, No. 25,
+# pp. 198-211, 1985.
+#
+# Maintained by Ian Parberry.  Email updates to pedigree@hercule.csci.unt.edu,
+# queries to ian@ponder.csci.unt.edu.
+#
+# Available on the world-wide web as a hypertext document
+# at URL http://hercule.csci.unt.edu/genealogy
+#
+# Modification log:
+#   July 21-22, 1996
+#     Vanilla update.  Fixed 2 bugs in web pages: improper pointers
+#     due to failure to strip (1) accents, (2) question marks in adviser name.
+#   October 9, 1995
+#     Updated scripts to allow underscore (_) in compound last-names,
+#     for example, Peter van_Emde_Boas, Friedhelm Meyer_auf_der_Heide.
+#     This ensures they get alphabetized correctly.  Underscores get
+#     mapped to spaces in the web pages.
+#   September 8, 1995
+#     Vanilla update.
+#   February 9, 1995
+#     Added new entries.  Wrote shell script to list multiple uses of
+#     last name, and found many people listed under different names
+#     (eg nickname, abbreviation, initials).  Corrected those entries.
+#   October 21, 1994
+#     completed updates received up to today
+#     axed system of labelling new and updated entries with + and *
+#     WWW version of database created
+#   October 7, 1994:
+#     the following work was done to expedite computer processing of database:
+#     added # character in front of header information
+#     fixed some formatting problems (tabs messed up in places)
+#     removed some problems with people listed under multiple variants of name
+#   March 26, 1993:
+#      new entries completed, some tidying up done
+#
+#STUDENT		ADVISOR		PLACE AND DATE OF PHD
+Stal Aanderaa	Hao Wang	Harvard	1967
+Lars Aarvik	?	Oslo	?
+Martin Abadi	Zohar Manna	Stanford	1987
+James Abbott	Richard Brent	ANU	1977
+Serge Abiteboul	Seymour Ginsburg	USC	1982
+Karl Abrahamson	Michael J. Fischer	Washington	1980
+Hosame Abu-Amara	Michael Loui	UIUC	1988
+John Addison	Stephen Kleene	Wisconsin	1955
+Len Adleman	Manuel Blum	Berkeley	1975?
+P.W. Adriaans	Peter van_Emde_Boas	Amsterdam UvA	1992
+Valery Agafonov	Boris Trakhtenbrot	Novosibirsk	?
+Richa Agarwala	David Fernandez-Baca	Iowa State	1994
+Alok Aggarwal	Joseph O'Rourke	Johns Hopkins	1984
+Shmuel Agmon	Scholem Mandelbrojt	Paris	1949
+Ajit Agrawal	Philip Klein	Brown	1992
+Al Aho	John Hopcroft	Princeton	1967
+Bill Aiello	Shafi Goldwasser	MIT	1988
+Howard Aiken	E.L. Chaffee	Harvard	1939
+Miklos Ajtai	Andras Hajnal	Eotvos	1976
+Varol Akman	William Randolph Franklin	RPI	1985
+Romas Aleliunas	Stephen Cook	Toronto	?
+Farid Alizadeh	J.B. Rosen	Minnesota	1991
+Brian Allen	Ian Munro	Waterloo	1977
+Eric Allender	Kimberly King	Georgia Tech	1985
+Helmut Alt	Kurt Mehlhorn	Saarbruecken	1976
+Lorenzo Alvisi	Keith Marzullo	Cornell	1996
+Nancy Amato	Franco Preparata	UIUC	1995
+Vardi Amdursky	Eli Shamir	Hebrew	?
+Nina Amenta	Raimund Seidel	Berkeley	1994
+Foued Ameur	Friedhelm Meyer_auf_der_Heide	Paderborn	1995
+Amihood Amir	Dov Gabbay	Bar Ilan	1983
+D.G.M. Anderson	M. Krook	Harvard	1963
+R.J. Anderson	Ernst W. Mayr	Stanford	1985
+Arne Andersson	Svante Carlsson	Lund	1990
+Greg Andrews	Alan Shaw	Washington	1974
+Jamie Andrews	Don Sannella	Edinburgh	1991
+Agnis Andzans	Rusins Martins Freivalds	Latvia	?
+Dana Angluin	Manuel Blum	Berkeley	1976
+Fred Annexstein	Arny Rosenberg	Massachusetts	1990
+? Apers	? van_de_Riet	?	1982
+David Applegate	Ravi Kannan	CMU	1991
+Krzysztof Apt	Andrzej Mostowski	Warsaw	1974
+Lars Arge	Erik Meineche Schmidt	Aarhus	1996
+Eshrat Arjomandi	Derek G. Corneil	Toronto	1975?
+Dmitry Arkhangelsky	Mikhail Taitslin	Tver	1993
+Sanjeev Arora	Umesh Vazirani	Berkeley	1994
+Robert Ashenhurst	Howard Aiken	Harvard	1956
+James Aspnes	Steven Rudich	CMU	1992
+Bengt Aspvall	Robert E. Tarjan	Stanford	1980
+Mikhail Atallah	Rao Kosaraju	Johns Hopkins	1982
+Hagit Attiya	Danny Dolev	Hebrew	1987
+Franz Aurenhammer	Herbert Edelsbrunner	Graz	1985
+Gideon Avrahami	Vaughan Pratt	Stanford	1994
+Baruch Awerbuch	Shimon Even	Technion	1984
+Paul Axt	Stephen Kleene	?	?
+Yossi Azar	Noga Alon	Tel-Aviv	1989
+Salman Azhar	John Reif	Duke	1994
+Pieter Cornelis Baayen	J. de_Groot	Amsterdam UvA	1964
+Laszlo Babai	Paul Turan	Eotvos	1975
+Laszlo Babai	Vera Sos	Eotvos	1975
+Eric Bach	Manuel Blum	Berkeley	1984
+Leo Bachmair	Nachum Dershowitz	UIUC	1987
+Ralph-Johan Back	Martti Tienari	Helsinki	1978
+Norman I. Badler	John Mylopoulos	Toronto	1975
+Jos Baeten	W. Richter	Minnesota	1985
+Ricardo Baeza-Yates	Gaston Gonnet	Waterloo	1989
+Chandrajit Bajaj	John Hopcroft	Cornell	?
+Brenda Baker	Ron Book	Harvard	1973
+Ted Baker	Juris Hartmanis	Cornell	1974
+Miriam Balaban	Eli Shamir	Weizmann	?
+Jose Balcazar	Josep Diaz	Barcelona	1984
+M.L. Balinsky	Albert Tucker	Princeton	1951
+Amotz Bar-Noy	Danny Dolev	Hebrew	1987
+Eduardo F. Barbosa	Nivio Ziviani	Minas Gerais	1995
+Eduardo F. Barbosa	Ricardo Baeza-Yates	Minas Gerais	1995
+Henk Barendregt	Georg Kreisel	Utrecht	1971
+David Mix Barrington	Michael Sipser	MIT	1986
+Yair Bartal	Amos Fiat	Tel-Aviv	1993
+Janis Barzdins	Boris Trakhtenbrot	Novosibirsk	?
+Joe Bates	Alan Demers	Cornell	1979
+Giuseppe Di Battista	Carlo Batini	Rome	1991
+G.M. Baudet	H.T. Kung	CMU	1978
+Marianne Baudinet	Zohar Manna	Stanford	1989
+Aime J. Bayle	Forouzan Golshani	Arizona State	1992
+Rida Bazzi	Gil Neiger	Georgia Tech	1994
+Robert Beals	Laszlo Babai	Chicago	1993
+Paul Beame	Stephen Cook	Toronto	1987
+John Beatty	Michael Harrison	Berkeley	1977
+Donald Beaver	Michael O. Rabin	Harvard	1990
+John Beebee	Victor Klee	Washington	1972
+Catriel Beeri	Eli Shamir	Hebrew	1975
+Richard Beigel	John Gill	Stanford	1988
+L.W. Beineke	Frank Harary	Michigan	1965
+Mihir Bellare	Silvio Micali	MIT	1991
+Richard Bellman	Solomon Lefschetz	Princeton	1946
+Amir Ben-Amram	Zvi Galil	Tel-Aviv	1995
+Moti Ben-Ari	Amir Pnueli	Tel-Aviv	1981
+Michael Ben-Or	Michael O. Rabin	Hebrew	1982?
+J.D.C. Benaloh	Michael J. Fischer	Yale	1987
+? Benison	Robert Soare	Chicago	1977?
+Gary Benson	Amihood Amir	Maryland	1992
+Samuel Bent	Robert E. Tarjan	Stanford	1982
+Jon Bentley	Donald Stanat	North Carolina	1976
+Jan A. Bergstra	Dirk van_Dalen	Utrecht	1976
+Hans Berliner	Allen Newell	CMU	1974
+Fran Berman	Bob Ritchie	Washington	1979?
+Len Berman	Juris Hartmanis	Cornell	1977
+Piotr Berman	Albert Meyer	MIT	1985
+Marshall Bern	Gene Lawler	Berkeley	1987
+Phil Bernstein	D. Tsichritzis	Toronto	1975
+Andre Berthiaume	Gilles Brassard	Montreal	1995
+Eike Best	Brian Randell	Newcastle upon Tyne	1981
+Eike Best	Peter E. Lauer	Newcastle upon Tyne	1981
+Sandeep Bhatt	Charles E. Leiserson	MIT	1984
+Nicole Bidoit	Serge Abiteboul	Paris XI	?
+? Biezeno	---	---	---
+Gianfranco Bilardi	Franco Preparata	UIUC	1985
+G.D. Birkhoff	E.H. Moore	?	?
+Garrett Birkhoff	---	---	---
+Alex Birman	Jeffrey Ullman	Princeton	1970
+James Bitner	Ed Reingold	UIUC	1976
+Iliana Bjorling-Sachs	Diane Souvaine	Rutgers	1993
+Kenneth Blaha	Eugene Luks	Oregon	1989
+Jean Blair	Errol Lloyd	Pittsburgh	1986
+J.O. Blanco	Jos Baeten	Eindhoven TUE	1996
+Robert Bland	D.R. Fulkerson	Cornell	1974
+Meera Blattner	Sheila Greibach	UCLA	1973
+Woody Bledsoe	A. P. Morse	Berkeley	1953?
+Guy Blelloch	Charles E. Leiserson	MIT	1989
+G.A. Bliss	Oskar Bolza	Gottingen	?
+Stephen Bloch	Sam Buss	UCSD	1992
+Peter Bloniarz	Albert Meyer	MIT	1977
+Avrim Blum	Ronald L. Rivest	MIT	1991
+Lenore Blum	Gerald Sacks	MIT	1969
+Manuel Blum	Marvin Minsky	MIT	1966?
+Richard F. Blute	Andre Scedrov	Penn	1991
+Raymond Board	Lenny Pitt	UIUC	1990
+Hans Bodlaender	Jan van_Leeuwen	Utrecht	1986
+Hans Boehm	Alan Demers	Cornell	1984
+Oskar Bolza	Karl Weierstrass	?	?
+Maria Paola Bonacina	Jieh Hsiang	SUNY Stony Brook	1992
+Maria Luisa Bonet	Sam Buss	Berkeley	1991
+Richard J. Bonneau	Michael J. Fischer	MIT	1974
+Ron Book	Sheila Greibach	Harvard	1969
+William Boone	Alonzo Church	Princeton	1952
+Kelly Booth	Dick Karp	Berkeley	1975
+Ravi Boppana	Michael Sipser	MIT	1986
+V.A.J. Borghuis	Jos Baeten	Eindhoven TUE	1994
+Richard Borie	Craig Tovey	Georgia Tech	1988
+Richard Borie	Gary Parker	Georgia Tech	1988
+Allan Borodin	Juris Hartmanis	Cornell	1969
+Karol Borsuk	Stefan Mazurkiewicz	Warsaw	1931
+W. Bosma	Peter van_Emde_Boas	Amsterdam UvA	1990
+Joan Boyar	Manuel Blum	Berkeley	1983
+Robert Boyer	Woody Bledsoe	UT Austin	1971
+Dan Brand	Stephen Cook	Toronto	1976
+Nikolai Dmitrievich Brashman	? von_Littrov	?	?
+Gilles Brassard	John Hopcroft	Cornell	1979
+David Bray	J.A. Robinson	Syracuse	1970
+Seth Breidbart	Ron Book	Yale	1978
+Richard Brent	Gene Golub	Stanford	1971
+Richard Brent	George Forsythe	Stanford	1971
+Andrei Broder	Donald E. Knuth	Stanford	1985
+Andrej Brodnik	Ian Munro	Waterloo	1995
+Fred Brooks	Howard Aiken	Harvard	1956
+Felix Browder	Solomon Lefschetz	Princeton	1948
+Cynthia Brown	A. Blass	Michigan	1977
+Donna Brown	Peter Elias	MIT	1978
+John Brown	David Gries	Cornell	1972
+Mark Brown	Donald E. Knuth	Stanford	1979?
+Sally Browning	Carver Mead	Caltech	1980
+Manfred Broy	F.L. Bauer	Munich IT	1980
+Kim Bruce	H.J. Keisler	Wisconsin	1975
+John Bruno	Lou Weinberg	CCNY	1968
+Anna Bruss	B.K.P. Horn	MIT	1980
+Adam L. Buchsbaum	Robert E. Tarjan	Princeton	1993
+Mark Buckingham	Martin Golumbic	Courant	1980
+Anatoli Buda	A.P. Ershov	Novosibirsk	1975
+Navin Budhiraja	Keith Marzullo	Cornell	1993
+Khaled Bugrara	Paul Purdom	Indiana U	1986
+Harry Buhrman	Leen Torenvliet	Amsterdam UvA	1993
+Harry Buhrman	Peter van_Emde_Boas	Amsterdam UvA	1993
+Harry Buhrman	Steven Homer	Amsterdam UvA	1993
+Thang Bui	Tom Leighton	MIT	1986
+William Bultman	Wolfgang Maass	UIC	1991
+Peter Buneman	E. C. Zeeman	Warwick	1970
+H. Bunt	Brandt Corstius	?	1981
+Jennifer J. Burg	Charles E. Hughes	UCF	1993
+Rainer Burkard	Edmund Hlawka	Vienna	1967
+Walter Burkhard	P. Varaiya	Berkeley	1969
+James Burns	Nancy Lynch	Georgia Tech	1980
+James Burns	Rich DeMillo	Georgia Tech	1980
+Jonathan Buss	Michael Sipser	MIT	1986
+Sam Buss	Simon Kochen	Princeton	1985
+Jean Butler	Victor Klee	Washington	1972
+? Buys	? Zoutendijk	?	1972
+Cezar C&acirc;mpeanu	Cristian S. Calude	Bucharest	1995
+Jean-Marie Cadiou	Zohar Manna	Stanford	1972
+Jin-yi Cai	Juris Hartmanis	Cornell	1986
+Rob Calderbank	Marshall Hall	Caltech	1980
+Paul Callahan	Rao Kosaraju	Johns Hopkins	1995
+Cristian S. Calude	Solomon Marcus	Bucharest	1977
+David Carlson	John Savage	Brown	1981
+Svante Carlsson	Rolf Karlsson	Lund	1986
+Jack Carlyle	A. Thomasian	Berkeley	1962
+Larry Carter	Berlekamp	Berkeley	1974
+John Case	Tom McLaughlin	UIUC	1969
+Ross Casley	Vaughan Pratt	Stanford	1991
+Bob Caviness	Alan Perlis	CMU	1967
+Pedro Celis	Ian Munro	Waterloo	1986
+Pedro Celis	Paul Larson	Waterloo	1986
+Karlis Cerans	Janis Barzdins	Latvia	?
+Seth Chaiken	Dan Kleitman	MIT	1980?
+Tat-hung Chan	Bob Constable	Cornell	1980
+William Chandler	Seymour Ginsburg	USC	1969
+Ashok Chandra	Zohar Manna	Stanford	1973
+Tushar D. Chandra	Sam Toueg	Cornell	1993
+Chen-Chung Chang	Alfred Tarski	Berkeley	1955
+Jik Chang	Oscar H. Ibarra	Minnesota	1986
+Richard Chang	Juris Hartmanis	Cornell	1991
+Min Te Chao	John Franco	Case Western Reserve	1984
+Bruce W. Char	Richard J. Fateman	Berkeley	1980
+Witold Charatonik	Leszek Pacholski	Wroclaw	1995
+Shiva Chaudhuri	Ravi Boppana	Rutgers	1991
+Soma Chaudhuri	Richard Ladner	Washington	1990
+Surajit Chaudhuri	Jeffrey Ullman	Stanford	1991
+Bernard Chazelle	David Dobkin	Yale	1980
+Thomas E. Cheatham	---	---	---
+Pafnuty Lvovich Chebyshev	Nikolai Dmitrievich Brashman	St. Petersburg	1849
+Brad Chen	Doug Tygar	CMU	1994
+Jingsen Chen	Svante Carlsson	Lund	1993
+Keh-Jian Chen	John Case	Buffalo	?
+Wen-Chin Chen	Jeff Vitter	Brown	1985
+Yui-Bin Chen	Doug Ierardi	USC	1995
+Siu Wing Cheng	Ravi Janardan	Minnesota	1992
+John Cherniavsky	Bob Constable	Cornell	1972
+Paul Chew	Mike O'Donnell	Purdue	1981
+L. Chiaraviglio	A. Hartzhorn	Emory	1959
+Andrew Chin	W.F. McColl	Oxford	1991
+Francis Chin	Kenneth Steiglitz	Princeton	1975
+Donald Chinn	Martin Tompa	Washington	1995
+Jawahar Chirimar	Dale Miller	Penn	1995
+Yookun Cho	Sartaj Sahni	Minnesota	?
+Jan Chomicki	Tomasz Imielinski	Rutgers	1990
+Benny Chor	Ronald L. Rivest	MIT	1985
+Yaacov Choveka	Michael O. Rabin	Hebrew	1972
+Claude-Andre Christen	Ernst Specker	ETH Zurich	1974
+Jeff Chu	Georg Schnitger	Penn State	1988
+Fan Chung	Herb Wilf	Penn	1974
+M.-J. Chung	Hal Sudborough	Northwestern	1981
+Alonzo Church	Oswald Veblen	Princeton	1927
+W. Chvatal	C. Nash-Williams	Waterloo	1973
+Edmund Clarke	Bob Constable	Cornell	1976
+Ken Clarkson	Andy Yao	Stanford	1984
+V. Claus	Gunther Hotz	Saarbruecken	1970
+John Cleave	Andrew Booth	London	?
+Rance Cleaveland	Bob Constable	Cornell	1987
+Peter Clote	J.R. Shoenfield	Duke	1979
+Brian Coan	Nancy Lynch	MIT	1987
+Alan Cobham	---	---	---
+E.F. Codd	John H. Holland	Michigan	1963
+J.A.A. Coenen	Jos Baeten	Eindhoven TUE	1994
+Ed Coffman	Leonard Kleinrock	UCLA	1966
+Daniel Cohen	Eli Shamir	Hebrew	?
+Robert Cohen	Roberto Tamassia	Brown	1992
+Charles Colbourn	Derek G. Corneil	Toronto	1979?
+Richard Cole	John Hopcroft	Cornell	1982
+George Collins	Barkley Rosser	Cornell	1955
+Doug Comer	Ravi Sethi	Penn State	1976
+K.T. Compton	O.W. Richardson	Princeton	1912
+Anne Condon	Richard Ladner	Washington	1987
+Tim Connors	Seymour Ginsburg	USC	1984
+Bob Constable	Stephen Kleene	Wisconsin	1968
+Curtis Cook	Steve Hedetniemi	Iowa	1970
+Stephen Cook	Hao Wang	Harvard	196?
+Arthur H. Copeland_Jr	Norman Steenrod	Princeton	?
+Don Coppersmith	Shlomo Sternberg	Harvard	1977
+Thomas C. Cormen	Charles E. Leiserson	MIT	1992
+Derek G. Corneil	Kelly Gotleib	Toronto	1970
+Brandt Corstius	Aad van_Wijngaarden	?	1970
+Richard Courant	David Hilbert	Gottingen	1910
+Lenore Cowen	Dan Kleitman	MIT	1993
+Claude Cr&eacute;peau	Silvio Micali	MIT	1990
+Roger Crew	Vaughan Pratt	Stanford	1991
+Isabel Cruz	Alberto Mendelzon	Toronto	1993
+Joseph Culberson	Ian Munro	Waterloo	1986
+William Cunningham	Jack Edmonds	Waterloo	1974
+Walter Cunto	Ian Munro	Waterloo	1983
+Jan Cuny	Bill Rounds	Michigan	1981
+Haskell Curry	David Hilbert	Gottingen	1930
+Nigel Cutland	John Cleave	?	?
+Artur Czumaj	Friedhelm Meyer_auf_der_Heide	Paderborn	1995
+Paul Dagum	Michael Luby	Toronto	1989
+Robert Daley	Don Loveland	CMU	1970
+J.G. Danaraj	Victor Klee	Washington	1974
+David Magerman	Vaughan Pratt	Stanford	1994
+Martin Davis	Alonzo Church	Princeton	1959
+Scott Decatur	Leslie G. Valiant	Harvard	1995
+Eliezer Dekel	Sartaj Sahni	Minnesota	?
+Michael Dekhtyar	Boris Trakhtenbrot	Novosibirsk	1977
+Alan Demers	Jeffrey Ullman	Princeton	1975
+Rich DeMillo	L. Chiaraviglio	Georgia Tech	1972
+Peter Denning	Jack Dennis	MIT	1968
+? Derksen	? Van_der_Poel	?	1973
+Marcia Derr	Jeffrey Ullman	Stanford	1993
+Nachum Dershowitz	Zohar Manna	Weizmann	1977
+Lloyd Devore	D.C. Duncan	Penn State	1933
+Lloyd Devore	W.R. Ham	Penn State	1933
+Paul Warren DeVore	?	Penn State	1961
+A.K. Dewdney	C. Nash-Williams	Waterloo	1974
+T.K. Dey	Chandrajit Bajaj	Purdue	1991
+Jaco W. de_Bakker	Aad van_Wijngaarden	Amsterdam UvA	1967
+Mark de_Berg	Mark Overmars	Utrecht	1992
+? de_Bruin	Jaco W. de_Bakker	?	1986
+D.M.G. de_Champeaux_de_laboulaye	Peter van_Emde_Boas	Amsterdam UvA	1981
+A.F. de_Geus	Peter van_Emde_Boas	Groningen	1992
+Wiebren de_Jonge	? van_de_Riet	?	1985
+W.P. de_Roever	Jaco W. de_Bakker	Amsterdam VU	1975
+M. de_Rougement	Jack Carlyle	UCLA	1984?
+M. de_Rougement	Yiannis Moschovakis	UCLA	1984?
+? de_Troye	Aad van_Wijngaarden	?	1958
+Erik P. de_Vink	Jaco W. de_Bakker	Amsterdam VU	1990
+Aditi Dhagat	Michael Sipser	MIT	1991
+Angel Dichev	Dimiter Skordev	Sofia	1983
+Paul Dietz	John Hopcroft	Cornell	1984
+Martin Dietzfelbinger	Wolfgang Maass	UIC	1987
+Edsger Wybe Dijkstra	Aad van_Wijngaarden	Amsterdam UvA	1959
+R.P. Dilworth	?	Caltech	1939
+Nevenka Dimitrova	Forouzan Golshani	Arizona State	1995
+Nahed El Djabri	Jeffrey Ullman	Princeton	1975
+David Dobkin	R.W. Brockett	Harvard	1973
+Danny Dolev	Eli Shamir	Weizmann	1979
+Gayla Domke	Renu Laskar	Clemson	1987
+Gayla Domke	Steve Hedetniemi	Clemson	1987
+Guozhu Dong	Seymour Ginsburg	USC	1988
+Martin Dowd	Stephen Cook	Toronto	1979
+Peter Downey	Ron Book	Harvard	1974
+Jon Doyle	Gerald Jay Sussman	MIT	1980
+Burton Dreben	---	---	---
+Jim Driscoll	Merrick Furst	CMU	1986
+Doron Drusinsky	David Harel	Weizmann	1988
+Scot Drysdale	Andy Yao	Stanford	1979
+Ding-Zhu Du	Ron Book	Santa Barbara	1985
+Weichang Du	William W. Wadge	Victoria	1991
+Peter Deussen	F.L. Bauer	Munich IT	1965
+O.S. Duffendack	K.T. Compton	Princeton	1922
+D.C. Duncan	O.S. Duffendack	Michigan	1924
+Paul E. Dunne	Michael S. Paterson	Warwick	1984
+Cynthia Dwork	John Hopcroft	Cornell	1983
+Rex Dwyer	Daniel Sleator	CMU	1988
+Patrick Dymond	Allan Borodin	Toronto	1980?
+Patrick Dymond	Stephen Cook	Toronto	1980?
+J.C. Earley	Robert W. Floyd	CMU	1968
+? Ebergen	Martin Rem	Eindhoven	1987
+Herbert Edelsbrunner	Hermann Maurer	Graz	1982
+Jack Edmonds	---	---	---
+Jeff Edmonds	Faith Fich	Toronto	1993
+Andrzej Ehrenfeucht	Andrzej Mostowski	Warsaw	?
+Hartmut Ehrig	K. Leichweiss	TU Berlin	1971
+Hartmut Ehrig	U. Simon	TU Berlin	1971
+G. Ehrlich	Shimon Even	Weizmann	1973
+Samuel Eilenberg	Karol Borsuk	Warsaw	1936
+Peter Elias	Le Corbeiller	Harvard	1950
+Allen Emerson	Edmund Clarke	Harvard	1981
+Erwin Engeler	Bernays	?	?
+Joost Engelfriet	Gregorz Rozenberg	Antwerp	1974
+David Eppstein	Zvi Galil	Columbia	1989
+Javier Esparza	Manuel Silva	Zaragoza	1990
+Kousha Etessami	Neil Immerman	Massachusetts	1995
+Evan_Cohn	Jeffrey Ullman	Stanford	1989
+Shimon Even	Hao Wang	Harvard	1963
+Ron Fagin	Robert Vaught	Berkeley	1973
+Martin Farach	Amihood Amir	Maryland	1991
+A.M. Farley	Allen Newell	CMU	1974
+William Farmer	Kenneth Kunen	Wisconsin	1984
+Richard J. Fateman	Joel Moses	Harvard	1971
+Richard J. Fateman	Tony Oettinger	Harvard	1971
+Antony Faustini	William W. Wadge	Warwick	1982
+Joan Feigenbaum	Andy Yao	Stanford	1986
+Alan Fekete	David Mumford	Harvard	1988
+Alan Fekete	Nancy Lynch	Harvard	1988
+Yishai Feldman	David Harel	Weizmann	1984
+Abdelaziz Fellah	?	Kent State	?	1991
+Mike Fellows	Mike Fredman	UCSD	1985
+Walter Felscher	F.W.D. Levi	FU Berlin	1956
+Amy Felty	Dale Miller	Penn	1989
+Stephen Fenner	Stuart A. Kurtz	Chicago	1991
+David Fernandez-Baca	Chip Martel	UC Davis	1986
+Jeanne Ferrante	Albert Meyer	MIT	1974
+Jeanne Ferrante	Hartley Rogers	MIT	1974
+Amos Fiat	Adi Shamir	Weizmann	1987
+Faith Fich	Dick Karp	Berkeley	1982
+Charles Fiduccia	John Savage	Brown	1973
+Ion Filotti	Manuel Blum	Berkeley	1972?
+Charles Fischer	John Williams	Cornell	1975
+Michael J. Fischer	Sheila Greibach	Harvard	1968
+Patrick Fischer	Hartley Rogers	MIT	1962
+Sophie Fischer	Leen Torenvliet	Amsterdam UvA	1995
+Sophie Fischer	Peter van_Emde_Boas	Amsterdam UvA	1995
+Marshall Fisher	Jeremy Shapiro	MIT	?
+Philippe Flajolet	Jean Vuillemin	Paris	1979
+Robert W. Floyd	---	---	---
+Sally Floyd	Dick Karp	Berkeley	1989?
+W.J. Fokkink	Jos Baeten	Eindhoven TUE	1994
+Amelia Fong	Jeffrey Ullman	Princeton	1977
+Ira R. Forman	Harlan D. Mills	Maryland	1979
+George Forsythe	J.D. Tamarkin	Brown	1941
+Lance Fortnow	Michael Sipser	MIT	1989
+Steve Fortune	John Hopcroft	Cornell	1979
+Alfred Foster	Alonzo Church	Princeton	1930
+Gregg Foster	Richard J. Fateman	Berkeley	1986
+James A. Foster	James Kenevan	IIT	1990
+Michael Fourman	Dana Scott	Oxford	1974
+Ralph Fox	Solomon Lefschetz	Princeton	1939?
+Aviezri S. Fraenkel	E.G. Straus	UCLA	1961
+Aviezri S. Fraenkel	J. Estrin	UCLA	1961
+Nissim Francez	Amir Pnueli	Weizmann	1976
+John Franco	Marvin Paull	Rutgers	1981
+Gudmund S. Frandsen	Mogens Nielsen	Aarhus	1986
+Andras Frank	Laszlo Lovasz	Eotvos	?
+Peter Frankl	G. Katona	?	?
+William Randolph Franklin	Harry Lewis	Harvard	1978
+Helmut Franzen	C.H. Koster	TU Berlin	1983
+Helmut Franzen	Hartmut Ehrig	TU Berlin	1983
+Greg Frederickson	Matthew Hecht	Maryland	1977
+Mike Fredman	Donald E. Knuth	Stanford	?
+Rusins Martins Freivalds	Boris Trakhtenbrot	Novosibirsk	?
+Art Friedman	Steve Unger	?	?
+Emily Friedman	Ron Book	Harvard	1974
+Harvey Friedman	Gerald Sacks	MIT	1967
+Joel Friedman	Steve Smale	Berkeley	1987
+Nathan Friedman	Allan Borodin	Toronto	197?
+Don Friesen	C.L. Liu	UIUC	1978
+Mark Fulk	John Case	Buffalo	?
+Martin Furer	Ernst Specker	ETH Zurich	1978
+Merrick Furst	John Hopcroft	Cornell	1980
+Donald Fussell	Zvi M. Kedem	UT Dallas	?
+Hal Gabow	Harold Stone	Stanford	1974
+Peter Gacs	C.P. Schnorr	Frankfurt	1978
+David Gale	Albert Tucker	Princeton	1949
+Zvi Galil	John Hopcroft	Cornell	1975
+Herve Gallaire	Michael Harrison	Berkeley	1968
+Bernard A. Galler	Marshall Stone	Chicago	1955
+Bernard A. Galler	Paul Halmos	Chicago	1955
+Jean Gallier	Emily Friedman	UCLA	1978
+Jean Gallier	Sheila Greibach	UCLA	1978
+Robin Gandy	Alan Turing	Cambridge	?
+Harald Ganzinger	Juergen Eickel	Munich IT	1978
+Juan Garay	Piotr Berman	Penn State	1989
+Mike Garey	E.F. Moore	Wisconsin	1970
+George Gargov	A.G. Dragalin	Moscow	1976
+George Gargov	V.A. Uspenskij	Moscow	1976
+Stephen Garland	John Addison	Berkeley	1967
+Harvey Garner	Norman Scott	Michigan	1958
+Oscar Garrido	Andrzej Lingas	Lund	1996
+Max Garzon	Paul E. Schupp	UIUC	1984
+William Gasarch	Harry Lewis	Harvard	1985
+J. von zur Gathen	Volker Strassen	Zurich	1980
+Fanica Gavril	Shimon Even	Weizmann	1973
+Hillel Gazit	Gary Miller	USC	1988
+Matt Geller	Michael Harrison	Berkeley?	?
+Pete Gemmell	Manuel Blum	Berkeley	1992
+Rosario Gennaro	Silvio Micali	MIT	1996
+Mihaly Gereb-Graus	Michael O. Rabin	Harvard	1989
+John Geske	Alan Selman	Iowa State	1987
+Mujtaba Ghouse	Michael T. Goodrich	Johns Hopkins	1993
+Raffaele Giancarlo	Zvi Galil	Columbia	1990?
+Peter B. Gibbons	Derek G. Corneil	Toronto	1976
+Phil Gibbons	Dick Karp	Berkeley	1989
+Joseph Gil	Avi Wigderson	Hebrew	1991
+John Gilbert	Robert E. Tarjan	Stanford	1981
+Rick Giles	Jack Edmonds	Waterloo	1976
+John Gill	Manuel Blum	Berkeley	1972
+John Gill	R.W. Robinson	Berkeley	1972
+David Gillman	Michael Sipser	MIT	1993
+Seymour Ginsburg	Ben Dushnik	Michigan	1952
+Jay Gischer	Vaughan Pratt	Stanford	1984
+Arthur Gittleman	Magnus Hestenes	UCLA	1969
+Joseph Giuliano	Seymour Ginsburg	USC	1970
+Shafee Give'on	John H. Holland	Michigan	1965
+David Gladstein	Mitchell Wand	Northeastern	1995
+Wayne Goddard	Dan Kleitman	MIT	1992
+Kurt G&ouml;del	Hans Hahn	Vienna	1930
+Igal Golan	Michael O. Rabin	Technion	1974
+Allen Goldberg	Martin Davis	NYU	1979
+Andrew Goldberg	Charles E. Leiserson	MIT	1987
+Leslie Goldberg	Mark Jerrum	Edinburgh	1992
+Paul Goldberg	Mark Jerrum	Edinburgh	1992
+Kenneth Goldman	Nancy Lynch	MIT	1990
+Sally Goldman	Ronald L. Rivest	MIT	1990
+Mikael Goldmann	Johan Hastad	Royal IT	1992
+Oded Goldreich	Shimon Even	Technion	1983
+Leslie M. Goldschlager	Stephen Cook	Toronto	1977
+Judy Goldsmith	Deborah Joseph	Wisconsin	1988
+Arthur Goldstein	Ed Reingold	UIUC	1992
+Jon Goldstine	Edwin Spanier	Berkeley	1970
+Shafi Goldwasser	Manuel Blum	Berkeley	1983
+Mordecai Golin	Robert Sedgewick	Princeton	1990
+Forouzan Golshani	William W. Wadge	Warwick	1982
+Gene Golub	A.H. Taub	UIUC	1959
+Martin Golumbic	Samuel Eilenberg	Columbia	1975
+Ralph Gomory	Solomon Lefschetz	Princeton	1954
+Jacob Gonczarowski	Eli Shamir	Hebrew	1963
+Gaston Gonnet	Alan George	Waterloo	1977
+Teofilo Gonzalez	Sartaj Sahni	Minnesota	1975
+Don Good	Ralph London	Wisconsin	1970
+Nat Goodman	Phil Bernstein	Harvard	1980
+Michael T. Goodrich	Mikhail Atallah	Purdue	1987
+Ajei Gopal	Sam Toueg	Cornell	1991
+Dan Gordon	Eli Shamir	Hebrew	?
+Vivek Gore	Eric Allender	Rutgers	1993
+Deepak Goyal	Jeffrey Ullman	Princeton	1977
+Albert Gr&auml;ef	Clemens Lautemann	Mainz	1995
+Niall Graham	Frank Harary	New Mexico State	1989
+Ron Graham	Derrick Lehmer	Berkeley	1962
+Scott Graham	Peter Denning	Purdue	197?
+Susan Graham	David Gries	Stanford	1971
+Gosta Grahne	Kari-Jouko Raiha	Helsinki	1989
+Ed Granirer	Harry Kesten	?	?
+Jim Gray	Michael Harrison	Berkeley?	?
+Frederic Green	Feza Gursey	Yale	1979
+Albert Greenberg	Martin Tompa	Washington	1983
+Albert Greenberg	Richard Ladner	Washington	1983
+Ronald Greenberg	Charles E. Leiserson	MIT	1989
+Dan Greene	Donald E. Knuth	Stanford	1983
+Raymond Greenlaw	Larry Ruzzo	Washington	1988
+John Grefenstette	Robert Daley	Pittsburgh	1980
+Sheila Greibach	Tony Oettinger	Harvard	1963
+David Gries	F.L. Bauer	Munich IT	1966
+Andreas Griewank	Richard Brent	ANU	1980
+Michelangelo Grigni	Michael Sipser	MIT	1991
+Victor Grinberg	Yuri Lyubich	Institute of Cybernetics	1973
+Dana Grinstead	Peter J. Slater	Alabama	1989
+Joachim Grollmann	Alan Selman	Dortmund	1984
+Jan Friso Groote	Jan A. Bergstra	Amsterdam UvA	1991
+Jerrold W. Grossman	Daniel M. Kan	MIT	1974
+Adam Grove	Joe Halpern	Stanford	1992
+Stephane Grumbach	Serge Abiteboul	Paris XI	1990
+Jim Grundy	Michael J. C. Gordon	Cambridge	1994
+? Grune	Aad van_Wijngaarden	?	1982
+Dah Jyh Guan	Greg Frederickson	Purdue	1989
+Steve Guattery	Doug Tygar	CMU	1995
+Steve Guattery	Gary Miller	CMU	1995
+Leonidas J. Guibas	Donald E. Knuth	Stanford	1975?
+Katia Guimaraes	William Gasarch	Maryland	1992
+Ashish Gupta	Jeffrey Ullman	Stanford	1994
+Udai Gupta	Jeffrey Ullman	Princeton	1977
+Vineet Gupta	Vaughan Pratt	Stanford	1994
+Eitan Gurari	Oscar H. Ibarra	Minnesota	1978
+Yuri Gurevich	P.G. Kontorovich	Ural U	1964
+Dan Gusfield	Dick Karp	Berkeley	1979?
+Annegret Habel	Hans-Joerg Kreowski	Bremen	1989
+Stuart Haber	Zvi Galil	Columbia	1988?
+A. Nico Habermann	Edsger Wybe Dijkstra	Eindhoven	1967
+Jacques Hadamard	?	Paris	1892
+Ramsey Haddad	Donald E. Knuth	Stanford	1990
+Thilo Hafer	Wolfgang Thomas	Aachen	1989
+David Haglin	Shankar Venkatesan	Minnesota	1989
+Brent Hailpern	Sue Owicki	Stanford	1980
+Andras Hajnal	L. Kalmar	Szeged	1959?
+Cordelia V. Hall	David S. Wise	Indiana U	1987
+Marshall Hall	Oystein Ore	Yale	1936
+Magnus Halldorsson	Ravi Boppana	Rutgers	1991
+Joe Halpern	Albert Meyer	Harvard	1981
+Joe Halpern	Gerald Sacks	Harvard	1981
+Bernd Halstenberg	R. Reischuk	Darmstadt	1991
+W.R. Ham	Robert Millikan	Chicago	1909
+Suzanne Hambrusch	Janos Simon	Penn State	1982
+Dick Hamlet	Bob Ritchie	Washington	1971
+Michael M. Hammer	Michael J. Fischer	MIT	1973
+Yenjo Han	Lane Hemaspaandra	Rochester	1994
+Vijay Hanagandi	Michael Nikolaou	Texas A&M	1995
+John Hannan	Dale Miller	Penn	1990
+Frank Harary	Alfred Foster	Berkeley	1948
+Eleanor Hare	Steve Hedetniemi	Clemson	1989
+David Harel	Albert Meyer	MIT	1978
+David Harel	Vaughan Pratt	MIT	1978
+Dov Harel	George Lueker	Irvine	?
+T. Harju	Arto Salomaa	Turku	1979
+Neal Harman	John Tucker	Leeds?	?
+Leo Harrington	Gerald Sacks	MIT	1973
+Michael Harrison	Harvey Garner	Michigan	1963
+Juris Hartmanis	R.P. Dilworth	Caltech	1955
+A. Hartzhorn	R. Carnap	Chicago	?
+Johan Hastad	Shafi Goldwasser	MIT	1986
+Carl Hauser	Bob Constable	Cornell	1980
+David Haussler	Andrzej Ehrenfeucht	Colorado	1982
+Ivan Havel	Michael Harrison	Berkeley?	?
+Lenny Heath	Arny Rosenberg	North Carolina	1985
+Matthew Hecht	Jeffrey Ullman	Princeton	1974
+Erich Hecke	David Hilbert	Gottingen	1910
+Steve Hedetniemi	Frank Harary	Michigan	1966
+Don Heller	J.F. Traub	CMU	1977
+Hans Heller	R. Bayer	Munich IT	1981
+Lisa Hellerstein	Dick Karp	Berkeley	1989?
+D.P. Helmbold	Ernst W. Mayr	Stanford	1986
+Lane Hemaspaandra	Juris Hartmanis	Cornell	1987
+Monika R. Henzinger	Robert E. Tarjan	Princeton	1993
+Thomas A. Henzinger	Zohar Manna	Stanford	1991
+Maurice Herlihy	Barbara H. Liskov	MIT	1984
+John Hershberger	Leonidas J. Guibas	Stanford	1987
+Amir Herzberg	Oded Goldreich	Technion	1991
+Magnus Hestenes	G.A. Bliss	Chicago	193?
+Uschi Heuter	Wolfgang Thomas	Aachen	1989
+Rattikorn Hewett	Giora Slutzki	Iowa State	1986
+Carl Hewitt	Seymour Papert	MIT	1971
+Allan Heydon	Doug Tygar	CMU	1992
+A. Heyting	L.E.J. Brouwer	Amsterdam UvA	1925
+David Hilbert	Ferdinand Lindemann	Konigsberg	1885
+Friedhelm Hinz	Wolfgang Thomas	Aachen	1990
+Dan Hirschberg	Jeffrey Ullman	Princeton	1975
+Chun-Kuen Ho	Stuart A. Kurtz	Chicago	1994
+My Hoang	John Mitchell	Stanford	1995
+John Hobby	Donald E. Knuth	Stanford	1985
+Dorit Hochbaum	Marshall Fisher	Penn	1979
+Peter Hochschild	Jeffrey Ullman	Stanford	1986
+Joshua Hodas	Dale Miller	Penn	1993
+Berthold Hoffman	C.H. Koster	TU Berlin	1983
+Berthold Hoffman	Hartmut Ehrig	TU Berlin	1983
+Chris Hoffman	Larry Landweber	Wisconsin	1974
+Martin Hofmann	Don Sannella	Edinburgh	1995
+Thomas Hofmeister	Ingo Wegener	Dortmund	1993
+Walter Hohberg	R. Reischuk	Darmstadt	1989
+John H. Holland	Arthur Banks	Michigan	1959
+Nicolas Holzschuch	Claude Puech	Grenoble	1996
+Steven Homer	Gerald Sacks	MIT	1978
+Peter Honeyman	Jeffrey Ullman	Princeton	1980
+Jim Hoover	Stephen Cook	Toronto	1987
+John Hopcroft	R.L. Matson	?	?
+Heinz Hopf	Erhard Schmidt	HU Berlin?	1925
+Ellis Horowitz	George Collins	Wisconsin	?
+Alexander Horsch	F.L. Bauer	Munich IT	1987
+Ned Horvath	Jeffrey Ullman	Princeton	1975
+Gunther Hotz	K. Reidemeister	Gottingen	1958
+Brian Howard	John Mitchell	Stanford	1992
+Paul G. Howard	Jeff Vitter	Brown	1993
+Rodney Howell	Louis E. Rosier	UT Austin	1988
+Tom Howell	John Hopcroft	Cornell	1976
+Jieh Hsiang	Nachum Dershowitz	UIUC	1983
+Scott Huddleston	Bob Ritchie	Washington	1982
+Charles E. Hughes	W.E. Singletary	Penn State	1970
+Richard Hull	Edwin Spanier	Berkeley	1979
+Chao-Kuei Hung	Doug Ierardi	USC	1996
+Harry Hunt	John Hopcroft	Cornell	1973
+Greg Hunter	Jeffrey Ullman	Princeton	1977
+Joan Hutchinson	Herb Wilf	Penn	?
+Hans Huttel	Colin Stirling	Edinburgh	1991
+Dung Huynh	Gunther Hotz	Saarbruecken	1978
+Martin Hyland	Robin Gandy	Oxford	?
+Oscar H. Ibarra	Michael Harrison	Berkeley	1967
+Doug Ierardi	Dexter Kozen	Cornell	1989
+Edmund Ihler	Peter Widmayer	Freiburg	1993
+Newman Ilan	Avi Wigderson	Hebrew	1991
+Tomasz Imielinski	Witold Lipski	Warsaw	1981
+Neil Immerman	Juris Hartmanis	Cornell	1980
+Russell Impagliazzo	Manuel Blum	Berkeley	?
+Sandra Irani	Dick Karp	Berkeley	1990
+Isaac Saias	Nancy Lynch	MIT	1995
+Alexander T. Ishii	Charles E. Leiserson	MIT	1991
+Veysi Isler	Bulent Ozguc	Bilkent	1995
+Alon Itai	Shimon Even	Weizmann	1976
+Pino Italiano	Zvi Galil	Columbia	1991?
+Ljubomir Ivanov	Dimiter Skordev	Sofia	1981
+Ken Iverson	Howard Aiken	Harvard	1954
+Kazuo Iwano	Kenneth Steiglitz?	Princeton	1987
+Kenkichi Iwasawa	Shokichi Iyanaga	?	?
+Shokichi Iyanaga	Teiji Takagi	?	?
+Joseph Ja'Ja'	R.W. Brockett	Harvard	1977
+Konrad Jacobs	Wilhelm Maak	Munich?	1957?
+Jeff Jaffe	Albert Meyer	MIT	1979
+Arun K. Jagota	Kenneth Regan	SUNY Buffalo	1993
+Sanjay Jain	Mark Fulk	Rochester	1990
+Hakan Jakobsson	Jeffrey Ullman	Stanford	1993
+Fahimeh Jalili	Jean Gallier	Penn?	?
+Jan van_der_Craats	? Spijker	?	1972
+Ravi Janardan	Greg Frederickson	Purdue	1987
+Theo M.V. Janssen	Peter van_Emde_Boas	Amsterdam UvA	1983
+Prasad Jayanti	Sam Toueg	Cornell	1993
+Eric Jeltsch	Hans-Joerg Kreowski	Bremen	1992
+Tom Jenkyns	Jack Edmonds	Waterloo	1974
+Niels Jensen	Grant D. Fisher	Alberta	1981
+Mark Jerrum	Leslie G. Valiant	Edinburgh	1981
+Tao Jiang	Oscar H. Ibarra	Minnesota	1988
+Carl Jockusch	Hartley Rogers	MIT	1966
+David S. Johnson	Michael J. Fischer	MIT	1973
+Donald B. Johnson	David Gries	Cornell	1973
+Steven D. Johnson	David S. Wise	Indiana U	1983
+Anita Jones	A. Nico Habermann	CMU	1973
+Douglas Jones	Thomas T. Chen	UIUC	1980
+Neil D. Jones	Arto Salomaa	W Ontario	1967
+Neil D. Jones	S. Takasu	W Ontario	1967
+Deborah Joseph	Paul Young	Purdue	1981
+J.H. Jou	Patrick Fischer	Penn State	1980
+Yuh-Jzer Joung	Scott Smolka	SUNY Stony Brook	1992
+David Juedes	Jack Lutz	Iowa State	1994
+Ramana Juvvadi	Lenny Heath	Virginia Tech	1993
+Mark Kac	Hugo Steinhaus	?	?
+James Kadin	Juris Hartmanis	Cornell	1988
+Jeff Kahn	D. Ray-Chaudhuri	Ohio State	1979
+? Kaldewaij	Martin Rem	Eindhoven	1986
+Burton Kaliski	Ronald L. Rivest	MIT	1988
+Eric Kaltofen	Bob Caviness	RPI	1982
+Bala Kalyanasundaram	Georg Schnitger	Penn State	1988
+John Kam	Jeffrey Ullman	Princeton	1976
+Anil Kamath	Serge Plotkin	Stanford	1995
+Tsutomu Kamimura	Giora Slutzki	Delaware	1979
+A.H.G. Rinnooy Kan	G. de_Leve	Amsterdam UvA	1976
+Daniel M. Kan	Samuel Eilenberg	Hebrew	1955
+Paris Kanellakis	Christos H. Papadimitriou	MIT	1981?
+Arkady Kanevsky	Vijaya Ramachandran	UIUC	1988
+Viggo Kann	Johan Hastad	Royal IT	1992
+Ravi Kannan	Les Trotter	Cornell	1980
+Sampath Kannan	Manuel Blum	Berkeley	1989
+Goos Kant	Hans Bodlaender	Utrecht	1993
+Goos Kant	Jan van_Leeuwen	Utrecht	1993
+Mark Kaplan	Jeffrey Ullman	Princeton	1979
+Sanjiv Kapoor	Ed Reingold	UIUC	1986
+Bruce Kapron	Stephen Cook	Toronto	1991
+David Karger	Rajeev Motwani	Stanford	1994
+J. Karhumaki	Arto Salomaa	Turku	1976
+Oded Kariv	Shimon Even	Weizmann	1976
+Anna Karlin	Jeffrey Ullman	Stanford	1987
+Howard Karloff	Dick Karp	Berkeley	1985
+Rolf Karlsson	Ian Munro	Waterloo	1984
+Narendra Karmarkar	Dick Karp	Berkeley	1983
+Dick Karp	Tony Oettinger	Harvard	1959
+Mark Karpinsky	W. Orlicz	Poznan	1974
+Kevin Karplus	Jeffrey Ullman	Stanford	1983
+Owen Kaser	I.V. Ramakrishnan	SUNY Stony Brook	1993
+Sam Kashdan	Donald B. Johnson	Penn State	1979
+Jyrki Katajainen	Olli Nevalainen	Turku	1987
+Dinesh Katiyar	John Mitchell	Stanford	1994
+Howard Katseff	Manuel Blum	Berkeley	1978
+Matthew J. Katz	Micha Sharir	Tel-Aviv	1995
+Shmuel Katz	Zohar Manna	Weizmann	1976
+John Kececioglu	Gene Myers	Arizona	1991
+Alexander Kechris	Yiannis Moschovakis	UCLA	1972
+Zvi M. Kedem	A. Paz	Technion	1974
+Zvi M. Kedem	Sam Winograd	Technion	1974
+Mark Keil	Derek G. Corneil	Toronto	1983
+John Kemeny	Alonzo Church	Princeton	1949
+R. Kemp	Gunther Hotz	Saarbruecken	1973?
+Robert Kennedy	Andrew Goldberg	Stanford	1995
+Brian Kernighan	Peter Weiner	Princeton	1969
+? Kersten	? van_de_Riet	?	1985
+Harry Kesten	Mark Kac	?	?
+Yonit Kesten	Amir Pnueli	Weizmann	1995
+A.J. Kfoury	Michael S. Paterson	MIT	1973
+Michael Kharitonov	Andrew Goldberg	Stanford	1993?
+Samir Khuller	Vijay Vazirani	Cornell	1990
+Don Kiel	Seymour Ginsburg	USC	1980
+M. Kifer	Catriel Beeri	Hebrew	1984
+Joe Kilian	Shafi Goldwasser	MIT	1989
+Pekka Kilpelainen	Heikki Mannila	Helsinki	1992
+Chul Kim	Oscar H. Ibarra	Minnesota	1975
+Sam Kim	Oscar H. Ibarra	Minnesota	1983
+Efim Kinber	Rusins Martins Freivalds	Latvia	?
+Kimberly King	Michael Harrison	Berkeley	1980
+R.M. King	Ernst W. Mayr	Rutgers	1985
+Valerie King	Dick Karp	Berkeley	1988
+C.M.R. Kintala	Patrick Fischer	Penn State	1977
+Shlomo Kipnis	Charles E. Leiserson	MIT	1990
+Walter Kirchherr	Wolfgang Maass	UIC	1988
+David Kirkpatrick	Allan Borodin	Toronto	?
+Lefteris Kirousis	Yiannis Moschovakis	UCLA	1978
+Jyrki Kivinen	Esko Ukkonen	Helsinki	1992
+Maria Klawe	Tony Lau	Alberta	1977
+Victor Klee	E.J. McShane	Virginia	1949
+Stephen Kleene	Alonzo Church	Princeton	1934
+Felix Klein	Julius Plucker	Bonn	1868
+Philip Klein	David Shmoys	MIT	1988
+Dan Kleitman	J. Schwinger	Harvard	1958
+Dan Kleitman	R. Glauber	Harvard	1958
+Ton Kloks	Hans Bodlaender	Utrecht	1993
+Ton Kloks	Jan van_Leeuwen	Utrecht	1993
+J.W. Klop	Dirk van_Dalen	Utrecht	1980
+Tony Klug	D. Tsichritzis	Toronto	?
+A.S. Klusener	Jos Baeten	Eindhoven TUE	1993
+Edgar Knapp	Jayadev Misra	UT Austin	1992
+Donald E. Knuth	Marshall Hall	Caltech	1963
+Ker-I Ko	Daniel Moore	Ohio State	1979
+Ker-I Ko	Harvey Friedman	Ohio State	1979
+Simon Kochen	Alonzo Church	Princeton	?
+Pascal Koiran	Michel Cosnard	Lyon	1993
+J.N. Kok	Jaco W. de_Bakker	Amsterdam VU	1989
+Phokion Kolaitis	Yiannis Moschovakis	UCLA	1978
+Daphne Koller	Joe Halpern	Stanford	1993
+Janos Komlos	Alfred Renyi	Eotvos	1967
+Kireeti Kompella	Len Adleman	USC	1992
+Ephraim Korach	Jack Edmonds	Waterloo	1982
+Tmima Koren	Amir Pnueli	Tel-Aviv	1986
+Hank Korth	Jeffrey Ullman	Princeton	1982
+H.P. Korver	Jos Baeten	Amsterdam UvA	1994
+Martha Kosa	Jennifer Welch	North Carolina	1994
+Rao Kosaraju	H. Yamada	Penn	1969
+Anthony Kosky	Peter Buneman	Penn	1996
+Anthony Kosky	Susan B. Davidson	Penn	1996
+T. Kowaltowski	J.H. Morris	Berkeley	1973
+Dexter Kozen	Juris Hartmanis	Cornell	1977
+Dean Krafft	Bob Constable	Cornell	1981
+Dina Kravets	Alok Aggarwal	MIT	1992
+Dina Kravets	Tom Leighton	MIT	1992
+Hugo Krawczyk	Oded Goldreich	Technion	1990
+Mark Krentel	Vijay Vazirani	Cornell	1986
+Hans-Joerg Kreowski	Hartmut Ehrig	TU Berlin	1977
+B. Krishnamurthy	Robert Moll	Massachusetts	1981
+P. Krishnan	Jeff Vitter	Brown	1995
+Habib Krit	Kevin Karplus	Santa Cruz	?
+Ken Krohn	Hao Wang	Harvard	1963
+Fred Kruher	Kurt Schutte	Munich	?
+Clyde Kruskal	Jack Schwartz	NYU	1981
+Joe Kruskal	Albert Tucker	Princeton	1954
+Harold Kuhn	Ralph Fox	Princeton	1950
+Werner Kuich	Edmund Hlawka	TU Vienna	1966?
+V.K.P. Kumar	Joseph Ja'Ja'	Penn State	1983
+Kenneth Kunen	Dana Scott	Stanford	1968
+H.T. Kung	J.F. Traub	CMU	1973
+Gabi Kuper	Jeffrey Ullman	Stanford	1985
+Stuart A. Kurtz	Carl Jockusch	UIUC	1981
+Bradley C. Kuszmaul	Charles E. Leiserson	MIT	1994
+Shay Kutten	Ephraim Korach	Technion	1988
+Shay Kutten	Shlomo Moran	Technion	1988
+Miroslaw Kutylowski	Leszek Pacholski	Wroclaw	1985
+K.L. Kwast	Peter van_Emde_Boas	Amsterdam UvA	1992
+Martin H. L&ouml;b	John von_Neumann	?	?
+Ludwig L&ouml;we	?	Heilderberg	1870?
+Richard Ladner	R.W. Robinson	Berkeley	1971
+Jeff Lagarias	Harold Stark	MIT	1974
+? Lakshman	Eric Kaltofen	RPI	1990
+Shui Lam	Ravi Sethi	Penn State	1975
+Tak-Wah Lam	Larry Ruzzo	Washington	1988
+Edmund Lamagna	John Savage	Brown	1975
+Alexis Lamouret	Claude Puech	Grenoble	1995
+Alexis Lamouret	Marie-Paule Gascuel	Grenoble	1995
+Gad Landau	Uzi Vishkin	Tel-Aviv	1986
+Susan Landau	Gary Miller	MIT	1983
+Larry Landweber	J.R. Buchi	Purdue	?
+Mike Langston	Don Friesen	Texas A&M	1981
+Amy Lansky	Sue Owicki	Stanford	1983
+Andrea LaPaugh	Ronald L. Rivest	MIT	1980
+Lawrence L. Larmore	Arthur H. Copeland_Jr	Northwestern	1965
+Lawrence L. Larmore	Dan Hirschberg	Irvine	1986
+Sharon Laskowski	David Dobkin	Yale	1980
+Tony Lau	Ed Granirer	?	?
+Clemens Lautemann	Dirk Siefkes	TU Berlin	1983
+Gene Lawler	Tony Oettinger	Harvard	1963
+Joan Lawry	Paul Beame	Washington	1993
+Aldo Lazar	Joram Lindenstrauss	?	?
+D.T. Lee	Franco Preparata	UIUC	1978
+Sing-Ling Lee	Teofilo Gonzalez	UT Dallas	1984
+Solomon Lefschetz	William Edward Story	Clark U	1911
+Daniel Lehmann	Eli Shamir	Hebrew	1978
+Tom Leighton	Gary Miller	MIT	1981
+Brian Leininger	Oscar H. Ibarra	Minnesota	1981
+R. Leipala	Arto Salomaa	Turku	1979
+Charles E. Leiserson	H.T. Kung	CMU	1981
+Charles E. Leiserson	Jon Bentley	CMU	1981
+Dan Leivant	A.S. Troelstra	Amsterdam UvA	1975
+Tom Lengauer	Robert E. Tarjan	Stanford	1979
+A.K. Lenstra	Peter van_Emde_Boas	Amsterdam UvA	1984
+H.K. Lenstra	F. Oort	Amsterdam UvA	1977
+J.K. Lenstra	G. de_Leve	Amsterdam UvA	1976
+Katja Lenz	Ernst W. Mayr	Frankfurt	1993
+Hon Wai Leong	C.L. Liu	UIUC	1986
+Pierre Lescanne	Claude Pair	INP Lorraine	1979
+John Leuchner	Giora Slutzki	Iowa State	1988
+Joe Leung	Ed Coffman	Penn State	1977
+Christos Levcopoulos	Andrzej Lingas	Linkoping	1987
+Gary Levin	David Gries	Cornell	1980
+Leonid A. Levin	Albert Meyer	MIT	1979
+David Levine	Scot Drysdale	Dartmouth	1986
+Forbes Lewis	Juris Hartmanis	Cornell	1970
+Harry Lewis	Burton Dreben	Harvard	1974
+John Lewis	David Dobkin	Yale	1978
+Phil Lewis	Ernie Guillemin	MIT	1956
+Lide Li	Lance Fortnow	Chicago	1993
+Ming Li	Juris Hartmanis	Cornell	1985
+Chuck Liang	Dale Miller	Penn	1995
+Y. Daniel Liang	S.K. Dhall	Oklahoma	1991
+Ran Libeskind-Hadas	C.L. Liu	UIUC	1993
+Leonid Libkin	Peter Buneman	Penn	1994
+David Lichtenstein	Gene Lawler	Berkeley	1980?
+Orna Lichtenstein	Amir Pnueli	Weizmann	1991
+Karl Lieberherr	Erwin Engeler	ETH Zurich	1977
+Arthur L. Liestman	Roy H. Campbell	UIUC	1981
+Jyh-Han Lin	Jeff Vitter	Brown	1992
+Shen Lin	Tibor Rado	Ohio State	1963
+Patrick Lincoln	John Mitchell	Stanford	1992
+Steven Lindell	Yiannis Moschovakis	UCLA	1987
+Ferdinand Lindemann	Felix Klein	Erlangen	1873
+Andrzej Lingas	Erik Sandewall	Linkoping	1983
+M. Linna	Arto Salomaa	Turku	1975
+Witold Lipski	Wiktor Marek	Warsaw	1974
+Dick Lipton	David Parnas	CMU	1973
+Maciej Liskiewicz	Leszek Pacholski	Wroclaw	1990
+C.L. Liu	Dean Arden	MIT	1962
+Errol Lloyd	Ronald L. Rivest	MIT	1980
+Austin Lobo	Eric Kaltofen	RPI	1995
+Irina Lomazova	Boris Trakhtenbrot	Novosibirsk	?
+Jean-Christophe Lombardo	Claude Puech	Grenoble	1996
+Ralph London	Allen Newell	CMU	1964
+Phil Long	David Haussler	Santa Cruz	1992
+Tim Long	Paul Young	Purdue	1978
+John Longley	Michael Fourman	Edinburgh	1995
+Luc Longpre	Juris Hartmanis	Cornell	1986
+Krzysztof Lorys	Leszek Pacholski	Wroclaw	1989
+Michael Loui	Albert Meyer	MIT	1980
+Laszlo Lovasz	Tibor Gallai	?	?
+Don Loveland	Martin Davis	NYU	1964
+Michael Luby	Dick Karp	Berkeley	1983
+C L. Lucchesi	D.H. Younger	Waterloo	1976
+David Luckham	Hartley Rogers	MIT	1963
+George Lueker	Jeffrey Ullman	Princeton	1976
+David Luginbuhl	Michael Loui	UIUC	1990
+Eugene Luks	Kenkichi Iwasawa	MIT	1966
+Carsten Lund	Lance Fortnow	Chicago	1991
+Zhaohui Luo	Rod Burstall	Edinburgh	1990
+Jack Lutz	Alexander Kechris	Caltech	1987
+Nancy Lynch	Albert Meyer	MIT	1972
+Yuh-Dauh Lyuu	Michael O. Rabin	Harvard	1990
+Wilhelm Maak	Erich Hecke	Hamburg	1935
+Wolfgang Maass	Kurt Schutte	Munich	1974
+Michael Machtey	Gerald Sacks	MIT	1969
+Saunders MacLane	Bernays	Gottingen	1934
+Saunders MacLane	Herman Weyl	Gottingen	1934
+Eugene Madison	William Boone	UIUC	1966
+George Mager	Seymour Ginsburg	USC	1968
+Bruce Maggs	Charles E. Leiserson	MIT	1989
+Talal Maghrabi	Forouzan Golshani	Arizona State	1992
+Tom Magnanti	George Dantzig	Stanford	?
+Steve Mahaney	Juris Hartmanis	Cornell	1981
+Bernd Mahr	Dirk Siefkes	TU Berlin	1979
+Bernd Mahr	Hartmut Ehrig	TU Berlin	1979
+David Maier	Jeffrey Ullman	Princeton	1979
+? Mailloux	Aad van_Wijngaarden	?	1968
+Harry Mairson	Jeffrey Ullman	Stanford	1985
+Aniket Majumdar	Renu Laskar	Clemson	1992
+Aniket Majumdar	Steve Hedetniemi	Clemson	1992
+Fillia Makedon	G. Krulee	Northwestern	1982
+Erkki Makinen	Reino Kurki-Suonio	Tampere	1985
+Yoni Malachi	Zohar Manna	Stanford	1986
+Oded Maler	Amir Pnueli	Weizmann	1990
+Miller Maley	Charles E. Leiserson	MIT	1987
+Seth Malitz	Tom Leighton	MIT	1988
+Mark Manasse	Terry Millar	Wisconsin	1982
+Rachel Manber	Victor Klee	Washington	1982
+Udi Manber	Richard Ladner	Washington	1982
+Scholem Mandelbrojt	Jacques Hadamard	Paris	?
+Ken Manders	Manuel Blum	Berkeley	1976?
+Zohar Manna	Alan Perlis	CMU	1968
+Zohar Manna	Robert W. Floyd	CMU	1968
+Heikki Mannila	Esko Ukkonen	Helsinki	1985
+Joseph Manning	Mikhail Atallah	Purdue	1990
+Yishai Mansour	Shafi Goldwasser	MIT	1990
+Weizhen Mao	Andy Yao	Princeton	1990
+Madhav Marathe	Harry Hunt	SUNY Albany	1994
+Madhav Marathe	Richard Stearns	SUNY Albany	1994
+Yves Marcoux	Gilles Brassard	Montreal	1991
+Yves Marcoux	Pierre McKenzie	Montreal	1991
+Wiktor Marek	Andrzej Mostowski	Warsaw	1968
+Peter Mark	Eugene Luks	Oregon	1993
+Tassos Markas	John Reif	Duke	1993
+Andrei Andreevich Markov	Pafnuty Lvovich Chebyshev	St. Petersburg	1884
+Assaf Marron	Ker-I Ko	Houston	1989
+Chip Martel	Gene Lawler	Berkeley	?
+Conrado Martinez	Rafael Casas	Catalunya UP	1992
+Keith Marzullo	Sue Owicki	Stanford	1984
+Vic Massad	Barton A. Weitz	Florida	1990
+Tom Mathies	Ravi Kannan	CMU	1992
+Steve Matthews	William W. Wadge	Warwick	1984
+Hermann Maurer	Edmund Hlawka	Vienna	1965
+Steve Maurer	Albert Tucker	Princeton	1972
+S. Mauw	Jos Baeten	Amsterdam UvA	1992
+John Mayberry	William Boone	UIUC	1966
+Brian Mayoh	William Boone	UIUC?	?
+Elvira Mayordomo	Jose Balcazar	Catalunya UP	1994
+Ernst W. Mayr	Manfred Paul	Munich IT	1980
+Stefan Mazurkiewicz	Waclaw Sierpinski	Lwow	1913
+John McCarthy	Solomon Lefschetz	Princeton	1951
+W.F. McColl	Michael S. Paterson	Warwick	1976
+Ed McCreight	Albert Meyer	CMU	1969
+Cathy McGeoch	Jon Bentley	CMU	1986
+Lyle McGeoch	Daniel Sleator	CMU	1987
+Lyle McGeoch	Merrick Furst	CMU	1987
+Pierre McKenzie	Allan Borodin	Toronto	1984
+Pierre McKenzie	Stephen Cook	Toronto	1984
+Tom McLaughlin	Chen-Chung Chang	UCLA	?
+David McQueen	Gerald Sacks	MIT	1972
+E.J. McShane	G.A. Bliss	Chicago	?
+Nimrod Megiddo	Michael Maschler	Hebrew	1972
+Kurt Mehlhorn	Bob Constable	Cornell	1974
+J. Meidanis	Deborah Joseph	Wisconsin	1992
+J. Meidanis	Eric Bach	Wisconsin	1992
+Karl Meinke	John Tucker	Leeds?	?
+R. Melville	David Gries	Cornell	1981
+Alberto Mendelzon	Jeffrey Ullman	Princeton	1980
+Arif Merchant	Ernst W. Mayr	Stanford	1990
+Mike Merritt	Rich DeMillo	Georgia Tech	1982
+Takis Metaxas	Donald B. Johnson	Dartmouth	1991
+Albert Meyer	Patrick Fischer	Harvard	1972
+Albert Meyer	Thomas E. Cheatham	Harvard	1972
+Friedhelm Meyer_auf_der_Heide	Wolfgang Paul	Bielefeld	1981
+Silvio Micali	Manuel Blum	Berkeley	1982
+Ruben Michel	Michael J. Fischer	Yale	1990
+A. Middeldorp	J.W. Klop	Amsterdam VU	1990
+Milena Mihail	Umesh Vazirani	Harvard	1989
+Victor Milenkovic	Daniel Sleator	CMU	1988
+Victor Milenkovic	Takeo Kanade	CMU	1988
+Terry Millar	Michael Morley	?	?
+Dale Miller	Peter Andrews	CMU	1983
+Gary Miller	Manuel Blum	Berkeley	1975
+Ray Miller	Franz Hohn	UIUC	1957
+Webb Miller	Bob Ritchie	Washington	1968?
+Robert Millikan	Ogden Rood	Columbia	1895
+Peter Miltersen	Sven Skyum	Aarhus	1993
+Marvin Minsky	Albert Tucker	Princeton	1954
+Nathaniel Mishkin	Michael J. Fischer	Yale	1984
+John Mitchell	Albert Meyer	MIT	1984
+Joseph Mitchell	Christos H. Papadimitriou	Stanford	1986
+Sandra Mitchell	Steve Hedetniemi	Virginia	1977
+William H. Mitchell	Antony Faustini	Arizona State	?
+Sarah Mocas	Luc Longpre	Northeastern	1994
+Bob Moenck	Allan Borodin	Toronto	1973
+Bob Moenck	John Lipson	Toronto	1973
+Robert Moll	Albert Meyer	MIT	1971?
+Faron Moller	Robin Milner	Edinburgh	1989
+Margaret Montenyohl	Mitchell Wand	Indiana U	1987
+Daniel Moore	John Case	Buffalo	?
+E.H. Moore	H.A. Newton	Yale	1885
+Shlomo Moran	A. Paz	?	?
+Michael Morley	Saunders MacLane	Chicago	1962
+Kate Morris	Jeffrey Ullman	Stanford	1991
+Mohamed Mosbah	Bruno Courcelle	Bordeaux	1992
+Yiannis Moschovakis	Stephen Kleene	Wisconsin	1963
+Joel Moses	Marvin Minsky	MIT	1967
+Yoram Moses	Joe Halpern	Stanford	1985
+Yoram Moses	Nils Nilsson	Stanford	1985
+Andrzej Mostowski	Alfred Tarski	Warsaw	1938
+Ben Moszkowski	Zohar Manna	Stanford	1983
+Howard Motteler	Carl Smith	Maryland	1987
+Rajeev Motwani	Dick Karp	Berkeley	1988
+D. Mount	Chris Hoffman	Purdue	?
+Arnaldo V. Moura	Michael Harrison	Berkeley	1980
+Steve Muchnick	Bob Constable	Cornell	1974
+Inderpal Mumick	Jeffrey Ullman	Stanford	1991
+Ian Munro	Allan Borodin	Toronto	1971
+Daniel Allen Muntz	Peter Honeyman	Michigan	1994
+Dick Muntz	Ed Coffman	Princeton	1967?
+Ilmir Musikaev	Mikhail Taitslin	Kazakhtan	?
+Jean Musinski	John Hopcroft	Cornell	1973
+Gene Myers	Andrzej Ehrenfeucht	Colorado	1981?
+Thomas Myers	Jean Gallier	Penn?	?
+John Mylopoulos	Theo Pavlidis	Princeton?	?
+Gopalan Nadathur	Dale Miller	Penn	1986
+Ashish V. Naik	Alan Selman	SUNY Buffalo	1994
+Dalit Naor	Dan Gusfield	UC Davis	1991
+Joseph Naor	Eli Shamir	Hebrew	1987
+Moni Naor	Manuel Blum	Berkeley	1989
+Giri Narasimhan	Rachel Manber	Wisconsin	1989
+Chandra Narayanan	Steve Hedetniemi	Clemson	1989
+Lata Narayanan	Danny Krizanc	Rochester	1992
+Jeffrey F. Naughton	Jeffrey Ullman	Stanford	1987
+Gil Neiger	Sam Toueg	Cornell	1988
+Greg Nelson	Robert E. Tarjan	Stanford	1980
+Anil Nerode	Saunders MacLane	Chicago	1956
+Carl Gottfried Neumann	?	Konigsberg	1856
+Allen Newell	Herb Simon	CMU	1957
+H.A. Newton	---	---	---
+Mogens Nielsen	Arto Salomaa	Aarhus	1976
+A. Nijholt	Jaco W. de_Bakker	Amsterdam VU	1980
+Bengt J. Nilsson	Svante Carlsson	Lund	1995
+Stefan Nilsson	Arne Andersson	Lund	1996
+Noam Nisan	Dick Karp	Berkeley	1988?
+Damian Niwinski	Jerzy Tiuryn	Warsaw	1987
+Mark H. Nodine	Jeff Vitter	Brown	1993
+Lars Nyland	John Reif	Duke	1991
+Mike O'Donnell	Bob Constable	Cornell	1976
+Colm O'Dunlaing	Ron Book	Santa Barbara	1981
+Joseph O'Rourke	Norman I. Badler	Penn	1980
+Zoran Obradovic	Ian Parberry	Penn State	1991
+Bojana Obrenic	Arny Rosenberg	Massachusetts	1993
+Andrew Odlyzko	Harold Stark	MIT	1975
+Tony Oettinger	Howard Aiken	Harvard	1954
+Mitsunori Ogihara	Kojiro Kobayashi	Tokyo IT	1993
+Hans J&uuml;rgen Ohlbach	J&ouml;rg Siekmann	Kaiserslautern	1988
+Atsushi Ohori	Peter Buneman	Penn	1989
+E.R. Olderog	Hans Langmaack	Kiel	1981
+Dino P. Oliva	Mitchell Wand	Northeastern	1993
+Derek Oppen	Stephen Cook	Toronto	1974?
+Fredrik Orava	Joachim Parrow	Uppsala	1994
+Oystein Ore	Thor Skolem	Oslo	1924
+Mehmet Orgun	William W. Wadge	Victoria	1991
+Jim Orlin	Arthur Veinott	Stanford	1981
+Pekka Orponen	Esko Ukkonen	Helsinki	1986
+Sylvia Osborn	Frank Tompa	Waterloo	1977
+Sylvia Osborn	Ian Munro	Waterloo	1977
+Ross Overbeek	W.E. Singletary	Penn State	1971
+Mark Overmars	Jan van_Leeuwen	Utrecht	1983
+Sue Owicki	David Gries	Cornell	1975
+Bulent Ozguc	Norman I. Badler	Penn	1979
+Leszek Pacholki	Czeslaw Ryll-Nardzewski	PAS	1970
+Peter Padawitz	Hartmut Ehrig	TU Berlin	1983
+Carl V. Page	John H. Holland	Michigan	1965
+Sophia A. Paleologou	Michael J. Fischer	Yale	1995
+Michael Palis	Oscar H. Ibarra	Minnesota	1985
+Luquan Pan	Ron Book	Santa Barbara	1985
+Viktor Pan	A.G. Vitushkin	Moscow State	1964
+Jean-Jacques Pansiot	John Hopcroft	Cornell	1976
+Thomas Papadakis	Ian Munro	Waterloo	1993
+Christos H. Papadimitriou	Kenneth Steiglitz	Princeton	1976
+Marios C. Papaefthymiou	Charles E. Leiserson	MIT	1993
+Ian Parberry	Michael S. Paterson	Warwick	1984
+Panos Pardalos	J.B. Rosen	Minnesota	1985
+Luis Trabb Pardo	Donald E. Knuth	Stanford	1978
+Rohit Parikh	Burton Dreben	Harvard	1962
+Rohit Parikh	Hartley Rogers	Harvard	1962
+David Park	Hartley Rogers	MIT	1964
+James K. Park	Charles E. Leiserson	MIT	1991
+Kunsoo Park	Zvi Galil	Columbia	1991
+Bruce Parker	Ian Parberry	Penn State	1988
+David Parnas	---	CMU	1965
+Joachim Parrow	Bj&ouml;rn Pehrson	Uppsala	1985
+Tory Parsons	Albert Tucker	Princeton	1966
+Helmut Partsch	F.L. Bauer	Munich IT	1979
+Solomon Passy	Dimiter Skordev	Sofia	1985
+Michael S. Paterson	David Park	Cambridge	1967
+Manfred Paul	F.L. Bauer	Mainz	1962
+Wolfgang Paul	Gunther Hotz	Saarbruecken	1973
+Shaunak Pawagi	I.V. Ramakrishnan	Maryland	1986
+A. Paz	Michael O. Rabin	Hebrew?	1965
+Andrzej Pelc	Wiktor Marek	Warsaw	1981
+Doron Peled	Amir Pnueli	Technion	1991
+Doron Peled	Shmuel Katz	Technion	1991
+Sriram Pemmaraju	Lenny Heath	Virginia Tech	1992
+M. Penttonen	Arto Salomaa	Turku	1974
+Peter Pepper	F.L. Bauer	Munich IT	1979
+Rene Peralta	Manuel Blum	Berkeley	1987?
+Yehoshua Perl	Shimon Even	Weizmann	1974
+Pino Persiano	Michael O. Rabin	Harvard	1993
+Gary L. Peterson	Michael J. Fischer	Washington	1979
+Ola Petersson	Christos Levcopoulos	Lund	1990
+Petjo Petkov	A.A. Markov	Moscow State	1970
+Erez Petrank	Oded Goldreich	Technion	1995
+Cynthia Phillips	Charles E. Leiserson	MIT	1989
+Steven Phillips	Rajeev Motwani	Stanford	1993
+Geoff Phipps	Jeffrey Ullman	Stanford	1992
+Paul Pilgrim	William W. Wadge	Warwick	1983
+Tad Pinkerton	Bernard A. Galler	Michigan	1968
+Ron Pinter	Charles E. Leiserson	MIT	1982
+Ron Pinter	Ronald L. Rivest	MIT	1982
+Shlomit Pinter	Rohit Parikh	Boston U	1983
+Nick Pippenger	Peter Elias	MIT	1974
+Lenny Pitt	Dana Angluin	Yale	1985?
+David Plaisted	Robert W. Floyd	Stanford	1976
+Thane Plambeck	Jeffrey Ullman	Stanford	1991
+Mike Plass	Donald E. Knuth	Stanford	1981
+C. Greg Plaxton	Ernst W. Mayr	Stanford	1989
+Mark Pleszkoch	William Gasarch	Maryland	1990
+Gordon Plotkin	Rod Burstall	Edinburgh	1973
+Serge Plotkin	Charles E. Leiserson	MIT	1988
+Detlef Plump	Hans-Joerg Kreowski	Bremen	1993
+Amir Pnueli	C.L. Pekeris	Weizmann	1967
+Patricio Poblete	Ian Munro	Waterloo	1982
+Michel Pocchiola	Claude Puech	Paris	1990?
+Andy Podgurski	Arny Rosenberg	Massachusetts	1989
+Andy Podgurski	Lori Clarke	Massachusetts	1989
+A. Ponse	Jos Baeten	Amsterdam UvA	1992
+Kjell Post	Allen van_Gelder	Santa Cruz	1994
+Andreas Potthoff	Wolfgang Thomas	Kiel	1994
+Han la Poutre	Jan van_Leeuwen	Utrecht	1991
+Han la Poutre	Mark Overmars	Utrecht	1991
+Vaughan Pratt	Donald E. Knuth	Stanford	1972?
+Franco Preparata	Roberto Vacca	Rome	1959
+Jan Prins	David Gries	Cornell	1987
+Robert Probert	Patrick Fischer	Waterloo	1973
+Helmut Prodinger	Werner Kuich	TU Vienna	1978
+Kirk Pruhs	Udi Manber	Wisconsin	1989
+Teresa Przytycka	David Kirkpatrick	British Columbia	1990
+Geppino Pucci	Fabrizio Luccio	Pisa	1993
+Bill Pulleyblank	Jack Edmonds	Waterloo	1975
+Paul Purdom	R.W. Kavanaugh	Caltech	1966
+Yuval Rabani	Amos Fiat	Tel-Aviv	1992
+Michael O. Rabin	Alonzo Church	Princeton	1957
+Alexander Rabinovich	Boris Trakhtenbrot	Tel-Aviv	?
+Charles Rackoff	Albert Meyer	MIT	1974?
+Slavian Radev	A. Skowron	Warsaw	1981
+Slavian Radev	Helena Rasiowa	Warsaw	1981
+Jaikumar Radhakrishnan	Endre Szemeredi	Rutgers	1991
+Tomasz Radzik	Andrew Goldberg	Stanford	1993?
+Prabhakar Ragde	Dick Karp	Berkeley	1986
+Balaji Raghavachari	Martin Furer	Penn State	1992
+Prabhakar Raghavan	Clark Thomborson	Berkeley	1986
+Arvind Raghunathan	Gene Lawler	Berkeley	1989?
+Kari-Jouko Raiha	Martti Tienari	Helsinki	1982
+Sanguthevar Rajasekaran	John Reif	Harvard	1987
+Sergio Rajsbaum	Shimon Even	Technion	1991
+Vijaya Ramachandran	Dick Lipton	Princeton	1983
+I.V. Ramakrishnan	Donald Fussell	UT Austin	1983
+Rajeev Raman	Paul Dietz	Rochester	1991
+Venkatesh Raman	Ian Munro	Waterloo	1991
+Sridhar Ramaswamy	Paris Kanellakis	Brown	1995
+G.D. Ramkumar	Leonidas J. Guibas	Stanford	1996
+Lyle Ramshaw	Donald E. Knuth	Stanford	1979
+Desh Ranjan	Juris Hartmanis	Cornell	1992
+Helena Rasiowa	Andrzej Mostowski	Warsaw	?
+R. Ravi	Philip Klein	Brown	1994
+S.S. Ravi	Errol Lloyd	Pittsburgh	1984
+Yiftach Ravid	Amos Fiat	Tel-Aviv	1992
+Bala Ravikumar	Oscar H. Ibarra	Minnesota	1987
+D. Ray-Chaudhuri	R.C. Bose	?	?
+Vaclar Raylich	Gene Rose	Case Western Reserve	1971
+Samuel A. Rebelsky	Mike O'Donnell	Chicago	1993
+David A. Reckhow	Philip C. Singer	North Carolina	1984
+Robert Reckhow	Stephen Cook	Toronto	?
+Larry Reeker	Allen Newell	CMU	1974
+Kenneth Regan	Dominic Welsh	Oxford	1986
+John Reif	Harry Lewis	Harvard	1977
+Ed Reingold	Juris Hartmanis	Cornell	1971
+Nick Reingold	Richard Beigel	Yale	1992
+S. Reisch?	Wolfgang Paul	Bielefeld	?
+R. Reischuk	Wolfgang Paul	Bielefeld	1980
+Martin Rem	Edsger Wybe Dijkstra	Eindhoven	1976
+Gyorgy Revesz	L. Kalmar	Szeged	1968
+Injong Rhee	Jennifer Welch	North Carolina	1994
+Greg Riccardi	John Case	Buffalo	?
+Craig Rich	Giora Slutzki	Iowa State	1988
+O.W. Richardson	J.J. Thomson	London	1904
+Moty Ricklin	Amos Fiat	Tel-Aviv	1993
+Jon Riecke	Albert Meyer	MIT	1991
+Tom Rigles	Jerzy Tiuryn	Washington State	1989
+Bob Ritchie	Alonzo Church	Princeton	1961
+Dennis Ritchie	Patrick Fischer	Harvard	1968
+Ronald L. Rivest	Robert W. Floyd	Stanford	1974
+Ed Robertson	Larry Landweber	Wisconsin	1970
+Abraham Robinson	Paul Dienes	London	1949
+R.W. Robinson	Gerald Sacks	Cornell	1965?
+Mickey Rodeh	Shimon Even	Technion	1976
+Susan Rodger	Greg Frederickson	Purdue	1989
+Hartley Rogers	Alonzo Church	Princeton	1953
+John D. Rogers	Stuart A. Kurtz	Chicago	1995
+Pankaj Rohatgi	Juris Hartmanis	Cornell	1993
+David Rolston	Antony Faustini	Arizona State	1992
+Kathleen Romanik	Carl Smith	Maryland	1992
+John Rompel	Tom Leighton	MIT	1990
+P. Rondogiannis	William W. Wadge	Victoria	1994
+Ogden Rood	---	---	---
+Robert Roos	Piotr Berman	Penn State	1988
+Don Rose	D.G.M. Anderson	Harvard	1970
+Don Rose	Garrett Birkhoff	Harvard	1970
+Gene Rose	Stephen Kleene	Wisconsin	1952
+Kristoffer H. Rose	Neil D. Jones	Kobenhavns	1996
+Barry Rosen	Ron Book	Harvard	1971
+Arny Rosenberg	Patrick Fischer	Harvard	1966
+Dan Rosenkrantz	Steve Unger	Columbia	1965
+Arnie Rosenthal	Gene Lawler	Berkeley	1974
+Louis E. Rosier	Oscar H. Ibarra	Minnesota	1982
+Roni Rosner	Amir Pnueli	Weizmann	1991
+Kenneth Ross	Jeffrey Ullman	Stanford	1991
+Barkley Rosser	Alonzo Church	Princeton	1934
+G&uuml;nter Rote	Rainer Burkard	Graz	1988
+E.P. Rotterdam	Peter van_Emde_Boas	Groningen	1992
+Bill Rounds	Dana Scott	Stanford?	1970?
+Branislav Rovan	Seymour Ginsburg	USC	1973
+Jim Royer	John Case	Buffalo	?
+Gregorz Rozenberg	Andrzej Ehrenfeucht	Warsaw	?
+Aviel David Rubin	Peter Honeyman	Michigan	1994
+Ronitt Rubinfeld	Manuel Blum	Berkeley	1990
+Roy Rubinstein	Alan Selman	Northeastern	1988
+Steven Rudich	Manuel Blum	Berkeley	1988?
+K. Ruohonen	Arto Salomaa	Turku	1976
+Daniela Rus	John Hopcroft	Cornell	1992
+Michael Rusinowitch	Jieh Hsiang	Nancy	1987
+David. Russo	Ron Book	Santa Barbara	1985
+Larry Ruzzo	Michael Harrison	Berkeley	1978
+Laura Sabel	Keith Marzullo	Cornell	1995
+George Sacerdote	William Boone	UIUC	1971
+Daryel Sachse-Akerlind	Martin Ward	ANU	1984
+Daryel Sachse-Akerlind	Richard Brent	ANU	1984
+Gerald Sacks	Barkley Rosser	Cornell?	?
+Fred Sadri	Jeffrey Ullman	Princeton	1981
+Hershel Safer	Jim Orlin	MIT	1992
+Muli Safra	Amir Pnueli	Weizmann	1989
+Yehoshua Sagiv	Jeffrey Ullman	Princeton	1979
+Sartaj Sahni	Ellis Horowitz	Cornell	1973
+Bill Sakoda	Manuel Blum	Berkeley	?
+Mike Saks	Dan Kleitman	MIT	1980?
+Arto Salomaa	---	Turku	1960
+Gerard Salton	Howard Aiken	Harvard	1958
+Laura Sanchis	Mark Fulk	Rochester	1989
+Daniel P. Sanders	Robin Thomas	Georgia Tech	1993
+Don Sannella	Rod Burstall	Edinburgh	1982
+Yatin Saraiya	Jeffrey Ullman	Stanford	1991
+Huzur Saran	Gene Lawler	Berkeley	1990
+Majid Sarragzadeh	Franco Preparata	UIUC	1987
+Carla Savage	David Muller	UIUC	1977
+John Savage	Irwin Jacobs	MIT	1965
+Homer Savige	Wiley Housewright	Florida State	1956
+Walter Savitch	Stephen Cook	Berkeley	?
+Larry Saxton	Patrick Fischer	Waterloo	1973
+Vladimir Sazonov	Boris Trakhtenbrot	Novosibirsk	?
+Andre Scedrov	John Myhill	SUNY Buffalo	1981
+Tom Schaefer	Dick Karp	Berkeley	1976
+Robert E. Schapire	Ronald L. Rivest	MIT	1991
+Barry Schaudt	Scot Drysdale	Dartmouth	1991
+Edward R. Scheinerman	Douglas West	Princeton	1984
+William Scherlis	Zohar Manna	Stanford	1980
+Baruch Schieber	Uzi Vishkin	Tel-Aviv	1987
+Karl Schimf	Jean Gallier	Penn?	?
+Ulrich Schmid	Helmut Prodinger	TU Vienna	1985
+Erhard Schmidt	David Hilbert	Gottingen	1905
+Erik Meineche Schmidt	Juris Hartmanis	Cornell	1978
+Heinz-Wilhelm Schmidt	Hans-Joerg Kreowski	Bremen	1988
+Jeanette Schmidt-Prozan	Eli Shamir	Weizmann	?
+Georg Schnitger	Wolfgang Paul	Bielefeld	1982
+C.P. Schnorr	Gunther Hotz	Saarbruecken	1967
+Walter Schnyder	Ernst Specker	ETH Zurich	1983
+Uwe Schoning	Wolfram Schwabh&auml;user	Stuttgart	1981
+Leonard Schulman	Michael Sipser	MIT	1992
+Martin Schultz	Garrett Birkhoff	Harvard	?
+Kurt Schutte	David Hilbert	Gottingen	?
+Jack Schwartz	?	Yale	1955
+Steve Schwartz	Robert Soare	Chicago	1982
+Otfried Schwarzkopf	Helmut Alt	FU Berlin	1992
+Thomas Schwentick	Clemens Lautemann	Mainz	1995
+Edward Sciore	Jeffrey Ullman	Princeton	1979
+Dana Scott	Alonzo Church	Princeton	1958
+Norman Scott	Lloyd Devore	UIUC	1950
+William T. Scott	Forouzan Golshani	Arizona State	1993
+Robert Sedgewick	Donald E. Knuth	Stanford	1975
+Silke Seehusen	Hans-Joerg Kreowski	Bremen	1987
+Raimund Seidel	John Gilbert	Cornell	1986
+Joel Seiferas	Albert Meyer	MIT	1974?
+Stanley Selkow	James Korsh	Penn	1970
+Alan Selman	Paul Axt	Penn State	1970
+Warren Semon	Howard Aiken	Harvard	1954
+Sandeep Sen	John Reif	Duke	1989
+Ravi Sethi	Jeffrey Ullman	Princeton	1973
+Ken Sevcik	Linus Shrage	Chicago	?
+Vivian Sewelson	Juris Hartmanis	Cornell	1983
+Jeffrey Shaffer	Matthew Hecht	Maryland	1978
+Amitabh Shah	Keith Marzullo	Cornell	1990
+Jeffrey Shallit	Manuel Blum	Berkeley	1983
+Adi Shamir	Zohar Manna	Weizmann	1977
+Eli Shamir	Shmuel Agmon	Hebrew	?
+Ron Shamir	Dick Karp	Berkeley	1984
+Ron Shamir	Ilan Adler	Berkeley	1984
+Mike Shamos	David Dobkin	Yale	1978
+Claude Shannon	Frank Hitchcock	MIT	1940
+Greg Shannon	Greg Frederickson	Purdue	1988
+Lloyd Shapley	Albert Tucker	Princeton	1953
+Micha Sharir	Aldo Lazar	Tel-Aviv	1976
+Mary Shaw	Alan Perlis	CMU	1972
+Jim Shearer	Dan Kleitman	MIT	1980?
+Xiaojun Shen	Ed Reingold	UIUC	1989
+Anil M. Shende	John Case	SUNY Buffalo	1991
+Alan T. Sherman	Ronald L. Rivest	MIT	1987
+Rivka Sherman	Amir Pnueli	Weizmann	1984
+Rivka Sherman	David Harel	Weizmann	1984
+Yossi Shiloach	Shimon Even	Weizmann	1975
+David Shmoys	Gene Lawler	Berkeley	1984
+Oded Shmueli	Nat Goodman	Harvard	1981
+Peter Shor	Tom Leighton	MIT	1985
+Robert Shostak	Thomas E. Cheatham	Harvard	1974
+Victor Shoup	Eric Bach	Wisconsin	1989
+Linus Shrage	Bill Maxwell	Cornell	?
+Alan Siegal	Jeffrey Ullman	Stanford	1983
+Alex Siegel	Keith Marzullo	Cornell	1992
+Howard Siegel	Jeffrey Ullman	Princeton	1977
+Waclaw Sierpinski	Georgy Fedoseevich Voronoi	Jagiellonian	1906
+Ron Sigal	Elaine Weyuker	NYU	1983
+Ron Sigal	Martin Davis	NYU	1983
+Vishal Sikka	Michael Genesereth	Stanford	1996
+Hans-Ulrich Simon	Gunther Hotz	Saarbruecken	1982
+Herb Simon	?	Chicago	1943
+Istvan Simon	John Gill	Stanford	1977
+Janos Simon	Juris Hartmanis	Cornell	1975
+Barbara Simons	Dick Karp	Berkeley	1980?
+Shai Simonson	Hal Sudborough	Northwestern	1986
+Alistair Sinclair	Mark Jerrum	Edinburgh	1988
+W.E. Singletary	William Boone	UIUC	1964
+Seppo Sippu	Eljas Soisalon-Soininen	Helsinki	1981
+Seppo Sippu	Martti Tienari	Helsinki	1981
+Michael Sipser	Manuel Blum	Berkeley	1979
+A.P. Sistla	Edmund Clarke	Harvard	1983
+Peter Sj&ouml;din	Joachim Parrow	Uppsala	1991
+Kostas Skandalis	Leszek Pacholski	Wroclaw	1981
+Steven Skiena	Herbert Edelsbrunner	UIUC	1988
+Thor Skolem	Axel Thue	?	?
+Dimiter Skordev	Yaroslav Tagamlitzki	Sofia	1967
+Dale Skrien	Victor Klee	Washington	1980
+Sven Skyum	Arto Salomaa	Aarhus	1974
+Peter J. Slater	Steve Hedetniemi	Iowa	1973
+Daniel Sleator	Robert E. Tarjan	Stanford	1981
+Robert Sloan	Ronald L. Rivest	MIT	1982
+Giora Slutzki	Amir Pnueli	Tel-Aviv	1977
+Steve Smale	Raoul Bott	Michigan	1956
+M. Smid	Peter van_Emde_Boas	Amsterdam UvA	1989
+Carl Smith	John Case	Buffalo	1979
+Sean Smith	Doug Tygar	CMU	1994
+Steven Smoliar	Marvin Minsky	MIT	1971
+Scott Smolka	Paris Kanellakis	Brown	1984
+Raymond Smullyan	Alonzo Church	Princeton	1959
+? Snepscheut	Martin Rem	Eindhoven	1983
+Marc Snir	Eli Shamir	Hebrew	?
+Larry Snyder	A. Nico Habermann	CMU	1973
+Timothy Law Snyder	J. Michael Steele	Princeton	1987
+Robert Soare	Anil Nerode	Cornell	?
+Soeren Soe	Kevin Karplus	Santa Cruz	?
+Eljas Soisalon-Soininen	Martti Tienari	Helsinki	1977
+M. Soittola	Arto Salomaa	Turku	1976
+Marv Solomon	Alan Demers	Cornell	1977
+Jon Sorenson	Eric Bach	Wisconsin	1991
+Ivan Soskov	Dimiter Skordev	Sofia	1984
+Vladimir Sotirov	A.G. Dragalin	Moscow	1979
+Vladimir Sotirov	V.A. Uspenskij	Moscow	1979
+Diane Souvaine	David Dobkin	Princeton	1986
+Edith Spaan	Johan F.A.K. van_Benthem	Amsterdam UvA	1993
+Ernst Specker	Heinz Hopf	ETH Zurich	1948
+Joel Spencer	Paul Erdos?	?	?
+T.H. Spencer	Ernst W. Mayr	Stanford	1984
+Daniel A. Spielman	Michael Sipser	MIT	1995
+? Spijker	? Zoutendijk	?	1968
+Jerry Spinrad	Jacobo Valdes	Princeton	1982
+Paul Spirakis	John Reif	Harvard	1982
+Fred Springsteel	Bob Ritchie	Washington	1967
+M.A. Sridhar	Samuel Bent	Wisconsin	1986
+Mandayam Srinivas	Greg Frederickson	Penn State	1984
+Aravind Srinivasan	David Shmoys	Cornell	1993
+Matt Stallmann	Hal Gabow	Colorado	1982
+Donald Stanat	John H. Holland	Michigan	1967
+Tom Standish	Alan Perlis	CMU	1967
+John Staples	John Cleave	?	?
+Eugene Stark	Nancy Lynch	MIT	1984
+Harold Stark	Derrick Lehmer	Berkeley	?
+Richard Statman	Georg Kreisel	Stanford	1974
+Richard Stearns	Harold Kuhn	Princeton	1961
+Paul Steckler	Mitchell Wand	Northeastern	1994
+Edward Stedman	Victor Klee	Washington	1982
+Norman Steenrod	Solomon Lefschetz	Princeton	1936
+Kenneth Steiglitz	S.S.L. Chang	NYU	1963
+Clifford Stein	David Shmoys	MIT	1992
+M. Steinby	Arto Salomaa	Turku	1969
+Hugo Steinhaus	David Hilbert	Gottingen	1911
+Volker Stemann	Friedhelm Meyer_auf_der_Heide	Paderborn	1995
+Michael Stob	Robert Soare	Chicago	1979
+Larry Stockmeyer	Albert Meyer	MIT	1974
+Paul Stockmeyer	Frank Harary	Michigan	1971
+Alexei P. Stolboushkin	Mikhail Taitslin	Steklov	1984
+Jorge Stolfi	Leonidas J. Guibas	Stanford	1989
+Jim Storer	Jeffrey Ullman	Princeton	1979
+Jim Storer	Tom Szymanski	Princeton	1979
+William Edward Story	Carl Gottfried Neumann?	Leipzig	1875
+Volker Strassen	Konrad Jacobs	Gottingen	1962
+Martin Strauss	Eric Allender	Rutgers	1995
+Bob Streett	Albert Meyer	MIT	?
+Bob Streett	Vaughan Pratt	MIT	?
+Juris Strods	Janis Barzdins	Latvia	?
+Ray Strong	Bob Ritchie	Washington	1966?
+Gordon Stuart	William W. Wadge	Victoria	1991
+Carl Sturtivant	Leslie G. Valiant	Edinburgh	1983
+Peter Su	John Reif	Dartmouth	1993
+Ashok Subramanian	Ernst W. Mayr	Stanford	1990
+Sairam Subramanian	Jeff Vitter	Brown	1995
+Sairam Subramanian	Philip Klein	Brown	1995
+Sairam Subramanian	Roberto Tamassia	Brown	1995
+Madhu Sudan	Umesh Vazirani	Berkeley	1992
+Hal Sudborough	Neil D. Jones	Penn State	1971
+Torsten Suel	C. Greg Plaxton	UT Austin	1994
+Ken Supowit	Ed Reingold	UIUC	1981
+Subhash Suri	Joseph O'Rourke	Johns Hopkins	1987
+Gerald Jay Sussman	Seymour Papert	MIT	1973
+Ivan Sutherland	Claude Shannon	?	?
+Hendra Suwanda	Ian Munro	Waterloo	1979
+Sowmitri Swamy	John Savage	Brown	1978
+Mario Szegedy	Janos Simon	Chicago	1990?
+Mario Szegedy	Laszlo Babai	Chicago	1990?
+Endre Szemeredi	Paul Turan	Eotvos	?
+A. Szilard	Arto Salomaa	W Ontario	1974
+Wieslaw Szwast	Leszek Pacholski	Wroclaw	1985
+Tom Szymanski	John Williams	Cornell	1973
+Kuo-chung Tai	David Gries	Cornell	1977
+Mikhail Taitslin	Anatoly Maltsev	Novosibirsk	?
+Teiji Takagi	David Hilbert	?	?
+Roberto Tamassia	Franco Preparata	UIUC	1988
+Paul J. Tanenbaum	Edward R. Scheinerman	Johns Hopkins	1995
+Paul J. Tanenbaum	Michael T. Goodrich	Johns Hopkins	1995
+Senhua Tao	William W. Wadge	Victoria	1994
+Eva Tardos	Andras Frank	Eotvos	1984
+Robert E. Tarjan	Robert W. Floyd	Stanford	1972
+Alfred Tarski	Stanislaw Lefniewski	Warsaw	1924
+Jun Tarui	Joel Seiferas	Rochester	1992
+Steve Tate	John Reif	Duke	1991
+Paul Taylor	Martin Hyland	Cambridge	1989
+Paul Taylor	Peter Johnstone	Cambridge	1989
+? Teer	? van_de_Riet	?	1978
+Monique Teillaud	J-D Boissonnat	Paris	1991
+Gerard Tel	Jan van_Leeuwen	Utrecht	1989
+Ewan Tempero	Richard Ladner	Washington	1990
+Shang-Hua Teng	Gary Miller	CMU	1991
+Richard Tenney	Anil Nerode	Cornell	1972
+H.J.J. te_Riele	Aad van_Wijngaarden	Amsterdam UvA	1976
+James Thatcher	John H. Holland	Michigan	1964?
+Stan Thomas	Patrick Fischer	Vanderbilt	1983
+Wolfgang Thomas	Hans Hermes	Freiburg	1975
+Wolfgang Thomas	Hans-Dieter Ebbinghaus	Freiburg	1975
+A. Thomasian	David Blackwell	?	?
+Clark Thomborson	H.T. Kung	CMU	1980
+Ben Thompson	John Tucker	Leeds?	?
+Clark Thompson	H.T. Kung	CMU	1979
+Ken Thompson	---	---	---
+Jerzy Tiuryn	Helena Rasiowa	Warsaw	1975
+Prasoon Tiwari	Michael Loui	UIUC	1986
+Seinosuke Toda	Kojiro Kobayashi	Tokyo IT	1992
+See P. Toh	Forouzan Golshani	Arizona State	1992
+Ioannis Tollis	Franco Preparata	UIUC	1987
+Frank Tompa	Kelly Gottlieb	Toronto	1974
+Martin Tompa	Allan Borodin	Toronto	1978
+Martin Tompa	Derek G. Corneil	Toronto	1978
+Jacobo Toran	Jose Balcazar	Barcelona	1988
+Leen Torenvliet	Peter van_Emde_Boas	Amsterdam UvA	1986
+Eric Torng	Rajeev Motwani	Stanford	1994
+Alberto Torres	Jeffrey Ullman	Stanford	1994
+Sam Toueg	Kenneth Steiglitz	Princeton	1980
+Craig Tovey	George Dantzig	Stanford	?
+Jerry Trahan	Michael Loui	UIUC	1988
+Nicholas Tran	Oscar H. Ibarra	Minnesota	1992
+J.F. Traub	Henry Foley	Columbia	1959
+Mart Trautwein	Leen Torenvliet	Amsterdam UvA	1995
+Mart Trautwein	Peter van_Emde_Boas	Amsterdam UvA	1995
+Mart Trautwein	Theo M.V. Janssen	Amsterdam UvA	1995
+Howard Trickey	Jeffrey Ullman	Stanford	1985
+A.S. Troelstra	A. Heyting	Amsterdam UvA	1966
+John Tromp	P.M.B. Vitanyi	Amsterdam UvA	1993
+Les Trotter	George Nemhauser	Cornell	1973
+Athanasios Tsakalidis	Kurt Mehlhorn	Saarbruecken	1983
+Manolis Tsangaris	Jeffrey F. Naughton	Wisconsin	1992
+Thanasis Tsantilas	Leslie G. Valiant	Harvard	1990
+D. Tsichritzis	E.J. McCluskey	Princeton	1969
+Philippas Tsigas	Lefteris Kirousis	Patras	1995
+D.-M. Tsou	Patrick Fischer	Penn State	1980
+Shalom Tsur	Eli Shamir	Hebrew	1976
+Albert Tucker	Solomon Lefschetz	Princeton	1932
+John Tucker	John Cleave	?	1970?
+John Tukey	Solomon Lefschetz	Princeton	1939
+P. Turakainen	Arto Salomaa	Turku	1968
+Alan Turing	Alonzo Church	Princeton	1938
+Jon Turner	Hal Sudborough	Northwestern	1982
+Mark Tuttle	Nancy Lynch	MIT	1989
+Akhilesh Tyagi	Larry Snyder	Washington	1988
+Doug Tygar	Michael O. Rabin	Harvard	1986
+Jerzy Tyszkiewicz	Jerzy Tiuryn	Warsaw	1993
+Wen-Guey Tzeng	Ker-I Ko	SUNY Stony Brook	1991
+? Udding	Martin Rem	Eindhoven	1984
+David Udin	Thomas E. Cheatham	Harvard	1977
+R.T. Udink	J.N. Kok	Utrecht	1995
+R.T. Udink	S.D.S. Swierstra	Utrecht	1995
+Esko Ukkonen	Martti Tienari	Helsinki	1977
+Jeffrey Ullman	Arch McKellar	Princeton	1966
+Yoon-Sup Um	Forouzan Golshani	Arizona State	1990
+Steve Unger	David Huffman	MIT	1957
+Eli Upfal	Eli Shamir	Hebrew	1982
+T. Urponen	Arto Salomaa	Turku	1970
+Pawel Urzyczyn	Jerzy Tiuryn	Warsaw	1983
+Pravin Vaidya	C.L. Liu	UIUC	1986
+Dimiter Vakarelov	Helena Rasiowa	Warsaw	1977
+Jacobo Valdes	Robert E. Tarjan	Stanford	1978
+Thomas Valente	Eric Kaltofen	RPI	1992
+Leslie G. Valiant	Michael S. Paterson	Warwick	1973
+Gabriel Valiente	Francesc Rossello	Balearic	1994
+Mars Valiev	Boris Trakhtenbrot	Novosibirsk	?
+Johan F.A.K. van_Benthem	Martin H. L&ouml;b	Amsterdam UvA	1977
+Dirk van_Dalen	A. Heyting	Amsterdam UvA	1963
+S. van_Denneheuvel	Peter van_Emde_Boas	Amsterdam UvA	1991
+M.P. van_der_Hulst	Peter van_Emde_Boas	Amsterdam UvA	1990
+? Van_der_Poel	Aad van_Wijngaarden	?	1956
+? van_de_Riet	Aad van_Wijngaarden	?	1968
+M.H. van_Emden	Aad van_Wijngaarden	Amsterdam UvA	1971
+Peter van_Emde_Boas	Aad van_Wijngaarden	Amsterdam UvA	1974
+Peter van_Emde_Boas	Juris Hartmanis	Amsterdam UvA	1974
+Peter van_Emde_Boas	Pieter Cornelis Baayen	Amsterdam UvA	1974
+Allen van_Gelder	Jeffrey Ullman	Stanford	1987
+R.J. van_Glabbeek	J.W. Klop	Amsterdam VU	1990
+Dirk Van_Gucht	Patrick Fischer	Vanderbilt	1985
+? van_Katwijk	? Van_der_Poel	?	1987
+Marc van_Kreveld	Mark Overmars	Utrecht	1992
+Jan van_Leeuwen	Dirk van_Dalen	Utrecht	1972
+V. van_Oostrom	J.W. Klop	Amsterdam VU	1994
+Frances Van_Scoy	Steve Hedetniemi	Virginia	1976
+? van_Vliet	Aad van_Wijngaarden	?	1979
+Aad van_Wijngaarden	? Biezeno	?	1945
+Chris van_Wyk	Donald E. Knuth	Stanford	1980
+P. Varaiya	Lotfi Zadeh	Berkeley?	?
+Moshe Vardi	Catriel Beeri	Hebrew	1981
+George Varghese	Baruch Awerbuch	MIT	1992
+George Varghese	Nancy Lynch	MIT	1992
+Robert Vaught	Alfred Tarski	Berkeley	1954
+Umesh Vazirani	Manuel Blum	Berkeley	1986
+Vijay Vazirani	Manuel Blum	Berkeley	1984
+Oswald Veblen	E.H. Moore	Chicago	1903
+? Veen	Martin Rem	Eindhoven	1985
+Mahandren Velauthapillai	Carl Smith	Maryland	1986
+Marinus Veldhorst	Jan van_Leeuwen	Utrecht	1982
+K.M. Venkataraman	Ann Yasuhara	Rutgers	1981
+Shankar Venkatesan	Donald B. Johnson	Penn State	1983
+H. Venkateswaran	Martin Tompa	Washington	1986
+? Verhoef	Aad van_Wijngaarden	?	1969
+Rakesh M. Verma	I.V. Ramakrishnan	SUNY Stony Brook	1989
+Victor Vianu	Seymour Ginsburg	USC	1982
+G. Vijayan	Dick Lipton	Princeton	1983
+Alfredo Viola	Ian Munro	Waterloo	1995
+Uzi Vishkin	Yossi Shiloach	Technion	1981
+Ramesh Viswanathan	John Mitchell	Stanford	1995
+P.M.B. Vitanyi	Jaco W. de_Bakker	Amsterdam VU	1978
+Jeff Vitter	Donald E. Knuth	Stanford	1980
+Emil Volcheck	David Cantor	UCLA	1994
+Heribert Vollmer	Klaus W. Wagner	Wuerzburg	1994
+? von_Littrov	---	---	---
+Georgy Fedoseevich Voronoi	Andrei Andreevich Markov	St. Petersburg	1897
+Jean Vuillemin	Zohar Manna	Stanford	1973
+Orli Waarts	Serge Plotkin	Stanford	1992
+Orli Waarts	Vaughan Pratt	Stanford	1992
+Alf Wachsmann	Friedhelm Meyer_auf_der_Heide	Paderborn	1995
+William W. Wadge	John Addison	Berkeley	?
+Bob Wagner	Alan Perlis	CMU	1968
+David Wall	Sue Owicki	Stanford	?
+Emmanuel Waller	Serge Abiteboul	Paris XI	1992
+H. Walter	Gunther Hotz	Saarbruecken	1968?
+Igor Walukiewicz	Jerzy Tiuryn	Warsaw	1994
+Mitchell Wand	Michael J. Fischer	MIT	1973
+Alex Wang	Ernst W. Mayr	Stanford	1992
+Hui Wang	Oscar H. Ibarra	Minnesota	1990
+Jie Wang	Steven Homer	Boston U	1990
+Rolf Wanka	Friedhelm Meyer_auf_der_Heide	Paderborn	1994
+Manfred Warmuth	Hal Gabow	Colorado	1981
+Tandy Warnow	Gene Lawler	Berkeley	1991
+Osamu Watanabe	Kojiro Kobayashi	Tokyo IT	1987
+Osamu Watanabe	Takuya Katayama	Tokyo IT	1987
+Ben Wegbreit	Thomas E. Cheatham	Harvard	?
+Mark Wegman	Susan Graham	Berkeley	1976?
+Trudy Weibel	Erwin Engeler	ETH Zurich	1989
+Bruce Weide	Mike Shamos	CMU	1979
+William E. Weihl	Barbara H. Liskov	MIT	1984
+W.P. Weijland	Jos Baeten	Amsterdam UvA	1989
+Peter Weinberger	Derrick Lehmer	Berkeley	1969
+Mark Allen Weiss	Robert Sedgewick	Princeton	1987
+Jennifer Welch	Nancy Lynch	MIT	1988
+Dominic Welsh	Richard Hammersley	Oxford	?
+Emo Welzl	Hermann Maurer	Graz	1984?
+Ralph Werchner	Ernst W. Mayr	Frankfurt	1994
+Arthur Werschulz	J.F. Traub	CMU	1977
+Douglas West	Dan Kleitman	MIT	1978
+Charles Wetherell	John Williams	Cornell	1975
+Herman Weyl	David Hilbert	Gottingen	1908
+Elaine Weyuker	Ann Yasuhara	Rutgers	1977
+Peter D. White	Forouzan Golshani	Arizona State	1989
+William White	Mitchell Wand	Indiana U	1990
+Hassler Whitney	Garrett Birkhoff	Harvard	1932
+Rolf Wiehagen	Helmut Thiele	HU Berlin	1973
+Avi Wigderson	Dick Lipton	Princeton	1983
+Bob Wilber	Merrick Furst	CMU	1985
+Herb Wilf	Herb Robbins	Columbia	1958
+Gordon Wilfong	John Hopcroft	Cornell	1984
+Thomas Wilke	Wolfgang Thomas	Kiel	1994
+Dan Willard	Ugo Gagliardi	Harvard	1978
+John Williams	E.F. Moore	Wisconsin	1969
+Christopher Wilson	Charles Rackoff	Toronto	1984
+Thomas Wimer	Steve Hedetniemi	Clemson	1987
+Peter Winkler	Abraham Robinson	Yale	1975
+Karl Winklmann	Paul Young	Purdue	1978
+Vincent Wino	Errol Lloyd	Pittsburgh	1987
+Sam Winograd	Jack Schwartz	?	?
+Terry Winograd	Seymour Papert	MIT	1970
+David S. Wise	Tad Pinkerton	Wisconsin	1971
+C. Witteveen	Peter van_Emde_Boas	Utrecht	1984
+Markus Wloka	John Savage	Brown	1991
+Gerhard Woeginger	Franz Rendl	Graz	1990
+Marty Wolf	Eric Bach	Wisconsin	1990
+Wolfram Schwabh&auml;user	Karl Schr&ouml;ter	HU Berlin	1956?
+Ouri Wolfson	Paul Spirakis	NYU	1984
+Heather Woll	Martin Tompa	Washington	1988
+Pierre Wolper	Zohar Manna	Stanford	1981
+Limsoon Wong	Peter Buneman	Penn	1994
+Patrick Wong	Curtis Cook	Oregon State	1978
+Derrick Wood	Mike Wells	Leeds	1968
+Mark Wood	Keith Marzullo	Cornell	1992
+Don Woods	Robert E. Tarjan	Stanford	1981
+Hans Wossner	F.L. Bauer	Munich IT	1970
+Detlef Wotschke	Sheila Greibach	?	?
+Celia Wrathall	Ron Book	Harvard	1976
+David A. Wright	C. Baker-Finch	Tasmania	1992
+David A. Wright	P. Collier	Tasmania	1992
+Rebecca N. Wright	Michael J. Fischer	Yale	1994
+Michael Wu	Michael Loui	UIUC	1992
+Peter Yick Fai Wu	William Randolph Franklin	RPI	1987
+James Wyllie	John Hopcroft	Cornell	1979
+Harry Wyshoff	Jan van_Leeuwen	Utrecht	1987
+Yacov Yacobi	Shimon Even	Technion	1980
+Ali Yaghi	William W. Wadge	Warwick	1984
+H. Yamada	Bob McNaughton	?	?
+Pei-Yuan Yan	Ian Parberry	Penn State	1989
+Mihalis Yannakakis	Jeffrey Ullman	Princeton	1978
+Andy Yao	C.L. Liu	UIUC	1975
+Andy Yao	S. Glashow	Harvard	1972
+Frances Yao	Michael J. Fischer	MIT	1974
+Chee Yap	Dick Lipton	Yale	1980
+Ann Yasuhara	William Boone	UIUC	1964
+Bennet Yee	Doug Tygar	CMU	1994
+Raymond Yeh	David Muller	UIUC	1966
+R. Bar Yehuda	Shimon Even	Technion	1982
+Amiram Yehudai	Michael Harrison	Berkeley	?
+Hsu-Chun Yen	Louis E. Rosier	UT Austin	1986
+Yaacov Yesha	Aviezri S. Fraenkel	Weizmann	1979
+Akitoshi Yoshida	John Reif	Duke	1994
+Neal E. Young	Robert E. Tarjan	Princeton	1991
+Paul Young	Hartley Rogers	MIT	1963
+David Yun	Joel Moses	MIT	1974
+David Yun	Seymour Papert	MIT	1974
+Moti Yung	Zvi Galil	Columbia	1988
+Sami Zaiddan	Seymour Ginsburg	USC	1980
+Shmuel Zaks	C.L. Liu	UIUC	1979
+Christos D. Zaroliagis	Paul Spirakis	Patras	1991
+Jordan Zashev	Dimiter Skordev	Sofia	1985
+Bernhard Zeigler	John H. Holland	Michigan	1968?
+Suzanne Zeitman	Yuri Gurevich	Wayne State	1994
+Thomas Zeugmann	Rolf Wiehagen	HU Berlin	1983
+Louxin Zhang	Jonathan Buss	Waterloo	1995
+Yanjun Zhang	Dick Karp	Berkeley	1989?
+Qi Zheng	Oscar H. Ibarra	Santa Barbara	1992
+Huang Zhisheng	Peter van_Emde_Boas	Amsterdam UvA	1994
+P. Zhou	Jos Baeten	Eindhoven TUE	1993
+Marius Zimand	Cristian S. Calude	Bucharest	1991
+Rich Zippel	Joel Moses	MIT	1980?
+Nivio Ziviani	Gaston Gonnet	Waterloo	1982
+? Zonneveld	Aad van_Wijngaarden	?	1964
+? Zoutendijk	Aad van_Wijngaarden	?	1960
+Lenore Zuck	Amir Pnueli	Weizmann	1986
+Jeff Zucker	S. Feferman	Stanford	1972?
+David Zuckerman	Umesh Vazirani	Berkeley	1991
+Uri Zwick	Noga Alon	Tel-Aviv	1989
+J. Zwiers	Peter van_Emde_Boas	Eindhoven	1988

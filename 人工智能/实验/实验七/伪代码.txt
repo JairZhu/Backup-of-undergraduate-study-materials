@@ -1,0 +1,57 @@
+    function A_Star(start, end)
+        closeset := {}
+        openset := {start}
+        father_node := 空的map
+        g_value := 默认值为无穷的map
+        g_value[start] := 0
+        f_value := 默认值为无穷的map
+        f_value[start] := heuristic_cost_estimate(start, end)
+        while openset is not empty
+            current_node := openset中f_value值最小的节点
+            if current_node = end
+                return reconstruct_path(father_node, current_node)
+            openset.remove(current_node)
+            closeset.add(current_node)
+            for each neighbor_node of current_node
+                if neighbor_node in closeset
+                    continue
+                tentative_g_value := g_value[current_node] + dist_between(current_node, neighbor_node)
+                if neighbor_node not in openset
+                    openset.add(neighbor_node)
+                else if tentative_g_value >= g_value[neighbor_node]
+                    continue
+                father_node[neighbor_node] := current_node
+                g_value[neighbor_node] := tentative_g_value
+                f_value[neighbor_node] := g_value[neighbor_node] + heuristic_cost_estimate(neighbor_node, end)
+
+    procedure ida_star(root)
+        bound := h_value[root]
+        path := [root]
+        loop
+            t := search(path, 0, bound)
+            if t = FOUND
+                return (path, bound)
+            if t = infinity 
+                return NOT_FOUND
+            bound := t
+        end loop
+    end procedure
+
+    function search(path, g_value, bound)
+        node := path.last
+        f_value := g_value + h_value(node)
+        if f_value > bound 
+            return f_value
+        if is_end(node) 
+            return FOUND
+        min := infinity
+        for succ in successors(node)
+            if succ not in path
+                path.push(succ)
+                t := search(path, g_value + cost(node, succ), bound)
+                if t = FOUND
+                    return FOUND
+                if t < min
+                    min := t
+                path.pop()
+        return min

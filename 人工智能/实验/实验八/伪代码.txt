@@ -1,0 +1,34 @@
+function minimax(node, depth, maxplayer)
+    if depth = 0 or node.child = None
+        return node的棋局估计值
+    if maxplayer
+        bestvalue := INT_MIN
+        for child in node.child
+            v := minimax(child, depth - 1, False)
+            bestvalue := max(bestvalue, v)
+        return bestvalue
+    else 
+        bestvalue := INT_MAX
+        for child in node.child
+            v := minimax(child, depth - 1, True)
+            bestvalue := min(bestvalue, v)
+        return bestvalue
+
+function alphabetapruning(node, depth, alpha, beta, maxplayer)
+    if depth = 0 or node.child = None
+        return node的棋局估计值
+    if maxplayer
+        v := INT_MIN
+        for child in node.child
+            v := max(v, alphabetapruning(child, depth - 1, alpha, beta, False))
+            alpha := max(alpha, v)
+            if beta <= alpha
+                break
+    else
+        v := INT_MAX
+        for child in node.child
+            v := min(v, alphabetapruning(child, depth - 1, alpha, beta, True))
+            beta := min(v, beta)
+            if beta <= alpha
+                break
+    return v

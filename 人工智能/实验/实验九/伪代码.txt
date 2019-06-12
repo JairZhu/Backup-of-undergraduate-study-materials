@@ -1,0 +1,40 @@
+function Backtracking(csp)
+	return Recursive_Backtracking({}, csp)
+
+function Recursive_Backtracking(assignment, csp)
+	if assignment is complete:
+		return assignment
+	var := select_unassigned_variable(variables[csp], assignment, csp)
+	for value in order_domain_values(var, assignment, csp):
+		assignment.append({var = value})
+		result := Recursive_Backtracking(assignment, csp)
+		if result != failure:
+			return result
+		assignment.remove({var = value})
+	return failure
+		
+function FCCheck(C, x)
+	for value in Domain[x]:
+		if not_satisfied_constraint(C):
+			Domain[x].remove(value)
+	if Domain[x] is empty:
+		return true
+	return false
+
+function Forward_checking(level)
+	if unassigned_variables is empty:
+		return true
+	v := pick_an_unassigned_variable(unassigned_variables)
+	unassigned_variables.remove(v)
+	for value in Domain[v]:
+		solution[v] := value
+		DWO = false
+		for Var in unassigned_variables:
+			if (FCCheck(C, Var)):
+				DWO = true
+				break
+		if not DWO:
+			FC(level + 1)
+		restore_changed_domains()
+	unassigned_variables.append(v)
+	return false
