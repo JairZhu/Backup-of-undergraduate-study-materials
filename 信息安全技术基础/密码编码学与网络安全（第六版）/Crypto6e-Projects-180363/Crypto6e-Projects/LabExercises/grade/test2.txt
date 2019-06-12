@@ -1,0 +1,75 @@
+Engineers improving programs needed for nuclear reactor safety
+WEST LAFAYETTE, Ind. . Researchers from Purdue University, government and the nuclear power industry are improving three computer programs that are critical to preventing disasters such as the Three Mile Island accident in 1979.
+
+The complex programs, or "reactor safety codes," are used to simulate severe accidents and, in the process, provide data needed to ensure that power plants are designed properly. 
+
+Without such simulations of hypothetical accidents, the only available information is from the actual Three Mile Island (TMI) catastrophe and small-scale laboratory experiments. During the Three Mile Island accident, a valve failed to close at a plant near Middletown, Pa., causing nuclear fuel to overheat and leading to a partial melting of the plant.s core, where nuclear fission reactions take place.
+
+"These codes were all developed for modeling the TMI accident and seeing under what conditions a reactor can be operated safely," said Karen Vierow, an assistant professor of nuclear engineering at Purdue who is leading the research. "The codes can be used both to analyze an accident after it occurs and to test plant designs for new reactors that haven.t yet been constructed."
+
+Researchers involved in the work found that one of the three codes did not properly simulate a scenario in which a coolant pipe heated up excessively during a hypothetical accident. As a result of the research, the code has been improved, Vierow said.
+
+"It.s very important to note, however, that the severe accidents we test with the codes are extremely unlikely to occur in real life because we make very conservative assumptions," she said. "The codes are all quite effective, but they are continually being modified and upgraded as our computing capabilities increase and as we learn more about the precise physics behind specific phenomena."
+
+Research findings were detailed in a paper published in December in the journal Nuclear Engineering and Design. The paper was written by Vierow; Purdue doctoral student Yehong Liao; Jennifer Johnson, who worked on the research while she was a Purdue graduate student and is now an engineer for Exelon Generation Co., a power provider based in Illinois; Marc Kenton, a researcher at Creare Inc., an engineering firm; and Randall Gauntt, a researcher at Sandia National Laboratories.
+
+The hypothetical accidents simulated with the codes are serious enough to result in a core's "meltdown," during which nuclear fuel overheats and melts from runaway nuclear reactions.
+
+"What we were trying to predict with these codes is what does it take to damage the core of a reactor, and then we design the reactors so that that those accident scenarios could never happen," Vierow said. "We can.t go out and build a plant and have it go through these kinds of severe-accident scenarios.
+
+"Since we don.t have many accidents like the types we are trying to analyze, we need these computer codes, but it.s hard to validate them or to make sure the computer codes are really correct."
+
+Two of the codes, which have been used for more than 20 years, were developed by government laboratories, and the third was created by industry. One focus of the research is to better familiarize federal regulators with the detailed technical workings of the code developed by industry because it is widely used to test power plant designs.
+
+The programs were developed by Sandia National Laboratories, the Idaho National Engineering and Environmental Laboratory and the Electric Power Research Institute, a research consortium of electric power companies in the United States. Both the Sandia and Idaho labs are federally funded, and their codes are used by the Nuclear Regulatory Commission to help certify the safety of plant designs. 
+
+In the recent research, each of the codes was used to simulate the same severe nuclear reactor accident to see whether all of the programs predicted the same results. The researchers found that each of the codes lacks certain "physics models," or information about the complex physics needed to simulate specific conditions.
+
+One such condition was what would happen to a pipe that carries hot water and steam from the reactor if the plant were deprived of all power during an emergency. The research found that one of the codes did not properly simulate the structural integrity of the pipe and welds as the steam grew increasingly hotter.
+
+"They all have their own unique features, and we found that some of them have certain models for physics for certain phenomena that other codes don.t have," Vierow said. "We concluded that certain physics models should be added to some of the codes to get a better analysis. None of the three codes was superior."
+
+The hypothetical accident scenario the researchers evaluated paints a grim picture in which all electricity is cut off from a nuclear power plant. Such a scenario is extremely unlikely because all nuclear plants have backup diesel-powered generators to run pumps that keep the cooling system circulating water to cool the hot core, she said.
+
+"We made a lot of conservative assumptions, including a situation in which a certain critical valve sticks open and there is no backup valve, but in reality you would have several valves in the system in case one failed," she said. "One reason for doing such an extremely conservative, unrealistic analysis was so that we could test a lot of the physics models in the codes . to test every single possibility."
+
+The Nuclear Regulatory Commission funded the research.
+
+In related work, Vierow will modify one of the codes so it can be used to test designs for reactors that may be essential for a future "hydrogen economy," where hydrogen could replace many fossil fuels. The reactors are being designed to produce large amounts of hydrogen for various uses, including new kinds of vehicles that may use fuel-cell technology to replace internal combustion engines.
+
+Writer: Emil Venere, (765) 494-4709, venere@purdue.edu
+
+Source: Karen Vierow, 765-494-5746, vierow@ecn.purdue.edu
+
+Purdue News Service: (765) 494-2096; purduenews@purdue.edu
+
+ 
+
+Note to Journalists: An electronic or hard copy of the research paper is available from Emil Venere, (765) 494-4709, venere@purdue.edu.
+
+Related Web site:
+Purdue University Home Page 
+
+ 
+
+
+--------------------------------------------------------------------------------
+
+
+ABSTRACT 
+
+Severe accident analysis of a PWR station blackout with the MELCOR, MAAP4 and SCDAP/RELAP5 codes 
+
+
+K. Vierowa, Y. Liaoa, J.Johnsonb, M. Kentonc, R. Gaunttd 
+a 400 Central Drive, School of Nuclear Engineering, 
+Purdue University
+b Exelon Generation Company, USA
+c Creare, Inc., USA
+d Sandia National Laboratories, USA 
+
+Based on knowledge obtained from experimental programs, considerable progress has been made in severe accident code development. The three leading severe accident codes used in the U.S., MELCOR, MAPP4 AND SCDAP/RELAP5, are compared herein as part of an evaluation of the relative state of severe accident modeling in each of the codes.
+
+The MELCOR code is evolving from a probabilistic risk assessment tool to a best-estimate severe accident system analysis code. Some advantages that MELCOR has are the capability to evaluate containment behavior and the source term to the environment, and the great modeling flexibility that the control volume approach and control functions afford. The MAAP4 code was developed to perform fast-running full simulations of severe accidents. Due in part to the simplified form of the conservation equations and the coarser discretization of the reactor systems, MAAP4 has calculation times far shorter than those of the other codes while producing credible results. The SCDAP/RELAP5 code contains more mechanistic physics models than the other codes for both severe accident ant thermal-hydraulic phenomena and has undergone extensive validation against plant and experimental data.
+
+The codes' overall attributes, relevant physics models and calculation results are compared herein. A hypothetical TMLB' scenario (station blackout with no recovery of auxiliary feedwater) at a 4-loop pressurized water reactor (PWR) was calculated by all three codes. Detailed plots showed that, despite considerable differences in the codes themselves, the calculation results of the codes are very similar in terms of thermal-hydraulic and core degradation response. There are minor discrepancies in various timings of phenomena, which are within the uncertainties of the code numerical computation and the physics models. The thermal challenge to the primary loop radionuclide barrier, such as the steam generator tube heat structures, is also compared among the three codes.

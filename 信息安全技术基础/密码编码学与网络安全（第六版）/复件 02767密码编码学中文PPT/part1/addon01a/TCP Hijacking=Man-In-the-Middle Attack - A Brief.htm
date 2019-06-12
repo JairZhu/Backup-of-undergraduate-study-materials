@@ -1,0 +1,394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0041)http://www.sans.org/rr/threats/middle.php -->
+<HTML><HEAD><TITLE>Man-In-the-Middle Attack - A Brief</TITLE>
+<SCRIPT language=javascript>
+function Reload(nav) {
+   document.location.href="/rr/"+nav;
+}
+</SCRIPT>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="Man-In-the-Middle Attack - A Brief.files/readingroommaster.css" 
+type=text/css rel=stylesheet>
+<META content="Microsoft FrontPage 5.0" name=GENERATOR></HEAD>
+<BODY background="Man-In-the-Middle Attack - A Brief.files/graytexture.gif">
+      <TABLE class=whitetable cellSpacing=0 cellPadding=0 width=660 align=center 
+      border=0>
+        <TR>
+          <TD><BR>
+            <TABLE cellSpacing=0 cellPadding=2 width="99%" align=center 
+border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <B><U><FONT face=Garamond 
+                  size=5>
+                  <P></FONT></U></B><TT><SPAN 
+                  style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                  size=2><STRONG>Man-In-the-Middle Attack - A 
+                  Brief<BR></STRONG>Bhavin Bharat Bhansali<BR>February 16, 
+                  2001</FONT></SPAN></TT></P>
+                  <P><STRONG><TT><SPAN 
+                  style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                  size=2>Objective:</FONT></SPAN></TT></STRONG></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>The Objective of this document is to 
+                  understand the Execution of &nbsp; "Man-In-the-Middle" 
+                  attack.</FONT></SPAN></TT></P>
+                  <P><STRONG><TT><SPAN 
+                  style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                  size=2>Overview:</FONT></SPAN></TT></STRONG></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>The "Man In The Middle" or "TCP Hijacking" 
+                  attack is a well known attack where an attacker sniffs packets 
+                  from network, modifies them and inserts them back into the 
+                  network. There are few programs/source codes available for 
+                  doing a TCP hijack. Juggernaut, T-Sight and Hunt are some 
+                  these programs. In this paper we shall explore Hunt for 
+                  understanding how TCP Hijacking is deployed on an Ethernet 
+                  segment.</FONT></SPAN></TT></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>Hunt is designed by kra <A 
+                  href="mailto:kra@gncz.cz">kra@gncz.cz</A>. The Hunt source 
+                  code is available at the following URL:<A 
+                  href="http://packetstorm.securify.com/sniffers/hunt/indexsize.shtml"><U>ftp://ftp.gncz.cz/pub/linux/hunt/hunt-1.5.tgz</U></A></FONT></SPAN></TT></P>
+                  <P><STRONG><TT><SPAN 
+                  style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                  size=2>Relevance:</FONT></SPAN></TT></STRONG></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>TCP Hijacking is an exploit that targets the 
+                  victims TCP based applications like Telnet, rlogin, ftp, mail 
+                  application, web browser etc. An attacker can grab unenrcypted 
+                  confidential information from a victim's network based TCP 
+                  application. He can further tamper the Authenticity and 
+                  Integrity of the data.</FONT></SPAN></TT></P>
+                  <P><STRONG><TT><SPAN 
+                  style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                  size=2>Definition of Important 
+                  Terms:</FONT></SPAN></TT></STRONG>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>IP spoofing - IP spoofing involves forging one's 
+                    source IP address. It is the act of using one machine to 
+                    impersonate another. Many applications and tools in UNIX 
+                    systems rely on source IP address 
+                    authentication.</FONT></SPAN></TT> 
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>ARP spoofing - ARP spoofing involves forging packet 
+                    source hardware address (MAC address) to the address of the 
+                    host you pretend to be.</FONT></SPAN></TT> 
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Simple Active Attack against TCP connections - An 
+                    attack in which the attacker does not merely eavesdrop but 
+                    takes action to change, delete, reroute, add, forge or 
+                    divert data. Perhaps the best-known active attack is 
+                    Man-In-the-Middle.</FONT></SPAN></TT> </LI></UL>
+                  <P><STRONG><TT><SPAN 
+                  style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                  size=2>The Attack:</FONT></SPAN></TT></STRONG></P>
+                  <P><strong><font face="Arial" size="2"><span lang="zh-cn">&nbsp;&nbsp;&nbsp;
+                  </span>&nbsp; <u><span lang="zh-cn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span>&nbsp; <span lang="zh-cn">ref to x.gif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span></u></font></strong></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>Attack Scenario involves three hosts: 
+                  Attacker, Victim, and Target. </FONT></SPAN></TT>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Attacker is the system used by the attacker for the 
+                    hijack. </FONT></SPAN></TT>
+                    <LI><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                    face=Arial size=2>Victim is the system used by the victim 
+                    for <TT>Telnet</TT> client connections to the target system. 
+                    </FONT></SPAN>
+                    <LI><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                    face=Arial size=2>Target is the target system that the 
+                    intruder wants to compromise. It is where the 
+                    <TT>telnetd</TT> daemon is running. </FONT></SPAN></LI></UL>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>A simple diagram of the network shows the 
+                  Attacker and Victim hosts are on the same network (which 
+                  <I>can be Ethernet switched and the attack will still 
+                  work</I>), while the target system can be anywhere. (Actually, 
+                  either victim or target can be on the same network as 
+                  attacker: it doesn't matter.) </FONT></SPAN></TT></P>
+                  <P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>For the attack to succeed, the victim must 
+                  use <TT>Telnet</TT>, <TT>rlogin</TT>, <TT>ftp</TT>, or any 
+                  other non-encrypted TCP/IP utility. Use of SecurID card, or 
+                  other token-based two-factor authentication is useless as 
+                  protection against hijacking, as the attacker can simply wait 
+                  until <I>after</I> the user authenticates, then hijack the 
+                  session. </FONT></SPAN></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>The attack scenario can be as simple as: 
+                  </FONT></SPAN></TT>
+                  <OL style="FONT-SIZE: 10pt; FONT-FAMILY: Arial">
+                    <LI><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                    face=Arial size=2>Attacker: Spends some time determining the 
+                    IP addresses of target and victim systems. Determining trust 
+                    relationships can be easily done with utilities like SATAN, 
+                    <TT>finger</TT>, <TT>systat</TT>, <TT>rwho</TT> or running 
+                    <TT>who</TT>, <TT>ps</TT>, or <TT>last</TT> from previously 
+                    stolen (or wide open "guest" style) accounts. </FONT></SPAN>
+                    <LI><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                    face=Arial size=2>Attacker: Runs <TT>hunt</TT> as root on 
+                    attacking host. Waits for <TT>hunt</TT> to indicate a 
+                    session has been detected.</FONT></SPAN> 
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Attacker: Starts ARP relay daemon, prepares RST 
+                    daemon entry for use later, sets option to enable host name 
+                    resolution (for convenience). </FONT></SPAN></TT>
+                    <LI><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                    face=Arial size=2>Victim: Logs in to target using 
+                    <TT>Telnet</TT>. Runs <TT>pine</TT> to read/compose email. 
+                    </FONT></SPAN>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Attacker: Sees new connection; lists active 
+                    connections to see if this one is potentially "interesting." 
+                    If it is, attacker can either watch the session (packet 
+                    sniffing) or hijack the session. Decides to hijack. 
+                    </FONT></SPAN></TT>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Victim: Sees strange new prompt. Tries pressing 
+                    RETURN and doesn't know what to think. Tries web browser and 
+                    notices that it still works fine (not a network problem). 
+                    Not sure what to think. </FONT></SPAN></TT>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Attacker: Finds this is a user session and decides to 
+                    give it back (resynchronizes TCP/IP stream). 
+                    </FONT></SPAN></TT>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Victim: Sees prompt for keystroke, follows request, 
+                    gets session back. Puzzled, decides to log in to root 
+                    account to take a closer look. </FONT></SPAN></TT>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Attacker: Turns on RST daemon to prevent new 
+                    connections, waits to hijack root session. 
+                    </FONT></SPAN></TT>
+                    <LI><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                    face=Arial size=2>Victim: Runs <TT>ssu</TT> to get SecurID 
+                    protected root shell. </FONT></SPAN>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Attacker: Completes hijack after seeing root login. 
+                    </FONT></SPAN></TT>
+                    <LI><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                    face=Arial size=2>Victim: Sees strange prompt. Tries 
+                    pressing RETURN again. Same result as before. Tries web 
+                    browser again. Same thing. Tries getting a new 
+                    <TT>Telnet</TT> session. Fails. Tries <TT>ftp</TT>. Fails. 
+                    </FONT></SPAN>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Attacker: Sets up backdoor, disables command history, 
+                    resets session, turns off RST daemon. </FONT></SPAN></TT>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Victim: Finally gets a new session. Original session 
+                    is now gone. Assumes network outage or Windows TCP/IP stack 
+                    corruption. Reboots system and everything is back to 
+                    "normal". </FONT></SPAN></TT>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Attacker: Waits for admin's sessions to all disappear 
+                    (gone home for the night), then logs in using new backdoor. 
+                    Installs rootkit (more backdoors, sniffer), cleans log 
+                    files. </FONT></SPAN></TT></LI></OL>
+                  <P><STRONG><TT><SPAN 
+                  style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                  size=2>Design Overview:</FONT></SPAN></TT></STRONG></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>The development model is based on a packet 
+                  engine (hunt.c) which runs in its own thread and captures 
+                  packets from the network. The packet engine collects 
+                  information of TCP connections/starting/termination, sequence 
+                  numbers and MAC addresses. It collects the MAC addresses and 
+                  sequence numbers from the server point of view and separate 
+                  MAC addresses and sequence numbers from the client point of 
+                  view. So it is prepared for hijacking. This information (seq. 
+                  num., MAC, etc.) is available to modules so they don't have to 
+                  analyze and collect it. </FONT></SPAN></TT></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>Modules can register functions with the 
+                  packet engine, which are then invoked when new packets are 
+                  received. A module function determines if the module is 
+                  interested in a packet or not and can place the packet in a 
+                  module specific list of packets. A module function can also 
+                  send some packet to the network if it is desirable to do it 
+                  very fast. The module (usually in some other thread so it 
+                  needs to be scheduled to be run) then gets packets from the 
+                  list and analyzes them. In this way, you can easily develop 
+                  modules, which perform various activities. Refer to the 
+                  appendix section for learning the features offered by 
+                  hunt.</FONT></SPAN></TT></P>
+                  <P><STRONG><TT><SPAN 
+                  style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                  size=2>Brief Overview of the Daemons / threads that are used 
+                  by the exploit:</FONT></SPAN></TT></STRONG>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Reset daemon</FONT></SPAN></TT> </LI></UL>
+                  <BLOCKQUOTE>
+                    <P><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Reset daemon is used to perform automatic resets of 
+                    ongoing connections that hunt can see. You can describe 
+                    which connections should be terminated by giving src/dst 
+                    host/mask and src/dst ports. 
+                  </FONT></SPAN></TT></P></BLOCKQUOTE>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>ARP daemon</FONT></SPAN></TT> </LI></UL>
+                  <BLOCKQUOTE>
+                    <P><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>ARP daemon is used to do ARP spoofing of hosts. You 
+                    enter src and dst addresses and desired src MAC. The dst is 
+                    then forced to think that src has srcMAC. You can use some 
+                    fake MAC or better MAC of host that is currently down. 
+                    </FONT></SPAN></TT></P></BLOCKQUOTE>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Sniff daemon</FONT></SPAN></TT> </LI></UL>
+                  <BLOCKQUOTE>
+                    <P><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Sniff daemon can log specified packets. The sniff 
+                    daemon can also search for a simple pattern (string) in the 
+                    data stream (see the bugs section). You can specify which 
+                    connection you are interested in, where to search (src, dst, 
+                    both), what do you want to search, how many bytes you want 
+                    to log, from what direction (src, dst, both) and to what 
+                    file should the daemon write. 
+                  </FONT></SPAN></TT></P></BLOCKQUOTE>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>MAC discovery daemon</FONT></SPAN></TT> </LI></UL>
+                  <BLOCKQUOTE>
+                    <P><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>MAC discovery daemon is used to collect MAC addresses 
+                    corresponding to the specified IP range. 
+                    </FONT></SPAN></TT></P></BLOCKQUOTE>
+                  <P><STRONG><TT><SPAN 
+                  style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                  size=2>References:</FONT></SPAN></TT></STRONG></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>Krauz's, Pavel. "HUNT Project." 1.5 - bug 
+                  fix release. 30th May 2000.<BR>URL: <A 
+                  href="http://lin.fsid.cvut.cz/~kra/index.html">http://lin.fsid.cvut.cz/~kra/index.html</A>(9th 
+                  February, 2001)</FONT></SPAN></TT></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>Dave, Dittrich. "Session hijack script". 
+                  9<SUP>th</SUP> Dec 1999.<BR>URL: <A 
+                  href="http://staff.washington.edu/dittrich/talks/agora/script.html">http://staff.washington.edu/dittrich/talks/agora/script.html</A></FONT></SPAN></TT></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>Dave, Paras. "TCP Connection 
+                  Hijacking".<BR>URL: <A 
+                  href="http://cs.baylor.edu/~donahoo/NIUNet/hijack.html">http://cs.baylor.edu/~donahoo/NIUNet/hijack.html</A> 
+                  (12<SUP>th</SUP> February, 2001)</FONT></SPAN></TT></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>Microsoft technical support. "Microsoft 
+                  Security Program: Microsoft Security Bulletin (MS99-046) 
+                  "December 23, 1999.<BR>URL:<A 
+                  href="http://www.microsoft.com/TechNet/security/bulletin/ms99-046.asp">http://www.microsoft.com/TechNet/security/bulletin/ms99-046.asp</A>(12th 
+                  February 2001)</FONT></SPAN></TT></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>Stevens, Richard. "TCP Connection 
+                  Establishment and Termination". October 1993.<BR>Book Name: 
+                  TCP/IP illustrated Volume I - The Protocols (7<SUP>th</SUP> 
+                  February 2001). </FONT></SPAN></TT></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>Kurtz, George. "Session Hijacking". July 
+                  28<SUP>th</SUP>, 1999.<BR>Book Name: HACKING EXPOSED - Network 
+                  Security Secrets and Solutions (8<SUP>th</SUP> February, 
+                  2001)</FONT></SPAN></TT></P>
+                  <P><STRONG><TT><SPAN 
+                  style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                  size=2>Appendix</FONT></SPAN></TT></STRONG></P>
+                  <P><TT><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT 
+                  face=Arial size=2>Features of the hunt 
+                  exploit:</FONT></SPAN></TT>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Connection Reset - With a single properly constructed 
+                    packet you can reset the connection (RST flag in TCP 
+                    header). You can reset server, client, or both. When you 
+                    reset only one end the other end is reset when it tries to 
+                    send data to the first host which will response with RST 
+                    because of the connection reset on it.</FONT></SPAN></TT> 
+                    </LI></UL>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Connection sniffing/watching - You can watch hunt 
+                    output for any connection which you choose from the list 
+                    that hunt displays on the console.</FONT></SPAN></TT> 
+                  </LI></UL>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>ARP-relay - You can insert packets to the network 
+                    (rerouting) of all data it receives from ARP spoofed 
+                    hosts.</FONT></SPAN></TT> </LI></UL>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Connection Synchronization - This is one of the main 
+                    features of hunt. If you put some data to the TCP stream 
+                    (through simple active attack or ARP spoofing), you 
+                    desynchronize the stream from the server/original client 
+                    point of view. After some work done on that connection you 
+                    can just reset it or you can try to synchronize both 
+                    original ends again. The main goal behind this is to 
+                    synchronize the sequence numbers on both client and server 
+                    again.</FONT></SPAN></TT> </LI></UL>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>Switch/Segment traffic rerouting - With ARP spoofing 
+                    you can force the Switch to send you the traffic for hosts 
+                    on another segment/switched port. This may not work if the 
+                    Switch has some security policy and MACs have been 
+                    explicitly set up on a per port basis but in reality this 
+                    configuration is hardly done on an "ordinary" 
+                    network.</FONT></SPAN></TT> </LI></UL>
+                  <UL>
+                    <LI><TT><SPAN 
+                    style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><FONT face=Arial 
+                    size=2>ACK Storm - The ACK storm is caused by majority of 
+                    TCP stacks Let's imagine that you send some data to an 
+                    ongoing connection to the server (as if sent by the client - 
+                    with expected seq. numbers, etc.). The server responds with 
+                    the acknowledgment of the data you sent but the original 
+                    client receives this acknowledgment too. But from the 
+                    original client point of view, the server has acknowledged 
+                    data that doesn't exist on the client. So something strange 
+                    occurred and the original client sends the "right" sequence 
+                    number with ACK to the server. But the TCP rules say that it 
+                    is required to generate an immediate acknowledgment when an 
+                    out-of-order segment is received. This ACK should not be 
+                    delayed. So the server sends the acknowledgment of 
+                    non-existent data to the client again and the client 
+                    responds. </FONT></SPAN></TT></LI></UL>
+                  <P>
+                  <P> </P></TD></TR>
+              <TR>
+                <TD>
+                  &nbsp;</TD></TR></TBODY></TABLE></TD></TR></TABLE></BODY></HTML>

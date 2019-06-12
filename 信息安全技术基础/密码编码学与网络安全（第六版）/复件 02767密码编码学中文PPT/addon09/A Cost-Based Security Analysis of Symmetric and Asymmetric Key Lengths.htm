@@ -1,0 +1,1743 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>RSA Security - A Cost-Based Security Analysis of Symmetric and Asymmetric Key Lengths</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="http://www.rsasecurity.com/includes/defaultRSALab.css" rel="stylesheet" type="text/css">
+<link href="http://www.rsasecurity.com/includes/structuralRSALabs.css" rel="stylesheet" type="text/css">
+<link href="http://www.rsasecurity.com/rsalabs/includes/tooltip.css" rel="stylesheet" type="text/css" >
+<script language="JavaScript1.2" type="text/javascript" src="http://www.rsasecurity.com/includes/tooltip.js"></script>
+
+</head>
+<body >
+
+
+
+<div id="topContainer">
+<FORM METHOD=get ACTION="/programs/texis.exe/webinator/search/">
+<INPUT TYPE=hidden NAME=pr VALUE="rsalabs">
+	<div id="toolbarBottomLine">
+		<div id="toolbarContainer">
+			<div id="toolbarBorders">
+				<div id="toolbarContent">
+                                <div class="toolbarCopyHome"><a href="http://www.rsasecurity.com/node.asp?id=1050">Contact</a><img src="images/tool_vertical_separator.gif" width="11" height="24" alt=""><a href="/">RSA Security Home</a><img src="images/tool_vertical_separator.gif" width="11" height="24" alt="">Search&nbsp;<input name="query" type="text" size="10" class="toolbarSearchBox">&nbsp;<input type="image" src="images/button_go.gif" align="absmiddle" width="20" height="16"></div>    
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+	<div id="mainContainer">
+		<div id="mainBorders">
+                        <div id="header"><img src="images/blackline.gif" width="764" height="3" alt=""><br /><a href="/rsalabs/"><img src="images/logoLabs.gif" width="500" height="91" alt="RSA Laboratories" border="0"></a><img src="images/headerLabs.gif" width="264" height="91" alt=""><br /><img src="images/blackline.gif" width="764" height="3" alt=""></div>
+			<table border="0" cellpadding="0" cellspacing="0" width="764">
+				<tr>					
+					<!-- left column -->
+					<td valign="top" rowspan="2">
+						<div id="leftColumn">		
+							<div id="leftColumnContainer"><div class="primaryMenuItem"><a href="node.asp?id=2002"><img src="images/lp1off.gif" width="161" height="31" border="0" alt="Technical Notes and Reports"></a></div><div class="primaryMenuItem"><a href="node.asp?id=2014"><img src="images/lp2off.gif" width="161" height="31" border="0" alt="RSA Laboratories submissions"></a></div><div class="primaryMenuItem"><a href="node.asp?id=2015"><img src="images/lp3off.gif" width="161" height="31" border="0" alt="Cryptographers' Track, RSA Conference 2005 Call for Papers"></a></div><div class="primaryMenuItem"><a href="node.asp?id=2016"><img src="images/lp4off.gif" width="161" height="31" border="0" alt="Staff and Associates"></a></div><div class="primaryMenuItem"><a href="node.asp?id=2087"><img src="images/lp5on.gif" width="161" height="31" border="0" alt="Bulletins"></a></div>
+<div id="secondaryMenu">
+<div class="secondaryMenuItemOn">A Cost-Based Security Analysis of Symmetric and Asymmetric Key Lengths</div>
+
+<div id="tertiaryMenu"></div><div class="secondaryMenuItem"><a href="node.asp?id=2089">An Analysis of Shamir's Factoring Device</a></div>
+<div class="secondaryMenuItem"><a href="node.asp?id=2510">Questions and Answers: Shamir's Factoring Device and RSA</a></div>
+<div class="secondaryMenuItem"><a href="node.asp?id=2090">Recent Results on Signature Forgery</a></div>
+</div><div class="primaryMenuItem"><a href="node.asp?id=2091"><img src="images/lp6off.gif" width="161" height="31" border="0" alt="Cryptographic Challenges"></a></div><div class="primaryMenuItem"><a href="node.asp?id=2115"><img src="images/lp7off.gif" width="161" height="31" border="0" alt="RFID Privacy and Security"></a></div><div class="primaryMenuItem"><a href="node.asp?id=2124"><img src="images/lp8off.gif" width="161" height="31" border="0" alt="Public-Key Cryptography Standards (PKCS)"></a></div><div class="primaryMenuItem"><a href="node.asp?id=2146"><img src="images/lp9off.gif" width="161" height="31" border="0" alt="RSA-based Cryptographic Schemes (RSA Algorithm)"></a></div><div class="primaryMenuItem"><a href="node.asp?id=2149"><img src="images/lp10off.gif" width="161" height="31" border="0" alt="CryptoBytes Technical Newsletter"></a></div><div class="primaryMenuItem"><a href="node.asp?id=2152"><img src="images/lp11off.gif" width="161" height="31" border="0" alt="Crypto FAQ"></a></div><div class="primaryMenuItem"><a href="node.asp?id=2424"><img src="images/lp12off.gif" width="161" height="31" border="0" alt="Nightingale"></a></div></div>
+						</div></td>
+					<!-- /left column -->	
+
+					<td valign="top" class="outsidelineleft" rowspan="2">
+                                        </td>
+                                        <td valign="top" rowspan="2">
+						<div class="toplineMargin"><img src="images/spacer.gif" width="4" height="1" alt=""></div>
+                                        </td>
+					<!-- content column -->
+                                        <td valign="top" rowspan="2">
+						<div class="contentColumn"> 
+
+							<div id="tertiaryTitle">
+								<div class="title">
+									<div class="breadcrumb"><a href="default.asp">Home</a>:  <a href="node.asp?id=2087">Bulletins</a></div>
+									<h1>A Cost-Based Security Analysis of Symmetric and Asymmetric Key Lengths</h1>
+								</div>
+							</div> 
+							<!-- center column page specific content -->	
+                                                        <div id="content">
+
+<!-- Start of node body -->
+    <a name="I"></a>
+	<h4>I. Introduction</h4><br>
+      <h5>A. Why is Key Size Important?</h5><br>
+      <p>In order to keep transactions based upon public key cryptography secure, 
+        one must ensure that the underlying keys are sufficiently large as to 
+        render the best possible attack infeasible. However, this really just 
+        begs the question as one is now left with the task of defining ?infeasible?. 
+        Does this mean infeasible given access to (say) most of the Internet to 
+        do the computations? Does it mean infeasible to a large adversary with 
+        a large (but unspecified) budget to buy the hardware for an attack? Does 
+        it mean infeasible with what hardware might be obtained in practice by 
+        utilizing the Internet? Is it reasonable to assume that if utilizing the 
+        entire Internet in a key breaking effort makes a key vulnerable that such 
+        an attack might actually be conducted? If a public effort involving a 
+        substantial fraction of the Internet breaks a single key, does this mean 
+        that similar sized keys are unsafe? Does one need to be concerned about 
+        such public efforts or does one only need to be concerned about possible 
+        private, surreptitious efforts? After all, if a public attack is known 
+        on a particular key, it is easy to change that key. We shall attempt to 
+        address these issues within this paper. </p>
+      <p> Standards, such as ANSI X9.30, X9.31, X9.42, and X9.44 and FIPS 186-2 
+        all require a minimum of a 1024-bit RSA or Diffie-Hellman key. The fundamental 
+        question we will answer in this paper is: How long will such keys be secure? 
+      </p>
+      <p>
+       <h5>B. What Affects Security Requirements?</h5><br>
+      <p> It is clear that the size of a key must be tied to the value of the 
+        data being protected by the key and also tied to the expected lifetime 
+        of that data. It makes no sense for an adversary to spend (say) $10 million 
+        breaking a key if recovering the key will only net (say) $10 thousand. 
+        This principle also applies to keys used to protect other keys, such as 
+        the master signature key of a Certifying Authority although such a key 
+        is certainly worth more than $10 thousand. Furthermore, if the lifetime 
+        of the key or the data being protected is measured in only days or weeks, 
+        there is no need to use a key that will take years to break. While standards 
+        specify a minimum of 1024 bits for RSA, there are many applications for 
+        which 768 bits is more than adequate. While signatures on contracts might 
+        need to be secure for 30 years or more [unless time stamped and periodically 
+        renewed], other applications can require much less: anywhere from about 
+        1 day for signatures with short-term session keys (such as SSL) to perhaps 
+        several years for commercial financial data. Military and national intelligence 
+        data such as the identity of spies can have a lifetime of 100 years, but 
+        such data is not accessible on-line nor is it protected by public-key 
+        methods. </p>
+      
+        <h5>C. Basic Assumptions</h5><br>
+      <p> Throughout this paper all extrapolations shall be based upon extrapolating 
+        speed and memory enhancements of existing hardware and improvements in 
+        existing algorithms. While breakthroughs in both algorithm and hardware 
+        technology may occur, such events are inherently unpredictable and we 
+        do not consider them. Instead, current key sizes are advocated which allow 
+        some margin for error.</p>
+      <p> We also do not believe that any public key size specified today should 
+        be used to protect something whose lifetime is more than 20 years. Later 
+        in this paper we will advocate a pro-active security policy whereby keys 
+        are renewed as the state of the art in breaking keys advances.</p>
+      
+	  
+	  <a name="II"></a>
+	  <h4>II. Methods of Attack</h4><br>
+      <h5>A. General Methods for RSA and DL: The Number Field Sieve</h5>
+      <p>The General Number Field Sieve (GNFS or just NFS) is a general purpose 
+        algorithm for either factoring large integers or for solving an ordinary 
+        discrete logarithm problem. Its run time depends only on the size of the 
+        number being factored, or the size of the underlying field for the discrete 
+        logarithm problem. It is the fastest method known today and has two phases. 
+        In the first phase, a sieving operation requiring moderately large amounts 
+        of memory is conducted on independent computers. This phase is used to 
+        construct a set of equations. In the second phase a large Cray with massive 
+        memory has then been used to solve this set of equations. Once a solution 
+        has been found to this set of equations factoring the number or solving 
+        the discrete log takes a miniscule amount of time and memory.</p>
+      <p> The amount of time it takes to factor a number of x bits is asymptotically 
+        the same as the time it takes to solve a discrete log over a field of 
+        size x bits. However in practice solving discrete log problems has been 
+        more difficult than factoring equivalent numbers. While there are several 
+        reasons for this, the main reason is that solving the matrix for a discrete 
+        log must be done using multi-precision integer arithmetic while the matrix 
+        for factoring is solved mod 2 and thus one can use simple bit operations. 
+        It has been estimated that for large x, one can break a discrete log of 
+        size x-30 in about the same time as factoring an x-bit number. Throughout 
+        this paper we shall assume that solving the two problems are equivalent 
+        under NFS and henceforth shall only discuss factoring.</p>
+     
+	 
+        <h5>A.1 Complexity of Attacks</h5><br>
+      <p>The TIME required to factor N using the General Number Field Sieve is 
+      </p>
+      <p>L(N) = exp( (c + o(1)) ( (log N)<sup>1/3</sup> (log log N)<sup>2/3</sup>)). 
+      </p>
+      <p>This function combines the time to do the sieving and the time to solve 
+        the matrix. Theoretically each takes an equal amount of time. However, 
+        for problems done thus far solving the matrix has taken only a fraction 
+        of the time to do the sieving. However, this fraction has been increasing 
+        as the numbers get larger.</p>
+      <p> The SPACE required scales with SQRT(L(N)).</p>
+      <p> Once you have a benchmark for a particular N, you can predict the difficulty 
+        of factoring a larger number N? relative to the difficulty of factoring 
+        N by computing L(N?)/L(N) to get a time estimate and SQRT(L(N?)/L(N)) 
+        to get a space estimate. Estimating the ratio this way ignores the effect 
+        of the o(1) term in the exponent, but Silverman [6] showed that at least 
+        for the Special Number Field Sieve, this term is very small. It does not 
+        materially affect the results given herein if its value at 512 bits is 
+        (say) .05, while its value at 1024 bits is .01. The results of [6] suggest 
+        that these values are not far off.</p>
+      
+        <h5>A.2 Hardware Requirements and Availability</h5><br>
+      <h5>A.2.1 Sieving</h5><br>
+      <p>The sieving phase of the number field sieve depends for its speed upon 
+        the ability to rapidly retrieve values from memory, add to them, and put 
+        them back. Therefore, the size of the data cache and speed of the memory 
+        bus have a strong impact upon the speed with which the sieve can operate. 
+        Furthermore, the sieve operation requires moderately large (but manageable 
+        within the state-of-the-art) memory. For a 512-bit key, 64 Mbytes per 
+        sieve machine was adequate. However, as the size of the key (and hence 
+        the run time) increases, so does the memory required. As shown above, 
+        required memory scales with the square root of the run time. Thus, a problem 
+        10 times more difficult than RSA-512 (in terms of time) would require 
+        sqrt(10) times more memory [for both phases], or about 200 Mbytes for 
+        the sieve machines. If one uses a cost-based model, as we suggest below, 
+        the cost of memory very quickly becomes the binding constraint in terms 
+        of how much hardware can be acquired.</p>
+      <p> Historically, as machines became faster, sieving speed did not keep 
+        up with machine speed. The main reason for this is that while CPU?s were 
+        getting faster, memory bus speeds and the sizes of data caches were not 
+        keeping pace with speed improvements. However, recent progress in increasing 
+        the size of the data cache with each new generation of Pentiums, along 
+        with increases in bus speed has alleviated this difficulty. Indeed, reference 
+        [1, p. 19] even noted a super-linear increase in speed when moving from 
+        a Pentium I to a Pentium II based computer. Lenstra and Verheul suggest 
+        that this is due to processor improvements, but we do not believe this 
+        viewpoint is correct. The super-linear speed increase can be more readily 
+        explained by an increase in cache size and an increase in memory bus speed 
+        from 66 MHz to 100 MHz. A fundamental question is therefore: will cache 
+        sizes and memory bus speed continue to scale according to Moore?s law? 
+        There is reason to believe the answer is NO. Lenstra and Verheul?s modification 
+        of Moore?s law says that total CPU cycles doubles every 18 months rather 
+        than just doubling processor speed every 18 months. The modification combines 
+        an increase in machine speed with an increase in the number of available 
+        machines. It seems clear that if one only considers increases in machine 
+        speed, without allowing the number of machines to increase one cannot 
+        achieve a doubling every 18 months. There is data to support this viewpoint. 
+        The VAX, a nominal 1-MIPS machine, introduced in 1977 had a memory bus 
+        which ran at 13 MHz. Now the latest generation of PC?s has bus speeds 
+        of 133 MHz. This is far short of a doubling every 18 months. Further, 
+        10 years ago a state-of-the-art workstation such as a Sparc-10 had an 
+        available data cache of 256 Kbytes. Today?s Pentium based PC?s have data 
+        caches typically around 512 Kbytes. This too falls far short of a doubling 
+        every 18 months. Thus, while processor speed increases have followed Moore?s 
+        law over the last 20 years, other parts of the computer which influence 
+        sieving speed have not kept pace. See reference [5] for a more complete 
+        discussion of this.</p>
+      <p> Unless improvements in bus speed and cache size keep pace with improvements 
+        in CPU speed, we will once again return to the situation where improvements 
+        in processor speed do not help very much in speeding sieving.</p>
+      <p> Another issue involved in sieving hardware is the size of the required 
+        memory. Today?s 32-bit machines typically can only address 2 Gbytes of 
+        user address space. This represents a factor of only 32 over the memory 
+        needed for RSA-512. Data given in section III shows that once keysizes 
+        exceed about 710 bits, the memory needed for sieving will no longer be 
+        able to be addressed on 32-bit computers. We note that while 64-bit processors 
+        are available, it does not appear likely that they will become sufficiently 
+        widespread to be useful in attacks for some time to come. There is also 
+        a (somewhat speculative) concern about whether the market will routinely 
+        demand multi-gigabyte machines. There are few applications today which 
+        require multi-gigabyte memories. Servers are one such, but they are not 
+        available as distributed sieving machines; they have little idle time 
+        and are dedicated to other purposes. While they might contribute some 
+        CPU time, the proportion of their processing power so contributed would 
+        be limited by their other processing demands. It is certainly questionable 
+        whether desktop machines with memories in the 200 Gbyte range will become 
+        available anytime soon. As may be seen in section III, 170 Gbytes per 
+        machine is what is needed to conduct an attack on 1024-bit keys.</p>
+      <p>
+        <h5>A.2.2 Linear Algebra</h5><br>
+      <p>The assumptions made in II A, above, imply that the solving the matrix 
+        can be done perfectly in parallel. If we can only efficiently solve matrices 
+        on small sets of machines running in parallel it means that each of these 
+        machines will need not just large, but massive RAM memories. To do a 1024-bit 
+        key will require about 6 Terabytes of memory to hold the matrix. We do 
+        not know of the existence of a single machine today, or a tightly coupled 
+        set of machines with this much memory. Indeed, 6 Tbytes is beyond the 
+        ability of 32-bit machines to even address even if distributed among several 
+        hundred machines. Trying to estimate when such a machine might become 
+        available requires a crystal ball. However, throughout the rest of this 
+        paper we assume that the available machines for sieving can somehow be 
+        tightly coupled together and used for solving the matrix. This assumption 
+        is unrealistic, but allows us to be conservative in discussion of key 
+        sizes.</p>
+      <p>While historically a large Cray has been used to solve the equations, 
+        there is no theoretical reason why a set of tightly coupled parallel processors 
+        could not do the same thing. Montgomery [5] is experimenting with such 
+        a implementation now. Solving large linear algebra problems in parallel 
+        has been a topic of research in computer science for a long time. Many 
+        papers have been written and there is unanimous agreement that such implementations 
+        do not scale well. As one increases the number of processors, communication 
+        becomes a bottleneck and total speedup rapidly departs from linear. Indeed, 
+        Montgomery?s early results do not look encouraging. He reported less than 
+        20% per processor utilization even on a very small (16 machines) tightly 
+        coupled fast network. And the drop in per-processor utilization could 
+        readily be observed in going from 8 to just 16 processors. While one might 
+        theoretically develop a custom-purpose machine for solving such problems, 
+        to date no one has proposed such a machine. Its design is still an unsolved 
+        research problem.</p>
+      <p>The Block Lanczos algorithm, which is the algorithm currently employed, 
+        is also very close to the theoretically best possible algorithm for solving 
+        large matrices mod 2. The best that can be done theoretically, in terms 
+        of the number M of rows in the matrix is O(M<sup>2+<font face="Symbol">S</font></sup>). 
+        The Block Lanczos algorithm already achieved this with <font face="Symbol">S</font> 
+        ~ .2 while breaking RSA-512. Therefore the prospects for improved algorithms 
+        for solving the matrix do not look very good. One of the assumptions of 
+        the Lenstra and Verheul [1] paper is that algorithmic improvements in 
+        factoring will continue. It would seem therefore that this assumption 
+        of theirs is not correct unless future factoring algorithms can either 
+        reduce the size of the matrix, or eliminate the need for solving it. However, 
+        the assumption of this paper is that we only extrapolate from existing 
+        algorithms.</p>
+      <p>It is also quite difficult to predict exactly how much faster (say) 1000 
+        machines running in parallel will be than 1 machine. Therefore, throughout 
+        this paper we make the unrealistic, but very conservative estimate (conservative 
+        with respect to key size) that one can achieve linear speedup when solving 
+        the matrix in parallel.</p>
+      <p> If anything, recommending key sizes based on this assumption will overstate 
+        what is possible. Note also, that solving the matrix requires a different 
+        parallel architecture than the one assumed for sieving. While sieving 
+        each machine runs independently. If a machine or group of machines becomes 
+        unavailable, it only means that the sieving slows down by a little bit; 
+        the other sieve machines can continue their work. However solving the 
+        matrix requires that machines share data frequently. Thus, a single machine 
+        stopping can stall all the other machines because they are waiting for 
+        data to be forthcoming from the stalled machine. Also, a LAN does not 
+        have the bandwidth and its latency is too high to support a parallel group 
+        of machines that must communicate frequently. Therefore any parallel matrix 
+        solver must be done on a dedicated set of machines with a very fast interconnection 
+        scheme. Such a machine must also be fault-tolerant. If a processor goes 
+        down, then its current work assignment must be reassigned. Then the other 
+        processors must wait while the lost computation is recomputed. It also 
+        takes some time to detect a lost processor. Each time it happens a latency 
+        is incurred before the entire computation can continue. As the number 
+        of machines increases, the probability of a machine being down at any 
+        given time increases. A machine being down does not have to be due to 
+        hardware problems. In a distributed network (even tightly coupled) sets 
+        of machines can become unavailable because of firewall maintenance, software 
+        installations/reboots, power failures, someone moving a machine, etc. 
+        etc. These problems create strong practical difficulties in getting this 
+        kind of application to work. We know of no successful effort to solve 
+        linear algebra problems in parallel that involved more than just a few 
+        thousand processors at once.</p>
+      <p> The idea of using ?idle? time on a loosely coupled network simply will 
+        not work. The machines need to be tightly coupled, they need to be dedicated 
+        to just this task, and they require special interconnection hardware that 
+        goes beyond what is provided by (say) a local FDDI net or the Internet. 
+        Reference [1] assumes [page 18] that the computers needed for attacks 
+        will be available for free. This assumption is reasonable for the sieving 
+        phase, but it is totally unrealistic for the linear algebra phase. To 
+        do a 1024-bit key will require a tightly coupled parallel computer with 
+        6 Terabytes of memory and a fast interconnection scheme. This kind of 
+        hardware costs a lot of money.</p>
+		
+      <h5>B. Special Methods for RSA and DL</h5><br>
+      <p> Special methods, such as the Elliptic Curve factoring Method (ECM) have 
+        virtually no chance of succeeding in factoring reasonably large RSA keys. 
+        For example, the amount of work needed to factor a 1024-bit modulus with 
+        ECM is about 10<sup>17</sup> MIPS-Years and only succeeds with probability 
+        1 ? 1/e. The Number Field Sieve is roughly 10 million times faster. While 
+        the ECDL machines of Wiener [section V.] can be trivially modified to 
+        run ECM factoring rather than DL, the amount of arithmetic is still unrealistic. 
+        The Number Field Sieve, run on ordinary computers is faster. We do not 
+        elaborate further on this subject, but refer the interested reader to 
+        reference [8].</p>
+       <a name="III"></a>
+	  <h4>III. Historical Results and the RSA Challenge</h4>
+      <p>We give below some historical results for record factorizations using 
+        a general purpose method. While in many cases the number being factored 
+        had special form, the method of attack did not depend on this special 
+        form. The data is tabulated and plotted below. Size is given in decimal 
+        digits. The Number is sometimes a co-factor of the listed number, after 
+        small primes have been divided out. </p>
+      <h5>TABLE 1: Historical Factoring Records</h5><br>
+      
+	  <hr size="1" noshade="true">
+         
+		 
+		 <table class="dataTable">
+
+        <tr> 
+          <th>Year</th>
+          <th>Size</th>
+          <th>Number</th>
+          <th>Who</th>
+          <th>Method</th>
+          <th>Hardware</th>
+        </tr>
+        <tr> 
+          <td>1970</td>
+          <td>39</td>
+          <td>2<sup>128</sup> + 1</td>
+          <td>Brillhart/Morrison</td>
+          <td>CFRAC</td>
+          <td>IBM Mainframe</td>
+        </tr>
+        <tr> 
+          <td>1978</td>
+          <td>45</td>
+          <td>2<sup>223</sup> – 1</td>
+          <td>Wunderlich</td>
+          <td>CFRAC</td>
+          <td>IBM Mainframe</td>
+        </tr>
+        <tr> 
+          <td>1981</td>
+          <td>47</td>
+          <td>3<sup>225</sup> – 1</td>
+          <td>Gerver</td>
+          <td>QS</td>
+          <td>HP-3000</td>
+        </tr>
+        <tr> 
+          <td>1982</td>
+          <td>51</td>
+          <td>5<sup>91</sup> – 1</td>
+          <td>Wagstaff</td>
+          <td>CFRAC</td>
+          <td>IBM Mainframe</td>
+        </tr>
+        <tr> 
+          <td>1983</td>
+          <td>63</td>
+          <td>11<sup>93</sup> + 1</td>
+          <td>Davis/Holdridge</td>
+          <td>QS</td>
+          <td>Cray</td>
+        </tr>
+        <tr> 
+          <td>1984</td>
+          <td>71</td>
+          <td>10<sup>71</sup> – 1</td>
+          <td>Davis/Holdridge</td>
+          <td>QS</td>
+          <td>Cray</td>
+        </tr>
+        <tr> 
+          <td>1986</td>
+          <td>87</td>
+          <td>5<sup>128</sup> + 1</td>
+          <td>Silverman</td>
+          <td>MPQS</td>
+          <td>LAN Sun-3’s</td>
+        </tr>
+        <tr> 
+          <td>1987</td>
+          <td>90</td>
+          <td>5<sup>160</sup> + 1</td>
+          <td>Silverman</td>
+          <td>MPQS</td>
+          <td>LAN Sun-3’s</td>
+        </tr>
+        <tr> 
+          <td>1988</td>
+          <td>100</td>
+          <td>11<sup>104</sup> + 1</td>
+          <td>Internet</td>
+          <td>MPQS</td>
+          <td>Distributed</td>
+        </tr>
+        <tr> 
+          <td>1990</td>
+          <td>111</td>
+          <td>2<sup>484</sup> + 1</td>
+          <td>Lenstra/Manasse</td>
+          <td>MPQS</td>
+          <td>Distributed</td>
+        </tr>
+        <tr> 
+          <td>1991</td>
+          <td>116</td>
+          <td>10<sup>142</sup> + 1</td>
+          <td>Lenstra/Manasse</td>
+          <td>MPQS</td>
+          <td>Distributed</td>
+        </tr>
+        <tr> 
+          <td>1992</td>
+          <td>129</td>
+          <td>RSA-129</td>
+          <td>Atkins</td>
+          <td>MPQS</td>
+          <td>Distributed</td>
+        </tr>
+        <tr> 
+          <td>1996</td>
+          <td>130</td>
+          <td>RSA-130</td>
+          <td>Montgomery</td>
+          <td>GNFS</td>
+          <td>Distributed</td>
+        </tr>
+        <tr> 
+          <td>1998</td>
+          <td>140</td>
+          <td>RSA-140</td>
+          <td>Montgomery</td>
+          <td>GNFS</td>
+          <td>Distributed</td>
+        </tr>
+        <tr> 
+          <td>1999</td>
+          <td>155</td>
+          <td>RSA-512</td>
+          <td>Montgomery</td>
+          <td>GNFS</td>
+          <td>Distributed</td>
+        </tr>
+      </table>
+       
+      <hr size="1" noshade="true">
+      
+      <p><img src="http://rsasecurity.com/rsalabs/bulletins/images/bltn13_fig1.gif" width="480" height="255"> </p>
+      <p>One thing surprising about this data is that it is VERY 
+        linear. A simple least-squares fit yields the equation: Size = 4.23 * 
+        (Year ? 1970) + 23. The correlation coefficient is about .955. This is 
+        somewhat puzzling. The algorithms are sub-exponential. That is, their 
+        run time grows more slowly than an exponential function. Moore?s law is 
+        strictly exponential. It would seem, therefore, based on theoretical grounds 
+        that this curve should be growing FASTER than linearly. A possible explanation 
+        for this is that even though records continue to be established, that 
+        over time the level of effort applied to each effort has dropped. Breaking 
+        RSA-129 required a large effort involving many thousands of machines widely 
+        distributed over the Internet. Compared with that, breaking RSA-512 was 
+        done by a relatively small group of people using far fewer (albeit much 
+        faster) machines. If we solve for when a 1024-bit number may be expected 
+        to be factored, based solely on extrapolating this historical data, we 
+        get an answer of around 2037.</p>
+      <p>Brent, arguing from theoretical grounds in [3], assumes 
+        that given Moore?s law, (keysize)<sup>1/3</sup> should grow linearly with 
+        time. He derives the equation:</p>
+      <p>Year = 13.25 * (SIZE)<sup>1/3</sup> + 1928 (SIZE in 
+        digits) and extrapolates that 1024-bits should become breakable in 2018. 
+        We agree with his theoretical model, but strongly suggest that the historical 
+        data shows that key sizes grow linearly with time based upon public efforts. 
+        Brent further states that Moore?s law suggests 6-7 digits/year advancement 
+        in key sizes. We note however, that the historical data suggests instead 
+        a growth of about 4.25 digits/year. However, both Brent?s estimate and 
+        ours suggest that 1024 bits keys should be safe for a minimum of 20 years 
+        from public efforts. It is impossible to say what private, unpublicized 
+        efforts might have achieved.</p>
+      <p>As a basis of comparison we shall use data from the 
+        break of RSA-512. This effort required a total of 8000 MIPS-Years to do 
+        the sieving, represented by about 300 PC?s averaging 400 MHz and with 
+        at least 64 Mbytes of RAM, running for 2 months, and 10 days and 2.3 Gbytes 
+        of memory on a Cray C90 to solve the matrix. Using this data we can predict 
+        how much harder it is to factor a number of 576, 640, 704, 768, 1024 or 
+        2048 bits:</p>
+      <hr size="1" noshade="true">
+          
+		  <table class="dataTable">
+        <tr> 
+          <th><b>Time</b></th>
+          <th><b>Space</b></th>
+        </tr>
+        <tr> 
+          <td>L(2<sup>576</sup>)/L(2<sup>512</sup>) ~ 10.9</td>
+          <td>SQRT(L(2<sup>576</sup>)/L(2<sup>512</sup>)) ~ 3.3</td>
+        </tr>
+        <tr> 
+          <td>L(2<sup>640</sup>)/ L(2<sup>512</sup>) ~ 101</td>
+          <td>SQRT(L(2<sup>640</sup>)/L(2<sup>512</sup>)) ~ 10.0</td>
+        </tr>
+        <tr> 
+          <td>L(2<sup>704</sup>)/ L(2<sup>512</sup>) ~ 835</td>
+          <td>SQRT(L(2<sup>704</sup>)/L(2<sup>512</sup>)) ~ 29</td>
+        </tr>
+        <tr> 
+          <td>L(2<sup>768</sup>)/L(2<sup>512</sup>) ~ 6 x 10<sup>3</sup></td>
+          <td>SQRT(L(2<sup>768</sup>)/L(2<sup>512</sup>)) ~ 77</td>
+        </tr>
+        <tr> 
+          <td>L(2<sup>1024</sup>)/L(2<sup>512</sup>) ~ 7 x 10<sup>6</sup></td>
+          <td>SQRT(L(2<sup>1024</sup>)/L(2<sup>512</sup>)) ~ 
+            2650</td>
+        </tr>
+        <tr> 
+          <td>L(2<sup>2048</sup>)/L(2<sup>512</sup>) ~ 9 x 10<sup>15</sup></td>
+          <td>SQRT(L(2<sup>2048</sup>)/L(2<sup>512</sup>)) ~ 
+            9 x 10<sup>7</sup></td>
+        </tr>
+      </table>
+         
+      
+        
+      <hr size="1" noshade="true">
+      <p>
+        Thus,<br>
+        576 bits will take 10.9 times as long as RSA-512 and require 3.3 times 
+        the memory.<br>
+        768 bits will take 6100 times as long as RSA-512 and require 77 times 
+        the memory.<br>
+        1024 bits will take 7 million times as long as RSA-512 and require 2650 
+        times the memory. </p>
+      <p>Note: Space scaling is the same for both the sieving 
+        phase and for storing the matrix. </p>
+      <p>To put this in perspective, it would require about 1.4 
+        billion 500 MHz machines, each with about 170 Gbytes of memory to do the 
+        sieving for a 1024-bit number in the same time as RSA-512. While a hacker 
+        might try to steal cycles on the Internet by creating a ?Number Field 
+        Sieve Worm? it is hard to see how such an attack could find enough machines 
+        with enough memory to make such an attack feasible. Further, such an attack 
+        would be detected and shut down rather quickly as with the Robert Morris 
+        worm. Of course increasing speed will reduce the required number accordingly. 
+        It would take a single Cray with 6 Terabytes of memory approximately 70 
+        million days (192,000 years) to solve the matrix. One could reduce this 
+        to a mere 19 years with 10000 Crays each with only 600 Mbytes of memory 
+        running perfectly in parallel. It is likely that within 10 years common 
+        desktop machines will be as fast or faster than a Cray C90 is now. However, 
+        it is unlikely in the extreme that 10000 machines running in parallel 
+        will be anywhere close to 10000 times as fast as one machine. It would 
+        require 10 million such machines running perfectly in parallel to solve 
+        the matrix in about the same time as that for RSA-512.</p>
+      <p> Note that Moore?s law assumes that processor speed 
+        doubles every 18 months. If one accepts the premise that this will not 
+        change, then one expects to see a speed increase of 7 million (needed 
+        to do a 1024-bit number relative to RSA-512) in 34 years. This is in fairly 
+        close agreement with the estimate of 2037 taken from the historical data 
+        above.</p>
+      <p> It might be argued that this historical data lies BELOW 
+        what was theoretically achievable at each data point; that the data represents 
+        only modest efforts to break large keys. For example, to do a 600-bit 
+        key is about 25 times harder than RSA-512 and would require 5 times the 
+        space. Thus, it could be done in the same time as RSA-512 with about 5000 
+        PC?s each with 320 Mbytes of memory for the sieving. The Cray C90 would 
+        take 250 days and about 11 Gbytes of memory to solve the matrix. Perhaps 
+        this is closer to what is theoretically achievable now. We note that 1024-bits 
+        is about 292,000 times harder than 600 bits. Based on Moore?s law we can 
+        expect a factor of 292,000 improvement in about 27 years. </p>
+      <p> According to PC magazine, approximately 130 Million 
+        PC?s were sold in 1999. A substantial fraction of these will have been 
+        32 Mbyte machines. We do not have data on the exact fraction. Note that 
+        such machines could not even be used for the attack on RSA-512 because 
+        they do not have enough memory. It is not unrealistic to assume that with 
+        few exceptions machines sold more than 5 years ago simply are not big 
+        enough to run an NFS attack. A question we are unable to answer is: how 
+        many machines are there on the Internet today that might be both large 
+        enough and available for an attack? Lenstra and Odlyzko [9] focus on the 
+        total CPU power that might be available, while ignoring that many of those 
+        machines are unusable and that among those that are suitable, logistical 
+        problems will mean that a fair fraction will not be accessible. </p>
+      <p> At the rate of 130 million machines/year, it will take 
+        more than 10 years for enough machines to be sold to even attempt sieving 
+        for a 1024-bit modulus. The number of required machines will decrease 
+        as they get faster. However, among these machines most will not have enough 
+        memory to be able to be used in an attack. It is also unrealistic to believe 
+        that all machines that are sufficiently large will be available for an 
+        attack. Other attempts to define key sizes, such as Lenstra?s and Odlyzko?s 
+        [9] have based their estimates on the assumption that most of the CPU 
+        cycles on machines attached to the Internet will be available for attacks. 
+        These prior estimates have conveniently ignored the fact that most machines 
+        simply are not big enough to be used in an attack even if they are available.</p>
+      
+      <a name="IV"></a>
+	  <h4>IV. Security Estimates for RSA</h4><br>
+      <h5>A. Models of Computation</h5><br>
+     <h5> A.1 Computational Equivalence</h5><br>
+      <p>Two algorithms are said to be computationally equivalent 
+        if they require the same number of computer operations to complete. Traditional 
+        estimates of key size equivalents for different public key algorithms 
+        have looked only at computation equivalence. We strongly believe that 
+        this approach is wrong because it assumes that CPU TIME is the only constraint 
+        that keeps keys from being broken. While this is certainly true if the 
+        amount of memory needed to execute an algorithm is negligible, it is not 
+        true when memory requirements become prohibitive. For example suppose 
+        that key A1 for algorithm A takes 10 hours to break and the same for key 
+        B1 of algorithm B. These keys are equivalent in time. However, if breaking 
+        algorithm B requires 10 Gbytes of memory, while algorithm A requires 10 
+        Kbytes, then it is certainly safe to say that algorithm B is harder to 
+        break. It requires more hardware and hence costs more. But what if A takes 
+        10 hours and 10 Kbytes, but B takes only 5 hours with 10 Gbytes? Which 
+        algorithm is easier to break? The answer would depend on the relative 
+        weighting one gave to time versus memory. </p>
+    
+        <h5>A.2 Space Equivalence</h5><br>
+      <p> When both TIME and SPACE are needed resources to run 
+        an algorithm, to equate different algorithms on the basis of TIME only 
+        is arbitrary. Why use TIME only? We believe that the answer is twofold. 
+        The first is historical ? there has always been a historical bias towards 
+        time equivalence.</p>
+      <p> The second reason is ignorance. Many people simply 
+        are not aware that complexity theory measures SPACE as well as time, nor 
+        are they aware that sometimes an algorithm cannot be run because of space 
+        as opposed to time limitations. It is also possible that they assume SPACE 
+        problems can be overcome.</p>
+      <p> Rather than ask: what RSA key size is equivalent to 
+        56-bit symmetric in terms of the time needed to break each key, why not 
+        ask: How big does a symmetric key need to be before it is as hard to break 
+        as (say) RSA-512 in terms of SPACE? The answer would be millions, if not 
+        billions of bits, and this is clearly ridiculous. Yet to measure the problems 
+        against one another in terms of SPACE is no more nor less arbitrary than 
+        to measure them purely in terms of time. Both time and space are binding 
+        constraints and must therefore be considered together.</p>
+      
+        <h5>A.3 Cost Equivalence</h5><br>
+      <p> While we are in agreement with Lenstra and Verheul 
+        that the cost of computer hardware changes with time and is somewhat fluid, 
+        we note that the same thing is true of computer speed and memory. It is 
+        our belief that measuring key size equivalents in terms of what can be 
+        broken in a given amount of elapsed time and with a given amount of money 
+        is closer to measuring the true equivalence between different public key 
+        methods. We give such estimates in section VIII. </p>
+		
+      <h5>B. Discussion of Moore?s Law</h5><br>
+      <p> There has been much emphasis placed on Moore?s law 
+        with respect to predicting what key sizes will be safe 10 or 20 years 
+        from now. We note that technology usually follows a sigmoid growth curve; 
+        i.e. the curve is S-shaped: there is a ramp-up period in which technology 
+        is immature, followed by explosive exponential growth, followed by a gradual 
+        tailing off in improvements as technology matures. They question is: where 
+        are we with respect to computer technology? Some believe that speed will 
+        continue to double every 18 months for the indefinite future, while others 
+        such as Stan Williams [Hewlett Packard?s chief architect [4]] sees growth 
+        slowing down in the near future. The reasons given are that it is becoming 
+        progressively harder and more expensive to fabricate smaller circuits 
+        and that we are not far off from inherent quantum mechanical limits on 
+        MOS-FET silicon technology. While other technologies may hold promise, 
+        their viability is hard to predict. For example, there was a time when 
+        Josephson junction technology was touted as a cure for silicon limitations, 
+        but no one could make it work. Gallium Arsenide has had similar problems. 
+      </p>
+      <p> This paper makes projects based only upon extrapolations 
+        of existing technology. It seems safe to assume that Moore?s law will 
+        continue for 10 years or so. Beyond that seems impossible to predict. 
+        More than a 10-fold improvement over existing computers would seem to 
+        require new technology and not just incremental improvements on our current 
+        techniques. We re-emphasize our conclusion from section III: even if Moore?s 
+        law continues to hold, it will still require at least 27 years to reach 
+        a point where 1024-bit keys are vulnerable to a public effort. The cost 
+        of the hardware (many millions of machines even at improved speeds) places 
+        a private attack out of reach for all except perhaps governments.</p>
+      
+	  
+	  <h5>C. Predictions based upon Shamir?s TWINKLE Device</h5><br>
+      <p> Shamir [2] has proposed a custom purpose device that 
+        replaces traditional computers for the sieving operation. This device 
+        does seem within current technology to build. The TWINKLE device by itself 
+        is however useless. It requires one or more PC?s to act as backend processors, 
+        feeding it data and retrieving its results. This joint paper with Lenstra 
+        reaches the following conclusions:</p>
+      <ul>
+        <li> TWINKLEs can be built for about $5000 each in quantity.</li>
+        <li> To do a 768-bit number requires about 5000 TWINKLEs, supported by 
+          80,000 PCs. The computation would take 6 months. </li>
+        <li> They estimate that the 80000 PC?s if connected to a fast enough network 
+          and if dedicated solely to the task could solve the matrix in 3 months 
+          also provided that they were attached to a single, central PC large 
+          enough to hold the entire matrix. The central PC would therefore require 
+          about 160 Gbytes of memory. They acknowledge that these estimates have 
+          not been confirmed by an actual implementation.</li>
+        <li> If 768-bits is attempted on ordinary PC?s (without TWINKLEs) they 
+          write: </li>
+      </ul>
+      <p> ?<i>PC?s with 5 Gigabyte RAM?s which are needed 
+        to run the special q siever in standard NFS factorizations are highly 
+        specialized. Only a negligible number of such machines exist, and they 
+        have few other applications</i>?. </p>
+      <p> From these conclusions, we conclude the following:</p>
+      <ul>
+        <li> The quoted remark in 4. above is totally inconsistent with assumptions 
+          made in reference [1]. Reference [1] deliberately ignores memory problems, 
+          saying in effect that memories will grow in size to the point where 
+          they will be sufficient for larger keys. But if there are few machines 
+          capable of handling 768 bits today, where will machines with 128 Gbyte 
+          memories [needed for 1024 bits] come from? Yet Lenstra and Verheul conclude 
+          in [1] that 1024 bits will be vulnerable in 2002 using ?for free? machines 
+          distributed on the Internet. However, this conclusion was reached based 
+          on a primary assumption of that paper: that DES was breakable in 1982. 
+          We simply observe that DES was not actually broken until 1997. Further, 
+          the remark in 4. about having few applications might be taken to imply 
+          the following: While it might become theoretically possible to build 
+          multi-gigabyte machines at reasonable cost in 10 years, there are few 
+          applications which demand such machines. But machine capabilities are 
+          driven by market needs. If there is little need for such machines, will 
+          they become readily available in 10 years? We do not pretend to have 
+          an answer to this question. We also note that one cannot even put 5 
+          Gbytes of RAM on today?s 32-bit PC?s.</li>
+        <li> It does not seem possible to tightly couple 80,000 processors with 
+          today?s technology. The largest such machines today of which we are 
+          aware typically consist of 1000 to 2000 processors at most and are very 
+          expensive.</li>
+        <li> Doing 1024 bits with TWINKLEs would be 1400 times harder (7 million/5000) 
+          than 768 bits. Thus, attempting 1024 bits even with the aid of TWINKLEs 
+          still seems way beyond reach.</li>
+        <li> If one could do the sieving INFINITELY fast and at zero cost, solving 
+          the matrix for 768 bits and beyond is still prohibitive.</li>
+      </ul>
+      
+      <a name="V"></a>
+	 <h4> V. Elliptic Curve Cryptosystems</h4><br>
+      <h5>A. Method of Attack</h5><br>
+      <p> The best known attack against an Elliptic Curve Discrete 
+        Log system is based upon a collision attack and the birthday paradox. 
+        One expects that after computing approximately sqrt(order of the curve) 
+        points, that one can find two points that are equivalent under an algebraic 
+        relationship. From this collision, the key can be found. Thus, the best 
+        known attack is purely exponential in the size of the key. The time complexity 
+        is: </p>
+      <p>T(k) = sqrt(pi/2) * 2<sup>k/2</sup>, where k is the 
+        bitsize of the order of the basepoint.</p>
+      <p>The space requirements are modest, even for large k. 
+      </p>
+      <h5>B. Time and Cost of Attack</h5><br>
+      <p>Wiener, in 1996, proposed a special purpose hardware 
+        design that for $10 million could break a 155-bit Elliptic Curve key over 
+        a 120-bit sub-field in 32 days. The time to do a k-bit Elliptic Curve 
+        is then 32 * sqrt(2<sup>k-120</sup>) days with one of these machines. 
+        It is likely that a faster machine could be designed and implemented today, 
+        and we will assume a machine that is about 50 times faster and can therefore 
+        break the given key in about 12 hours rather than 32 days.</p>
+      
+      <a name="VI"></a>
+	 <h4> VI. Symmetric Key Systems(Private Key Systems)</h4><br>
+      <h5>A. Method of Attack</h5><br>
+      <p> The best known attack against symmetric key systems 
+        is a brute-force search of the key space. Nothing else seems to work. 
+        Thus, the attack is purely exponential. Thus, for a k-bit symmetric cipher, 
+        the expected time to break it is </p>
+      <p>T(k) = 2<sup>k-1</sup>.</p>
+      <p>The space requirements are trivial: a few kilobytes 
+        suffices. </p>
+      
+        <h5>B. Time and Cost of Attack</h5><br>
+      <p> Wiener, in 1993, designed a $1 million DES cracking 
+        machine which would crack a DES key in 3.5 hours. This is slow by current 
+        technology standards and can easily be improved. We shall assume a machine 
+        that is 100 times faster than this one.</p>
+     
+      <a name="VII"></a>
+	  <h4>VII. RSA Key Size Recommendations</h4><br>
+      <h5>A. Near Term</h5><br>
+      <p> Breaking a 1024-bit key with NFS is impossible today. 
+        Enough sufficiently large machines simply do not exist to do the sieving, 
+        and solving the matrix will require a major technology breakthrough. This 
+        situation should remain for at least 20 years. No foreseeable increase 
+        in machine speed or availability will allow enough hardware to be gathered.</p>
+      <p> Further, 768 bits seems unreachable today, even utilizing 
+        the TWINKLE device, because of the difficulties in dealing with the matrix. 
+        However, we do believe that 768-bits might be breakable in about 10-years 
+        time. The fitted data from section III gives a date of 2019 for breaking 
+        such a key by public effort.</p>
+      <p>With respect to yet even larger key sizes we note that 
+        for a 2048-bit key, the matrix will closely approach the address limits 
+        of even a 64-bit processor (10<sup>18</sup> bytes or so) and that the 
+        total data collected during sieving will exceed the address limits. There 
+        is no predictable time horizon for when 128-bit computers may appear.</p>
+      
+        <h5>B. Pro-Active Security</h5><br>
+      <p> We strongly advocate a policy of pro-active security. 
+        Software which uses public keys should not statically define key sizes 
+        according to what is infeasible today. Instead, software should provide 
+        the capability to instantiate new keys and new key sizes as the art in 
+        breaking keys progresses. Systems need to be flexible ? to change keys 
+        as needed, to resign as needed, to re-protect data as needed and to timestamp 
+        where appropriate.</p>
+      <p> While changing keys and resigning documents protects 
+        signatures against cryptanalytic advances, there is no way to protect 
+        old data that was publicly transmitted under old keys. Therefore key sizes 
+        must be selected carefully according to the lifetime of the data. It will 
+        do an adversary no good to break a current key in (say) 10 years, if the 
+        data becomes useless after 5 years.</p>
+      
+      <a name="VII"></a>
+	  <h4>VIII. Cost-Based Key Size Equivalencies</h4><br>
+      <p>We assume that a PIII processor at 500 MHz can be acquired 
+        for $100.00 and that memory costs $.50/Mbyte. These assumptions are slightly 
+        optimistic, given current costs but making this choice yields conservative 
+        key size estimates. This section presents key size equivalents for RSA, 
+        Elliptic Curves, and Symmetric Key systems using a cost-based model. We 
+        assume that $10 million is available to conduct an attack.</p>
+      <p>Consider using Wiener?s Elliptic Curve cracker for a 
+        120-bit subfield as a data point in constructing the table below. If one 
+        extrapolates downward to 112 bits, this problem is sqrt(2<sup>8</sup>) 
+        or 16 times easier. It seems that such a machine could break a 112-bit 
+        EC key in about 45 minutes. Note that this time estimate is quite sensitive 
+        to estimates of the speed of the machine and one has never been built.</p>
+      <p>We expect that today a machine could be built that is 
+        100 times faster than Wiener?s DES machine. Thus, we assume that today 
+        one could build a machine for $10 million which would break a DES key 
+        in .03 hours or about 100 seconds.</p>
+      <p> Based upon a purely computational model, the amount 
+        of arithmetic needed to break a 56-bit DES key is about the same as that 
+        needed to break an EC key which is twice that size: 112 bits. However, 
+        the Wiener designed 56-bit DES cracker seems faster than his equivalent 
+        112-bit EC cracker. We take as a base point in the table below the assumption 
+        that 56-bit DES could be broken in ?about? 5 minutes with the right hardware 
+        and that this is indeed equivalent to 112-bit EC.</p>
+      <p> While the TWINKLE device of Shamir seems to be a very 
+        effective way of doing the sieving for RSA keys in the (say) 512 to 700 
+        bit range, even Shamir admits that the device is unlikely to scale to 
+        where it is effective in attacking 1024 bit keys. Thus, for the table 
+        below we assume a software only attack using PC?s for sieving and tightly 
+        coupled PC?s for the linear algebra. We assume 500-MIPS machines and that 
+        the number of such machines available for $10 million is: </p>
+      <p> 107/(100 + .5 * required memory in Mbytes) </p>
+      <p> The denominator represent a per machine cost of $100 
+        for the processor plus the cost of the memory. The required memory is 
+        assumed to be </p>
+      <p>64 Mbytes * SQRT( L(2<sup>keysize</sup>)/L(2<sup>512</sup>) 
+        ) since 64 Mbytes was required for RSA-512.</p>
+      <p>We assume that the total memory for all the sieve machines 
+        is adequate to hold the matrix and that these same machines can be tightly 
+        coupled. Therefore, if we have F dollars to spend on hardware, and time 
+        T (in months) for an attack we obtain the following formula: </p>
+      <hr size="1" noshade="true">
+         
+        <table>
+        <tr> 
+          <td>&nbsp;</td>
+          <td> <center>
+              T/2 * F </center></td>
+        </tr>
+        <tr> 
+          <td height="23">L(N)/L(2<sup>512</sup>) =</td>
+          <td height="23"> <center>
+              <hr width="90%" noshade>
+            </center></td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+          <td> <center>
+              300 * (100 + .5 sqrt(L(N)/L(2<sup>512</sup>)) * 64) </center></td>
+        </tr>
+      </table>
+
+        
+      <hr size="1" noshade="true">
+	  
+  
+      <p> This formula takes as a baseline that RSA-512 
+        took 2 months on 300 PC?s, each with 64 Mbytes of memory. This explains 
+        the term T/2 in the numerator and the numbers 300 and 64 in the denominator. 
+        The value of N that satisfies the above equation is the modulus that can 
+        be broken for $F and time T.</p>
+      <p> In reality there would be a large additional cost for 
+        the fast interconnection network needed for the tightly coupled parallel 
+        machine used to solve the matrix, but we ignore this component. Doing 
+        this can only make our recommended key sizes more conservative because 
+        if we include this cost it means fewer machines are available for $10 
+        million and hence the key size that can be attacked would be smaller. 
+      </p>
+      <p> This table gives key size equivalents assuming that 
+        $10 million is available for computer hardware. It assumes that EC key 
+        sizes should be twice the Symmetric Key sizes.</p>
+     
+        <h5>Table 2: Cost Equivalent Key Sizes</h5> <br>
+		
+ <hr size="1" noshade="true">
+         
+           <table class="dataTable">
+        <tr> 
+          <th><b>Symmetric Key</b></th>
+          <th><b>EC Key</b></th>
+          <th><b>RSA Key</b></th>
+          <th><b>Time to Break</b></th>
+          <th><b>Machines</b></th>
+          <th><b>Memory</b></th>
+        </tr>
+        <tr> 
+          <td>56</td>
+          <td>112</td>
+          <td>430</td>
+          <td>less than 5 minutes</td>
+          <td>105</td>
+          <td>trivial</td>
+        </tr>
+        <tr> 
+          <td>80</td>
+          <td>160</td>
+          <td>760</td>
+          <td>600 months</td>
+          <td>4300</td>
+          <td>4 Gb</td>
+        </tr>
+        <tr> 
+          <td>96</td>
+          <td>192</td>
+          <td>1020</td>
+          <td>3 million years</td>
+          <td>114</td>
+          <td>170 Gb</td>
+        </tr>
+        <tr> 
+          <td>128</td>
+          <td>256</td>
+          <td>1620(1)</td>
+          <td>10<sup>16</sup> yrs</td>
+          <td>.16</td>
+          <td>120 Tb</td>
+        </tr>
+      </table>
+         
+        
+ <hr size="1" noshade="true">
+ 
+      <p> The table above gives cost-equivalent key sizes. 
+        It gives the size, in bits, for equivalent keys. The time to break is 
+        computed assuming that Wiener?s machine can break a 56-bit DES key in 
+        100 seconds, then scaling accordingly. The ?Machines? column shows how 
+        many NFS sieve machines can be purchased for $10 million under the assumption 
+        that their memories cost $.50/Mbyte. </p>
+      <p> Note: (1) The memory needed for an RSA equivalent to 
+        128-bit symmetric is about 120 Terabytes. Such a machine cannot be built 
+        for $10 million, therefore there is no RSA equivalent for $10 million 
+        because one cannot build .16 of a machine. Note further that the universe 
+        is only 15 x 10<sup>9</sup> years old. Suppose therefore that instead 
+        of allowing $10 million for an attack, we allow $10 trillion. Now, the 
+        attack on the symmetric and EC keys takes ?only? 10<sup>10</sup> years 
+        ? about two-thirds the lifetime of the universe. The RSA equivalent for 
+        this is about 1620 bits. This key is 4 x 10<sup>12</sup> times harder 
+        than RSA-512. Each machine requires 1.2 x 10<sup>14</sup> bytes of memory, 
+        and we can purchase about 158000 of them for $10 trillion.</p>
+      <p>Note that traditionally a strict equivalence has been 
+        made between 80-bit symmetric, 160-bit EC and 1024-bit RSA. This equivalence 
+        has been based PURELY on the assumption that the only required resource 
+        is CPU time. It has ignored the size and the cost of memory needed to 
+        break a 1024-bit RSA-key. The large difference in RSA key size (760 bits 
+        vs. 1024) comes solely from the fact that for fixed FINANCIAL resources, 
+        the cost of memory is by far the largest cost associated with breaking 
+        an RSA key and computational equivalence ignores memory. </p>
+      <p> Here are examples of how the RSA equivalents were computed: 
+      </p>
+      <p> With 100000 machines and 5 minutes instead of 2 months, 
+        we can solve an RSA problem that is about 26 times easier than RSA-512. 
+        L(2<sup>512</sup>)/L(2<sup>430</sup>) is about 26 if we ignore the time 
+        to solve the matrix. Thus, this estimate is conservative.</p>
+      <p> 760 bits is about 4800 times harder than 512 bits. 
+        This requires about 4.4 Gbytes per machine. Each one costs $2300, giving 
+        about 4300 machines for $10 million. RSA-512 took 2 months with 300 machines, 
+        thus 760 bits should take 9600 months with 300 machines or about 670 months 
+        with 4300 machines. Thus, the estimate of 760 bits is slightly conservative.</p>
+      <p>Note:<br>
+        Changing the amount of money available for an attack does not change key 
+        size equivalents. All this does is reduce the time needed for an attack 
+        to succeed. Thus, for $100 million breaking a 760 bit RSA key takes 60 
+        months instead of 600 months. But this is still equivalent to an 80 bit 
+        symmetric key because the time to break the latter is similarly reduced.</p>
+     
+      <a name="IX"></a>
+	  <h4>IX. Conclusion</h4><br>
+      <p>While the Lenstra and Verheul paper [1] reaches the 
+        conclusion that 1024-bit RSA keys will be safe only until 2002, we find 
+        this conclusion baffling. This conclusion was reached by assuming that 
+        56-bit DES was vulnerable in 1982 despite the fact that it was not until 
+        1997 that DES was actually broken. Does anyone seriously believe that 
+        we can solve a problem 7 million times harder than RSA-512 (and needing 
+        6 Terabytes of memory) within just the next few years when RSA-512 was 
+        only recently done? </p>
+      <p> The cost of memory and the difficulty of scaling hardware 
+        for solving the matrix suggests that 1024 bit keys will be safe for at 
+        least 20 years (barring an unexpected new factoring algorithm). The hardware 
+        does not exist today which will allow an NFS attack on a 1024-bit key. 
+        Discussion of ?total cycles available on the Internet? is irrelevant if 
+        machines are not large enough to run NFS.</p>
+      <p> There are basically four reasons why someone might 
+        want to break a cryptographic key:</p>
+      <ul>
+        <li> Economic gain. For hackers with such a motive, the cost of conducting 
+          the attack on suggested key sizes is prohibitive. Such an attack must 
+          be conducted in secret, otherwise the supposed victim could just change 
+          the key. Hence, the model of doing sieving ?for free?, on the Internet 
+          does not apply because such an attack could not be secret.<br>
+          <br>
+        </li>
+        <li>Malice. An attacker might want to break a key to be malicious, but 
+          once again such an attack must be done in secret. Is it conceivable 
+          that a corporation with large resources might want to break some key 
+          from malice or that it could be done in secret? A typical Internet hacker 
+          could not possibly obtain the required resources in private.<br>
+          <br>
+        </li>
+        <li>Research. An attack might be conducted only to establish a limit on 
+          what can be done. But such an attack would not be done on a particular 
+          user?s key and therefore does not threaten existing keys.<br>
+          <br>
+        </li>
+        <li>National Security or Law Enforcement. Citizens should not fear a government 
+          attack on a key for economic motives as the cost of attack will exceed 
+          the economic gain that might be derived from breaking a key. Citizens 
+          do need to be concerned about government intrusions on privacy. It seems 
+          to be an unanswerable question as to what level of effort might be expended 
+          by a government to retrieve a key for such a purpose. </li>
+      </ul>
+      <p>We suggest that users maintain a flexible, pro-active 
+        policy in which they are able to change to larger keys as the art in breaking 
+        keys improves.</p>
+      <p> If one accepts a purely computational model of equivalence, 
+        as opposed to a financial model equivalence, then we agree with the key 
+        size equivalents given in reference [1]. However, we do not agree with 
+        the conclusions about when large RSA keys will be vulnerable. </p>
+      <p>&nbsp;</p>
+      <h5>References</h5><br>
+      <p> (1) Lenstra, A., and Verheul, E. Selecting Cryptographic 
+        Keysizes. <br>
+        * See <a href="http://www.cryptosavvy.com" target="_blank">http://www.cryptosavvy.com</a>.</p>
+      <p> (2) Lenstra, A., and Shamir, A., Analysis and Optimization 
+        of the TWINKLE Factoring Device.</p>
+      <p> (3) Brent, R., Some Parallel Algorithms for Integer 
+        Factorization.</p>
+      <p> (4) Q &amp; A with Stan Williams, Technology Review, 
+        Sept 1999 pp. 92-96.</p>
+      <p> (5) Silverman, R., Exposing the Mythical MIPS-Year, 
+        IEEE Computer, Aug 1999 pp. 22-26.</p>
+      <p> (6) Montgomery, P. Parallel Implementation of the Block-Lanczos 
+        Method, RSA-2000 Cryptographers Track.</p>
+      <p> (7) Silverman, R. The o(1) Term in the Complexity of 
+        the SNFS. Rump Session talk, Crypto ?97.</p>
+      <p> (8) Silverman, R., &amp; Wagstaff Jr., S. A Practical 
+        Analysis of the Elliptic Curve Factoring Method, Mathematics of Computation, 
+        vol. 61, 1993, pages [445-463].</p>
+      <p> (9) Odlyzko, A., The Future of Integer Factorization, 
+        CryptoBytes 1 (1995) pp. 5-12.</p>
+      <p> * Robert Silverman is a senior research scientist 
+        at RSA Laboratories in Bedford, MA. He has an A.B. from Harvard in Applied 
+        Mathematics and a Masters (an ABD) from the University of Chicago in Operations 
+        Research. he spent four years at Data Resources Inc. and ten years at 
+        the MITRE Corporation where he was a Principal Scientist. His research 
+        interests include parallel and massively distributed computing, computational 
+        number theory, algorithmic complexity theory and general design and analysis 
+        of numerical algorithms. He is a member of the American Mathematical Society.</p>
+      
+      <a name="X"></a>
+	  <h4>Appendix: Analysis of Multi-Prime RSA Security</h4><br>
+      <p align="CENTER"></p>
+      <h5>I. Introduction</h5><br>
+      <p align="CENTER"></p>
+      <p>Classically, an RSA modulus has been composed from two 
+        primes. However, there are very practical reasons why using more than 
+        two primes might be preferred. </p>
+      <ul>
+        <li>The primes are smaller and key generation takes less time despite 
+          there being more of them.</li>
+        <li>Private key operations take less time if one uses the Chinese Remainder 
+          Theorem. Using three primes vs. two primes gives a theoretical speedup 
+          of 9/4. A speedup of 1.8 to 2.0 has been achieved in practice.</li>
+      </ul>
+      <p>There are two possible methods for attacking an RSA 
+        key if it is built from more than two primes. The first is NFS, which 
+        has already been discussed. The second method is the Elliptic Curve Method 
+        (ECM).</p>
+      <p>This discussion assumes minimal familiarity with the 
+        Elliptic Curve factoring algorithm. A brief, simplified description of 
+        the method follows:</p>
+      <p>One chooses two integers A and B at random and considers 
+        the equation y<sup>2</sup> = x<sup>3</sup> + Ax + B. This is an elliptic 
+        curve. Suppose N is the RSA modulus and that p is a prime dividing N. 
+        We need the following definition:</p>
+      <p>m-Smooth Number - An m- smooth number is one which has 
+        all of its prime factors less than m.</p>
+      <p>The number of points on the randomly chosen elliptic 
+        curve taken modulo p is a random integer near p. ECM succeeds when this 
+        number of points is m-smooth for a suitably chosen small value of m.</p>
+      <p>Whereas the time for the Number Field Sieve to factor 
+        a number depends only on the size of the number, the Elliptic Curve Method 
+        finds small prime factors of a larger number and its run time depends 
+        on the size of the factors.</p>
+      <p>Throughout this paper it is assumed that an RSA modulus 
+        built from more than two primes will (try to) be broken with the Elliptic 
+        Curve Method. Therefore the MIPS-Year estimates in sections V. and higher 
+        are based upon using ECM. The difficulty of breaking a modulus with ECM 
+        is then computed relative to a base point. That base point is the factorization 
+        of RSA-512 with NFS.</p>
+      
+        <h5>Definition of MIPS-Year</h5><br>
+      <p>We define a MIPS-Year to be 3.1 x 10<sup>13</sup> arithmetic 
+        operations. This is 1 x 10<sup>6</sup> operations/sec x 3600sec/hr x 24hrs/day 
+        x 365 days/yr x 1 yr.</p>
+      
+	  <h5>II. Difficulty in MIPS-Years of Breaking RSA with 
+        the Number Field Sieve</h5><br>
+      <p>We have a benchmark data point using NFS for breaking 
+        RSA-512 of </p>
+      <p>8000 MIPS-Years for the sieving using ~50 Mbytes/machine<br>
+        10 Days on a Cray using 2.3Gbytes to do the matrix.</p>
+      <p>To measure the difficulty for NFS in MIPS-Years of factoring 
+        moduli greater than 512 bits we use:</p>
+      <p>8000 * L(N)/L(2<sup>512</sup>)</p>
+      <p>where L(N) was defined in the main body of this paper.</p>
+     
+        <h5>III. Method of Analysis for ECM</h5><br>
+      <p>ECM succeeds when a randomly chosen curve (taken over 
+        Z/pZ where p | N is the factor we hope to find) has its group order smooth 
+        up to B1 for suitably chosen B1. This means that all the prime factors 
+        of the order of the curve must be less than B1. As it is usually implemented 
+        ECM is run in two steps. In Step 1, one hopes that the order of the curve 
+        is smooth up to B1. In Step 2, one hopes that the order is smooth up to 
+        B1 except for a single prime factor lying between B1 and B2 for a suitably 
+        chosen value of B2. The second step has the effect of about an order-of-magnitude 
+        speedup in practice, although it does not affect the asymptotic complexity 
+        of the method. Step 1 requires approximately B1 elliptic curve point additions. 
+        The number of operations for Step 2 depends upon the way it is implemented 
+        ? there are several ways of doing so. If one uses Fast Fourier Transforms, 
+        Step 2 takes about the same time as Step 1, when B2 = B1<sup>2</sup>.</p>
+      <p>The probability that an integer y has all of its prime 
+        factors less than x is about u<sup>-u</sup> where u = (log y)/(log x). 
+        This is how the probability of success, per curve, is computed herein.</p>
+      <p>Then, the total work in MIPS-Years to find a factor 
+        of an n bit number is .033 * (n/1024)^2 * B1/10<sup>7</sup> * u<sup>u</sup>. 
+        See below for an explanation of the numbers .033 and 10<sup>7</sup>. The 
+        expression (n/1024)^2 is the relative work factor to execute the multi-precision 
+        arithmetic for an n bit number as compared with the 1024 bit benchmark 
+        given below. The expression B1/10<sup>7</sup> represents the relative 
+        work factor to take the computations to B1 relative to the benchmark for 
+        B1 = 10<sup>7</sup> given below. And u<sup>u</sup> is the number of curves 
+        needed.</p>
+      <p>It is assumed that when running (say) k curves, one 
+        can give one curve to each of k machines, or two curves to each of k/2 
+        machines etc.</p>
+      <p>We assume that the modulus has been broken when ECM 
+        finds a single factor. Clearly if more than two primes are used this means 
+        we still have a composite cofactor. However, pulling out the next factor 
+        with ECM is then easier because the modulus is smaller. Thus, one might 
+        want to apply ECM again once the first factor is removed, or use NFS if 
+        it would then be faster.</p>
+      
+        <h5>IV. Elliptic Curve Benchmark Data</h5><br>
+      <p>We have an established benchmark of:</p>
+      <p>Executing Step 1 to 1.33 x 10<sup>7</sup> takes 454 
+        seconds on a 500MHz Dec Alpha 21264 for a 127 decimal digit modulus. This 
+        translates to 2000 seconds for Step 1 to 10<sup>7</sup> on a 1024 bit 
+        modulus. 2000 seconds on this machine translates roughly to about .033 
+        MIPS-Years for this problem, assuming 1 instruction/cycle. This assumption 
+        does not apply to integer multiplies, which dominate elliptic curve additions, 
+        but since this is a super-scalar, pipelined architecture, the machine 
+        averages &quot;about&quot; 1 instruction/cycle. We designate the Step 
+        1 limit by the variable B1 throughout this paper.</p>
+      <p>Note that this is a 64 bit machine. The same computation 
+        on a 32 bit machine, assuming all other architectural features to be the 
+        same will take four times as long because the complexity of multi-precision 
+        arithmetic decreases with the square of the word size.</p>
+      <p>This can be sped by dedicated hardware for multi-precision 
+        arithmetic. Indeed, the Wiener ECDL cracking machine, discussed in the 
+        main body of this paper, is easily adapted to run ECM. We therefore borrow 
+        his design for this purpose. This machine has 2.5 x 10<sup>7</sup> processors 
+        and it will compute the addition of two points on an elliptic curve modulo 
+        a 155 bit number at the rate of 20,000 additions/sec. Therefore, the time 
+        on this machine needed to execute Step 1 of ECM to the limit of B1 is 
+      </p>
+      <p>B1/20000 * (n/155)<sup>2</sup> where n is the size in 
+        bits of the RSA modulus. The term (n/155)<sup>2 </sup> represents the 
+        relative difficulty of doing the arithmetic modulo N, as opposed to the 
+        155 bit arithmetic of the Wiener machine.</p>
+      <p>While ECM has a second stage that can be implemented, 
+        this second stage does not affect the asymptotic run time of the algorithm. 
+        It does however, have some practical importance for the size of the numbers 
+        under consideration here. Using Fast Fourier Transform techniques can 
+        allow computing Step 2 to B1<sup>2</sup> in about the same time as executing 
+        Step 1 to B1. This can give about an order of magnitude performance increase 
+        at twice the time cost. The space requirements, while large, are manageable 
+        (128 to 256 Mbytes for 1024 bit moduli per processor). This paper computes 
+        ECM costs and probability of success based upon a Step 1 implementation 
+        only.</p>
+      <p>Let <b><i>p</i></b> be the probability of success with 
+        a single curve. Then the expected number of curves needed to succeed is 
+        1/<b><i>p</i></b>. The probability of succeeding with 1/<b><i>p</i></b> 
+        curves is then </p>
+      <p>1 ? (1- <i><b>p</b></i>)^(1/<i><b>p</b></i>) and this 
+        is about 1/e ~ .63 when <i><b>p</b></i> is moderately large. Halving the 
+        number of curves yields a probability of success of about .39, while doubling 
+        the number of curves yields a probability of success of about .88. Except 
+        where noted otherwise, this paper will assume that 1/<i>p</i> curves are 
+        used. Thus, this method <i><b>does not succeed with certainty</b></i>.</p>
+      <p>Note that as B1 increases, the probability of success 
+        per curve increases and the required number of curves decreases. But the 
+        time required to run each curve increases. There is an optimal choice 
+        of B1 depending on the size of the factor being sought. The tables below 
+        show where this approximately occurs.</p>
+     
+      <h5>V. Analysis of 768 bit RSA Modulus with three 256 
+        bit Primes.</h5><br>
+		
+ <hr size="1" noshade="true">
+         
+         
+        <table class="dataTable">
+        <tr> 
+          <th><b>B1</b></th>
+          <th><b>Time/Curve (hrs)</b></th>
+          <th><b>Probability Per Curve</b></th>
+          <th><b>&#9;&#9;&#9;No. of Curves</b></th>
+          <th><b>Total MIPS-Years</b></td>
+        </tr>
+        <tr> 
+          <td>10<sup>7</sup></td>
+          <td>.31</td>
+          <td>3.4e-12</td>
+          <td>2.9e11</td>
+          <td>5.3e9</td>
+        </tr>
+        <tr> 
+          <td>10<sup>8</sup></td>
+          <td>3.1</td>
+          <td>3.3e-10</td>
+          <td>3.0e9</td>
+          <td>5.4e8</td>
+        </tr>
+        <tr> 
+          <td>10<sup>9</sup></td>
+          <td>31</td>
+          <td>1.0e-8</td>
+          <td>9.7e7</td>
+          <td>1.7e8</td>
+        </tr>
+        <tr> 
+          <td>10<sup>10</sup></td>
+          <td>310</td>
+          <td>1.5e-7</td>
+          <td>6.8e6</td>
+          <td>1.2e8</td>
+        </tr>
+        <tr> 
+          <td>10<sup>11</sup></td>
+          <td>3100</td>
+          <td>1.2e-6</td>
+          <td>8.4e5</td>
+          <td>1.5e8</td>
+        </tr>
+      </table>
+        
+  <hr size="1" noshade="true">
+  
+      <p><b>&#9;&#9;&#9;&#9; &#9;&#9;&#9;&#9;&#9;&#9;&#9;</b><br>
+        The minimum occurs with B1 ~ 10<sup>10</sup>. With 
+        the benchmark DEC Alpha each curve requires 310 hours to compute and has 
+        a probability of success of 1.5 x 10<sup>-7</sup>. Thus, 6.8 million curves 
+        are needed, giving a total work effort of 1.2 x 10<sup>8</sup> MIPS-Years. 
+        One can run each curve for only 31 hours, but then the total number of 
+        curves goes up by a factor of 14 and the total work by a factor of about 
+        1.4. </p>
+      <p>This is 15000 times harder than breaking RSA-512 with 
+        NFS. With Step 2 implemented, this might be 3000 to 5000 times harder.</p>
+      <p>Note that breaking this modulus with NFS is 6100 times 
+        harder than RSA-512, so a 768 bit modulus with three primes is as hard 
+        to break as one with two primes with respect to <b>time equivalence only</b>.</p>
+      <p>We now do a cost-based analysis based on the Wiener 
+        machine. It can execute the algorithm to 10<sup>10</sup> on a 768 bit 
+        modulus in 10<sup>10</sup>/20000 * (768/155)<sup>2</sup> seconds which 
+        is about 3400 hours (5 months) . This machine can try 25 million curves 
+        at once during this time but only 6.8 million are needed to succeed with 
+        probability .63. If we use 25 million curves, the probability of success 
+        is about .974. </p>
+      <p>Note that running only 6.8 million curves (giving one 
+        per processor) leaves many processors idle. One way to rectify this is 
+        to run more curves than is optimal (25 million), while slightly lowering 
+        the Step 1 limit. This results in more total arithmetic being performed, 
+        but will slightly lower the elapsed time. An alternate way to utilize 
+        addition processors would be to use them to speed the multi-precision 
+        arithmetic on a per-curve basis. However this would require a major redesign 
+        of the machine. Similar comments apply to other key sizes as long as the 
+        number of needed curves is less than the number of processors on the machine.</p>
+     
+        <h5>VI.A. 1024 bit RSA Modulus with three Primes (341 bits)</h5><br> 
+     
+	  
+	  <hr size="1" noshade="true">
+         
+<table class="dataTable">
+        <tr> 
+          <th><b>B1</b></td>
+          <th><b>Time/Curve (hrs)</b></th>
+          <th><b>Probability&#9;Per Curve</b></th>
+          <th><b>No. of Curves</b></th>
+          <th><b>Total MIPS-Years</b></th>
+        </tr>
+        <tr> 
+          <td>10<sup>7</sup></td>
+          <td>.56</td>
+          <td>7.9e-18</td>
+          <td>1.3e17</td>
+          <td>4.0e15</td>
+        </tr>
+        <tr> 
+          <td>10<sup>8</sup></td>
+          <td>5.6</td>
+          <td>6.0e-15</td>
+          <td>1.7e14</td>
+          <td>5.3e13</td>
+        </tr>
+        <tr> 
+          <td>10<sup>9</sup></td>
+          <td>56</td>
+          <td>8.8e-13</td>
+          <td>1.1e12</td>
+          <td>3.6e12</td>
+        </tr>
+        <tr> 
+          <td>10<sup>10</sup></td>
+          <td>560</td>
+          <td>4.2e-11</td>
+          <td>2.4e10</td>
+          <td>7.7e11</td>
+        </tr>
+        <tr> 
+          <td>10<sup>11</sup></td>
+          <td>5.6e3</td>
+          <td>8.9e-10</td>
+          <td>1.1e9</td>
+          <td>3.6e11</td>
+        </tr>
+        <tr> 
+          <td>10<sup>12</sup></td>
+          <td>5.6e4</td>
+          <td>1.1e-8</td>
+          <td>9.4e7</td>
+          <td>3.0e11</td>
+        </tr>
+        <tr> 
+          <td>10<sup>13</sup></td>
+          <td>5.6e5</td>
+          <td>8.2e-8</td>
+          <td>1.2e7</td>
+          <td>3.9e11</td>
+        </tr>
+      </table>
+		  
+<hr size="1" noshade="true">
+
+      <p>&#9;&#9;&#9;The minimum is at B1 ~ 10<sup>12</sup>. 
+        Each DEC Alpha machine requires 56000 hours per curve, 9.4 million curves 
+        are required and the total work is 3.0e11 MIPS-Years. This is slightly 
+        harder than factoring the same modulus with NFS based on <b>time-equivalence 
+        only</b>.</p>
+      <p> If one uses the Wiener machine, it will take about 
+        2.4 million hours (280 years) to succeed with probability .63 using 94 
+        million curves to a Step 1 limit of 10<sup>12</sup>. (Each curve will 
+        take about 70 years, and since the machine can only run 25 million curves 
+        at a time, the curves will need to be processed in four sets for a total 
+        of 280 years. Again, the comments above about processor utilization apply.) 
+      </p>
+      <p>We do not show the computations for trying to break 
+        a two-prime 1024 bit modulus with ECM. However we note here that it is 
+        approximately 10<sup>6</sup> times harder than breaking the same modulus 
+        with NFS. Thus, it is clearly not worth attempting.</p>
+      
+      <h5>VI.B. 1024 bit Modulus with four Primes (256 bits)</h5><br>
+      </b>This is (1024/768)<sup>2 </sup> ~ 1.77 times as hard as 768 bits with 
+      three primes, i.e. about 8 months to succeed with probability .63.  
+     
+        <h5>VII.A. 1536 bit RSA Modulus with three Primes (512 bits)</h5><br>
+        
+		This is 9/4 as hard as breaking a two-prime 1024 bit modulus with 
+        ECM. This is harder than breaking 1536 bits with NFS. The Wiener machine 
+        would require about 160 million years to run 25 billion elliptic curves, 
+        each to a Step 1 limit of about 10<sup>15</sup>. </p>
+      
+        <h5>VII.B. 1536 bit RSA Modulus with four Primes (384 bits)</h5><br>
+       
+	  <hr size="1" noshade="true">
+         
+          <table class="dataTable">
+        <tr> 
+          <th><b>B1</b></th>
+          <th><b>Time/Curve (hrs)</b></th>
+          <th><b>Probability&#9;Per Curve</b></th>
+          <th><b>No. of Curves</b></th>
+          <th><b>Total MIPS-Years</b></th>
+        </tr>
+        <tr> 
+          <td>10<sup>8</sup></td>
+          <td>13</td>
+          <td>1.7e-17</td>
+          <td>5.7e16</td>
+          <td>4.1e16</td>
+        </tr>
+        <tr> 
+          <td>10<sup>9</sup></td>
+          <td>130</td>
+          <td>5.7e-15</td>
+          <td>1.7e14</td>
+          <td>1.3e15</td>
+        </tr>
+        <tr> 
+          <td>10<sup>10</sup></td>
+          <td>1300</td>
+          <td>5.1e-13</td>
+          <td>1.9e12</td>
+          <td>1.4e14</td>
+        </tr>
+        <tr> 
+          <td>10<sup>11</sup></td>
+          <td>1.3e4</td>
+          <td>1.8e-11</td>
+          <td>5.4e10</td>
+          <td>3.9e13</td>
+        </tr>
+        <tr> 
+          <td>10<sup>12</sup></td>
+          <td>1.3e5</td>
+          <td>3.3e-10</td>
+          <td>3.0e9</td>
+          <td>2.2e13</td>
+        </tr>
+        <tr> 
+          <td>10<sup>13</sup></td>
+          <td>1.3e6</td>
+          <td>3.6e-9&#9;&#9;</td>
+          <td>2.7e8</td>
+          <td>1.9e13</td>
+        </tr>
+        <tr> 
+          <td>10<sup>14</sup></td>
+          <td>1.3e7</td>
+          <td>2.7e-8</td>
+          <td>3.7e7</td>
+          <td>2.7e13</td>
+        </tr>
+      </table>
+        
+<hr size="1" noshade="true">
+
+      <p> The minimum occurs at B1 ~ 10<sup>13</sup>. With 
+        the DEC Alpha, each curve requires 1.2 million hours to compute, 270 million 
+        curves are required and the total work is 1.9 x 10<sup>13</sup>.</p>
+      <p>This is about 2.4 billion times harder than RSA-512 
+        with NFS, but is easier than breaking 1536 bits with NFS. The Wiener machine 
+        would take 60 million hours (7000 years) to run 270 million curves to 
+        a Step 1 limit of 10<sup>13</sup>.</p>
+      <h5>VIII. 2048 bit RSA Modulus</h5><br>
+      <p>We do not show the computation for three primes. The 
+        work required is about 10<sup>22</sup> MIPS-Years.</p>
+      <p><u><b>4 Primes (512 bits)</b></u> This is four times 
+        harder than RSA-1024 with two primes.</p>
+      <p><b><u>5 Primes (409 bits)</u></b></p>
+	  
+<hr size="1" noshade="true">
+         
+           <table class="dataTable">
+        <tr> 
+          <th><b>B1</b></td>
+          <th><b>Time/Curve (hrs)</b></th>
+          <th><b>Probability&#9;Per Curve</b></th>
+          <th><b>No. of Curves</b></th>
+          <th><b>Total MIPS-Years</b></th>
+        </tr>
+        <tr> 
+          <td>10<sup>8</sup></td>
+          <td>22</td>
+          <td>5.3e-19</td>
+          <td>1.9e18</td>
+          <td>2.4e18</td>
+        </tr>
+        <tr> 
+          <td>10<sup>9</sup></td>
+          <td>220</td>
+          <td>2.9e-16</td>
+          <td>3.4e15</td>
+          <td>4.2e16</td>
+        </tr>
+        <tr> 
+          <td>10<sup>10</sup></td>
+          <td>2200</td>
+          <td>3.7e-14</td>
+          <td>2.6e13</td>
+          <td>3.3e15</td>
+        </tr>
+        <tr> 
+          <td>10<sup>11</sup></td>
+          <td>2.2e4</td>
+          <td>1.8e-12</td>
+          <td>5.5e11</td>
+          <td>6.9e14</td>
+        </tr>
+        <tr> 
+          <td>10<sup>12</sup></td>
+          <td>2.2e5</td>
+          <td>4.2e-11</td>
+          <td>2.4e10</td>
+          <td>3.0e14</td>
+        </tr>
+        <tr> 
+          <td>10<sup>13</sup></td>
+          <td>2.2e6</td>
+          <td>5.7e-10</td>
+          <td>1.8e9</td>
+          <td>2.3e14</td>
+        </tr>
+        <tr> 
+          <td>10<sup>14</sup></td>
+          <td>2.2e7</td>
+          <td>5.0e-9</td>
+          <td>2.0e8</td>
+          <td>2.6e14</td>
+        </tr>
+      </table>
+        
+         
+        
+		  
+<hr size="1" noshade="true">
+
+      <p>&#9;&#9;&#9;&#9; &#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9; &#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9; 
+        &#9;&#9;&#9;&#9;&#9;&#9; &#9; &#9;&#9;&#9;&#9;&#9;&#9;<br>
+        The minimum occurs at B1 ~ 10<sup>13</sup>. With 
+        the DEC Alpha, each curve requires 2.2 million hours to compute and 1.8 
+        billion curves are required. The total work is 2.3 x 10<sup>14</sup>.</p>
+      <p>This is about 10<sup>5</sup> times easier than breaking 
+        2048 bits with NFS. The Wiener machine would take 1.7 billion hours ( 
+        200,000 years) to run 1.8 billion curves to a Step 1 limit of 10<sup>13</sup>.</p>
+      <h5>IX. Conclusions</h5><br>
+      <p>The following table displays the relative difficulties 
+        <b>with respect to time only</b> for breaking different keys. It gives 
+        the time to break the key in MIPS-Years.</p>
+      <h5>Table A1. Work to break Multi-Prime RSA (MIPS-Years)</h5><br>
+	  
+<hr size="1" noshade="true">
+         
+          <table class="dataTable">
+        <tr> 
+          <th><b>Size of Modulus</b></th>
+          <th><b>NFS time to break</b></th>
+          <th><b>3 Primes with ECM</b></th>
+          <th><b>4 Primes with ECM</b></th>
+          <th><b>5 Primes with ECM</b></th>
+        </tr>
+        <tr> 
+          <td>768</td>
+          <td>4.8 x 10<sup>7</sup></td>
+          <td>1.2 x 10<sup>8</sup></td>
+          <td>too easy</td>
+          <td>much too easy</td>
+        </tr>
+        <tr> 
+          <td>1024</td>
+          <td>5.6 x 10<sup>10</sup></td>
+          <td>3.0 x 10<sup>11</sup></td>
+          <td>2.1 x 10<sup>8</sup></td>
+          <td>too easy</td>
+        </tr>
+        <tr> 
+          <td>1536</td>
+          <td>6.0 x 10<sup>15</sup></td>
+          <td>1.8 x 10<sup>17</sup>&#9;</td>
+          <td>1.9 x 10<sup>13</sup>&#9;</td>
+          <td>4.2 x 10<sup>10</sup></td>
+        </tr>
+        <tr> 
+          <td>2048</td>
+          <td>7.0 x 10<sup>19</sup>&#9;</td>
+          <td>~ 1.5 x 10<sup>22</sup>&#9;</td>
+          <td>3.2 x 10<sup>17</sup>&#9;</td>
+          <td>2.3 x 10<sup>14</sup></td>
+        </tr>
+      </table>
+		  
+<hr size="1" noshade="true">
+
+      <p>In the following table we give approximate symmetric 
+        key equivalents for multi-prime RSA assuming that the Wiener machine is 
+        available and costs $10 million. If we assume that the benchmark DEC Alpha 
+        could be stripped of all components except the mother board and would 
+        cost $250 each, we could purchase 40,000 of them. This set of machines 
+        would be about 60 times slower than the Wiener machine, but would be readily 
+        available.</p>
+     <h5> Table A2. Cost Equivalent Key Sizes with Multiple 
+        Primes</h5><br>
+
+<hr size="1" noshade="true">
+         
+<table class="dataTable">
+        <tr> 
+          <th><b>Symmetric Key Size (bits)</b></th>
+          <th><b>RSA Modulus Size</b></th>
+          <th><b>Number of Primes</b></th>
+          <th><b>Time to Break</b></th>
+        </tr>
+        <tr> 
+          <td>73</td>
+          <td>768</td>
+          <td>3</td>
+          <td>5 months</td>
+        </tr>
+        <tr> 
+          <td>82</td>
+          <td>1024</td>
+          <td>3</td>
+          <td>280 years</td>
+        </tr>
+        <tr> 
+          <td>74</td>
+          <td>1024</td>
+          <td>4</td>
+          <td>8 months</td>
+        </tr>
+        <tr> 
+          <td>102</td>
+          <td>1536</td>
+          <td>3</td>
+          <td>160 million years</td>
+        </tr>
+        <tr> 
+          <td>88</td>
+          <td>1536</td>
+          <td>4</td>
+          <td>17000 years</td>
+        </tr>
+      </table>
+
+        
+<hr size="1" noshade="true">
+      <p>Note that this complements Table 2 of the main body 
+        of the paper. Here, we see three-prime 1024 bit RSA is about the same 
+        complexity as an 80 bit symmetric key with respect to both time and cost. 
+        Two-prime 1024 bit RSA is equivalent to an 80 bit symmetric key in terms 
+        of time, but much stronger in terms of cost.</p>
+      <p align="right">RSA Laboratories<br>
+        April 2000 Bulletin #13 (Revised November 2001)<br>
+        Copyright 2001 RSA Security Inc. All rights reserved.</p>
+  
+
+
+
+<!-- End of node body -->
+						</div>
+                                                <div class="topofpage"><a href="#">Top of Page</a>
+
+     </td>
+     <td valign="top" rowspan="2" class="insideline">
+     </td>
+     <!-- rightColumn -->
+     <td valign="top">    
+      <div class="rightColumn"> 
+
+
+						<br  clear="all"/></div></td>
+					<!-- /rightColum -->
+					<td valign="top" rowspan="2" class="outsidelineright">
+					</td>					
+				</tr>
+				<!-- page tools at bottom of right column -->
+					<td valign="bottom">		
+						<div id="pagetoolsContainer">
+							<div class="pagetools">
+								<a href="#" class="email">Email to a friend</a>
+								<a href="#" class="print">Print</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<!-- / page tools at bottom of right column -->					
+				<!-- spacer row -->
+				<tr>
+					<td><img src="/images/spacer.gif" width="166" height="1" alt=""></td>
+					<td><img src="/images/spacer.gif" width="2" height="1" alt=""></td>
+					<td><img src="/images/spacer.gif" width="4" height="1" alt=""></td>					
+					<td><img src="/images/spacer.gif" width="454" height="1" alt=""></td>
+					<td><img src="/images/spacer.gif" width="2" height="1" alt=""></td>
+					<td><img src="/images/spacer.gif" width="134" height="1" alt=""></td>					
+					<td><img src="/images/spacer.gif" width="2" height="1" alt=""></td>					
+				</tr>
+				<!-- /spacer row -->						
+			</table>	
+			<div id="footerLine"><img src="/images/spacer.gif" width="1" height="1"></div>		
+			<div id="footerContainer">
+				<div class="footer">&copy;Copyright 2004 RSA Security | <a href="#">Privacy</a> | <a href="#">Legal</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="bottomWhiteTopLine">
+		<div id="bottomWhiteContainter">
+			<div id="bottomWhiteBorders">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="tooltipCursor"><img src="/images/tooltip.gif" width="109" height="19" alt="" /></div>
+<div id="tooltipClose" class="tooltipClose"></div>
+<a id="tooltipClick"><li>Learn More...</a>
+
+</body>
+</html>

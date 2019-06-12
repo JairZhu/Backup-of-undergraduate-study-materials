@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>
+Encryption Lab Exercises
+</title>
+</head> 
+
+<body BGCOLOR=ffffff TEXT=000000 LINK=0000ff VLINK=000060>
+<center>
+<h1>Laboratory Exercises on Encryption</h1>
+</center>
+<p>
+All the material available from this page is protected by common-law copyright.
+I hereby grant permission to any secondary or college-level teacher
+to copy this material and modify it for her/his own use, provided that
+credit is given both to me and to Montclair State University.
+<p>
+<em>Last updated November 6, 2001</em>
+<p>
+<center>
+<h2>RSA Public-Key Encryption Exercise</h2>
+</center>
+<p>
+This exercise introduces students to the concept of public-key encryption, and
+to the RSA public-key cryptosystem (used by permission). A typical class should 
+be able to complete this lab in one hour or less.
+<p>
+<a href = "rsainstr.doc">Click here</a> for the lab
+instructions that I distribute for this exercise, as a Microsoft Word (TM) 
+document.  (Updated November 6, 2001)
+<p>
+The lab makes use of an Excel (TM) workbook with three worksheets:
+<p>
+<ul>
+<li>The first worksheet allows each student to choose two small primes
+and a public key.  The worksheet computes the associated secret key.
+<li>The second worksheet allows the student to encrypt a short message
+(up to 15 capital letters) using another student's public key.
+<li>The last worksheet allows the student to decrypt a message from
+another student using her own public key.
+</ul>
+<p>
+<a href = "rsa.xls">Shift-click here</a> to download the
+Excel workbook. (Updated November 6, 2001)
+<p>
+Note that a dialogue box appears when you open this workbook.  Since 
+this spreadsheet does not contain any macros, you may choose to "Disable
+Macros" (they were used in an earlier version of the spreadsheet).
+Before using the spreadsheet it <em>is</em> necessary to add in the 
+Analysis Tookpak and The Analysis ToolPak VBA (from the "Tools" menu).
+This is explained in the lab instructions.
+<p>
+I have recently tried to adapt the workbook to handle alphabets other
+than the English alphabet. This workbook has an additional "Regional
+Settings" workbook that allows one to set two parameters: the code
+for the first letter of the alphabet and the code for the last
+letter. In this version, it should work with any alphabet of between
+18 and 26 letters.  Unfortunately, it will require major modifications
+to make it work with longer alphabets.
+<p>
+I tested this by using it with lower-case English letters, but not
+with any other language.  I welcome reports on further tests with
+actual alphabets.
+<p>
+<a href="rsareg.xls">Shift-click here</a> to download the "international
+version" of the RSA spreadsheet.
+<p>
+<center>
+<h2>Key-Sharing Exercise</h2>
+</center>
+<p>
+This exercise introduces students to the concept of key sharing.  The
+instructions motivate this as a means to provide for the recovery of a
+lost key without revealing the entire key to any one person.  I have
+chosen to use the Chinese Remainder Theorem for this, primarily because
+it's simple but also becuase it's mathematically interesting.  Most classes
+are able to complete this exercise in half a period.  I typically have 
+students go through this lab in the period after a very heavy lab assignment.
+After completing this lab, they can spend the remaining time working on
+that assignment.
+<p>
+<a href="keyinstr.doc">Click here</a> for the instructions for this lab.
+Once again, this is a Microsoft Word document.
+<p>
+Once again, this exercise makes use of a Microsoft Excel (TM) workbook with
+two worksheets.  
+<p>
+<ul>
+<li>The first worksheet allows the student to select a three-digit
+key and to split it into three parts (by taking the remainder modulo three
+relatively prime integers).  
+<li>The second worksheet allows another student to recover the original
+key from the three integers and the three remainders.  This makes use
+of the Chinese Remainder Theorem.
+</ul>
+<p>
+<a href="keyshar.xls">Shift-click here</a> to download this workbook.
+<p>
+<center>
+<h2>Classroom Materials</h2>
+</center>
+<p>
+I am including links to two files of PowerPoint (TM) slides that I have
+used in classroom presentations.  The material in the two files overlaps
+to some extent.
+<p>
+<a href = "crypto1.ppt">Click here</a> for the first set of slides.<br>
+<a href = "crypto2.ppt">Click here</a> for the second.
+<p>
+I am including these primarily for the sake of completeness.  Judging from
+the classroom response to them, they are in need of substantial revision.
+I will revise them the next time I teach the General Education Computer
+Science course in which I use this material.
+<p>
+<center>
+<h2>A Final Note</h2>
+</center>
+<p>
+I am posting this material, especially the lab exercises, so that
+other instructors can use it in the lab and the classroom.  If you decide 
+to use it, I would be interested to hear about your experiences.  Please 
+feel free to send comments, criticisms, and suggestions for changes to
+<a href="mailto:benham@pegasus.montclair.edu">benham@pegasus.montclair.edu</a>.
+<p>
+</body>
+</html>

@@ -1,0 +1,1265 @@
+From: <ÓÉ Microsoft Internet Explorer 5 ±£´æ>
+Subject: FIPS 186 - (DSS), Digital Signature Standard
+Date: Tue, 30 Nov 2004 00:34:55 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C4D674.69BCAE60"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C4D674.69BCAE60
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.itl.nist.gov/fipspubs/fip186.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>FIPS 186 - (DSS), Digital Signature Standard</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dgb2312">
+<META content=3D"MSHTML 6.00.2900.2523" name=3DGENERATOR></HEAD>
+<BODY bgColor=3D#ffffff><A name=3DFIPS_TOP>
+<HR>
+
+<CENTER>Return to the FIPS<BR><A=20
+href=3D"http://www.itl.nist.gov/fipspubs/index.htm" =
+target=3D'_top"'>Home=20
+Page</A></CENTER>
+<HR>
+<B>FIPS PUB 186</B><BR>
+<P>
+<CENTER>Federal Information<BR>Processing Standards Publication 186 =
+<BR><BR>1994=20
+May 19<BR></CENTER><B>
+<CENTER>Announcing the Standard for</CENTER></B><BR>
+<CENTER>
+<H1>DIGITAL SIGNATURE STANDARD (DSS)</H1></CENTER>
+<MENU><FONT size=3D2><A=20
+  href=3D"http://www.itl.nist.gov/fipspubs/fip186.htm#FORE_SEC">(The =
+Foreword,=20
+  Abstract, and Key Words</A><BR>can be found at the end of this =
+document.)=20
+  </FONT><BR></MENU>
+<H5>Federal Information Processing Standards Publications (FIPS PUBS) =
+are issued=20
+by the National Institute of Standards and Technology after approval by =
+the=20
+Secretary of Commerce pursuant to Section 111(d) of the Federal Property =
+and=20
+Administrative Services Act of 1949, as amended by the Computer Security =
+Act of=20
+1987, Public Law 100-235.</H5>
+<P><B>Name of Standard:</B> Digital Signature Standard (DSS).=20
+<BR><BR><B>Category of Standard:</B> Computer Security; Cryptography.=20
+<BR><BR><B>Explanation:</B> This Standard specifies a Digital Signature=20
+Algorithm (DSA) appropriate for applications requiring a digital rather =
+than=20
+written signature. The DSA digital signature is a pair of large numbers=20
+represented in a computer as strings of binary digits. The digital =
+signature is=20
+computed using a set of rules (i.e., the DSA) and a set of parameters =
+such that=20
+the identity of the signatory and integrity of the data can be verified. =
+The DSA=20
+provides the capability to generate and verify signatures. Signature =
+generation=20
+makes use of a private key to generate a digital signature. Signature=20
+verification makes use of a public key which corresponds to, but is not =
+the same=20
+as, the private key. Each user possesses a private and public key pair. =
+Public=20
+keys are assumed to be known to the public in general. Private keys are =
+never=20
+shared. Anyone can verify the signature of a user by employing that =
+user's=20
+public key. Signature generation can be performed only by the possessor =
+of the=20
+user's private key. <BR><BR>A hash function is used in the signature =
+generation=20
+process to obtain a condensed version of data, called a message digest =
+(see=20
+Figure 1). The message digest is then input to the DSA to generate the =
+digital=20
+signature. The digital signature is sent to the intended verifier along =
+with the=20
+signed data (often called the message). The verifier of the message and=20
+signature verifies the signature by using the sender's public key. The =
+same hash=20
+function must also be used in the verification process. The hash =
+function is=20
+specified in a separate standard, the Secure Hash Standard (SHS), FIPS =
+180.=20
+Similar procedures may be used to generate and verify signatures for =
+stored as=20
+well as transmitted data. <BR><BR>
+<CENTER><IMG =
+src=3D"http://www.itl.nist.gov/fipspubs/fip186.gif"><BR><B>Figure 1:=20
+Using the SHA with the DSA</B></CENTER><BR><BR><B>Approving =
+Authority:</B>=20
+Secretary of Commerce. <BR><BR><B>Maintenance Agency:</B> U.S. =
+Department of=20
+Commerce, National Institute of Standards and Technology (NIST), =
+Computer=20
+Systems Laboratory (CSL). <BR><BR><B>Applicability:</B> This standard is =
+
+applicable to all Federal departments and agencies for the protection of =
+
+unclassified information that is not subject to section 2315 of Title =
+10, United=20
+States Code, or section 3502(2) of Title 44, United States Code. This =
+standard=20
+shall be used in designing and implementing public-key based signature =
+systems=20
+which Federal departments and agencies operate or which are operated for =
+them=20
+under contract. Adoption and use of this standard is available to =
+private and=20
+commercial organizations. <BR><BR><B>Applications:</B> The DSA =
+authenticates the=20
+integrity of the signed data and the identity of the signatory. The DSA =
+may also=20
+be used in proving to a third party that data was actually signed by the =
+
+generator of the signature. The DSA is intended for use in electronic =
+mail,=20
+electronic funds transfer, electronic data interchange, software =
+distribution,=20
+data storage, and other applications which require data integrity =
+assurance and=20
+data origin authentication.<BR><BR><B>Implementations:</B> The DSA may =
+be=20
+implemented in software, firmware, hardware, or any combination thereof. =
+NIST is=20
+developing a validation program to test implementations for conformance =
+to this=20
+standard. Information about the planned validation program can be =
+obtained from=20
+the National Institute of Standards and Technology, Computer Systems =
+Laboratory,=20
+Attn: DSS Validation, Gaithersburg, MD 20899. <BR><BR><B>Export =
+Control:</B>=20
+Implementations of this standard are subject to Federal Government =
+export=20
+controls as specified in Title 15, Code of Federal Regulations, Parts =
+768=20
+through 799. Exporters are advised to contact the Department of =
+Commerce, Bureau=20
+of Export Administration for more information. <BR><BR><B>Patents:</B> =
+The=20
+Department of Commerce is not aware of any patents that would be =
+infringed by=20
+this standard. <BR><BR><B>Implementation Schedule:</B> This standard =
+becomes=20
+effective December 1, 1994. <BR><BR><B>Specifications:</B> Federal =
+Information=20
+Processing Standard (FIPS186) Digital Signature Standard (DSS), =
+(affixed).=20
+<BR><BR><B>Cross Index:</B>=20
+<DL>
+  <DD>a. Federal Information Resources Management Regulations (FIRMR) =
+subpart=20
+  201.20.303, Standards, and subpart 201.39.1002, Federal Standards. =
+<BR><BR>
+  <DD>b. FIPS PUB 46-2, Data Encryption Standard. <BR><BR>
+  <DD>c. FIPS PUB 73, Guidelines for Security of Computer Applications. =
+<BR><BR>
+  <DD>d. FIPS PUB 140-1, Security Requirements for Cryptographic =
+Modules.=20
+  <BR><BR>
+  <DD>e. FIPS PUB 171, Key Management Using ANSI X9.17. <BR><BR>
+  <DD>f. FIPS PUB 180, Secure Hash Standard. =
+</DD></DL><B>Qualifications:</B> The=20
+security of a digital signature system is dependent on maintaining the =
+secrecy=20
+of users' private keys. Users must therefore guard against the =
+unauthorized=20
+acquisition of their private keys. While it is the intent of this =
+standard to=20
+specify general security requirements for generating digital signatures, =
+
+conformance to this standard does not assure that a particular =
+implementation is=20
+secure. The responsible authority in each agency or department shall =
+assure that=20
+an overall implementation provides an acceptable level of security. This =
+
+standard will be reviewed every five years in order to assess its =
+adequacy.=20
+<BR><BR><B>Waiver Procedure:</B> Under certain exceptional =
+circumstances, the=20
+heads of Federal departments and agencies may approve waivers to Federal =
+
+Information Processing Standards (FIPS). The head of such agency may =
+redelegate=20
+such authority only to a senior official designated pursuant to section =
+3506(b)=20
+of Title 44, United States Code. Waiver shall be granted only when:=20
+<DL>
+  <DD>a. Compliance with a standard would adversely affect the =
+accomplishment of=20
+  the mission of an operator of a Federal computer system; or <BR><BR>
+  <DD>b. Compliance with a standard would cause a major adverse =
+financial impact=20
+  on the operator which is not offset by Government-wide savings. =
+</DD></DL>Agency=20
+heads may act upon a written waiver request containing the information =
+detailed=20
+above. Agency heads may also act without a written waiver request when =
+they=20
+determine that conditions for meeting the standard cannot be met. Agency =
+heads=20
+may approve waivers only by a written decision which explains the basis =
+on which=20
+the agency head made with required finding(s). A copy of each decision, =
+with=20
+procurement sensitive or classified portions clearly identified, shall =
+be sent=20
+to: National Institute of Standards and Technology; ATTN: FIPS Waiver =
+Decisions,=20
+Technology Building, Room B-154, Gaithersburg, MD 20899. <BR><BR>In =
+addition,=20
+notice of each waiver granted and each delegation of authority to =
+approve=20
+waivers shall be sent promptly to the Committee on Government Operations =
+of the=20
+House of Representatives and the Committee on Government Affairs of the =
+Senate=20
+and shall be published promptly in the Federal Register. <BR><BR>When =
+the=20
+determination on a waiver applies to the procurement of equipment and/or =
+
+services, a notice of the waiver determination must be published in the =
+Commerce=20
+Business Daily as a part of the notice of solicitation for offers of an=20
+acquisition or, if the waiver determination is made after that notice is =
+
+published, by amendment to such notice. <BR><BR>A copy of the waiver, =
+any=20
+supporting documents, the document approving the waiver and any =
+accompanying=20
+documents, with such deletions as the agency is authorized and decides =
+to make=20
+under 5 United States Code Section 552(b), shall be part of the =
+procurement=20
+documentation and retained by the agency. <BR><BR><B>Where to Obtain =
+Copies of=20
+the Standard:</B> Copies of this publication are for sale by the =
+National=20
+Technical Information Service, U.S. Department of Commerce, Springfield, =
+VA=20
+22161. When ordering, refer to Federal Information Processing Standards=20
+Publication 186 (FIPSPUB186), and identify the title. When microfiche is =
+
+desired, this should be specified. Prices are published by NTIS in =
+current=20
+catalogs and other issuances. Payment may be made by check, money order, =
+deposit=20
+account or charged to a credit card accepted by NTIS.=20
+<P></P><BR>
+<HR>
+<B>FIPS PUB 186</B><BR>
+<P>
+<CENTER>Federal Information<BR>Processing Standards Publication =
+186<BR><BR>1994=20
+May 19<BR></CENTER><B>
+<CENTER>Specifications for</CENTER></B><BR>
+<CENTER>
+<H1>DIGITAL SIGNATURE STANDARD (DSS)</H1></CENTER>
+<P><B>1. INTRODUCTION</B> <BR><BR>This publication prescribes the =
+Digital=20
+Signature Algorithm (DSA) for digital signature generation and =
+verification.=20
+Additional information is provided in Appendices 1 through 5. =
+<BR><BR><B>2.=20
+GENERAL</B> <BR><BR>When a message is received, the recipient may desire =
+to=20
+verify that the message has not been altered in transit. Furthermore, =
+the=20
+recipient may wish to be certain of the originator's identity. Both of =
+these=20
+services can be provided by the DSA. A digital signature is an =
+electronic=20
+analogue of a written signature in that the digital signature can be =
+used in=20
+proving to the recipient or a third party that the message was, in fact, =
+signed=20
+by the originator. Digital signatures may also be generated for stored =
+data and=20
+programs so that the integrity of the data and programs may be verified =
+at any=20
+later time. <BR><BR>This publication prescribes the DSA for digital =
+signature=20
+generation and verification. In addition, the criteria for the public =
+and=20
+private keys required by the algorithm are provided. <BR><BR><B>3. USE =
+OF THE=20
+DSA ALGORITHM</B> <BR><BR>The DSA is used by a signatory to generate a =
+digital=20
+signature on data and by a verifier to verify the authenticity of the =
+signature.=20
+Each signatory has a public and private key. The private key is used in =
+the=20
+signature generation process and the public key is used in the signature =
+
+verification process. For both signature generation and verification, =
+the data=20
+which is referred to as a message, M, is reduced by means of the Secure =
+Hash=20
+Algorithm (SHA) specified in FIPS YY. An adversary, who does not know =
+the=20
+private key of the signatory, cannot generate the correct signature of =
+the=20
+signatory. In other words, signatures cannot be forged. However, by =
+using the=20
+signatory's public key, anyone can verify a correctly signed message. =
+<BR><BR>A=20
+means of associating public and private key pairs to the corresponding =
+users is=20
+required. That is, there must be a binding of a user's identity and the =
+user's=20
+public key. This binding may be certified by a mutually trusted party. =
+For=20
+example, a certifying authority could sign credentials containing a =
+user's=20
+public key and identity to form a certificate. Systems for certifying=20
+credentials and distributing certificates are beyond the scope of this =
+standard.=20
+NIST intends to publish separate document(s) on certifying credentials =
+and=20
+distributing certificates. <BR><BR><B>4. DSA PARAMETERS</B> <BR><BR>The =
+DSA=20
+makes use of the following parameters:=20
+<DL>
+  <DD>1. p =3D a prime modulus, where 2<SUP><FONT =
+size=3D1>L-1</FONT></SUP> &lt; p=20
+  &lt; 2<SUP><FONT size=3D1>L</FONT></SUP> for 512 =3D &lt; L =3D =
+&lt;1024 and L a=20
+  multiple of 64<BR><BR>
+  <DD>2. q =3D a prime divisor of p - 1, where 2<SUP><FONT =
+size=3D1>159</FONT></SUP>=20
+  &lt; q &lt; 2<SUP><FONT size=3D1>160</FONT></SUP> <BR><BR>
+  <DD>3. g =3D h<SUP><FONT size=3D1>(p-1)/q</FONT></SUP> mod p, where h =
+is any=20
+  integer with 1 &lt; h &lt; p - 1 such that h<SUP><FONT=20
+  size=3D1>(p-1)/q</FONT></SUP> mod p &gt; 1<BR>(g has order q mod =
+p)<BR><BR>
+  <DD>4. x =3D a randomly or pseudorandomly generated integer with 0 =
+&lt; x &lt;=20
+  q<BR><BR>
+  <DD>5. y =3D g<SUP><FONT size=3D1>x</FONT></SUP> mod p <BR><BR>
+  <DD>6. k =3D a randomly or pseudorandomly generated integer with 0 =
+&lt; k &lt; q=20
+  </DD></DL>The integers p, q, and g can be public and can be common to =
+a group of=20
+users. A user's private and public keys are x and y, respectively. They =
+are=20
+normally fixed for a period of time. Parameters x and k are used for =
+signature=20
+generation only, and must be kept secret. Parameter k must be =
+regenerated for=20
+each signature. <BR><BR>Parameters p and q shall be generated as =
+specified in=20
+Appendix 2, or using other FIPS approved security methods. Parameters x =
+and k=20
+shall be generated as specified in Appendix 3, or using other FIPS =
+approved=20
+security methods. <BR><BR><B>5. SIGNATURE GENERATION</B><BR><BR>The =
+signature of=20
+a message M is the pair of numbers r and s computed according to the =
+equations=20
+below:<BR>
+<DL>
+  <DD>r =3D (g<SUP><FONT size=3D1>k</FONT></SUP> mod p) mod q and =
+<BR><BR>
+  <DD>s =3D (k<SUP><FONT size=3D1>-1</FONT></SUP>(SHA(M) + xr)) mod q. =
+</DD></DL>In=20
+the above, k<SUP><FONT size=3D1>-1</FONT></SUP> is the multiplicative =
+inverse of=20
+k, mod q; i.e., (k<SUP><FONT size=3D1>-1</FONT></SUP> k) mod q =3D 1 and =
+0 &lt;=20
+k<SUP><FONT size=3D1>-1</FONT></SUP> &lt; q. The value of SHA(M) is a =
+160-bit=20
+string output by the Secure Hash Algorithm specified in FIPS 180. For =
+use in=20
+computing s, this string must be converted to an integer. The conversion =
+rule is=20
+given in Appendix 2.2. <BR><BR>As an option, one may wish to check if r =
+=3D 0 or s=20
+=3D 0. If either r =3D 0 or s =3D 0, a new value of k should be =
+generated and the=20
+signature should be recalculated (it is extremely unlikely that r =3D 0 =
+or s =3D 0=20
+if signatures are generated properly). <BR><BR>The signature is =
+transmitted=20
+along with the message to the verifier. <BR><BR><B>6. SIGNATURE =
+VERIFICATION</B>=20
+<BR><BR>Prior to verifying the signature in a signed message, p, q and g =
+plus=20
+the sender's public key and identity are made available to the verifier =
+in an=20
+authenticated manner. <BR><BR>Let M', r' and s' be the received versions =
+of M,=20
+r, and s, respectively, and let y be the public key of the signatory. To =
+
+verifier first checks to see that 0 &lt; r' &lt; q and 0 &lt; s' &lt; q; =
+if=20
+either condition is violated the signature shall be rejected. If these =
+two=20
+conditions are satisfied, the verifier computes <BR>
+<DL>
+  <DD>w =3D (s')<SUP><FONT size=3D1>-1</FONT></SUP> mod q <BR><BR>
+  <DD>u1 =3D ((SHA(M')w) mod q <BR><BR>
+  <DD>u2 =3D ((r')w) mod q <BR><BR>
+  <DD>v =3D (((g)<SUP><FONT size=3D1>ul</FONT></SUP> (y)<SUP><FONT=20
+  size=3D1>u2</FONT></SUP>) mod p) mod q. <BR></DD></DL>If v =3D r', =
+then the=20
+signature is verified and the verifier can have high confidence that the =
+
+received message was sent by the party holding the secret key x =
+corresponding to=20
+y. For a proof that v =3D r' when M' =3D M, r' =3D r, and s' =3D s, see =
+Appendix1.=20
+<BR><BR>If v does not equal r', then the message may have been modified, =
+the=20
+message may have been incorrectly signed by the signatory, or the =
+message may=20
+have been signed by an impostor. The message should be considered =
+invalid.=20
+<BR><BR>
+<CENTER><B>APPENDIX 1. A PROOF THAT v =3D r'</B></CENTER>
+<P>This appendix is for informational purposes only and is not required =
+to meet=20
+the standard.=20
+<P>The purpose of this appendix is to show that if M' =3D M, r' =3D r =
+and s' =3D s in=20
+the signature verification then v =3D r'. We need the following easy =
+result.=20
+<P><B>LEMMA</B>. Let p and q be primes so that q divides p - 1, h a =
+positive=20
+integer less than p, and g =3D h<SUP><FONT size=3D1>(p-1)/q</FONT></SUP> =
+mod p. Then=20
+g<SUP><FONT size=3D1>q</FONT></SUP> mod p =3D 1, and if m mod q =3D n =
+mod q, then=20
+g<SUP><FONT size=3D1>m</FONT></SUP> mod p =3D g<SUP><FONT =
+size=3D1>n</FONT></SUP> mod=20
+p.=20
+<P>Proof: We have=20
+<P>g<SUP><FONT size=3D1>q</FONT></SUP> mod p =3D (h<SUP><FONT =
+size=3D1>(p-=20
+1)/q</FONT></SUP> mod p)q mod p=20
+<DL>
+  <DD>=3D h<SUP><FONT size=3D1>(p-1)</FONT></SUP> mod p <BR><BR>
+  <DD>=3D 1 </DD></DL>by Fermat's Little Theorem. Now let m mod q =3D n =
+mod q, i.e., m=20
+=3D n + kq for some integer k. Then=20
+<P>g<SUP><FONT size=3D1>m</FONT></SUP> mod p =3D g<SUP><FONT=20
+size=3D1>n+kq</FONT></SUP> mod p=20
+<DL>
+  <DD>=3D (g<SUP><FONT size=3D1>n</FONT></SUP> g<SUP><FONT =
+size=3D1>kq</FONT></SUP>)=20
+  mod p <BR><BR>
+  <DD>=3D ((g<SUP><FONT size=3D1>n</FONT></SUP> mod p) (g<SUP><FONT=20
+  size=3D1>q</FONT></SUP> mod p)<SUP><FONT size=3D1>k</FONT></SUP>) mod =
+p <BR><BR>
+  <DD>=3D g<SUP><FONT size=3D1>n</FONT></SUP> mod p </DD></DL>since =
+g<SUP><FONT=20
+size=3D1>q</FONT></SUP> mod p =3D 1.=20
+<P>We are now ready to prove the main result.=20
+<P><B>THEOREM</B>. If M' =3D M, r' =3D r, and s' =3D s in the signature =
+verification,=20
+then v =3D r'.=20
+<P>Proof: We have=20
+<DL>
+  <DD>w =3D (s')-1 mod q =3D s<SUP><FONT size=3D1>-1</FONT></SUP> mod q =
+<BR><BR>
+  <DD>u1 =3D ((SHA(M'))w) mod q =3D ((SHA(M))w) mod q <BR><BR>
+  <DD>u2 =3D ((r')w) mod q =3D (rw) mod q. </DD></DL>Now y =3D =
+g<SUP><FONT=20
+size=3D1>x</FONT></SUP> mod p, so that by the lemma,=20
+<DL>
+  <DD>v =3D ((g<SUP><FONT size=3D1>u1</FONT></SUP> y<SUP><FONT=20
+  size=3D1>u2</FONT></SUP>) mod p) mod q <BR><BR>
+  <DD>=3D ((g<SUP><FONT size=3D1>SHA(M)w</FONT></SUP> y<SUP><FONT=20
+  size=3D1>rw</FONT></SUP>) mod p) mod q <BR><BR>
+  <DD>=3D ((g<SUP><FONT size=3D1>SHA(M)w</FONT></SUP> g<SUP><FONT=20
+  size=3D1>xrw</FONT></SUP>) mod p) mod q <BR><BR>
+  <DD>=3D ((g<SUP><FONT size=3D1>(SHA(M)+xr)w</FONT></SUP>) mod p) mod =
+q.=20
+</DD></DL>Also=20
+<DL>
+  <DD>s =3D (k<SUP><FONT size=3D1>-1</FONT></SUP>(SHA(M) + xr)) mod q. =
+</DD></DL>Hence=20
+
+<DL>
+  <DD>w =3D (k(SHA(M) + xr)<SUP><FONT size=3D1>-1</FONT></SUP>) mod q =
+<BR><BR>
+  <DD>(SHA(M) + xr)w mod q =3D k mod q. </DD></DL>Thus by the lemma,=20
+<DL>
+  <DD>v =3D (g<SUP><FONT size=3D1>k</FONT></SUP> mod p) mod q <BR><BR>
+  <DD>=3D r <BR><BR>
+  <DD>=3D r'. </DD></DL><PRE></PRE></FONT>
+<CENTER><B>APPENDIX 2. GENERATION OF PRIMES FOR THE DSA</B></CENTER>
+<P>This appendix includes algorithms for generating the primes p and q =
+used in=20
+the DSA. These algorithms require a random number generator (see =
+Appendix 3),=20
+and an efficient modular exponentiation algorithm. Generation of p and q =
+shall=20
+be performed as specified in this appendix, or using other FIPS approved =
+
+security methods.=20
+<P>
+<CENTER><B>2.1. A PROBABILISTIC PRIMALITY TEST</B></CENTER>
+<P>In order to generate the primes p and q, a primality test is =
+required.=20
+<P>There are several fast probabilistic algorithms available. The =
+following=20
+algorithm is a simplified version of a procedure due to M.O. Rabin, =
+based in=20
+part on ideas of Gary L. Miller. [See Knuth, The Art of Computer =
+Programming,=20
+Vol. 2, Addison-Wesley, 1981, Algorithm P, page 379.] If this algorithm =
+is=20
+iterated n times, it will produce a false prime with probability no =
+greater than=20
+1/4<SUP><FONT size=3D1>n</FONT></SUP>. Therefore, n &gt; or =3D to 50 =
+will give an=20
+acceptable probability of error. To test whether an integer is prime:=20
+<DL>
+  <DD>Step 1. Set i =3D 1 and n &gt; or =3D to 50. <BR><BR>
+  <DD>Step 2. Set w =3D the integer to be tested, w =3D 1 + 2<SUP><FONT=20
+  size=3D1>a</FONT></SUP>m, where m is odd and 2<SUP><FONT =
+size=3D1>a</FONT></SUP>=20
+  is the largest power of 2 dividing w - 1. <BR><BR>
+  <DD>Step 3. Generate a random integer b in the range 1 &lt; b &lt; w. =
+<BR><BR>
+  <DD>Step 4. Set j =3D 0 and z =3D b<SUP><FONT size=3D1>m</FONT></SUP> =
+mod w.=20
+<BR><BR>
+  <DD>Step 5. If j =3D 0 and z =3D 1, or if z =3D w - 1, go to step 9. =
+<BR><BR>
+  <DD>Step 6. If j &gt; 0 and z =3D 1, go to step 8. <BR><BR>
+  <DD>Step 7. j =3D j + 1. If j &lt; a, set z =3D z<SUP><FONT =
+size=3D1>2</FONT></SUP>=20
+  mod w and go to step 5. <BR><BR>
+  <DD>Step 8. w is not prime. Stop. <BR><BR>Step 9. If i &lt; n, set i =
+=3D i + 1=20
+  and go to step 3. Otherwise, w is probably prime. </DD></DL><B>
+<CENTER>2.2. GENERATION OF PRIMES</B></CENTER>
+<P>The DSS requires two primes, p and q, satisfying the following three=20
+conditions:=20
+<DL>
+  <DD>a. 2<SUP><FONT size=3D1>159</FONT></SUP> &lt; q &lt; 2<SUP><FONT=20
+  size=3D1>160</FONT></SUP> <BR><BR>
+  <DD>b. 2<SUP><FONT size=3D1>L-1</FONT></SUP> &lt; p &lt; 2<SUP><FONT=20
+  size=3D1>L</FONT></SUP> for a specified L, where L =3D 512 + 64j for =
+some 0 &lt;=20
+  or =3D to j &lt; or =3D to 8 <BR><BR>
+  <DD>c. q divides p - 1. </DD></DL>This prime generation scheme starts =
+by using=20
+the SHA and a user supplied SEED to construct a prime, q, in the range=20
+2<SUP><FONT size=3D1>159</FONT></SUP> &lt; q &lt; 2<SUP><FONT=20
+size=3D1>160</FONT></SUP>. Once this is accomplished, the same SEED =
+value is used=20
+to construct an X in the range 2<SUP><FONT size=3D1>L-1</FONT></SUP> =
+&lt; X &lt;=20
+2<SUP><FONT size=3D1>L</FONT></SUP>. The prime, p, is then formed by =
+rounding X to=20
+a number congruent to 1 mod 2q as described below.=20
+<P>An integer x in the range 0 &lt; or =3D to x &lt; 2<SUP><FONT=20
+size=3D1>g</FONT></SUP> may be converted to a g-long sequence of bits by =
+using its=20
+binary expansion as shown below:=20
+<DL>
+  <DD>x =3D x<SUB><FONT size=3D1>1</FONT></SUB>*2<SUP><FONT =
+size=3D1>g-1</FONT></SUP>=20
+  + x<SUB><FONT size=3D1>2</FONT></SUB>*2<SUP><FONT =
+size=3D1>g-2</FONT></SUP> + ...=20
+  + x<SUB><FONT size=3D1>g-1</FONT></SUB>*2 + x<SUB><FONT =
+size=3D1>g</FONT></SUB>=20
+  -&gt; { x<SUB><FONT size=3D1>1</FONT></SUB>,...,x<SUB><FONT=20
+  size=3D1>g</FONT></SUB> }. </DD></DL>Conversely, a g-long sequence of =
+bits {=20
+x1,...,xg } is converted to an integer by the rule=20
+<DL>
+  <DD>{ x<SUB><FONT size=3D1>1</FONT></SUB>,...,x<SUB><FONT =
+size=3D1>g</FONT></SUB>=20
+  } -&gt; x<SUB><FONT size=3D1>1</FONT></SUB>*2<SUP><FONT =
+size=3D1>g-1</FONT></SUP>=20
+  + x<SUB><FONT size=3D1>2</FONT></SUB>*2<SUP><FONT =
+size=3D1>g-2</FONT></SUP> + ...=20
+  + x<SUB><FONT size=3D1>g-1</FONT></SUB>*2 + x<SUB><FONT =
+size=3D1>g</FONT></SUB>.=20
+  </DD></DL>Note that the first bit of a sequence corresponds to the =
+most=20
+significant bit of the corresponding integer and the last bit to the =
+least=20
+significant bit.=20
+<P>Let L - 1 =3D n*160 + b, where both b and n are integers and 0 &lt; =
+or =3D to b=20
+&lt; 160.=20
+<DL>
+  <DD>Step 1. Choose an arbitrary sequence of at least 160 bits and call =
+it=20
+  SEED. Let g be the length of SEED in bits. <BR><BR>
+  <DD>Step 2. Compute </DD></DL>
+<CENTER>U =3D SHA[SEED] XOR SHA[(SEED+1) mod 2<SUP><FONT =
+size=3D1>g</FONT></SUP>=20
+].</CENTER>
+<DL>
+  <DD>Step 3. Form q from U by setting the most significant bit (the =
+2<SUP><FONT=20
+  size=3D1>159</FONT></SUP> bit) and the least significant bit to 1. In =
+terms of=20
+  boolean operations, q =3D U OR 2<SUP><FONT size=3D1>159</FONT></SUP> =
+OR 1. Note=20
+  that 2<SUP><FONT size=3D1>159</FONT></SUP> &lt; q &lt; 2<SUP><FONT=20
+  size=3D1>160</FONT></SUP>. <BR><BR>
+  <DD>Step 4. Use a robust primality testing algorithm to test whether q =
+is=20
+  prime<SUP><FONT size=3D1>12</FONT></SUP>(1). <BR><BR>
+  <DD>Step 5. If q is not prime, go to step 1. <BR><BR>
+  <DD>Step 6. Let counter =3D 0 and offset =3D 2. <BR><BR>
+  <DD>Step 7. For k =3D 0,...,n let </DD></DL>
+<CENTER>V<SUB><FONT size=3D1>k</FONT></SUB> =3D SHA[(SEED + offset + k) =
+mod=20
+2<SUP><FONT size=3D1>g</FONT></SUP> ].</CENTER>
+<DL>
+  <DD>Step 8. Let W be the integer </DD></DL>
+<CENTER>W =3D V<SUB><FONT size=3D1>0/font&gt;</SUB> + V<SUB><FONT=20
+size=3D1>1</FONT></SUB>*2<SUP><FONT size=3D1>160</FONT></SUP> + ... + =
+V<SUB><FONT=20
+size=3D1>n-1</FONT></SUB>*2<SUP><FONT size=3D1>(n-1)*160</FONT></SUP> + =
+(V<SUB><FONT=20
+size=3D1>n</FONT></SUB> mod 2<SUP><FONT size=3D1>b</FONT></SUP>) * =
+2<SUP><FONT=20
+size=3D1>n*160</FONT></SUP> <BR><BR>and let X =3D W + 2<SUP><FONT=20
+size=3D1>L-1</FONT></SUP>. Note that 0 &lt; or =3D to W &lt; 2<SUP><FONT =
+
+size=3D1>L-1</FONT></SUP> and hence 2<SUP><FONT =
+size=3D1>L-1</FONT></SUP> &lt; or =3D=20
+to X &lt; 2<SUP><FONT size=3D1>L</FONT></SUP>. </CENTER><BR></FONT>
+<DD>Step 9. Let c =3D X mod 2q and set p =3D X - (c - 1). Note that p is =
+congruent=20
+to 1 mod 2q. <BR><BR>
+<DD>Step 10. If p &lt; 2<SUP><FONT size=3D1>L-1</FONT></SUP>, then go to =
+step 13.=20
+<BR><BR>
+<DD>Step 11. Perform a robust primality test on p. <BR><BR>
+<DD>Step 12. If p passes the test performed in step 11, go to step 15. =
+<BR><BR>
+<DD>Step 13. Let counter =3D counter + 1 and offset =3D offset + n + 1. =
+<BR><BR>
+<DD>Step 14. If counter &gt; or =3D to 2<SUP><FONT =
+size=3D1>12</FONT></SUP> =3D 4096=20
+go to step 1, otherwise (i.e. if counter &lt; 4096) go to step 7.=20
+</FONT><BR><BR>
+<DD>Step 15. Save the value of SEED and the value of counter for use in=20
+certifying the proper generation of p and=20
+q.<BR><B>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </B><BR><SUP><FONT =
+
+size=3D1>(1)</FONT></SUP> A robust primality test is one where the =
+probability of=20
+a non-prime number passing the test is at most 2<SUP><FONT=20
+size=3D1>-80</FONT></SUP>.=20
+</FONT><BR><B>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </B><BR><BR>
+<CENTER><B>APPENDIX 3. RANDOM NUMBER GENERATION FOR THE DSA</B></CENTER>
+<P>Any implementation of the DSA requires the ability to generate random =
+or=20
+pseudorandom integers. Such numbers are used to derive a user's private =
+key, x,=20
+and a user's per message secret number, k. These randomly or =
+pseudorandomly=20
+generated integers are selected to be between 0 and the 160- bit prime q =
+(as=20
+specified in the standard). They shall be generated by the techniques =
+given in=20
+this appendix, or using other FIPS approved security methods.=20
+<P>One FIPS approved pseudorandom integer generator is supplied in =
+Appendix C of=20
+ANSI X9.17, "Financial Institution Key Management (Wholesale)."=20
+<P>Other pseudorandom integer generators are given in this appendix. =
+These=20
+permit generation of pseudorandom values of x and k for use in the DSA. =
+The=20
+algorithm in section 3.1 may be used to generate values for x. An =
+algorithm for=20
+k and r is given in section 3.2. The latter algorithm allows most of the =
+
+signature computation to be precomputed without knowledge of the message =
+to be=20
+signed.=20
+<P>The algorithms employ a one-way function G(t,c), where t is 160 bits, =
+c is b=20
+bits (160 ?b ?512) and G(t,c) is 160 bits. One way to construct G is via =
+the=20
+Secure Hash Algorithm (SHA), as defined in the Secure Hash Standard =
+(SHS). The=20
+160-bit message digest output of the SHA algorithm when message M is =
+input is=20
+denoted by SHA(M). A second method for constructing G is to use the Data =
+
+Encryption Standard (DES). The construction of G by these techniques is=20
+discussed in sections 3.3 and 3.4 of this appendix.=20
+<P>In the algorithms in sections 3.1 and 3.2, a secret b-bit seed-key is =
+used.=20
+The algorithm in section 3.1 optionally allows the use of a user =
+provided input.=20
+If G is constructed via the SHA as defined in section 3.3, then b is =
+between 160=20
+and 512. If DES is used to construct G as defined in section 3.4, then b =
+is=20
+equal to 160.=20
+<P>
+<CENTER><B>3.1. ALGORITHM FOR COMPUTING m VALUES OF x</B></CENTER>
+<P>Let x be the signer's private key. The following may be used to =
+generate m=20
+values of x:=20
+<DL>
+  <DD>Step 1. Choose a new, secret value for the seed-key, XKEY. =
+<BR><BR>
+  <DD>Step 2. In hexadecimal notation let </DD></DL>
+<CENTER>t =3D 67452301 EFCDAB89 98BADCFE 10325476 C3D2E1F0. <BR><BR>This =
+is the=20
+initial value for H0 || H1 || H2 || H3 || H4 in the SHS. </CENTER>
+<DL>
+  <DD>Step 3. For j =3D 0 to m - 1 do=20
+  <DL><BR>
+    <DD>a. XSEED<SUB><FONT size=3D1>j</FONT></SUB> =3D optional user =
+input. <BR><BR>
+    <DD>b. XVAL =3D (XKEY + XSEED<SUB><FONT size=3D1>j</FONT></SUB>) mod =
+2<SUP><FONT=20
+    size=3D1>b</FONT></SUP>. <BR><BR>
+    <DD>c. x<SUB><FONT size=3D1>j</FONT></SUB> =3D G(t,XVAL) mod q. =
+<BR><BR>
+    <DD>d. XKEY =3D (1 + XKEY + x<SUB><FONT size=3D1>j</FONT></SUB>) mod =
+2<SUP><FONT=20
+    size=3D1>b</FONT></SUP>. </DD></DL></DD></DL><BR><B>
+<CENTER>3.2. ALGORITHM FOR PRECOMPUTING ONE OR MORE k AND r VALUES =
+</B></CENTER>
+<P>This algorithm can be used to precompute k, k-1, and r for m messages =
+at a=20
+time. Algorithm:=20
+<DL>
+  <DD>Step 1. Choose a secret initial value for the seed-key, KKEY. =
+<BR><BR>
+  <DD>Step 2. In hexadecimal notation let </DD></DL>
+<CENTER>t =3D EFCDAB89 98BADCFE 10325476 C3D2E1F0 67452301. <BR><BR>This =
+is a=20
+cyclic shift of the initial value for H0 || H1 || H2 || H3 || H4 in the=20
+SHS.</CENTER>
+<DL>
+  <DD>Step 3. For j =3D 0 to m - 1 do=20
+  <DL><BR>
+    <DD>a. k =3D G(t,KKEY) mod q. <BR><BR>
+    <DD>b. Compute k<SUB><FONT size=3D1>j</FONT></SUB><SUP><FONT =
+size=3D1>-=20
+    1</FONT></SUP> =3D k<SUP><FONT size=3D1>-1</FONT></SUP> mod q. =
+<BR><BR>
+    <DD>c. Compute r<SUB><FONT size=3D1>j</FONT></SUB> =3D (g<SUP><FONT=20
+    size=3D1>k</FONT></SUP> mod p) mod q. <BR><BR>
+    <DD>d. KKEY =3D (1 + KKEY + k) mod 2<SUP><FONT =
+size=3D1>b</FONT></SUP>.=20
+  </DD></DL><BR>
+  <DD>Step 4. Suppose M<SUB><FONT size=3D1>0</FONT></SUB> , ... , =
+M<SUB><FONT=20
+  size=3D1>m-1</FONT></SUB> are the next m messages. For j =3D 0 to m - =
+1 do=20
+  <DL><BR>
+    <DD>a. Let h =3D SHA(M<SUB><FONT size=3D1>j</FONT></SUB>). <BR><BR>
+    <DD>b. Let s<SUB><FONT size=3D1>j</FONT></SUB> =3D (k<SUB><FONT=20
+    size=3D1>j</FONT></SUB><SUP><FONT size=3D1>-1</FONT></SUP>(h + =
+xr<SUB><FONT=20
+    size=3D1>j</FONT></SUB>)) mod q. <BR><BR>
+    <DD>c. The signature for M<SUB><FONT size=3D1>j</FONT></SUB> is =
+(r<SUB><FONT=20
+    size=3D1>j</FONT></SUB>,s<SUP><FONT size=3D1>j</FONT></SUP>). =
+</DD></DL><BR>
+  <DD>Step 5. Let t =3D h. <BR><BR>
+  <DD>Step 6. Go to step 3. </DD></DL>
+<DL></DL>Step 3 permits precomputation of the quantities needed to sign =
+the next=20
+m messages. Step 4 can begin whenever the first of these m messages is =
+ready.=20
+The execution of step 4 can be suspended whenever the next of the m =
+messages is=20
+not ready. As soon as steps 4 and 5 have completed, step 3 can be =
+executed, and=20
+the results saved until the first member of the next group of m messages =
+is=20
+ready.=20
+<P>In addition to space for KKEY, two arrays of length m are needed to =
+store=20
+r<SUB><FONT size=3D1>0</FONT></SUB> , ... r<SUB><FONT =
+size=3D1>m-1</FONT></SUB> and=20
+k<SUB><FONT size=3D1>0</FONT></SUB><SUP><FONT size=3D1>-1</FONT></SUP>, =
+... ,=20
+k<SUB><FONT size=3D1>m-1</FONT></SUB> <SUP><FONT =
+size=3D1>-1</FONT></SUP> when they=20
+are computed in step 3. Storage for s<SUB><FONT size=3D1>0</FONT></SUB> =
+, ... ,=20
+s<SUP><FONT size=3D1>m-1</FONT></SUP> is only needed if the signatures =
+for a group=20
+of messages are stored; otherwise s<SUB><FONT size=3D1>j</FONT></SUB> in =
+step 4=20
+can be replaced by s and a single space allocated.=20
+<P><B>
+<CENTER>3.3. CONSTRUCTING THE FUNCTION G FROM THE SHA</CENTER></B>
+<P>G(t,c) may be constructed using steps (a) - (e) in section 7 of the=20
+Specifications for the Secure Hash Standard. Before executing these =
+steps,=20
+{H<SUB><FONT size=3D1>j</FONT></SUB>} and M<SUB><FONT =
+size=3D1>1</FONT></SUB> must=20
+be initialized as follows:=20
+<DL>
+  <DD>i. Initialize the {H<SUB><FONT size=3D1>j</FONT></SUB>} by =
+dividing the 160=20
+  bit value t into five 32-bit segments as follows:=20
+  <DL><BR>
+    <DD>t =3D t<SUB><FONT size=3D1>0</FONT></SUB> || t<SUB><FONT=20
+    size=3D1>1</FONT></SUB> || t<SUB><FONT size=3D1>2</FONT></SUB> || =
+t<SUB><FONT=20
+    size=3D1>3</FONT></SUB> || t<SUB><FONT size=3D1>4</FONT></SUB> =
+<BR><BR>
+    <DD>Then H<SUB><FONT size=3D1>j</FONT></SUB> =3D t<SUB><FONT=20
+    size=3D1>j</FONT></SUB> for j =3D 0 through 4. </DD></DL><BR>
+  <DD>ii. There will be only one message block, M<SUB><FONT =
+size=3D1>1</FONT>=20
+  </SUB>, which is initialized as follows:=20
+  <DL><BR>
+    <DD>M<SUB><FONT size=3D1>1</FONT></SUB> =3D c || 0<SUP><FONT=20
+    size=3D1>512-b</FONT></SUP> <BR><BR>
+    <DD>(The first b bits of M<SUB><FONT size=3D1>1</FONT></SUB> contain =
+c, and=20
+    the remaining (512-b) bits are set to zero). =
+</DD></DL></DD></DL>Then steps (a)=20
+through (e) of section 7 are executed, and G(t,c) is the 160 bit string=20
+represented by the five words:=20
+<DL>
+  <DD>H<SUB><FONT size=3D1>0</FONT></SUB> || H<SUB><FONT =
+size=3D1>1</FONT></SUB> ||=20
+  H<SUB><FONT size=3D1>2</FONT></SUB> || H<SUB><FONT =
+size=3D1>3</FONT></SUB> ||=20
+  H<SUB><FONT size=3D1>4</FONT></SUB> </DD></DL>at the end of step (e).=20
+<P>
+<CENTER><B>3.4. CONSTRUCTING THE FUNCTION G FROM THE DES</B></CENTER>
+<P>Let a XOR b denote the bitwise exclusive-or of bit strings a and b. =
+Suppose=20
+a1, a2, b1, b2 are 32-bit strings. Let b1' be the 24 least significant =
+bits of=20
+b1. Let K =3D b1' || b2 and A =3D a1 || a2. Define=20
+<DL>
+  <DD>DES<SUB><FONT size=3D1>b1,b2</FONT></SUB>(a1,a2) =3D DES<SUB><FONT =
+
+  size=3D1>K</FONT></SUB>(A) </DD></DL>In the above, DESK(A) represents =
+ordinary DES=20
+encryption of the 64-bit block A using the 56-bit key K. Now suppose t =
+and c are=20
+each 160 bits. To compute G(t,c):=20
+<DL>
+  <DD>Step 1. Write=20
+  <DL><BR>
+    <DD>t =3D t<SUB><FONT size=3D1>1</FONT></SUB> || t<SUB><FONT=20
+    size=3D1>2</FONT></SUB> || t<SUB><FONT size=3D1>3</FONT></SUB> || =
+t<SUB><FONT=20
+    size=3D1>4</FONT></SUB> || t<SUB><FONT size=3D1>5</FONT></SUB> =
+<BR><BR>
+    <DD>c =3D c<SUB><FONT size=3D1>1</FONT></SUB> || c<SUB><FONT=20
+    size=3D1>2</FONT></SUB> || c<SUB><FONT size=3D1>3</FONT></SUB> || =
+c<SUB><FONT=20
+    size=3D1>4</FONT></SUB> || c<SUB><FONT size=3D1>5</FONT></SUB> =
+<BR><BR>
+    <DD>In the above, each ti and ci is 32 bits. </DD></DL><BR>
+  <DD>Step 2. For i =3D 1 to 5 do=20
+  <DL><BR>
+    <DD>x<SUB><FONT size=3D1>i</FONT></SUB> =3D t<SUB><FONT =
+size=3D1>i</FONT></SUB>=20
+    XOR c<SUB><FONT size=3D1>i</FONT></SUB> </DD></DL><BR>
+  <DD>Step 3. For i =3D 1 to 5 do=20
+  <DL><BR>
+    <DD>b1 =3D c<SUB><FONT size=3D1>((i+3) mod 5) + 1</FONT></SUB> =
+<BR><BR>
+    <DD>b2 =3D c<SUB><FONT size=3D1>((i+2) mod 5) + =
+1</FONT></SUB><BR><BR>
+    <DD>a1 =3D x<SUB><FONT size=3D1>i</FONT></SUB> <BR><BR>
+    <DD>a2 =3D x<SUB><FONT size=3D1>(i mod 5) + 1</FONT></SUB> XOR =
+x<SUB><FONT=20
+    size=3D1>((i+3) mod 5) + 1</FONT></SUB> <BR><BR>
+    <DD>y<SUB><FONT size=3D1>i,1</FONT></SUB> || y<SUB><FONT=20
+    size=3D1>i,2</FONT></SUB> =3D DES<SUB><FONT =
+size=3D1>b1,b2</FONT></SUB>(a1,a2)=20
+    (y<SUB><FONT size=3D1>i,1</FONT></SUB>, y<SUB><FONT =
+size=3D1>i,2</FONT></SUB> =3D=20
+    32 bits) </DD></DL><BR>
+  <DD>Step 4. For i =3D 1 to 5 do=20
+  <DL><BR>
+    <DD>z<SUB><FONT size=3D1>i</FONT></SUB> =3D y<SUB><FONT =
+size=3D1>i,1</FONT></SUB>=20
+    XOR y<SUB><FONT size=3D1>((i+1) mod 5)+1,2</FONT></SUB> XOR =
+y<SUB><FONT=20
+    size=3D1>((i+2) mod 5)+1,1</FONT></SUB> </DD></DL><BR>
+  <DD>Step 5. Let=20
+  <DL><BR>
+    <DD>G(t,c) =3D z<SUB><FONT size=3D1>1</FONT></SUB> || z<SUB><FONT=20
+    size=3D1>2</FONT></SUB> || z<SUB><FONT size=3D1>3</FONT></SUB> || =
+z<SUB><FONT=20
+    size=3D1>4</FONT></SUB> || z<SUB><FONT size=3D1>5</FONT></SUB> =
+</DD></DL></DD></DL>
+<P><B>
+<CENTER>APPENDIX 4. GENERATION OF OTHER QUANTITIES</B></CENTER>
+<P>This appendix is for informational purposes only and is not required =
+to meet=20
+the standard.=20
+<P>The algorithms given in this appendix may be used to generate the =
+quantities=20
+g, k<SUP><FONT size=3D1>-1</FONT></SUP>, and s<SUP><FONT =
+size=3D1>-1</FONT>=20
+</SUP>used in the DSS.=20
+<P>To generate g:=20
+<DL>
+  <DD>Step 1. Generate p and q as specified in Appendix 2. <BR><BR>
+  <DD>Step 2. Let e =3D (p - 1)/q. <BR><BR>
+  <DD>Step 3. Set h =3D any integer, where 1 &lt; h &lt; p - 1 and h =
+differs from=20
+  any value previously tried. <BR><BR>
+  <DD>Step 4. Set g =3D h<SUP><FONT size=3D1>e</FONT></SUP> mod p. =
+<BR><BR>
+  <DD>Step 5. If g =3D 1, go to step 3. </DD></DL>To compute the =
+multiplicative=20
+inverse n<SUP><FONT size=3D1>-1</FONT></SUP> mod q for n with 0 &lt; n =
+&lt; q,=20
+where 0 &lt; n<SUP><FONT size=3D1>-1</FONT></SUP> &lt; q:=20
+<DL>
+  <DD>Step 1. Set i =3D q, h =3D n, v =3D 0, and d =3D 1. <BR><BR>
+  <DD>Step 2. Let t =3D i DIV h, where DIV is defined as integer =
+division.=20
+<BR><BR>
+  <DD>Step 3. Set x =3D h. <BR><BR>
+  <DD>Step 4. Set h =3D i - tx. <BR><BR>
+  <DD>Step 5. Set i =3D x. <BR><BR>
+  <DD>Step 6. Set x =3D d. <BR><BR>
+  <DD>Step 7. Set d =3D v - tx. <BR><BR>
+  <DD>Step 8. Set v =3D x. <BR><BR>
+  <DD>Step 9. If h &gt; 0, go to step 2. <BR><BR>
+  <DD>Step 10. Let n<SUP><FONT size=3D1>-1</FONT></SUP> =3D v mod q. =
+</DD></DL>Note=20
+that in step 10, v may be negative. The v mod q operation should yield a =
+value=20
+between 1 and q - 1 inclusive.=20
+<P><BR><B>
+<CENTER>APPENDIX 5. EXAMPLE OF THE DSA
+<P><B><A href=3D"http://www.itl.nist.gov/fipspubs/186chg-1.htm">See =
+Change notice=20
+No. 1 </A></B><I><FONTSIZE=3D2>(The below is no longer =
+used)</FONT></I></CENTER>
+<P>This appendix is for informational purposes only and is not required =
+to meet=20
+the standard.=20
+<P>Let L =3D 512 (size of p). The values in this example are expressed =
+in=20
+hexadecimal notation. The p and q given here were generated by the prime =
+
+generation standard described in appendix 2 using the 160-bit SEED:=20
+<DL>
+  <DD>d5014e4b 60ef2ba8 b6211b40 62ba3224 e0427dbd </DD></DL>With this =
+SEED, the=20
+algorithm found p and q when the counter was at 38.=20
+<P>x was generated by the algorithm described in appendix 3, section =
+3.1, using=20
+the SHA to construct G (as in appendix 3, section 3.3) and a 160-bit =
+XSEED:=20
+<DL><BR>
+  <DT>XSEED =3D=20
+  <DD>bd029bbe 7f51960b cf9edb2b 61f06f0f eb5a38b6 <BR><BR>
+  <DT>t =3D=20
+  <DD>67452301 EFCDAB89 98BADCFE 10325476 C3D2E1F0 <BR><BR>
+  <DT>x =3D G(t,XSEED) mod q </DT></DL>k was generated by the algorithm =
+described in=20
+appendix 3, section 3.2, using the SHA to construct G (as in appendix 3, =
+section=20
+3.3) and a 160-bit KSEED:=20
+<DL>
+  <DT>KSEED =3D=20
+  <DD>687a66d9 0648f993 867e121f 4ddf9ddb 01205584 <BR><BR>
+  <DT>t =3D=20
+  <DD>EFCDAB89 98BADCFE 10325476 C3D2E1F0 67452301 <BR><BR>
+  <DT>k =3D G(t,KSEED) mod q </DT></DL>Finally:=20
+<DL>
+  <DT>h =3D 2 <BR><BR>
+  <DT>p =3D=20
+  <DD>d411a4a0 e393f6aa b0f08b14 d1845866 5b3e4dbd ce254454<BR>3fe365cf =
+71c86224=20
+  12db6e7d d02bbe13 d88c58d7 263e9023<BR>6af17ac8 a9fe5f24 9cc81f42 =
+7fc543f7=20
+  <BR><BR>
+  <DT>q =3D=20
+  <DD>b20db0b1 01df0c66 24fc1392 ba55f77d 577481e5 <BR><BR>
+  <DT>g =3D=20
+  <DD>b3085510 021f9990 49a9e7cd 3872ce99 58186b50 07e7adaf<BR>25248b58 =
+a3dc4f71=20
+  781d21f2 df89b717 47bd54b3 23bbecc4<BR>43ec1d3e 020dadab bf782257 =
+8255c104=20
+  <BR><BR>
+  <DT>x =3D=20
+  <DD>6b2cd935 d0192d54 e2c942b5 74c80102 c8f8ef67 <BR><BR>
+  <DT>k =3D=20
+  <DD>79577ddc aafddc03 8b865b19 f8eb1ada 8a2838c6 <BR><BR>
+  <DT>kinv =3D=20
+  <DD>2784e3d6 72d972a7 4e22c67f 4f4f726e cc751efa <BR><BR>
+  <DT>M =3D ASCII form of "abc" (See FIPS PUB YY, Appendix A) <BR><BR>
+  <DT>SHA(M) =3D=20
+  <DD>0164b8a9 14cd2a5e 74c4f7ff 082c4d97 fledf880 <BR><BR>
+  <DT>y =3D=20
+  <DD>b32fbec0 3175791d f08c3f86 1c81df7d e7e0cba7 f1c4f726<BR>9bb12d6c =
+628784fb=20
+  742e66ed 315754df e38b5984 e94d3725<BR>37f655cb 3ea4767c 878cbd2d =
+783ee662=20
+  <BR><BR>
+  <DT>r =3D=20
+  <DD>9b77f705 4c81531c 4e46a469 2fbfe0f7 7f7ebff2 <BR><BR>
+  <DT>s =3D=20
+  <DD>95b4f608 1f8f890e 4b5a199e f10ffe21 f52b2d68 <BR><BR>
+  <DT>w =3D=20
+  <DD>0ceb5f6b 875f6b67 7e093134 df70b0d4 3226680c <BR><BR>
+  <DT>u1 =3D=20
+  <DD>347089a2 9897273b fc7a774f a70e0e0e 153bcc95 <BR><BR>
+  <DT>u2 =3D=20
+  <DD>793d9312 a41b88af aa2c1bd9 49ec3bee 2e75d2f5 <BR><BR>
+  <DT>g<SUP><FONT size=3D1>u1</FONT></SUP> mod p =3D=20
+  <DD>57a198ab 2c8ea0b6 4810767a ff732fb2 da5fcafb 278889f1<BR>96b60b9c =
+1285b848=20
+  1d08505e 201a5c68 523a15ee 2fb62a56<BR>d141dc4d 71925ef0 6acde0a5 =
+b89c5671=20
+  <BR><BR>
+  <DT>y<SUP><FONT size=3D1>u2</FONT></SUP> mod p =3D=20
+  <DD>5d983d20 be604e23 fb19bec8 7860490a 41b865dc 0f5623f4<BR>0724a795 =
+021bcd8c=20
+  93a39ddf 51cae380 fb6d682a 676608f7<BR>65227ff0 5e44ccf4 9767e4a6 =
+0832d33f=20
+  <BR><BR>
+  <DT>v =3D=20
+  <DD>9b77f705 4c81531c 4e46a469 2fbfe0f7 7f7ebff2 </DD></DL>
+<DL></DL><BR>
+<HR>
+<A name=3DFORE_SEC>
+<CENTER><B>The Foreword, Abstract, and Key Words follow: =
+</B><BR></CENTER>
+<P>FIPS PUB 186<BR>FEDERAL INFORMATION<BR>PROCESSING STANDARDS=20
+PUBLICATION<BR><BR>1994 May 19<BR>U.S. DEPARTMENT OF COMMERCE/National =
+Institute=20
+of Standards and Technology <BR><BR>
+<H2>
+<CENTER>DIGITAL SIGNATURE STANDARD (DSS)</H2></CENTER>U.S. DEPARTMENT OF =
+
+COMMERCE, Ronald H. Brown, <I>Secretary</I><BR>National Institute of =
+Standards=20
+and Technology, Arati Prabhakar, <I>Director</I> <BR><BR>
+<CENTER><B>Foreword</B></CENTER>The Federal Information Processing =
+Standards=20
+Publication Series of the National Institute of Standards and Technology =
+(NIST)=20
+is the official publication relating to standards and guidelines adopted =
+and=20
+promulgated under the provisions of Section 111(d) of the Federal =
+Property and=20
+Administrative Services Act of 1949 as amended by the Computer Security =
+Act of=20
+1987, Public Law 100-235. These mandates have given the Secretary of =
+Commerce=20
+and NIST important responsibilities for improving the utilization and =
+management=20
+of computers and related telecommunications systems in the Federal =
+Government.=20
+The NIST, through its Computer Systems Laboratory, provides leadership,=20
+technical guidance, and coordination of Government efforts in the =
+development of=20
+standards and guidelines in these areas. <BR><BR>Comments concerning =
+Federal=20
+Information Processing Standards Publications are welcomed and should be =
+
+addressed to the Director, Computer Systems Laboratory, National =
+Institute of=20
+Standards and Technology, Gaithersburg, MD 20899. <BR><BR>James H. =
+Burrows,=20
+<I>Director</I><BR>Computer Systems Laboratory<BR><BR>
+<CENTER><B>Abstract</CENTER></B>This standard specifies a Digital =
+Signature=20
+Algorithm (DSA) which can be used to generate a digital signature. =
+Digital=20
+signatures are used to detect unauthorized modifications to data and to=20
+authenticate the identity of the signatory. In addition, the recipient =
+of signed=20
+data can use a digital signature in proving to a third party that the =
+signature=20
+was in fact generated by the signatory. This is known as nonrepudiation =
+since=20
+the signatory cannot, at a later time, repudiate the signature. =
+<BR><BR><B>Key=20
+words:</B>ADP security, computer security, digital signatures, =
+public-key=20
+cryptography, Federal Information Processing Standard.
+<P></P><BR>
+<HR>
+<BR>
+<CENTER>
+<MENU>Go Back to the<A=20
+  href=3D"http://www.itl.nist.gov/fipspubs/fip186.htm#FIPS_TOP">=20
+Top</A>.</MENU>Return to the FIPS<BR><A=20
+href=3D"http://www.itl.nist.gov/fipspubs/index.htm" =
+target=3D'_top"'>Home=20
+Page</A></CENTER><BR>
+<HR>
+<BR></B></DD></BODY></HTML>
+
+------=_NextPart_000_0000_01C4D674.69BCAE60
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.itl.nist.gov/fipspubs/fip186.gif
+
+R0lGODlhDgJEAfcAAAAAAL8AAAC/AL+/AAAAv78AvwC/v8DAwMDcwKTI8AAAAAAAMwAAZgAAmQAA
+zAAA/wAzAAAzMwAzZgAzmQAzzAAz/wBmAABmMwBmZgBmmQBmzABm/wCZAACZMwCZZgCZmQCZzACZ
+/wDMAADMMwDMZgDMmQDMzADM/wD/AAD/MwD/ZgD/mQD/zAD//zMAADMAMzMAZjMAmTMAzDMA/zMz
+ADMzMzMzZjMzmTMzzDMz/zNmADNmMzNmZjNmmTNmzDNm/zOZADOZMzOZZjOZmTOZzDOZ/zPMADPM
+MzPMZjPMmTPMzDPM/zP/ADP/MzP/ZjP/mTP/zDP//2YAAGYAM2YAZmYAmWYAzGYA/2YzAGYzM2Yz
+ZmYzmWYzzGYz/2ZmAGZmM2ZmZmZmmWZmzGZm/2aZAGaZM2aZZmaZmWaZzGaZ/2bMAGbMM2bMZmbM
+mWbMzGbM/2b/AGb/M2b/Zmb/mWb/zGb//8DAwAAAfwB/AAB/f38/AAAfPwA/Xw8PDx8fHx9ff9+f
+f9/f3+/v7/+/n//fv3+//38AAH8Af39/AH9/f5kAAJkAM5kAZpkAmZkAzJkA/5kzAJkzM5kzZpkz
+mZkzzJkz/5lmAJlmM5lmZplmmZlmzJlm/5mZAJmZM5mZZpmZmZmZzJmZ/5nMAJnMM5nMZpnMmZnM
+zJnM/5n/AJn/M5n/Zpn/mZn/zJn//8wAAMwAM8wAZswAmcwAzMwA/8wzAMwzM8wzZswzmcwzzMwz
+/8xmAMxmM8xmZsxmmcxmzMxm/8yZAMyZM8yZZsyZmcyZzMyZ/8zMAMzMM8zMZszMmczMzMzM/8z/
+AMz/M8z/Zsz/mcz/zMz///8AAP8AM/8AZv8Amf8AzP8A//8zAP8zM/8zZv8zmf8zzP8z//9mAP9m
+M/9mZv9mmf9mzP9m//+ZAP+ZM/+ZZv+Zmf+ZzP+Z///MAP/MM//MZv/Mmf/MzP/M////AP//M///
+Zv//mf//zP/////78KCgpICAgP8AAAD/AP//AAAA//8A/wD//////ywAAAAADgJEAQcI/AD/CRxI
+sKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIsaPHjyBDihxJsqTJkyhTqlzJsqXLlzBjypxJs6bN
+mzhz6tzJs6fPn0CDCh1KtKjRo0iTKl3KtKnTp1CjSp1KtarVq1izat3KtavXr2DDih1LtqzZs2jT
+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
+ZcwTGdEoxCWu0Yw+fJYbeXVGObJJjXXEFB3xOKY77nFS4CLhzUYCtJBV7F/N2UmIkIce0E1IfLeL
+mUzA1kc/+y7KZyAiF+w88xh9BUxoVbxdIx1JsUEqBpLZuiIQK5nGNj5JKviJGIM4uT7sCDJtshwl
+TtRFyVUa6pLA2RvRoqeylQXTepHsEIn2E5uaJZOKkRRZNE+mTJpZ7JUj85wibYZK96myl276pcBk
+l8iilSaZvRtPy1z4NqdR5iWwm9rsosaV9EDyemab5+IsBUd5fTNU4exb74Q5zr8N01y1889coheV
+heLTnswhmz6vaaTQfc11aOInwvwJKoCazHX0+4w55em3ihqOdbFbTz3JM8/EJE6kpixkCfNTzELu
+M5Ub3RRA4XPRkUCUmgXVJEJrSlHMmOZyRoVnRHnK+7bdNRVxAeIlTumk09jpc5mbuyrSgCbUdn7O
+duV06NLaptLnqEt3YQWQQL+X0RlKVVStJCpK6cdI7FFvZs/MDfNKJj3WzWxk0POcewD3zL/qzrAe
+ElO65hpVt7ZJj+QSU2Mjx1bHSbaLcLURLS27tZtu9rJthVJkPcvNxmFxtEV67GlRRdmrqXaMmHWt
+q1iLxNg6Fra15ZL/TrRb3vbWt78FbnCFO1ziFte4xxWuxpC7XOY217nPhW50oZtK6VbXutfFbna1
+WxPlbte73wVveMV7RPKW17znRW961bte9rbXve+Fb3zlO1/61te+98VvfvW7X/7217//BXCAbQU8
+YAIX2MAHRnCCFbxgBjfYwQ+GcIQlPGEKV9jCF8ZwhjW8YQ532MMfBnGIRTxiEpfYxCdGcYpVvGIW
+t9jFL4ZxjGU8YxrX2MY3xnGOdbxjHvfYxz8GcpCFPGQiF9nIR0ZykpW8ZCY32ckVDggAIf7lVGhp
+cyBmaWxlIHdhcyBjcmVhdGVkIGJ5ICAgIA0NR3JhcGhpYyBXb3Jrc2hvcCBmb3IgV2luZG93cyAx
+LjF1DQ1mcm9tIEFsY2hlbXkgTWluZHdvcmtzIEluYy4NUC5PLiBCb3ggNTAwDUJlZXRvbiwgT250
+YXJpbw1MMEcgMUEwIENBTkFEQQ0NVGhpcyBpbWFnZSBtYXkgaGF2ZSBiZWVuIGNyZWF0ZWQgYnkN
+YSBwYXJ0eSBvdGhlciB0aGFuIEFsY2hlbXkgTWluZHdvcmtzIEluYy4NDVVzZSBubyBob29rcwA7
+
+------=_NextPart_000_0000_01C4D674.69BCAE60--

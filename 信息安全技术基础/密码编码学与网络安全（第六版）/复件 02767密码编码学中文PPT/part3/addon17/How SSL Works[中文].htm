@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0036)http://edu.csai.cn/prog/No000076.htm -->
+<HTML><HEAD><TITLE>SSL原理解密 ——IPSec协议类型——希赛网软考学院软件设计师</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312"><LINK 
+href="SSL原理解密 ——IPSec协议类型——希赛网软考学院软件设计师_files/css.css" type=text/css 
+rel=STYLESHEET>
+<STYLE type=text/css>@import url( ../../../CSS.CSS );
+</STYLE>
+
+<META content="MSHTML 6.00.3790.2541" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE cellSpacing=0 cellPadding=0 width=777 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV align=center>
+      <SCRIPT language=JavaScript 
+      src="SSL原理解密 ——IPSec协议类型——希赛网软考学院软件设计师_files/title.htm"></SCRIPT>
+      </DIV></TD></TR></TBODY></TABLE>
+<TABLE 
+style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" 
+cellSpacing=0 cellPadding=0 width=777 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top bgColor=#f7fbff>
+      <H3 align=center>SSL原理解密</H3>
+      <P align=center>作者：cigar 　来源：天极硬件频道　　<FONT 
+      color=#ff0000>http://www.csai.cn</FONT>　 2005年11月9日</P>
+      <P class=main><SPAN class=main>　　RSA公钥加密在计算机产业中被广泛使用在认证和加密。可以从RSA Data 
+      Security 
+      Inc.获得的RSA公钥加密许可证。公钥加密是使用一对非对称的密码加密或解密的方法。每一对密码由公钥和私钥组成。公钥被广泛发布。私钥是隐密的，不公开。用公钥加密的数据只能够被私钥解密。反过来，使用私钥加密的数据只能用公钥解密。这个非对称的特性使得公钥密很有用。</SPAN> 
+
+      <P class=main>　　使用公钥加密法认证 </P>
+      <P class=main>　　认证是一个身份认证的过程。在下列例子中包括甲和乙，公钥加密会非常轻松地校验身份。符号{数据} 
+      key意味着"数据"已经使用密码加密或解密。假如甲想校验乙的身份。乙有一对密码，一个是公开的，另一个是私有的。乙透露给甲他的公钥。甲产生一个随机信息发送给乙。 
+      甲——〉乙：random-message</P>
+      <P class=main>　　乙使用他的私钥加密消息，返回甲加密后的消息。 乙——〉甲：{random-message}乙的私钥</P>
+      <P 
+      class=main>　　甲收到这个消息然后使用乙的以前公开过的公钥解密。他比较解密后的消息与他原先发给乙的消息。如果它们完全一致，就会知道在与乙说话。任意一个中间人不会知道乙的私钥，也不能正确加密甲检查的随机消息。</P>
+      <P 
+      class=main>　　除非你清楚知道你加密的消息。用私钥加密消息，然后发送给其他人不是一个好主意。因为加密值可能被用来对付你，需要注意的是：因为只有你才有私钥，所以只有你才能加密消息。所以，代替加密甲发来的原始消息，乙创建了一个信息段并且加密。信息段取自随机消息（random-message）并具有以下有用的特性：</P>
+      <P class=main>　　1. 这个信息段难以还原。任何人即使伪装成乙，也不能从信息段中得到原始消息；</P>
+      <P class=main>　　2. 假冒者将发现不同的消息计算出相同的信息段值；</P>
+      <P class=main>　　3. 
+      使用信息段，乙能够保护自己。他计算甲发出的随机信息段，并且加密结果，并发送加密信息段返回甲。甲能够计算出相同的信息段并且解密乙的消息认证乙。</P>
+      <P 
+      class=main>　　这个技术仅仅描绘了数字签名。通过加密甲产生的随机消息，乙已经在甲产生的消息签名。因此我们的认证协议还需要一次加密。一些消息由乙产生：</P>
+      <P class=main>　　甲——〉乙：你好，你是乙么?</P>
+      <P class=main>　　乙——〉甲：甲，我是乙 </P>
+      <P class=main>　　{信息段[甲，我是乙] } 乙的私钥 </P>
+      <P 
+      class=main>　　当你使用这个协议，乙知道他发送给乙的消息，他不介意在上面签名。他先发送不加密的信息，"甲，我是乙。"，然后发送信息段加密的消息版本。甲可以非常方便地校验乙就是乙，同时，乙还没有在他不想要的信息上签名。</P>
+      <P class=main>　　提交公钥 </P>
+      <P class=main>　　那么，乙怎样以可信的方式提交他的公钥呢？看看认证协议如下所示： </P>
+      <P class=main>　　甲——〉乙：你好 </P>
+      <P class=main>　　乙——〉甲：嗨，我是乙，乙的公钥 </P>
+      <P class=main><BR>　　甲——〉乙：prove it </P>
+      <P class=main>　　乙——〉甲：甲，我是乙 {信息段[甲，我是乙] } 乙的私钥 </P>
+      <P 
+      class=main>　　在这个协议下，任何人都能够成为"乙"。所有你所要的只是公钥和私钥。你发送给甲说你就是乙，这样你的公钥就代替了乙的密码。然后，你发送用你的私钥加密的消息，证明你的身份。甲却不能发觉你并不是乙。 
+      为了解决这个问题，标准组织已经发明了证书。一个证书有以下的内容：</P>
+      <P class=main>　　* 证书的发行者姓名 </P>
+      <P class=main>　　* 发行证书的组织 </P>
+      <P class=main>　　* 标题的公钥</P>
+      <P class=main>　　* 邮戳 </P>
+      <P 
+      class=main>　　证书使用发行者的私钥加密。每一个人都知道证书发行者的公钥（这样，每个证书的发行者拥有一个证书）。证书是一个把公钥与姓名绑定的协议。通过使用证书技术，每一个人都可以检查乙的证书，判断是否被假冒。假设乙控制好他的私钥，并且他确实是得到证书的乙，就万事大吉了。</P>
+      <P class=main>　　这些是修订后的协议： </P>
+      <P class=main>　　甲——〉乙：你好 </P>
+      <P class=main>　　乙——〉甲：嗨，我是乙，乙的校验 </P>
+      <P class=main>　　甲——〉乙：prove it </P>
+      <P class=main>　　乙——〉甲：甲，我是乙 {信息段[甲， 我是乙] } 乙的私钥 </P>
+      <P 
+      class=main>　　现在当甲收到乙的第一个消息，他能检查证书，签名（如上所述，使用信息段和公钥解密），然后检查标题（乙的姓名），确定是乙。他就能相信公钥就是乙的公钥和要求乙证明自己的身份。乙通过上面的过程，制作一个信息段，用一个签名版本答复甲。可以校验乙的信息段通过使用从证书上得到的公钥并检查结果。</P>
+      <P class=main>　　如果一个黑客，叫H </P>
+      <P class=main>　　甲——〉H：你好 </P>
+      <P class=main>　　H——〉不能建立一个令甲相信的从乙的消息。</P>
+      <P class=main>　　交换密码（secret） <BR>　　一旦甲已经验证乙后，他可以发送给乙一个只有乙可以解密、阅读的消息： </P>
+      <P class=main>　　甲——〉乙：{secret}乙的公钥</P>
+      <P 
+      class=main>　　唯一找到密码的方法只有使用乙的私钥解码上述的信息。交换密码是另一个有效使用密码加密的方法。即使在甲和乙之间的通讯被侦听，只有乙才能得到密码。</P>
+      <P 
+      class=main>　　使用密码作为另一个secret-key增强了网络的安全性，但是这次这是一个对称的加密算法（例如DES、RC4、IDE甲）。因为甲在发送给乙之前产生了密码，所以甲知道密码。乙知道密码因为乙有私钥，能够解密甲的信息。但他们都知道密码，他们都能够初始化一个对称密码算法，而且开始发送加密后的信息。这儿是修定后的协议：</P>
+      <P class=main>　　甲——〉乙：你好 <BR>　　乙——〉甲：嗨，我是乙，乙的校验 </P>
+      <P class=main>　　甲——〉乙：prove it <BR>　　乙——〉甲：甲，我是乙 {信息段[甲，我是乙] }乙的私钥 
+      <BR>　　甲——〉乙：ok 乙，here is a secret {secret}乙的公钥</P>
+      <P class=main>　　乙——〉甲：{some message}secret-key <BR>　　黑客窃听 </P>
+      <P 
+      class=main><BR>　　那么如果有一个恶意的黑客H在甲和乙中间，虽然不能发现甲和乙已经交换的密码，但能干扰他们的交谈。他可以放过大部分信息，选择破坏一定的信息（这是非常简单的，因为他知道甲和乙通话采用的协议）。</P>
+      <P class=main>　　甲——〉H：你好 <BR>　　H——〉乙：你好 </P>
+      <P class=main>　　乙——〉H：嗨，我是乙，乙的校验 </P>
+      <P class=main>　　H——〉甲：嗨，我是乙，乙的校验 </P>
+      <P class=main>　　甲——〉H：prove it</P>
+      <P class=main>　　H——〉乙：prove it </P>
+      <P class=main>　　乙——〉H：甲，我是乙 {信息段[甲，我是乙] }乙的私钥 </P>
+      <P class=main>　　H——〉甲：甲，我是乙 {信息段[甲，我是乙] }乙的私钥 </P>
+      <P class=main>　　甲——〉H：ok 乙，here is a secret {secret} 乙的公钥</P>
+      <P class=main>　　H——〉乙：ok 乙，here is a secret {secret} 乙的公钥</P>
+      <P class=main>　　乙——〉H：{some message}secret-key </P>
+      <P class=main>　　H——〉甲：Garble[{some message}secret-key ]</P>
+      <P 
+      class=main>　　H忽略一些数据不修改，直到甲和乙交换密码。然后H干扰乙给甲的信息。在这一点上，甲相信乙，所以他可能相信已经被干扰的消息并且尽力解密。</P>
+      <P 
+      class=main>　　需要注意的是，H不知道密码，他所能做的就是毁坏使用秘钥加密后的数据。基于协议，H可能不能产生一个有效的消息。但下一次呢？</P>
+      <P class=main>　　为了阻止这种破坏，甲和乙在他们的协议中产生一个校验码消息（messageauthentication 
+      code）。一个校验码消息（MAC）是一部分由密码和一些传输消息产生的数据。信息段算法描述的上述特性正是它们抵御H的功能：</P>
+      <P class=main>　　MAC= Digest[some message，secret ] </P>
+      <P 
+      class=main>　　因为H不知道密码，他不能得出正确的值。即使H随机干扰消息，只要数据量大，他成功的机会微乎其微。例如，使用HD5（一个RSA发明的好的加密算法），甲和乙能够发送128位MAC值和他们的消息。H猜测正确的MAC的几率将近1/18，446，744，073，709，551，616约等于零。</P>
+      <P class=main>　　这是又一次修改后的协议： </P>
+      <P class=main>　　甲——〉乙：你好 <BR>　　乙——〉甲：嗨，我是乙，乙的校验 </P>
+      <P class=main>　　甲——〉乙：prove it </P>
+      <P class=main>　　乙——〉甲：嗨，我是乙，乙的校验 </P>
+      <P class=main>　　甲，我是乙 </P>
+      <P class=main>　　{信息段[甲，我是乙] } 乙的私钥 </P>
+      <P class=main>　　ok 乙，here is a secret {secret} 乙的公钥 </P>
+      <P class=main>　　{some message，MAC}secret-key </P>
+      <P><SPAN 
+      class=main>　　现在H已经无技可施了。他干扰了得到的所有消息，但MAC计算机能够发现他。甲和乙能够发现伪造的MAC值并且停止交谈。H不再能与乙通讯。 
+      </SPAN><BR></P>
+      <P></P></TD>
+    <TD width=1 bgColor=#adaaad></TD>
+    <TD vAlign=top align=middle width=175 bgColor=#f7f3f7>
+      <SCRIPT language=JavaScript 
+      src="SSL原理解密 ——IPSec协议类型——希赛网软考学院软件设计师_files/rightlist.htm"></SCRIPT>
+    </TD></TR>
+  <TR>
+    <TD class=hui14 align=middle colSpan=3><IFRAME id=Opinion name=id=Opinion 
+      marginWidth=0 marginHeight=0 
+      src="SSL原理解密 ——IPSec协议类型——希赛网软考学院软件设计师_files/baidu.htm" frameBorder=0 
+      width="98%" height=70></IFRAME>
+      <SCRIPT language=javaScript>Opinion.location="http://bbs.csai.cn/bbs/Ap.asp?Path=" +window.location</SCRIPT>
+    </TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=777 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV align=center>
+      <SCRIPT language=JavaScript 
+      src="SSL原理解密 ——IPSec协议类型——希赛网软考学院软件设计师_files/right.htm">
+</SCRIPT>
+      </DIV></TD></TR></TBODY></TABLE>
+<P>&nbsp;</P></BODY></HTML>

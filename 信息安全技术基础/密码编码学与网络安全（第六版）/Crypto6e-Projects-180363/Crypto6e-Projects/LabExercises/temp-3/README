@@ -1,0 +1,67 @@
+README - lab3
+
+In this folder you will find the following files:
+
+- header.h: contains variables and structures definitions, which you must use
+	    in order to get your implementation done
+
+Following is an example of how your implementation should be executed.
+NOTE: The values specified here for the input parameters of your programs are just an example.
+      Do not constraint your implementation to this values.	
+
+1. Open a terminal
+ 
+2. Write in the command line: ./authserver  <authserverport>  <clientID>  <clientkey>  <serverID> <serverkey>
+	for example: ./authserver 9877 ALICE 123456789abcdef BOB 40fedf386da13d57
+
+3. Write in the command line: ./server  <server port>  <authserverkey> <input file>
+	for example: ./server 9977 40fedf386da13d57 input.txt
+4. On a different terminal, Write in the command line: 
+	./client  <authservername> <authserverport> <authserverkey> <server name> <server port> <output file> <clientID> <serverID>
+	for example: ./client msee190pcXX 9877 123456789abcdef msee190pcXX 9977 output.txt ALICE BOB
+	 Where XX is the number of the machine you are using at msee190.
+
+**Hints for your implementation
+	1. Include the file header.h as a library in your code. Take a look at header.h. 
+	   Do not modify the variables and structures that have been defined at header.h
+	
+	2. You must use DES CBC for every encryption operation in your implementation.
+	   You are allowed to use the built in function "DES_ncbc_encrypt".
+
+	   void DES_ncbc_encrypt(const unsigned char *input, unsigned char *output,
+				 long length, DES_key_schedule *schedule, 
+				 DES_cblock *ivec,int enc);
+
+	2. The value of the initialization vector will be always zero at every part of the system
+	   To be specific, this is how you will define the iv:
+		static unsigned char zero[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+
+	3. When using the DES_ncbc_encrypt function, just before calling this function,
+	   reassign the initial value of the iv (DES_cblock *ivec). DES_ncbc_encrypt function modifies
+	   initialization vector when uses it.
+
+	4. The inputs text and output text to encrypt (decrypt) using the DES_ncbc_encrypt funtion must
+	   be of data type unsigned char. Therefore, you might have to cast whichever data structure you
+	   are using to an unsigned char array. 
+	   An specific example could be the following:
+		
+		struct  ticket          tkt;				//tkt is a struct ticket
+		struct  credential      crede;				//crede is a struct credential
+
+		memcpy(tkt.client_id,client_id,sizeof(client_id));	//copy to tkt.client_id the string client_id.
+		memcpy(tkt.server_id,server_id,sizeof(server_id));	//copy to tkt.server_id the string server_id
+		time(&tkt.ts2);
+
+		//key_ser defined previously
+		//ivec defined previously
+		DES_ncbc_encrypt((unsigned char *)&tkt,(unsigned char *)&crede.tkt_serv,sizeof(struct ticket),&key_ser,&ivec,DES_ENCRYPT);
+
+		//Note that the structure tkt and the structure field crede.tkt_serv have been casted to unsigned char.
+		//Furthermore, note that the field crede.tkt_serv is defined as unsigned char in header.h
+
+	5. To generate the Session key at the Authentication Server, You can use the built in function
+	   "DES_random_key". You can get more details on this function from www.openssl.org
+
+	   void DES_random_key(DES_cblock *ret);
+
+	6. You are allowed to use any C code that you have implemented before for lab1 and lab2

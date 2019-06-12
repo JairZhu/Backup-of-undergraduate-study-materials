@@ -1,0 +1,1059 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0045)http://www.eskimo.com/~weidai/benchmarks.html -->
+<HTML><HEAD><TITLE>Speed Comparison of Popular Crypto Algorithms</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2800.1141" name=GENERATOR></HEAD>
+<BODY>
+<H1><A href="http://www.eskimo.com/~weidai/cryptlib.html">Crypto++</A> 4.0 
+Benchmarks</H1>
+<P>Here are speed benchmarks for some of the most popular hash algorithms and 
+symmetric and asymmetric ciphers. All were coded in C++ or ported to C++ from C 
+implementations, compiled with Microsoft Visual C++ 6.0 SP4 (optimize for speed, 
+blend code generation), and ran on a Celeron 850MHz processor under Windows 2000 
+SP 1. Two assembly routines were used for multiple-precision addition and 
+subtraction. </P>
+<TABLE border=1>
+  <COLGROUP>
+  <COL align=left>
+  <COL align=right>
+  <COL align=right>
+  <COL align=right>
+  <THEAD>
+  <TR>
+    <TH>Algorithm
+    <TH>Bytes Processed
+    <TH>Time Taken
+    <TH>Megabytes(2^20 bytes)/Second </TR>
+  <TBODY>
+  <TR>
+    <TH>CRC-32
+    <TD>1073741824
+    <TD>8.682
+    <TD>117.945 
+  <TR>
+    <TH>Adler-32
+    <TD>2147483648
+    <TD>6.970
+    <TD>293.831 
+  <TR>
+    <TH>MD2
+    <TD>8388608
+    <TD>11.276
+    <TD>0.709 
+  <TR>
+    <TH>MD5
+    <TD>1073741824
+    <TD>10.165
+    <TD>100.738 
+  <TR>
+    <TH>SHA-1
+    <TD>536870912
+    <TD>10.565
+    <TD>48.462 
+  <TR>
+    <TH>SHA-256
+    <TD>268435456
+    <TD>10.345
+    <TD>24.746 
+  <TR>
+    <TH>SHA-512
+    <TD>67108864
+    <TD>7.761
+    <TD>8.246 
+  <TR>
+    <TH>HAVAL (pass=3)
+    <TD>536870912
+    <TD>7.922
+    <TD>64.630 
+  <TR>
+    <TH>HAVAL (pass=4)
+    <TD>536870912
+    <TD>12.337
+    <TD>41.501 
+  <TR>
+    <TH>HAVAL (pass=5)
+    <TD>268435456
+    <TD>7.090
+    <TD>36.107 
+  <TR>
+    <TH>Tiger
+    <TD>268435456
+    <TD>10.325
+    <TD>24.794 
+  <TR>
+    <TH>RIPE-MD160
+    <TD>268435456
+    <TD>8.332
+    <TD>30.725 
+  <TR>
+    <TH>Panama Hash (little endian)
+    <TD>1073741824
+    <TD>7.401
+    <TD>138.360 
+  <TR>
+    <TH>Panama Hash (big endian)
+    <TD>1073741824
+    <TD>11.797
+    <TD>86.802 
+  <TR>
+    <TH>MDC/MD5
+    <TD>268435456
+    <TD>9.884
+    <TD>25.900 
+  <TR>
+    <TH>Luby-Rackoff/MD5
+    <TD>67108864
+    <TD>8.402
+    <TD>7.617 
+  <TR>
+    <TH>DES
+    <TD>134217728
+    <TD>9.945
+    <TD>12.871 
+  <TR>
+    <TH>DES-XEX3
+    <TD>134217728
+    <TD>11.716
+    <TD>10.925 
+  <TR>
+    <TH>DES-EDE3
+    <TD>33554432
+    <TD>6.740
+    <TD>4.748 
+  <TR>
+    <TH>IDEA
+    <TD>134217728
+    <TD>11.286
+    <TD>11.341 
+  <TR>
+    <TH>RC2
+    <TD>33554432
+    <TD>7.912
+    <TD>4.044 
+  <TR>
+    <TH>RC5 (r=16)
+    <TD>536870912
+    <TD>12.988
+    <TD>39.421 
+  <TR>
+    <TH>Blowfish
+    <TD>134217728
+    <TD>7.091
+    <TD>18.051 
+  <TR>
+    <TH>Diamond2
+    <TD>67108864
+    <TD>11.086
+    <TD>5.773 
+  <TR>
+    <TH>Diamond2 Lite
+    <TD>67108864
+    <TD>9.403
+    <TD>6.806 
+  <TR>
+    <TH>3-WAY
+    <TD>201326592
+    <TD>12.728
+    <TD>15.085 
+  <TR>
+    <TH>TEA
+    <TD>134217728
+    <TD>12.799
+    <TD>10.001 
+  <TR>
+    <TH>SAFER (r=8)
+    <TD>67108864
+    <TD>10.565
+    <TD>6.058 
+  <TR>
+    <TH>GOST
+    <TD>134217728
+    <TD>12.829
+    <TD>9.977 
+  <TR>
+    <TH>SHARK (r=6)
+    <TD>268435456
+    <TD>12.878
+    <TD>19.879 
+  <TR>
+    <TH>CAST-128
+    <TD>134217728
+    <TD>7.090
+    <TD>18.054 
+  <TR>
+    <TH>CAST-256
+    <TD>134217728
+    <TD>9.995
+    <TD>12.806 
+  <TR>
+    <TH>Square
+    <TD>268435456
+    <TD>7.801
+    <TD>32.816 
+  <TR>
+    <TH>SKIPJACK
+    <TD>67108864
+    <TD>12.017
+    <TD>5.326 
+  <TR>
+    <TH>RC6
+    <TD>268435456
+    <TD>7.871
+    <TD>32.524 
+  <TR>
+    <TH>MARS
+    <TD>268435456
+    <TD>8.503
+    <TD>30.107 
+  <TR>
+    <TH>Rijndael
+    <TD>268435456
+    <TD>8.442
+    <TD>30.325 
+  <TR>
+    <TH>Twofish
+    <TD>268435456
+    <TD>9.974
+    <TD>25.667 
+  <TR>
+    <TH>Serpent
+    <TD>134217728
+    <TD>10.505
+    <TD>12.185 
+  <TR>
+    <TH>ARC4
+    <TD>536870912
+    <TD>8.122
+    <TD>63.039 
+  <TR>
+    <TH>SEAL
+    <TD>1073741824
+    <TD>8.672
+    <TD>118.081 
+  <TR>
+    <TH>WAKE
+    <TD>1073741824
+    <TD>13.029
+    <TD>78.594 
+  <TR>
+    <TH>Panama Cipher (little endian)
+    <TD>1073741824
+    <TD>8.512
+    <TD>120.301 
+  <TR>
+    <TH>Panama Cipher (big endian)
+    <TD>536870912
+    <TD>7.091
+    <TD>72.204 
+  <TR>
+    <TH>Sapphire
+    <TD>134217728
+    <TD>12.868
+    <TD>9.947 
+  <TR>
+    <TH>MD5-MAC
+    <TD>1073741824
+    <TD>12.078
+    <TD>84.782 
+  <TR>
+    <TH>XMACC/MD5
+    <TD>1073741824
+    <TD>11.096
+    <TD>92.286 
+  <TR>
+    <TH>HMAC/MD5
+    <TD>1073741824
+    <TD>10.254
+    <TD>99.863 
+  <TR>
+    <TH>CBC-MAC/RC6
+    <TD>268435456
+    <TD>8.713
+    <TD>29.381 
+  <TR>
+    <TH>DMAC/RC6
+    <TD>268435456
+    <TD>8.642
+    <TD>29.623 
+  <TR>
+    <TH>BlumBlumShub 512
+    <TD>524288
+    <TD>10.766
+    <TD>0.046 
+  <TR>
+    <TH>BlumBlumShub 1024
+    <TD>262144
+    <TD>12.668
+    <TD>0.020 
+  <TR>
+    <TH>BlumBlumShub 2048
+    <TD>65536
+    <TD>8.903
+    <TD>0.007 </TR></TBODY></TABLE>
+<TABLE border=1>
+  <COLGROUP>
+  <COL align=left>
+  <COL align=right>
+  <COL align=right>
+  <COL align=right>
+  <THEAD>
+  <TR>
+    <TH>Operation
+    <TH>Iterations
+    <TH>Total Time
+    <TH>Milliseconds/Operation </TR>
+  <TBODY style="BACKGROUND: yellow">
+  <TR>
+    <TH>RSA 512 Encryption
+    <TD>73671
+    <TD>10.004
+    <TD>0.14 
+  <TR>
+    <TH>RSA 512 Decryption
+    <TD>5188
+    <TD>10.005
+    <TD>1.93 
+  <TR>
+    <TH>Rabin 512 Encryption
+    <TD>10539
+    <TD>10.004
+    <TD>0.95 
+  <TR>
+    <TH>Rabin 512 Decryption
+    <TD>3624
+    <TD>10.004
+    <TD>2.76 
+  <TR>
+    <TH>BlumGoldwasser 512 Encryption
+    <TD>23662
+    <TD>10.005
+    <TD>0.42 
+  <TR>
+    <TH>BlumGoldwasser 512 Decryption
+    <TD>4124
+    <TD>10.004
+    <TD>2.43 
+  <TR>
+    <TH>LUC 512 Encryption
+    <TD>61951
+    <TD>10.004
+    <TD>0.16 
+  <TR>
+    <TH>LUC 512 Decryption
+    <TD>2593
+    <TD>10.005
+    <TD>3.86 
+  <TR>
+    <TH>ElGamal 512 Encryption
+    <TD>3820
+    <TD>10.004
+    <TD>2.62 
+  <TR>
+    <TH>ElGamal 512 Encryption with precomputation
+    <TD>5739
+    <TD>10.005
+    <TD>1.74 
+  <TR>
+    <TH>ElGamal 512 Decryption
+    <TD>7327
+    <TD>10.004
+    <TD>1.37 </TR>
+  <TBODY style="BACKGROUND: white">
+  <TR>
+    <TH>RSA 1024 Encryption
+    <TD>31009
+    <TD>10.004
+    <TD>0.32 
+  <TR>
+    <TH>RSA 1024 Decryption
+    <TD>978
+    <TD>10.005
+    <TD>10.23 
+  <TR>
+    <TH>Rabin 1024 Encryption
+    <TD>4440
+    <TD>10.004
+    <TD>2.25 
+  <TR>
+    <TH>Rabin 1024 Decryption
+    <TD>829
+    <TD>10.005
+    <TD>12.07 
+  <TR>
+    <TH>BlumGoldwasser 1024 Encryption
+    <TD>10405
+    <TD>10.004
+    <TD>0.96 
+  <TR>
+    <TH>BlumGoldwasser 1024 Decryption
+    <TD>898
+    <TD>10.004
+    <TD>11.14 
+  <TR>
+    <TH>LUC 1024 Encryption
+    <TD>24814
+    <TD>10.005
+    <TD>0.40 
+  <TR>
+    <TH>LUC 1024 Decryption
+    <TD>525
+    <TD>10.014
+    <TD>19.07 
+  <TR>
+    <TH>ElGamal 1024 Encryption
+    <TD>907
+    <TD>10.005
+    <TD>11.03 
+  <TR>
+    <TH>ElGamal 1024 Encryption with precomputation
+    <TD>2232
+    <TD>10.004
+    <TD>4.48 
+  <TR>
+    <TH>ElGamal 1024 Decryption
+    <TD>1734
+    <TD>10.004
+    <TD>5.77 
+  <TR>
+    <TH>LUCELG 512 Encryption
+    <TD>1807
+    <TD>10.005
+    <TD>5.54 
+  <TR>
+    <TH>LUCELG 512 Decryption
+    <TD>3166
+    <TD>10.004
+    <TD>3.16 </TR>
+  <TBODY style="BACKGROUND: yellow">
+  <TR>
+    <TH>RSA 2048 Encryption
+    <TD>11260
+    <TD>10.005
+    <TD>0.89 
+  <TR>
+    <TH>RSA 2048 Decryption
+    <TD>156
+    <TD>10.004
+    <TD>64.13 
+  <TR>
+    <TH>Rabin 2048 Encryption
+    <TD>1690
+    <TD>10.004
+    <TD>5.92 
+  <TR>
+    <TH>Rabin 2048 Decryption
+    <TD>140
+    <TD>10.025
+    <TD>71.61 
+  <TR>
+    <TH>BlumGoldwasser 2048 Encryption
+    <TD>3564
+    <TD>10.004
+    <TD>2.81 
+  <TR>
+    <TH>BlumGoldwasser 2048 Decryption
+    <TD>150
+    <TD>10.035
+    <TD>66.90 
+  <TR>
+    <TH>LUC 2048 Encryption
+    <TD>8725
+    <TD>10.004
+    <TD>1.15 
+  <TR>
+    <TH>LUC 2048 Decryption
+    <TD>88
+    <TD>10.045
+    <TD>114.15 
+  <TR>
+    <TH>ElGamal 2048 Encryption
+    <TD>204
+    <TD>10.034
+    <TD>49.19 
+  <TR>
+    <TH>ElGamal 2048 Encryption with precomputation
+    <TD>663
+    <TD>10.004
+    <TD>15.09 
+  <TR>
+    <TH>ElGamal 2048 Decryption
+    <TD>395
+    <TD>10.015
+    <TD>25.35 
+  <TR>
+    <TH>LUCELG 1024 Encryption
+    <TD>416
+    <TD>10.014
+    <TD>24.07 
+  <TR>
+    <TH>LUCELG 1024 Decryption
+    <TD>760
+    <TD>10.005
+    <TD>13.16 </TR>
+  <TBODY style="BACKGROUND: white">
+  <TR>
+    <TH>RSA 512 Signature
+    <TD>5215
+    <TD>10.004
+    <TD>1.92 
+  <TR>
+    <TH>RSA 512 Verification
+    <TD>79436
+    <TD>10.004
+    <TD>0.13 
+  <TR>
+    <TH>Rabin 512 Signature
+    <TD>3448
+    <TD>10.005
+    <TD>2.90 
+  <TR>
+    <TH>Rabin 512 Verification
+    <TD>11897
+    <TD>10.004
+    <TD>0.84 
+  <TR>
+    <TH>RW 512 Signature
+    <TD>3762
+    <TD>10.005
+    <TD>2.66 
+  <TR>
+    <TH>RW 512 Verification
+    <TD>175022
+    <TD>10.004
+    <TD>0.06 
+  <TR>
+    <TH>LUC 512 Signature
+    <TD>2532
+    <TD>10.004
+    <TD>3.95 
+  <TR>
+    <TH>LUC 512 Verification
+    <TD>67551
+    <TD>10.005
+    <TD>0.15 
+  <TR>
+    <TH>NR 512 Signature
+    <TD>7452
+    <TD>10.004
+    <TD>1.34 
+  <TR>
+    <TH>NR 512 Signature with precomputation
+    <TD>10945
+    <TD>10.005
+    <TD>0.91 
+  <TR>
+    <TH>NR 512 Verification
+    <TD>6570
+    <TD>10.004
+    <TD>1.52 
+  <TR>
+    <TH>NR 512 Verification with precomputation
+    <TD>6654
+    <TD>10.004
+    <TD>1.50 
+  <TR>
+    <TH>DSA 512 Signature
+    <TD>5639
+    <TD>10.005
+    <TD>1.77 
+  <TR>
+    <TH>DSA 512 Signature with precomputation
+    <TD>8421
+    <TD>10.004
+    <TD>1.19 
+  <TR>
+    <TH>DSA 512 Verification
+    <TD>4955
+    <TD>10.004
+    <TD>2.02 
+  <TR>
+    <TH>DSA 512 Verification with precomputation
+    <TD>5179
+    <TD>10.005
+    <TD>1.93 </TR>
+  <TBODY style="BACKGROUND: yellow">
+  <TR>
+    <TH>RSA 1024 Signature
+    <TD>972
+    <TD>10.004
+    <TD>10.29 
+  <TR>
+    <TH>RSA 1024 Verification
+    <TD>33170
+    <TD>10.005
+    <TD>0.30 
+  <TR>
+    <TH>Rabin 1024 Signature
+    <TD>816
+    <TD>10.004
+    <TD>12.26 
+  <TR>
+    <TH>Rabin 1024 Verification
+    <TD>4127
+    <TD>10.004
+    <TD>2.42 
+  <TR>
+    <TH>RW 1024 Signature
+    <TD>835
+    <TD>10.005
+    <TD>11.98 
+  <TR>
+    <TH>RW 1024 Verification
+    <TD>89647
+    <TD>10.004
+    <TD>0.11 
+  <TR>
+    <TH>LUC 1024 Signature
+    <TD>527
+    <TD>10.015
+    <TD>19.00 
+  <TR>
+    <TH>LUC 1024 Verification
+    <TD>26325
+    <TD>10.004
+    <TD>0.38 
+  <TR>
+    <TH>NR 1024 Signature
+    <TD>1772
+    <TD>10.004
+    <TD>5.65 
+  <TR>
+    <TH>NR 1024 Signature with precomputation
+    <TD>4379
+    <TD>10.004
+    <TD>2.28 
+  <TR>
+    <TH>NR 1024 Verification
+    <TD>1528
+    <TD>10.004
+    <TD>6.55 
+  <TR>
+    <TH>NR 1024 Verification with precomputation
+    <TD>2692
+    <TD>10.005
+    <TD>3.72 
+  <TR>
+    <TH>DSA 1024 Signature
+    <TD>1819
+    <TD>10.004
+    <TD>5.50 
+  <TR>
+    <TH>DSA 1024 Signature with precomputation
+    <TD>4403
+    <TD>10.004
+    <TD>2.27 
+  <TR>
+    <TH>DSA 1024 Verification
+    <TD>1567
+    <TD>10.005
+    <TD>6.38 
+  <TR>
+    <TH>DSA 1024 Verification with precomputation
+    <TD>2724
+    <TD>10.004
+    <TD>3.67 
+  <TR>
+    <TH>LUCELG 512 Signature
+    <TD>3587
+    <TD>10.005
+    <TD>2.79 
+  <TR>
+    <TH>LUCELG 512 Verification
+    <TD>1783
+    <TD>10.004
+    <TD>5.61 </TR>
+  <TBODY style="BACKGROUND: white">
+  <TR>
+    <TH>RSA 2048 Signature
+    <TD>156
+    <TD>10.004
+    <TD>64.13 
+  <TR>
+    <TH>RSA 2048 Verification
+    <TD>11782
+    <TD>10.004
+    <TD>0.85 
+  <TR>
+    <TH>Rabin 2048 Signature
+    <TD>143
+    <TD>10.064
+    <TD>70.38 
+  <TR>
+    <TH>Rabin 2048 Verification
+    <TD>1649
+    <TD>10.004
+    <TD>6.07 
+  <TR>
+    <TH>RW 2048 Signature
+    <TD>146
+    <TD>10.054
+    <TD>68.86 
+  <TR>
+    <TH>RW 2048 Verification
+    <TD>36582
+    <TD>10.005
+    <TD>0.27 
+  <TR>
+    <TH>LUC 2048 Signature
+    <TD>88
+    <TD>10.044
+    <TD>114.14 
+  <TR>
+    <TH>LUC 2048 Verification
+    <TD>9072
+    <TD>10.005
+    <TD>1.10 
+  <TR>
+    <TH>NR 2048 Signature
+    <TD>406
+    <TD>10.004
+    <TD>24.64 
+  <TR>
+    <TH>NR 2048 Signature with precomputation
+    <TD>1314
+    <TD>10.005
+    <TD>7.61 
+  <TR>
+    <TH>NR 2048 Verification
+    <TD>355
+    <TD>10.004
+    <TD>28.18 
+  <TR>
+    <TH>NR 2048 Verification with precomputation
+    <TD>789
+    <TD>10.005
+    <TD>12.68 
+  <TR>
+    <TH>LUCELG 1024 Signature
+    <TD>825
+    <TD>10.014
+    <TD>12.14 
+  <TR>
+    <TH>LUCELG 1024 Verification
+    <TD>409
+    <TD>10.024
+    <TD>24.51 </TR>
+  <TBODY style="BACKGROUND: yellow">
+  <TR>
+    <TH>XTR-DH 171 Key-Pair Generation
+    <TD>2242
+    <TD>10.005
+    <TD>4.46 
+  <TR>
+    <TH>XTR-DH 171 Key Agreement
+    <TD>1122
+    <TD>10.004
+    <TD>8.92 
+  <TR>
+    <TH>XTR-DH 342 Key-Pair Generation
+    <TD>610
+    <TD>10.005
+    <TD>16.40 
+  <TR>
+    <TH>XTR-DH 342 Key Agreement
+    <TD>306
+    <TD>10.054
+    <TD>32.86 
+  <TR>
+    <TH>DH 512 Key-Pair Generation
+    <TD>7760
+    <TD>10.005
+    <TD>1.29 
+  <TR>
+    <TH>DH 512 Key-Pair Generation with precomputation
+    <TD>11658
+    <TD>10.004
+    <TD>0.86 
+  <TR>
+    <TH>DH 512 Key Agreement
+    <TD>7494
+    <TD>10.004
+    <TD>1.33 
+  <TR>
+    <TH>DH 1024 Key-Pair Generation
+    <TD>1827
+    <TD>10.005
+    <TD>5.48 
+  <TR>
+    <TH>DH 1024 Key-Pair Generation with precomputation
+    <TD>4538
+    <TD>10.004
+    <TD>2.20 
+  <TR>
+    <TH>DH 1024 Key Agreement
+    <TD>1774
+    <TD>10.004
+    <TD>5.64 
+  <TR>
+    <TH>DH 2048 Key-Pair Generation
+    <TD>410
+    <TD>10.005
+    <TD>24.40 
+  <TR>
+    <TH>DH 2048 Key-Pair Generation with precomputation
+    <TD>1336
+    <TD>10.004
+    <TD>7.49 
+  <TR>
+    <TH>DH 2048 Key Agreement
+    <TD>404
+    <TD>10.015
+    <TD>24.79 
+  <TR>
+    <TH>LUCDIF 512 Key-Pair Generation
+    <TD>3659
+    <TD>10.004
+    <TD>2.73 
+  <TR>
+    <TH>LUCDIF 512 Key Agreement
+    <TD>2712
+    <TD>10.005
+    <TD>3.69 
+  <TR>
+    <TH>LUCDIF 1024 Key-Pair Generation
+    <TD>835
+    <TD>10.004
+    <TD>11.98 
+  <TR>
+    <TH>LUCDIF 1024 Key Agreement
+    <TD>700
+    <TD>10.014
+    <TD>14.31 
+  <TR>
+    <TH>MQV 512 Key-Pair Generation
+    <TD>7791
+    <TD>10.005
+    <TD>1.28 
+  <TR>
+    <TH>MQV 512 Key-Pair Generation with precomputation
+    <TD>11420
+    <TD>10.004
+    <TD>0.88 
+  <TR>
+    <TH>MQV 512 Key Agreement
+    <TD>4098
+    <TD>10.005
+    <TD>2.44 
+  <TR>
+    <TH>MQV 1024 Key-Pair Generation
+    <TD>1824
+    <TD>10.004
+    <TD>5.48 
+  <TR>
+    <TH>MQV 1024 Key-Pair Generation with precomputation
+    <TD>4540
+    <TD>10.004
+    <TD>2.20 
+  <TR>
+    <TH>MQV 1024 Key Agreement
+    <TD>982
+    <TD>10.005
+    <TD>10.19 
+  <TR>
+    <TH>MQV 2048 Key-Pair Generation
+    <TD>411
+    <TD>10.024
+    <TD>24.39 
+  <TR>
+    <TH>MQV 2048 Key-Pair Generation with precomputation
+    <TD>1348
+    <TD>10.005
+    <TD>7.42 
+  <TR>
+    <TH>MQV 2048 Key Agreement
+    <TD>228
+    <TD>10.034
+    <TD>44.01 </TR>
+  <TBODY style="BACKGROUND: white">
+  <TR>
+    <TH>ECIES over GF(p) 168 Encryption
+    <TD>701
+    <TD>10.004
+    <TD>14.27 
+  <TR>
+    <TH>ECIES over GF(p) 168 Encryption with precomputation
+    <TD>1407
+    <TD>10.004
+    <TD>7.11 
+  <TR>
+    <TH>ECIES over GF(p) 168 Decryption
+    <TD>389
+    <TD>10.005
+    <TD>25.72(<A 
+      href="http://www.eskimo.com/~weidai/benchmarks.html#note">*</A>) 
+  <TR>
+    <TH>ECNR over GF(p) 168 Signature
+    <TD>1393
+    <TD>10.004
+    <TD>7.18 
+  <TR>
+    <TH>ECNR over GF(p) 168 Signature with precomputation
+    <TD>2795
+    <TD>10.005
+    <TD>3.58 
+  <TR>
+    <TH>ECNR over GF(p) 168 Verification
+    <TD>763
+    <TD>10.014
+    <TD>13.12 
+  <TR>
+    <TH>ECNR over GF(p) 168 Verification with precomputation
+    <TD>1704
+    <TD>10.004
+    <TD>5.87 
+  <TR>
+    <TH>ECDHC over GF(p) 168 Key-Pair Generation
+    <TD>1404
+    <TD>10.005
+    <TD>7.13 
+  <TR>
+    <TH>ECDHC over GF(p) 168 Key-Pair Generation with precomputation
+    <TD>2822
+    <TD>10.004
+    <TD>3.55 
+  <TR>
+    <TH>ECDHC over GF(p) 168 Key Agreement
+    <TD>1366
+    <TD>10.005
+    <TD>7.32 
+  <TR>
+    <TH>ECMQVC over GF(p) 168 Key-Pair Generation
+    <TD>1398
+    <TD>10.004
+    <TD>7.16 
+  <TR>
+    <TH>ECMQVC over GF(p) 168 Key-Pair Generation with precomputation
+    <TD>2818
+    <TD>10.004
+    <TD>3.55 
+  <TR>
+    <TH>ECMQVC over GF(p) 168 Key Agreement
+    <TD>736
+    <TD>10.025
+    <TD>13.62 </TR>
+  <TBODY style="BACKGROUND: yellow">
+  <TR>
+    <TH>ECIES over GF(2^n) 155 Encryption
+    <TD>466
+    <TD>10.004
+    <TD>21.47 
+  <TR>
+    <TH>ECIES over GF(2^n) 155 Encryption with precomputation
+    <TD>1394
+    <TD>10.005
+    <TD>7.18 
+  <TR>
+    <TH>ECIES over GF(2^n) 155 Decryption
+    <TD>740
+    <TD>10.004
+    <TD>13.52 
+  <TR>
+    <TH>ECNR over GF(2^n) 155 Signature
+    <TD>927
+    <TD>10.004
+    <TD>10.79 
+  <TR>
+    <TH>ECNR over GF(2^n) 155 Signature with precomputation
+    <TD>2731
+    <TD>10.005
+    <TD>3.66 
+  <TR>
+    <TH>ECNR over GF(2^n) 155 Verification
+    <TD>752
+    <TD>10.004
+    <TD>13.30 
+  <TR>
+    <TH>ECNR over GF(2^n) 155 Verification with precomputation
+    <TD>1605
+    <TD>10.005
+    <TD>6.23 
+  <TR>
+    <TH>ECDHC over GF(2^n) 155 Key-Pair Generation
+    <TD>932
+    <TD>10.004
+    <TD>10.73 
+  <TR>
+    <TH>ECDHC over GF(2^n) 155 Key-Pair Generation with precomputation
+    <TD>2789
+    <TD>10.004
+    <TD>3.59 
+  <TR>
+    <TH>ECDHC over GF(2^n) 155 Key Agreement
+    <TD>896
+    <TD>10.005
+    <TD>11.17 
+  <TR>
+    <TH>ECMQVC over GF(2^n) 155 Key-Pair Generation
+    <TD>931
+    <TD>10.004
+    <TD>10.75 
+  <TR>
+    <TH>ECMQVC over GF(2^n) 155 Key-Pair Generation with precomputation
+    <TD>2800
+    <TD>10.005
+    <TD>3.57 
+  <TR>
+    <TH>ECMQVC over GF(2^n) 155 Key Agreement
+    <TD>734
+    <TD>10.024
+    <TD>13.66 </TR></TBODY></TABLE><A name=note>(*) This number is higher than it 
+should be because of a performance bug in Crypto++ 4.0. It will be fixed in the 
+next release. 
+<H2>Notes</H2>
+<UL><!--
+<LI>
+Crypto++ 4.0 Benchmark Average for this platform: <STRONG>105.36</STRONG>. This number 
+is computed by taking the geometric mean of the number of MB/second of each cipher,
+hash function, and MAC, and operations/second of each asymmetric operation listed above.
+-->
+  <LI>RSA and LUC use 17 as the public exponent. 
+  <LI>DH and ElGamal encryption and decryption use short exponents to save time. 
+  The size of the secret exponents were chosen so that a meet-in-the-middle 
+  attack would be slower than the general discrete log algorithm (NFS). The 
+  sizes used were: 
+  <TABLE>
+    <TBODY>
+    <TR>
+      <TH>modulus
+      <TH>exponent 
+    <TR>
+      <TD>512 
+      <TD>120 
+    <TR>
+      <TD>1024 
+      <TD>164 
+    <TR>
+      <TD>2048 
+      <TD>226 </TR></TBODY></TABLE>
+  <LI>BlumGoldwasser is timed on a 16-byte plaintext. The lowest log(log(n)) 
+  bits of each square are used. 
+  <LI>EC means elliptic curve. Operations in GF(2^n) are implemented using 
+  trinomial basis. 
+  <LI>All tests were done by repeating the crypto operations over small blocks 
+  of random data. In practice you will likely see slower speeds because time is 
+  needed to transfer data to and from memory. 
+  <LI>For the ciphers that specify big endian byte order, the timing data listed 
+  include time needed to convert to and from little endian order. For some 
+  ciphers (WAKE and SHA) this is a large fraction (up to 25%) of the total time. 
+
+  <LI>The RSA, RW, DH, MQV, and elliptic curve schemes come from the IEEE P1363 
+  standard. For more info see <A 
+  href="http://grouper.ieee.org/groups/1363/index.html">http://grouper.ieee.org/groups/1363/index.html</A>. 
+
+  <LI>Precomputation means using a table of 16 precomputed powers of each fixed 
+  base to speed up exponentiation. 
+  <LI>Tiger, SHARK, SHA-384, and SHA-512 are designed to take advantage of 
+  64-bit word operations. Their relatives speeds can be expected to be much 
+  higher if the benchmarks were done on a 64-bit CPU. 
+  <LI>These tables may not be displayed properly with a browser (such as 
+  Navigator 4.5 or Opera 3.51) that doesn't adequately implement HTML 4.0 and 
+  CSS. Internet Explorer 4.0 and above seem to render them correctly, so I 
+  suggest that you <A href="http://www.microsoft.com/ie"><IMG height=31 
+  alt="Get Microsoft Internet Explorer" 
+  src="Speed Comparison of Popular Crypto Algorithms.files/default.htm" width=88 
+  align=middle vspace=7 border=0></A>. </LI></UL>
+<HR>
+
+<ADDRESS>Written by: <A href="http://www.eskimo.com/~weidai/index.html">Wei 
+Dai</A> &lt;<A href="mailto:weidai@eskimo.com">weidai@eskimo.com</A>&gt; Last 
+modified: 11/03/2000</ADDRESS></BODY></HTML>

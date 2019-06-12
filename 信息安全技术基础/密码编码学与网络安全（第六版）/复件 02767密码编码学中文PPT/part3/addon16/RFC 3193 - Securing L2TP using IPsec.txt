@@ -1,0 +1,62 @@
+RFC 3193 - Securing L2TP using IPsec
+
+--------------------------------------------------------------------------------
+
+
+Network Working Group                                           B. Patel
+Request for Comments: 3193                                         Intel
+Category: Standards Track                                       B. Aboba
+                                                                W. Dixon
+                                                               Microsoft
+                                                                 G. Zorn
+                                                                S. Booth
+                                                           Cisco Systems
+                                                           November 2001
+
+                       Securing L2TP using IPsec
+
+Status of this Memo
+
+   This document specifies an Internet standards track protocol for the
+   Internet community, and requests discussion and suggestions for
+   improvements.  Please refer to the current edition of the "Internet
+   Official Protocol Standards" (STD 1) for the standardization state
+   and status of this protocol.  Distribution of this memo is unlimited.
+
+Copyright Notice
+
+   Copyright (C) The Internet Society (2001).  All Rights Reserved.
+
+Abstract
+
+   This document discusses how L2TP (Layer Two Tunneling Protocol) may
+   utilize IPsec to provide for tunnel authentication, privacy
+   protection, integrity checking and replay protection. Both the
+   voluntary and compulsory tunneling cases are discussed.
+
+Table of Contents
+
+   1. Introduction ..................................................  2
+   1.1 Terminology ..................................................  3
+   1.2 Requirements language ........................................  3
+   2. L2TP security requirements  ...................................  4
+   2.1 L2TP security protocol .......................................  5
+   2.2 Stateless compression and encryption .........................  5
+   3. L2TP/IPsec inter-operability guidelines .......................  6
+   3.1. L2TP tunnel and Phase 1 and 2 SA teardown ...................  6
+   3.2. Fragmentation Issues ........................................  6
+   3.3. Per-packet security checks ..................................  7
+   4. IPsec Filtering details when protecting L2TP ..................  7
+   4.1. IKE Phase 1 Negotiations ....................................  8
+   4.2. IKE Phase 2 Negotiations ....................................  8
+   5. Security Considerations ....................................... 15
+   5.1 Authentication issues ........................................ 15
+   5.2 IPsec and PPP interactions ................................... 18
+   6. References .................................................... 21
+   Acknowledgments .................................................. 22
+   Authors' Addresses ............................................... 23
+   Appendix A: Example IPsec Filter sets ............................ 24
+   Intellectual Property Statement .................................. 27
+   Full Copyright Statement ......................................... 28
+
+

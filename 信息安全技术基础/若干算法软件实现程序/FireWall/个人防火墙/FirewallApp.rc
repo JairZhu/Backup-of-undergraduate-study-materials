@@ -1,0 +1,431 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\FirewallApp.ico"
+IDR_FIREWATYPE          ICON    DISCARDABLE     "res\\FirewallAppDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  DISCARDABLE     "res\\mainfram.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  23, 25
+BEGIN
+    BUTTON      ID_BUTTONSTART
+    BUTTON      ID_BUTTONSTOP
+    SEPARATOR
+    BUTTON      ID_BUTTONADD
+    BUTTON      ID_BUTTONDEL
+    SEPARATOR
+    BUTTON      ID_BUTTONINSTALL
+    BUTTON      ID_BUTTONDESINSTALL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "启动过滤功能(&S)",            ID_MENUSTART
+        MENUITEM "停止过滤功能(&p)",            ID_MENUSTOP
+        MENUITEM SEPARATOR
+        MENUITEM "载入过滤规则(&L)",            IDMENU_LOADRULES
+        MENUITEM "保存过滤规则(&v)",            IDMENU_SAVERULES
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&E)",                    ID_APP_EXIT
+    END
+    POPUP "过滤规则(&R)"
+    BEGIN
+        MENUITEM "增加(&A)",                    IDMENU_ADDRULE
+        MENUITEM "删除(&D)",                    IDMENU_DELRULE
+        MENUITEM SEPARATOR
+        MENUITEM "应用(&I)",                    IDMENU_INSTALLRULES
+        MENUITEM "停用(&U)",                    IDMENU_UNINSTALLRULES
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于个人防火墙(&A)",          ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于个人本防火墙"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "个人防火墙  Yielruse编写",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004",IDC_STATIC,40,33,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "版本1.0",IDC_STATIC,40,22,119,8,SS_NOPREFIX
+END
+
+IDD_FIREWALLAPP_FORM DIALOG DISCARDABLE  0, 0, 425, 177
+STYLE WS_CHILD | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOLABELWRAP | WS_BORDER | WS_TABSTOP,
+                    7,33,411,121
+    LTEXT           "数据包过滤规则",IDC_STATIC,17,18,78,11
+END
+
+IDD_OUT DIALOG DISCARDABLE  0, 0, 285, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "增加过滤规则"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT4,227,27,30,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    COMBOBOX        IDC_COMBO4,71,81,44,49,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,172,81,70,51,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确定",IDOK,77,109,50,14
+    PUSHBUTTON      "取消",IDCANCEL,142,109,50,14
+    GROUPBOX        "数据包目的设置",IDC_STATIC,13,10,262,62
+    LTEXT           "操作",IDC_STATIC,140,83,25,11
+    LTEXT           "IP地址(0.0.0.0表示所有)",IDC_STATIC,18,25,62,17
+    LTEXT           "端口(0表示所有)",IDC_STATIC,176,28,47,16
+    LTEXT           "要过滤的协议",IDC_STATIC,13,83,57,8
+    LTEXT           "子网掩码",IDC_STATIC,16,52,62,10
+    CONTROL         "IPAddress1",IDC_IPADDRESS3,"SysIPAddress32",WS_TABSTOP,
+                    83,25,72,13
+    CONTROL         "IPAddress1",IDC_IPADDRESS4,"SysIPAddress32",WS_TABSTOP,
+                    83,51,72,13
+END
+
+IDD_SELECT DIALOG DISCARDABLE  0, 0, 187, 61
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选择"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,126,24,46,14
+    PUSHBUTTON      "防入墙规则",IDC_IN,15,23,45,15
+    PUSHBUTTON      "防出墙规则",IDC_OUT,69,23,45,15
+END
+
+IDD_IN DIALOG DISCARDABLE  0, 0, 282, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "增加过滤规则"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT2,225,26,30,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    COMBOBOX        IDC_COMBO2,69,82,44,49,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO1,170,82,70,51,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确定",IDOK,75,110,50,14
+    PUSHBUTTON      "取消",IDCANCEL,140,110,50,14
+    GROUPBOX        "数据包源设置",IDC_STATIC,10,10,262,62
+    LTEXT           "操作",IDC_STATIC,138,84,25,11
+    LTEXT           "IP地址(0.0.0.0表示所有)",IDC_STATIC,12,24,67,16
+    LTEXT           "端口(0表示所有)",IDC_STATIC,176,26,45,19
+    LTEXT           "要过滤的协议",IDC_STATIC,11,84,57,8
+    LTEXT           "子网掩码",IDC_STATIC,13,53,62,10
+    CONTROL         "IPAddress1",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,
+                    81,24,72,13
+    CONTROL         "IPAddress1",IDC_IPADDRESS2,"SysIPAddress32",WS_TABSTOP,
+                    81,49,72,13
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "0C0A04B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Aplicación MFC FirewallApp\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "FirewallApp\0"
+            VALUE "LegalCopyright", "Copyright (C) 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "FirewallApp.EXE\0"
+            VALUE "ProductName", "Aplicación FirewallApp\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0xc0a, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_FIREWALLAPP_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 418
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_OUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_SELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_IN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OUT DLGINIT
+BEGIN
+    IDC_COMBO4, 0x403, 5, 0
+0xabc8, 0xbfb2, "\000" 
+    IDC_COMBO4, 0x403, 4, 0
+0x4354, 0x0050, 
+    IDC_COMBO4, 0x403, 4, 0
+0x4455, 0x0050, 
+    IDC_COMBO4, 0x403, 5, 0
+0x4349, 0x504d, "\000" 
+    IDC_COMBO3, 0x403, 5, 0
+0xc5b7, 0xd0d0, "\000" 
+    IDC_COMBO3, 0x403, 5, 0
+0xaab6, 0xfac6, "\000" 
+    0
+END
+
+IDD_IN DLGINIT
+BEGIN
+    IDC_COMBO2, 0x403, 5, 0
+0xabc8, 0xbfb2, "\000" 
+    IDC_COMBO2, 0x403, 4, 0
+0x4354, 0x0050, 
+    IDC_COMBO2, 0x403, 4, 0
+0x4455, 0x0050, 
+    IDC_COMBO2, 0x403, 5, 0
+0x4349, 0x504d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0xc5b7, 0xd0d0, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0xaab6, 0xfac6, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "FirewallApp\n\nFirewa\n\n\nFirewallApp.Document\nFirewa Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "个人防火墙"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Modern) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 10, 3\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\FirewallApp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.esp\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.esp\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+#endif    // Spanish (Modern) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)
+#ifdef _WIN32
+LANGUAGE 10, 3
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\FirewallApp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.esp\afxres.rc"          // Standard components
+#include "l.esp\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

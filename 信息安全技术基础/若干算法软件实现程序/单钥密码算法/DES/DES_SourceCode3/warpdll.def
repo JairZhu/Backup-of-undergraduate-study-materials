@@ -1,0 +1,19 @@
+LIBRARY warpdll
+EXPORTS
+	ThreadEncrypt
+	ThreadDecrypt
+	Encrypt
+	Decrypt
+	ENC
+	DEC
+	Version
+	IsWeakKey
+	Gen_S_Box
+	Init_S_Box
+	Reset_S_Box
+	Drop_S_Box
+	Init_ENC_Subkeys
+	Init_DEC_Subkeys
+	Reset_Subkeys
+	Fast_ENC
+	Fast_DEC

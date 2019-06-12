@@ -1,0 +1,1 @@
+javac -classpath ../;../../lib/BouncyCastle.jar *.java

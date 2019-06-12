@@ -1,0 +1,381 @@
+<!--
+This is the DTD defining the runtime binding information
+for a J2EE application in Sun Microsystems' J2EE 1.3 Reference Implementation.
+It is only used in Sun's J2EE 1.3 Reference Implementation.
+
+DISCLAIMER: This format may change without notice between major or minor 
+version. Not for general distibution.
+-->
+
+<!--
+This is the root element of the runtime descriptor document.
+-->
+<!ELEMENT j2ee-ri-specific-information ( server-name?,  rolemapping*, web*, enterprise-beans*, app-client?) >
+
+<!--
+This is the root element describing all the runtime bindings of a single application client
+-->
+<!ELEMENT app-client (resource-ref*, ejb-ref*, resource-env-ref*)>
+
+<!--
+This is the root element for container managed persistence information for 
+an EJB1.1 entity bean in the J2EE 1.2/1.2.1 Reference Implementation 
+(deprecated, replaced by ejb20-cmp element).
+-->
+<!ELEMENT cmp ( ds-jndi-name, default-resource-principal?, sql-statement*, table-create-sql, table-remove-sql, create-table-deploy, 
+delete-table-undeploy )>
+
+<!--
+This element contains the database to be used for storing CMP beans 
+in an ejb-jar.
+-->
+<!ELEMENT cmpresource ( ds-jndi-name, default-resource-principal? )>
+
+<!--
+This element indicates whether to create the cmp table during deployment or not. Takes the values true or false.
+-->
+<!ELEMENT create-table-deploy (#PCDATA)>
+
+<!--
+This is the root element describing the default principal that the container will use to access a resource.
+-->
+<!ELEMENT default-resource-principal ( name,  password)>
+
+<!--
+This element indicates whether to delete the cmp table during undeployment of the entity bean.
+-->
+<!ELEMENT delete-table-undeploy (#PCDATA)>
+
+<!--
+This element contains a human readble name.
+-->
+<!ELEMENT display-name (#PCDATA)>
+
+<!--
+The text value of this element is the jndi name of a data source..
+-->
+<!ELEMENT ds-jndi-name (#PCDATA)>
+
+<!--
+This is the root element describing runtime bindings for a single ejb.
+-->
+<!ELEMENT ejb ( ejb-name, jndi-name, ejb-ref*, resource-ref*, resource-env-ref*, cmp?, ejb20-cmp?, principal?, mdb-connection-factory?, jms-durable-subscription-name?, ior-security-config?, gen-classes? )>
+
+<!--
+The text in this element matches the display name of the ejb to which it refers.
+-->
+<!ELEMENT ejb-name (#PCDATA)>
+
+<!--
+This is the root element which binds an ejb reference to a jndi name.
+-->
+<!ELEMENT ejb-ref (ejb-ref-name, jndi-name)>
+
+<!--
+The ejb ref name locates the name of the ejb reference in the application.
+-->
+<!ELEMENT ejb-ref-name (#PCDATA)>
+
+<!--
+This element describes runtime information for a CMP EntityBean 
+object for EJB1.1 and EJB2.0 beans.
+-->
+<!ELEMENT ejb20-cmp ( sql-statement*, create-table-deploy, delete-table-undeploy )>
+
+<!--
+This is the root element describing all the runtime bindings of an ejb-jar
+in the application.
+-->
+<!ELEMENT enterprise-beans ( name?, module-name?, unique-id, ejb*, join-object*, cmpresource? )>
+
+<!--
+This element contains all the generated class names for a bean.
+-->
+<!ELEMENT gen-classes ( remote-impl?, local-impl?, remote-home-impl?,
+local-home-impl?, state-impl?, ejb-impl? )>
+
+<!--
+This contains the name of the generated EJBObject impl class. 
+-->
+<!ELEMENT remote-impl (#PCDATA)>
+
+<!--
+This contains the name of the generated EJBLocalObject impl class. 
+-->
+<!ELEMENT local-impl (#PCDATA)>
+
+<!--
+This contains the name of the generated EJBHome impl class. 
+-->
+<!ELEMENT remote-home-impl (#PCDATA)>
+
+<!--
+This contains the name of the generated EJBLocalHome impl class. 
+-->
+<!ELEMENT local-home-impl (#PCDATA)>
+
+<!--
+This contains the name of the generated State class for CMP. 
+-->
+<!ELEMENT state-impl (#PCDATA)>
+
+<!--
+This contains the name of the generated ejb impl class for CMP.
+-->
+<!ELEMENT ejb-impl (#PCDATA)>
+
+<!--
+This is the root element describing all the data about a user-group.
+-->
+<!ELEMENT group EMPTY>
+
+<!--
+The name attribute of a group is the name of the user group.
+-->
+<!ATTLIST group name NMTOKEN #REQUIRED>
+
+<!--
+This is the root element describing a set of groups.
+-->
+<!ELEMENT groups (group*)>
+
+<!--
+Information about join objects
+-->
+<!ELEMENT source (name, field)>
+
+<!--
+Information about join objects
+-->
+<!ELEMENT sink (name, field)>
+
+<!--
+Information about CMRField
+-->
+<!ELEMENT field (#PCDATA)>
+
+<!--
+Information about join objects
+-->
+<!ELEMENT join-object (name, ejb20-cmp, source, sink)>
+
+<!--
+The name of a durable subscription associated with a message-driven 
+ejb's destination.
+-->
+<!ELEMENT jms-durable-subscription-name (#PCDATA)>
+
+<!--
+The text in this node is a jndi name.
+-->
+<!ELEMENT  jndi-name (#PCDATA)>
+
+<!--
+This is the root element describing the runtime bindings of a mail resource reference.
+-->
+<!ELEMENT mail-configuration (name, mail-from, mail-host)>
+
+<!--
+This node holds the address of the sender.
+-->
+<!ELEMENT mail-from (#PCDATA)>
+
+<!--
+This node holds the mail host information of a JavaMail session object.
+-->
+<!ELEMENT mail-host (#PCDATA)>
+
+<!--
+This node holds the name of the connection factory associated with 
+a message-driven ejb
+-->
+<!ELEMENT mdb-connection-factory (#PCDATA)>
+
+<!--
+This text nodes holds the module name as referenced in the application
+-->
+<!ELEMENT module-name (#PCDATA)>
+
+<!--
+This text nodes holds a name string.
+-->
+<!ELEMENT name (#PCDATA)>
+
+<!--
+The name of an operation for CMP (e.g. "createRow" for a EJB Object).
+-->
+<!ELEMENT  operation (#PCDATA)>
+
+<!--
+This element holds password text.
+-->
+<!ELEMENT password (#PCDATA)>
+
+<!--
+This node describes a username on the platform.
+-->
+<!ELEMENT principal (name)>
+
+<!--
+This node holds a list of usernames.
+-->
+<!ELEMENT principals (principal*)>
+
+<!--
+The name of a resource reference.
+-->
+<!ELEMENT res-ref-name (#PCDATA)>
+
+<!--
+This node holds all the runtime bindings of a resource env reference.
+-->
+<!ELEMENT resource-env-ref ( resource-env-ref-name, jndi-name )>
+
+<!--
+The name of a resource env reference.
+-->
+<!ELEMENT resource-env-ref-name (#PCDATA)>
+
+<!--
+This node holds all the runtime bindings of a resource reference.
+-->
+<!ELEMENT resource-ref  ( res-ref-name, jndi-name,  default-resource-principal?,  mail-configuration?)>
+
+<!--
+This node holds the mapping of roles to usernames and user groups on the server.
+-->
+<!ELEMENT rolemapping (name?, role*)>
+
+<!--
+This node holds the mapping of a role to a list of users and user-groups.
+-->
+<!ELEMENT role (principals, groups )>
+
+<!--
+The name attribute of a role is the rolename of that role.
+-->
+<!ATTLIST role name NMTOKEN #REQUIRED>
+
+<!--
+This node holds the name of the server on to which the application is being deployed. Not currently used for anything.
+-->
+<!ELEMENT server-name (#PCDATA)>
+
+<!--
+The text of this node is an SQL statement.
+-->
+<!ELEMENT sql (#PCDATA)>
+
+<!--
+This node associates an sql statement with a method. The method may be 
+a finder/ejbSelect method (so the method element would be the same as in
+the EJB2.0 DTD). 
+-->
+<!ELEMENT sql-statement ((method | operation), sql)>
+
+<!--
+The text in this node is the sql statement that is used to create a table for an entity bean with CMP.
+-->
+<!ELEMENT  table-create-sql (#PCDATA)>
+
+<!--
+The text in this node is the sql statement that is used to delete the table for an entity bean with CMP.
+-->
+<!ELEMENT table-remove-sql (#PCDATA)>
+
+<!--
+The unique id for the module in the application bundle
+-->
+<!ELEMENT unique-id (#PCDATA)>
+
+<!--
+This node holds all the runtime bindings for a web bundle within the application.
+-->
+<!ELEMENT web (display-name, servlet*, context-root, resource-ref*, ejb-ref*, resource-env-ref*)>
+
+<!--
+This node holds all the runtime information for a web component within the application
+-->
+<!ELEMENT servlet (servlet-name, principal?)>
+
+<!--
+The text in this element matches the display name of the servlet to which it refers.
+-->
+<!ELEMENT servlet-name (#PCDATA)>
+
+<!--
+This element specifies the web context root. Used only by the J2EE SDK tools, do no modify, use the application.xml instead
+-->
+<!ELEMENT context-root (#PCDATA)>
+
+<!--
+This is the element describing security configuration information for the IOR.
+-->  
+
+<!ELEMENT ior-security-config ( transport-config? , as-context?, sas-context?  )> 
+
+<!ELEMENT transport-config ( integrity, confidentiality, establish-trust-in-target, establish-trust-in-client )> 
+<!--
+This element indicates if the target supports integrity protected messages. The
+values are NONE, SUPPORTED or REQUIRED
+-->  
+<!ELEMENT integrity ( #PCDATA)>
+
+<!--
+This element indicates if the target supports privacy protected messages. The
+values are NONE, SUPPORTED or REQUIRED
+-->  
+<!ELEMENT confidentiality ( #PCDATA)>
+
+<!--
+This element indicates if the target is capable of authenticating to a client. 
+The values are NONE, SUPPORTED or REQUIRED.
+-->  
+<!ELEMENT establish-trust-in-target ( #PCDATA)>
+
+<!--
+This element indicates if the target is capable of authenticating a client. The
+values are NONE, SUPPORTED or REQUIRED.
+-->  
+<!ELEMENT establish-trust-in-client ( #PCDATA)>
+
+<!--
+This is the element describing the authentication mechanism that will be
+used to authenticate the client. If specified it will be the username-password
+mechanism.
+-->  
+<!ELEMENT as-context ( auth-method, realm, required )> 
+
+<!--
+This element specifies if the authentication method specified is required
+to be used for client authentication. If so the EstablishTrustInClient bit
+will be set in the target_requires field of the AS_Context. The element value
+is either true or false.
+-->  
+
+<!ELEMENT required ( #PCDATA )> 
+
+<!--
+This element describes the authentication method. The only supported value
+is USERNAME_PASSWORD
+-->  
+<!ELEMENT auth-method ( #PCDATA )> 
+
+<!--
+This element describes the realm in which the user is authenticated.
+-->  
+<!ELEMENT realm ( #PCDATA )> 
+
+<!--
+This element describes the sas-context fields.
+-->  
+
+<!ELEMENT sas-context ( caller-propagation )> 
+
+<!--
+This element indicates if the target will accept propagated caller identities
+The values are NONE, SUPPORTED or REQUIRED.
+-->  
+<!ELEMENT caller-propagation ( #PCDATA) >
+
+

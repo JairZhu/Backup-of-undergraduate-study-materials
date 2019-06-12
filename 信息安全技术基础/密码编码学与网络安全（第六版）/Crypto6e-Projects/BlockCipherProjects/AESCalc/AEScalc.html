@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>AES Calculator</title>
+</head>
+<body bgcolor="#eeeeff">
+<h1>AES Calculator</h1>
+You can use the AES Calculator applet displayed below to encrypt or decrypt
+using AES the specified 128-bit (32 hex digit) data value with the
+128/192/256-bit (32/48/64 hex digit) key, with a trace of the calculations.
+Some example values which may be used are given below.
+
+<hr>
+<applet archive="AEScalc.jar" code="AEScalc.class" width=800 height=550></applet>
+<hr>
+<p>
+Example AES test values (taken from FIPS-197) are:<br> 
+Key: <code>000102030405060708090a0b0c0d0e0f</code> <br> 
+Plaintext: <code> 00112233445566778899aabbccddeeff</code> <br> 
+Ciphertext: <code>69c4e0d86a7b0430d8cdb78070b4c55a</code> <br> 
+<p>
+Key: <code>000102030405060708090a0b0c0d0e0f1011121314151617</code> <br> 
+Plaintext: <code> 00112233445566778899aabbccddeeff</code> <br> 
+Ciphertext: <code>dda97ca4864cdfe06eaf70a0ec0d7191</code> <br> 
+<p>
+Key: <code>000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f</code> <br> 
+Plaintext: <code> 00112233445566778899aabbccddeeff</code> <br> 
+Ciphertext: <code>8ea2b7ca516745bfeafc49904b496089</code> <br> 
+<p>
+Encrypting the plaintext with the key should give the ciphertext,
+decrypting the ciphertext with the key should give the plaintext.
+<hr>
+
+</body>
+</html>

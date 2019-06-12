@@ -1,0 +1,178 @@
+Path: cr.yp.to!not-for-mail
+From: djb@cr.yp.to (D. J. Bernstein)
+Message-ID: <2001Oct400.45.07.20280@cr.yp.to>
+Date: 4 Oct 2001 00:45:07 GMT
+Newsgroups: comp.mail.misc
+Subject: Internet host SMTP server survey
+Organization: IR
+
+This survey was carried out between 2001-09-27 and 2001-10-03.
+
+I looked up PTR records for 1000000 random IP addresses. 39206 of the IP
+addresses had PTR records. Evidently the Internet has about 168 million
+IP addresses with PTR records. For comparison: My previous survey, a
+year ago, found 25777 addresses with PTR records out of 1000000 random
+addresses.
+
+I tried to connect to each address at the SMTP port. 34036 connections
+timed out; 4057 were refused; 81 were dropped; 31 were rejected with
+code 572; 23 were rejected with code 421; 20 were reset.
+
+There were 958 successful connections. Evidently the Internet has more
+than 4 million reachable IP addresses running SMTP servers, a slight
+increase from a year ago.
+
+I then sent a series of SMTP commands to each server, and fed the
+responses through a script that guesses what SMTP software is running on
+each host. Some comments on the results:
+
+   * UNIX remains the most common operating system. 623 addresses (65%)
+     are running UNIX-only software. 276 addresses (29%) are running
+     Windows-only software. 31 addresses (3%) provide answers consistent
+     with both UNIX and Windows.
+
+   * Sendmail is continuing to drop in popularity. 405 addresses (42%)
+     are running Sendmail, down from 434 a year ago.
+
+     Meanwhile, the Sendmail company continues to claim on its web pages
+     that Sendmail ``powers the majority of the Internet's mail
+     servers,'' on the basis of surveys I carried out years ago. See
+     http://cr.yp.to/surveys/sendmail.html for further discussion.
+
+   * qmail has by far the largest increase, up to 167 addresses (17%)
+     from 82 addresses last year. qmail now accounts for more addresses
+     than Exchange, and almost as many as all Microsoft SMTP products.
+
+     Two thirds of the qmail deployments, 110 addresses this year and 53
+     addresses last year, are cpmta deployments by a single company,
+     Critical Path, with 152 million mailboxes. See http://www.cp.net.
+
+Here are the software tallies:
+
+     401 UNIX Sendmail
+     176 Windows Microsoft Exchange or IIS SMTP
+     167 UNIX qmail
+      57 Windows Ipswitch IMail
+      23 UNIX smap
+      15 UNIX IBM Postfix, formerly VMailer
+      14 UNIX Exim
+      12 Windows Gordano NTMail
+       8 not sure
+       8 UNIX/Windows NetWin Dmail
+       6 UNIX/Windows Software.com Post.Office
+       5 Windows Rockliffe MailSite
+       4 unknown (HINES)
+       4 Windows Sendmail
+       4 Windows Norton AntiVirus
+       4 UNIX/Windows Lotus Domino
+       4 UNIX/Windows GroupWise
+       3 unknown (How do are you)
+       3 unknown (*****)
+       3 Windows Vircom VOP Mail
+       3 Windows Thompson AnalogX
+       3 UNIX/Windows Check Point firewall
+       2 Windows Paul Smith VPOP3
+       2 Windows Deerfield.com MDaemon
+       2 VMS PMDF
+       2 UNIX/Windows DatCon IMS
+       1 unknown (Please login)
+       1 misconfigured HTTP server
+       1 connection failed: 554
+       1 Windows Tiny Software WinRoute Pro
+       1 Windows SmartMax MailMax
+       1 Windows Seattle Lab SLmail
+       1 Windows Mercury
+       1 Windows Eudora Worldmail
+       1 Windows Digital Integrations i-MailDS
+       1 Windows Atrium MERCUR
+       1 Windows ArGoSoft Mail Server
+       1 VMS Digital UCX
+       1 UNIX/Windows Raptor firewall
+       1 UNIX/Windows Netscape Messaging Server, formerly Netscape Mail Server
+       1 UNIX/Windows Lyris MailShield
+       1 UNIX/Windows JAMES SMTP Server
+       1 UNIX iPlanet/Sun Internet Mail Server
+       1 UNIX Smail
+       1 UNIX Obtuse SMTPD
+       1 MacOS/Windows FirstClass
+       1 MacOS TeleFinder Mail Server
+       1 MacOS Stalker Internet Mail Server
+       1 MacOS Fog City Software LetterRip Pro
+
+The patterns used by the script, expressed in awk format, are shown
+below. There were fewer unidentifiable servers this year than last year;
+most SMTP servers now identify themselves in response to HELP requests.
+
+---Dan
+
+/ ESMTP CPMTA-3_5_0_4 .*M.252 send some mail, i.ll try my bestM.221 / { print qmail; next } # critical path
+/214 qmail home page: http:..pobox.com..djb.qmail.htmlM/ { print qmail; next }
+/214-qmail home page: http:..pobox.com..djb.qmail.htmlM/ { print qmail; next }
+/M.214- This is an NT Server running Gordano Ltd/ { print ntmail; next }
+/MERCUR SMTP-Server .v.* for Windows NT ready at/ { print mercur; next }
+/ Mail Server 5.7 .* support@spiderisland.com/ { print tfbbs; next }
+/ -- Server ESMTP .iPlanet Messaging Server / { print sims; next }
+/ Stalker Software.*cgp-support@stalker.com/ { print stalker; next }
+/ CheckPoint FireWall-1 secure SMTP server/ { print checkpoint; next }
+/Microsoft Exchange Internet Mail Service / { print microsoft; next }
+/ Mercury 1.[0-9]* ESMTP server ready.M/ { print mercury; next }
+/You are talking to an i-MailDS server / { print imailds; next }
+/ ESMTP Exchange POP3 .4.0.1108. ready/ { print microsoft; next }
+/ running LetterRip Server readyM.500 / { print letterrip; next }
+/ MAILsweeper ESMTP Receiver Version / { print raptor; next }
+/ ESMTP service ready .1. MDaemon v/ { print mdaemon; next }
+/NT Server running Internet Shopper/ { print ntmail; next }
+/  MailSite ESMTP Receiver Version / { print mailsite; next }
+/ SMTP Server .JAMES SMTP Server / { print james; next }
+/ MailSite SMTP Receiver Version / { print mailsite; next }
+/ VOPmail ESMTP Receiver Version / { print vopmail; next }
+/ Wellcome to HINES mailgateway / { print "unknown (HINES)"; next }
+/ FirstClass ESMTP Mail Server / { print firstclass; next }
+/ Microsoft ESMTP MAIL Service/ { print microsoft; next }
+/ NT-ESMTP Server .* .IMail 7/ { print imail; next }
+/ NT-ESMTP Server .* .IMail 6/ { print imail; next }
+/ NT-ESMTP Server .* .IMail 5/ { print imail; next }
+/ NT-ESMTP Server .* .IMail 4/ { print imail; next }
+/ Microsoft SMTP MAIL ready / { print microsoft; next }
+/ GroupWise Internet Agent / { print groupwise; next }
+/ 220 Please login at http/ { print "unknown (Please login)"; next }
+/ESMTP Service .Worldmail / { print worldmail; next }
+/ Server ESMTP .PMDF V5.*/ { print pmdf; next }
+/ .Lotus Domino Release / { print lotusdomino; next }
+/ SMTP.smap Ready.M.500/ { print smap; next }
+/ SMTP.smap P2 Ready.  / { print smap; next }
+/ ESMTP - WinRoute Pro / { print winroute; next }
+/ DSMTP ESMTP Server v/ { print dmail; next }
+/ ArGoSoft Mail Server/ { print argosoft; next }
+/214-This is Sendmail / { print sendmail; next }
+/ ESMTP PostfixM.250-/ { print postfix; next }
+/ Novonyx SMTP ready / { print netscape; next } # novell variant
+/ SMTP Server SLmail / { print slmail; next }
+/ SMTP AnalogX Proxy / { print analogx; next }
+/ VPOP3 SMTP Server / { print vpop3; next }
+/ IMS SMTP Receiver / { print ims; next }
+/ .Mail-Max Version / { print mailmax; next }
+/ MetaInfo Sendmail / { print sendmailwindows; next }
+/ Metainfo Sendmail / { print sendmailwindows; next }
+/ Sendmail for NT / { print sendmailwindows; next }
+/ UCX V.* OpenVMS / { print ucx; next }
+/ ESMTP MDaemon 4/ { print mdaemon; next }
+/ MailShield SMTP/ { print mailshield; next }
+/ ESMTP Sendmail / { print sendmail; next }
+/ .Post.Office v/ { print postoffice; next }
+/ ESMTP Postfix / { print postfix; next }
+/ ESMTP Exim / { print exim; next }
+/ SMTP NAVGW / { print norton; next }
+
+/ Hello.* here.s what we support.*250 .. ... Sender OkayM.250-The following SMTP commands are recognized.*startup and give your hostname.*verify deliverability of address.*set debugging level.*The normal sequence of events in sending a message / { print smail; next }
+/ SMTP service readyM.214-Commands:M.214-	DATA	RCPT	MAIL	QUIT	RSETM.214 	HELO	VRFY	EXPN	HELP	NOOPM.250 Requested mail action okay, completedM.250 Requested mail action okay, completedM.250 Requested mail action okay, completedM.250 Requested mail action okay, completedM.221 SMTP server closing transmission channelM./ { print norton; next }
+/ 214-Commands:M.214-	DATA	RCPT	MAIL	QUIT	RSETM.214 	HELO	VRFY	EXPN	HELP	NOOPM.250 Requested mail action okay, completedM.220 SMTP service readyM.250 Requested mail action okay, completedM./ { print norton; next } # serious norton bug
+/ 214-Commands:MM.214-	DATA	RCPT	MAIL	QUIT	RSETMM.214 	HELO	VRFY	EXPN	HELP	NOOPM.250 Requested mail action okay, completedM.220 SMTP service readyM.250 Requested mail action okay, completedM./ { print norton; next } # serious norton bug
+/M.250-PIPELININGM.250-SIZE [0-9]*M.250-ETRNM.250 8BITMIMEM.*250.* OkM.502 Error: command not implemented.*M.221 ByeM./ { print postfix; next }
+/SMTP, Pleased to be speaking with you.500 EHLO command is not recognized at this site.* How do are you doing today,/ { print "unknown (How do are you)"; next }
+/ pleased to meet you.* Duplicate HELO.EHLOM.250 2.1.0 <>... Sender okM/ { print sendmail; next }
+/ pleased to meet you.* Duplicate HELO.EHLOM.250 <>... Sender okM/ { print sendmail; next }
+/forging of mail requires recognizable SMTP/ { print obtuse; next }
+/ 220-Sendmail 8.6.12.8.6.12 ready / { print sendmail; next }
+/ ..DOCTYPE HTML PUBLIC / { print "misconfigured HTTP server"; next }
+/\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/ { print "unknown (*****)"; next }

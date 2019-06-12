@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Number Theory functions</title>
+    <style>
+        * {
+            color: #000000;
+            font-family: Verdana, sans-serif;
+            font-size: 11px;
+        }
+        body {
+            text-align: center;
+            background-color: #FBF5EA;
+        }
+        #mediaplayer {
+            padding: 5px;
+            border: 1px solid #006da4;
+            border-top: none;
+            border-bottom: none;
+            background-color: #006da4;
+        }
+        .title {
+            font-size: 20px;
+            letter-spacing: 2px;
+            padding: 8px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .link {
+            color: FFFFFF;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .chrome {
+            background-color: #006da4;
+            border: 1px solid #006da4;
+        }
+        .crtext {
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+<script type='text/javascript' src='http://mediaplayer.pearsoncmg.com/static/jquery-1.7.2.min.js'></script>
+<script type='text/javascript' src='http://mediaplayer.pearsoncmg.com/static/swfobject.js'></script>
+<script type='text/javascript'>
+    function id (str) {return document.getElementById(str)}
+    function resize (checkbox) {
+    	try {
+    		if (checkbox.checked) {
+    			var w = 2 * 640;
+    			var h = 2 * 504 - 20;
+    			var mw = $(window).innerWidth() - 50;
+    			var mh = $(window).innerHeight() - 200;
+    			if (w > mw) {
+    				h /= (w / mw);
+    				w = mw;
+    			}
+    			if (h > mh) {
+    				w /= (h / mh);
+    				h = mh;
+    			}
+    			$('#player53ad1a586efc2').width(Math.round(w)).height(Math.round(h));
+	        } else {
+                $('#player53ad1a586efc2').width(640).height(504);
+	        }
+	    }
+	    catch (e) {}
+    }
+</script>
+
+<div align="center" style="padding-top: 15px">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr><td width="50%" align="right"></td><td align="center">
+        <table width="100%" border="0" cellspacing="0" padding="0" margin="0"><tr><td bgcolor="#364395"><a href="http://www.pearsoned.com" target="_blank"><img src="http://media.pearsoncmg.com/cmg/mediaplayer_themes/pearson_branding/pearson-banner-left-blue.gif" align="left"/></a></td><td bgcolor="#364395"><img src="http://media.pearsoncmg.com/cmg/mediaplayer_themes/pearson_branding/pearson-strap-right-blue.gif" align="right" height="44" /></td></tr></table>                    <div class="title chrome crtext">Number Theory functions</div>
+                <div id='mediaplayer'><div id='player53ad1a586efc2'></div><script type='text/javascript' src='http://mediaplayer.pearsoncmg.com/static/jw5/jwplayer_custom.js'></script>
+</div>
+        <script>
+            jwplayer('player53ad1a586efc2').setup({
+                id:          'player53ad1a586efc2',
+                file:        'ecs_stallings_cnspp_6/Chap_08a_Number_Theory_functions.m4v',
+                height:      504,
+                width:       640,
+                autostart:   'true',
+                'controlbar.position': 'bottom',
+                'modes': [
+                    {type: 'flash', src: 'http://mediaplayer.pearsoncmg.com/static/jw5/player.swf'},
+					{type: 'html5', config: {'file': 'http://media.pearsoncmg.com/aw/streaming/ecs_stallings_cnspp_6/Chap_08a_Number_Theory_functions.m4v', 'provider': 'video'}}
+                ],
+                streamer: 'rtmp://streaming.aw.media.pearsoncmg.com/ondemand/aw/streaming/', provider: 'rtmp',
+plugins: {'captions-1': {
+                    
+                    fontsize: '11',
+                    state:    false,
+                    back:     true
+                }}
+            });</script>        </td><td width="50%"></td></tr>
+        <tr><td></td><td class="chrome"><form>
+            <a class="link" style="float: left; padding: 5px" href="http://247pearsoned.custhelp.com" target="_blank">playback trouble?</a>
+                        </form>
+        </td><td></td></tr>
+        <tr><td></td><td align="center">
+                                    <table border="0" style="padding-top: 15px" width="100%"><tr style="vertical-align: middle"><td>
+                        </td><td align="center" width="100%" style="font-size: 10px; vertical-align: middle;">
+               Copyright &copy; Pearson Education, Inc. or its affiliate(s). All&nbsp;Rights&nbsp;Reserved.
+            </td></tr></table>
+                    </td><td></td></tr>
+    </table>
+</div>
+
+</body>
+</html>

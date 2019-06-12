@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0048)http://www.wdssoft.com/MDSS_zh/artical/art1.html -->
+<HTML><HEAD><TITLE>数字签名(电子签名)知识：公钥系统/数字签名/数字证书工作原理入门</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content=数字签名,电子签名,软件,免费,下载,多级,RSA,WDSsoft,MDSS,企业 name=Keywords>
+<META 
+content="数字签名软件,免费下载，WDSsoft的企业多级数字签名系统（MDSS）用于解决企业文档数字签名,是目前最佳的企业文档数字签名系统，。&#10;MDSS可对任意格式电子文件进行数字签名，适用于企业用户。通过MDSS，同一电子文档可由多人签名>&#10;<META NAME=" 
+name=description ROBOTS?>
+<META content="MSHTML 6.00.3790.2541" name=GENERATOR></HEAD>
+<BODY><IMG alt="" src="数字签名(电子签名)知识：公钥系统-数字签名-数字证书工作原理入门_files/6.gif" 
+align=right border=0><BR><BR><A 
+href="http://www.wdssoft.com/MDSS_zh/index_zh.html" target=_blank><FONT 
+size=+2><B>更多文章到数字签名论坛</B></FONT><BR>Microsoft.net中的数字签名&nbsp;&nbsp;多重签名、盲签名、不可否认签名...&nbsp;带消息恢复的数字签名方案&nbsp;Win2000公钥基础设施...... 
+</A>
+<HR>
+<B><A href="http://www.wdssoft.com/" 
+target=_blank>下载试用企业多级数字签名系统－企业电子文档多级数字签名的最佳方案</B></A> 
+<HR>
+
+<TABLE cellSpacing=2 cellPadding=2 bgColor=#e9e7e4 border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <P><B>公钥系统/数字签名/数字证书工作原理入门</B><BR><BR>题 &nbsp;&nbsp;&nbsp; 
+      公钥系统/数字签名/数字证书工作原理入门 &nbsp; &nbsp;horris（翻译）<BR>&nbsp;&nbsp;<BR>关键字 
+      &nbsp;&nbsp;&nbsp; 公钥 非对称加密 数字签名 数字证书 摘要<BR>&nbsp;&nbsp;<BR>出处 
+      &nbsp;&nbsp;&nbsp; <A 
+      href="http://developer.netscape.com/tech/security/ssl/howitworks.html" 
+      target=_blank>http://developer.netscape.com/tech/security/ssl/howitworks.html</A><BR>&nbsp;&nbsp;<BR><BR><BR>译者按：<BR>加密和解密使用同一个密钥的算法，称为对称加密算法；加密和解密使用的是不同的密钥，称为非对称加密算法，公钥系统即属于非对称加密算法。对于对称加密而言，需要着重保护的是对称密钥，对于公钥算法而言，需要着重保护的是私钥。<BR>公钥加密算法，以及衍生出的数字签名、数字证书技术，不仅广泛应用于Internet通讯中，例如HTTPS协议中的SSL/TLS，在单机系统中也越来越受到重视，例如Windows 
+      XP的设备驱动程序、.NET的GAC assembly都要求数字签名。微软从Windows98/NT4起即提供了Cryptograph 
+      API，支持DES，RC2，RC4，IDEA等对称加密算法和RSA公钥系统等非对称密算法，以及MD5，SHA，MAC等摘要（Digest，也称为Hash，散列）算法。<BR>本文译自：<BR><A 
+      href="http://developer.netscape.com/tech/security/ssl/howitworks.html" 
+      target=_blank>http://developer.netscape.com/tech/security/ssl/howitworks.html</A><BR><BR>这是一篇生动浅显的文章，对了解公钥系统的工作原理很有帮助，CSDN上已有一篇译文：<BR><BR><A 
+      href="http://www.csdn.net/Develop/article/27/27524.shtm" 
+      target=_blank>http://www.csdn.net/Develop/article/27/27524.shtm</A><BR>但本人认为上文的关键地方不够准确，欠通顺。本译文在上篇译文的基础上，关键的术语采用了通用译法，少数地方采用了意译，而且附有英文原文，有翻译不当的地方大家可以对照原文。<BR>希望能对公钥系统有兴趣的朋友们有所帮助。<BR><BR>BTW：上面提到的所有对称加密和非对称加密，它们的加解密算法都是公开的，只要不知道密钥，算法的设计者有信心使加密结果不会被轻易破解，这点与WAPI截然不同：） 
+      。<BR><BR>以下是中英文对照的译文：<BR><BR>Public key encryption is a technique that 
+      uses a pair of asymmetric keys for encryption and decryption. Each pair of 
+      keys consists of a public key and a private key. The public key is made 
+      public by distributing it widely. The private key is never distributed; it 
+      is always kept 
+      secret.<BR>公钥加密是使用一对非对称的密钥加密或解密的技术。每一对密钥由公钥和私钥组成。公钥被广泛发布。私钥是隐密的，不公开。<BR><BR>Data 
+      that is encrypted with the public key can be decrypted only with the 
+      private key. Conversely, data encrypted with the private key can be 
+      decrypted only with the public key. This asymmetry is the property that 
+      makes public key cryptography so 
+      useful.<BR>用公钥加密的数据只能够被私钥解密。反过来，使用私钥加密的数据只能用公钥解密。这个非对称的特性使得公钥加密很有用。<BR><BR>USING 
+      PUBLIC KEY CRYPTOGRAPHY FOR 
+      AUTHENTICATION<BR>使用公钥加密法认证<BR><BR>Authentication is the process of 
+      verifying identity so that one entity can be sure that another entity is 
+      who it claims to be. In the following example involving Alice and Bob, 
+      public key cryptography is easily used to verify identity. The notation 
+      {something}key means that something has been encrypted or decrypted using 
+      key.<BR>验证是一个核实身份的过程，以便一方能确认另一方的确是其所声称的那个身份。在下列例子中包括甲和乙，公钥加密会轻松地校验身份。符号{数据} 
+      key意味着"数据"已经使用key加密或解密。<BR><BR>Suppose Alice wants to authenticate Bob. 
+      Bob has a pair of keys, one public and one private. Bob discloses to Alice 
+      his public key (the way he does this is discussed later). Alice then 
+      generates a random message and sends it to Bob:<BR><BR>&nbsp;&nbsp;A-&gt;B 
+      &nbsp; random-message<BR><BR>Bob uses his private key to encrypt the 
+      message and returns the encrypted version to Alice:<BR><BR>B-&gt;A &nbsp; 
+      {random-message}bobs-private-key<BR><BR>Alice receives this message and 
+      decrypts it by using Bob's previously published public key. She compares 
+      the decrypted message with the one she originally sent to Bob; if they 
+      match, she knows she's talking to Bob. An imposter presumably wouldn't 
+      know Bob's private key and would therefore be unable to properly encrypt 
+      the random message for Alice to 
+      check.<BR>假如甲想校验乙的身份。乙有一对密钥，一个是公开的，另一个是私有的。乙透露给甲他的公钥。甲产生一个随机信息发送给乙。<BR><BR>甲——〉乙：random 
+      message<BR><BR>乙使用他的私钥加密信息，把加密后的信息返回甲。<BR><BR>乙——〉甲：{random-message}乙的私钥<BR><BR>甲收到这个信息然后使用乙的前面公开的公钥解密。他比较解密后的信息与他原先发给乙的信息。如果它们完全一致，就会知道在与乙说话。任意一个中间人不会知道乙的私钥，也不能正确加密甲检查的随机信息。<BR><BR>BUT 
+      WAIT, THERE'S MORE<BR>等一下，事情还没有完<BR><BR>Unless you know exactly what you 
+      are encrypting, it is never a good idea to encrypt something with your 
+      private key and then send it to somebody else. This is because the 
+      encrypted value can be used against you (remember, only you could have 
+      done the encryption because only you have the private 
+      key).<BR>用私钥加密某些信息，然后发送给其他人不是一个好主意，除非你清楚知道这个信息的含义。因为加密后的信息可能被用来对付你（记住，别人知道该信息是你加密的，因为只有你有加密用的私钥）。<BR><BR>So, 
+      instead of encrypting the original message sent by Alice, Bob constructs a 
+      message digest and encrypts that. A message digest is derived from the 
+      random message in a way that has the following useful 
+      properties:<BR><BR>The digest is difficult to reverse. Someone trying to 
+      impersonate Bob couldn't get the original message back from the 
+      digest.<BR>An impersonator would have a hard time finding a different 
+      message that computed to the same digest 
+      value.<BR><BR>所以，取代直接加密甲发来的原始信息，乙创建一个信息摘要并且加密该摘要。信息摘要由任意信息运算而来，并具有以下有用的特性：<BR><BR>1. 
+      从这个摘要值难以还原出原始信息。任何人即使伪装成乙，也不能从摘要值得到原始信息；<BR><BR>2. 
+      不同的信息很难计算出相同的摘要值；<BR><BR>By using a digest, Bob can protect himself. He 
+      computes the digest of the random message sent by Alice and then encrypts 
+      the result. He sends the encrypted digest back to Alice. Alice can compute 
+      the same digest and authenticate Bob by decrypting Bob's message and 
+      comparing 
+      values.<BR>使用摘要，乙能够保护自己。他计算甲发出的任意信息的摘要，加密摘要值，然后发送加密的摘要值给甲。甲能够计算出相同的摘要值并且解密乙的信息，最终认证乙。<BR>（译者注：摘要（Digest）算法又称为散列(Hash)算法）<BR><BR>GETTING 
+      CLOSER<BR>进一步的讨论<BR><BR>The technique just described is known as a digital 
+      signature. Bob has signed a message generated by Alice, and in doing so he 
+      has taken a step that is just about as dangerous as encrypting a random 
+      value originated by Alice. Consequently, our authentication protocol needs 
+      one more twist: some (or all) of the data needs to be originated by 
+      Bob.<BR><BR>A-&gt;B &nbsp;hello, are you bob?<BR>B-&gt;A &nbsp; 
+      &nbsp;Alice, This Is bob { digest[Alice, This Is Bob] } 
+      bobs-private-key<BR><BR>When he uses this protocol, Bob knows what message 
+      he is sending to Alice, and he doesn't mind signing it. He sends the 
+      unencrypted version of the message first, "Alice, This Is Bob." Then he 
+      sends the digested-encrypted version second. Alice can easily verify that 
+      Bob is Bob, and Bob hasn't signed anything he doesn't want 
+      to.<BR><BR>刚刚讨论的技术称为数字签名。乙直接在甲产生的信息上签名，这样做和加密甲产生的任意信息是同样危险的。因此我们的验证协议还需要加一些技巧：某些或全部信息需要由乙产生：<BR><BR>甲——〉乙：你好，你是乙么?<BR>乙——〉甲：甲，我是乙 
+      {摘要[甲，我是乙] } 
+      乙的私钥<BR><BR>使用这个协议，乙知道他发送给甲的信息的内容，他不介意在上面签名。他先发送不加密的信息，"甲，我是乙"，然后发送该信息的加密后的摘要。甲可以非常方便地核实乙就是乙，同时，乙还没有在他不想签名的信息上签名。<BR><BR>HANDING 
+      OUT PUBLIC KEYS<BR>分发公钥<BR><BR>How does Bob hand out his public key in a 
+      trustworthy way? Let's say the authentication protocol looks like 
+      this:<BR><BR>A-&gt;B &nbsp; hello<BR>B-&gt;A &nbsp;Hi, I'm Bob, 
+      bobs-public-key<BR>A-&gt;B prove it<BR>B-&gt;A Alice, This Is bob &nbsp;{ 
+      digest[Alice, This Is Bob] } 
+      bobs-private-key<BR><BR>那么，乙怎样以可信的方式提交他的公钥呢？看看如下所示的验证协议：<BR><BR>甲——〉乙：你好<BR>乙——〉甲：嗨，我是乙，乙的公钥<BR>甲——〉乙：请证明<BR>乙——〉甲：甲，我是乙 
+      {摘要[甲，我是乙] } 乙的私钥<BR><BR>With this protocol, anybody can be Bob. All you 
+      need is a public and private key. You lie to Alice and say you are Bob, 
+      and then you provide your public key instead of Bob's. Then you prove it 
+      by encrypting something with the private key you have, and Alice can't 
+      tell you're not 
+      Bob.<BR>使用这个协议，任何人都能够成为"乙"。只要你有一对公钥和私钥。你欺骗甲说你就是乙，只要提供你的公钥，而不是乙的公钥。然后，你发送用你的私钥加密的信息，证明你的身份。甲并不能发觉你并不是乙。<BR><BR>To 
+      solve this problem, the standards community has invented an object called 
+      a certificate. A certificate has the following content:<BR><BR>The 
+      certificate issuer's name<BR>The entity for whom the certificate is being 
+      issued (aka the subject)<BR>The public key of the subject<BR>Some time 
+      stamps<BR><BR>The certificate is signed using the certificate issuer's 
+      private key. Everybody knows the certificate issuer's public key (that is, 
+      the certificate issuer has a certificate, and so on...). Certificates are 
+      a standard way of binding a public key to a 
+      name.<BR><BR>为了解决这个问题，标准化组织发明了证书。一个证书有以下的内容：<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      证书发行者的名称<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      被发给证书的实体（也称为主题）<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      主题的公钥<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      一些时间戳<BR><BR>证书使用发行者的私钥加密。每一个人都知道证书发行者的公钥（就是说，每个证书的发行者也拥有一个证书，以此类推）。证书是一个把公钥与一个名称绑定的标准方式。<BR><BR>By 
+      using this certificate technology, everybody can examine Bob's certificate 
+      to see whether it's been forged. Assuming that Bob keeps tight control of 
+      his private key and that it really is Bob who gets the certificate, then 
+      all is well. Here is the amended protocol:<BR><BR>A-&gt;B &nbsp; 
+      hello<BR>B-&gt;A Hi, I'm Bob, bobs-certificate<BR>A-&gt;B prove 
+      it<BR>B-&gt;A Alice, This Is bob { digest[Alice, This Is Bob] } 
+      bobs-private-key<BR><BR>Now when Alice receives Bob's first message, she 
+      can examine the certificate, check the signature (as above, using a digest 
+      and public key decryption), and then check the subject (that is, Bob's 
+      name) and see that it is indeed Bob. She can then trust that the public 
+      key is Bob's public key and request Bob to prove his identity. Bob goes 
+      through the same process as before, making a message digest of his design 
+      and then responding to Alice with a signed version of it. Alice can verify 
+      Bob's message digest by using the public key taken from the certificate 
+      and checking the 
+      result.<BR><BR>通过使用证书技术，每个人都可以检查乙的证书，判断其是否被伪造。假设乙控制好他的私钥，并且他确实是得到证书的乙，就万事大吉了。下面是修订后的协议：<BR><BR>甲——〉乙：你好<BR>乙——〉甲：嗨，我是乙，乙的证书<BR>甲——〉乙：请证明<BR>乙——〉甲：甲，我是乙 
+      {摘要[甲， 我是乙] } 
+      乙的私钥<BR><BR>现在当甲收到乙的第一个信息，他能检查证书，核查证书上的签名（如上所述，使用摘要和公钥解密），检查证书中的主题（这里是乙的姓名），确定是乙。他就能相信公钥就是乙的公钥，然后要求乙证明自己的身份。乙通过前面描述过的过程，制作一个信息摘要，用一个签名版本答复甲。甲可以通过使用从证书上得到的公钥检验乙的信息摘要，并对比结果。<BR><BR>A 
+      bad guy - let's call him Mallet - can do the following:<BR><BR>A-&gt;M 
+      hello<BR>M-&gt;A Hi, I'm Bob, bobs-certificate<BR>A-&gt;M prove 
+      it<BR>M-&gt;A &nbsp; ????<BR><BR>But Mallet can't satisfy Alice in the 
+      final message. Mallet doesn't have Bob's private key, so he can't 
+      construct a message that Alice will believe came from 
+      Bob.<BR><BR>假设有一个坏小子，我们称他为H，他可以这么做：<BR><BR>甲——〉H：你好<BR>H——〉甲：你好，我是乙，乙的证书<BR>甲——〉H：请证明<BR>H——〉甲：？？？<BR><BR>H不能满足甲的最后一个信息，他没有乙的私钥，因此他不能建立一个令甲相信是来自乙的信息。<BR><BR>EXCHANGING 
+      A SECRET<BR>交换密钥（secret）<BR><BR>Once Alice has authenticated Bob, she can 
+      do another thing - she can send Bob a message that only Bob can 
+      decode:<BR><BR>A-&gt;B &nbsp; {secret}bobs-public-key<BR><BR><BR>The only 
+      way to find the secret is by decrypting the above message with Bob's 
+      private key. Exchanging a secret is another powerful way of using public 
+      key cryptography. Even if the communication between Alice and Bob is being 
+      observed, nobody but Bob can get the 
+      secret.<BR><BR>一旦甲已经验证乙后，他就可以做另外的事情了--发送给乙一个只有乙可以解密、阅读的（另一个）密钥：<BR><BR>甲——〉乙：{ 
+      secret 
+      }乙的公钥<BR><BR>只有使用乙的私钥才能解密上述信息，得到secret（另一个密钥）。交换（额外的）密钥是公钥密码术提供的另一个强有力的手段。即使在甲和乙之间的通讯被侦听，只有乙才能得到密钥。<BR><BR>This 
+      technique strengthens Internet security by using the secret as another 
+      key, but this time it's a key to a symmetric cryptographic algorithm (such 
+      as DES, RC4, or IDEA). Alice knows the secret because she generated it 
+      before sending it to Bob. Bob knows the secret because Bob has the private 
+      key and can decrypt Alice's message. Because they both know the secret, 
+      they can both initialize a symmetric cipher algorithm and then start 
+      sending messages encrypted with it. Here is a revised 
+      protocol:<BR><BR>A-&gt;B &nbsp;hello<BR>B-&gt;A &nbsp;Hi, I'm Bob, 
+      bobs-certificate<BR>A-&gt;B &nbsp;prove it<BR>B-&gt;A &nbsp;Alice, This Is 
+      bob { digest[Alice, This Is Bob] } bobs-private-key<BR>A-&gt;B ok bob, 
+      here is a secret {secret} bobs-public-key<BR>B-&gt;A some 
+      message}secret-key<BR>&nbsp;<BR>How secret-key is computed is up to the 
+      protocol being defined, but it could simply be a copy of 
+      secret.<BR><BR>使用secret作为另一个密钥增强了网络的安全性，但是现在这个密钥将用于对称加密算法的（例如DES、RC4、IDEA）。（译者注：公钥算法在加密大信息量时开销比较大，所以在加密大信息量时一般采用对称加密算法，常规通讯使用公钥系统是不堪重负的。所以本文在身份验证后要利用公钥系统的可靠性交换一个对称加密的密钥，以后的通讯就采用对称加密算法进行保护。）因为是甲在发送给乙之前产生的密钥，所以甲知道这个密钥。乙也知道密钥，因为乙有私钥，能够解密甲的信息。由于他们都知道密钥，他们就都能够初始化一个对称加密算法，从开始发送（用对称加密算法）加密后的信息。下面是修定后的协议：<BR><BR>甲——〉乙：你好<BR>乙——〉甲：嗨，我是乙，乙的证书<BR>甲——〉乙：请证明<BR>乙——〉甲：甲，我是乙 
+      {摘要[甲，我是乙] }乙的私钥<BR>甲——〉乙：你好乙，这里是密钥 {secret}乙的公钥<BR>乙——〉甲：{some 
+      message}secret-key<BR><BR>（对称密钥）secret-key是如何计算出来的，完全由（双方定义的）通讯协议自已决定，当然可以简单地就把secret做为secret-key。<BR><BR>YOU 
+      SAID WHAT?<BR>你在说什么？<BR><BR>Mallet's bag contains a few more tricks. 
+      Although Mallet can't discover the secret that Alice and Bob have 
+      exchanged, he can interfere in their conversation by damaging it. For 
+      example, if Mallet is sitting between Alice and Bob, he can choose to pass 
+      most information back and forth unchanged but mangle certain messages 
+      (easy for him to do because he knows the protocol that Alice and Bob are 
+      speaking):<BR>H还有其他花招。虽然不知道发现甲和乙已经交换的密钥，但H能干扰他们的交谈。如果黑客H在甲和乙（的通讯链路的）中间，他可以放过大部分信息，选择破坏一定的信息（这是非常简单的，因为他知道甲和乙通话采用的协议）：<BR><BR>A-&gt;M 
+      &nbsp;hello<BR>M-&gt;B &nbsp;hello<BR><BR>B-&gt;M &nbsp;Hi, I'm Bob, 
+      bobs-certificate<BR>M-&gt;A &nbsp;Hi, I'm Bob, 
+      bobs-certificate<BR><BR>A-&gt;M &nbsp;prove it<BR>M-&gt;B &nbsp;prove 
+      it<BR><BR>B-&gt;M &nbsp;Alice, This Is bob { digest[Alice, This Is Bob] } 
+      bobs-private-key<BR>M-&gt;A &nbsp;Alice, This Is bob { digest[Alice, This 
+      Is Bob] } bobs-private-key<BR><BR>A-&gt;M &nbsp;ok bob, here is a secret 
+      {secret} bobs-public-key<BR>M-&gt;B &nbsp;ok bob, here is a secret 
+      {secret} bobs-public-key<BR><BR>B-&gt;M &nbsp;{some 
+      message}secret-key<BR>M-&gt;A &nbsp;Garble[ {some message}secret-key 
+      ]<BR><BR>Mallet passes the data through without modification until Alice 
+      and Bob share a secret. Then Mallet gets in the way by garbling Bob's 
+      message to Alice. By this point Alice trusts Bob, so she may believe the 
+      garbled message and try to act on it. Note that Mallet doesn't know the 
+      secret - all he can do is damage the data encrypted with the secret key. 
+      Depending on the protocol, Mallet may not produce a valid message. Then 
+      again, he may get 
+      lucky.<BR><BR>甲——〉H：你好<BR>H——〉乙：你好<BR><BR>乙——〉H：嗨，我是乙，乙的证书<BR>H——〉甲：嗨，我是乙，乙的证书<BR><BR>甲——〉H：请证明<BR>H——〉乙：请证明<BR><BR>乙——〉H：甲，我是乙 
+      {摘要[甲，我是乙] }乙的私钥<BR>H——〉甲：甲，我是乙 {摘要[甲，我是乙] }乙的私钥<BR><BR>甲——〉H：你好，乙，这里是密钥 
+      {secret} 乙的公钥<BR>H——〉乙：你好，乙，这里是密钥 {secret} 乙的公钥<BR><BR>乙——〉H：{some 
+      message}secret-key<BR>H——〉甲：Garble[{s ome message}secret-key 
+      ]<BR><BR>H忽略一些数据不修改，直到甲和乙交换密钥。然后H干扰乙给甲的信息。在这时，甲已经信任乙，所以他可能相信已经被干扰的信息并且尽力解密。需要注意的是，H不知道密钥，他所能做的就是毁坏使用密钥加密后的数据。基于协议，H可能不能产生一个有效的信息。但下一次呢？<BR><BR>To 
+      prevent this kind of damage, Alice and Bob can introduce a message 
+      authentication code (MAC) into their protocol. A MAC is a piece of data 
+      that is computed by using a secret and some transmitted data. The digest 
+      algorithm described above has just the right properties for building a MAC 
+      function that can defend against Mallet:<BR><BR>&nbsp;MAC := Digest[ some 
+      message, secret ] &nbsp;<BR><BR>Because Mallet doesn't know the secret, he 
+      can't compute the right value for the digest. Even if Mallet randomly 
+      garbles messages, his chance of success is small if the digest data is 
+      large. For example, by using MD5 (a good cryptographic digest algorithm 
+      invented by RSA), Alice and Bob can send 128-bit MAC values with their 
+      messages. The odds of Mallet's guessing the right MAC are approximately 1 
+      in 18,446,744,073,709,551,616 - for all practical purposes, 
+      never.<BR><BR>为了阻止这种破坏，甲和乙可以在他们的协议中引入一个信息验证码（message authentication 
+      code，以下称MAC）。MAC是根据密钥和被传输的信息计算出的一段数据。前面描述的摘要算法的特性在生成MAC时正好可以派上用场，用来抵御H的攻击：<BR><BR>MAC= 
+      Digest[some message，secret 
+      ]<BR><BR>因为H不知道密钥，他不能计算出正确的摘要值。即使H随机干扰信息，只要数据量大，他成功的机会微乎其微。例如，使用MD5（一个RSA发明的好的加密摘要算法），甲和乙能够给他们的信息加上128位MAC值。H猜测正确的MAC的几率将近1/18，446，744，073，709，551，616，约等于零。<BR><BR>Here 
+      is the sample protocol, revised yet again:<BR><BR>A-&gt;B hello<BR>B-&gt;A 
+      Hi, I'm Bob, bobs-certificate<BR>A-&gt;B prove it<BR>B-&gt;A &nbsp; Alice, 
+      This Is bob { digest[Alice, This Is Bob] } bobs-private-key<BR>A-&gt;B 
+      &nbsp;ok bob, here is a secret {secret} bobs-public-key<BR>B-&gt;A {some 
+      message, MAC}secret-key<BR><BR>Mallet is in trouble now. He can garble 
+      messages all he wants, but the MAC computations will reveal him for the 
+      fraud he is. Alice or Bob can discover the bogus MAC value and stop 
+      talking. Mallet can no longer put words in Bob's 
+      mouth.<BR><BR>下面又一次修改后的协议：<BR><BR>甲——〉乙：你好<BR>乙——〉甲：嗨，我是乙，乙的证书<BR>甲——〉乙：请证明<BR>乙——〉甲：甲，我是乙 
+      {摘要[甲，我是乙] } 乙的私钥<BR>甲——〉乙：你好，乙，这是密钥 {secret} 乙的公钥<BR>乙——〉甲：{some 
+      message，MAC}secret-key<BR><BR>现在H已经无技可施了。他可以干扰任何信息，但MAC计算能够发现他的诡计。甲和乙能够发现伪造的MAC值并且停止交谈。H不再能假借乙通讯。<BR><BR>WHEN 
+      WAS THAT SAID?<BR><BR>Last but not least to protect against is Mallet the 
+      Parrot. If Mallet is recording conversations, he may not understand them 
+      but he can replay them. In fact, Mallet can do some really nasty things 
+      sitting between Alice and Bob. The solution is to introduce random 
+      elements from both sides of the 
+      conversation.<BR>仅仅防范H的学舌式攻击是不够的。如果H记录下（甲和乙的）通讯，虽然他不能明白（通讯的）含义，但是他可以重现（通讯）。事实上，隐藏在甲和乙中间的H可以做一些颇具威助的攻击。解决方案是在双方通讯中引入随机因素。<BR><BR><BR></P></TD></TR></TBODY></TABLE></BODY></HTML>

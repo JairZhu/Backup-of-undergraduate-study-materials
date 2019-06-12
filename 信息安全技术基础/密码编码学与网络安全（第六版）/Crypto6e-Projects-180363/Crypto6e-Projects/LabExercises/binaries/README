@@ -1,0 +1,33 @@
+README - lab3
+
+In this folder you will find the following files:
+
+- client: binary file of the client compiled on LINUX
+- server: binary file of the server compiled on LINUX
+- authserver: binary file of the Authentication Server compiled on LINUX
+
+Following is an example of how this binaries should be executed.
+1. Open a terminal
+ 
+2. Write in the command line: ./authserver  <authserverport>  <clientID>  <clientkey>  <serverID> <serverkey>
+	for example: ./authserver 9877 ALICE 0123456789abcdef BOB 40fedf386da13d57
+
+3. Write in the command line: ./server  <server port>  <authserverkey> <input file>
+	for example: ./server 9977 40fedf386da13d57 input.txt
+
+4. On a different terminal, Write in the command line: 
+	./client  <authservername> <authserverport> <authserverkey> <server name> <server port> <output file> <clientID> <serverID>
+	for example: ./client msee190pcXX 9877 0123456789abcdef msee190pcXX 9977 output.txt ALICE BOB
+	 Where XX is the number of the machine you are using at msee190.
+
+These test programs have an extra feature, a DEBUG option. If DEBUG is enable, these programs will
+print out to screen several information that could be useful to verify you implementation. To activate
+this option, do the following:
+For example, for the server (It also applies for client and authserver):
+	Write in the command line: ./server 9977 40fedf386da13d57 input.txt -DDEBUG
+
+Extra Notes:
+1. This binaries only run on Linux machines (such as msee190 PCs) because of compatibility issues with 
+the Openssl library that is installed on ECE Sun machines
+2. Network byte order conversion has been applied to several packet fields. Therefore, when running your
+test, be sure to check that you are doing the right byte order conversion.

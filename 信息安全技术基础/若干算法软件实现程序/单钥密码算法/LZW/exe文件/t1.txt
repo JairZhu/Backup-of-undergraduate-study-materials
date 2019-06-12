@@ -1,0 +1,69 @@
+     AppWizard has created a Text Xplore project for you. It is the
+starting point for writing your custom Xplore application. It demonstrates the
+basics of creating a custom Xplore application.
+     Besides creating all the necessary files, Xplore AppWizard has added two extra
+project configurations for SDS and GNU builds. It enables you to cross compile
+for the Xplore platform in a convenient way. Having SDS and/or GNU development
+tools installed is a prerequisite.
+This file contains a summary of what you will find in each of the files that
+make up your Text Xplore project.
+
+Text.dsw
+    This file (the project workspace file) contains information on the contents
+    and organization of the project workspace. Other users can share the project
+	workspace (.dsw) file, but they should export the makefiles locally.
+
+    Files associated with the project workspace file are a project file (.dsp)
+    for each project in the workspace and a workspace options file (.opt).
+
+Text.dsp
+    This file (the project file) contains information at the project level and
+    is used to build a single project or subproject. Other users can share the
+    project (.dsp) file, but they should export the makefiles locally.
+    
+Text.opt
+    This file (the workspace options file) contains the workspace settings that
+    you specify in the Project Settings dialog. These settings specify the
+    appearance of the project workspace using your hardware and configuration.
+
+    This binary file is automatically generated when you open the .dsw or .dsp
+    file in the IDE. You should not share the .opt file, because it contains
+    information specific to your computer.
+
+Text.ncb
+    This file provides information on the NCB (No Compile Browse) parser, the
+    mechanism that updates ClassView and WizardBar.
+
+    This is a binary file that is generated automatically and should not be
+    shared.
+
+Text.c
+    This file is the main Xplore project source file that contains the
+    definition of XploreMain().
+
+Text.h
+    This file is the main header file for the Xplore project. It includes three
+	standard header files : XTYPE.H, XSTRUCT.H and XPLOREOS.H files.
+
+Text.set
+    This file contains the setting of the Xplore application. It includes the
+    class to which it belongs, its English and Chinese name, location of icon
+    resource and stack size it uses.
+
+TextS.bmp, TextT.bmp, TextE.bmp
+    These files are bitmap resource of application icons in simplified Chinese,
+    traditional Chinese and English respectively.
+
+Xplore is the registered trademark of Group Sense Limited.
+SDS is the registered trademark of Software Development Systems, Inc.
+GNU is the registered trademark of Free Software Foundation, Inc.
+
+Other Notes:
+
+Xplore AppWizard uses "TODO:" to indicate parts of the source code you should
+add to or customize.
+
+9.1 Effects of minimum improvement
+The first experiment (Figure 5) shows the effect of different minimp settings as minsup is
+varied. Minconf in these experiments is left unspecified, which disables pruning with the minimum
+confidence constraint. 

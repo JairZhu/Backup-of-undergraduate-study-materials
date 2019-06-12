@@ -1,0 +1,277 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Digsig.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Digsig.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Digsig"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Digsig 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2004",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_DIGSIG_DIALOG DIALOGEX 0, 0, 308, 163
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Digsig"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "定位",IDC_LOCATION,13,23,280,120
+    CONTROL         "Tab1",IDC_FORMTAB,"SysTabControl32",0x0,7,7,294,148
+END
+
+IDD_GENKEY DIALOGEX 0, 0, 280, 120
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_GENK_N,36,16,179,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_GENK_D,36,50,179,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_GENK_E,36,33,179,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "生成秘钥",IDC_GENKEY,50,80,38,14
+    CTEXT           "N",IDC_STATIC,13,17,18,10
+    CTEXT           "E",IDC_STATIC,14,34,17,10
+    CTEXT           "D",IDC_STATIC,13,50,19,10
+    PUSHBUTTON      "保存私钥",IDC_SAVE_PK,101,80,38,14
+    PUSHBUTTON      "保存公钥",IDC_SAVE_UK,151,80,38,14
+END
+
+IDD_GENSIG DIALOGEX 0, 0, 280, 120
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_GENS_PK,31,13,192,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "导入私钥",IDC_GENS_IMPK,227,13,37,14
+    EDITTEXT        IDC_GENS_F,32,36,192,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "选择文件",IDC_GENS_IMF,227,36,38,14
+    EDITTEXT        IDC_GENS_S,32,57,192,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "生成签名",IDC_GENSIG,227,57,38,14
+    PUSHBUTTON      "保存签名",IDC_GENS_SAVE,227,76,38,14
+    CTEXT           "私钥",IDC_STATIC,7,14,22,11,SS_CENTERIMAGE
+    CTEXT           "文件",IDC_STATIC,7,36,22,11,SS_CENTERIMAGE
+    CTEXT           "签名",IDC_STATIC,7,58,22,11,SS_CENTERIMAGE
+END
+
+IDD_CERSIG DIALOGEX 0, 0, 280, 120
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_CERS_UK,31,13,192,13,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "公钥",IDC_STATIC,7,13,22,11,SS_CENTERIMAGE
+    PUSHBUTTON      "导入公钥",IDC_CERS_IMUK,227,13,37,14
+    EDITTEXT        IDC_CERS_F,31,31,192,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "选择文件",IDC_CERS_IMF,228,31,37,14
+    EDITTEXT        IDC_CERS_SIG,31,52,192,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "导入签名",IDC_CERS_IMSIG,228,52,37,14
+    PUSHBUTTON      "验证签名",IDC_CERS,227,72,37,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Digsig Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Digsig\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Digsig.EXE\0"
+            VALUE "ProductName", "Digsig 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIGSIG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 156
+    END
+
+    IDD_GENKEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+    END
+
+    IDD_GENSIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_CERSIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Digsig(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Digsig.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

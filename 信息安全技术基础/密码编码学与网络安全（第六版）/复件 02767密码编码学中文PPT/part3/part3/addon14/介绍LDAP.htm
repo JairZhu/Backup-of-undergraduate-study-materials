@@ -1,0 +1,769 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0107)file://C:\FileCache\Temporary Internet Files\Content.IE5\GHWDQ3CD\D__DOCUME~1_ADMINI~1_桌面_介绍LDAP[1].htm -->
+<!-- saved from url=(0057)http://www.linuxaid.com.cn/engineer/brimmer/html/LDAP.htm --><HTML><HEAD><TITLE>介绍LDAP</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GB2312">
+<STYLE>.Normal {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 12pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify
+}
+.MsoListBullet {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 12pt; TEXT-INDENT: -21pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify; tab-stops: list 42.0pt
+}
+.a {
+	TEXT-JUSTIFY: inter-ideograph; FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: "Courier New"; TEXT-ALIGN: justify
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.2523" name=GENERATOR></HEAD>
+<BODY class=Normal lang=ZH-CN vLink=purple link=blue>
+<DIV style="LAYOUT-GRID:  15.6pt none">
+<H1 style="TEXT-ALIGN: center" align=center><SPAN 
+style="FONT-FAMILY: 宋体">介绍</SPAN><SPAN lang=EN-US>LDAP</SPAN></H1>
+<P><B><SPAN style="FONT-FAMILY: 宋体">原文：</SPAN><SPAN lang=EN-US><A 
+href="http://ldapman.org/articles/intro_to_ldap.html">http://ldapman.org/articles/intro_to_ldap.html</A></SPAN></B></P>
+<P><B><SPAN style="FONT-FAMILY: 宋体">原文作者：</SPAN><SPAN lang=EN-US><A 
+href="mailto:donnelly@ldapman.org">Michael Donnelly</A></SPAN></B><SPAN 
+lang=EN-US> </SPAN></P>
+<P><B><SPAN style="FONT-FAMILY: 宋体">翻译：</SPAN><SPAN lang=EN-US><A 
+href="mailto:brimmer@linuxaid.com.cn">Brimmer</A></SPAN></B></P>
+<P><SPAN style="FONT-FAMILY: 宋体">如果你在计算机行业工作，那么对</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">可能早有耳闻了。想深入地了解</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">吗？那么可以好好地读一下这篇文章。这篇介绍性的文章是一系列介绍如何在企业中设计、实现和集成</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">环境的文章的头一篇。主要是先让你熟悉一下</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的基本概念，那些比较困难的细节问题将放到以后讨论。在这篇文章中我们将要介绍：</SPAN></P>
+<P><SPAN lang=EN-US><A 
+href="http://www.linuxaid.com.cn/engineer/brimmer/html/LDAP.htm#_什么是LDAP?"><SPAN 
+style="FONT-FAMILY: 宋体">什么是</SPAN>LDAP?</A></SPAN></P>
+<P><SPAN lang=EN-US><A 
+href="http://www.linuxaid.com.cn/engineer/brimmer/html/LDAP.htm#_什么时候该用LDAP存储数据？"><SPAN 
+style="FONT-FAMILY: 宋体">什么时候该用</SPAN>LDAP<SPAN 
+style="FONT-FAMILY: 宋体">存储数据？</SPAN></A></SPAN></P>
+<P><SPAN lang=EN-US><A 
+href="http://www.linuxaid.com.cn/engineer/brimmer/html/LDAP.htm#_LDAP目录树的结构">LDAP<SPAN 
+style="FONT-FAMILY: 宋体">目录树的结构</SPAN></A></SPAN></P>
+<P><SPAN lang=EN-US><A 
+href="http://www.linuxaid.com.cn/engineer/brimmer/html/LDAP.htm#_单独的LDAP记录"><SPAN 
+style="FONT-FAMILY: 宋体">单独的</SPAN>LDAP<SPAN 
+style="FONT-FAMILY: 宋体">记录</SPAN></A></SPAN></P>
+<P><SPAN lang=EN-US><A 
+href="http://www.linuxaid.com.cn/engineer/brimmer/html/LDAP.htm#_作为例子的一个单独的数据项"><SPAN 
+style="FONT-FAMILY: 宋体">作为例子的一个单独的数据项</SPAN></A></SPAN></P>
+<P><SPAN lang=EN-US><A 
+href="http://www.linuxaid.com.cn/engineer/brimmer/html/LDAP.htm#_LDAP复制">LDAP<SPAN 
+style="FONT-FAMILY: 宋体">复制</SPAN></A></SPAN></P>
+<P><SPAN lang=EN-US><A 
+href="http://www.linuxaid.com.cn/engineer/brimmer/html/LDAP.htm#_安全和访问控制"><SPAN 
+style="FONT-FAMILY: 宋体">安全和访问控制</SPAN></A></SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">现在</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">技术不仅发展得很快而且也是激动人心的。在企业范围内实现</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">可以让运行在几乎所有计算机平台上的所有的应用程序从</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录中获取信息。</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录中可以存储各种类型的数据：电子邮件地址、邮件路由信息、人力资源数据、公用密匙、联系人列表，等等。通过把</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录作为系统集成中的一个重要环节，可以简化员工在企业内部查询信息的步骤，甚至连主要的数据源都可以放在任何地方。如果</SPAN><SPAN 
+lang=EN-US>Oracle</SPAN><SPAN style="FONT-FAMILY: 宋体">、</SPAN><SPAN 
+lang=EN-US>Sybase</SPAN><SPAN style="FONT-FAMILY: 宋体">、</SPAN><SPAN 
+lang=EN-US>Informix</SPAN><SPAN style="FONT-FAMILY: 宋体">或</SPAN><SPAN 
+lang=EN-US>Microsoft SQL</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">数据库中已经存储了类似的数据，那么</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">和这些数据库到底有什么不同呢？是什么让它更具优势？请继续读下去吧！</SPAN></P>
+<H2><A name=_什么是LDAP?></A><SPAN style="FONT-FAMILY: 黑体">什么是</SPAN><SPAN 
+lang=EN-US>LDAP?</SPAN></H2>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">的英文全称是</SPAN><SPAN 
+lang=EN-US style="COLOR: black">Lightweight Directory Access 
+Protocol</SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体">，一般都简称为</SPAN><SPAN 
+lang=EN-US style="COLOR: black">LDAP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">。它是基于</SPAN><SPAN lang=EN-US 
+style="COLOR: black">X.500</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">标准的，但是简单多了并且可以根据需要定制。与</SPAN><SPAN 
+lang=EN-US style="COLOR: black">X.500</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">不同，</SPAN><SPAN lang=EN-US 
+style="COLOR: black">LDAP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">支持</SPAN><SPAN lang=EN-US 
+style="COLOR: black">TCP/IP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">，这对访问</SPAN><SPAN lang=EN-US 
+style="COLOR: black">Internet</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">是必须的。</SPAN><SPAN lang=EN-US 
+style="COLOR: black">LDAP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">的核心规范在</SPAN><SPAN lang=EN-US 
+style="COLOR: black">RFC</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">中都有定义，所有与</SPAN><SPAN lang=EN-US 
+style="COLOR: black">LDAP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">相关的</SPAN><SPAN lang=EN-US 
+style="COLOR: black">RFC</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">都可以在</SPAN><SPAN lang=EN-US 
+style="COLOR: black"><A href="http://www.ldapman.org/ldap_rfcs.html">LDAPman 
+RFC</A></SPAN><SPAN style="COLOR: black; FONT-FAMILY: 宋体">网页中找到。</SPAN></P>
+<H3><SPAN style="FONT-FAMILY: 宋体">怎么使用</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">这个术语呢？</SPAN></H3>
+<P><SPAN style="FONT-FAMILY: 宋体">在日常交谈中，你可能会听到有些人这么说：“我们要把那些东西存在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">中吗？”，或者“从</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">数据库中取出那些数据！”，又或者“我们怎么把</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">和关系型数据库集成在一起？”。严格地说，</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">根本不是数据库而是用来访问存储在信息目录（也就是</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录）中的信息的<B>协议</B>。更为确切和正式的说法应该是象这样的：“通过使用</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">，可以在信息目录的正确位置读取（或存储）数据”。但是，也没有必要吹毛求疵，尽管表达得不够准确，我们也都知道对方在说什么。</SPAN></P>
+<H3><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录是数据库吗？</SPAN></H3>
+<P><SPAN style="FONT-FAMILY: 宋体">就象</SPAN><SPAN lang=EN-US>Sybase</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">、</SPAN><SPAN lang=EN-US>Oracle</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">、</SPAN><SPAN lang=EN-US>Informix</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">或</SPAN><SPAN lang=EN-US>Microsoft</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的数据库管理系统（</SPAN><SPAN lang=EN-US>DBMS</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）是用于处理查询和更新关系型数据库那样，</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">服务器也是用来处理查询和更新</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录的。换句话来说</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录也是<B>一种类型</B>的数据库，但是不是关系型数据库。不象被设计成每分钟需要处理成百上千条数据变化的数据库，例如：在电子商务中经常用到的在线交易处理（</SPAN><SPAN 
+lang=EN-US>OLTP</SPAN><SPAN style="FONT-FAMILY: 宋体">）系统，</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">主要是优化数据读取的性能。</SPAN></P>
+<H3><SPAN lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录的优势</SPAN></H3>
+<P><SPAN style="FONT-FAMILY: 宋体">现在该说说</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录到底有些什么优势了。现在</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的流行是很多因数共同作用的结果。我在这里说的不过是一些基本的原因，请你注意一下这不过是一小部分原因。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">可能</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">最大的优势是：可以在任何计算机平台上，用很容易获得的而且数目不断增加的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">的客户端程序访问</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录。而且也很容易定制应用程序为它加上</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">的支持。</SPAN></P>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">协议是跨平台的和标准的协议，因此应用程序就不用为</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录放在什么样的服务器上操心了。实际上，</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">得到了业界的广泛认可，因为它是</SPAN><SPAN 
+lang=EN-US>Internet</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的标准。产商都很愿意在产品中加入对</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的支持，因为他们根本不用考虑另一端（客户端或服务端）是怎么样的。</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器可以是任何一个开发源代码或商用的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录服务器（或者还可能是具有</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">界面的关系型数据库），因为可以用同样的协议、客户端连接软件包和查询命令与</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">服务器进行交互。与</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">不同的是，如果软件产商想在软件产品中集成对</SPAN><SPAN 
+lang=EN-US>DBMS</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的支持，那么通常都要对每一个数据库服务器单独定制。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">不象很多商用的关系型数据库，你不必为</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">的每一个客户端连接或许可协议付费。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">大多数的</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器安装起来很简单，也容易维护和优化。</SPAN></P>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器可以用“推”或“拉”的方法复制部分或全部数据，例如：可以把数据“推”到远程的办公室，以增加数据的安全性。复制技术是内置在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器中的而且很容易配置。如果要在</SPAN><SPAN 
+lang=EN-US>DBMS</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">中使用相同的复制功能，数据库产商就会要你支付额外的费用，而且也很难管理。</SPAN></P>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">允许你根据需要使用</SPAN><SPAN lang=EN-US>ACI</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">（一般都称为</SPAN><SPAN lang=EN-US>ACL</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">或者访问控制列表）控制对数据读和写的权限。例如，设备管理员可以有权改变员工的工作地点和办公室号码，但是不允许改变记录中其它的域。</SPAN><SPAN 
+lang=EN-US>ACI</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">可以根据谁访问数据、访问什么数据、数据存在什么地方以及其它对数据进行访问控制。因为这些都是由</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录服务器完成的，所以不用担心在客户端的应用程序上是否要进行安全检查。</SPAN></P>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">对于这样存储这样的信息最为有用，也就是数据需要从不同的地点读取，但是不需要经常更新。例如，这些信息存储在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录中是十分有效的：</SPAN></P>
+<P class=MsoListBullet><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">公司员工的电话号码簿和组织结构图</SPAN></P>
+<P class=MsoListBullet><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">客户的联系信息</SPAN></P>
+<P class=MsoListBullet><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">计算机管理需要的信息，包括</SPAN><SPAN 
+lang=EN-US>NIS</SPAN><SPAN style="FONT-FAMILY: 宋体">映射、</SPAN><SPAN 
+lang=EN-US>email</SPAN><SPAN style="FONT-FAMILY: 宋体">假名，等等</SPAN></P>
+<P class=MsoListBullet><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">软件包的配置信息</SPAN></P>
+<P class=MsoListBullet><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">公用证书和安全密匙</SPAN></P>
+<H2><A name=_什么时候该用LDAP存储数据></A><A name=_什么时候该用LDAP存储数据？></A><SPAN 
+style="FONT-FAMILY: 黑体">什么时候该用</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 黑体">存储数据？</SPAN></H2>
+<P><SPAN style="COLOR: black; FONT-FAMILY: 宋体">大多数的</SPAN><SPAN lang=EN-US 
+style="COLOR: black">LDAP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">服务器都为读密集型的操作进行专门的优化。因此，当从</SPAN><SPAN 
+lang=EN-US style="COLOR: black">LDAP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">服务器中读取数据的时候会比从专门为</SPAN><SPAN lang=EN-US 
+style="COLOR: black">OLTP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">优化的关系型数据库中读取数据快一个数量级。也是因为专门为读的性能进行优化，大多数的</SPAN><SPAN 
+lang=EN-US style="COLOR: black">LDAP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">目录服务器并不适合存储需要需要经常改变的数据。例如，用</SPAN><SPAN 
+lang=EN-US style="COLOR: black">LDAP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">服务器来存储电话号码是一个很好的选择，但是它不能作为电子商务站点的数据库服务器。</SPAN><SPAN 
+lang=EN-US style="COLOR: black"></SPAN></P>
+<P><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">如果下面每一个问题的答案都是“是”，那么把数据存在</SPAN><SPAN 
+lang=EN-US style="COLOR: black">LDAP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">中就是一个好主意。</SPAN><SPAN lang=EN-US 
+style="COLOR: black"></SPAN></P>
+<P class=MsoListBullet><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">需要在任何平台上都能读取数据吗？</SPAN></P>
+<P class=MsoListBullet><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">每一个单独的记录项是不是每一天都只有很少的改变？</SPAN></P>
+<P class=MsoListBullet><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">可以把数据存在平面数据库（</SPAN><SPAN 
+lang=EN-US>flat database</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）而不是关系型数据库中吗？换句话来说，也就是不管什么范式不范式的，把所有东西都存在一个记录中（差不多只要满足第一范式）。</SPAN></P>
+<P><SPAN 
+style="FONT-FAMILY: 宋体">最后一个问题可能会唬住一些人，其实用平面数据库去存储一些关系型的数据也是很一般的。例如，一条公司员工的记录就可以包含经理的登录名。用</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">来存储这类信息是很方便的。一个简单的判断方法：如果可以把保数据存在一张张的卡片里，就可以很容易地把它存在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录里。</SPAN></P>
+<H2><A name=_LDAP目录树的结构></A><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 黑体">目录树的结构</SPAN></H2>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录以树状的层次结构来存储数据。如果你对自顶向下的</SPAN><SPAN 
+lang=EN-US>DNS</SPAN><SPAN style="FONT-FAMILY: 宋体">树或</SPAN><SPAN 
+lang=EN-US>UNIX</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">文件的目录树比较熟悉，也就很容易掌握</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录树这个概念了。就象</SPAN><SPAN 
+lang=EN-US>DNS</SPAN><SPAN style="FONT-FAMILY: 宋体">的主机名那样，</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录记录的标识名（</SPAN><SPAN 
+lang=EN-US>Distinguished Name</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">，简称</SPAN><SPAN lang=EN-US>DN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）是用来读取单个记录，以及回溯到树的顶部。后面会做详细地介绍。</SPAN></P>
+<P><SPAN 
+style="FONT-FAMILY: 宋体">为什么要用层次结构来组织数据呢？原因是多方面的。下面是可能遇到的一些情况：</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体">如果你想把所有的美国客户的联系信息都“推”到位于到西雅图办公室（负责营销）的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器上，但是你不想把公司的资产管理信息“推”到那里。</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体">你可能想根据目录树的结构给予不同的员工组不同的权限。在下面的例子里，资产管理组对“</SPAN><SPAN 
+lang=EN-US>asset-mgmt</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">”部分有完全的访问权限，但是不能访问其它地方。</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">把</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">存储和复制功能结合起来，可以定制目录树的结构以降低对</SPAN><SPAN 
+lang=EN-US>WAN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">带宽的要求。位于西雅图的营销办公室需要每分钟更新的美国销售状况的信息，但是欧洲的销售情况就只要每小时更新一次就行了。</SPAN></P>
+<H3><SPAN style="FONT-FAMILY: 宋体">刨根问底：基准</SPAN><SPAN lang=EN-US>DN</SPAN></H3>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录树的最顶部就是根，也就是所谓的“基准</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">”。基准</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">通常使用下面列出的三种格式之一。假定我在名为</SPAN><SPAN 
+lang=EN-US>FooBar</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的电子商务公司工作，这家公司在</SPAN><SPAN 
+lang=EN-US>Internet</SPAN><SPAN style="FONT-FAMILY: 宋体">上的名字是</SPAN><SPAN 
+lang=EN-US>foobar.com</SPAN><SPAN style="FONT-FAMILY: 宋体">。</SPAN></P>
+<P class=a><B><SPAN lang=EN-US>o="FooBar, Inc.", c=US </SPAN></B></P>
+<P><I><SPAN style="COLOR: black; FONT-FAMILY: 宋体">（以</SPAN><SPAN lang=EN-US 
+style="COLOR: black">X.500</SPAN></I><I><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">格式表示的基准</SPAN><SPAN lang=EN-US 
+style="COLOR: black">DN</SPAN></I><I><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">）</SPAN><SPAN lang=EN-US 
+style="COLOR: black"></SPAN></I></P>
+<P><SPAN style="FONT-FAMILY: 宋体">在这个例子中，</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">o=FooBar, 
+Inc. </SPAN><SPAN style="FONT-FAMILY: 宋体">表示组织名，在这里就是公司名的同义词。</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">c=US 
+</SPAN><SPAN style="FONT-FAMILY: 宋体">表示公司的总部在美国。以前，一般都用这种方式来表示基准</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">。但是事物总是在不断变化的，现在所有的公司都已经（或计划）上</SPAN><SPAN 
+lang=EN-US>Internet</SPAN><SPAN style="FONT-FAMILY: 宋体">上。随着</SPAN><SPAN 
+lang=EN-US>Internet</SPAN><SPAN style="FONT-FAMILY: 宋体">的全球化，在基准</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">中使用国家代码很容易让人产生混淆。现在，</SPAN><SPAN 
+lang=EN-US>X.500</SPAN><SPAN style="FONT-FAMILY: 宋体">格式发展成下面列出的两种格式。</SPAN></P>
+<P class=a><B><SPAN lang=EN-US>o=foobar.com</SPAN></B></P>
+<P><I><SPAN style="FONT-FAMILY: 宋体">（用公司的</SPAN><SPAN 
+lang=EN-US>Internet</SPAN></I><I><SPAN 
+style="FONT-FAMILY: 宋体">地址表示的基准</SPAN><SPAN lang=EN-US>DN</SPAN></I><I><SPAN 
+style="FONT-FAMILY: 宋体">）</SPAN><SPAN lang=EN-US></SPAN></I></P>
+<P><SPAN style="FONT-FAMILY: 宋体">这种格式很直观，用公司的域名作为基准</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">。这也是现在最常用的格式。</SPAN></P>
+<P class=a><B><SPAN lang=EN-US>dc=foobar, dc=com</SPAN></B></P>
+<P><I><SPAN style="FONT-FAMILY: 宋体">（用</SPAN><SPAN 
+lang=EN-US>DNS</SPAN></I><I><SPAN 
+style="FONT-FAMILY: 宋体">域名的不同部分组成的基准</SPAN><SPAN 
+lang=EN-US>DN</SPAN></I><I><SPAN style="FONT-FAMILY: 宋体">）</SPAN><SPAN 
+lang=EN-US></SPAN></I></P>
+<P><SPAN style="FONT-FAMILY: 宋体">就象上面那一种格式，这种格式也是以</SPAN><SPAN 
+lang=EN-US>DNS</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">域名为基础的，但是上面那种格式不改变域名（也就更易读），而这种格式把域名：</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">foobar.com</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">分成两部分</SPAN> <SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">dc=foobar, 
+dc=com</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 黑体">。</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">在理论上，这种格式可能会更灵活一点，但是对于最终用户来说也更难记忆一点。考虑一下</SPAN><SPAN 
+lang=EN-US>foobar.com</SPAN><SPAN style="FONT-FAMILY: 宋体">这个例子。当</SPAN><SPAN 
+lang=EN-US>foobar.com</SPAN><SPAN style="FONT-FAMILY: 宋体">和</SPAN><SPAN 
+lang=EN-US>gizmo.com</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">合并之后，可以简单的把“</SPAN><SPAN lang=EN-US>dc=com</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">”当作基准</SPAN><SPAN lang=EN-US>DN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">。把新的记录放到已经存在的</SPAN><SPAN lang=EN-US>dc=gizmo, 
+dc=com</SPAN><SPAN style="FONT-FAMILY: 宋体">目录下，这样就简化了很多工作（当然，如果</SPAN><SPAN 
+lang=EN-US>foobar.com</SPAN><SPAN style="FONT-FAMILY: 宋体">和</SPAN><SPAN 
+lang=EN-US>wocket.edu</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">合并，这个方法就不能用了）。如果</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器是新安装的，我建议你使用这种格式。再请注意一下，如果你打算使用活动目录（</SPAN><SPAN 
+lang=EN-US>Actrive Directory</SPAN><SPAN style="FONT-FAMILY: 宋体">），</SPAN><SPAN 
+lang=EN-US>Microsoft</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">已经限制你必须使用这种格式。</SPAN></P>
+<H3><SPAN style="FONT-FAMILY: 宋体">更上一层楼：在目录树中怎么组织数据</SPAN></H3>
+<P><SPAN style="FONT-FAMILY: 宋体">在</SPAN><SPAN lang=EN-US>UNIX</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">文件系统中，最顶层是根目录（</SPAN><SPAN lang=EN-US>root</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）。在根目录的下面有很多的文件和目录。象上面介绍的那样，</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录也是用同样的方法组织起来的。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">在根目录下，要把数据从逻辑上区分开。因为历史上（</SPAN><SPAN 
+lang=EN-US>X.500</SPAN><SPAN style="FONT-FAMILY: 宋体">）的原因，大多数</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录用</SPAN><SPAN 
+lang=EN-US>OU</SPAN><SPAN style="FONT-FAMILY: 宋体">从逻辑上把数据分开来。</SPAN><SPAN 
+lang=EN-US>OU</SPAN><SPAN style="FONT-FAMILY: 宋体">表示“</SPAN><SPAN 
+lang=EN-US>Organization Unit</SPAN><SPAN style="FONT-FAMILY: 宋体">”，在</SPAN><SPAN 
+lang=EN-US>X.500</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">协议中是用来表示公司内部的机构：销售部、财务部，等等。现在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">还保留</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">ou=</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">这样的命名规则，但是扩展了分类的范围，可以分类为：</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">ou=people, 
+ou=groups, ou=devices</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">，等等。更低一级的</SPAN><SPAN lang=EN-US 
+style="COLOR: black">OU</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">有时用来做更细的归类。例如：</SPAN><SPAN lang=EN-US 
+style="COLOR: black">LDAP</SPAN><SPAN 
+style="COLOR: black; FONT-FAMILY: 宋体">目录树（不包括单独的记录）可能会是这样的：</SPAN><SPAN 
+lang=EN-US style="COLOR: black"></SPAN></P>
+<P class=a><SPAN>&nbsp;&nbsp;&nbsp; </SPAN>dc=foobar, dc=com </P>
+<P class=a><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>ou=customers 
+</P>
+<P 
+class=a><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>ou=asia </P>
+<P 
+class=a><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>ou=europe </P>
+<P 
+class=a><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>ou=usa </P>
+<P class=a><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>ou=employees 
+</P>
+<P class=a><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>ou=rooms </P>
+<P class=a><SPAN>&nbsp;&nbsp; </SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ou=groups 
+</P>
+<P class=a><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>ou=assets-mgmt </P>
+<P class=a><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>ou=nisgroups 
+</P>
+<P class=a><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN>ou=recipes</P>
+<H2><A name=_单独的LDAP记录></A><SPAN style="FONT-FAMILY: 黑体">单独的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 黑体">记录</SPAN></H2>
+<H3><SPAN lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">是</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">记录项的名字</SPAN></H3>
+<P><SPAN style="FONT-FAMILY: 宋体">在</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录中的所有记录项都有一个唯一的“</SPAN><SPAN lang=EN-US>Distinguished 
+Name</SPAN><SPAN style="FONT-FAMILY: 宋体">”，也就是</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">。每一个</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">记录项的</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">是由两个部分组成的：相对</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">（</SPAN><SPAN 
+lang=EN-US>RDN</SPAN><SPAN style="FONT-FAMILY: 宋体">）和记录在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录中的位置。</SPAN></P>
+<P><SPAN lang=EN-US>RDN</SPAN><SPAN style="FONT-FAMILY: 宋体">是</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">中与目录树的结构无关的部分。在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录中存储的记录项都要有一个名字，这个名字通常存在</SPAN><SPAN 
+lang=EN-US>cn</SPAN><SPAN style="FONT-FAMILY: 宋体">（</SPAN><SPAN 
+lang=EN-US>Common Name</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）这个属性里。因为几乎所有的东西都有一个名字，在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">中存储的对象都用它们的</SPAN><SPAN 
+lang=EN-US>cn</SPAN><SPAN style="FONT-FAMILY: 宋体">值作为</SPAN><SPAN 
+lang=EN-US>RDN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的基础。如果我把最喜欢的吃燕麦粥食谱存为一个记录，我就会用</SPAN><B><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">cn=Oatmeal 
+Deluxe</SPAN></B><SPAN style="FONT-FAMILY: 宋体">作为记录项的</SPAN><SPAN 
+lang=EN-US>RDN</SPAN><SPAN style="FONT-FAMILY: 宋体">。</SPAN></P>
+<P><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">我的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录的基准</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">是</SPAN><B><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">dc=foobar,dc=com</SPAN></B></P>
+<P><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">我把自己的食谱作为</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">的记录项存在</SPAN><B><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">ou=recipes</SPAN></B></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">我的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">记录项的</SPAN><SPAN 
+lang=EN-US>RDN</SPAN><SPAN style="FONT-FAMILY: 宋体">设为</SPAN><B><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">cn=Oatmeal 
+Deluxe</SPAN></B></P>
+<P><SPAN style="FONT-FAMILY: 宋体">上面这些构成了燕麦粥食谱的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">记录的完整</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">。记住，</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">的读法和</SPAN><SPAN 
+lang=EN-US>DNS</SPAN><SPAN style="FONT-FAMILY: 宋体">主机名类似。下面就是完整的</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">：</SPAN></P>
+<P class=a><B><SPAN lang=EN-US>cn=Oatmeal 
+Deluxe,ou=recipes,dc=foobar,dc=com</SPAN></B></P>
+<H3><SPAN style="FONT-FAMILY: 宋体">举一个实际的例子来说明</SPAN><SPAN 
+lang=EN-US>DN</SPAN></H3>
+<P><SPAN style="FONT-FAMILY: 宋体">现在为公司的员工设置一个</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">。可以用基于</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">cn</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">或</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">uid</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">（</SPAN><SPAN lang=EN-US>User ID</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">），作为典型的用户帐号。例如，</SPAN><SPAN 
+lang=EN-US>FooBar</SPAN><SPAN style="FONT-FAMILY: 宋体">的员工</SPAN><SPAN 
+lang=EN-US>Fran Smith</SPAN><SPAN style="FONT-FAMILY: 宋体">（登录名：</SPAN><SPAN 
+lang=EN-US>fsmith</SPAN><SPAN style="FONT-FAMILY: 宋体">）的</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">可以为下面两种格式：</SPAN></P>
+<P class=a><B><SPAN 
+lang=EN-US>uid=fsmith,ou=employees,dc=foobar,dc=com</SPAN></B></P>
+<P><I><SPAN style="FONT-FAMILY: 宋体">（基于登录名）</SPAN><SPAN 
+lang=EN-US></SPAN></I></P>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">（以及</SPAN><SPAN 
+lang=EN-US>X.500</SPAN><SPAN style="FONT-FAMILY: 宋体">）用</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">uid</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">表示“</SPAN><SPAN lang=EN-US>User ID</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">”，不要把它和</SPAN><SPAN lang=EN-US>UNIX</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的</SPAN><SPAN lang=EN-US>uid</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">号混淆了。大多数公司都会给每一个员工唯一的登录名，因此用这个办法可以很好地保存员工的信息。你不用担心以后还会有一个叫</SPAN><SPAN 
+lang=EN-US>Fran Smith</SPAN><SPAN style="FONT-FAMILY: 宋体">的加入公司，如果</SPAN><SPAN 
+lang=EN-US>Fran</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">改变了她的名字（结婚？离婚？或宗教原因？），也用不着改变</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">记录项的</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">。</SPAN></P>
+<P class=a><B><SPAN lang=EN-US>cn=Fran 
+Smith,ou=employees,dc=foobar,dc=com</SPAN></B></P>
+<P><I><SPAN style="FONT-FAMILY: 宋体">（基于姓名）</SPAN><SPAN 
+lang=EN-US></SPAN></I></P>
+<P><SPAN style="FONT-FAMILY: 宋体">可以看到这种格式使用了</SPAN><SPAN lang=EN-US>Common 
+Name</SPAN><SPAN style="FONT-FAMILY: 宋体">（</SPAN><SPAN lang=EN-US>CN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）。可以把</SPAN><SPAN lang=EN-US>Common Name</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">当成一个人的全名。这种格式有一个很明显的缺点就是：如果名字改变了，</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">的记录就要从一个</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">转移到另一个</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">。但是，我们应该尽可能地避免改变一个记录项的</SPAN><SPAN 
+lang=EN-US>DN</SPAN><SPAN style="FONT-FAMILY: 宋体">。</SPAN></P>
+<H2><SPAN style="FONT-FAMILY: 黑体">定制目录的对象类型</SPAN></H2>
+<P><SPAN style="FONT-FAMILY: 宋体">你可以用</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">存储各种类型的数据对象，只要这些对象可以用属性来表示，下面这些是可以在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">中存储的一些信息：</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体">员工信息：员工的姓名、登录名、口令、员工号、他的经理的登录名，邮件服务器，等等。</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">物品跟踪信息：计算机名、</SPAN><SPAN 
+lang=EN-US>IP</SPAN><SPAN style="FONT-FAMILY: 宋体">地址、标签、型号、所在位置，等等。</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体">客户联系列表：客户的公司名、主要联系人的电话、传真和电子邮件，等等。</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体">会议厅信息：会议厅的名字、位置、可以坐多少人、电话号码、是否有投影机。</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">食谱信息：菜的名字、配料、烹调方法以及准备方法。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">因为</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录可以定制成存储任何文本或二进制数据，到底存什么要由你自己决定。</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录用对象类型（</SPAN><SPAN 
+lang=EN-US>object classes</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）的概念来定义运行哪一类的对象使用什么属性。在几乎所有的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器中，你都要根据自己的需要扩展基本的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录的功能，创建新的对象类型或者扩展现存的对象类型。</SPAN></P>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录以一系列“属性对”的形式来存储记录项，每一个记录项包括属性类型和属性值（这与关系型数据库用行和列来存取数据有根本的不同）。下面是我存在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录中的一部分食谱记录：</SPAN></P>
+<P class=a><SPAN>&nbsp; </SPAN>dn: cn=Oatmeal Deluxe, ou=recipes, dc=foobar, 
+dc=com </P>
+<P class=a><SPAN>&nbsp; </SPAN>cn: Instant Oatmeal Deluxe </P>
+<P class=a><SPAN>&nbsp; </SPAN>recipeCuisine: breakfast </P>
+<P class=a><SPAN>&nbsp; </SPAN>recipeIngredient: 1 packet instant oatmeal </P>
+<P class=a><SPAN>&nbsp; </SPAN>recipeIngredient: 1 cup water </P>
+<P class=a><SPAN>&nbsp; </SPAN>recipeIngredient: 1 pinch salt </P>
+<P class=a><SPAN>&nbsp; </SPAN>recipeIngredient: 1 tsp brown sugar </P>
+<P class=a><SPAN>&nbsp; </SPAN>recipeIngredient: 1/4 apple, any type</P>
+<P><SPAN style="FONT-FAMILY: 宋体">请注意上面每一种配料都作为属性</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">recipeIngredient</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">值。</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录被设计成象上面那样为一个属性保存多个值的，而不是在每一个属性的后面用逗号把一系列值分开。</SPAN></P>
+<P><SPAN 
+style="FONT-FAMILY: 宋体">因为用这样的方式存储数据，所以数据库就有很大的灵活性，不必为加入一些新的数据就重新创建表和索引。更重要的是，</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录不必花费内存或硬盘空间处理“空”域，也就是说，实际上不使用可选择的域也不会花费你任何资源。</SPAN></P>
+<H2><A name=_作为例子的一个单独的数据项></A><SPAN 
+style="FONT-FAMILY: 黑体">作为例子的一个单独的数据项</SPAN></H2>
+<P><SPAN style="FONT-FAMILY: 宋体">让我们看看下面这个例子。我们用</SPAN><SPAN lang=EN-US>Foobar, 
+Inc.</SPAN><SPAN style="FONT-FAMILY: 宋体">的员工</SPAN><SPAN lang=EN-US>Fran 
+Smith</SPAN><SPAN style="FONT-FAMILY: 宋体">的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">记录。这个记录项的格式是</SPAN><SPAN 
+lang=EN-US>LDIF</SPAN><SPAN style="FONT-FAMILY: 宋体">，用来导入和导出</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录的记录项。</SPAN></P>
+<P class=a><SPAN>&nbsp; </SPAN>dn: uid=fsmith, ou=employees, dc=foobar, 
+dc=com</P>
+<P class=a><SPAN>&nbsp; </SPAN>objectclass: person</P>
+<P class=a><SPAN>&nbsp; </SPAN>objectclass: organizationalPerson</P>
+<P class=a><SPAN>&nbsp; </SPAN>objectclass: inetOrgPerson</P>
+<P class=a><SPAN>&nbsp; </SPAN>objectclass: foobarPerson</P>
+<P class=a><SPAN>&nbsp; </SPAN>uid: fsmith</P>
+<P class=a><SPAN>&nbsp; </SPAN>givenname: Fran</P>
+<P class=a><SPAN>&nbsp; </SPAN>sn: Smith</P>
+<P class=a><SPAN>&nbsp; </SPAN>cn: Fran Smith</P>
+<P class=a><SPAN>&nbsp;</SPAN>&nbsp;cn: Frances Smith</P>
+<P class=a><SPAN>&nbsp; </SPAN>telephonenumber: 510-555-1234</P>
+<P class=a><SPAN>&nbsp; </SPAN>roomnumber: 122G</P>
+<P class=a><SPAN>&nbsp; </SPAN>o: Foobar, Inc.</P>
+<P class=a><SPAN>&nbsp; </SPAN>mailRoutingAddress: fsmith@foobar.com</P>
+<P class=a><SPAN>&nbsp; </SPAN>mailhost: mail.foobar.com</P>
+<P class=a><SPAN>&nbsp; </SPAN>userpassword: {crypt}3x1231v76T89N</P>
+<P class=a><SPAN>&nbsp; </SPAN>uidnumber: 1234</P>
+<P class=a><SPAN>&nbsp; </SPAN>gidnumber: 1200</P>
+<P class=a><SPAN>&nbsp; </SPAN>homedirectory: /home/fsmith</P>
+<P class=a><SPAN>&nbsp; </SPAN>loginshell: /usr/local/bin/bash</P>
+<P><SPAN 
+style="FONT-FAMILY: 宋体">属性的值在保存的时候是保留大小写的，但是在默认情况下搜索的时候是不区分大小写的。某些特殊的属性（例如，</SPAN><SPAN 
+lang=EN-US>password</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）在搜索的时候需要区分大小写。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">让我们一点一点地分析上面的记录项。</SPAN></P>
+<P class=a><SPAN lang=EN-US>dn: uid=fsmith, ou=employees, dc=foobar, 
+dc=com</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">这是</SPAN><SPAN lang=EN-US>Fran</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">记录项的完整</SPAN><SPAN lang=EN-US>DN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">，包括在目录树中的完整路径。</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">（和</SPAN><SPAN lang=EN-US>X.500</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）使用</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">uid</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">（</SPAN><SPAN lang=EN-US>User ID</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">），不要把它和</SPAN><SPAN lang=EN-US>UNIX</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的</SPAN><SPAN lang=EN-US>uid</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">号混淆了。</SPAN></P>
+<P class=a><SPAN>&nbsp; </SPAN>objectclass: person </P>
+<P class=a><SPAN>&nbsp; </SPAN>objectclass: organizationalPerson </P>
+<P class=a><SPAN>&nbsp; </SPAN>objectclass: inetOrgPerson </P>
+<P class=a><SPAN>&nbsp; </SPAN>objectclass: foobarPerson</P>
+<P><SPAN style="FONT-FAMILY: 宋体">可以为任何一个对象根据需要分配多个对象类型。</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">person</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">对象类型要求</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">cn</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">（</SPAN><SPAN lang=EN-US>common name</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）和</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">sn</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">（</SPAN><SPAN lang=EN-US>surname</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">）这两个域不能为空。</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">persion</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">对象类型允许有其它的可选域，包括</SPAN><SPAN 
+lang=EN-US>givenname</SPAN><SPAN style="FONT-FAMILY: 宋体">、</SPAN><SPAN 
+lang=EN-US>telephonenumber</SPAN><SPAN style="FONT-FAMILY: 宋体">，等等。</SPAN><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">organizational 
+Person</SPAN><SPAN style="FONT-FAMILY: 宋体">给</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">person</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">加入更多的可选域，</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">inetOrgPerson</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">又加入更多的可选域（包括电子邮件信息）。最后，</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">foobarPerson</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">是为</SPAN><SPAN lang=EN-US>Foobar</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">定制的对象类型，加入了很多定制的属性。</SPAN></P>
+<P class=a><SPAN>&nbsp; </SPAN>uid: fsmith </P>
+<P class=a><SPAN>&nbsp; </SPAN>givenname: Fran </P>
+<P class=a><SPAN>&nbsp; </SPAN>sn: Smith </P>
+<P class=a><SPAN>&nbsp; </SPAN>cn: Fran Smith </P>
+<P class=a><SPAN>&nbsp; </SPAN>cn: Frances Smith </P>
+<P class=a><SPAN>&nbsp; </SPAN>telephonenumber: 510-555-1234 </P>
+<P class=a><SPAN>&nbsp; </SPAN>roomnumber: 122G </P>
+<P class=a><SPAN>&nbsp; </SPAN>o: Foobar, Inc.</P>
+<P><SPAN style="FONT-FAMILY: 宋体">以前说过了，</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">uid</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">表示</SPAN><SPAN lang=EN-US>User ID</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">。当看到</SPAN><SPAN lang=EN-US>uid</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的时候，就在脑袋里想一想“</SPAN><SPAN lang=EN-US>login</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">”。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">请注意</SPAN><SPAN lang=EN-US>CN</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">有多个值。就象上面介绍的，</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">允许某些属性有多个值。为什么允许有多个值呢？假定你在用公司的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">服务器查找</SPAN><SPAN 
+lang=EN-US>Fran</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的电话号码。你可能只知道她的名字叫</SPAN><SPAN 
+lang=EN-US>Fran</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">，但是对人力资源处的人来说她的正式名字叫做</SPAN><SPAN 
+lang=EN-US>Frances</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">。因为保存了她的两个名字，所以用任何一个名字检索都可以找到</SPAN><SPAN 
+lang=EN-US>Fran</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的电话号码、电子邮件和办公房间号，等等。</SPAN></P>
+<P class=a><SPAN>&nbsp; </SPAN>mailRoutingAddress: fsmith@foobar.com </P>
+<P class=a><SPAN>&nbsp; </SPAN>mailhost: mail.foobar.com</P>
+<P><SPAN style="FONT-FAMILY: 宋体">就象现在大多数的公司都上网了，</SPAN><SPAN 
+lang=EN-US>Foobar</SPAN><SPAN style="FONT-FAMILY: 宋体">用</SPAN><SPAN 
+lang=EN-US>Sendmail</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">发送邮件和处理外部邮件路由信息。</SPAN><SPAN 
+lang=EN-US>Foobar</SPAN><SPAN style="FONT-FAMILY: 宋体">把所有用户的邮件信息都存在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">中。最新版本的</SPAN><SPAN 
+lang=EN-US>Sendmail</SPAN><SPAN style="FONT-FAMILY: 宋体">支持这项功能。</SPAN></P>
+<P class=a><SPAN>&nbsp; </SPAN>Userpassword: {crypt}3x1231v76T89N </P>
+<P class=a><SPAN>&nbsp; </SPAN>uidnumber: 1234 </P>
+<P class=a><SPAN>&nbsp; </SPAN>gidnumber: 1200 </P>
+<P class=a><SPAN>&nbsp; </SPAN>gecos: Frances Smith </P>
+<P class=a><SPAN>&nbsp; </SPAN>homedirectory: /home/fsmith </P>
+<P class=a><SPAN>&nbsp; </SPAN>loginshell: /usr/local/bin/bash</P>
+<P><SPAN style="FONT-FAMILY: 宋体">注意，</SPAN><SPAN lang=EN-US>Foobar</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的系统管理员把所有用户的口令映射信息也都存在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">中。</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">FoobarPerson</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">类型的对象具有这种能力。再注意一下，用户口令是用</SPAN><SPAN 
+lang=EN-US>UNIX</SPAN><SPAN style="FONT-FAMILY: 宋体">的口令加密格式存储的。</SPAN><SPAN 
+lang=EN-US>UNIX</SPAN><SPAN style="FONT-FAMILY: 宋体">的</SPAN><SPAN 
+lang=EN-US>uid</SPAN><SPAN style="FONT-FAMILY: 宋体">在这里为</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Courier New'">uidnumber</SPAN><SPAN 
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 黑体">。</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">提醒你一下，关于如何在</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">中保存</SPAN><SPAN lang=EN-US>NIS</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">信息，有完整的一份</SPAN><SPAN lang=EN-US>RFC</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">。在以后的文章中我会谈一谈</SPAN><SPAN lang=EN-US>NIS</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的集成。</SPAN></P>
+<H2><A name=_LDAP复制></A><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 黑体">复制</SPAN></H2>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器可以使用基于“推”或者“拉”的技术，用简单或基于安全证书的安全验证，复制一部分或者所有的数据。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">例如，</SPAN><SPAN lang=EN-US>Foobar</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">有一个“公用的”</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器，地址为</SPAN><SPAN 
+lang=EN-US>ldap.foobar.com</SPAN><SPAN style="FONT-FAMILY: 宋体">，端口为</SPAN><SPAN 
+lang=EN-US>389</SPAN><SPAN style="FONT-FAMILY: 宋体">。</SPAN><SPAN 
+lang=EN-US>Netscape Communicator</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的电子邮件查询功能、</SPAN><SPAN lang=EN-US>UNIX</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的“</SPAN><SPAN lang=EN-US>ph</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">”命令要用到这个服务器，用户也可以在任何地方查询这个服务器上的员工和客户联系信息。公司的主</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器运行在相同的计算机上，不过端口号是</SPAN><SPAN 
+lang=EN-US>1389</SPAN><SPAN style="FONT-FAMILY: 宋体">。</SPAN></P>
+<P><SPAN 
+style="FONT-FAMILY: 宋体">你可能即不想让员工查询资产管理或食谱的信息，又不想让信息技术人员看到整个公司的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">目录。为了解决这个问题，</SPAN><SPAN 
+lang=EN-US>Foobar</SPAN><SPAN style="FONT-FAMILY: 宋体">有选择地把子目录树从主</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">服务器复制到“公用”</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器上，不复制需要隐藏的信息。为了保持数据始终是最新的，主目录服务器被设置成即时“推”同步。这些种方法主要是为了方便，而不是安全，因为如果有权限的用户想查询所有的数据，可以用另一个</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">端口。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">假定</SPAN><SPAN lang=EN-US>Foobar</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">通过从奥克兰到欧洲的低带宽数据的连接用</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">管理客户联系信息。可以建立从</SPAN><SPAN 
+lang=EN-US>ldap.foobar.com:1389</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">到</SPAN><SPAN 
+lang=EN-US>munich-ldap.foobar.com:389</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的数据复制，象下面这样：</SPAN></P>
+<P class=a><SPAN>&nbsp; </SPAN>periodic pull: 
+ou=asia,ou=customers,o=sendmail.com</P>
+<P class=a><SPAN>&nbsp; </SPAN>periodic pull: 
+ou=us,ou=customers,o=sendmail.com</P>
+<P class=a><SPAN>&nbsp; </SPAN>immediate push: 
+ou=europe,ou=customers,o=sendmail.com</P>
+<P><SPAN style="FONT-FAMILY: 宋体">“拉”连接每</SPAN><SPAN lang=EN-US>15</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">分钟同步一次，在上面假定的情况下足够了。“推”连接保证任何欧洲的联系信息发生了变化就立即被“推”到</SPAN><SPAN 
+lang=EN-US>Munich</SPAN><SPAN style="FONT-FAMILY: 宋体">。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">用上面的复制模式，用户为了访问数据需要连接到哪一台服务器呢？在</SPAN><SPAN 
+lang=EN-US>Munich</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的用户可以简单地连接到本地服务器。如果他们改变了数据，本地的</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">服务器就会把这些变化传到主</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">服务器。然后，主</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器把这些变化“推”回本地的“公用”</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器保持数据的同步。这对本地的用户有很大的好处，因为所有的查询（大多数是读）都在本地的服务器上进行，速度非常快。当需要改变信息的时候，最终用户不需要重新配置客户端的软件，因为</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录服务器为他们完成了所有的数据交换工作。</SPAN></P>
+<H2><A name=_安全和访问控制></A><SPAN style="FONT-FAMILY: 黑体">安全和访问控制</SPAN></H2>
+<P><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">提供很复杂的不同层次的访问控制或者</SPAN><SPAN lang=EN-US>ACI</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">。因这些访问可以在服务器端控制，这比用客户端的软件保证数据的安全可安全多了。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">用</SPAN><SPAN lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">的</SPAN><SPAN lang=EN-US>ACI</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">，可以完成：</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体">给予用户改变他们自己的电话号码和家庭地址的权限，但是限制他们对其它数据（如，职务名称，经理的登录名，等等）只有“只读”权限。</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">给予“</SPAN><SPAN 
+lang=EN-US>HR-admins</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">”组中的所有人权限以改变下面这些用户的信息：经理、工作名称、员工号、部门名称和部门号。但是对其它域没有写权限。</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">禁止任何人查询</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">服务器上的用户口令，但是可以允许用户改变他或她自己的口令。</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 宋体">给予经理访问他们上级的家庭电话的只读权限，但是禁止其他人有这个权限。</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">给予“</SPAN><SPAN 
+lang=EN-US>host-admins</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">”组中的任何人创建、删除和编辑所有保存在</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">服务器中的与计算机主机有关的信息</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">通过</SPAN><SPAN 
+lang=EN-US>Web</SPAN><SPAN style="FONT-FAMILY: 宋体">，允许“</SPAN><SPAN 
+lang=EN-US>foobar-sales</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">”组中的成员有选择地给予或禁止他们自己读取一部分客户联系数据的读权限。这将允许他们把客户联系信息下载到本地的笔记本电脑或个人数字助理（</SPAN><SPAN 
+lang=EN-US>PDA</SPAN><SPAN style="FONT-FAMILY: 宋体">）上。（如果销售人员的软件都支持</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN style="FONT-FAMILY: 宋体">，这将非常有用）</SPAN></P>
+<P><SPAN lang=EN-US style="FONT-FAMILY: Wingdings">l<SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN style="FONT-FAMILY: 宋体">通过</SPAN><SPAN 
+lang=EN-US>Web</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">，允许组的所有者删除或添加他们拥有的组的成员。例如：可以允许销售经理给予或禁止销售人员改变</SPAN><SPAN 
+lang=EN-US>Web</SPAN><SPAN style="FONT-FAMILY: 宋体">页的权限。也可以允许邮件假名（</SPAN><SPAN 
+lang=EN-US>mail aliase</SPAN><SPAN style="FONT-FAMILY: 宋体">）的所有者不经过</SPAN><SPAN 
+lang=EN-US>IT</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">技术人员就直接从邮件假名中删除或添加用户。“公用”的邮件列表应该允许用户从邮件假名中添加或删除自己（但是只能是自己）。也可以对</SPAN><SPAN 
+lang=EN-US>IP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">地址或主机名加以限制。例如，某些域只允许用户</SPAN><SPAN 
+lang=EN-US>IP</SPAN><SPAN style="FONT-FAMILY: 宋体">地址以</SPAN><SPAN 
+lang=EN-US>192.168.200.*</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">开头的有读的权限，或者用户反向查找</SPAN><SPAN lang=EN-US>DNS</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">得到的主机名必须为</SPAN><SPAN 
+lang=EN-US>*.foobar.com</SPAN><SPAN style="FONT-FAMILY: 宋体">。</SPAN></P>
+<P><SPAN style="FONT-FAMILY: 宋体">这不过是让你了解一下可以对</SPAN><SPAN 
+lang=EN-US>LDAP</SPAN><SPAN 
+style="FONT-FAMILY: 宋体">目录进行怎样的访问控制，实际上真正实现起来需要做的工作比这多得多。在以后的文章中我会详细地讨论访问控制。</SPAN></P></DIV></BODY></HTML>

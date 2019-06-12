@@ -1,0 +1,848 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0045)http://xtream.online.fr/project/security.html --><HTML><HEAD><TITLE>Internet security</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content=Xtream name=Author>
+<META content=Educational name=Classification>
+<META content="Internet security" name=Description>
+<META 
+content="Internet security, xtream, hacking, hacked, computer security, network security, security, Xtream" 
+name=KeyWords>
+<META content="MSHTML 6.00.2800.1141" name=GENERATOR></HEAD>
+<BODY>The object of this document is to study the issue of security on the 
+Internet. This is aimed at any network administrator concerned in the security 
+of his network. This report contains four main parts. First of all, a brief 
+history of the Internet and its security problem will introduce the reader to 
+this issue in which interest is increasing as well as the Internet. Then, the 
+consequences of a lack of security in organisations will show the importance of 
+this new problem. The breaches and how hackers work will be the next section. 
+And finally, the ways to secure the unsecured will close this dissertation and 
+stress the fact that it is very difficult to make the Internet secure. Moreover, 
+a small conclusion will deal with the existing legislation about the security on 
+the Internet. 
+<P>This report is meant to provide some background to the subject for people 
+interested in this new issue This study does not required advanced skills of 
+computing, however a basic knowledge of UNIX and networking would be helpful to 
+the reader. <BR>You can also read the <A 
+href="http://xtream.online.fr/project/securite.html">French version</A> of this 
+essay. <BR>Please, for any queries or comments: <A 
+href="mailto:xtream@online.fr">xtream@online.fr</A> Copyright Xtream. <BR><A 
+href="http://echo.fr/estat-jump"><IMG height=1 src="" width=1 border=0></A> <A 
+href="http://www.estat.com/getstats?serial=1410151046"><IMG height=1 
+src="Internet security.files/1410151046.gif" width=1 border=0></A> <BR>&nbsp;<A 
+href="http://francite.com/"><IMG height=1 src="Internet security.files/&#26700;&#38754;\" 
+width=1 border=0></A>&nbsp;<A href="http://francite.com/"><IMG height=1 
+src="Internet security.files/&#26700;&#38754;\" width=1 border=0></A> <BR>If you like this 
+page, please sign my guestbook: <A 
+href="http://xtream.online.fr/guestbook/">View it</A> / <A 
+href="http://xtream.online.fr/guestbook/index.php3?module=ajouter">Sign it</A> 
+<BR><!--#exec cgi="/cgi-bin/sponsor.py"-->
+<P><B><FONT size=+2>ACKNOWLEDGEMENTS</FONT></B> 
+<P>I am grateful to a number of people for their assistance during the 
+preparation of this dissertation. Among them I am especially thankful to my 
+supervisor, Sharon Morgan, who has been guiding me for the plan and the layout 
+of this document, George Cormack and Anna Stevenson who have corrected my 
+grammar mistakes. I would also like to thank the worldwide Internet community 
+which helped me to find some critical data about the Internet security. 
+<P><B><FONT size=+2>CONTENTS</FONT></B> 
+<P>ABSTRACT <BR>ACKNOWLEDGEMENTS <BR>CONTENTS <BR>CHAPTER 1: INTRODUCTION 
+<BR>CHAPTER 2: BRIEF HISTORY OF THE INTERNET AND ITS SECURITY PROBLEMS 
+<BR>CHAPTER 3: INTERNET SECURITY ISSUES IN ORGANISATIONS <BR>3.1 Hacked 
+advertising <BR>3.1.1 U.S. administrations <BR>3.1.2 Other organisations <BR>3.2 
+Industrial and military espionage <BR>3.3 Business integrity <BR>3.4 System 
+disabling <BR>CHAPTER 4: BREACHES AND HOW HACKERS WORK <BR>4.1 Introduction 
+<BR>4.1.1 Definition of a hacker <BR>4.1.2 Network file system <BR>4.2 Social 
+engineering <BR>4.3 Password cracking <BR>4.4 Packet and password sniffing 
+<BR>4.5 IP spoofing <BR>4.6 Trojan Horses <BR>4.7 Worms <BR>4.8 Trap Door or 
+back door <BR>4.9 TCP-SYN flooding <BR>4.10 Conclusion <BR>CHAPTER 5: WAYS TO 
+SECURE THE INSECURED <BR>5.1 Internet firewalls <BR>5.1.1 What is a firewall ? 
+<BR>5.1.2 What can a firewall not do? <BR>5.1.3 Conclusion <BR>5.2 Password 
+protection and generation of safe passwords <BR>5.2.1 Shadow password <BR>5.2.2 
+Generation of secure passwords <BR>5.3 Encryption <BR>5.3.1 Asymmetric or public 
+key encryption <BR>5.3.2 Symmetric encryption <BR>5.3.3 PGP <BR>5.4 IP spoofing 
+and SYN-flooding <BR>5.5 Security auditing tools <BR>5.6 Security through 
+obscurity <BR>5.7 IP Restriction <BR>5.8 Education and awareness <BR>CHAPTER 6: 
+CONCLUSION <BR>REFERENCES 
+<P><B><FONT size=+2>CHAPTER 1: INTRODUCTION</FONT></B> 
+<P>Experts are forecasting that by the year 2000 some 200 million users will be 
+accessing the Internet world-wide and the London-based Electronic Commerce 
+Association (ECA) forecasts that electronic commerce will grow by 50 percent 
+annually, reaching œ100 billion by 2002, with the number of companies accessing 
+the web rising from 1.3 million at the end of 1997 to 8 million by 2001. 
+<P>The nature of computing has changed tremendously over the last few years. As 
+computers and networks have become cheaper and more powerful, they have also 
+become more ubiquitous. One unfortunate side effect of these changes is that 
+computer crime has become much more common. 
+<P>A brief history of the Internet and its security problems is given in the 
+first chapter. It introduces the Internet to the reader. Then, chapter 2 covers 
+the main issue of Internet security in organisations. Chapter 3 presents the way 
+hackers work and the weak points of the Internet security. Chapter 4 describes 
+the methods used to improve this security. 
+<P>The research of documentation has mainly been done on the Internet. However, 
+some books and computer magazines have helped me complete an exhaustive search. 
+I also interviewed a security consultant to a French Internet provider who gave 
+me some technical advice about the implementation of the security on a UNIX 
+system. 
+<P><B><FONT size=+2>CHAPTER 2: Brief history of the Internet and its security 
+problems</FONT></B> 
+<P>Before beginning to enter the problem of Internet security, it would be 
+helpful to have an overview of the Internet. The best way to do this is to 
+observe the history of the Internet. 
+<UL>
+  <LI>The Internet idea was conceived in the early '60s by the US department of 
+  defence. The original name for the Internet was ARPANet (ARPA stands for: 
+  Advanced Research Project Association). The aim of this computer network was 
+  to be nuclear proof. Simple communication networks were chained point-to-point 
+  with each place on the network dependant on the link before it. If one point 
+  in the network was blown up, the whole network would become useless. So, 
+  American scientists conceived the idea for a new kind of communication 
+  network; one that was not organised point-to-point but instead was set up more 
+  like a fish net. This structure could allow information to find its own path 
+  through the network even if a section had been destroyed. 
+  <LI>In 1969, researchers at four US university campuses create the first hosts 
+  of the ARPANet connecting Stanford Research Institute, UCLA, UC Santa Barbara, 
+  and the University of Utah. ARPANet is a success from the very beginning. 
+  Although originally designed to allow scientists to share data and access 
+  remote computers, email quickly becomes the most popular application. ARPANet 
+  becomes a kind of electronic post office and a discussion place for 
+  scientists. 
+  <LI>In 1971, ARPANet grows to 23 computer hosts connecting universities and 
+  government research centres. 
+  <LI>In 1973 ARPANet becomes international with connections to University 
+  College of London and the Royal Radar Establishment in Norway. 
+  <LI>In 1974, the first commercial version of ARPANet appears. 
+  <LI>In 1979, the first USENET newsgroup is established where users from all 
+  over the world can take part in a discussion group about any subjects: 
+  politics, religion, science, etc ... 
+  <LI>In 1981, ARPANet has 213 hosts and a new host is added approximately every 
+  20 days. The ARPANet starts to move away from its military and research roots. 
+
+  <LI>In 1982, the word "Internet" is used for the first time. 
+  <LI>In 1987, the number of Internet hosts is over 10,000. The Personal 
+  Computer and network-ready servers industry boom allows companies and some 
+  individuals to join the Internet. 
+  <LI>By 1988, the first problem of security emerges. On November 1988, a 
+  network "worm" temporarily disables about 6,000 of the 60,000 Internet hosts. 
+  The CERT (Computer Emergency Response Team) was formed to serve as a focal 
+  point for the computer security concerns of Internet users. The CERT charter 
+  is to work with the Internet community to facilitate its response to computer 
+  security events involving Internet hosts, to take proactive steps to raise the 
+  community's awareness of computer security issues, and to conduct research 
+  targeted at improving the security of existing systems. 
+  <LI>In 1990, the name "Internet" is definitely decided upon. The number of 
+  hosts exceed 300,000. The NSF (National Science Foundation) lifts the 
+  restriction on commercial use of the Internet. Companies jump on the 
+  opportunity to promote themselves through a new communication network. 
+  <LI>In 1991, Tim Berners-Lee , a scientist of the CERN in Switzerland, writes 
+  the first piece of code of the World Wide Web. This new technology combines 
+  words, pictures, and sounds on Web pages. It is a new way of publishing 
+  information on the Internet and is very user-friendly. The success comes very 
+  quickly. The first WWW browser is created: Mosaic. PGP (Pretty Good Privacy) 
+  is released by Philip Zimmerman. This program allows user to encrypt files to 
+  send through the Internet. 
+  <LI>In 1992, the numbers of hosts exceed 1,000,000. Traffic on the Internet 
+  expands at a 341 % annual growth rate. 
+  <LI>Netscape Communications Corp. is formed in 1994. This company distribute a 
+  web browser and is becoming the biggest company of the Internet. Its main 
+  product is its web browser, Netscape Navigator. 
+  <LI>In 1995, the WWW becomes the most popular service on the net. Hong Kong 
+  police disconnect all but 1 of the colony's Internet providers in search of a 
+  hacker. 10,000 people are left without Net access. The JAVA and JAVAscript 
+  languages are spread on the Internet and are inserted into the web browsers. 
+  Authors of these languages claims they are highly secure, but several 
+  university students find bugs of security in them. </LI></UL>Internet security 
+becomes a real issue as there are increasing problems over the net. 
+<P>Further details about the history of the Internet can be found in the Short 
+History of the Internet [1] and The Roads and Crossroads of Internet's History 
+[2]. 
+<P><B><FONT size=+2>CHAPTER 3: Internet security issues in 
+organisations</FONT></B> 
+<P>As an increasing number of organisations come on the Internet, Internet 
+security becomes a major issue. We are going to see, in this part, examples of 
+problems that occur in organisations. 
+<P><FONT size=+2>3.1 Hacked advertising</FONT> 
+<P>Many organisations open a web site to have a sort of window on the Internet, 
+where they can expose their products, activities, etc ... A new kind of hacking 
+consists of entering the website illegally and modifying the homepages. It is 
+like entering in a shop and changing the displays. In all cases, when a web site 
+is attacked, the new homepage produced by hackers does not promote the activity 
+of the organisation. Several examples are here to illustrate this new emerging 
+problem. 
+<P><FONT size=+1>3.1.1 U.S. administrations</FONT> 
+<UL>
+  <LI>The 29th of December 1996, a hacker pulled a prank on the US Air Force, 
+  sneaking onto its Web site and replacing a page of aviation statistics with a 
+  pornographic picture. As a result, the Pentagon's "DefenseLINK" Web site, 
+  which includes about 80 home pages, was shut down for more than 24 hours while 
+  officials ensured there were no other security breaches. [3] </LI></UL>This 
+attack has spoiled the image of the U.S. Air Force, and it has shown that USAF 
+is not very secure. It has also cost some money to the USAF in order to check 
+the integrity of its system's files. 
+<UL>
+  <LI>Another recent web attack was on Wednesday, March 5 1997. The home page of 
+  the National Aeronautics and Space Administration's (NASA) was hacked and the 
+  contents changed. Hackers put a new homepage opposing American institutions. 
+  (NASA's site: http://www.hq.nasa.gov) [4] 
+  <LI>During the summer of 1996, hackers broke into the U.S. Justice 
+  Department's Web site, posting swastikas and pictures of Adolf Hitler. The 
+  home page content was hacked in protest of the current administration's push 
+  to regulate the Internet. [5] </LI></UL>The main attacks are aimed toward 
+American institutions, in which hackers see an interesting opportunity to 
+discredit the U.S. government. 
+<P><FONT size=+1>3.1.2 Other organisations</FONT> 
+<UL>
+  <LI>On February 10, 1997, and again on February 14, 1997 Portuguese hackers 
+  launched a political attack on the web page of the Indonesian government, 
+  focusing on that country's continued oppression of East Timor. They wanted to 
+  call attention on to the necessity of self-determination and independence of 
+  the people of Timor, oppressed and violated for decades by the government of 
+  Indonesia. [6] 
+  <LI>The Kriegsman fur site was hacked in November 1996 by an anti-fur 
+  activist. The new homepage placed by hackers blamed the company that kills 
+  animals for fur. [7] </LI></UL>Here we have 2 examples of a site being hacked to 
+defend a cause. Hackers who broke into the sites wanted to express themselves. 
+They also wanted to show what they believe to the world. 
+<P><FONT size=+2>3.2 Industrial and military espionage</FONT> 
+<P>Nowadays, the bulk of Internet hosts are corporate sites. Some companies use 
+Internet as a network to transmit data. There are a lot of examples of 
+companies' hosts being hacked. 
+<P>A good example is the Boeing site: 
+<P>A few years ago, two college students hacked their way into Boeing's 
+computers in search of password files. The U.S. Justice Department says that 
+situation is a classic case of how hackers can drive up business costs. Boeing 
+was also able to ascertain that these hackers had obtained root access to the 
+federal courthouse system in Seattle. After the case was over, it cost Boeing 
+$57,000 simply to check the integrity of their avionics data. [8] 
+<P>Actually, the main risk is the theft of confidential data, but there is 
+another risk, the risk of modified data. The hacker can change the current data 
+into faulty ones. Then, the organisation will work with altered data and produce 
+faulty results. This is why Boeing spent so much money to check all the 
+integrity of its data. 
+<P>Another example: 
+<P>In 1987, tracing an apparently innocuous 75-cent accounting error revealed an 
+intruder who had given himself an account on the Lawrence Berkeley Lab's 
+computer system. The account was traced to a West German programmer who was 
+copying documents from military computers attached to the MILNET (the Internet 
+segment reserved for military uses). The hacled documents were sold to the KGB. 
+[9] 
+<P>The Gartner Group's William Malik says that one of his clients, a large 
+manufacturing company, lost a $900 million dollar bid to a competitor which had 
+apparently cracked the company's computers and learned about its bid. [10] 
+<P>Examples of this sort are abundant in the world of the Internet. However, a 
+good number of these attacks are not reported to the public because they are 
+concealed by the company or they are not detected by the network administrator 
+of the firm. 
+<P><FONT size=+2>3.3 Business integrity</FONT> 
+<P>Credit card security is one of the biggest issue of the Internet because the 
+potential to literally create a world wide commerce opens a very large hole to 
+credit card fraud. 
+<P>Nowadays, there are myriad virtual shops on the Internet that sell books, 
+computer accessories, clothes and so forth ... All of these virtual shops use 
+the credit card payment method. This means that the customer sends his credit 
+card number to the virtual shop which then debits the amount of money from the 
+account of the bank's credit card. But there are two problems: First, the 
+transmission of the credit card number can be pick up by a third party without 
+knowledge from either the merchant and the customer. Secondly, a majority of 
+these commercial sites are not secure at all. Even if the transmission of the 
+credit card number through the Internet is safe, the way to store it in the 
+web-site is not. Credit card numbers in files inside a company's database can 
+also be taken. Several firms specialising in Internet commerce have been hacked 
+in search of credit card number or customers' files. 
+<P>It's already happened at the Internet service provider Netcom of San Jose 
+(California, USA). Kevin Mitnick, perhaps the world's most famous hacker, has 
+stolen about 17,000 credit card numbers before to being caught by clever 
+high-tech detectives. [11] 
+<P>While commerce on the Internet is becoming a multimillion pound business, it 
+is also becoming a large concern for credit card corporations and their 
+customers. 
+<P><FONT size=+2>3.4 System disabling</FONT> 
+<P>Systems providing TCP-based services (WWW, email, newsgroup, gopher, etc ...) 
+to the Internet community may be unable to provide those services while under a 
+hacker's attack and for some time after the attack has ceased. The service 
+itself is not harmed by the attack; usually only the ability to provide the 
+service is impaired. In some cases, the system may exhaust its memory, crash, or 
+be rendered otherwise inoperative. These attacks block the system temporarily, 
+so during the inoperative time, the company owner of the system might lose 
+money. A description of this sort of attack is in the next section. [12] 
+<P><B><FONT size=+2>CHAPTER 4: Breaches and how hackers work</FONT></B> 
+<P>How do hackers work ? What are the weak points of the Internet ? In this 
+chapter we will see the different methods used by hackers to reach their goals 
+and some of the weaknesses of networks. Of course, the study can not be 
+exhaustive, but it will cover the main used methods. 
+<P><FONT size=+2>4.1 Introduction</FONT> 
+<P>First of all, we will learn what the definition of a "hacker" is. 
+Subsequently, a short explanation about the network file system will be useful 
+for the understanding of the rest of this report. 
+<P><FONT size=+1>4.1.1 Definition of a hacker</FONT> 
+<P>On Internet, calling someone a "hacker" is usually a statement that said 
+person holds a great deal of knowledge and expertise in the field of 
+computing-networking, and is someone who is capable of exercising this expertise 
+with great finesse. The hacker holds the belief that system-cracking for fun and 
+exploration is ethically OK as long as the person commits no theft, vandalism, 
+or breach of confidentiality. A cracker is one who breaks security into other 
+peoples' computer systems, for a variety of reasons. Particularly antisocial 
+crackers have a vandalistic streak, and delete filestores, crash machines, and 
+stop running processes in pursuit of their "kicks". In the "real world", various 
+media people have taken the word "hacker" and coerced it into meaning the same 
+as "cracker". This usage is wholly inappropriate among the Internet community. 
+<P><FONT size=+1>4.1.2 Network file system</FONT> 
+<P>Every time a user requests access to a file, the operating system decides 
+whether that user should have access to the file in question. The system makes 
+this decision based on who owns the file, who is asking for access to the file, 
+and what access permissions the owner has set up. The access permissions define 
+who will have access to the file. 
+<P>There are two main reasons why one should care about protecting his/her files 
+from other users. The first reason is that one may wish to protect the contents 
+of his/her files from others. One may consider the contents of the files 
+private, and does not want others to be able to read or modify the contents of 
+the files. The second reason is that if others can modify the files, they can 
+obtain access to your account. For example, if a malicious user has write access 
+to your home directory, they can create or modify your ".rhosts" file to give 
+anyone unlimited access to your account. 
+<P>The main goal for an intruder is to gain root access. Root access allows a 
+user to do all that he wants on a system, he can delete, modify or add new 
+files. Most computer breakins where the intruder gains "root access" to a 
+computer begin when the intruder breaks into a regular user's account. Once on 
+the machine as a regular user, the intruder can then launch an attack to gain 
+root access on a machine by using a security hole in the operating system. [13] 
+<P><FONT size=+2>4.2 Social engineering</FONT> 
+<P>This is a term used among cracker for cracking techniques that rely on 
+weaknesses in the human being attached to a computer system rather than 
+software; the aim is to trick people into revealing passwords or other 
+information that compromises a target system's security. 
+<P>Classic tricks include phoning up a mark who has the required information and 
+posing as a field service tech or a fellow employee with an urgent access 
+problem. A common variation is to do this by phone, talk or IRC (Internet Relay 
+Chat). 
+<P>Another classic social engineering trick is for a hacker to send email 
+claiming to be a system administrator. The hacker will claim to need your 
+password for some important system administration work, and ask you to email it 
+to him/her. It is possible for a hacker to forge email, making it look like it 
+came from somebody you know to be a legitimate system administrator. Often the 
+hacker will send this message to every user on a system, hoping that one or two 
+users will fall for the trick. 
+<P>Another form of social engineering goes back to guessing your password. 
+People who can find out things about you, can use that information to guess your 
+password. For example, the names of your children, their birthdays or the 
+license plate number on your car are all likely candidates for guessing as 
+passwords. Hackers can go very far to guess passwords. 
+<P><FONT size=+2>4.3 Password cracking</FONT> 
+<P>Passwords are very important because they are the first line of defence 
+against interactive attacks on a system. It can be stated simply: if a cracker 
+cannot interact with a remote system, and he has no access to read or write the 
+information contained in the password file, then he has almost no chance to 
+mount a successful attack against the system. This is also why, if a cracker can 
+at least read the password file of a remote host, it is so important that he is 
+not able to break any of the passwords contained therein. If he can, then it is 
+also fair to assume that he can log on to the system and can then break into 
+"root" via an operating system hole. 
+<P>The most common way a hacker will try to get a password is via a "dictionary 
+attack". In a dictionary attack, the attacker takes a dictionary of words and 
+names, and tries each one to see if it is the right password. They do this with 
+programs which can guess hundreds or thousands of words per second. This makes 
+it easy for them to try lots of variations: word spelled backwards, different 
+capitalisations, adding a digit to the end, and so on. In addition, the hacker 
+community has built large dictionaries which are designed to "crack" passwords. 
+Using words from foreign languages, or names of things, people or towns is no 
+protection against current password crackers. The most famous program of 
+passwords cracking is "Crack4.1" with its general 50,000-word dictionary. 
+<P><FONT size=+2>4.4 Packet and password sniffing</FONT> 
+<P>If a hacker can not guess your password, there are other ways he/she can try 
+to get it. One way which has become very popular is called "password sniffing". 
+It turns out that most networks use what is known as "broadcast" technology. 
+What that means is that every message that a computer on the network transmits 
+can be read by any other computer on that network. In practice, all the 
+computers except the recipient of the message will notice that the message is 
+not meant for them, and ignore it. However, many computers can be programmed to 
+look at every message on the network. If one does this, one can look at message 
+which are not intended for him/her. 
+<P>Hackers have programs which do this, and then scan all the messages which 
+traverse a network looking for passwords. If someone logs in to a computer 
+across a network, and some other computer on the network has been compromised 
+this way, the person may unwittingly give his/her password to the attacker. This 
+is a serious threat to users who login to computers from remote sites. If 
+someone logs in on the console of a computer, his/her password never crosses a 
+network where it can be sniffed. But if someone logs in from some other network 
+or from an Internet service provider, he/she is dependent on the security of 
+these networks. The well known programs of password sniffing are: <BR>- Esniff.c 
+(Source for a basic ethernet sniffer) <BR>- Solaris Sniffer (A more powerful 
+version of E-Sniff modified for Solaris 2) <BR>- TCPDump 
+<P><FONT size=+2>4.5 IP spoofing</FONT> 
+<P>The IP address of a host is presumed to be valid and is therefore trusted by 
+TCP and UDP services. A problem is that, using IP source routing, an attacker's 
+host can masquerade as a trusted host or client. Briefly, IP source routing is 
+an option that can be used to specify a direct route to a destination and return 
+path back to the origination. The route can involve the use of other routers or 
+hosts that normally would not be used to forward packets to the destination. An 
+example of how this can be used such that an attacker's system could masquerade 
+as the trusted client of a particular server is as follows: 
+<UL>
+  <LI>The attacker would change his host's IP address to match that of the 
+  trusted client, 
+  <LI>The attacker would then construct a source route to the server that 
+  specifies the direct path the IP packets should take to the server and should 
+  take from the server back to the attacker's host, using the trusted client as 
+  the last hop in the route to the server, 
+  <LI>The attacker sends a client request to the server using the source route, 
+  <LI>The server accepts the client request as if it came directly from the 
+  trusted client and returns a reply to the trusted client, 
+  <LI>The trusted client, using the source route, forwards the packet on to the 
+  attacker's host. </LI></UL>Many UNIX hosts accept source routed packets and will 
+pass them on as the source route indicates. Many routers will accept source 
+routed packets as well, whereas some routers can be configured to block source 
+routed packets. 
+<P>An even simpler method for spoofing a client is to wait until the client 
+system is turned off and then impersonate the client's system. In many 
+organisations, staff members use personal computers and TCP/IP network software 
+to connect to and utilise UNIX hosts as a local area network server. The 
+personal computers often use NFS to obtain access to server directories and 
+files (NFS uses IP addresses only to authenticate clients). An attacker could, 
+after hours, configure a personal computer with the same name and IP address as 
+another's, and then initiate connections to the UNIX host as if it were the 
+"real" client. This is very simple to accomplish and likely would be an insider 
+attack. 
+<P>Electronic mail on the Internet is also particularly easy to spoof and, 
+without enhancements such as digital signatures, generally can not be trusted. 
+As a brief example, consider the exchange that takes place when Internet hosts 
+exchange mail. The exchange takes place using a simple protocol consisting of 
+ASCII-character commands. An intruder easily could enter these commands by hand 
+by using TELNET to connect directly to a system's Simple Mail Transfer Protocol 
+(SMTP) port (port 25 on UNIX systems). The receiving host trusts that the 
+sending host is who it says it is, thus the origin of the mail can be spoofed 
+easily by entering a sender address that is different from the true address. As 
+a result, any user, without privileges, can falsify or spoof e-mail. 
+<P>Other services, such as Domain Name Service, can be spoofed, but with more 
+difficulty than electronic mail. These services still represent a threat that 
+needs to be considered when using them. [14] 
+<P><FONT size=+2>4.6 Trojan Horses</FONT> 
+<P>A Trojan horse is a program which hides itself in another apparently benign 
+program. When the victim runs the apparently benign program he or she also ends 
+up running the hidden Trojan program. 
+<P>There are examples of UNIX Trojan horse programs on the Internet. For example 
+in one incident, a well known anonymous ftp archive was broken into. The 
+attackers modified a popular program available from this site, allowing them to 
+break into computers which subsequently down-loaded and installed this program. 
+<P><FONT size=+2>4.7 Worms</FONT> 
+<P>A worm is an autonomous agent capable of propagating itself without the use 
+of another program or any action by a person. The most famous worm attack 
+occurred in November 1988, when a student launched a program on the Internet 
+which was able to develop itself through the hosts network. Within 8 hours 
+between 2 and 3 thousand computers were infested. Computers began to shut down 
+because worm programs reappeared over network connections faster than they could 
+be deleted. 
+<P>What exactly did the worm do? The worm infested only computers running one 
+particular UNIX operating system. Each worm began by creating a list of remote 
+target machines from information found in the current host. 
+<P>In parallel the worm would: 
+<UL>
+  <LI>Attempt to find the passwords of user accounts by trying permutations of 
+  the account name checking a list of 432 passwords checking all the words in a 
+  local dictionary, and 
+  <LI>Attempt to enter each target by posing as a user (after cracking the 
+  user's password) using a "bug" in the finger protocol and using a "trapdoor" 
+  in the debug option for processing e-mail. </LI></UL>When an attack worked the 
+worm sent a short bootstrap program and the commands to compile and execute it 
+then broke the connection. If the bootstrap worked the new computer called back 
+the parent worm within 120 seconds and files containing the full worm code was 
+sent to the new computer. The parent worm issued commands to construct and start 
+the worm on the new machine. The worm also contained mechanisms to limit its own 
+population on a single machine and camouflage its presence. [15] 
+<P>Worms attacks are rare, but it is still a method used by hackers when a new 
+bug is found on an OS. This has the "advantage" of being able to hack a lot of 
+sites in little time. 
+<P><FONT size=+2>4.8 Trap Door or back door</FONT> 
+<P>A trap door or back door is an entry point into a computer system that 
+bypasses the normal security measures, a hidden software or hardware mechanism 
+that permits system protection mechanisms to be circumvented. It is activated in 
+some non-apparent manner. 
+<P>It can be a hole in the security of a system deliberately left in place by 
+designers or maintainers. The motivation for such holes is not always sinister; 
+some operating systems, for example, come out of the box with privileged 
+accounts intended for use by field service technicians or the vendor's 
+maintenance programmers. 
+<P>In 1983, Ken Thompson (one of the author of UNIX) revealed the existence of a 
+back door in early UNIX versions that may have qualified as the most clever 
+security hack of all time. The C compiler contained code that would recognise 
+when the "login" command was being recompiled and insert some code recognising a 
+password chosen by Thompson, giving him entry to the system whether or not an 
+account had been created for him. Normally such a back door could be removed by 
+removing it from the source code for the compiler and recompiling the compiler. 
+But to recompile the compiler, you have to use the compiler. So Thompson also 
+arranged that the compiler would recognise when it was compiling a version of 
+itself, and insert into the recompiled compiler the code to insert into the 
+recompiled `login' the code to allow Thompson entry and, of course, the code to 
+recognise itself and do the whole thing again the next time around. And having 
+done this once, he was then able to recompile the compiler from the original 
+sources; the hack perpetuated itself invisibly, leaving the back door in place 
+and active but with no trace in the sources. 
+<P>Almost every time, when a hacker leaves a system, he leaves behind one or 
+several backdoors to be able to come back whenever he wants. It is why when a 
+system has been hacked it is safer to check all the system files or re-install 
+the operating system. 
+<P><FONT size=+2>4.9 TCP-SYN flooding</FONT> 
+<P>When a system (called the client) attempts to establish a TCP connection to a 
+system providing a service (the server), the client and server exchange a set 
+sequence of messages. This connection technique applies to all TCP connections 
+(telnet, Web, email, etc...) 
+<P>The client system begins by sending a SYN message to the server. The server 
+then acknowledges the SYN message by sending SYN-ACK message to the client. The 
+client then finishes establishing the connection by responding with an ACK 
+message. The connection between the client and the server is then open, and the 
+service-specific data can be exchanged between the client and the server. 
+<BR>Here is a view of this message flow: 
+<P>Client&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Server 
+<BR>------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ------ 
+<BR>SYN--------------------&gt; <BR>&lt;--------------------SYN-ACK 
+<BR>ACK--------------------&gt; <BR>Client and server can now <BR>send 
+service-specific data 
+<P>The potential for abuse arises at the point where the server system has sent 
+an acknowledgement (SYN-ACK) back to client but has not yet received the ACK 
+message. This is a half-open connection. The server has built in its system 
+memory a data structure describing all pending connections. This data structure 
+is of finite size, and it can be made to overflow by intentionally creating too 
+many partially-open connections. 
+<P>Creating half-open connections is easily accomplished with IP spoofing. The 
+attacking system sends SYN messages to the victim server system; these appear to 
+be legitimate but in fact reference a client system that is unable to respond to 
+the SYN-ACK messages. This means that the final ACK message will never be sent 
+to the victim server system. 
+<P>The half-open connections data structure on the victim server system will 
+eventually fill; then the system will be unable to accept any new incoming 
+connections until the table is emptied out. Normally there is a time-out 
+associated with a pending connection, so the half-open connections will 
+eventually expire and the victim server system will recover. However, the 
+attacking system can simply continue sending IP-spoofed packets requesting new 
+connections faster than the victim system can expire the pending connections. 
+<P>In most cases, the victim of such an attack will have difficulty in accepting 
+any new incoming network connection. In these cases, the attack does not affect 
+existing incoming connections nor the ability to originate outgoing network 
+connections. However, in some cases, the system may exhaust memory, crash, or be 
+rendered otherwise inoperative. 
+<P>The location of the attacking system is obscured because the source addresses 
+in the SYN packets are often implausible. When the packet arrives at the victim 
+server system, there is no way to determine its true source. Since the network 
+forwards packets based on destination address, the only way to validate the 
+source of a packet is to use input source filtering. [16] 
+<P><FONT size=+2>4.10 Conclusion</FONT> 
+<P>There are also plenty of other attack methods but they are very technical for 
+a non-advanced UNIX user. Here is a short list of some of them: 
+<P>Sendmail attack: attack via the mail system on port 25 <BR>NIS and NFS attack 
+<BR>FTP attack: attack via the ftp port (21) <BR>Telnet attack: attack via the 
+telnet port (23) <BR>Rlogin and rsh attack 
+<P>This is not an exhaustive list, because there are probably many attacks that 
+have not been disclosed. 
+<P><B><FONT size=+2>CHAPTER 5: Ways to secure the insecured</FONT></B> 
+<P>In this part, we are going to see which methods can be used to improve the 
+security on Internet. The two main hopes of Internet security remains in 
+firewalls and encryption. 
+<P><FONT size=+2>5.1 Internet firewalls</FONT> 
+<P>Firewalls have been called condoms for corporate networks. They provide 
+digital protection associated with the rapid growth of internetworking and 
+commercialisation of the Internet. As with condoms, many people have heard of 
+firewalls and some people use them. However, the number of security incidents 
+arising from Internet connections strongly suggests that not enough people are 
+using them properly. 
+<P><FONT size=+1>5.1.1 What is a firewall ?</FONT> 
+<P>A firewall is a form of access-control technology that prevents unauthorised 
+access to information resources by placing a barrier between an organisation's 
+network and an unsecured network (e.g. Internet). A firewall is also used to 
+prevent the unauthorised export of proprietary information from a corporate 
+network. In other words, a firewall functions as a gateway, controlling traffic 
+in both directions. 
+<P>The typical firewall is an inexpensive micro-based UNIX box kept clean of 
+critical data, with a bunch of modems and public network ports on it but just 
+one carefully watched connection back to the rest of the cluster. The special 
+precautions may include threat monitoring or call-back. 
+<P>Some firewalls permit only Email traffic through them, thereby protecting the 
+network against any attacks other than attacks against the Email service. Other 
+firewalls provide less strict protections, and block services that are known to 
+be problems. [17] 
+<P>Generally, firewalls are configured to protect against unauthenticated 
+interactive logins from the "outside" world. This, more than anything, helps 
+prevent vandals from logging into machines on the internal network. More 
+elaborate firewalls block traffic from the outside to the inside, but permit 
+users on the inside to communicate freely with the outside. The firewall can 
+protect you against any type of network borne attack. 
+<P>Firewalls are also important since they can provide a single "choke point" 
+where security and audit can be imposed. Unlike in a situation where a computer 
+system is being attacked by someone dialling in with a modem, the firewall can 
+act as an effective "phone tap" and tracing tool. 
+<P><IMG height=410 src="Internet security.files/firewall.gif" width=612> 
+<P>Figure 5.1.1 Firewall's location 
+<P><FONT size=+1>5.1.2 What can a firewall not do ?</FONT> 
+<P>Firewalls can not protect against attacks that do not go through the 
+firewall. Many corporations that connect to the Internet are very concerned 
+about proprietary data leaking out of the company through that route. 
+Unfortunately for those concerned, a magnetic tape can just as effectively be 
+used to export data. Firewall policies must be realistic, and reflect the level 
+of security in the entire network. For example, a site with top secret or 
+classified data doesn't need a firewall at all: they shouldn't be hooking up to 
+the Internet in the first place, or the systems with the really secret data 
+should be isolated from the rest of the corporate network. 
+<P>Firewalls can not protect very well against things like viruses. There are 
+too many ways of encoding binary files for transfer over networks, and too many 
+different architectures and viruses to try to search for them all. In other 
+words, a firewall cannot replace security, consciousness on the part of the 
+users. In general, a firewall cannot protect against a data-driven attack 
+(attacks in which something is mailed or copied to an internal host where it is 
+then executed). This form of attack has occurred in the past against various 
+versions of Sendmail. 
+<P><FONT size=+1>5.1.3 Conclusion</FONT> 
+<P>There are plenty of sorts of firewalls. However the main part of them are a 
+piece of software installed on the router of the company or on another host. But 
+there are also hardware firewalls. It is an electronic board which is plugged 
+inside the computer. There are different role for a firewall. Some are packet 
+filtering router, dual-home gateway, bastion host, etc ... There is also a wide 
+range of firewalls for each operating system: UNIX, Novell Netware, Windows NT, 
+LINUX, and so on ... 
+<P>Nowadays, firewalls are a good rampart against hackers. However, if a 
+firewall is not installed properly, it could be worth than not having one due to 
+a false sense of security. 
+<P><FONT size=+2>5.2 Password protection and generation of safe passwords</FONT> 
+
+<P>As the password protection is one of the main problem of Internet security, 
+there are two major ways to improve the password security: Shadow password and 
+generation of "secure" passwords. 
+<P><FONT size=+1>5.2.1 Shadow password</FONT> 
+<P>Shadow password is a system where the plaintext of the password file is 
+hidden from all users except root, hopefully stopping all password cracking 
+attempts at source. It provides a good degree of password file robustness. 
+<P><FONT size=+1>5.2.2 Generation of secure passwords</FONT> 
+<P>First, it is interesting to see how many possible passwords there are. Most 
+people worried that programs like "Crack" will eventually grow in power until 
+they can do a completely exhaustive search of all possible passwords, to break 
+into a specific users' account (usually root). 
+<P>Valid passwords are created from a set of 62 chars [A-Za-z0-9] and they can 
+be made of even more characters such as #'œ$%^&amp; etc ... There are also to be 
+between 5 and 8 characters long. With only the 62 common characters the size of 
+the set of all valid passwords is: <BR>625+626+627+628 = 2.2E+14 <BR>A figure 
+which is far too large to usefully undertake an exhaustive search with current 
+technologies. Moreover, if one can use some of all the 95 non-control characters 
+in passwords, this increases the search space for a cracker to cover even 
+further. 
+<P>Any password derived from any dictionary word (or personal information), 
+modified in any way, constitutes a potentially guessable password. 
+<P>For example password based on: 
+<P>login name: cme45212 <BR>first name: sandra, stefan <BR>standard surname: 
+smith <BR>backward words: htims, 21254emc, retupmoc <BR>words of dictionary: 
+computer <BR>capitalised word: Computer, CoMpuTer <BR>words of cracking 
+dictionary: PORSCHE911, 12345678, qwerty, abcxyz, mr.spoke <BR>foreign language 
+words: salut45, gutentag 
+<P>A good password is easy to remember, but hard to guess. The best way to make 
+a password "un-crackable" is to make it appear random. Remember, it is always 
+possible to insert digits and punctuation in a password. The favourite way to 
+think of passwords which appear random, but which are easy to remember is to: 
+<P>1.Take a phrase, or a line from a poem or a song. It needs to be at least 8 
+words long <BR>2.Take the first letter from each word, and use it as a character 
+in your password. <BR>3.Take advantage of punctuation. <BR>4.If you can not 
+think of one that is long enough, you can use a shorter one and pad it at the 
+beginning and end with digits. 
+<P>For example, the phrase: "One for all, and all for one" yields the relatively 
+un-crackable password: "Ofa,&amp;af1" 
+<P>A good way for a network administrator to know if users have secured 
+passwords is to use password cracking programs on his own system as will do a 
+cracker. "Crack" is a good tool for insuring that UNIX system's users have not 
+selected easily guessed passwords which appear in standard dictionaries. [18] 
+<P><FONT size=+2>5.3 Encryption</FONT> 
+<P>Encryption is the cryptographic methods and the technology which permits 
+users to send messages that can be understood (decrypted) only by the intended 
+recipient, improving controls on routing messages over the Internet, and 
+improving operating system quality to decrease program flaws and other security 
+vulnerabilities. 
+<P>There are two main types of encryption: asymmetric encryption (also called 
+public-key encryption) and symmetric encryption. 
+<P><FONT size=+1>5.3.1 Asymmetric or public key encryption</FONT> 
+<P>This is a cryptographic system that uses two keys: a public key known to 
+everyone and a private or secret key known only to the recipient of the message. 
+
+<P>Example: When John wants to send a secure message to Jane, he uses Jane's 
+public key to encrypt the message. Jane then uses her private key to decrypt it. 
+
+<P>An important element to the public key system is that the public and private 
+keys are related in such a way that only the public key can be used to encrypt 
+messages and only the corresponding private key can be used to decrypt them. 
+Moreover, it is virtually impossible to deduce the private key if you know the 
+public key. 
+<P>Public-key systems, such as Pretty Good Privacy (PGP, see further), are 
+becoming popular for transmitting information via the Internet. RSA system used 
+for securing payment through the world wide web is now a standard. These systems 
+are extremely secure and relatively simple to use. The only difficulty with 
+public-key systems is that you need to know the recipient's public key to 
+encrypt a message for him or her. However when paying through the WWW, the 
+browser manages this task itself by asking the remote server its public key. 
+[19] 
+<P><FONT size=+1>5.3.2 Symmetric encryption</FONT> 
+<P>It is a type of encryption where the same key is used to encrypt and decrypt 
+the message. DES encryption (Data Encryption Standard) is the most famous form 
+of symmetric encryption. It is currently used by US administrations to send data 
+through a network. However, They use the public key encryption system to send 
+the key of DES encryption to the recipient of the encrypted file. 
+<P><FONT size=+1>5.3.3 PGP</FONT> 
+<P>This is a program for encrypting messages developed by Philip Zimmerman. PGP 
+is one of the most common ways to protect messages on the Internet because it is 
+effective, easy to use, and free. PGP is based on the public-key method, which 
+uses two keys: one is a public key that you disseminate to anyone from whom you 
+want to receive a message, the other is a private key that you use to decrypt 
+messages that you receive. 
+<P>To encrypt a message using PGP, you need the PGP encryption package, which is 
+available for free from a number of sources (the official repository is at the 
+Massachusetts Institute of Technology). 
+<P>PGP is such an effective encryption tool that the US government actually 
+brought a lawsuit against Zimmerman for putting it in the public domain and 
+hence making it available to enemies of the U.S. After a public outcry, the US 
+lawsuit was dropped, but it is still illegal to use PGP in many other countries. 
+
+<P>Encryption is the most effective way to achieve data security, ensure data 
+integrity and confidentiality. 
+<P><FONT size=+2>5.4 IP spoofing and SYN-flooding</FONT> 
+<P>With the current IP protocol technology, it is impossible to eliminate 
+IP-spoofed packets. However, there are steps to be taken to reduce the number of 
+IP-spoofed packets entering and exiting the network. 
+<P>The best method is to install a filtering router that restricts the input to 
+the external interface (known as an input filter) by not allowing a packet 
+through if it has a source address from the internal network. In addition, it 
+could be good to filter outgoing packets that have a source address different 
+from the internal network to prevent a source IP spoofing attack from 
+originating from the internal site. 
+<P>The combination of these two filters would prevent outside attackers from 
+sending the site packets pretending to be from the internal network. It would 
+also prevent packets originating within the internal network from pretending to 
+be from outside this network. These filters will not stop all TCP SYN attacks, 
+since outside attackers can spoof packets from any outside network, and internal 
+attackers can still send attacks spoofing internal addresses. 
+<P>IP spoofing and SYN-flooding are currently the two major unresolvable 
+problems of Internet security. 
+<P><FONT size=+2>5.5 Security auditing tools</FONT> 
+<P>There are plenty of tools available through the Internet to check the 
+security of a system. Some tools scan hosts for known vulnerabilities: SATAN is 
+the most famous program, others tools check the file integrity such as Tripwire. 
+The network administrator is strongly advised to use these tools before hackers. 
+
+<P>Here is a short list of the other well known tools: ISS, C2 security, COPS, 
+Tiger (part of the TAMU Security Package), MD5. [20] 
+<P><FONT size=+2>5.6 Security through obscurity</FONT> 
+<P>This is a way to consider that any system can be secure so long as nobody 
+outside of its implementation group is allowed to find out anything about its 
+internal mechanisms. The technique is hiding account, passwords in binary files 
+or scripts with the presumption that "nobody will ever find it". 
+<P>This is a philosophy favoured by many bureaucratic US agencies. The main 
+critic of this technique maintains that it is pseudosecurity because it does not 
+solve the real problems of security but instead hides them. 
+<P>It can also tie the manager into trusting a small group of people for as long 
+as they live. If the employees get an offer of better pay from somewhere else, 
+the knowledge goes with them, whether the knowledge is replaceable or not. Once 
+the secret gets out, that is the end of the security. 
+<P>However, this technique can complement other security steps. 
+<P><FONT size=+2>5.7 IP Restriction</FONT> 
+<P>IP Restriction is a very common thing to do to limit a user to parts of the 
+server. By allowing only a few IP address to other parts of the server, a hacker 
+will not be granted access to areas where he or she can cause damage. [21] 
+<P><FONT size=+2>5.8 Education and awareness</FONT> 
+<P>One of the major threat to the security of a system is not the technical 
+holes of a host computer; it is the lack of awareness. By "lack of awareness," I 
+mean that Internet users are often under the impression that the only way a 
+hacker can break into their account or the system is through some secret back 
+door left open by careless administrators. Another misunderstanding is the 
+belief that if there is nothing of value in a user's account, no one would 
+bother to break in. What an intruder finds valuable about an account is access 
+to the system. This single access allow the intruder to get root access via a 
+hole in the operating system or can be used as a gateway to hack other sites. 
+The user is then responsible for this. 
+<P>- A good step is to take strict measures to make users aware of the 
+importance of their password by encourage them to: <BR>changing their password 
+after the first login. <BR>- not sharing their account <BR>- protecting their 
+password i.e. be careful while typing the password <BR>- changing their password 
+regularly, and especially after logging into the account from a remote machine. 
+<BR>- choosing secure passwords 
+<P>Another good way to imply users for the security is to make them sign a 
+charter of responsibility and good behaviour on the Internet. 
+<P>The security is the business of everybody on a system: the administrator as 
+well as the users. And the role of the administrator is to educate his users to 
+security. 
+<P><B><FONT size=+2>CHAPTER 6: Conclusion</FONT></B> 
+<P>As Internet security is a recent issue, the legislation about it is quite 
+rare. The US federal networking council wrote a draft on the Internet security 
+in 1995. This defines where the responsibilities of users of the Internet lie: 
+the user, the management of multi-user hosts and Internet facilities, the system 
+administrators, the Federal Networking Council, the Vendors and System 
+Developers, the Computer Network and Service Providers. Further details about 
+the US legislation can be found on the website of the US federal networking 
+council [22]. 
+<P>The best solution for the Internet security is encryption. But many 
+countries' governments do not approve this technique because it is a danger to 
+the state security and governments can not control the information. So, it is 
+why in the U.S. the public key encryption is only allowed with a 48-bit key. In 
+other countries such as France and Singapore, encryption is banned. Now, 
+corporations want to choose the strong security features that they need to 
+protect information being communicated in electronic commerce. 
+<P>While there is not and never will be a fool proof secure network, we can 
+protect ourselves from the majority of the problems associated with the 
+Internet. As the Internet continues to grow in popularity, it will surely grow 
+with statistics of fraud, break in, and plain mischief. If you don't want to 
+take the risk, turn off your computer now. 
+<P>"The only system which is truly secure is one which is switched off and 
+unplugged, locked in a titanium lined safe, buried in a concrete bunker, and is 
+surrounded by nerve gas and very highly paid armed guards. Even then, I wouldn't 
+stake my life on it." Gene Spafford 
+<P>This document has dealt with the Internet security issues and has described 
+the main techniques hackers use to achieve their kicks. The last chapter has 
+described the methods used to improve the security. 
+<P>The documentation was sometimes particularly difficult to find, especially 
+that dealing with tricks hackers use to break into hosts. Moreover, I learned a 
+lot of interesting things on the subject and it made me aware of this new 
+important issue. 
+<P><B><FONT size=+2>REFERENCES</FONT></B> 
+<P>[1] Sterling B Short History of the Internet <A 
+href="http://www.forthnet.gr/forthnet/isoc/short.history.of.internet">http://www.forthnet.gr/forthnet/isoc/short.history.of.internet</A> 
+
+<P>[2] Gromov G R The Roads and Crossroads of Internet 's History <A 
+href="http://www.internetvalley.com/intval.html">http://www.internetvalley.com/intval.html</A> 
+
+<P>[3] - Internet site of the TV channel CNN <A 
+href="http://www.cnn.com/">http://www.cnn.com/</A> 29 - December 1996 
+<P>[4] - Hacked page published in the 2600 magazine <A 
+href="http://www.2600.com/hacked_pages/">http://www.2600.com/hacked_pages/</A> 
+<P>[5] - Internet site of the newspapers BangkokPost <A 
+href="http://www.bangkokpost.net/">http://www.bangkokpost.net/</A> - 3 march 
+1997 
+<P>[6] - Hacked page published in the 2600 magazine <A 
+href="http://www.2600.com/hacked_pages/">http://www.2600.com/hacked_pages/</A> 
+<P>[7] - Hacked page published in the 2600 magazine <A 
+href="http://www.2600.com/hacked_pages/">http://www.2600.com/hacked_pages/</A> 
+<P>[8] - Internet site of the TV channel CNN <A 
+href="http://www.cnn.com/">http://www.cnn.com/</A> - 2 march 1997 
+<P>[9] Clifford The Cuckoo's Egg, Doubleday, Stoll, 1989 
+<P>[10] - Newsweek, 2/6/95, p.36 
+<P>[11] - Internet security: IBM, Mastercard and DPS complete first end-to-end 
+secure electronic transaction over Internet EDGE, Jan 6 1997 
+<P>[12] Wagner M Web attacks bring down servers, but business stay Computer 
+World, Jan 6 1997 
+<P>[13] Bryant R UNIX security, SAMS publishing, p53 
+<P>[14] - IP Spoofing, CERT advisory team, 1995 <A 
+href="http://www.deter.com/unix/papers/cert_ip_spoof.txt">http://www.deter.com/unix/papers/cert_ip_spoof.txt</A> 
+
+<P>[15] Gromov G R The Roads and Crossroads of Internet 's History <A 
+href="http://www.internetvalley.com/intval.html">http://www.internetvalley.com/intval.html</A> 
+
+<P>[16] Joncheray L A Simple Active Attack Against TCP, 1995 <A 
+href="http://www.physnet.uni-hamburg.de/provos/security/iphijack.txt">http://www.physnet.uni-hamburg.de/provos/security/iphijack.txt</A> 
+
+<P>[17] Ranum M Thinking About Firewalls <A 
+href="http://www.deter.com/unix/papers/firewall_ranum.ps.gz">http://www.deter.com/unix/papers/firewall_ranum.ps.gz</A> 
+
+<P>[18] Klein D Foiling the Cracker <A 
+href="http://www.abc.se/~jp/articles/computer/security/passwd2.txt">http://www.abc.se/~jp/articles/computer/security/passwd2.txt</A> 
+
+<P>[19] - RSA encryption system official site <A 
+href="http://www.rsa.com/">http://www.rsa.com/</A> 
+<P>[20] Farmer D The COPS Security Checker System,1994 <A 
+href="http://www.deter.com/unix/papers/cops_dan_farmer.txt">http://www.deter.com/unix/papers/cops_dan_farmer.txt</A> 
+
+<P>[21] Chapman D B Network (In)Security Through IP Packet Filtering, 1992 <A 
+href="http://www.deter.com/unix/papers/packet_filt_chapman.ps.gz">http://www.deter.com/unix/papers/packet_filt_chapman.ps.gz</A> 
+
+<P>[22] - A Framework for Action, Federal Networking Council <A 
+href="http://www.fnc.gov/fisp_sec_contents.html">http://www.fnc.gov/fisp_sec_contents.html</A> 
+<BR>Please, for any queries or comments: <A 
+href="mailto:xtream@online.fr">xtream@online.fr</A> Copyright Xtream. 
+</P></BODY></HTML>
+  

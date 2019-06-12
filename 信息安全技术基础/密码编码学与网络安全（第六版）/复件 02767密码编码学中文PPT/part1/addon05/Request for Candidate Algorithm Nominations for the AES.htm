@@ -1,0 +1,960 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0062)http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm -->
+<HTML><HEAD><TITLE>Request for Candidate Algorithm Nominations for the AES</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="Jim Foti" name=Author>
+<META content="MSHTML 6.00.3790.2858" name=GENERATOR></HEAD>
+<BODY text=#000000 vLink=#551a8b aLink=#ff0000 link=#0000ee 
+bgColor=#ffffff>[Federal Register: September 12, 1997 (Volume 62, Number 
+177)]<BR>[Notices]<BR>[Page 48051-48058]<BR>From the Federal Register online via 
+GPO Access [wais.access.gpo.gov]<BR>[DOCID:fr12se97-28]
+<P>[ [Page 48051] ] 
+<HR SIZE=5>
+
+<P>
+<CENTER>DEPARTMENT OF COMMERCE <BR>National Institute of Standards and 
+Technology <BR>[Docket No. 970725180-7180-01] <BR>RIN No. 0693-ZA16</CENTER>
+<H2>
+<CENTER>ANNOUNCING REQUEST FOR CANDIDATE ALGORITHM NOMINATIONS FOR THE ADVANCED 
+ENCRYPTION STANDARD<BR>(AES)</CENTER></H2><B>AGENCY:</B> National Institute of 
+Standards and Technology (NIST), Commerce. 
+<P><B>ACTION:</B>&nbsp; Notice; Request for candidate encryption algorithm 
+nomination packages 
+<P><B>SUMMARY:</B>&nbsp; A process to develop a Federal Information Processing 
+Standard (FIPS) for Advanced Encryption Standard (AES) specifying an Advanced 
+Encryption Algorithm (AEA) has been initiated by the National Institute of 
+Standards and Technology (NIST).&nbsp;&nbsp; This notice requests submissions of 
+candidate algorithms for consideration for inclusion in the AES and specifies 
+how to submit a nomination package.&nbsp; The requirements for candidate 
+algorithm submission packages and minimum acceptability requirements that must 
+be satisfied in order to be deemed a “complete and proper” submission are 
+presented.&nbsp; The evaluation criteria which will be used to appraise the 
+candidate algorithms are also described. 
+<P>It is intended that the AES will specify an unclassified, publicly disclosed 
+encryption algorithm available royalty-free worldwide that is capable of 
+protecting sensitive government information well into the next century. 
+<P>The purpose of this notice is to solicit candidate algorithms from the 
+public, academic/research communities, manufacturers, voluntary standards 
+organizations, and Federal, state, and local government organizations.&nbsp; 
+Following the close of the submission period, NIST intends to make all 
+submissions publicly available for review and comment. 
+<P><B>DATES:</B> Submission deadline: candidate algorithm nomination packages 
+must be received by <B>June 15, 1998</B>. 
+<P>Submission packages received before <B>April 15, 1998</B> will be reviewed 
+for completeness by NIST and notified of their specific deficiencies, if any, by 
+<B>May 15, 1998</B>, allowing time for deficient packages to be amended by the 
+submission deadline. 
+<P>No amendments to deficient packages will be permitted after the submission 
+deadline.&nbsp; Requests for withdrawal of candidate algorithm submission 
+packages previously submitted will only be honored until the submission 
+deadline. <BR>&nbsp; 
+<P><B>ADDRESS:</B> Candidate algorithm submission packages should be sent to 
+(Modified 6/15/98) Mr. Miles Smid, Attn: AES Nominations, NIST, Building 820, 
+Room 414, Gaithersburg, MD 20899. 
+<P><A name=secffi></A><B>FOR FURTHER INFORMATION CONTACT:</B>&nbsp; For general 
+information, contact: Edward Roback, National Institute of Standards and 
+Technology, Building 820, Room 426, Gaithersburg, MD 20899; telephone 
+301-975-3696 or via fax at 301-948-1233. 
+<P>If necessary, general questions for clarification of&nbsp; these requirements 
+for candidate algorithm submission packages, minimum acceptability requirements, 
+or evaluation criteria/process should be sent electronically to <A 
+href="mailto:aesquest@nist.gov">AESQUEST@NIST.GOV</A> or via fax to 301-948-1233 
+(Attn: AES Questions).&nbsp; In fairness to all parties, answers to germane 
+questions will be made publicly available simultaneously to all those interested 
+at &lt;<A 
+href="http://csrc.nist.gov/encryption/aes/aes_home.htm">http://csrc.nist.gov/encryption/aes/aes_home.htm</A>&gt;.&nbsp; 
+Non-pertinent questions may be ignored. 
+<P>Technical questions and questions related to a specific submission package 
+may be made by contacting either Miles Smid at (301) 975-2938, or Jim Foti at 
+(301) 975-5237. 
+<P>NIST will endeavor to answer all questions in a timely manner. 
+<P><B>SUPPLEMENTARY INFORMATION:</B> 
+<P>This section contains the following: <BR>&nbsp; <BR><A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec1">1.&nbsp; 
+Background</A> <BR><A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2">2.&nbsp; 
+Requirements for Candidate Algorithm Submission Packages</A> 
+<UL><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2a">2.A&nbsp; 
+  Cover sheet</A> <BR><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2b">2.B&nbsp; 
+  Algorithm Specifications and Supporting Documentation</A> <BR><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2c">2.C&nbsp; 
+  Magnetic media</A> <BR><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2d">2.D&nbsp; 
+  Intellectual property statements / agreements/ disclosures</A> <BR><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2e">2.E&nbsp; 
+  General Submission Requirements</A></UL><A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">3.&nbsp; 
+Minimum Acceptability Requirements</A> <BR><A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec4">4.&nbsp; 
+Evaluation Criteria</A> <BR><A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec5">5.&nbsp; 
+First AES Conference</A> <BR><A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec6">6.&nbsp; 
+Plans for Candidate Evaluation Process</A> 
+<UL><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec6a">6.A&nbsp; 
+  Overview</A> <BR><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec6b">6.B&nbsp; 
+  Round 1 Technical Evaluation</A> <BR><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec6c">6.C&nbsp; 
+  Round 2 Technical Evaluation</A></UL><A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec7">7.&nbsp; 
+Miscellaneous</A> <BR>&nbsp; <BR>&nbsp; 
+<CENTER>
+<H3>&nbsp;<A name=sec1></A>1.&nbsp; BACKGROUND</H3></CENTER>This work effort is 
+being initiated pursuant to NIST's responsibilities under the Computer Security 
+Act of 1987, the Information Technology Management Reform Act of 1996, Executive 
+Order 13011, and OMB Circular A-130. 
+<P>NIST recognizes that many institutions, both within and outside the Federal 
+Government, have considerable investments in their current installed base of 
+encryption equipment implementing the Data Encryption Algorithm, specified in 
+the Data Encryption Standard (<A 
+href="http://www.itl.nist.gov/div897/pubs/fip46-2.htm">DES, Federal Information 
+Processing Standard 46-2</A>).&nbsp; DES was first approved in 1977 and was most 
+recently reaffirmed by the Secretary in 1993, until December 1998.&nbsp; In 1993 
+the following statement was included in the standard: 
+<P>"At the next review (1998), the algorithm specified in this standard will be 
+over twenty years old.&nbsp; NIST will consider alternatives which offer a 
+higher level of security.&nbsp; One of these alternatives may be proposed as a 
+replacement standard at the 1998 review." 
+<P>It is NIST's view that a multi-year transition period will be necessary to 
+move toward any new encryption standard and that DES will continue to be of 
+sufficient strength for many applications.&nbsp; NIST will consult with all 
+interested parties so that a smooth transition can be accomplished.&nbsp; NIST 
+may not complete the AES selection process before the end of its 1998 DES 
+Review, and an interim solution(s) may be necessary. 
+<P>For interoperability and other purposes, NIST strongly desires to select a 
+single block encryption algorithm to be specified in the AES with a strength 
+equal to or better than that of Triple DES and significantly improved 
+efficiency.&nbsp; However, if more than one suitable candidate is identified 
+which provides significantly better advantages in a specific application(s), 
+NIST may consider recommending more than one algorithm.&nbsp; Present resource 
+constraints do not permit the development of&nbsp; a specific standard algorithm 
+for 8-bit smart card implementations or a standard stream cipher.&nbsp; It is 
+hoped that the block cipher selected will be suitably flexible for a wide 
+variety of implementations, recognizing that it may not operate with optimal 
+efficiency in each and every potential application. <BR>&nbsp; 
+<CENTER>
+<H3><A name=sec2></A>2.&nbsp; REQUIREMENTS FOR CANDIDATE ALGORITHM SUBMISSION 
+PACKAGES</H3></CENTER>To be considered as a “complete” nomination package (and 
+continue further in the AES consideration process), candidate algorithm 
+submission packages <B><I>MUST</I></B> contain the following (as described in 
+detail below): 
+<UL>
+  <LI><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2a">Cover 
+  sheet</A> 
+  <LI><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2b">Algorithm 
+  Specifications and Supporting Documentation</A> 
+  <LI><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2c">Magnetic 
+  media</A> 
+  <LI><A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2d">Intellectual 
+  property statements / agreements/ disclosures</A> </LI></UL>Each of these is 
+discussed in detail below, including <A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2e">general 
+submission requirements</A> which all nominations must also satisfy. <BR>&nbsp; 
+<H4><A name=sec2a></A>2.A&nbsp;&nbsp; Cover sheet</H4>A cover sheet containing 
+the following information: 
+<UL>
+  <LI>Name of submitted algorithm 
+  <LI>Principal submitter’s name, telephone, fax, organization, postal address, 
+  e-mail address 
+  <LI>Name(s) of auxiliary submitter(s) 
+  <LI>Name of algorithm inventor(s)/developer(s) 
+  <LI>Name of owner, if any, of the algorithm.&nbsp; (normally expected to be 
+  the same as the submitter) 
+  <LI>Signature of Submitter 
+  <LI>(optional) Backup point of contact (w/telephone, fax, postal address, 
+  e-mail) </LI></UL>&nbsp; 
+<H4><A name=sec2b></A>2.B&nbsp; Algorithm Specifications and Supporting 
+Documentation</H4><A name=sec2b1></A><B>2.B.1</B>&nbsp; A complete written 
+specification of the algorithm shall be included, consisting of all necessary 
+mathematical equations, tables, diagrams, and parameters that are needed to 
+implement the algorithm.&nbsp; The submission of all design rationale (e.g., 
+method for generating table values, rationale for number of rounds, etc.) is 
+strongly encouraged, in order to facilitate the public evaluation process. 
+<P>Parity bits shall not be specified in the key definition.&nbsp; The bit 
+naming/numbering convention for the key shall be provided by the submitter. 
+<P><A name=sec2b2></A><B>2.B.2</B>&nbsp;&nbsp; A statement of the algorithm’s 
+estimated computational efficiency in hardware and software shall be 
+included.&nbsp; At a minimum, the submitter shall state efficiency estimates for 
+the “NIST AES analysis platform” (specified elsewhere in <A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec6b">section 
+6.B</A>) and for 8-bit processors.&nbsp; (Efficiency estimates for other 
+platforms may be included at the submitters’ discretion.)&nbsp; These estimates 
+shall <B><I>each</I></B> include the following information, at a minimum: 
+<OL type=a>
+  <LI>Description of the platform used to generate the estimate, in sufficient 
+  detail so that the estimates could be verified in the public evaluation 
+  process (e.g., for software running on a PC, include processor, clock speed, 
+  memory, operating system, etc.).&nbsp; For hardware estimates, it is 
+  encouraged that a gate count (or estimated gate count) be included.
+  <P></P>
+  <LI>Speed estimate for the algorithm on the platform specified in <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec6b">section 
+  6.B</A>.&nbsp; At a minimum,&nbsp; the number of clock cycles required to:
+  <P>
+  <OL>
+    <LI>encrypt one block of data, 
+    <LI>decrypt one block of data, 
+    <LI>setup a key, 
+    <LI>setup the algorithm (e.g., build internal tables), and 
+    <LI>change a key after its initial setup </LI></OL>
+  <P>shall be specified <I>for each key- and block-size combination required in 
+  the <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">Minimum 
+  Acceptability Requirements</A> section&nbsp; of this announcement</I>.
+  <P></P>
+  <LI>Any available information on tradeoffs between speed and memory. 
+</LI></OL><A name=sec2b3></A><B>2.B.3</B> A series of Known Answer Tests (KATs) 
+and Monte Carlo Tests (MCTs) shall be included as specified below.&nbsp; All of 
+these KAT and MCT values shall be submitted electronically, in separate files, 
+on a diskette as described in <A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2c3">section 
+2.C.3</A>.&nbsp; (The files containing test values may be compressed using PKZIP 
+or GNUZIP to conserve disk space.)&nbsp; Each file shall be clearly labeled with 
+header information listing: 
+<OL>
+  <LI>Algorithm name, 
+  <LI>Test name, 
+  <LI>Description of the test, and 
+  <LI>Key-block size combination being tested. </LI></OL>All values within the 
+file shall be clearly labeled (e.g., index, key, plaintext, ciphertext, etc.), 
+and shall be in the exact format specified by NIST on its WWW site at &lt;<A 
+href="http://csrc.nist.gov/encryption/aes/aes_home.htm">http://csrc.nist.gov/encryption/aes/aes_home.htm</A>&gt;. 
+
+<OL type=a>
+  <LI>All applicable KATs shall be included that can be used to exercise various 
+  features of the algorithm when operated in the Electronic Codebook (ECB) 
+  mode.&nbsp; A set of KATs shall be included for <B><I>each</I></B> key and 
+  block size specified in the <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">Minimum 
+  Acceptability Requirements</A> section.&nbsp; Required KATs include: 
+  <BR>&nbsp; 
+  <OL type=i>
+    <LI><I><U>Variable Key Known Answer Test</U></I> - A variable key KAT is 
+    required for the algorithm’s encryption state.&nbsp; For an <I>n</I>-bit 
+    <I>key</I> size, there shall be <I>n</I> key-plaintext-ciphertext 
+    triples.&nbsp; The plaintext shall always consist entirely of binary zeroes; 
+    the key shall always contain a single ‘1’ bit and <I>n</I>-1 ‘0’ bits, and 
+    the <I>n</I> possible keys (where each key has the ‘1’ bit in a different 
+    position) shall be used to generate ciphertext.&nbsp; (To run this test for 
+    decryption, the ciphertext should be used as input to recover the block of 
+    all zero bits, for <B><I>each</I></B> possible one-bit key.)
+    <P></P>
+    <LI><I><U>Variable Plaintext Known Answer Test</U></I> - A variable 
+    plaintext KAT is required for the algorithm’s encryption state.&nbsp; For an 
+    <I>m</I>-bit <I>block</I> size, there shall be <I>m</I> 
+    key-plaintext-ciphertext triples.&nbsp; The key shall always consist 
+    entirely of binary zeroes; the plaintext block shall always contain a single 
+    ‘1’ bit and <I>m</I>-1 ‘0’ bits, and the <I>m</I> possible blocks (where 
+    each input block has the ‘1’ bit in a different position) shall be used to 
+    generate ciphertext.&nbsp; (To run this test for decryption, the ciphertext 
+    should be used as input to recover the correct input block, using the key 
+    consisting only of ‘0’ bits.)
+    <P></P>
+    <LI>If the candidate algorithm calculates intermediate values (e.g., 
+    internal rounds) for an encryption or decryption operation, then the 
+    submitter shall include known answers for those intermediate values for a 
+    single encryption and decryption operation for each of the required key- and 
+    block-size combinations.
+    <P></P>
+    <LI>If tables are used in the algorithm, then a known answer test shall be 
+    included to exercise every table entry. 
+    <P>Note:&nbsp; The submitter may include any other known answer tests that 
+    exercise different features of the algorithm (e.g., for permutation tables, 
+    etc.).&nbsp; The purposes of these tests shall be clearly described in the 
+    file containing the test values.
+    <P></P></LI></OL>
+  <LI>Four Monte Carlo Tests shall be included, with key and data values, for 
+  each of the key-block combinations required in the <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">Minimum 
+  Acceptability Requirements</A> section.&nbsp; These four tests correspond with 
+  tests specified in the NIST Special Publication, <I>Modes of Operation 
+  Validation System:&nbsp; Requirements and Procedures</I> [MOVS].&nbsp; The 
+  four tests required for the AES submissions correspond with the two Electronic 
+  Codebook Modes Tests for encryption and decryption (Sections 5.1.1.5 and 
+  5.1.2.5 in [MOVS]) and the two Cipher Block Chaining Modes Tests for 
+  encryption and decryption (Sections 5.2.1.5 and 5.2.2.5 in [MOVS]). </LI></OL>A 
+link to a description of the required tests will be available at &lt;<A 
+href="http://csrc.nist.gov/encryption/aes/aes_home.htm">http://csrc.nist.gov/encryption/aes/aes_home.htm</A>&gt;.&nbsp; 
+Required submission data for the Monte Carlo Tests will also be found at that 
+location. 
+<P><A name=sec2b4></A><B>2.B.4</B> A statement of the expected strength (i.e., 
+workfactor) of the algorithm shall be included, along with any supporting 
+rationale.&nbsp; The expected strength shall be given for <B><I>each</I></B> 
+key- and block-size combination required in the <A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">Minimum 
+Acceptability Requirements</A> section&nbsp; of this announcement, 
+<B><I>and</I></B> for all other key- and block-size combinations claimed to be 
+supported by the algorithm. 
+<P><A name=sec2b5></A><B>2.B.5</B> An analysis of the algorithm with respect to 
+known attacks (e.g., known and chosen plaintext) shall be included.&nbsp; In 
+addition, all known weak keys, equivalent keys, complementation properties, 
+restrictions on key selection, and other similar features of the algorithm shall 
+be noted by the submitter.&nbsp; If no such values are known, then this shall be 
+stated by the submitter. 
+<P>The submitter should provide any mathematical rationale for the non-existence 
+of “trap-doors” in the algorithm, to the greatest extent possible. 
+<P>The submitter shall provide a list of known references to any published 
+materials describing or analyzing the security of the submitted algorithm.&nbsp; 
+Submission of copies of these materials (accompanied by a waiver of copyright or 
+permission from the copyright holder for AES public evaluation purposes) is 
+encouraged. 
+<P><A name=sec2b6></A><B>2.B.6</B> A statement shall be included that lists and 
+describes advantages and limitations of the algorithm.&nbsp; Such advantages and 
+limitations shall address the ability to: 
+<OL type=a>
+  <LI>implement the algorithm as a stream cipher, Message Authentication Code 
+  (MAC) generator, pseudo-random number generator, hashing algorithm, etc. 
+  <LI>implement the algorithm in various environments, including - but not 
+  limited to: 8-bit processors (smartcards), ATM, HDTV, B-ISDN, voice 
+  applications, satellite applications, etc.&nbsp; To demonstrate the efficiency 
+  of a hardware implementation of the algorithm, the submitter may include a 
+  specification of the algorithm in a nonproprietary Hardware Description 
+  Language (HDL). 
+  <LI>use the algorithm with key- and block-sizes other than those required as a 
+  minimum in the <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">Minimum 
+  Acceptability Requirements</A> section of this announcement. </LI></OL>If the 
+submitter believes that the algorithm has certain features deemed advantageous 
+by the submitter, then these should be listed and described, along with 
+supporting rationale.&nbsp; Some examples of these features might include, for 
+example: throw-away tables, mathematically (rather than empirically) designed 
+tables, statistical basis for inter-round mixing, variable key setup time, etc. 
+<BR>&nbsp; 
+<H4><A name=sec2c></A>2.C&nbsp;&nbsp; Magnetic media</H4>
+<H4><A name=sec2c1></A>2.C.1&nbsp; Reference Implementation</H4>A reference 
+implementation shall be submitted, in order to promote the understanding of how 
+the candidate algorithm may be implemented.&nbsp; This implementation shall 
+consist of source code written in ANSI C;&nbsp; appropriate comments should be 
+included in the code, and it should clearly map to the algorithm description 
+included under <A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2b1">section 
+2.B.1</A>.&nbsp; Since this implementation is intended for reference purposes, 
+clarity in programming is more important than efficiency. 
+<P>The reference implementation shall be capable of fully demonstrating the 
+operation of the candidate algorithm.&nbsp; The reference implementation shall 
+support all key- and block-size combinations specified in the <A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">Minimum 
+Acceptability Requirements</A> section of this announcement.&nbsp; Additionally, 
+it must support all other key-block sizes that are claimed to be supported by 
+the algorithm. 
+<P>NIST will specify a cryptographic API for the ANSI C implementations, which 
+will be made available at &lt;<A 
+href="http://csrc.nist.gov/encryption/aes/aes_home.htm">http://csrc.nist.gov/encryption/aes/aes_home.htm</A>&gt;.&nbsp; 
+All ANSI C submissions shall implement that API, so that the NIST test system 
+can be compatible with all submissions. 
+<P>Separate source code for implementing the required Known Answer Tests and 
+Modes Tests with the reference implementation shall also be included.&nbsp; This 
+code shall be able to process input specified in the format indicated by NIST 
+(on the WWW site as referred to under <A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2b3">section 
+2.B.3</A>) and run the required tests. 
+<P>The reference implementation shall be provided on a single diskette, which 
+shall be labeled with the submitter’s name, the algorithm name, and “Reference 
+Implementation.” <BR>&nbsp; 
+<H4><A name=sec2c2></A>2.C.2 Mathematically Optimized Implementations</H4>Two 
+<I>mathematically</I> optimized implementations of the candidate algorithm shall 
+be submitted, so that NIST can perform tests in two different languages in order 
+to demonstrate the potential for efficient implementation.&nbsp; These two 
+implementations shall be specified in ANSI C and Java programming languages: 
+<BR>&nbsp; 
+<OL type=i>
+  <LI><B><I>ANSI C:</I></B>&nbsp; The first mathematically optimized 
+  implementation shall be specified in ANSI C source code.&nbsp; NIST intends to 
+  use the ANSI C compiler specified under “Round 1 Technical Analysis” to 
+  compile the code and link it to the NIST test system.&nbsp; (NIST received 
+  many comments that the optimized implementation should be written in C, since 
+  it is a very common language.) 
+  <P>NIST will specify a cryptographic API for the ANSI C implementations, which 
+  will be made available at &lt;<A 
+  href="http://csrc.nist.gov/encryption/aes/aes_home.htm">http://csrc.nist.gov/encryption/aes/aes_home.htm</A>&gt;.&nbsp; 
+  All ANSI C submissions shall implement that API, so that the NIST test system 
+  can be compatible with all submissions.&nbsp;<BR><BR></P>
+  <LI><B><I>Java language specification:</I></B>&nbsp; The second mathematically 
+  optimized implementation shall be specified in the Java programming language, 
+  as defined by the Java Development Kit (JDK) version 1.1.&nbsp; This JDK 1.1 
+  is publicly available for multiple platforms from Javasoft, at &lt;<A 
+  href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.javasoft.com">http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.javasoft.com</A>&gt;.&nbsp; 
+  NIST has selected Java as one language for the mathematically optimized 
+  implementations because it will provide an accurate relative mathematical 
+  efficiency measure of the different candidate algorithms, since it uses 
+  machine-independent code.&nbsp; The use of one Java Virtual Machine - to test 
+  all of the Java implementations submitted to NIST - is intended to eliminate 
+  differences in hardware optimizations that may occur when using other 
+  languages.&nbsp; It is not intended that the Java implementation will provide 
+  an absolute efficiency measure of each candidate algorithm on the NIST 
+  Analysis Platform. 
+  <P>Submissions are required to use the cryptographic API defined by the Java 
+  Cryptography Architecture (JCA) in conjunction with the Java Cryptography 
+  Extension (JCE).&nbsp; An AES submitter shall create a Cryptography Package 
+  Provider (CPP) that implements the submitted candidate algorithm.&nbsp; The 
+  Provider class is described in the JCA (Refer to &lt;<A 
+  href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://java.sun.com:80/products/jdk/1.1/docs/guide/security/CryptoSpec.html">http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://java.sun.com:80/products/jdk/1.1/docs/guide/security/CryptoSpec.html</A>&gt;, 
+  under “The Provider Class”; JCE 1.1 APIs may be found at &lt;<A 
+  href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://java.sun.com/security/">http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://java.sun.com/security/</A>&gt;). 
+  The “Cipher” engine subclass within the CPP (as defined in the JCE) shall then 
+  be used to implement the candidate encryption algorithm.&nbsp; Other 
+  appropriate engine subclasses from the JCA and JCE may also be implemented, to 
+  accomodate features of the particular candidate algorithm (e.g., “Key 
+  Generator” class in the JCE).</P></LI></OL>&nbsp; <BR><B><I>General Requirements 
+for Both Mathematically Optimized Implementations</I></B> <BR>&nbsp; 
+<UL>
+  <LI>Both of the mathematically optimized implementations shall support key- 
+  and block-size combinations specified in the <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">Minimum 
+  Acceptability Requirements</A> section of this announcement. 
+  <LI>The mathematically optimized implementations shall operate in the 
+  Electronic Codebook (ECB), Cipher Block Chaining (CBC), and 1-bit Cipher 
+  Feedback (1-CFB) modes for encryption and decryption.&nbsp; Other modes are 
+  not required to be implemented in the software provided to NIST. 
+  <LI>Separate source code for implementing the required Known Answer Tests and 
+  Monte Carlo Tests with the mathematically optimized implementations shall also 
+  be included.&nbsp; This code shall be able to process input specified in the 
+  format indicated by NIST (on the WWW site as referred to under <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2b3">section 
+  2.B.3</A>) and run the required tests. 
+  <LI>The submitter shall provide the mathematically optimized implementations 
+  on two separate diskettes, which shall be labeled with the submitter’s name, 
+  the algorithm name, and “Optimized - ANSI C” or “Optimized - Java”. 
+  <LI>Additionally, submitters may, at their discretion, submit revised 
+  optimized implementations (for both the ANSI C and Java implementations) for 
+  use in the Round 2 evaluation process, allowing additional time for 
+  improvements.&nbsp; These must be received prior to the beginning of the Round 
+  2 evaluation; submitters will be notified of the specific deadline as 
+  appropriate.&nbsp; Note that the mathematically optimized implementations on 
+  file with NIST at the close of the initial submission period will be the ones 
+  used in the Round 1 evaluation. </LI></UL>&nbsp; 
+<H4><A name=sec2c3></A>2.C.3 Test Values - Known Answer Tests and Monte Carlo 
+Tests</H4>The files on this diskette shall contain all of the test values 
+required under <A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec2b3">section 
+2.B.3</A> of this announcement.&nbsp; That section includes descriptions of the 
+required tests as well as a list of the values that must be provided.&nbsp; 
+These files may be compressed using PKZIP or GNUZIP to conserve disk space, if 
+necessary. 
+<P>The required format for the test vectors will be specified by NIST at &lt;<A 
+href="http://csrc.nist.gov/encryption/aes/aes_home.htm">http://csrc.nist.gov/encryption/aes/aes_home.htm</A>&gt;. 
+
+<P>The test values shall be provided on a single diskette, which shall be 
+labeled with the submitter’s name, the algorithm name, and “Test Values: Known 
+Answer Tests and Monte Carlo Tests.” <BR>&nbsp; 
+<H4><A name=sec2c4></A>2.C.4 Supporting Documentation</H4>So as to facilitate 
+electronic distribution of submissions to all interested parties, <I>copies of 
+all written materials must also be submitted in electronic form <B>in either 
+PostScript or Adobe PDF</B></I>.&nbsp; <I>PDF is preferable</I>. (NIST will 
+convert PostScript submissions to PDF.)&nbsp; Submitters planning to create PDF 
+are encouraged to use the thumbnail and bookmark features, to have a clickable 
+table of contents (if applicable), and to include other links within the PDF as 
+appropriate. To create a PostScript file, users of PC word processors should 
+configure their software to print using a PostScript printer driver, and capture 
+the output using the “print to file” feature, preferably using standard 
+PostScript printer fonts (not downloaded fonts). 
+<P>Users of TeX, LaTeX/DVIPS should use PostScript Type 1 fonts, preferably 
+standard PostScript printer fonts, rather than the default embedded bitmapped 
+Computer Modern fonts.&nbsp;&nbsp; Instructions for configuring DVIPS can be 
+found at <BR>&nbsp; &lt;<A 
+href="http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.adobe.com/supportservice/custsupport/SOLUTIONS/385e.htm">http://www.nist.gov/cgi-bin/exit_nist.cgi?url=http://www.adobe.com/supportservice/custsupport/SOLUTIONS/385e.htm</A>&gt; 
+, "Creating quality Adobe PDF files from TeX with DVIPS,”&nbsp; by Kendall 
+Whitehouse/EMERGE,&nbsp; FaxYI number 131303.&nbsp; (This is cited for reference 
+purposes only, and does not constitute a direct or implied endorsement.) 
+<P>NIST then intends to make submissions available electronically (consistent 
+with U.S. export regulations) in both PostScript and PDF formats. 
+<P>This electronic version of the supporting documentation shall be provided on 
+diskette(s), which shall be labeled with the submitter’s name, the algorithm 
+name, and “Supporting Documentation.”&nbsp; If multiple diskettes are necessary, 
+each diskette must also be labeled with “# <I>m</I> of <I>n</I>” as appropriate. 
+<BR>&nbsp; 
+<H4><A name=sec2c5></A>2.C.5 General Requirements for Magnetic Media</H4>A 
+separate diskette shall be used for the reference implementation, mathematically 
+optimized implementations, test values, and supporting materials. 
+<P>All magnetic media presented to NIST shall be free of viruses or other 
+malicious code.&nbsp; Media submitted will be scanned for the presence of such 
+code.&nbsp; If such malicious code is found, NIST will notify the submitter and 
+ask that a clean version of the magnetic media be re-submitted. 
+<P>All magnetic media shall be submitted on 3.5" 1.44MB floppy diskettes, 
+formatted for use on an IBM-compatible PC. 
+<P>A file labeled “README” shall be included on each diskette, listing all files 
+included on the diskette, with a brief description of each. 
+<P>NIST is in the process of defining a selected set of cryptographic service 
+calls for the ANSI C implementations.&nbsp; For the Java implementation, NIST 
+will use calls from the Java Cryptography Architecture API.&nbsp; These two sets 
+of calls shall be used by the NIST test software to make appropriate calls to 
+the optimized and reference implementations, so that the test software does not 
+have to be rewritten for each submitted algorithm.&nbsp; Therefore, <B><I>both 
+the mathematically optimized and reference implementations are required to 
+conform with these specific calls</I></B>.&nbsp; The implementations shall be 
+supplied in source code so that NIST can compile and link them appropriately 
+with the test software.&nbsp; The two selected sets of required calls will be 
+available at the following location: &lt;<A 
+href="http://csrc.nist.gov/encryption/aes/aes_home.htm">http://csrc.nist.gov/encryption/aes/aes_home.htm</A>&gt;.&nbsp; 
+NIST intends that these will be available within three months after publication 
+of this notice. <BR>&nbsp; 
+<H4><A name=sec2d></A>2.D&nbsp;&nbsp; Intellectual Property Statements / 
+Agreements / Disclosures</H4>After review of the public comments on the draft 
+minimum acceptability requirements and evaluation criteria (published for 
+comment in the Federal Register on January 2, 1997), NIST has determined that 
+potential users of the AES desire to have the AES available worldwide on a 
+royalty free basis.&nbsp; Additionally, based upon the results of the April 15, 
+1997 public workshop held on the draft evaluation criteria and submission 
+requirements, NIST believes there is a reasonable basis to expect a sufficient 
+number and variety of&nbsp; submissions willing to meet these licensing 
+conditions such that the expressed needs of potential AES users can be 
+accommodated. 
+<P>In order to ensure this and minimize any intellectual property issues, the 
+following statement is required: <BR>&nbsp; 
+<H4><A name=sec2d1></A>2.D.1&nbsp; Statement by the Submitter</H4><I>I, _____ 
+(print submitter’s full name) ____ do hereby declare that to the best of my 
+knowledge the practice of the algorithm, reference implementation, and 
+mathematically optimized implementations, I have submitted, known as ____ (print 
+name of algorithm)____ may be covered by the following U.S. and/or foreign 
+patents: _____ (describe and enumerate or state “none” if appropriate)_____ 
+.</I> 
+<P><I>I do hereby declare that I am aware of no patent applications which may 
+cover the practice of my submitted algorithm, reference implementation&nbsp; or 
+mathematically optimized implementations.</I>&nbsp;&nbsp; <B>– OR 
+–</B>&nbsp;&nbsp;&nbsp; <I>I do hereby declare that the following pending patent 
+applications may cover the practice of my submitted algorithm, reference 
+implementation or mathematically optimized implementations:&nbsp; _____ 
+(describe and enumerate) ______ .</I> 
+<P><I>I do hereby understand that my submitted algorithm may not be selected for 
+inclusion in the Advanced Encryption Standard.&nbsp; I also understand and agree 
+that after the close of the submission period, my submission may not be 
+withdrawn from public consideration for inclusion in the Federal Information 
+Processing Standard (FIPS) for Advanced Encryption Standard (AES).&nbsp; I 
+further understand that I will not receive financial compensation from the 
+government for my submission.&nbsp; I certify that, to the best of my knowledge, 
+I have fully disclosed all patents and patent applications relating to my 
+algorithm.&nbsp; I also understand that the U.S. Government may, during the 
+course of the lifetime of the AES or during the FIPS public review process, 
+modify the algorithm’s specifications (e.g., to protect against a newly 
+discovered vulnerability).&nbsp; Should my submission be selected for inclusion 
+in the AES, I hereby agree not to place any restrictions on the use of the 
+algorithm intending it to be available on a worldwide, non-exclusive, 
+royalty-free basis.</I> 
+<P><I>I do hereby agree to provide the statements required by sections 2.D.2 and 
+2.D.3, below, for any patent or patent application identified to cover practice 
+of my algorithm, reference implementation or mathematically optimized 
+implementations and the right to use such implementations for the purposes of 
+the AES evaluation process.</I> 
+<P><I>I understand that NIST will announce the selected algorithm(s) and proceed 
+to publish the draft FIPS for public comment.&nbsp; If my algorithm (or the 
+derived algorithm) is not selected for inclusion in the FIPS (including those 
+not selected for second round of public evaluation), I understand that all 
+rights, including use rights of the reference and mathematically optimized 
+implementations, revert back to the submitter (and other owner[s] as 
+appropriate).&nbsp; Additionally, should the U.S. Government not select my 
+algorithm for inclusion in the AES after a period of four years from the close 
+of the submission date for candidate algorithms, all rights revert to the 
+submitter (and other owner[s] as appropriate).</I> 
+<P><I>Signed:</I> <BR><I>Title:</I> <BR><I>Dated:</I> <BR><I>Place:</I> 
+<BR>&nbsp; <BR>&nbsp; 
+<H4><A name=sec2d2></A>2.D.2&nbsp; Statement by Patent (and Patent Application) 
+Owner(s)</H4>If there are any patents (or patent applications) identified by the 
+submitter, including those held by the submitter, the following statement must 
+be signed by each and every owner of the patent and patent applications above 
+identified. 
+<P><I>I, ____ (print full name) ____ , of _____(print full postal address)______ 
+, am the owner or authorized representative of the owner (print full name, if 
+different than the signer) of the following patent(s) and or patent 
+application(s):&nbsp; ______ (enumerate) ______ ,&nbsp; and do hereby agree to 
+grant to any interested party if the algorithm known as _____(print name of 
+algorithm) _______ , is selected for inclusion in the Advanced Encryption 
+Standard, an irrevocable nonexclusive royalty-free license to practice the 
+referenced algorithm, reference implementation or the mathematically optimized 
+implementations.&nbsp; Furthermore, I agree to grant the same rights in any 
+other patent granted to me or my company which may be necessary for the practice 
+of the referenced algorithm, reference implementation, or the mathematically 
+optimized implementations.</I> <BR><I>&nbsp;</I> <BR><I>Signed:</I> 
+<BR><I>Title:</I> <BR><I>Dated:</I> <BR><I>Place:</I> 
+<P>Note that the government may conduct research as may be appropriate to verify 
+the availability of the submission on a royalty free basis worldwide. <BR>&nbsp; 
+
+<H4><A name=sec2d3></A>2.D.3&nbsp; Statement by Reference/Mathematically 
+Optimized Implementations’ Owner(s)</H4>The following must also be included: 
+<P><I>I, _____(print full name)_______,&nbsp; am the owner of the submitted 
+reference implementation and mathematically optimized implementations and hereby 
+grant the Government and any interested party the right to use such 
+implementations for the purposes of the AES evaluation process notwithstanding 
+that the implementations may be copyrighted.</I> 
+<P><I>Signed:</I> <BR><I>Title:</I> <BR><I>Dated:</I> <BR><I>Place:</I> 
+<BR>&nbsp; 
+<H4><A name=sec2e></A>2.E&nbsp; General Submission Requirements</H4>NIST 
+welcomes both domestic and international submissions; however, in order to 
+facilitate analysis and evaluation, it is required that the submission packages 
+be in English.&nbsp; This information includes the cover sheet, algorithm 
+specification and supporting documentation, source code, and intellectual 
+property information.&nbsp; Any required information that is submitted in a 
+language other than English shall render the submission package 
+“incomplete.”&nbsp; Optional supporting materials (e.g., journal articles) in 
+another language may be submitted. 
+<P>Classified and/or proprietary submissions shall not be accepted. <BR>&nbsp; 
+<CENTER>
+<H3><A name=sec3></A>3.&nbsp; MINIMUM ACCEPTABILITY 
+REQUIREMENTS</H3></CENTER>Those packages which are deemed to be “complete” will 
+then be evaluated to see if they contain a “proper” candidate algorithm.&nbsp; 
+To be considered as a “proper” candidate algorithm submission (and continue 
+further in the AES Development Process), candidate algorithms must meet the 
+following minimum acceptability requirements: 
+<OL>
+  <LI>The algorithm must implement symmetric (secret) key cryptography. 
+  <LI>The algorithm must be a block cipher. 
+  <LI>The candidate algorithm shall be capable of supporting <I>key-block 
+  combinations with sizes of <B>128-128</B>, <B>192-128</B>, and <B>256-128</B> 
+  bits</I>.&nbsp; A submitted algorithm may support other key-block sizes and 
+  combinations, and such features will be taken into consideration during 
+  analysis and evaluation. </LI></OL>(End of minimum acceptability requirements) 
+<P>Candidate algorithm submission packages which are complete (as defined 
+earlier) and whose algorithm meets the minimum acceptability requirements (as 
+defined immediately above) will be deemed to be “complete and proper” 
+submissions.&nbsp; Those deemed otherwise will receive no further 
+consideration.&nbsp; A complete list of submissions will be publicly announced 
+by NIST - those which are “complete and proper,” and any others. <BR>&nbsp; 
+<CENTER>
+<H3><A name=sec4></A>4.&nbsp; EVALUATION CRITERIA</H3></CENTER>In order to 
+provide a basis for the analysis and evaluation of encryption algorithms 
+submitted to be considered for incorporation into the FIPS for AES, evaluation 
+criteria will be used to review candidate algorithms.&nbsp; All of NIST’s 
+analysis results will be made publicly available. 
+<P>Although NIST will be performing its own analyses of the candidate 
+algorithms, NIST strongly encourages public evaluation, making those results 
+publicly available and submitting them to NIST.&nbsp; This information may be 
+addressed at the Second and Third AES Candidate Conferences.&nbsp; NIST will 
+take into account its own analysis, as well as all other input received, in 
+order to make its decision regarding the AES selection. 
+<P>Candidate algorithms with submission packages deemed to be “complete and 
+proper” will&nbsp; be compared based on the following factors (ranked in the 
+order of relative importance): <BR>&nbsp; 
+<P><A name=sec4security></A><I><B>SECURITY </B>(i.e., the effort required to 
+cryptanalyze):</I> 
+<P>The security provided by an algorithm is the most important factor in the 
+evaluation. 
+<P>Algorithms will be judged on the following factors: 
+<OL type=i>
+  <LI>Actual security of the algorithm compared to other submitted algorithms 
+  (at the same key and block size). 
+  <LI>The extent to which the algorithm output is indistinguishable from a 
+  random permutation on the input block. 
+  <LI>Soundness of the mathematical basis for the algorithm’s security. 
+  <LI>Other security factors raised by the public during the evaluation process, 
+  including any attacks which demonstrate that the actual security of the 
+  algorithm is less than the strength claimed by the submitter. </LI></OL>Claimed 
+attacks will be evaluated for practicality. <BR>&nbsp; <BR>&nbsp; <BR><A 
+name=sec4cost></A><B><I>COST</I></B> <BR>&nbsp; 
+<OL type=i>
+  <LI><I>Licensing requirements:</I> NIST intends that when the AES is issued, 
+  the algorithm(s) specified in the AES shall be available on a worldwide, 
+  non-exclusive, royalty-free basis.<BR><BR>
+  <LI><I>Computational efficiency:</I>&nbsp; The evaluation of computational 
+  efficiency will be applicable to both hardware and software 
+  implementations.&nbsp; Round 1 analysis by NIST will focus primarily on 
+  software implementations and specifically on one key-block size combination 
+  (128-128); more attention will be paid to hardware implementations and other 
+  supported key-block size combinations (particularly those required in the <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">Minimum 
+  Acceptability Requirements</A> section) during Round 2 analysis. 
+  <P>Computational efficiency essentially refers to the speed of the 
+  algorithm.&nbsp; NIST’s analysis of computational efficiency will be made 
+  using each submission’s mathematically optimized implementations on the 
+  platform specified under <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec6b">Round 
+  1 Technical Evaluation</A> below.&nbsp; Public comments on each algorithm’s 
+  efficiency (particularly for various platforms and applications) will also be 
+  taken into consideration by NIST.&nbsp;<BR><BR></P>
+  <LI><I>Memory requirements:</I>&nbsp; The memory required to implement a 
+  candidate algorithm - for both hardware and software implementations of the 
+  algorithm - will also be considered during the evaluation process.&nbsp; Round 
+  1 analysis by NIST will focus primarily on software implementations; more 
+  attention will be paid to hardware implementations during Round 2. 
+  <P>Memory requirements will include such factors as gate counts for hardware 
+  implementations, and code size and RAM requirements for software 
+  implementations. 
+  <P>Testing will be performed by NIST using the mathematically optimized 
+  implementations provided in the submission package.&nbsp; Memory requirement 
+  estimates (for different platforms and environments) that are included in the 
+  submission package will also be taken into consideration by NIST.&nbsp; Input 
+  from public evaluations of each algorithm’s memory requirements (particularly 
+  for various platforms and applications) will also be taken into consideration 
+  by NIST.</P></LI></OL><A name=sec4aic></A><B><I>ALGORITHM AND IMPLEMENTATION 
+CHARACTERISTICS</I></B> <BR>&nbsp; 
+<OL type=i>
+  <LI><I>Flexibility:</I> Candidate algorithms with greater flexibility will 
+  meet the needs of more users than less flexible ones, and therefore, inter 
+  alia, are preferable.&nbsp; However, some extremes of functionality are of 
+  little practical application (e.g., extremely short key lengths) - for those 
+  cases, preference will not be given. 
+  <P>&nbsp;Some examples of “flexibility” may include (but are not limited to) 
+  the following: 
+  <OL type=a>
+    <LI>The algorithm can accommodate additional key- and block-sizes (e.g., 
+    64-bit block sizes, key sizes other than those specified in the Minimum 
+    Acceptability Requirements section, [e.g., keys between 128 and 256 that are 
+    multiples of 32 bits, etc.]). <BR>&nbsp; 
+    <LI>The algorithm can be implemented securely and efficiently in a wide 
+    variety of platforms and applications (e.g., 8-bit processors, ATM networks, 
+    voice &amp; satellite communications, HDTV, B-ISDN, etc.). <BR>&nbsp; 
+    <LI>The algorithm can be implemented as a stream cipher, Message 
+    Authentication Code (MAC) generator, pseudo-random number generator, hashing 
+    algorithm, etc.<BR><BR></LI></OL>
+  <LI><I>Hardware and software suitability:</I>&nbsp; A candidate algorithm 
+  shall not be restrictive in the sense that it can only be implemented in 
+  hardware.&nbsp; If one can also implement the algorithm efficiently in 
+  firmware, then this will be an advantage in the area of flexibility.<BR><BR>
+  <LI><I>Simplicity:</I> A candidate algorithm shall be judged according to 
+  relative simplicity of design. </LI></OL><A name=sec5></A>
+<CENTER>
+<H3>5.&nbsp; INITIAL PLANNING FOR THE FIRST AES CANDIDATE 
+CONFERENCE</H3></CENTER>An open public conference is being planned for the 
+summer of 1998, at which the submitter of each complete and proper nomination 
+package is invited to publicly discuss and explain their candidate algorithm. 
+<P>Written portions of all submitted candidates will be made available at the 
+Conference, including those not deemed “complete and proper.” Submitters of 
+complete and proper submissions will be invited to speak to discuss their 
+submission and answer questions. 
+<P>As details and registration procedures are finalized, they will be posted to 
+&lt;<A 
+href="http://csrc.nist.gov/encryption/aes/aes_home.htm">http://csrc.nist.gov/encryption/aes/aes_home.htm</A>&gt;. 
+<BR>&nbsp; 
+<CENTER>
+<H3><A name=sec6></A>6.&nbsp; PLANS FOR CANDIDATE EVALUATION 
+PROCESS</H3></CENTER>This section provides an overview of the envisioned AES 
+candidate review process, including NIST’s plans for technical analysis of 
+submissions. <BR>&nbsp; 
+<H4><A name=sec6a></A>6.A&nbsp; Overview</H4>Following the close of the call for 
+candidate algorithm submission packages, NIST will review them to determine 
+which are “complete and proper,” as described elsewhere in this notice.&nbsp; 
+NIST then intends to make all submissions publicly available (consistent with 
+U.S. export regulations) and invite public comments on the “complete and proper” 
+submissions.&nbsp; To help better inform the public, the First AES Candidate 
+Conference will be held at the start of the public comment process to allow 
+submitters to publicly explain and answer questions regarding their submissions. 
+NIST intends to publish a separate Federal Register notice in the future 
+requesting public comments on the candidate algorithms in the Round 1 evaluation 
+to be used in narrowing of the candidate pool for more careful study and 
+analysis in Round 2. 
+<P>During the Round 1 public review, NIST intends to technically evaluate the 
+candidate algorithms as outlined in the <A 
+href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec6b">Round 
+1 Technical Evaluation</A> section&nbsp; below.&nbsp;&nbsp; Note that NIST does 
+not intend to conduct its own cryptanalysis, but, rather it will review the 
+public evaluations of the candidate algorithms’ cryptographic strengths and 
+weaknesses, and NIST will use these in determining if an algorithm meets the 
+objectives of the AES.&nbsp; Because of&nbsp; limited resources, and also to 
+avoid moving evaluation targets (i.e., modifying the submitted algorithms 
+undergoing public review), NIST will <I>not</I> accept modifications to the 
+submitted algorithms during Round 1. 
+<P>For informational and planning purposes, near the end of the Round 1 public 
+evaluation process, NIST intends to hold the Second AES Candidate Conference 
+(approximately six months after the first conference; exact date to be 
+scheduled.)&nbsp; Its purpose will be to publicly discuss the AEA candidate 
+algorithms by NIST and others, and provide NIST with advice for narrowing the 
+field of algorithms to be considered for the AEA. 
+<P>NIST thereafter intends to narrow the field of candidates to no more than 
+five candidate algorithms based upon its own analysis, public comment, and all 
+other available information.&nbsp; It is envisioned that this narrowing will be 
+done primarily on security, efficiency, and intellectual property 
+considerations. 
+<P>Before the start of Round 2 evaluation, submitters have the option of 
+providing updated mathematically optimized implementations for use during the 
+second phase of evaluation (for those algorithms remaining in the Round 2 
+evaluation).&nbsp; During the course of Round 1 evaluations it is conceivable 
+that some small deficiencies may be identified in even some of the most 
+promising candidates.&nbsp; Therefore, for the Round 2 evaluations, small 
+modifications to the submitted algorithms will be permitted for either security 
+or efficiency purposes.&nbsp; Submitters may submit minor changes (no 
+substantial redesigns) along with a supporting explanation/justification (see 
+below) which must be received by NIST prior to the beginning of Round 2.&nbsp; 
+(Submitters will be notified by NIST of the exact deadline.)&nbsp; If this 
+option is exercised, new reference and mathematically optimized implementations 
+and written descriptions must also be provided by the start of Round 2.&nbsp; 
+This will allow public review of the modified algorithms during the entire 
+course of the second evaluation. 
+<P><I>Note:</I>&nbsp; All proposed changes for Round 2 must be proposed by the 
+submitter; no proposed changes (to the algorithm or implementations) will be 
+accepted from a third party. 
+<P>After the narrowed list of candidate algorithms is officially announced, NIST 
+intends that a six to nine month public review period will follow (the Round 2 
+evaluation).&nbsp; During the public review, NIST intends to technically 
+evaluate the candidate algorithms as outlined in the two sections below.&nbsp; 
+Near the end of the public review period, NIST intends to hold the Third AES 
+Candidate Conference. (The exact date is to be scheduled.) 
+<P>NIST then will select the algorithm(s) for inclusion in the AES, which will 
+be incorporated into a draft FIPS, which NIST intends to announce in the 
+<I>Federal Register</I> for comment. 
+<P>Note that this schedule for the AES development is somewhat tentative, 
+depending in part upon the type, quantity, and quality of submissions.&nbsp; 
+Specific conference dates and public comment periods will be announced at 
+appropriate times in the future.&nbsp; Note also that as a result of comments 
+received on the draft evaluation criteria and submission requirements, NIST has 
+further extended the length of time for algorithm submissions and each of the 
+ensuing planned public comment periods. <BR>&nbsp; 
+<H4><A name=sec6b></A>6.B&nbsp; Round 1 Technical Evaluation</H4>NIST will 
+invite public comments on all complete and proper submissions.&nbsp; NIST’s 
+Round 1 analysis is intended, at a minimum, to be performed as follows: 
+<OL type=i>
+  <LI><I>Key-Block Size Combinations:</I>&nbsp; Round 1 testing by NIST will be 
+  performed on the 128-bit key and 128-bit block size combination.&nbsp; (The 
+  public, however, is welcome to also focus on other key- and block-size 
+  combinations.) Testing of other key-block sizes may be accomplished if time 
+  and resources permit. <BR>&nbsp; 
+  <LI><I>Correctness check:</I>&nbsp; The Known Answer Test and Monte Carlo Test 
+  values included with the submission will be used to test the correctness of 
+  the reference and mathematically optimized implementations, once they are 
+  compiled.&nbsp; <I>(It is more likely that NIST will perform this check of the 
+  reference code - and possibly the optimized code as well - even before 
+  accepting the submission package as “complete and proper.”)</I> <BR>&nbsp; 
+  <LI><I>Efficiency testing:</I> Using the submitted mathematically optimized 
+  implementations, NIST intends to perform various computational efficiency 
+  tests for the 128-128 key-block combination, including the calculation of the 
+  time required to perform: <BR>&nbsp; 
+  <UL>
+    <LI>Algorithm setup, 
+    <LI>Key setup, 
+    <LI>Key change, and 
+    <LI>Encryption and decryption.<BR><BR></LI></UL>NIST may perform efficiency 
+  testing on other platforms.&nbsp;<BR><BR>
+  <LI><I>Other testing:</I>&nbsp; Other features of the candidate algorithms may 
+  be examined by NIST. </LI></OL><A name=secplatform></A><B><I>Platform and 
+Compilers</I></B> 
+<P>The above tests will be performed by NIST with the following tools, at a 
+minimum.&nbsp;&nbsp;&nbsp; Due to limited resources, NIST has limited its own 
+efficiency analysis to a single, common platform;&nbsp;&nbsp; however, NIST 
+invites the public to conduct similar tests and compare results on additional 
+platforms (e.g., RISC processors, 8-bit processors, Digital Signal Processors, 
+dedicated CMOS, etc.). 
+<OL type=i>
+  <LI><I>NIST Analysis Platform:</I>&nbsp; IBM-compatible PC, with an Intel 
+  Pentium Pro Processor, 200MHz clock speed, 64MB RAM, running Windows95. 
+  <BR>&nbsp; 
+  <LI><I>Compiler&nbsp; (Note that the selection of these two compilers is for 
+  use by NIST in the Rounds 1 and 2, and does not constitute a direct or implied 
+  endorsement by NIST.):</I><BR><BR>
+  <OL type=a>
+    <LI>For the reference implementation, NIST intends to use the ANSI C 
+    compiler in the Borland C++ Development Suite 5.0. <BR>&nbsp; 
+    <LI>For the mathematically optimized implementations, NIST intends to use 
+    the following compilers: <BR>&nbsp; 
+    <OL type=1>
+      <LI><I>ANSI C implementation:</I>&nbsp; ANSI C compiler found in the 
+      Borland C++ Development Suite 5.0, and <BR>&nbsp; 
+      <LI><I>Java implementation:</I>&nbsp; NIST intends to use the bytecode 
+      compiler and virtual machine provided in Javasoft’s Java Development Kit 
+      (JDK) 1.1. </LI></OL></LI></OL></LI></OL>Note: any changes to the intended 
+platform/compiler will be noted on &lt;<A 
+href="http://csrc.nist.gov/encryption/aes/aes_home.htm">http://csrc.nist.gov/encryption/aes/aes_home.htm</A>&gt;. 
+<BR>&nbsp; 
+<H4><A name=sec6c></A>6.C&nbsp; Round 2 Technical Evaluation</H4>At the end of 
+the Round 1 Technical evaluation and the Second AES Candidate Conference, NIST 
+intends to narrow the field of candidate algorithms to five or fewer, in order 
+to focus the remaining efforts of both NIST and the public.&nbsp; Once again, 
+NIST intends to perform its own analysis of the submissions, and make that 
+information publicly available.&nbsp; NIST’s Round 2 analysis will, at a 
+minimum, be performed as follows.&nbsp; <I>Note: the same platform and compilers 
+from Round 1 will be used for the Round 2.</I> 
+<OL type=i>
+  <LI><I>Key-Block Size Combinations:</I>&nbsp; Round 2 testing by NIST will be 
+  performed on the minimum key-block combinations specified in the <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">Minimum 
+  Acceptability Requirements</A> (beyond the 128-128 key-block combination that 
+  was evaluated in Round 1).&nbsp; <I>Note: If the submitter chose to submit 
+  updated mathematically optimized implementations prior to the beginning of 
+  Round 2, then some of the tests performed in Round 1 for the 128-128 
+  combination may be performed again using the new mathematically optimized 
+  implementations.&nbsp; This will be done to obtain updated measurements.</I> 
+  <BR>&nbsp; 
+  <LI><I>Efficiency testing:</I> Using the submitted mathematically optimized 
+  implementations, NIST intends to perform various computational efficiency 
+  tests for the minimum key-block combinations specified in the <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec3">Minimum 
+  Acceptability Requirements</A>, including the calculation of the time required 
+  to perform: <BR>&nbsp; 
+  <UL>
+    <LI>Algorithm setup, 
+    <LI>Key setup, 
+    <LI>Key change, and 
+    <LI>Encryption and decryption.<BR><BR></LI></UL>NIST will welcome comments 
+  regarding the efficiency of the candidate algorithms when implemented in 
+  hardware.&nbsp; NIST may pursue having the remaining algorithms specified 
+  using a Hardware Description Language, to compare the estimated hardware 
+  efficiency of the candidate algorithms. 
+  <P>NIST may perform efficiency testing using additional platforms.&nbsp; Once 
+  again, NIST welcomes public input regarding efficiency testing on additional 
+  platforms.&nbsp;<BR><BR></P>
+  <LI><I>Other testing:</I>&nbsp; Other features of the candidate algorithms may 
+  be examined by NIST. If appropriate, analyses from the Second AES Candidate 
+  Conference and the public evaluation during Round 1 may warrant the testing of 
+  specific features. <BR>&nbsp;</LI></OL>&nbsp; 
+<CENTER>
+<H3><A name=sec7></A>7.&nbsp; MISCELLANEOUS</H3></CENTER>This section is 
+intended to address some of the questions/comments raised in the review of the 
+draft evaluation criteria. <BR>&nbsp; 
+<UL>
+  <LI>When evaluating algorithms, NIST will make every effort to obtain public 
+  input and will encourage review of the candidate algorithms by outside 
+  organizations; however, the final decision as to which algorithm(s) will be 
+  proposed to the Secretary of Commerce for inclusion in the AES is the 
+  responsibility of NIST.<BR><BR>
+  <LI>NIST intends to develop a validation program for AES conformance testing, 
+  with the goal of having it operational concurrently with the effective date of 
+  the AES.<BR><BR>
+  <LI>NIST does NOT have a fixed timetable for completion of the AES.<BR><BR>
+  <LI>NIST is not specifically seeking a stream cipher algorithm, since any 
+  block cipher algorithm can be operated in a stream cipher mode.<BR><BR>
+  <LI>NIST does not intend to select a wholly distinct algorithm for each of the 
+  minimum required key-block combinations.&nbsp; It is strongly recommended that 
+  no submission be so constructed.<BR><BR>
+  <LI>NIST does not wish to target a specific application or platform for 
+  implementing the AES, as the evaluation of candidate algorithms takes 
+  place.&nbsp; However, one factor that is being taken into consideration for 
+  each candidate algorithm is its flexibility - the ability to implement the 
+  algorithm securely and efficiently in a wide variety of platforms and 
+  applications (see <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec4aic">Algorithm 
+  and Implementation Characteristics</A> under <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#sec4">Evaluation 
+  Criteria</A> section).<BR><BR>
+  <LI>NIST does not intend to select a “backup” AES algorithm.&nbsp; Rather, 
+  should the circumstances arise (e.g., discovery of a significant security 
+  flaw) which could not be satisfactorily addressed by modifying the AES, NIST 
+  would likely look to the other AES candidate finalists.&nbsp; Additionally, if 
+  a significant period of time has elapsed since the AES selection, it would 
+  also make sense to examine other algorithms which may have been developed in 
+  the intervening period.<BR><BR>
+  <LI>Exportability decisions regarding submissions and, eventually, products 
+  implementing AES will be made by the appropriate government regulatory 
+  authorities.&nbsp; NIST is a non-regulatory agency of the U.S. Department of 
+  Commerce.<BR><BR>
+  <LI>NIST does not intend to offer financial incentives (e.g., contests) for 
+  cryptanalysis of AES candidates.<BR><BR>
+  <LI>Should no appropriate algorithms be submitted in response to this call, 
+  NIST expressly reserves the right to cease this process and examine other 
+  possible courses of action.<BR><BR>
+  <LI>Submitters are strongly encouraged to submit only one algorithm each 
+  (presumably the one in which the submitter has the greatest confidence).&nbsp; 
+  Submission of similar, yet distinct, algorithms may delay the public 
+  evaluation process and may well raise public questions as to the submitter’s 
+  level of confidence in his/her candidates.<BR><BR>
+  <LI>For conference and resource allocation planning purposes, it would be 
+  appreciated if those planning to submit candidates could notify the 
+  individuals listed in the <A 
+  href="http://csrc.nist.gov/CryptoToolkit/aes/pre-round1/aes_9709.htm#secffi">For 
+  Further Information</A> section as soon as possible. 
+</LI></UL><B><I>Appreciation</I></B> 
+<P>NIST extends its appreciation to all submitters and those providing public 
+comments during the AES development process. <BR>&nbsp; <BR>&nbsp; <BR>&nbsp; 
+<BR>&nbsp; /S/ 
+<P>Elaine Bunten-Mines, Director, Program Office <BR>&nbsp; <BR>&nbsp; 
+<P>______September 8, 1997_________ <BR>Date <BR>&nbsp; <BR>&nbsp; 
+<HR>
+
+<P><I>Last Modified: December 3, 1999</I> <BR><BR><I>Technical contact:</I> <A 
+href="mailto:mdworkin@nist.gov?Subject=AES"><I>Morris 
+Dworkin<BR></I></A><I>Administrative/process questions:</I> <A 
+href="mailto:ebarker@nist.gov?Subject=AES"><I>Elaine Barker</I></A><I>, <A 
+href="mailto:wburr@nist.gov?Subject=AES">Bill Burr</A></I><BR></P></BODY></HTML>

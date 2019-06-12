@@ -1,0 +1,1456 @@
+LZ77算法与模式匹配KMP算法的结合及算法实现
+
+摘 要
+基于字典的数据压缩算法是目前大多数通用文本压缩工具的首选。本文深入探讨了基于字典的压缩算法LZ77，创造性地提出了把LZ77与模式匹配的KMP算法相结合的思想，解决LZ77的性能瓶颈问题，并编程实现了LZ77算法。
+本文首先简单介绍了数据压缩的意义，理论基础和LZ77算法的背景，然后第二章深入探讨了LZ77算法，指出了LZ77算法的性能瓶颈，并提出一种不同于目前流行的通用压缩算法的方案，即把LZ77与KMP算法相结合。接下来第三章深入分析了KMP算法，并研究了它要应用于LZ77必须作出哪些调整。第四章具体介绍了如何实现本文提出的算法，并指出编程实现算法时进一步作出三方面的改进：将窗口虚拟“滑动”；对匹配串的进行变长编码；单个字符和表示匹配串的元组混合输出，从而进一步改进程序的压缩性能。第五章分析了本文的算法并提出进一步的研究工作。附录给出了本文实现的压缩程序的源代码。
+目前大多数的通用压缩程序是通过建立特殊数据结构来解决匹配串的快速查找，如二叉搜索树，hash表，trie树等，要付出一定的代价去维护这些复杂的数据结构。本文提出的算法截然不同，不需要建立和维护任何特殊的数据结构，只需巧妙地把KMP和LZ77结合，这正是本算法的特色所在。
+
+Abstract
+Dictionary compression method is the first choice of most general purpose compressor for files. This article studys LZ77 algorithm -one of the algorithm base on dictionary methods, and brings forward the idea that combining LZ77 with the pattern matching KMP algorithm.This article also work out a program using the combination of LZ77 and KMP.
+At first, this article introduces the use of data compression, the theory foundation, and the background of LZ77. Then the next chapter studys the LZ77 algorithm , points out the capability choke point of the algorithm, and brings out an solution that applying KMP algorithm to LZ77, which is different from most popular compress utilities’ solution. The third chapter studys KMP algorithm and discusses what regulations must be made to KMP so that it can adapt to LZ77. The fourth chaper introduces how to code the program and give three more ameliorated measures to improve the program. The fifth chapter analyses the algorithm and point out the farther work we can do in the future.
+most general purpose compress utilities use special data structure to find the matching string in the sliding window. That will cost much to build and maintain those complex data structure. However, the method advanced by this article needn’t build any special data structure at all and can avoid the cost to maintain those data structure. That’s the character of this algorithm.
+
+第一部分
+
+第一章 前 言
+
+1．1	数据压缩的简介、必要性和意义
+
+数据压缩技术在当今这个信息化时代得到了广泛的应用。究竟，什么是“数据”？什么是“数据压缩”？所谓“数据”，通常是指信源所发信号的数字化表示或记录，包括数值、文本、图象、声音和影像等类型。“数据压缩”，就是以较少的数码表示信源所发的信号，减少容纳给定信息集合或数据采样集合的信号空间，或者更简单来说，就是去掉信息中的冗余，以更少的数码来“进一步”地“表示”信号的原始数据表示。
+数据压缩的过程是怎样的呢？可以说：数据压缩＝模型＋编码。一般来说，数据压缩包括取得一个符合流并将它们变换成代码，如果代码的结果流规模比原始符号总的规模小，就成功实现了压缩。模型用于处理输入符号并确定输出哪个或那些代码的数据和规则的一个集合。编码程序用来产生基于模型所确定的概率的适当代码，以得到尽可能紧凑的压缩码流。研究表明，大多数信息的表达都存在着一定的冗余度，通过采用一定的模型和编码方法，可以降低这种冗余度，从而达到压缩的效果。
+当今时代是一个“信息爆炸”的时代，数据压缩已经成为了非常必要的技术。看看一些具体的数字：一张A4(210mm×297mm) 幅面的照片，若用中等分辨率(300dpi)的扫描仪按真彩色扫描，共有(300×210/25.4) ×(300×297/25.4)个象素，每个象素占3个字节，其数据量为26M字节；一颗卫星每半小时即可发回一次全波段数据（5个波段），每天的数据量可达1.1GB；采样率较低的数字电话，按每一取样用8位压扩量化，通常其数码率也需要8×8＝64kbps。
+由此可见，面对当今如此大量的数据，存储器的存储，通信干线信道的带宽，以及计算机的处理速度都受到了极大的压力。尽管计算机的存储能力越来越大，但在这个信息时代，人们仍常常感到存储空间不够用，节省每一比特都是有实际意义的。另一方面，如此大量的数据传输，给本来就已经非常紧张的网络带宽变得更加不堪重负。因此，无论从存储还是传输的角度看，数据压缩都是有意义的。数据压缩的好处有：
+①	节省存储空间：数据压缩后能节省存储器、磁盘、磁带、光盘等数据存储介质的空间，降低存储费用。
+②	提高传输效率：压缩数据，意味着能减少传输给定消息集合所需要的时间，较快地传输各种信源，降低信道占有费用。
+③	节省网络带宽：把数据压缩能节省传输给定消息集合所要求的带宽，在现有通信干线上开通更多的并行业务。
+总之，这个时代人们更迫切地要求减少数据存储空间，数字系统的成本几乎按位计算，如果不进行数据压缩，无论存储或传输都很难实用化，数据压缩的作用及其社会效益、经济效益将越来越明显。
+
+1．2	信息理论基础
+
+经典的数据压缩技术，建立在信息理论的基础上。信息论是数学的一个分支，40年代由在贝尔实验室工作的Claude Shannon首创。数据压缩涉及到冗余问题，一条消息中的冗余信息要占用额外的位来编码，如果去除这些额外信息，将减少消息的量，因此数据压缩进入信息论领域。下面探讨一下与有关数据压缩的理论。
+信息论使用术语Entropy（“熵”）来表示一条信息中真正需要编码的信息量，消息的熵越高，所含的信息就越多。记字符Ak出现的概率为Pk，按概率的公理化定义，必须有：
+0≤Pk≤1 （k=1,2,3,…m），    ∑ Pk＝1
+则字符Ak的熵定义为：
+I（Ak）= - log2（Pk）
+整条消息的熵就是所有单个符号熵的数学期望值，记信息为X，则：
+H（X）＝∑Pk * I（Ak）＝∑（Pk *- log2( Pk )）   （k=1,2,3,…m）
+信息论中已经证明，熵具有极值性，是数据压缩的理论极限。设字符Ak的编码长度为Lk，熵的极值性表现为：
+H（X）＝∑（Pk * - log2（Pk））≤∑（Pk *Lk）   （k=1,2,3,…m）
+信源的冗余度可能隐含在信源符号的非等概率分布之中，也可能隐含在信源间的相关性之中。数据压缩的途径有：①获取字符概率，使对各字符的编码长度接近它的熵；②去除各信源分量间的相关性③利用条件概率进行编码④通过联合概率计算极限熵，进行编码。
+
+1．3	LZ77算法的背景
+
+1977年和1978年，两位以色列人 Jacob Ziv 和 Abraham Lempel 发表了论文“顺序数据压缩的一个通用算法”(A Universal Alogrithem for Sequential Data Compression)以及“通过可变比率编码的独立序列的压缩”(Compression of Individual Sequences via Variable-Rate Coding)，在这两篇论文中提出的压缩算法被称为 LZ77 和 LZ78。这两种算法开创了基于字典的方法的新境界，使压缩技术得到了空前的革命。因为在此之前研究的压缩模型都是基于对信息中单个字符出现频率的统计的：Shannon和R.M.Fano提出了最早的对符号进行有效编码从而实现数据压缩的Shannon-Fano编码方法；Huffman于 1952 年发表了论文“最小冗余度代码的构造方法”(A Method for the Construction of Minimum Redundancy Codes)，提出了完全依据字符出现概率来构造平均长度最短的异字头码字，称作Huffman编码。直到七十年代的末期，数据压缩领域几乎一直被 Huffman 编码及其分支所垄断，数据压缩的研究工作主要集中于熵、字符和单词频率以及统计模型等方面，直到基于字典的编码的出现，才突破了这一切。
+基于字典的编码不但能在压缩效果上超越Huffman，而且能不增加程序对系统资源和时间的需求，只要实现方法良好，其压缩和解压缩的速度是很好的。基于统计模型的压缩算法通过将符号编码成比原符号串使用更少位数的位串来达到压缩目的，不仅要精确的计算符号的概率，而且概率必须偏离均匀值，偏离得越少，压缩效果越差。基于字典的模型则将可变长的符号串作为一些独立的标记来编码，该标记形成字典的一个索引，如果标记长度小于它所代替的短语，就实现了压缩。这种方法容易理解，符合人们的思维习惯，而且模型维护简单，编码输出简单，效果好，速度快。
+由于字典模型的优点，LZ77及其变体算法成为极具吸引了的压缩算法，像PKZIP和Haruyasu Yoshizaki的LHarc以及Robert Jung的ARJ这些流行的通用程序都使用了LZ77算法的变体。基于字典的LZ77、LZ78及其变体LZW几乎垄断了当今的通用数据压缩领域，我们日常使用的通用压缩工具，像WinZip，RAR，GZip，ACE，ZOO，TurboZip，Compress，JAR……甚至许多硬件如网络设备中内置的压缩程序，都可以最终归结为这些算法及其变种。
+
+第二部分
+
+第二章  基于字典的压缩算法LZ77探讨
+
+2．1  算法的基本思路
+
+基于字典压缩的基本思想十分简单，很容易理解：我们经常说“世贸”，“CPU”等词，大家都明白这指的是“世界贸易组织”，“中央处理器”，其实这已顺利完成了信息压缩与解压的过程：说的人和听的人头脑中都有一本相同的缩略语字典，说（压缩）和听（解缩）的过程中都对字典进行查询操作，从而实现现压缩和解压。
+再看一个例子。假如我们手上有一本英语词典，要对以下一段话进行压缩：dictionary methods are both simple and popular.输出的编码如下：
+101.2  388.4  4.6  50.11  470.9  3.8  411.13
+编码的意义是第一部分表示词典的页码，第二部分表示该单词是该页中的第几个，如101.2表示dictionary这个单词是第101页的第2个单词。所以这种方法的基本思想就是：有一本压缩者和解压者共同的词典，对要压缩的一段文本进行扫描，对其中的句子进行分词操作，得到的每一个独立的词语，在词典中查找它的位置，并输出页码和该词在该页中的序号。解压过程更简单，只要在指定的词典位置查出该词就是了。
+这种方法是否真能达到压缩效果呢？看回上面的例子，假设词典共有500页，每页不超过128个单词，则页码可以用9位二进制位编码，页内序号可以用7位二进制位编码，每个单词一共用16位编码。上面这段话的编码长度是16×7＝112位二进制位。而还没压缩前，每个单词的ASCII码8位，例子中的那段话一共要用8×46＝368位二进制位。
+
+2．2  自适应模型胜于静态模型
+
+字典模型有两种：静态和自适应。在静态字典模型中，字典在压缩开始之前就已经建立，并且不会随着数据的压缩过程而改变。静态字典的优点是不需要在压缩和解压过程中维护字典，因此压缩和解压的实现可以比较简单。但是，静态字典模型用得很少，因为它存在不少缺点。首先，静态模型的适应性不强，必须为每类不同的信息建立不同的字典，为某类信息建立了字典后，该字典通常不能被其它类型的信息重用；其次，静态模型必须维护信息量并不算小的字典，并且必须解决如何将字典从编码程序传递到解码程序的问题，这一额外的信息量可能会严重影响压缩效果，特别对于小文本。所以目前静态模型只用于特殊目的、独立实现的应用，并不是通用的。
+LZ77应用自适应字典模型。自适应模型在压缩前不预先建立字典，而是在压缩过程中建立和维护字典，也就是说，将已经编码过的信息作为字典，如果要编码的字符串曾经出现过，就输出该字符串的出现位置及长度，否则输出新的字符串。过程描述如下：
+While (文本还没扫描结束) {
+Word = read_word ( ) ;
+Look_up ( word, dictionary );
+If ( 找到匹配短语 ) {
+Output ( word ) ;
+Add_to_dictionary ( word );
+}else  Output ( word _position );
+}
+
+2．3  算法描述——滑动的窗口
+
+LZ77压缩可以称为滑动窗口压缩，因为它用到的主要数据结构是一个可以滑动的窗口。窗口分成两部分：第一部分是历史窗口（history window），存放最近被编码的一段正文；另一部分是向前看窗口（lookahead window），存放从输入文件中读入，还没编码但正准备编码的一段正文。历史窗口和向前看窗口都跟随压缩进程滑动，历史窗口作为术语字典，向前看窗口中待压缩的字符串如果在该历史窗口中出现，则输出其出现位置和长度。窗口如下图所示：
+
+   |             History             |  lookahead
+xxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxx
+                   sliding window
+
+为什么使用固定大小窗口作为字典，而不把所有已经编码的信息作为字典呢？主要基于以下三点考虑：一，匹配算法的时间消耗是不容忽视的，如果字典过于庞大，压缩的速度会变得很慢，必须限制窗口的大小；二，窗口越大，表示匹配串在窗口中的位置的编码所需的位数就会越多，必须选取合适的窗口大小，才能保证算法的压缩效率；三，研究表明，对大多数信息而言，要编码的字符串在最近的上下文中找到匹配串的概率比较大，所以随着压缩的进程滑动字典窗口，使其中总包含最近编码过的信息。
+
+   |             History             |  lookahead
+xxxxxxx xxxxxxxxxxx  abcde xxxxxxxxxxxxxx abcdexxxxxxxxxx
+                  off   len
+
+算法输出三个标记的序列：（1）匹配短语在窗口中的偏移量（off）；（2）匹配短语的长度（len）；（3）向前看窗口中跟在匹配短语后面的第一个符号。用一个三元组（off，len，c）表示以上信息。如上图所示。基本流程如下：从lookahead开始，考察未编码的数据，遍历历史窗口，尝试在历史窗口中查找出最长的匹配字符串；如果找到，输出三元符号组 ( off, len, c )；将整个窗口向后滑动 len + 1 个字符。如果找不到匹配串，输出三元符号组 ( 0, 0, c )。将整个窗口向后滑动1个字符。原始算法描述如下：
+for ( i=0; i<max_match_len; i++) {
+while ( current_ match_len <= max_match_len ){
+if (window[ i++ ] == window[ lookahead_pointer++ ] ) 
+current_ match_len ++;
+               else  break;
+}
+if (current_ match_len > len ){
+off = i ;
+len = current_ match_len;
+           }
+}
+output ( off, len, c );
+slide_window ( len+1 );
+以一个例子来说明算法的具体流程。假如压缩过程中的历史窗口和向前看窗口的内容如下图所示（其中“_”表示空格）：
+   |             History               | lookahead
+xxxxxxx mother_thinks _Jack’s_ brother_does_love_ Jack’s_father
+               off =13    len = 8
+     
+这个例子中，历史窗口的内容是”mother_thinks_Jack’s_brother_does_love”，等待压缩的内容是”_Jack’s_father…”，遍历history窗口，查找lookahead所指内容的最长匹配串。如图所示，找到的最长匹配串为”_Jack’s_”，匹配串在窗口中的偏移off =13，匹配串长度len ＝ 8，”_Jack’s_”的下一个字符是” f ”，所以输出三元组（13，8，f）。接下来把整个窗口向后滑动8+1=9个字符。滑动窗口后内容如下所示：
+   |             History               | lookahead
+mother_thinks_Jack’s_ brother_does_love_ Jack’s_father_xxxxxxxxxx
+                     窗口向后滑动9个字符
+     
+LZ77的还原算法非常简单，不需要像压缩时那样，进行查找匹配串的比较操作。它只需在解压过程中不断维护好像压缩时那样的滑动窗口，读入三元组，根据三元组给出的偏移off，匹配长度len，在窗口中找到相应的匹配串，缀上后继字符，然后输出，即可解压出原始数据。就如上面的例子，读入三元组（13，8，f），根据它的意义，在窗口中偏移13处，读出长度为8的串，结果是”_Jack’s_”，然后缀上字符”f ”，输入”_Jack’s_f ”，这就是正确的解压结果。
+
+2．4	LZ77存在的问题——查找匹配串形成性能瓶颈
+
+从上面对LZ77算法的分析可以看到，该算法有一个对其压缩速度有很大影响的性能瓶颈，就是遍历滑动窗口，查找待编码文本的最长匹配串。当进行编码时，lookahead窗口中的内容要与history窗口中的每个位置进行逐一比较，LZ77算法中的时间消耗主要集中在对最长匹配串的查找上，可以说是算法的核心问题。我们可以粗鲁分析一下查找算法的时间复杂度，假设窗口大小是n，平均匹配长度是m，则每次查找的时间复杂度将达到O（m*n），而每次滑动窗口之后，都要进行下一个匹配串的查找。
+算法的这个速度性能瓶颈还会间接限制了压缩比的提高。因为，很明显，如果窗口越大，字典就越大，包含的“词汇量”就越丰富，找到匹配串的可能性就越高，平均匹配长度也越长，从这个角度看，压缩效果当然就越好。一方面，增大窗口（字典）可以改进压缩的效果，但另一方面，算法的这个速度性能瓶颈就会更加严重，当窗口增大到一定程度，甚至会另速度下降到无法接受的程度。所以，查找最长匹配串这个速度性能瓶颈间接限制了压缩比的提高。
+很多通用压缩程序都采取了一些方案来改进LZ77的这个缺陷。其中应用得很多的一种是用二叉搜索树的数据结构来改进。方法是，先设定一个长度len，将窗口中每一个len长的串抽取出来，按照大小顺序组织成二叉搜索树。每次找匹配串时在这棵二叉搜索树中进行字符串的查找。树结点的结构定义如下：
+Struct {
+Char[ len ]  key;     // 正文字符串
+int  off;            // 这个串在窗口中的偏移
+int  left_child;       // 左孩子
+int  right;           // 右孩子
+}
+通过建立二叉搜索树的方法的确对查找匹配串的速度有很多的提高。但这种方法主要有以下三个缺点：
+1．需要耗费一定的空间去存储这棵二叉树结构。假设上面的len设定为30，窗口的大小window_size为4k，则树的结点有window_size－len＋1≈4k个，每个结点占用空间为30＋4＋4＋4＝42字节，则整棵树占用空间大约为42×4k＝168k字节。所以增加了空间复杂度。
+2．限制匹配串的最大长度。很明显，这种方法对匹配串的长度有限制，长度超过len的匹配串将不能被应用，这样对压缩效果造成影响，特别是对一些有很长匹配串的特殊数据。
+3．需要不断维护二叉搜索树，增加程序的复杂性和时间耗费。在压缩的过程中，由于窗口是不断滑动的，字典的内容不断改变，相应地，需要不断的在二叉搜索树中删除和插入结点来维护这棵二叉搜索树，每次窗口滑动程序都要做这样的操作。
+在已有的通用压缩算法中，还有其他方案可以解决这个问题，例如通过Hash表建立索引，使用trie树等等。这些方法大多需要通过建立特效的数据结构去实现。本文提出的方法——将LZ77和模式匹配KMP算法相结合，是一种全新的解决方案，这种方法不同于现有的通用压缩算法，它不需要建立特殊的数据结构，也不需要耗费额外的空间和时间去维护这个数据结构。
+
+第三章 LZ77与模式匹配KMP算法的结合
+
+3．1	模式匹配KMP算法探讨
+
+LZ77算法中，在history窗口中查找lookahead的最长匹配串的过程其实就是一个模式匹配（Pattern matching）的过程。设两个字符串T和P，若要在串T中查找是否有与串P相等的子串，则称串T为目标（Target），串P为模式（Pattern）。朴素的模式匹配算法是一种带回溯的方法，一旦比较不等，就将目标T后移一位，再从模式P的第一位p0重新开始比较。设目标T的长度为n，模式P的长度为m，则算法的时间复杂度为O（m*n）。算法速度慢的主要原因是回溯。
+KMP算法是无回溯的。下面探讨一下KMP算法。
+设目标串T＝“t0 t1 … tn-1”，模式串P=“p0 p1 … pn-1”，假设在某次比较中，P的第0位p0与T的第m位tm开始进行比较，在第j＋1位失配，即pj＋1与tm+j+1失配，情况如下图所示：
+
+T：  t0  t1  …  tm-1  tm  tm+1  …    tm+j-1  tm+j  tm+j+1  …  tn-1
+P：             p0   p1   p2   …    pj-1    pjj   pj+1
+                                              失配
+这时，有：
+tm-1 tm  tm+1 … tm+j-1 tm+j ＝ p0 p1 p2 … pj-1 pj
+若要继续寻找匹配位置，对于某一值k，必须有：
+              p0 p1 … pk ＝ tm+j-k tm+j-k+1 … tm+j
+根据前一趟的比较，已经有：
+              tm+j-k tm+j-k+1 … tm+j ＝ pj-k  pj-k+1 … pj
+所以，必须有：
+              p0 p1 … pk  ＝ pj-k  pj-k+1 … pj
+因此，可以把上一趟失配的模式P从当前位置直接向后移动j－k位，因为目标T中tm+j之前已经于P中pj之前的字符匹配了，所以可以直接从上一趟失配的位置T中的tm+j+1与P中的pj+1开始，继续进行匹配比较。
+这样，当某一趟比较失配后，目标T中的扫描指针不需要回溯，下一趟比较继续从当前位置开始比较。而模式P中，扫描指针回退到pk位置，再进行下一趟比较。
+对于不同的失配位置j，相应的k值是不同的。但是，从上面的分析可以看出，k的取值只依赖于模式P本身前就j个字符的构成，与目标T无关。我们可以定义一个失效函数fail ( j )，它的意义是，当模式P的第j＋1个位置于目标T的相应位置失配时，模式P应当由fail ( j )所确定的位置继续与T中刚失配的字符进行比较。定义fail ( j )＝k，其中k是使得p0 p1 … pk  ＝ pj-k  pj-k+1 … pj的最大整数，且k < j；若这样的k不存在，则fail ( j )＝－1。
+根据上面失效函数的定义，设若某一趟匹配比较时在P的第j位失配，且j > 0，则下一趟比较时P的起始位置是pfail ( j-1)+1，而T的指针不回溯。若j＝0，则T的指针前进一位，模式的起始比较位置仍然是p0。
+设失效函数的值已存放于数组fail [ ]中，则KMP算法的描述如下：
+KMP_match ( ){
+P_position = 0 ;
+T_ position = 0 ;
+While ( P和T都没扫描结束 ) {
+If ( P[ P_position ] == T [ T_ position ] ) {
+P_position ++ ;
+T_position ++ ;
+}
+else  if ( P_position == 0 ) P_position ++ ;
+ else  P_position = fail [ P_position -1 ] + 1 ;
+}
+返回匹配串在目标中的位置；
+}
+下面讨论失配函数的计算问题。如何正确计算失配函数fail ( j )无疑是实现KMP算法的关键之一。
+设fail ( j )＝k，我们称p0 p1 … pk为串p0 p1 … pj-1 pj的“前缀子串”，pj-k  pj-k+1 … pj为串p0 p1 … pj-1 pj的“后缀子串”。从fail ( j )的定义分析，计算fail ( j )就是要在串p0 p1 … pj-1 pj中找出最长的前缀子串p0 p1 … pk和后缀子串pj-k  pj-k+1 … pj，使得p0 p1 … pk  ＝ pj-k  pj-k+1 … pj。这个查找过程实际上又是一个模式匹配的过程，而且目标和模式都在同一个串中。
+可以用递推的方法来求fail ( j )。设已经求得fail ( j )＝k，则有：
+p0 p1 … pk  ＝ pj-k  pj-k+1 … pj  且  0 ≤ k < j 
+根据定义，有：
+fail ( j + 1 ) ＝ MAX { k’+1 | p0 p1 … pk ’ +1  ＝ pj-k  pj-k+1 … pj pj+1且
+0 ≤ k + 1< j + 1 }
+若 pk+1  ＝ pj+1，则可得：
+                 fail ( j + 1 ) ＝ k + 1 = fail ( j ) + 1
+若 pk+1  ≠ pj+1，则在p0 p1 … pk中寻找h，使得：
+                 p0 p1 … ph  ＝ pk-h  pk-h+1 … pk
+若这样的h不存在，由fail ( k )的定义知，fail ( k )＝－1，若找到这样的h，根据定义，可得有：
+fail ( k )＝h
+可知：
+                 p0 p1 … ph  ＝ pk-h  pk-h+1 … pk ＝pj-h  pj-h+1 … pj
+即在p0 p1 … pj-1 pj中找到了长度为和h＋1的相等的前缀子串和后缀子串。这时，若 ph+1  ＝ pj+1，则可得：
+                 fail ( j + 1 ) ＝ h + 1 = fail ( j ) + 1 = fail ( fail ( j ) ) + 1
+若 ph+1  ≠ pj+1，则再在p0 p1 … ph中寻找更小的fail ( h ) = s。如此递推下去，以同样的方法一直缩小寻找范围，直到遇到某个u，fail ( u ) = －1，宣告失败。根据上述分析，可以得到计算失配函数fail ( j )的递推公式：
+fail( m )( j ) + 1， 若能找到k，使得P [ fail( k )( j ) ] = P [ j ]
+fail( j + 1) =   
+                 -1 ，否则或j ＝ 0
+其中，fail( 1 )( j ) ＝ fail ( j )，fail( m )( j ) ＝ fail ( fail( m -1)( j ) )。
+与KMP算法本身类似，计算失配函数fail ( j )的算法描述如下：
+fail ( ) {
+fail [ 0 ] = -1 ;
+j = 1;
+while ( 模式P还没遍历完毕 ) {
+     temp = fail [ j -1 ] ;
+     while ( P [ j ] ≠ P[ temp + 1] 且 temp >= 0 ) 
+           temp ＝ fail [ temp ] ;
+     if ( P [ j ] == P [ temp +1 ] )  fail [ j ] = temp + 1 ;
+     else   fail [ j ] = -1 ;
+}
+}
+
+3．2	KMP算法如何与LZ77结合
+
+KMP算法可以应用于LZ77算法。LZ77算法中的history窗口就相当于KMP中的目标串T，lookahead窗口的内容就相当于模式串P，在history窗口中查找lookahead的最长匹配串的过程其实就相当于模式匹配。
+但是，KMP算法不能直接应用于LZ77算法，必须作一些调整。因为，从上面的分析看到，该算法中的模式串（待匹配的串）P是确定的，且必须先计算模式串P的失配函数fail [ ]，然后进行匹配查找，返回的结果是是否找到匹配串以及匹配成功时的匹配位置。LZ77与KMP的结合有以下几个方面的问题：
+（1） KMP算法中，模式串P是在进行匹配操作前就确定的，而LZ77中的lookahead中的匹配串的长度在匹配操作前是未知的，要等在整个窗口的匹配查找完成才能知道究竟匹配串有多长；
+（2） KMP算法返回的是匹配是否成功和成功是的匹配位置，而LZ77中没有匹配成功与不成功之说，它关心的是最长匹配的长度和匹配的位置。
+（3） KMP算法中，失配函数fail [ ]是预先计算好的，但由于LZ77中的待匹配串预先不能确定，所以匹配前不知道要计算多少个失配函数值。
+针对上面的问题，必须对KMP算法作必要的调整。
+首先，对于失效函数fail [ ]的计算问题，我们再来更深入的探讨一下KMP算法。算法中失效函数定义为： 
+fail ( j ) ＝ MAX { k  |  p0 p1 … pk ＝ pj-k-1  pj-k … pj-1 pj  且0 ≤ k < j }
+可见fail ( j )只与模式串P中的从p0到pj的字符有关，而与之后的内容无关，所以，即使LZ77中待匹配的串（相当于模式）匹配前不能确定，但是任一位置m的失配函数值fail ( m )，可以根据Pm之前的字符计算出来。所以，在模式长度不确定的情况下，失配函数fail ( j )仍然是可以计算的。当然我们可以预先计算足够多的失配函数值，以备匹配操作过程中使用。但很明显，这不是一个好的方法，这会造成时间的浪费。例如，把预先计算的失配函数值个数定为50（注意，这个值不能太小，因为太小就会限制了匹配串的长度），而实际匹配的长度只有10，那么，就有40个函数值是白白计算的，因为这些函数值是不能被下一轮匹配使用的，因为当输出了本次的匹配串后，窗口就会滑动，模式串的起始位置就会改变，上一次计算的失配函数值就无效了。所以，会造成很大的时间浪费。
+这里，给出一种更好的解决方法：不预先计算失配函数，而是在匹配操作的过程中按需计算失配函数，也就是说，一边找匹配串，一边计算失配函数。	需要增加一个变量FailCount，记录失配函数已经计算到哪个位置。把失配函数值存放于数组Fail [ ]中。计算失配函数值的具体算法如下：
+1．定义history窗口的当前扫描指针为P1，lookahead窗的当前扫描指针为P2。
+2．令Fail [ 0 ] ＝－1，FailCount ＝ 0；
+3．若history[ P1] = lookahead [ P2 ]，继续	步骤3，否则结束
+4．P1加1，P2加1
+5．若P2 > FailCount，继续；否则，转到步骤8
+6．计算Fail [ P2 ]
+7．FailCount加1
+8．若history窗口还没扫描完，转到不知3
+这种处理后，失配函数不是预先计算好，而是在模式匹配操作的过程中按需计算，需要多少个就计算多少个，避免了系统时间的浪费，而且对最长匹配串的长度没有任何限制。
+还有一个问题，就是LZ77的待匹配串长度不定，所以不是返回匹配是否成功，而是找长度最长的匹配串，返回最长匹配串的长度和该串在窗口中的位置。要到达这个目的很简单，只要增加两个变量分别记录当前找到的最长匹配长度和相应的位置，每次找到匹配串都把该匹配串的长度与当前最长长度比较，若比当前最长长度大，就更改当前最长长度和相应的匹配位置。
+经过上面对KMP的调整，就可以把KMP算法应用于LZ77算法。
+
+第四章 算法的实现
+
+4．1	实现时对算法的几个改进
+
+本文所实现的压缩算法，除了把LZ77与模式匹配的KMP算法结合起来以外，在具体实现时，为了进一步提高压缩的性能，还对算法进行了以下几个方面的改进：
+（1） 窗口只作虚拟的“滑动”
+在滑动窗口的管理的方法上，本文所实现的程序作了改进。窗口是否需要真正的滑动呢？如果每次输出匹配短语之后，都把整个窗口的内容向前移若干位，这时间复杂度是O（n），其中n是窗口大小。通常窗口都有1k～10k的大小，本文实现的程序就选取了4k，这个时间开销是很大的。所以，本文的程序是讲窗口虚拟的滑动：使用一个指向窗口起始位置的指针，每次输入匹配短语后，就把指针向后移动相应位置，而不是把整个窗口的内容向前移动，这样，操作所花的时间是1，大大节省了时间开销。
+（2）使用变长编码来表示匹配串长度len
+因为匹配串的长度的变化幅度很大，可以从1～MaxMatchLen，假如MaxMatchLen取1k，则需要用10位二进制位来表示，但是，匹配串大多数情况下都比较小，如果用定长编码来表示它，会造成很大浪费。
+可以使用变长编码来表示匹配串的长度值。根据变长编码的理论，要输出变长的编码，该编码必须是唯一可译码，即对码字序列能做出唯一正确的分割。其中前缀编码就是一种满足条件的编码。前缀编码是任何一个码字都不是另一个码字的字头，即都不是由另外一个码字加上若干码元所构成的编码。满足条件的编码方案很多，本文使用γ编码(Gamma编码)。
+γ编码分作前后两个部分，假设对 x 编码，令 k = int( log2x )，则编码的前半部分是k个 1加一个 0，后半部分是等于 x - 2q 。γ，长度为k位二进制位。当x越小，编码的长度就越小，所以很适合用来表示匹配串的长度。下表给出了1—10的γ编码：
+数值	γ编码
+1	0
+2	10 0
+3	10 1
+4	110 00
+5	110 01
+6	110 10
+7	110 11
+8	1110 000
+9	1110 001
+
+γ编码示例
+
+（3） 单个字符和表示匹配串的元组混合输出
+LZ77中压缩程序输出的是一个由偏移量off、匹配串长度len、紧跟在匹配短语后面的字符c构成三元组（off，len，c）。当字典没有找到匹配串时，程序仍然用一个三元组来表示一个字符。这会造成多大的浪费呢？具体计算一下：假设窗口大小4k，则要用12位表示窗口中的偏移off，再用1位表示匹配串长度len，字符c本身用8位表示，总共21位。用21位来表示本身只有8位ASCII码的符号，这是非常高的代价。
+所以，必须换一种输出结构：对单个字符和匹配串单独编码，字符和表示匹配串的元组混合输出。对单个不匹配的字符或者比较短的匹配串，直接用字符的ASCII码表示，对长的匹配串用一个二元组（off，len）表示，off和len的意义同上。则输出结构分成单个字符和匹配串两种类型，必须加以区分。因此，首先用一个二进制位区分紧跟着是哪种类型的输出结构：1 表示紧跟着是一个字符的ASCII码，0表示紧跟着是一个表示匹配串的二元组。如果是单个字符，就用1＋ASCII的结构输出，若是匹配串，就用0＋off＋len的结构输出。
+什么时候字符ASCII码的形式输出，什么时候以二元组的形式输出呢？这就要比较一下匹配串长度小于多少的时候，以单个字符的形式输出更短，长度超过多少的时候，以二元组的形式输出更节省空间。这个问题由又与窗口的大小有关。假设窗口大小需要用m位二进制位表示，匹配串长度平均需要用4位二进制位表示，再加上1位标志位，则一共1＋m＋4位；设匹配串长度是L，若逐个字符单独输出，每个字符1位标志位加上本身8位ASCII码，所以L个字符一共需要9×L位。比较两者的大小即可作出判断。本文的程序使用了4k大小的窗口，需要12位表示偏移量off，所以在本文的程序中，当匹配长度为0和1时，就直接输出单个字符，当匹配长度至少为2时，才输出二元组（off，len）。
+
+4．2	代码分析
+
+本文所用的编程语言是经过深思熟虑的。本文实现的程序选用C语言，编程环境是Cbuilder5.0。为什么选用C语言呢？从下面的代码分析就可以看到，  压缩程序往往不能对数据的整个字节进行处理，而是要按照二进制位来读写和处理数据，二进制位操作是压缩程序很重要的组成部分。而C语言被认为是高级汇编语言，它提供了左移位、右移位等操作符，可以方便地进行深入字节内部的二进制位操作。所以，C语言对实现压缩程序是一个很好的选择。
+下面对本文实现的程序作具体的分析：
+首先，程序定义了三个常量：
+① MaxWndSize  4096  —— 表示窗口的最大尺寸
+② MaxMatch  4096    —— 表示最长可匹配的长度
+③ BlockLen  65536    —— 每次读入内存缓冲区的文件块的大小
+程序还定义了两个全局变量：
+① CurByte   —— 表示指针在存放压缩编码的内存缓冲区中第几字节
+② CurBit    —— 表示指针在CurBit中的第几位
+本程序可以划分为三大部分：
+第一部分包括五个函数，是实现算法的核心函数，包括用LZ77和KMP算法相结合完成文件的压缩功能以及解压功能：
+FindMatch (BYTE* window, int Start, int* Offset, int* Len)
+Compress (BYTE* src, int srclen, BYTE* dest)
+Extract (BYTE* source, int srclen, BYTE* dest)
+btnCompressClick (TObject *Sender)
+btnExtractClick (TObject *Sender)
+第二部分包括八个函数，是为了实现输出压缩编码的一组二进制位操作函数：
+CodeOutput (BYTE* dest, DWORD code, int bits, BOOL isGamma)
+UpperLog2 (int n)
+LowerLog2 (int n)
+MovePos (int* piByte, int* piBit, int num)
+GetBit (BYTE byte, int pos)
+InvertDWord (DWORD* pDW)
+CopyBitsInAByte (BYTE* memDest, int nDestPos, BYTE* memSrc, int nSrcPos, int nBits)
+CopyBits (BYTE* memDest, int nDestPos, BYTE* memSrc, int nSrcPos, int nBits)
+第三部分包括一个函数，是界面的初始化函数：
+TForm1 (TComponent* Owner)
+
+下面对这些函数逐一介绍：
+①	btnCompressClick ( )
+这是CBuilder生成的事件函数，当界面上的Compress按钮被点击时触发该函数，该函数主要完成以下几个功能：
+1．	将源文件分块读入内存缓冲区，每块的大小等于之前定义的常量BlockLen＝4k
+2．	调用函数Compress（）对缓冲区中的文件块进行压缩
+3．	把压缩后的编码输出到目标文件
+4．	在界面上显示有关的压缩状态信息
+
+②	Compress (BYTE* src, int srclen, BYTE* dest)
+该函数的功能是压缩内存缓冲区中的文件块，是实现LZ77算法的核心函数。它定义了一个窗口指针，并通过指针的滑动实现滑动窗口压缩，它还调用函数FindMatch ( )用调整后的KMP算法在窗口中查找最长匹配串，并调用函数CodeOutput ( )对压缩后的信息进行适当的编码然后输出到内存缓冲区。该函数的参数说明入下：
+src - 源数据内存缓冲区（待压缩数据区）指针
+srclen - 源数据块（待压缩数据区）字节长度
+dest - 目标数据内存缓冲区（存放压缩后的编码）指针
+返回值：压缩后数据的长度（正数——正常压缩数据的长度，零——数据无法压缩，负数——出错）
+
+③	FindMatch (BYTE* window, int Start, int* Offset, int* Len)
+该函数是实现调整后的KMP算法的核心函数，功能是在滑动窗口中查找最长匹配串，详细的算法描述可见上文。该函数的参数说明如下：
+window - 滑动窗口的起始指针
+Start - 待匹配串的起始位置（即lookahead窗口的起始位置）
+Offset - 匹配串在滑动窗口内的偏移，用于接收结果
+Len - 匹配串的长度，用于接收结果
+返回值：找到长度大于1的匹配串则返回true，否则返回false
+
+④	btnExtractClick ( )
+这是CBuilder生成的事件函数，当界面上的Extract按钮被点击时触发该函数，该函数主要完成以下几个功能：
+1.	将待解压的文件分块读入内存缓冲区，每块的大小根据每个文件块前的标记flag2来确定。
+2.	调用函数Extract（）对缓冲区中的文件块进行解压
+3.	把解压后的文件块输出到文件
+4.	在界面上显示有关的解压状态信息
+
+⑤	Extract (BYTE* source, int srclen, BYTE* dest)
+该函数的功能是解压缩缓冲区中的内容，参数说明如下：
+source - 源数据内存缓冲区（接收解压缩后的数据）指针
+srclen - 源数据块字节长度
+dest - 压缩数据内存缓冲区指针
+返回值：解压成功返回true，不成功返回false
+⑥	CodeOutput (BYTE* dest, DWORD code, int bits, BOOL isGamma)
+该函数的功能是以指定的形式输出压缩编码到输出缓冲区，若参数isGamma为true，要对code进行γ编码，再输出。该函数的参数说明如下：
+dest - 输出缓冲区指针
+code - 要输出的数
+bits - 要输出的位数
+isGamma - 是否输出为γ编码
+
+下面是一组二进制位操作函数，各函数功能简单说明如下
+⑦	MovePos (int* piByte, int* piBit, int num)
+功能：二进制位后移num位
+⑧	UpperLog2 (int n)
+功能：求不小于log2(n)的最小整数
+⑨	LowerLog2 (int n)
+功能：求大于log2(n)的最大整数
+⑩	GetBit (BYTE byte, int pos)
+功能：求字节byte的第pos位的值，从高位（左边）开始数起
+?	InvertDWord (DWORD* pDW)
+功能：调换双字的存放顺序，使其从高位字节到低位字节排列
+?	CopyBits (BYTE* memDest, int nDestPos, BYTE* memSrc, int nSrcPos, int nBits)
+功能：复制内存中的位流
+?	CopyBitsInAByte (BYTE* memDest, int nDestPos, BYTE* memSrc, int nSrcPos, int nBits)
+功能：在一个字节范围内复制位流
+
+以上各函数之间的调用关系如下图所示：
+                      图：函数调用关系图
+
+第五章 算法评价与探讨
+
+5．1 算法评价
+
+本文实现的算法的特点是巧妙地把KMP算法与LZ77算法结合，以最小的维护代价实现了在字典里快速查找最长匹配串，有效地缓解了LZ77的性能瓶颈。LZ77的关键是如何在高效地在遍历窗口（字典）查找最长匹配串，这也是算法的一个性能瓶颈。本文的解决方案是通过调整模式匹配KMP算法，使之适用于LZ77，然后把两者结合。这个解决方案不同于现在的通用压缩程序的方案，那些通用压缩程序大多数通过建立特殊的数据结构来管理字典，如二叉搜索树，索引，hash表，trie树等，这些数据结构确实能够加快查找速度，但是要付出很大的维护代价，如插入、删除等。而本文的算法不需要建立任何特殊的数据结构，因此也付出空间和时间的耗费去维护这些数据结构，实现简单。这正是本算法的特色所在。
+设窗口大小是m，匹配串的长度是n，若用带回溯的匹配算法，每次查找最长匹配串的时间复杂度上文以及分析过，为O（m*n）。若用本文中的KMP算法，由于没有回溯，每次查找匹配最长匹配串时字符的比较次数等于窗口大小m，再加上为模式计算失效函数的时间，算法的时间复杂度为O（m+n）。时间耗费很少。另外，本文还采取了另外一些改进的措施：如将窗口虚拟“滑动”,对匹配串的进行变长编码，单个字符和表示匹配串的元组混合输出等，这些方法都能进一步改善压缩程序的性能。
+为了与本文提出的算法作对比，本人编写了另外一个对比程序，对比程序的FindMatch ( )函数没有使用KMP算法，其他部分与本文实现的程序相同。用两个程序分别对相同的文件压缩，证明本文实现的程序的压缩时间比用没有改进的算法实现的程序少。
+下表是对本程序的一组测试结果：
+文件名	文件类型类型	原文件大小	压缩后大小	压缩时间	对比程序的压缩时间
+5．2 进一步工作的探讨
+对于本文实现的算法，还有可以作进一步的研究、进一步的改进。下面来探讨一下其中一个问题。
+LZ77其实是“贪婪”的算法，它每次都在history窗口中找lookahead所指向的内容的最长匹配串，这样找到的串是当前最长的，但不一定是最优的划分方法。我们看看一个例子：假设lookahead指向的内容是“Tshirt……”，而窗口中已经有“Ts”、“shirt”等短语，但没有“Tsh”这个短语，因此程序的输出情况如下：
+输出表示短语“Ts”的三元组  ——长度17位
+输出表示短语“hirt”的三元组——长度17位
+一共17＋17＝34位
+但是，这并不是最优的划分方法，还有更好的输出方法：
+         输出单个字符“T”              ——长度9位
+输出表示短语“shirt”的三元组  ——长度17位
+                                     一共9＋17＝26位
+因此，LZ77是一个贪婪的算法，它首先对最长的“Ts”进行匹配，再对“hirt”进行匹配，而没有发现后面有更好的匹配。
+所以，LZ77算法的这一点是有可改进的余地的，可以超前查看输入流中的内容，找出匹配串的最佳组合，选取最优的划分。但是，找最优解需要超前看输入流中的内容，要付出一定的时间甚至空间的代价，意味着压缩速度可能会受到很大影响。所以，怎样以较小的代价实现最优编码，改进算法的“贪婪”性，这是一个值得研究的问题。
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#include <stdio.h>  //zqw
+#pragma hdrstop
+#include "Unit1.h"
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+
+//---------------------------------------------------------------------------
+#define MaxWndSize 4096   // 窗口的最大尺寸
+#define MaxMatch 4096     // 最长可匹配的长度
+#define BlockLen 65536    // 每次读入内存的文件块的大小
+
+int CurByte;              // 压缩文件当前位置的字节偏移
+int CurBit;               // 压缩文件当前位置的位偏移
+
+//---------------------------------------------------------------------------
+
+// 下面是算法实现的一组核心函数
+
+
+//****************************************************************************//
+// 功能：在滑动窗口中查找最长匹配串（用KMP算法）
+// 参数说明：
+//        window - 滑动窗口的起始指针
+//	  Start - 待匹配串的起始位置（即lookahead窗口的起始位置）
+//	  Offset - 匹配串在滑动窗口内的偏移，用于接收结果
+//	  Len - 匹配串的长度，用于接收结果
+// 返回值：找到长度大于1的匹配串则返回true，否则返回false
+//****************************************************************************//
+bool FindMatch(BYTE* window, int Start, int* Offset, int* Len)
+{
+    int Fail[MaxMatch];  // 存放失配函数
+    int FailCount;       // 记录失配函数已经计算了几个
+    int P1;              // 目标串的扫描指针
+    int P2;              // 待匹配串的扫描指针
+    int MatchLen;        // 匹配长度
+    int temp;
+
+    // 初始化数据
+    P1=0;
+    P2=0;
+    FailCount=0;
+    Fail[0]=-1;
+    MatchLen=0;
+    (*Len)=0;
+
+    // 找最长匹配串
+    while( P1 < Start && P2 < MaxMatch - 1 )
+    {
+        // 对应的字符匹配
+    	if( window[P1] == window[Start+P2] )
+    	{
+      	    P1++;
+	    P2++;
+	    MatchLen++;     // 本次匹配长度＋1
+
+            // 若P2处还没计算失配函数，则计算失配函数Fail[P2]
+	    if( P2 > FailCount )
+	    {
+	    	temp = Fail[P2-1];
+                // 递推计算Fail[P2]
+	    	while( window[Start+P2]!= window[Start+temp+1] && temp>=0)
+		    temp = Fail[temp];
+		if( window[Start+P2] == window[Start+temp+1])
+		    Fail[P2]=temp+1;
+		else Fail[P2]=-1;
+                // 失配函数计数值加一
+		FailCount++;
+            }
+        }
+	else
+	{
+	    if( P2 == 0 ) P1++;
+	    else
+	    {
+                // 若本次匹配的长度超过历史记录，则修改历史记录
+	    	if( MatchLen >(*Len) )
+	    	{
+                    (*Len) = MatchLen;
+		    (*Offset) = P1 - MatchLen;
+		}
+                // 失配后，继续寻找其他匹配位置
+		P2=Fail[P2-1]+1;
+		MatchLen = P2;
+            }
+        }
+    }
+    // 若本次匹配的长度超过历史记录，则修改历史记录
+    if( MatchLen > (*Len) )
+    {
+    	(*Len) = MatchLen;
+    	(*Offset) = P1 - MatchLen;
+    }
+
+    if( *Len > 1 ) return true;
+    else return false;
+}
+
+
+//****************************************************************************//
+// 功能：压缩缓冲区中的内容
+// 参数说明：
+//        src - 源数据内存缓冲区（待压缩数据区）指针
+//	  srclen - 源数据块（待压缩数据区）字节长度
+//	  dest - 目标数据内存缓冲区（存放压缩后的编码）指针
+// 返回值：压缩后数据的长度（正数——正常压缩数据的长度，零——数据无法压缩
+//         负数——出错）
+//****************************************************************************//
+int Compress(BYTE* src, int srclen, BYTE* dest)
+{
+    BYTE* window;    // 滑动窗口的起始位置
+    int CurWndSize;  // 当前窗口大小
+    int Lookahead;   // 向前看窗口的起始位置
+    int post;        // 已压缩数据的计数值
+    int off;         // 匹配串在滑动窗口内的偏移
+    int len;         // 匹配串的长度
+
+    // 判断异常
+    if (srclen > BlockLen)  return -1;
+
+    // 初始化数据
+    CurByte = 0;
+    CurBit = 0;
+    window = src;
+    CurWndSize = 0;  //zqw
+    Lookahead = 0 ;
+
+    for (post =0; post < srclen; post++ )
+    {
+        // 若无法压缩
+        if (CurByte >= srclen)  return 0;
+
+        // 若找到长度大于一的匹配串
+	if (FindMatch(window, Lookahead, &off, &len))
+	{
+	    // 输出编码格式（flag，len，offset）
+            // 先输出flag（＝1，长度为1bit）
+            CodeOutput(dest, 1, 1, FALSE);
+            // 输出len的 γ编码
+	    CodeOutput(dest, len, 0, TRUE);
+            // 输出匹配位置在滑动窗口中的偏移，位数由当前窗口大小决定
+            CodeOutput(dest, off, UpperLog2(CurWndSize), FALSE);
+
+	    // 窗口滑动
+            if( CurWndSize == MaxWndSize ) window = window + len;
+            else if( CurWndSize + len > MaxWndSize)
+            {
+                window = window + ( CurWndSize + len - MaxWndSize );
+                CurWndSize = MaxWndSize;
+                Lookahead = MaxWndSize;
+            }
+            else
+            {
+                CurWndSize = CurWndSize + len;  //zqw
+	        Lookahead = Lookahead + len ;
+            }
+
+            post = post + len - 1;
+        }
+	else
+	{
+	    // 输出单个非匹配字符，格式（flag，char）
+	    CodeOutput(dest, 0, 1, FALSE);
+	    CodeOutput(dest, (DWORD)(src[post]), 8, FALSE);
+
+	    // 窗口滑动
+            if( CurWndSize == MaxWndSize ) window = window + 1;
+            else
+            {
+                CurWndSize++;  //zqw
+                Lookahead++;
+            }
+        }
+    }
+
+    // 计算压缩后数据的长度
+    int destlen = CurByte + ((CurBit) ? 1 : 0);
+
+    if (destlen >= srclen)  return 0;
+    return destlen;
+}
+
+
+//****************************************************************************//
+// 功能：解压缩缓冲区中的内容
+// 参数说明：
+//        source - 源数据内存缓冲区（接收解压缩后的数据）指针
+//	  srclen - 源数据块字节长度
+//	  dest - 压缩数据内存缓冲区指针
+// 返回值：解压成功返回true，不成功返回false
+//****************************************************************************//
+BOOL Extract(BYTE* source, int srclen, BYTE* dest)
+{
+    BYTE* window;    // 滑动窗口指针
+    int CurWndSize;  // 当前窗口大小
+    int i;           // 源数据区的位置计数
+
+    // 初始化工作
+    CurByte = 0;
+    CurBit = 0;
+    window = source;
+    CurWndSize = 0;
+
+    // 判断异常
+    if (srclen > BlockLen)   return FALSE;
+
+    for (i = 0; i < srclen; i++)
+    {
+        // 检查标志位
+    	BYTE b = GetBit(dest[CurByte], CurBit);
+    	MovePos(&CurByte, &CurBit, 1);
+        // 属单个字符
+    	if (b == 0)
+    	{
+            // 复制单个字符（8 bits)
+      	    CopyBits(source + i, 0, dest + CurByte, CurBit, 8);
+	    MovePos(&CurByte, &CurBit, 8);
+	    CurWndSize++;
+        }
+        // 属于匹配格式（flag，len，offset）
+	else
+	{
+            // 以下求匹配串的长度len，len已进行 γ编码，需要解码
+	    int q = -1;
+            int len, off;
+	    DWORD dw = 0;
+	    BYTE* pb;
+	    while (b != 0)
+	    {
+	    	q++;
+	    	b = GetBit(dest[CurByte], CurBit);
+	    	MovePos(&CurByte, &CurBit, 1);
+	    }
+            if (q > 0)
+	    {
+	    	pb = (BYTE*)&dw;
+	    	CopyBits(pb + (32 - q) / 8, (32 - q) % 8, dest + CurByte, CurBit, q);
+	    	MovePos(&CurByte, &CurBit, q);
+	    	InvertDWord(&dw);
+	    	len = 1;
+	    	len <<= q;
+	    	len += dw;
+	    	len += 1;
+	    }
+	    else
+	    	len = 2;
+
+            // 以下求偏移量off
+	    dw = 0;
+	    pb = (BYTE*)&dw;
+	    int bits = UpperLog2(CurWndSize);
+	    CopyBits(pb + (32 - bits) / 8, (32 - bits) % 8, dest + CurByte, CurBit, bits);
+	    MovePos(&CurByte, &CurBit, bits);
+	    InvertDWord(&dw);
+	    off = (int)dw;
+
+	    // 把找到的匹配串输出到缓冲区
+	    for (int j = 0; j < len; j++)
+	    {
+	    	source[i + j] = window[off + j];
+	    }
+	    CurWndSize += len;
+	    i += len - 1;
+        }
+
+        // 窗口滑动
+	if (CurWndSize > MaxWndSize)
+	{
+	    window += CurWndSize - MaxWndSize;
+	    CurWndSize = MaxWndSize;
+        }
+    }
+    return TRUE;
+}
+
+
+//****************************************************************************//
+// 事件函数，当Compress按钮被点击时被触发
+// 功能：压缩指定的文件
+//****************************************************************************//
+void __fastcall TForm1::btnCompressClick(TObject *Sender)
+{
+    BYTE SourceBuf[BlockLen];     // 源数据内存缓冲区（待压缩数据区）
+    BYTE DestBuf[BlockLen + 16];  // 目标数据内存缓冲区（存放压缩后的编码）
+    FILE* in;                     // 输入文件指针
+    FILE* out;                    // 输出文件指针
+    long soulen;                  // 输入文件的总长度
+    int destlen;                 // 压缩文件的总长度
+    WORD flag1;   // 输入内存缓冲区中数据块的长度，0表示等于BlockLen
+    WORD flag2;                   // 输出内存缓冲区中数据块的长度
+    int remain;                   // 源文件剩余长度
+    int act;                      // 当前读入的实际长度
+
+    // 输入文件的名称
+    char* SouFileName = new char[ Edit1->Text.Length() + 1 ];
+    // 输出文件的名称
+    char* DestFileName = new char[ Edit2->Text.Length() + 1 ];
+    strcpy( SouFileName, Edit1->Text.c_str() );
+    strcpy( DestFileName, Edit2->Text.c_str() );
+
+    // 以二进制只读方式打开源文件
+    in = fopen( SouFileName , "rb" );
+    if (in == NULL)
+    {
+        Label1->Caption = "源文件无法打开!请检查操作是否正确!";
+	return;
+    }
+    // 以二进制写方式打开目标文件
+    out = fopen(DestFileName, "wb");
+    if (out == NULL)
+    {
+        Label1->Caption = "目标文件无法打开!请检查操作是否正确!";
+	fclose(in);
+	return;
+    }
+
+    // 将指针移到文件结尾
+    fseek(in, 0, SEEK_END);
+    // 求当前指针位置，即计算文件长度
+    soulen = ftell(in);
+    // 将指针移到文件开头
+    fseek(in, 0, SEEK_SET);
+
+    remain = soulen;
+    while ( remain > 0 )
+    {
+        // 求实际读入的长度
+	act = min(BlockLen, remain);
+        // 一个Block入内存缓冲区
+	fread(SourceBuf, act, 1, in);
+	remain -= act;
+        // flag1记录本次读入的数据块的长度，0表示等于BlockLen
+	if (act == BlockLen)
+	    flag1 = 0;
+	else
+	    flag1 = act;
+        // 在每个数据块的开头写入本次读入的长度
+        fwrite(&flag1, sizeof(WORD), 1, out);
+
+        // 压缩这段文本
+	destlen = Compress((BYTE*)SourceBuf, act, (BYTE*)DestBuf);
+        // 若不能压缩
+	if (destlen == 0)
+        {
+	    flag2 = flag1;
+	    fwrite(&flag2, sizeof(WORD), 1, out);
+            // 把源数据直接输出到压缩文件
+	    fwrite(SourceBuf, act, 1, out);
+        }
+	else
+	{
+	    flag2 = (WORD)destlen;
+            // 写入压缩后本数据块的长度
+	    fwrite(&flag2, sizeof(WORD), 1, out);
+            // 把压缩后的内容写到目标文件
+	    fwrite(DestBuf, destlen, 1, out);
+        }
+    }
+
+    // 显示提示信息
+    Label2->Visible = true;
+    Label3->Visible = true;
+    Label4->Visible = true;
+    Label5->Visible = true;
+    Label1->Caption = "文件压缩成功！";
+    Label2->Caption = "压缩前文件大小(KB)：";
+    Label3->Caption = "压缩后文件大小(KB)：";
+    Label4->Caption = IntToStr( soulen/1024 );
+    Label5->Caption = IntToStr( ftell(out)/1024 );
+    // 关闭文件
+    fclose(in);
+    fclose(out);
+}
+
+
+//****************************************************************************//
+// 事件函数，当Extract按钮被点击时被触发
+// 功能：解压缩指定的文件
+//****************************************************************************//
+void __fastcall TForm1::btnExtractClick(TObject *Sender)
+{
+    BYTE SourceBuf[BlockLen];      // 源数据内存缓冲区
+    BYTE DestBuf[BlockLen + 16];   // 压缩数据内存缓冲区
+    FILE* in;                      // 输入文件指针
+    FILE* out;                     // 输出文件指针
+    long soulen;                   // 输入文件的总长度
+    WORD flag1;   // 本数据块的未压缩前的长度，0表示等于BlockLen
+    WORD flag2;                    // 本数据块压缩后的长度
+    int remain;                    // 源文件剩余长度
+    int act;                       // 当前读入的实际长度
+
+    // 输入文件的名称
+    char* SouFileName = new char[ Edit1->Text.Length() + 1 ];
+    // 输出文件的名称
+    char* DestFileName = new char[ Edit2->Text.Length() + 1 ];
+    strcpy( SouFileName, Edit1->Text.c_str() );
+    strcpy( DestFileName, Edit2->Text.c_str() );
+
+    // 以二进制只读方式打开源文件
+    in = fopen(SouFileName , "rb");
+    if (in == NULL)
+    {
+        Label1->Caption = "源文件无法打开!请检查操作是否正确!";
+    	return;
+    }
+    // 以二进制写方式打开目标文件
+    out = fopen(DestFileName, "wb");
+    if (out == NULL)
+    {
+        Label1->Caption = "目标文件无法打开!请检查操作是否正确!";
+	fclose(in);
+	return;
+    }
+
+    // 将指针移到文件结尾
+    fseek(in, 0, SEEK_END);
+    // 求当前指针位置，即计算文件长度
+    soulen = ftell(in);
+    // 将指针移回文件开头
+    fseek(in, 0, SEEK_SET);
+
+    remain = soulen;
+    while (remain > 0)
+    {
+        // 读出本数据块的未压缩前的长度
+    	fread(&flag1, sizeof(WORD), 1, in);
+        // 本数据块压缩后的长度
+    	fread(&flag2, sizeof(WORD), 1, in);
+    	remain -= 2 * sizeof(WORD);
+
+        // 求出本数据块压缩前实际长度
+    	if (flag1 == 0)
+     	    act = BlockLen;
+	else
+	    act = flag1;
+	remain-= flag2 ? (flag2) : act;
+
+        // 若无压缩，直接读入
+	if (flag2 == flag1)
+	{
+	    fread(SourceBuf, act, 1, in);
+        }
+	else
+	{
+	    fread(DestBuf, flag2, 1, in);
+            // 解压缩这断文本
+	    if (!Extract((BYTE*)SourceBuf, act, (BYTE*)DestBuf))
+            {
+                Label1->Caption = "解压不成功！";
+	        fclose(in);
+	        fclose(out);
+	        return;
+	    }
+        }
+        // 将缓冲区中已解压的数据输出到文件
+        fwrite((BYTE*)SourceBuf, act, 1, out);
+    }
+
+    // 显示提示信息
+    Label2->Visible = true;
+    Label3->Visible = true;
+    Label4->Visible = true;
+    Label5->Visible = true;
+    Label1->Caption = "文件解压成功！";
+    Label2->Caption = "解压前文件大小(KB)：";
+    Label3->Caption = "解压后文件大小(KB)：";
+    Label4->Caption = IntToStr( soulen/1024 );
+    Label5->Caption = IntToStr( ftell(out)/1024 );
+    // 关闭文件
+    fclose(in);
+    fclose(out);
+}
+
+
+//---------------------------------------------------------------------------
+
+// 下面是为了实现输出压缩编码的一组二进制位操作函数
+
+
+//****************************************************************************//
+// 功能：以指定的形式输出压缩编码到输出缓冲区
+// 参数说明：
+//        dest - 输出缓冲区指针
+//	  code - 要输出的数
+//	  bits - 要输出的位数
+//	  isGamma - 是否输出为γ编码
+//****************************************************************************//
+void CodeOutput(BYTE* dest, DWORD code, int bits, BOOL isGamma)
+{
+    // 若 isGamma ＝ true，则对 code 进行 γ编码，再输出
+    if ( isGamma )
+    {
+    	BYTE* pb;    // 字节数据区
+    	DWORD out;   // 双字数据区
+
+    	// 计算输出位数
+    	int GammaCode = (int)code - 1;
+    	int q = LowerLog2(GammaCode);
+
+        // 输出q个1
+    	if (q > 0)
+    	{
+            out = 0xffff;
+	    pb = (BYTE*)&out;
+	    CopyBits(dest + CurByte, CurBit, pb, 0, q);
+	    MovePos(&CurByte, &CurBit, q);
+        }
+
+	// 输出一个0
+	out = 0;
+	pb = (BYTE*)&out;
+	CopyBits(dest + CurByte, CurBit, pb + 3, 7, 1);
+	MovePos(&CurByte, &CurBit, 1);
+
+        // 输出余数, q位
+	if (q > 0)
+	{
+            // 计算out = Code - 2^q
+	    int sh = 1;
+	    sh <<= q;
+	    out = GammaCode - sh;
+	    pb = (BYTE*)&out;
+	    InvertDWord(&out);
+	    CopyBits(dest + CurByte, CurBit,
+	    		pb + (32 - q) / 8, (32 - q) % 8, q);
+	    MovePos(&CurByte, &CurBit, q);
+        }
+    }
+    // 若 isGamma ＝ false,不需进行 γ编码
+    else
+    {
+    	DWORD dw = (DWORD)code;
+    	BYTE* pb = (BYTE*)&dw;
+    	InvertDWord(&dw);
+    	CopyBits(dest + CurByte, CurBit,
+    		pb + (32 - bits) / 8, (32 - bits) % 8, bits);
+	MovePos(&CurByte, &CurBit, bits);
+    }
+}
+
+
+//****************************************************************************//
+// 功能：求不小于log2(n)的最小整数
+//****************************************************************************//
+int UpperLog2(int n)
+{
+    int i = 0;
+    if (n > 0)
+    {
+    	int m = 1;
+    	while(1)
+    	{
+    	    if (m >= n)
+	    return i;
+	    m <<= 1;
+	    i++;
+        }
+    }
+    else
+    return -1;
+}
+
+
+//****************************************************************************//
+// 功能：求大于log2(n)的最大整数
+//****************************************************************************//
+int LowerLog2(int n)
+{
+    int i = 0;
+    if (n > 0)
+    {
+    	int m = 1;
+    	while(1)
+    	{
+            if (m == n)
+	    return i;
+	    if (m > n)
+	    return i - 1;
+	    m <<= 1;
+	    i++;
+        }
+    }
+    else
+    return -1;
+}
+
+
+//****************************************************************************//
+// 功能：二进制位后移num位
+// 参数说明：
+//       piByte - 字节偏移
+//       piBit - 字节内位偏移
+//       num - 后移位数
+//****************************************************************************//
+void MovePos(int* piByte, int* piBit, int num)
+{
+	num += (*piBit);
+	(*piByte) += num / 8;
+	(*piBit) = num % 8;
+}
+
+
+//****************************************************************************//
+// 功能：求字节byte的第pos位的值，从高位（左边）开始数起
+// 返回值：0或1，类型为字节
+//****************************************************************************//
+BYTE GetBit(BYTE byte, int pos)
+{
+    int j = 1;
+    j <<= 7 - pos;
+    if (byte & j)
+    	return 1;
+    else
+    	return 0;
+}
+
+
+//****************************************************************************//
+// 功能：调换双字的存放顺序，使其从高位字节到低位字节排列
+// 参数说明：pDW —指向待处理的DWORD
+//****************************************************************************//
+void InvertDWord(DWORD* pDW)
+{
+	union UDWORD{
+                    DWORD dw;
+                    BYTE b[4];
+                    };
+	UDWORD* pUDW = (UDWORD*)pDW;
+	BYTE b;
+	b = pUDW->b[0];
+        pUDW->b[0] = pUDW->b[3];
+        pUDW->b[3] = b;
+	b = pUDW->b[1];
+        pUDW->b[1] = pUDW->b[2];
+        pUDW->b[2] = b;
+}
+
+
+//****************************************************************************//
+// 功能：在一个字节范围内复制位流
+// 前置条件：要复制的位都在一个字节范围内
+// 参数说明：
+//        memDest - 目标数据区
+//	  nDestPos - 目标数据区第一个字节中的起始位
+//	  memSrc - 源数据区
+//	  nSrcPos - 源数据区第一个字节的中起始位
+//	  nBits - 要复制的位数
+//****************************************************************************//
+void CopyBitsInAByte(BYTE* memDest, int nDestPos, BYTE* memSrc,
+                     int nSrcPos, int nBits)
+{
+    BYTE b1, b2;
+    b1 = *memSrc;
+    // 将不用复制的位清0
+    b1 <<= nSrcPos; b1 >>= 8 - nBits;
+    // 将源和目的字节对齐
+    b1 <<= 8 - nBits - nDestPos;
+    // 复制值为1的位
+    *memDest |= b1;
+    // 将不用复制的位置1
+    b2 = 0xff; b2 <<= 8 - nDestPos;
+    b1 |= b2;
+    b2 = 0xff; b2 >>= nDestPos + nBits;
+    b1 |= b2;
+    // 复制值为0的位
+    *memDest &= b1;
+}
+
+
+//****************************************************************************//
+// 功能：复制内存中的位流
+// 前置条件：要复制的两块数据区不能有重合
+// 参数说明：
+//        memDest - 目标数据区
+//	  nDestPos - 目标数据区第一个字节中的起始位
+//	  memSrc - 源数据区
+//	  nSrcPos - 源数据区第一个字节的中起始位
+//	  nBits - 要复制的位数
+//        说明 - 起始位从字节的高位至低位（由左至右）算起
+//****************************************************************************//
+void CopyBits(BYTE* memDest, int nDestPos, BYTE* memSrc,
+              int nSrcPos, int nBits)
+{
+    int iByteDest = 0, iBitDest;
+    int iByteSrc = 0, iBitSrc = nSrcPos;
+    int nBitsToFill, nBitsCanFill;
+    while (nBits > 0)
+    {
+    	// 计算要在目标区当前字节填充的位数
+    	nBitsToFill = min(nBits, iByteDest ? 8 : 8 - nDestPos);
+    	// 目标区当前字节要填充的起始位
+    	iBitDest = iByteDest ? 0 : nDestPos;
+    	// 计算可以一次从源数据区中复制的位数
+    	nBitsCanFill = min(nBitsToFill, 8 - iBitSrc);
+    	// 字节内复制
+    	CopyBitsInAByte(memDest + iByteDest, iBitDest,
+    		memSrc + iByteSrc, iBitSrc, nBitsCanFill);
+    	// 如果还没有复制完 nBitsToFill 个
+    	if (nBitsToFill > nBitsCanFill)
+    	{
+    	    iByteSrc++;
+            iBitSrc = 0;
+            iBitDest += nBitsCanFill;
+	    CopyBitsInAByte(memDest + iByteDest, iBitDest, memSrc + iByteSrc,
+                       iBitSrc, nBitsToFill - nBitsCanFill);
+	    iBitSrc += nBitsToFill - nBitsCanFill;
+        }
+	else
+	{
+	    iBitSrc += nBitsCanFill;
+	    if (iBitSrc >= 8)
+	    {
+	    	iByteSrc++;
+                iBitSrc = 0;
+	    }
+        }
+        // 已经填充了nBitsToFill位
+        nBits -= nBitsToFill;
+	iByteDest++;
+    }
+}
+
+
+//---------------------------------------------------------------------------
+
+//****************************************************************************//
+// 事件函数，由Form Load事件触发。
+// 功能：进行一些界面的初始化工作.
+//****************************************************************************//
+__fastcall TForm1::TForm1(TComponent* Owner)
+        : TForm(Owner)
+{
+    Label1->Caption = "准备就绪！请选择要压缩或解压的文件。";
+    Label2->Visible = false;
+    Label3->Visible = false;
+    Label4->Visible = false;
+    Label5->Visible = false;
+}
+
+//---------------------------------------------------------------------------
+数据压缩技术在当今这个信息化时代得到了广泛的应用。究竟，什么是“数据”？什么是“数据压缩”？所谓“数据”，通常是指信源所发信号的数字化表示或记录，包括数值、文本、图象、声音和影像等类型。“数据压缩”，就是以较少的数码表示信源所发的信号，减少容纳给定信息集合或数据采样集合的信号空间，或者更简单来说，就是去掉信息中的冗余，以更少的数码来“进一步”地“表示”信号的原始数据表示。
+数据压缩的过程是怎样的呢？可以说：数据压缩＝模型＋编码。一般来说，数据压缩包括取得一个符合流并将它们变换成代码，如果代码的结果流规模比原始符号总的规模小，就成功实现了压缩。模型用于处理输入符号并确定输出哪个或那些代码的数据和规则的一个集合。编码程序用来产生基于模型所确定的概率的适当代码，以得到尽可能紧凑的压缩码流。研究表明，大多数信息的表达都存在着一定的冗余度，通过采用一定的模型和编码方法，可以降低这种冗余度，从而达到压缩的效果。
+当今时代是一个“信息爆炸”的时代，数据压缩已经成为了非常必要的技术。看看一些具体的数字：一张A4(210mm×297mm) 幅面的照片，若用中等分辨率(300dpi)的扫描仪按真彩色扫描，共有(300×210/25.4) ×(300×297/25.4)个象素，每个象素占3个字节，其数据量为26M字节；一颗卫星每半小时即可发回一次全波段数据（5个波段），每天的数据量可达1.1GB；采样率较低的数字电话，按每一取样用8位压扩量化，通常其数码率也需要8×8＝64kbps。
+由此可见，面对当今如此大量的数据，存储器的存储，通信干线信道的带宽，以及计算机的处理速度都受到了极大的压力。尽管计算机的存储能力越来越大，但在这个信息时代，人们仍常常感到存储空间不够用，节省每一比特都是有实际意义的。另一方面，如此大量的数据传输，给本来就已经非常紧张的网络带宽变得更加不堪重负。因此，无论从存储还是传输的角度看，数据压缩都是有意义的。数据压缩的好处有：
+①	节省存储空间：数据压缩后能节省存储器、磁盘、磁带、光盘等数据存储介质的空间，降低存储费用。
+②	提高传输效率：压缩数据，意味着能减少传输给定消息集合所需要的时间，较快地传输各种信源，降低信道占有费用。
+③	节省网络带宽：把数据压缩能节省传输给定消息集合所要求的带宽，在现有通信干线上开通更多的并行业务。
+总之，这个时代人们更迫切地要求减少数据存储空间，数字系统的成本几乎按位计算，如果不进行数据压缩，无论存储或传输都很难实用化，数据压缩的作用及其社会效益、经济效益将越来越明显。
+
+1．2	信息理论基础
+
+经典的数据压缩技术，建立在信息理论的基础上。信息论是数学的一个分支，40年代由在贝尔实验室工作的Claude Shannon首创。数据压缩涉及到冗余问题，一条消息中的冗余信息要占用额外的位来编码，如果去除这些额外信息，将减少消息的量，因此数据压缩进入信息论领域。下面探讨一下与有关数据压缩的理论。
+信息论使用术语Entropy（“熵”）来表示一条信息中真正需要编码的信息量，消息的熵越高，所含的信息就越多。记字符Ak出现的概率为Pk，按概率的公理化定义，必须有：
+0≤Pk≤1 （k=1,2,3,…m），    ∑ Pk＝1
+则字符Ak的熵定义为：
+I（Ak）= - log2（Pk）
+整条消息的熵就是所有单个符号熵的数学期望值，记信息为X，则：
+H（X）＝∑Pk * I（Ak）＝∑（Pk *- log2( Pk )）   （k=1,2,3,…m）
+信息论中已经证明，熵具有极值性，是数据压缩的理论极限。设字符Ak的编码长度为Lk，熵的极值性表现为：
+H（X）＝∑（Pk * - log2（Pk））≤∑（Pk *Lk）   （k=1,2,3,…m）
+信源的冗余度可能隐含在信源符号的非等概率分布之中，也可能隐含在信源间的相关性之中。数据压缩的途径有：①获取字符概率，使对各字符的编码长度接近它的熵；②去除各信源分量间的相关性③利用条件概率进行编码④通过联合概率计算极限熵，进行编码。
+
+1．3	LZ77算法的背景
+
+1977年和1978年，两位以色列人 Jacob Ziv 和 Abraham Lempel 发表了论文“顺序数据压缩的一个通用算法”(A Universal Alogrithem for Sequential Data Compression)以及“通过可变比率编码的独立序列的压缩”(Compression of Individual Sequences via Variable-Rate Coding)，在这两篇论文中提出的压缩算法被称为 LZ77 和 LZ78。这两种算法开创了基于字典的方法的新境界，使压缩技术得到了空前的革命。因为在此之前研究的压缩模型都是基于对信息中单个字符出现频率的统计的：Shannon和R.M.Fano提出了最早的对符号进行有效编码从而实现数据压缩的Shannon-Fano编码方法；Huffman于 1952 年发表了论文“最小冗余度代码的构造方法”(A Method for the Construction of Minimum Redundancy Codes)，提出了完全依据字符出现概率来构造平均长度最短的异字头码字，称作Huffman编码。直到七十年代的末期，数据压缩领域几乎一直被 Huffman 编码及其分支所垄断，数据压缩的研究工作主要集中于熵、字符和单词频率以及统计模型等方面，直到基于字典的编码的出现，才突破了这一切。
+基于字典的编码不但能在压缩效果上超越Huffman，而且能不增加程序对系统资源和时间的需求，只要实现方法良好，其压缩和解压缩的速度是很好的。基于统计模型的压缩算法通过将符号编码成比原符号串使用更少位数的位串来达到压缩目的，不仅要精确的计算符号的概率，而且概率必须偏离均匀值，偏离得越少，压缩效果越差。基于字典的模型则将可变长的符号串作为一些独立的标记来编码，该标记形成字典的一个索引，如果标记长度小于它所代替的短语，就实现了压缩。这种方法容易理解，符合人们的思维习惯，而且模型维护简单，编码输出简单，效果好，速度快。
+由于字典模型的优点，LZ77及其变体算法成为极具吸引了的压缩算法，像PKZIP和Haruyasu Yoshizaki的LHarc以及Robert Jung的ARJ这些流行的通用程序都使用了LZ77算法的变体。基于字典的LZ77、LZ78及其变体LZW几乎垄断了当今的通用数据压缩领域，我们日常使用的通用压缩工具，像WinZip，RAR，GZip，ACE，ZOO，TurboZip，Compress，JAR……甚至许多硬件如网络设备中内置的压缩程序，都可以最终归结为这些算法及其变种。
+
+第二部分
+
+第二章  基于字典的压缩算法LZ77探讨
+
+2．1  算法的基本思路
+
+基于字典压缩的基本思想十分简单，很容易理解：我们经常说“世贸”，“CPU”等词，大家都明白这指的是“世界贸易组织”，“中央处理器”，其实这已顺利完成了信息压缩与解压的过程：说的人和听的人头脑中都有一本相同的缩略语字典，说（压缩）和听（解缩）的过程中都对字典进行查询操作，从而实现现压缩和解压。
+再看一个例子。假如我们手上有一本英语词典，要对以下一段话进行压缩：dictionary methods are both simple and popular.输出的编码如下：
+101.2  388.4  4.6  50.11  470.9  3.8  411.13
+编码的意义是第一部分表示词典的页码，第二部分表示该单词是该页中的第几个，如101.2表示dictionary这个单词是第101页的第2个单词。所以这种方法的基本思想就是：有一本压缩者和解压者共同的词典，对要压缩的一段文本进行扫描，对其中的句子进行分词操作，得到的每一个独立的词语，在词典中查找它的位置，并输出页码和该词在该页中的序号。解压过程更简单，只要在指定的词典位置查出该词就是了。
+这种方法是否真能达到压缩效果呢？看回上面的例子，假设词典共有500页，每页不超过128个单词，则页码可以用9位二进制位编码，页内序号可以用7位二进制位编码，每个单词一共用16位编码。上面这段话的编码长度是16×7＝112位二进制位。而还没压缩前，每个单词的ASCII码8位，例子中的那段话一共要用8×46＝368位二进制位。
+
+2．2  自适应模型胜于静态模型
+
+字典模型有两种：静态和自适应。在静态字典模型中，字典在压缩开始之前就已经建立，并且不会随着数据的压缩过程而改变。静态字典的优点是不需要在压缩和解压过程中维护字典，因此压缩和解压的实现可以比较简单。但是，静态字典模型用得很少，因为它存在不少缺点。首先，静态模型的适应性不强，必须为每类不同的信息建立不同的字典，为某类信息建立了字典后，该字典通常不能被其它类型的信息重用；其次，静态模型必须维护信息量并不算小的字典，并且必须解决如何将字典从编码程序传递到解码程序的问题，这一额外的信息量可能会严重影响压缩效果，特别对于小文本。所以目前静态模型只用于特殊目的、独立实现的应用，并不是通用的。
+LZ77应用自适应字典模型。自适应模型在压缩前不预先建立字典，而是在压缩过程中建立和维护字典，也就是说，将已经编码过的信息作为字典，如果要编码的字符串曾经出现过，就输出该字符串的出现位置及长度，否则输出新的字符串。过程描述如下：
+While (文本还没扫描结束) {
+Word = read_word ( ) ;
+Look_up ( word, dictionary );
+If ( 找到匹配短语 ) {
+Output ( word ) ;
+Add_to_dictionary ( word );
+}else  Output ( word _position );
+}
+
+2．3  算法描述——滑动的窗口
+
+LZ77压缩可以称为滑动窗口压缩，因为它用到的主要数据结构是一个可以滑动的窗口。窗口分成两部分：第一部分是历史窗口（history window），存放最近被编码的一段正文；另一部分是向前看窗口（lookahead window），存放从输入文件中读入，还没编码但正准备编码的一段正文。历史窗口和向前看窗口都跟随压缩进程滑动，历史窗口作为术语字典，向前看窗口中待压缩的字符串如果在该历史窗口中出现，则输出其出现位置和长度。窗口如下图所示：
+
+   |             History             |  lookahead
+xxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxx
+                   sliding window
+
+为什么使用固定大小窗口作为字典，而不把所有已经编码的信息作为字典呢？主要基于以下三点考虑：一，匹配算法的时间消耗是不容忽视的，如果字典过于庞大，压缩的速度会变得很慢，必须限制窗口的大小；二，窗口越大，表示匹配串在窗口中的位置的编码所需的位数就会越多，必须选取合适的窗口大小，才能保证算法的压缩效率；三，研究表明，对大多数信息而言，要编码的字符串在最近的上下文中找到匹配串的概率比较大，所以随着压缩的进程滑动字典窗口，使其中总包含最近编码过的信息。
+
+   |             History             |  lookahead
+xxxxxxx xxxxxxxxxxx  abcde xxxxxxxxxxxxxx abcdexxxxxxxxxx
+                  off   len
+
+算法输出三个标记的序列：（1）匹配短语在窗口中的偏移量（off）；（2）匹配短语的长度（len）；（3）向前看窗口中跟在匹配短语后面的第一个符号。用一个三元组（off，len，c）表示以上信息。如上图所示。基本流程如下：从lookahead开始，考察未编码的数据，遍历历史窗口，尝试在历史窗口中查找出最长的匹配字符串；如果找到，输出三元符号组 ( off, len, c )；将整个窗口向后滑动 len + 1 个字符。如果找不到匹配串，输出三元符号组 ( 0, 0, c )。将整个窗口向后滑动1个字符。原始算法描述如下：
+for ( i=0; i<max_match_len; i++) {
+while ( current_ match_len <= max_match_len ){
+if (window[ i++ ] == window[ lookahead_pointer++ ] ) 
+current_ match_len ++;
+               else  break;
+}
+if (current_ match_len > len ){
+off = i ;
+len = current_ match_len;
+           }
+}
+output ( off, len, c );
+slide_window ( len+1 );
+以一个例子来说明算法的具体流程。假如压缩过程中的历史窗口和向前看窗口的内容如下图所示（其中“_”表示空格）：
+   |             History               | lookahead
+xxxxxxx mother_thinks _Jack’s_ brother_does_love_ Jack’s_father
+               off =13    len = 8
+     
+这个例子中，历史窗口的内容是”mother_thinks_Jack’s_brother_does_love”，等待压缩的内容是”_Jack’s_father…”，遍历history窗口，查找lookahead所指内容的最长匹配串。如图所示，找到的最长匹配串为”_Jack’s_”，匹配串在窗口中的偏移off =13，匹配串长度len ＝ 8，”_Jack’s_”的下一个字符是” f ”，所以输出三元组（13，8，f）。接下来把整个窗口向后滑动8+1=9个字符。滑动窗口后内容如下所示：
+   |             History               | lookahead
+mother_thinks_Jack’s_ brother_does_love_ Jack’s_father_xxxxxxxxxx
+                     窗口向后滑动9个字符
+     
+LZ77的还原算法非常简单，不需要像压缩时那样，进行查找匹配串的比较操作。它只需在解压过程中不断维护好像压缩时那样的滑动窗口，读入三元组，根据三元组给出的偏移off，匹配长度len，在窗口中找到相应的匹配串，缀上后继字符，然后输出，即可解压出原始数据。就如上面的例子，读入三元组（13，8，f），根据它的意义，在窗口中偏移13处，读出长度为8的串，结果是”_Jack’s_”，然后缀上字符”f ”，输入”_Jack’s_f ”，这就是正确的解压结果。
+
+2．4	LZ77存在的问题——查找匹配串形成性能瓶颈
+
+从上面对LZ77算法的分析可以看到，该算法有一个对其压缩速度有很大影响的性能瓶颈，就是遍历滑动窗口，查找待编码文本的最长匹配串。当进行编码时，lookahead窗口中的内容要与history窗口中的每个位置进行逐一比较，LZ77算法中的时间消耗主要集中在对最长匹配串的查找上，可以说是算法的核心问题。我们可以粗鲁分析一下查找算法的时间复杂度，假设窗口大小是n，平均匹配长度是m，则每次查找的时间复杂度将达到O（m*n），而每次滑动窗口之后，都要进行下一个匹配串的查找。
+算法的这个速度性能瓶颈还会间接限制了压缩比的提高。因为，很明显，如果窗口越大，字典就越大，包含的“词汇量”就越丰富，找到匹配串的可能性就越高，平均匹配长度也越长，从这个角度看，压缩效果当然就越好。一方面，增大窗口（字典）可以改进压缩的效果，但另一方面，算法的这个速度性能瓶颈就会更加严重，当窗口增大到一定程度，甚至会另速度下降到无法接受的程度。所以，查找最长匹配串这个速度性能瓶颈间接限制了压缩比的提高。
+很多通用压缩程序都采取了一些方案来改进LZ77的这个缺陷。其中应用得很多的一种是用二叉搜索树的数据结构来改进。方法是，先设定一个长度len，将窗口中每一个len长的串抽取出来，按照大小顺序组织成二叉搜索树。每次找匹配串时在这棵二叉搜索树中进行字符串的查找。树结点的结构定义如下：
+Struct {
+Char[ len ]  key;     // 正文字符串
+int  off;            // 这个串在窗口中的偏移
+int  left_child;       // 左孩子
+int  right;           // 右孩子
+}
+通过建立二叉搜索树的方法的确对查找匹配串的速度有很多的提高。但这种方法主要有以下三个缺点：
+1．需要耗费一定的空间去存储这棵二叉树结构。假设上面的len设定为30，窗口的大小window_size为4k，则树的结点有window_size－len＋1≈4k个，每个结点占用空间为30＋4＋4＋4＝42字节，则整棵树占用空间大约为42×4k＝168k字节。所以增加了空间复杂度。
+2．限制匹配串的最大长度。很明显，这种方法对匹配串的长度有限制，长度超过len的匹配串将不能被应用，这样对压缩效果造成影响，特别是对一些有很长匹配串的特殊数据。
+3．需要不断维护二叉搜索树，增加程序的复杂性和时间耗费。在压缩的过程中，由于窗口是不断滑动的，字典的内容不断改变，相应地，需要不断的在二叉搜索树中删除和插入结点来维护这棵二叉搜索树，每次窗口滑动程序都要做这样的操作。
+在已有的通用压缩算法中，还有其他方案可以解决这个问题，例如通过Hash表建立索引，使用trie树等等。这些方法大多需要通过建立特效的数据结构去实现。本文提出的方法——将LZ77和模式匹配KMP算法相结合，是一种全新的解决方案，这种方法不同于现有的通用压缩算法，它不需要建立特殊的数据结构，也不需要耗费额外的空间和时间去维护这个数据结构。
+
+第三章 LZ77与模式匹配KMP算法的结合
+
+3．1	模式匹配KMP算法探讨
+
+LZ77算法中，在history窗口中查找lookahead的最长匹配串的过程其实就是一个模式匹配（Pattern matching）的过程。设两个字符串T和P，若要在串T中查找是否有与串P相等的子串，则称串T为目标（Target），串P为模式（Pattern）。朴素的模式匹配算法是一种带回溯的方法，一旦比较不等，就将目标T后移一位，再从模式P的第一位p0重新开始比较。设目标T的长度为n，模式P的长度为m，则算法的时间复杂度为O（m*n）。算法速度慢的主要原因是回溯。
+KMP算法是无回溯的。下面探讨一下KMP算法。
+设目标串T＝“t0 t1 … tn-1”，模式串P=“p0 p1 … pn-1”，假设在某次比较中，P的第0位p0与T的第m位tm开始进行比较，在第j＋1位失配，即pj＋1与tm+j+1失配，情况如下图所示：
+
+T：  t0  t1  …  tm-1  tm  tm+1  …    tm+j-1  tm+j  tm+j+1  …  tn-1
+P：             p0   p1   p2   …    pj-1    pjj   pj+1
+                                              失配
+这时，有：
+tm-1 tm  tm+1 … tm+j-1 tm+j ＝ p0 p1 p2 … pj-1 pj
+若要继续寻找匹配位置，对于某一值k，必须有：
+              p0 p1 … pk ＝ tm+j-k tm+j-k+1 … tm+j
+根据前一趟的比较，已经有：
+              tm+j-k tm+j-k+1 … tm+j ＝ pj-k  pj-k+1 … pj
+所以，必须有：
+              p0 p1 … pk  ＝ pj-k  pj-k+1 … pj
+因此，可以把上一趟失配的模式P从当前位置直接向后移动j－k位，因为目标T中tm+j之前已经于P中pj之前的字符匹配了，所以可以直接从上一趟失配的位置T中的tm+j+1与P中的pj+1开始，继续进行匹配比较。
+这样，当某一趟比较失配后，目标T中的扫描指针不需要回溯，下一趟比较继续从当前位置开始比较。而模式P中，扫描指针回退到pk位置，再进行下一趟比较。
+对于不同的失配位置j，相应的k值是不同的。但是，从上面的分析可以看出，k的取值只依赖于模式P本身前就j个字符的构成，与目标T无关。我们可以定义一个失效函数fail ( j )，它的意义是，当模式P的第j＋1个位置于目标T的相应位置失配时，模式P应当由fail ( j )所确定的位置继续与T中刚失配的字符进行比较。定义fail ( j )＝k，其中k是使得p0 p1 … pk  ＝ pj-k  pj-k+1 … pj的最大整数，且k < j；若这样的k不存在，则fail ( j )＝－1。
+根据上面失效函数的定义，设若某一趟匹配比较时在P的第j位失配，且j > 0，则下一趟比较时P的起始位置是pfail ( j-1)+1，而T的指针不回溯。若j＝0，则T的指针前进一位，模式的起始比较位置仍然是p0。
+设失效函数的值已存放于数组fail [ ]中，则KMP算法的描述如下：
+KMP_match ( ){
+P_position = 0 ;
+T_ position = 0 ;
+While ( P和T都没扫描结束 ) {
+If ( P[ P_position ] == T [ T_ position ] ) {
+P_position ++ ;
+T_position ++ ;
+}
+else  if ( P_position == 0 ) P_position ++ ;
+ else  P_position = fail [ P_position -1 ] + 1 ;
+}
+返回匹配串在目标中的位置；
+}
+下面讨论失配函数的计算问题。如何正确计算失配函数fail ( j )无疑是实现KMP算法的关键之一。
+设fail ( j )＝k，我们称p0 p1 … pk为串p0 p1 … pj-1 pj的“前缀子串”，pj-k  pj-k+1 … pj为串p0 p1 … pj-1 pj的“后缀子串”。从fail ( j )的定义分析，计算fail ( j )就是要在串p0 p1 … pj-1 pj中找出最长的前缀子串p0 p1 … pk和后缀子串pj-k  pj-k+1 … pj，使得p0 p1 … pk  ＝ pj-k  pj-k+1 … pj。这个查找过程实际上又是一个模式匹配的过程，而且目标和模式都在同一个串中。
+可以用递推的方法来求fail ( j )。设已经求得fail ( j )＝k，则有：
+p0 p1 … pk  ＝ pj-k  pj-k+1 … pj  且  0 ≤ k < j 
+根据定义，有：
+fail ( j + 1 ) ＝ MAX { k’+1 | p0 p1 … pk ’ +1  ＝ pj-k  pj-k+1 … pj pj+1且
+0 ≤ k + 1< j + 1 }
+若 pk+1  ＝ pj+1，则可得：
+                 fail ( j + 1 ) ＝ k + 1 = fail ( j ) + 1
+若 pk+1  ≠ pj+1，则在p0 p1 … pk中寻找h，使得：
+                 p0 p1 … ph  ＝ pk-h  pk-h+1 … pk
+若这样的h不存在，由fail ( k )的定义知，fail ( k )＝－1，若找到这样的h，根据定义，可得有：
+fail ( k )＝h
+可知：
+                 p0 p1 … ph  ＝ pk-h  pk-h+1 … pk ＝pj-h  pj-h+1 … pj
+即在p0 p1 … pj-1 pj中找到了长度为和h＋1的相等的前缀子串和后缀子串。这时，若 ph+1  ＝ pj+1，则可得：
+                 fail ( j + 1 ) ＝ h + 1 = fail ( j ) + 1 = fail ( fail ( j ) ) + 1
+若 ph+1  ≠ pj+1，则再在p0 p1 … ph中寻找更小的fail ( h ) = s。如此递推下去，以同样的方法一直缩小寻找范围，直到遇到某个u，fail ( u ) = －1，宣告失败。根据上述分析，可以得到计算失配函数fail ( j )的递推公式：
+fail( m )( j ) + 1， 若能找到k，使得P [ fail( k )( j ) ] = P [ j ]
+fail( j + 1) =   
+                 -1 ，否则或j ＝ 0
+其中，fail( 1 )( j ) ＝ fail ( j )，fail( m )( j ) ＝ fail ( fail( m -1)( j ) )。
+与KMP算法本身类似，计算失配函数fail ( j )的算法描述如下：
+fail ( ) {
+fail [ 0 ] = -1 ;
+j = 1;
+while ( 模式P还没遍历完毕 ) {
+     temp = fail [ j -1 ] ;
+     while ( P [ j ] ≠ P[ temp + 1] 且 temp >= 0 ) 
+           temp ＝ fail [ temp ] ;
+     if ( P [ j ] == P [ temp +1 ] )  fail [ j ] = temp + 1 ;
+     else   fail [ j ] = -1 ;
+}
+}
+
+3．2	KMP算法如何与LZ77结合
+
+KMP算法可以应用于LZ77算法。LZ77算法中的history窗口就相当于KMP中的目标串T，lookahead窗口的内容就相当于模式串P，在history窗口中查找lookahead的最长匹配串的过程其实就相当于模式匹配。
+但是，KMP算法不能直接应用于LZ77算法，必须作一些调整。因为，从上面的分析看到，该算法中的模式串（待匹配的串）P是确定的，且必须先计算模式串P的失配函数fail [ ]，然后进行匹配查找，返回的结果是是否找到匹配串以及匹配成功时的匹配位置。LZ77与KMP的结合有以下几个方面的问题：
+（1） KMP算法中，模式串P是在进行匹配操作前就确定的，而LZ77中的lookahead中的匹配串的长度在匹配操作前是未知的，要等在整个窗口的匹配查找完成才能知道究竟匹配串有多长；
+（2） KMP算法返回的是匹配是否成功和成功是的匹配位置，而LZ77中没有匹配成功与不成功之说，它关心的是最长匹配的长度和匹配的位置。
+（3） KMP算法中，失配函数fail [ ]是预先计算好的，但由于LZ77中的待匹配串预先不能确定，所以匹配前不知道要计算多少个失配函数值。
+针对上面的问题，必须对KMP算法作必要的调整。
+首先，对于失效函数fail [ ]的计算问题，我们再来更深入的探讨一下KMP算法。算法中失效函数定义为： 
+fail ( j ) ＝ MAX { k  |  p0 p1 … pk ＝ pj-k-1  pj-k … pj-1 pj  且0 ≤ k < j }
+可见fail ( j )只与模式串P中的从p0到pj的字符有关，而与之后的内容无关，所以，即使LZ77中待匹配的串（相当于模式）匹配前不能确定，但是任一位置m的失配函数值fail ( m )，可以根据Pm之前的字符计算出来。所以，在模式长度不确定的情况下，失配函数fail ( j )仍然是可以计算的。当然我们可以预先计算足够多的失配函数值，以备匹配操作过程中使用。但很明显，这不是一个好的方法，这会造成时间的浪费。例如，把预先计算的失配函数值个数定为50（注意，这个值不能太小，因为太小就会限制了匹配串的长度），而实际匹配的长度只有10，那么，就有40个函数值是白白计算的，因为这些函数值是不能被下一轮匹配使用的，因为当输出了本次的匹配串后，窗口就会滑动，模式串的起始位置就会改变，上一次计算的失配函数值就无效了。所以，会造成很大的时间浪费。
+这里，给出一种更好的解决方法：不预先计算失配函数，而是在匹配操作的过程中按需计算失配函数，也就是说，一边找匹配串，一边计算失配函数。	需要增加一个变量FailCount，记录失配函数已经计算到哪个位置。把失配函数值存放于数组Fail [ ]中。计算失配函数值的具体算法如下：
+1．定义history窗口的当前扫描指针为P1，lookahead窗的当前扫描指针为P2。
+2．令Fail [ 0 ] ＝－1，FailCount ＝ 0；
+3．若history[ P1] = lookahead [ P2 ]，继续	步骤3，否则结束
+4．P1加1，P2加1
+5．若P2 > FailCount，继续；否则，转到步骤8
+6．计算Fail [ P2 ]
+7．FailCount加1
+8．若history窗口还没扫描完，转到不知3
+这种处理后，失配函数不是预先计算好，而是在模式匹配操作的过程中按需计算，需要多少个就计算多少个，避免了系统时间的浪费，而且对最长匹配串的长度没有任何限制。
+还有一个问题，就是LZ77的待匹配串长度不定，所以不是返回匹配是否成功，而是找长度最长的匹配串，返回最长匹配串的长度和该串在窗口中的位置。要到达这个目的很简单，只要增加两个变量分别记录当前找到的最长匹配长度和相应的位置，每次找到匹配串都把该匹配串的长度与当前最长长度比较，若比当前最长长度大，就更改当前最长长度和相应的匹配位置。
+经过上面对KMP的调整，就可以把KMP算法应用于LZ77算法。
+
+第四章 算法的实现
+
+4．1	实现时对算法的几个改进
+
+本文所实现的压缩算法，除了把LZ77与模式匹配的KMP算法结合起来以外，在具体实现时，为了进一步提高压缩的性能，还对算法进行了以下几个方面的改进：
+（1） 窗口只作虚拟的“滑动”
+在滑动窗口的管理的方法上，本文所实现的程序作了改进。窗口是否需要真正的滑动呢？如果每次输出匹配短语之后，都把整个窗口的内容向前移若干位，这时间复杂度是O（n），其中n是窗口大小。通常窗口都有1k～10k的大小，本文实现的程序就选取了4k，这个时间开销是很大的。所以，本文的程序是讲窗口虚拟的滑动：使用一个指向窗口起始位置的指针，每次输入匹配短语后，就把指针向后移动相应位置，而不是把整个窗口的内容向前移动，这样，操作所花的时间是1，大大节省了时间开销。
+（2）使用变长编码来表示匹配串长度len
+因为匹配串的长度的变化幅度很大，可以从1～MaxMatchLen，假如MaxMatchLen取1k，则需要用10位二进制位来表示，但是，匹配串大多数情况下都比较小，如果用定长编码来表示它，会造成很大浪费。
+可以使用变长编码来表示匹配串的长度值。根据变长编码的理论，要输出变长的编码，该编码必须是唯一可译码，即对码字序列能做出唯一正确的分割。其中前缀编码就是一种满足条件的编码。前缀编码是任何一个码字都不是另一个码字的字头，即都不是由另外一个码字加上若干码元所构成的编码。满足条件的编码方案很多，本文使用γ编码(Gamma编码)。
+γ编码分作前后两个部分，假设对 x 编码，令 k = int( log2x )，则编码的前半部分是k个 1加一个 0，后半部分是等于 x - 2q 。γ，长度为k位二进制位。当x越小，编码的长度就越小，所以很适合用来表示匹配串的长度。下表给出了1—10的γ编码：
+数值	γ编码
+1	0
+2	10 0
+3	10 1
+4	110 00
+5	110 01
+6	110 10
+7	110 11
+8	1110 000
+9	1110 001
+
+γ编码示例
+
+（3） 单个字符和表示匹配串的元组混合输出
+LZ77中压缩程序输出的是一个由偏移量off、匹配串长度len、紧跟在匹配短语后面的字符c构成三元组（off，len，c）。当字典没有找到匹配串时，程序仍然用一个三元组来表示一个字符。这会造成多大的浪费呢？具体计算一下：假设窗口大小4k，则要用12位表示窗口中的偏移off，再用1位表示匹配串长度len，字符c本身用8位表示，总共21位。用21位来表示本身只有8位ASCII码的符号，这是非常高的代价。
+所以，必须换一种输出结构：对单个字符和匹配串单独编码，字符和表示匹配串的元组混合输出。对单个不匹配的字符或者比较短的匹配串，直接用字符的ASCII码表示，对长的匹配串用一个二元组（off，len）表示，off和len的意义同上。则输出结构分成单个字符和匹配串两种类型，必须加以区分。因此，首先用一个二进制位区分紧跟着是哪种类型的输出结构：1 表示紧跟着是一个字符的ASCII码，0表示紧跟着是一个表示匹配串的二元组。如果是单个字符，就用1＋ASCII的结构输出，若是匹配串，就用0＋off＋len的结构输出。
+什么时候字符ASCII码的形式输出，什么时候以二元组的形式输出呢？这就要比较一下匹配串长度小于多少的时候，以单个字符的形式输出更短，长度超过多少的时候，以二元组的形式输出更节省空间。这个问题由又与窗口的大小有关。假设窗口大小需要用m位二进制位表示，匹配串长度平均需要用4位二进制位表示，再加上1位标志位，则一共1＋m＋4位；设匹配串长度是L，若逐个字符单独输出，每个字符1位标志位加上本身8位ASCII码，所以L个字符一共需要9×L位。比较两者的大小即可作出判断。本文的程序使用了4k大小的窗口，需要12位表示偏移量off，所以在本文的程序中，当匹配长度为0和1时，就直接输出单个字符，当匹配长度至少为2时，才输出二元组（off，len）。
+
+4．2	代码分析
+
+本文所用的编程语言是经过深思熟虑的。本文实现的程序选用C语言，编程环境是Cbuilder5.0。为什么选用C语言呢？从下面的代码分析就可以看到，  压缩程序往往不能对数据的整个字节进行处理，而是要按照二进制位来读写和处理数据，二进制位操作是压缩程序很重要的组成部分。而C语言被认为是高级汇编语言，它提供了左移位、右移位等操作符，可以方便地进行深入字节内部的二进制位操作。所以，C语言对实现压缩程序是一个很好的选择。
+下面对本文实现的程序作具体的分析：
+首先，程序定义了三个常量：
+① MaxWndSize  4096  —— 表示窗口的最大尺寸
+② MaxMatch  4096    —— 表示最长可匹配的长度
+③ BlockLen  65536    —— 每次读入内存缓冲区的文件块的大小
+程序还定义了两个全局变量：
+① CurByte   —— 表示指针在存放压缩编码的内存缓冲区中第几字节
+② CurBit    —— 表示指针在CurBit中的第几位
+本程序可以划分为三大部分：
+第一部分包括五个函数，是实现算法的核心函数，包括用LZ77和KMP算法相结合完成文件的压缩功能以及解压功能：
+FindMatch (BYTE* window, int Start, int* Offset, int* Len)
+Compress (BYTE* src, int srclen, BYTE* dest)
+Extract (BYTE* source, int srclen, BYTE* dest)
+btnCompressClick (TObject *Sender)
+btnExtractClick (TObject *Sender)
+第二部分包括八个函数，是为了实现输出压缩编码的一组二进制位操作函数：
+CodeOutput (BYTE* dest, DWORD code, int bits, BOOL isGamma)
+UpperLog2 (int n)
+LowerLog2 (int n)
+MovePos (int* piByte, int* piBit, int num)
+GetBit (BYTE byte, int pos)
+InvertDWord (DWORD* pDW)
+CopyBitsInAByte (BYTE* memDest, int nDestPos, BYTE* memSrc, int nSrcPos, int nBits)
+CopyBits (BYTE* memDest, int nDestPos, BYTE* memSrc, int nSrcPos, int nBits)
+第三部分包括一个函数，是界面的初始化函数：
+TForm1 (TComponent* Owner)
+
+下面对这些函数逐一介绍：
+①	btnCompressClick ( )
+这是CBuilder生成的事件函数，当界面上的Compress按钮被点击时触发该函数，该函数主要完成以下几个功能：
+1．	将源文件分块读入内存缓冲区，每块的大小等于之前定义的常量BlockLen＝4k
+2．	调用函数Compress（）对缓冲区中的文件块进行压缩
+3．	把压缩后的编码输出到目标文件
+4．	在界面上显示有关的压缩状态信息
+
+②	Compress (BYTE* src, int srclen, BYTE* dest)
+该函数的功能是压缩内存缓冲区中的文件块，是实现LZ77算法的核心函数。它定义了一个窗口指针，并通过指针的滑动实现滑动窗口压缩，它还调用函数FindMatch ( )用调整后的KMP算法在窗口中查找最长匹配串，并调用函数CodeOutput ( )对压缩后的信息进行适当的编码然后输出到内存缓冲区。该函数的参数说明入下：
+src - 源数据内存缓冲区（待压缩数据区）指针
+srclen - 源数据块（待压缩数据区）字节长度
+dest - 目标数据内存缓冲区（存放压缩后的编码）指针
+返回值：压缩后数据的长度（正数——正常压缩数据的长度，零——数据无法压缩，负数——出错）
+
+③	FindMatch (BYTE* window, int Start, int* Offset, int* Len)
+该函数是实现调整后的KMP算法的核心函数，功能是在滑动窗口中查找最长匹配串，详细的算法描述可见上文。该函数的参数说明如下：
+window - 滑动窗口的起始指针
+Start - 待匹配串的起始位置（即lookahead窗口的起始位置）
+Offset - 匹配串在滑动窗口内的偏移，用于接收结果
+Len - 匹配串的长度，用于接收结果
+返回值：找到长度大于1的匹配串则返回true，否则返回false
+
+④	btnExtractClick ( )
+这是CBuilder生成的事件函数，当界面上的Extract按钮被点击时触发该函数，该函数主要完成以下几个功能：
+1.	将待解压的文件分块读入内存缓冲区，每块的大小根据每个文件块前的标记flag2来确定。
+2.	调用函数Extract（）对缓冲区中的文件块进行解压
+3.	把解压后的文件块输出到文件
+4.	在界面上显示有关的解压状态信息
+
+⑤	Extract (BYTE* source, int srclen, BYTE* dest)
+该函数的功能是解压缩缓冲区中的内容，参数说明如下：
+source - 源数据内存缓冲区（接收解压缩后的数据）指针
+srclen - 源数据块字节长度
+dest - 压缩数据内存缓冲区指针
+返回值：解压成功返回true，不成功返回false
+⑥	CodeOutput (BYTE* dest, DWORD code, int bits, BOOL isGamma)
+该函数的功能是以指定的形式输出压缩编码到输出缓冲区，若参数isGamma为true，要对code进行γ编码，再输出。该函数的参数说明如下：
+dest - 输出缓冲区指针
+code - 要输出的数
+bits - 要输出的位数
+isGamma - 是否输出为γ编码
+
+下面是一组二进制位操作函数，各函数功能简单说明如下
+⑦	MovePos (int* piByte, int* piBit, int num)
+功能：二进制位后移num位
+⑧	UpperLog2 (int n)
+功能：求不小于log2(n)的最小整数
+⑨	LowerLog2 (int n)
+功能：求大于log2(n)的最大整数
+⑩	GetBit (BYTE byte, int pos)
+功能：求字节byte的第pos位的值，从高位（左边）开始数起
+?	InvertDWord (DWORD* pDW)
+功能：调换双字的存放顺序，使其从高位字节到低位字节排列
+?	CopyBits (BYTE* memDest, int nDestPos, BYTE* memSrc, int nSrcPos, int nBits)
+功能：复制内存中的位流
+?	CopyBitsInAByte (BYTE* memDest, int nDestPos, BYTE* memSrc, int nSrcPos, int nBits)
+功能：在一个字节范围内复制位流
+
+以上各函数之间的调用关系如下图所示：
+                      图：函数调用关系图
+
+第五章 算法评价与探讨
+
+5．1 算法评价
+
+本文实现的算法的特点是巧妙地把KMP算法与LZ77算法结合，以最小的维护代价实现了在字典里快速查找最长匹配串，有效地缓解了LZ77的性能瓶颈。LZ77的关键是如何在高效地在遍历窗口（字典）查找最长匹配串，这也是算法的一个性能瓶颈。本文的解决方案是通过调整模式匹配KMP算法，使之适用于LZ77，然后把两者结合。这个解决方案不同于现在的通用压缩程序的方案，那些通用压缩程序大多数通过建立特殊的数据结构来管理字典，如二叉搜索树，索引，hash表，trie树等，这些数据结构确实能够加快查找速度，但是要付出很大的维护代价，如插入、删除等。而本文的算法不需要建立任何特殊的数据结构，因此也付出空间和时间的耗费去维护这些数据结构，实现简单。这正是本算法的特色所在。
+设窗口大小是m，匹配串的长度是n，若用带回溯的匹配算法，每次查找最长匹配串的时间复杂度上文以及分析过，为O（m*n）。若用本文中的KMP算法，由于没有回溯，每次查找匹配最长匹配串时字符的比较次数等于窗口大小m，再加上为模式计算失效函数的时间，算法的时间复杂度为O（m+n）。时间耗费很少。另外，本文还采取了另外一些改进的措施：如将窗口虚拟“滑动”,对匹配串的进行变长编码，单个字符和表示匹配串的元组混合输出等，这些方法都能进一步改善压缩程序的性能。
+为了与本文提出的算法作对比，本人编写了另外一个对比程序，对比程序的FindMatch ( )函数没有使用KMP算法，其他部分与本文实现的程序相同。用两个程序分别对相同的文件压缩，证明本文实现的程序的压缩时间比用没有改进的算法实现的程序少。
+下表是对本程序的一组测试结果：
+文件名	文件类型类型	原文件大小	压缩后大小	压缩时间	对比程序的压缩时间
+5．2 进一步工作的探讨
+对于本文实现的算法，还有可以作进一步的研究、进一步的改进。下面来探讨一下其中一个问题。
+LZ77其实是“贪婪”的算法，它每次都在history窗口中找lookahead所指向的内容的最长匹配串，这样找到的串是当前最长的，但不一定是最优的划分方法。我们看看一个例子：假设lookahead指向的内容是“Tshirt……”，而窗口中已经有“Ts”、“shirt”等短语，但没有“Tsh”这个短语，因此程序的输出情况如下：
+输出表示短语“Ts”的三元组  ——长度17位
+输出表示短语“hirt”的三元组——长度17位
+一共17＋17＝34位
+但是，这并不是最优的划分方法，还有更好的输出方法：
+         输出单个字符“T”              ——长度9位
+输出表示短语“shirt”的三元组  ——长度17位
+                                     一共9＋17＝26位
+因此，LZ77是一个贪婪的算法，它首先对最长的“Ts”进行匹配，再对“hirt”进行匹配，而没有发现后面有更好的匹配。
+所以，LZ77算法的这一点是有可改进的余地的，可以超前查看输入流中的内容，找出匹配串的最佳组合，选取最优的划分。但是，找最优解需要超前看输入流中的内容，要付出一定的时间甚至空间的代价，意味着压缩速度可能会受到很大影响。所以，怎样以较小的代价实现最优编码，改进算法的“贪婪”性，这是一个值得研究的问题。

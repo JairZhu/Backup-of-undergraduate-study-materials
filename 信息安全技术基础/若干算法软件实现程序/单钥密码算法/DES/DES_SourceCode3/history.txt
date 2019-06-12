@@ -1,0 +1,32 @@
+Warpdll 5.2
+	The structure of the S-Box is reform to one-dimension array.
+	Rewrite the old file for three times according to DoD's stander.
+	Encrypt/Decrypt is thread-safe.
+	Redefine struct PARAMS to make it more descriptive. 
+	The interfaces of function Encrypt() and Decrypt() are unchanged.
+	A little slower than version 5.x.
+Warpdll 5.1
+	Encrypt/Decrypt is thread-unsafe.
+	Redefine interface. From now on the Finish progress is set to 101, not 100.
+	Add a S_CANCELED statue to enumeration statues.
+	Define two new constant: PROGRESS_ALL_FINISHED (101) and PROGRESS_WRITING_FINISHED (100).
+	NOR compatible with warp.exe of wersion earlier than 1.0.0.5 .
+	Fix temporal file problem. Use API GetTempFileName to generate a temporal file.
+Warpdll 5.0	
+	Fix key-relative-S_Box error. Versions before this ARE NOT as safe as stander DES!!
+	Fix some errors in previous version: P_Box error, Subkey error. So, this version IS NOT compatible with previous version.
+	Increase speed by 3 times. 
+	All the codes are rewritten with C++ except function lfsr.
+Warpdll 3.0
+	Use new way to secure key verify imformation.
+	Accelerate the process a little.
+Warpdll 2.2
+	Elinimate S_Box changes to secure external key that used to build S_Box.
+	More efficient function are available though the DLL.
+Warpdll 2.1
+	A little faster than version 2.0. Correct the version examination bug.
+	Elinimate internal keys after encryption/decryption.
+Warpdll 2.0
+    Make the encrypted file much smaller. In version 1.0, the encrypted file will be 4k bigger. 
+Warpdll 1.0
+    A beginning of warp.

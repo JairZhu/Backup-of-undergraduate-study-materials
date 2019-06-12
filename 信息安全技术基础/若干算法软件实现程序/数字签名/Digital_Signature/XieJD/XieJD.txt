@@ -1,0 +1,177 @@
+Java安全通信、数字证书及数字证书应用实践
+谢建东 2004年12月 
+
+关键字：java	消息摘要	数字证书	CA
+摘要： 
+?  程序间如何安全通信 
+?  什么是消息摘要 及 如何生成消息摘要 
+?  什么是消息验证码 及 如何生成消息验证码 
+?  如何使用 Java工具生成和维护数字证书库
+?  如何用程序给数字证书验证签名 
+
+
+
+
+目录
+关键字：java	消息摘要 数字证书 CA	1
+摘要：	1
+一、消息摘要和消息验证码	1
+二、 Java中的数字证书的生成及维护方法	4
+（一）、前言	4
+（二）、示例	4
+（三）、证书的操作方法	5
+三、数字证书的签发（签名）	7
+
+ 
+
+
+一、消息摘要和消息验证码
+计算机安全通信过程中，常使用消息摘要和消息验证码来保证传输的数据未曾被第三方修改。 
+消息摘要是对原始数据按照一定算法进行计算得到的结果，它主要检测原始数据是否被修改过。消息摘要与加密不同，加密是对原始数据进行变换，可以从变换后的数据中获得原始数据，而消息摘要是从原始数据中获得一部分信息，它比原始数据少得多，因此消息摘要可以看作是原始数据的指纹。 
+例：下面一段程序计算一段字符串的消息摘要 
+import java.security.*; 
+public class DigestPass { 
+public static void main(String[] args) throws Exception{ 
+String str="Hello,I sent to you 80 yuan."; 
+MessageDigest md = MessageDigest.getInstance("MD5");//常用的有MD5,SHA算法等 
+md.update(str.getBytes("UTF-8"));//传入原始字串 
+byte[] re = md.digest();//计算消息摘要放入byte数组中 
+//下面把消息摘要转换为字符串 
+String result = ""; 
+for(int i=0;i<re.length;i++){ 
+result += Integer.toHexString((0x000000ff&re[i])|0xffffff00).substring(6); 
+} 
+System.out.println(result); 
+} 
+} 
+当 A和B通信时，A将数据传给B时，同时也将数据的消息摘要传给B，B收到后可以用该消息摘要验证A传的消息是否正确。这时会产生问题，即若传递过程中别人修改了数据时，同时也修改了消息摘要。B就无法确认数据是否正确。消息验证码可以解决这一问题。 
+使用消息验证码的前提是 A和B双方有一个共同的密钥，这样A可以将数据计算出来的消息摘要加密后发给B，以防止消息摘要被改。由于使用了共同的密钥，所以称为“验证码”。 
+例、下面的程序即可利用共同的密钥来计算消息摘要的验证码 
+import java.io.*; 
+import java.security.*; 
+import javax.crypto.*; 
+import javax.crypto.spec.*; 
+public class MyMac { 
+public static void main(String[] args) throws Exception{ 
+//这是一个消息摘要串 
+String str="TestString"; 
+//共同的密钥编码，这个可以通过其它算法计算出来 
+byte[] kb={11,105,-119,50,4,-105,16,38,-14,-111,21,-95,70,-15,76,-74, 
+67,-88,59,-71,55,-125,104,42}; 
+//获取共同的密钥 
+SecretKeySpec k = new SecretKeySpec(kb,"HMACSHA1"); 
+//获取Mac对象 
+Mac m = Mac.getInstance("HmacMD5"); 
+m.init(k); 
+m.update(str.getBytes("UTF-8")); 
+byte[] re = m.doFinal();//生成消息码 
+//下面把消息码转换为字符串 
+String result = ""; 
+for(int i=0;i<re.length;i++){ 
+result += Integer.toHexString((0x000000ff&re[i])|0xffffff00).substring(6); 
+} 
+System.out.println(result); 
+} 
+} 
+使用以上两种技术可以保证数据没有经过改变，但接收者还无法确定数据是否确实是某个人发来的。尽管消息码可以确定数据是某个有同样密钥的人发来的，但这要求双方具有共享的密钥，若有一组用户共享，我们就无法确定数据的来源了。 
+数字签名可以解决这一问题。数字签名利用非对称加密技术，发送者使用私钥加密数据产生的消息摘要（签名），接收者使用发送者的公钥解密消息摘要以验证签名是否是某个人的。由于私钥只有加密者才有，因此如果接收者用某个公钥解密了某个消息摘要，就可以确定这段消息摘要必然是对应的私钥持有者发来的。 
+使用数字签名的前提是接收数据者能够确信验证签名时（用发送者的私钥加密消息摘要）所用的公钥确实是某个人的 (因为有可能有人假告公钥)。数字证书可以解决这个问题。 
+数字证书含有两部分数据：一部分是对应主体（单位或个人）的信息，另一部分是这个主体所对应的公钥。即数字证书保存了主体和它的公钥的一一对应关系。同样，数字证书也有可能被假造，如何判定数字证书的内容的真实性呢？所以，有效的数字证书必须经过权威 CA的签名，即权威CA验证数字证书的内容的真实性，然后再在数字证书上使用自己的私钥签名（相当于在证书加章确认）。 
+这样，当用户收到这样的数字证书后，会用相应的权威 CA的公钥验证该证书的签名(因为权威的CA的公钥在操作系统中己经安装)。根据非对称加密的原理，如果该证书不是权威CA签名的，将不能通过验证，即该证书是不可靠的。 
+若通过验证，即可证明此证书含的信息（发信人的公钥和信息）是无误的。于是可以信任该证书，便可以通过该证书内含的公钥来确认数据确实是发送者发来的。 
+于是，双方通信时， A把数据的消息摘要用自己的私钥加密（即签名），然后把自己的数字证书和数据及签名后的消息摘要一起发送给B，B处查看A的数字证书，如果A的数字证书是经过权威CA验证可靠的，便信任A，便可使用A的数字证书中附带的A的公钥解密消息摘要（这一过程同时确认了发送数据的人又可以解密消息摘要），然后通过解密后的消息摘要验证数据是否正确无误没被修改。 
+
+二、 Java中的数字证书的生成及维护方法 
+（一）、前言 
+Java中的keytool.exe可以用来创建数字证书，所有的数字证书是以一条一条(采用别名区别)的形式存入证书库的中，证书库中的一条证书包含该条证书的私钥，公钥和对应的数字证书的信息。证书库中的一条证书可以导出数字证书文件，数字证书文件只包括主体信息和对应的公钥。 
+每一个证书库是一个文件组成，它有访问密码，在首次创建时，它会自动生成证书库，并要求指定访问证书库的密码。 
+在创建证书的的时候，需要填写证书的一些信息和证书对应的私钥密码。这些信息包括 CN=xx,OU=xx,O=xx,L=xx,ST=xx,C=xx，它们的意思是： 
+CN(Common Name名字与姓氏) 
+OU(Organization Unit组织单位名称) 
+O(Organization组织名称) 
+L(Locality城市或区域名称) 
+ST(State州或省份名称) 
+C(Country国家名称） 
+可以采用交互式让工具提示输入以上信息，也可以采用参数 
+-dname "CN=xx,OU=xx,O=xx,L=xx,ST=xx,C=xx"来自动创建。 
+（二）、示例 
+如下所示一句采用交互式创建一个证书，指定证书库为 rootCALib，创建别名为eagleCA的一条证书，它指定用RSA算法生成， 
+且指定密钥长度为 1024，证书有效期为3650天： 
+C:\j2sdk1.4.1_01\mykeystore>keytool -genkey -alias eagleCA -keyalg RSA -keysize 1024 -keystore rootCALib -validity 3650 
+如下图所示： 
+ 
+
+上图中最后一步，我们输入的是 CN，代表中国的缩写，也可以直接输入“中国”两个字。 
+（三）、证书的操作方法 
+?  1.	证书的显示 
+如： 
+keytool -list -keystore rootCALib 
+将显示 rootCALib证书库的的所有证书列表：如下图示： 
+ 
+又如： keytool -list -alias eagleCA -keystore rootCALib 
+将显示 rootCALib证书库中别名为eagleCA的证书的信息。如下图所示： 
+ 
+又如： keytool -list -v -alias eagleCA -keystore rootCALib 
+将显示证书的详细信息（ -v参数）如下图所示： 
+ 
+?  2.	将证书导出到证书文件 
+如： keytool -export -alias eagleCA -file eagleCA.cer -keystore rootCALib 
+将把证书库 rootCALib中的别名为eagleCA的证书导出到eagleCA.cer证书文件中， 
+它包含证书主体的信息及证书的公钥，不包括私钥，可以公开，如下图所示 : 
+ 
+上面导出的证书文件是以二进制编码文件，无法用文本编辑器正确显示，因此不利用公布证书，可以加上 -rfc参数以一种可打印的编者编码输出。 
+如： 
+keytool -export -alias eagleCA -file eagleCA.cer -keystore rootCALib -storepass 100200 -rfc 
+这个命令在命令行中指定了证书库的访问密码，同时指定以可查看编码的方式输出。 
+?  3.	通过证书文件查看证书的信息 
+通过命令 :
+keytool -printcert -file eagleCA.cer
+可以查看证书文件的信息。 
+也可以在 windows中双击产生的证书文件直接查看。 
+?  4.	证书条目口令的修改 
+如： 
+keytool -keypasswd -alias eagleCA -keystore rootCALib 
+可以以交互的方式修改 rootCALib证书库中的条目为eagleCA的证书。 
+Keytool -keypasswd -alias eagleCA -keypass 200100 -new 123456 -storepass 100200 -keystore rootCALib 
+这一行命令以非交互式的方式修改库中别名为 eagleCA的证书的密码为新密码123456，行中的200100是指该条证书的原密码， 1002 00是指证书库的密码。 
+?  5.	证书条目的删除 
+keytool的命令行参数-delete可以删除密钥库中的条目，如： 
+keytool -delete -alias eagleCA -keystore rootCALib 
+这条命令将 rootCALib库中的eagleCA这一条证书删除了。 
+
+三、数字证书的签发（签名） 
+我们在上面创建好了数字证书，但这些数字证书还没有经过权威 CA的证实（即签名）。一般情况下，我们需要将这些证书发送给权威的CA，并申请其签名以确认数字证书让客户信任。 
+下面我们将模仿自己是一个权威的数字证书认证机构 CA，这个机构将采用自己的私钥来签发其它的证书。这个签发过程是这样的：我们自己是CA，我们自己有一个自签的数字证书存入数字证书库中。在数字证书库中的这个我们的CA数字证书，它含有私钥，公钥和我们这个CA的主体信息。下面这一个指令可以创建一个CA的自签的数字证书： 
+keytool -genkey -dname "CN=我的认证中心,OU=我的认证中心,O=我的认证中心,L=广州市,ST=广东省,C=中国" -alias RootCA -keyalg RSA -keysize 1024 -keystore rootCALib -keypass 200100 -storepass 100200 -validity 3650
+上面，我们在 rootCALib这个数字证书库中创建了一个别名为：rootCA、有效期为3650天、算法为RSA且密钥长度为1024的数字证书，这条证书的私钥密码为：200100，证书库的访问密码为：100200。这条别名为rootCA的证书代表我们自己的权威CA即：“我的认证中心”这个权威CA。以后我们将用这个证书来签名其它的数字证书。 我们可以将它导出为cer文件:
+keytool -export -alias rootCA -file rootCA.cer -keystore rootCALib
+现在我要给自己申请一个数字证书，我可以这么做：先在数字证书库中创建一条证书： 
+keytool -genkey -dname "CN=谢建东,OU=雄鹰网络有限公司,O=雄鹰网络有限公司,L=广州市,ST=广东省,C=中国" -alias eagleCA -keyalg RSA -keysize 1024 -keystore rootCALib -keypass 200100 -storepass 100200 -validity 3650 
+这样创建了一个别名为 eagleCA的数字证书，我们可以将它导出为cer文件:
+keytool -export -alias eagleCA -file eagleCA.cer -keystore rootCALib 
+接着，我们可以用上一步生成的 CA的自签证书来签名我这个数字证书了。 
+CA签名数字证书的过程需用SignCer程序来进行，这个程序是自解释的,具体源代码参看SignCer.java。
+
+运行SignCer程序，即可运用 RootCA证书来签发eagleCA证书，运行后生成新的证书库SignedLib，里面有一条别名为eagleCA_Signed带密钥的数字证书，我们将它导出为cer文件:
+keytool -export -alias eagleCA_Signed -file eagleCA_Signed.cer -keystore SignedLib
+至此，我们己经用 CA的证书以我们的数字证书签名了。在windows中，双击导出的eagleCA_Signend.cer文件，出现如下图所示： 
+ 
+上图中证书信息一栏显示“不能验证该证书”，原因是因为，我们的这个数字证书的签发者 rootCA证书没有安装到系统中。我们可以将证书库中别名为rootCA的自签数字证书导出为cer文件，然后在”Internet属性”->”内容”->”证书”->”受信任的根证书颁发机构” 中导入安装到系统中。再次查双击看此证书，如下图所示： 
+ 
+到此，我们己经获得了一个由我们自己的 CA签名颁发的个人数字证书。并且将我们自己的CA证书安装到系统中成为系统信任的根证书。于是，以后只要是由我们的这个CA证书签名颁发的数字证书都会受到系统的信任。 【完】
+ 
+附件：
+	源代码：	SignCert.java	DigestPass.java	MyMac.java
+	生成的数字证书：rootCA.cer		eagleCA.cer	eagleCA_Signed.cer
+	证书库文件：rootCALib		SignedLib
+	其他
+
+参考网络文章,均可在网上搜索得到：
+【1】	Java安全通信、数字证书及数字证书应用实践 Abnerchai(柴政) 2004年6月
+【2】	密码编码学与网络安去——原理与实践（第三版）
+【3】	配置Tomcat 4使用SSL
+【4】	为测试 Java 应用程序生成证书链.htm
+【5】	在Web中使用SSL.htm
+【6】	keytool - 密钥和证书管理工具.htm
+
+

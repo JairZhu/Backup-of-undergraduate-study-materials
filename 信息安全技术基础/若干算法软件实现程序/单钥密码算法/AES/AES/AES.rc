@@ -1,0 +1,291 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\AES.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Main.ico"
+IDI_ICONCOMPUTER        ICON    DISCARDABLE     "res\\Computer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 333, 266
+STYLE WS_POPUP
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "进入AES",IDOK,255,241,71,17,NOT WS_VISIBLE | 
+                    WS_DISABLED | WS_GROUP | NOT WS_TABSTOP
+    CONTROL         131,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,
+                    337,270
+END
+
+IDD_AES_DIALOG DIALOGEX 0, 0, 601, 333
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION 
+"AES (Advanced Encryption Standard) —— 美国国家标准技术研究所(NIST)的最新加密标准"
+
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "确定",IDOK,533,278,50,14
+    PUSHBUTTON      "取消",IDCANCEL,533,302,50,14
+    GROUPBOX        "算法:Rijndael 设计者:John Danemen,Vincent Rijmen 程序实现:邓韶勇 中山大学软件研究所02级硕士研究生(学号:0219402158) 指导老师:龙冬阳 2003年12月8日",
+                    IDC_STATIC,7,7,587,320
+    PUSHBUTTON      "选择明文",IDC_BUTTON1,213,50,50,14
+    EDITTEXT        IDC_EDIT1,17,25,246,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "选择密文",IDC_BUTTON2,534,50,50,14
+    EDITTEXT        IDC_EDIT2,338,25,246,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT3,17,76,246,100,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    LTEXT           "明文",IDC_STATIC,17,65,17,8
+    PUSHBUTTON      "输出到文件",IDC_BUTTON3,17,185,50,14
+    LTEXT           "密文",IDC_STATIC,338,65,17,8
+    EDITTEXT        IDC_EDIT4,338,76,246,100,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "输出到文件",IDC_BUTTON4,338,185,50,14
+    PUSHBUTTON      "==[加密]=>",IDC_BUTTON5,275,89,50,27
+    PUSHBUTTON      "<=[解密]==",IDC_BUTTON6,275,133,50,27
+    EDITTEXT        IDC_EDIT5,17,222,263,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "处理过程",IDC_STATIC,17,211,33,8
+    EDITTEXT        IDC_EDIT6,321,222,263,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "进度",IDC_STATIC,17,249,17,8
+    EDITTEXT        IDC_EDIT7,513,245,70,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,
+                    47,246,409,14
+    LTEXT           "使用时间",IDC_STATIC,474,247,33,8
+    LTEXT           "密钥",IDC_STATIC,17,280,17,8
+    EDITTEXT        IDC_EDIT8,47,278,266,38,ES_MULTILINE | ES_READONLY
+    PUSHBUTTON      "显示明文",IDC_BUTTON7,81,185,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "显示密文",IDC_BUTTON8,397,185,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "初始化",IDC_BUTTON9,149,185,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "清除",IDC_BUTTON10,213,185,50,14
+    PUSHBUTTON      "停止",IDC_BUTTON11,275,185,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "128位密钥",IDC_BUTTON12,338,278,50,14
+    PUSHBUTTON      "192位密钥",IDC_BUTTON13,406,278,50,14
+    PUSHBUTTON      "256位密钥",IDC_BUTTON14,338,302,50,14
+    ICON            IDI_ICONCOMPUTER,IDC_STATIC,291,218,20,20
+    PUSHBUTTON      "清除",IDC_BUTTON15,534,185,50,14
+    DEFPUSHBUTTON   "程序说明",IDC_BUTTON16,406,302,50,14
+END
+
+IDD_ENDBOX DIALOG DISCARDABLE  0, 0, 333, 237
+STYLE WS_POPUP
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "退出AES",IDOK,249,211,71,17,NOT WS_VISIBLE | 
+                    WS_DISABLED | WS_GROUP | NOT WS_TABSTOP
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,
+                    341,270
+END
+
+IDD_VERSION DIALOG DISCARDABLE  0, 0, 300, 201
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "程序使用说明"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,183,180,50,14
+    PUSHBUTTON      "取消",IDCANCEL,243,180,50,14
+    GROUPBOX        "AES",IDC_STATIC,7,7,286,168
+    EDITTEXT        IDC_EDIT1,16,18,270,149,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_WAIT DIALOG DISCARDABLE  225, 116, 150, 0
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "正在处理，请稍候......"
+FONT 9, "宋体"
+BEGIN
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "AES Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "AES\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "AES.EXE\0"
+            VALUE "ProductName", "AES 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_AES_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 594
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 326
+    END
+
+    IDD_VERSION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_WAIT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 31
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAPABOUT         BITMAP  DISCARDABLE     "res\\About.bmp"
+IDB_BITMAPEND           BITMAP  DISCARDABLE     "res\\End.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 AES(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\AES.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

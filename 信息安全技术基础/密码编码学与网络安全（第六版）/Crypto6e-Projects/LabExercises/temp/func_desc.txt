@@ -1,0 +1,86 @@
+Built in functions information:
+
+We will give a brief description of the merely built in functions you are
+allowed to use.
+You can find information on most of the built in functions we are using in the
+sample source codes at http://www.openssl.org/docs/crypto/crypto.html
+
+- des_encrypt1
+You will use a built in function called des_encrypt1 to do the actual DES encryption / decryption.
+As a reference on how to use this function, you can view the file tempdes.c.
+
+des_encrypt1(long *data, des_key_schedule *ks, int enc)
+
+        a. data: This argument is a pointer to a two element array of type long (4 bytes) that will
+        contain the data you will read from the file but packed in a type long variable.
+	NOTE: Characters are loaded into this function in little endian format. For example, the string 
+	{0xA0,0xB7,0x07,0x08} is 08 07 B7 A0 in little endian format (least significant bit goes first).
+        b. ks: is a pointer to the actual key array. Don.t worry about this argument data type.
+        c. enc: has a value of 1 for encryption and 0 for decryption.
+
+- des_set_key_checked
+This function will check that the key passed is of odd parity and is not a week or semi-weak key. If 
+the parity is wrong, then -1 is returned. If the key is a weak key, then -2 is returned. If an error 
+is returned, the key schedule is not generated.
+
+des_set_key_checked(const_des_cblock *key, des_key_schedule *schedule)
+	a. key: is a pointer to the actual key array. Don.t worry about this argument data type.
+	b. schedule: is the new key, that will be used as an input argument to
+	   the function des_encrypt1
+
+NOTE: On the Openssl web page, you might notice that the DES built in functions are written different 
+than what we are showing here. For example, "des_encrypt1" is written as "DES_encrypt1" on the web page. 
+This is because the server where we will test your code has an older Openssl version installed, so it 
+does not accept the new format. Please keep using the format we are presenting here. 
+
+- RSA_generate_key
+This function will generate the public and private keys
+
+RSA_generate_key(int num, unsigned long e, void (*callback)(int,int,void *), void *cb_arg)
+        a. num: size (in bytes) of the public key
+        b. e: value of the public exponent
+        c. callback: Don't worry about this argument. Assign the value NULL
+        d. cb_arg: Don't worry about this argument. Assign the value NULL
+
+- RSA_public_encrypt
+This function will encrypt data  using an RSA public key
+
+RSA_public_encrypt(int flen, unsigned char *from, unsigned char *to, RSA *rsa, int padding)
+        a. flen: number of bytes to encrypt
+        b. from: buffer with data to encrypt
+        c. to: buffer with data to decrypt
+        d. rsa: pointer to the key data structure
+        e. padding: Don't worry about this argument. Assign the following value to it: RSA_PKCS1_PADDING
+
+- RSA_private_decrypt
+This function will decrypt data using an RSA private key
+
+RSA_private_decrypt(int flen, unsigned char *from, unsigned char *to, RSA *rsa, int padding)
+        a. flen: number of bytes to encrypt
+        b. from: buffer with data to encrypt
+        c. to: buffer with data to decrypt
+        d. rsa: pointer to the key data structure
+        e. padding: Don't worry about this argument. Assign the following value to it: RSA_PKCS1_PADDING
+
+- Sha1_Init
+This function will initialize some data structures necessary for the generation of the digest
+
+Sha1_Init(SHA_CTX *c)
+        a. c: initialize the SHA_CTX structure
+
+- Sha1_Update
+This function will be called repeatedly using a block of certain size that have been read from the input file,
+to generate the digest
+
+Sha1_Update(SHA_CTX *c, const void *data, unsigned long len)
+        a. c: pointer to the data structure initialized by SHA1_Init
+        b. data: buffer with the chunk of data to take the digest from
+        c: len: size of buffer with chunk of data
+
+- Sha1_Final
+This function will copy the resultant digest to an output buffer and will release any memory space used for the
+data structures created with SHA1_Init
+
+Sha1_Final(unsigned char *md, SHA_CTX *c)
+        a. md: output buffer
+        b. c: pointer to the data structure initialized by SHA1_Init
