@@ -1,0 +1,227 @@
+﻿<!-- Result.strings - For ease of localization, strings have been separated into this file.  This has result strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- ******************** RESULT CODE TEXT ******************** -->
+<!-- NOTE: This file should contain all result codes and only	-->
+<!--	   result codes, all other strings should be placed		-->
+<!--	   in other string files.								-->
+
+<!-- shared result strings -->
+$OR_CONTACT_SYSTEM_ADMIN$=or contact your system administrator for further assistance.
+$CONTACT_SYSTEM_ADMIN$=Please contact your system administrator for further assistance.
+
+<!-- global results -->
+$SESS_OKAY_STR$=Operation was successful.
+$SESS_FAIL_STR$=ERROR: The operation cannot be performed.
+$SESS_PENDING_STR$=Error: The operation is still being performed.
+$SESS_PERMISSION_DENIED_STR$=ERROR: The file or directory you're trying to access is not available to you.
+$SESS_INVALID_PARAMETER_STR$=ERROR: Operation was not successful, a parameter was invalid.
+$SESS_BAD_SEQUENCE_OF_COMMANDS_STR$=Error: Bad sequence of commands.
+$SESS_NOT_FOUND_STR$=ERROR: The specified file or directory does not exist.
+$SESS_PATH_IS_PORT_STR$=ERROR: The specified path is a Windows PORT, and the operation cannot be performed.
+$SESS_LOGIN_TOO_MANY_INVALID_TRIES_STR$=You have exceeded the maximum number of login attempts.
+$SESS_COMMAND_PENDING_STR$=A command is currently pending.  This action cannot be performed until the pending operation completes.
+$SESS_COMMAND_ABORTED_STR$=ERROR: Operation was not successful, the command was aborted.
+$SESS_INTERNAL_ERROR_STR$=ERROR: The operation cannot be performed, an internal error has occurred.
+$SESS_ALREADY_EXISTS_STR$=ERROR: The file or folder already exists.
+$SESS_FILE_IS_DIR_STR$=ERROR: The operation cannot be performed, the requested path is a directory, not a file.
+$SESS_DIR_IS_FILE_STR$=ERROR: The operation cannot be performed, the requested path is a file, not a directory.
+$SESS_CANT_REST_EMPTY_FILE_STR$=Can't resume a file transfer on an empty file.
+$SESS_CANT_REST_BEYOND_EOF_STR$=Can't resume a file transfer beyond the end of the file.
+$SESS_CANT_SET_FILE_POS_STR$=Unable to set the file position within the file.
+<!-- $SESS_COMPRESSED_TRANSFER_COMPLETE_STR$= -- placeholder -- -->
+$SESS_UNAUTHORIZED_IP_STR$=ERROR: Unauthorized IP Address.
+$SESS_TIME_OUT_STR$=ERROR: The session timed out.
+$SESS_EXCEEDED_MAX_SESSION_TIME_STR$=ERROR: The maximum session time for this account has been exceeded.
+$SESS_TOO_MANY_SESSIONS_IP_STR$=ERROR: Too many sessions using IP.
+$SESS_TOO_MANY_SESSIONS_STR$=ERROR: Too many sessions.
+$SESS_BLOCKED_STR$=You have been blocked.  Please try again later, $OR_CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_DATA_SOCKET_CONNECT_STR$= -- placeholder -- -->
+<!-- $SESS_DATA_SOCKET_CLOSED_STR$= -- placeholder -- -->
+<!-- $SESS_DECR_USER_QUOTA_STR$= -- placeholder -- -->
+$SESS_NO_FILES_FOUND_STR$=ERROR: No files have been found.
+<!-- $SESS_LOCK_CONFLICT_STR$= -- placeholder -- -->
+$SESS_ADMIN_ABORTED_STR$=ERROR: The operation was aborted by an administrator.
+$SESS_UNAUTHORIZED_STR$=ERROR: You are no longer logged in or have been disconnected by an administrator.
+$SESS_CANT_DELETE_SESSION_DOMAIN_STR$=ERROR: Unable to delete the domain containing the currently logged in user account.
+$SESS_NO_SUCH_PATH_STR$=The requested file path does not exist, this normally means the parent directory has not been created.  Please create the parent directory before attempting this operation.
+$SESS_INVALID_PATH_STR$=The specified file or directory path is not valid for this operation.
+$SESS_PROTOCOL_NOT_ALLOWED_FOR_USER_STR$=You are not allowed to login to this server with your web browser.  Please contact your system administrator for information about how to use this server.
+$SESS_PERMISSION_DENIED_READ_ONLY_ADMIN_STR$=You are not allowed to change any settings.  Please contact your system administrator for information about your account.
+$SESS_CANT_DELETE_SELF_STR$=You cannot delete the user account you're using now.  Login with a different administrative account or use the tray application to delete this account.
+$SESS_REVERSE_DNS_NAME_REQUIRED_TO_LOGIN_STR$=A reverse DNS name is required to connect to and login to this server.  Please contact your ISP and/or your system administrator for more information.
+$SESS_USER_UNAVAILABLE_STR$=Your user account is currently unavailable.  Please contact your system administrator for more information about your user account.
+$SESS_ODBC_USER_PASSWORD_TOO_LONG_STR$=The specified password is too long for the database to store when encrypted.  Please use a shorter password.
+
+<!-- CheckUser() results -->
+$SESS_USER_OKAY_NEED_PWD_STR$=Error: User needs password.
+$SESS_USER_NOT_FOUND_STR$=Error: User not found.
+$SESS_USER_OKAY_NEED_EMAIL_STR$=Error: User needs email.
+$SESS_USER_NO_ANONYMOUS_STR$=Error: No anonymous access.
+$SESS_USER_NEED_SECURE_CONNECTION_STR$=You may connect only when using a secure connection.  $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_USER_OKAY_NEED_SKEY_PWD_STR$= -- placeholder -- -->
+
+<!-- CheckPassword() results -->
+$SESS_PASSWORD_CANT_FIND_HOME_STR$=Error: There is no home directory for this account.
+$SESS_PASSWORD_USE_REAL_EMAIL_ADDR_STR$=When logging in, please use your actual email address.
+$SESS_PASSWORD_EXPIRED_CHANGE_STR$=The password has expired.  Please change your password to continue.
+
+<!-- ChangePassword() results -->
+$SESS_CHG_PASSWORD_NO_OLD_PASSWORD_MATCH_STR$=Old Password is incorrect.
+$SESS_CHG_PASSWORD_TOO_SHORT_STR$=ERROR: The specified password is too short.
+$SESS_CHG_PASSWORD_NOT_COMPLEX_STR$=ERROR: The specified password is not complex.
+$SESS_CHG_PASSWORD_OLD_NEW_MATCH_STR$=New password must be different than old password.
+$SESS_CHG_PASSWORD_CANT_CHANGE_ANONYMOUS_STR$=Can't change the anonymous password.
+
+<!-- Xcrc() results -->
+$SESS_XCRC_CANNOT_READ_FROM_FILE_STR$=The XCRC value cannot be calculated, either the file is unavailable or the operation was canceled.
+
+<!-- List() results -->
+<!-- $SESS_LIST_START_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_END_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_FILE_STR$= -- placeholder -- -->
+
+<!-- Retrieve() & Store() results -->
+<!-- $SESS_RETR_DATA_STR$= -- placeholder -- -->
+$SESS_CANT_LOAD_GDI_PLUS_STR$=Internal Error: GDI+ cannot be loaded to perform an operation.  $CONTACT_SYSTEM_ADMIN$
+$SESS_CANT_CREATE_THUMBNAIL_STR$=Internal Error: Cannot create the thumbnail image.
+$SESS_CANT_SAVE_THUMBNAIL_STR$=Internal Error: Cannot save the temporary thumbnail image.  The server's disk drive may be full.
+<!-- $SESS_FILE_OPENED_STR$= -- placeholder -- -->
+$SESS_CANT_WRITE_STR$=Internal Error: Cannot write to the server's hard drive.  The server's disk drive may be full.  $CONTACT_SYSTEM_ADMIN$
+$SESS_SERVER_STOP_PENDING_STR$=Operation not available, the server is going down.
+$SESS_RETR_INSUFFICIENT_CREDIT_STR$=You must upload before downloading.  Please upload a file before attempting to download a file.
+$SESS_STOR_INSUFFICIENT_DISK_QUOTA_STR$=You do not have enough quota available.  Please delete before attempting to upload.
+$SESS_STOR_INSUFFICIENT_DISK_SPACE_STR$=You do not have enough disk space available.  Please delete before attempting to upload, $OR_CONTACT_SYSTEM_ADMIN$
+$SESS_STOR_FILE_TOO_LARGE_STR$=File size is too large.  You must make space before attempting to upload, or you do not have enough space available to you.  $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_STOR_DATA_WRITTEN_STR$= -- placeholder -- -->
+$SESS_APPE_CANT_RESTART_STR$=Unable to append to a file when the file position is already specified.
+
+<!-- GetUniqueFileName() results -->
+$SESS_STOU_CANT_CREATE_UNIQUE_NAME_STR$=Unable to create a unique file name.
+
+<!-- SetLastWriteTime() results -->
+$SESS_FUTURE_TIME_STR$=Unable to set the file's date and time because it's in the future.
+
+<!-- HTTP attribute list results -->
+<!-- $SESS_LIST_NO_CHANGE_STR$= -- placeholder -- -->
+
+<!-- SSL certificate creation results -->
+$SESS_SSL_CANT_CREATE_KEY_FILE_STR$=SSL Error: Can't create key file.
+$SESS_SSL_CANT_WRITE_KEY_FILE_STR$=SSL Error: Can't write key file.
+$SESS_SSL_CANT_CREATE_CERT_FILE_STR$=SSL Error: Can't create certificate file.
+$SESS_SSL_CANT_WRITE_CERT_FILE_STR$=SSL Error: Can't write certificate file.
+$SESS_SSL_CANT_CREATE_CERT_REQUEST_FILE_STR$=SSL Error: Can't create certificate request file.
+
+<!-- licensing results -->
+$SESS_ID_INVALID_STR$=The provided registration ID is not valid.  Please enter a valid registration ID.
+$SESS_ID_EXPIRED_STR$=The provided registration ID has expired and is not valid for this version of Serv-U.  Please provide a newer registration ID.
+$SESS_LIC_TOO_MANY_DOMAINS_STR$=You have reached the maximum number of domains allowed by your license.  To create a new domain, you must purchase an upgraded license.
+$SESS_LIC_TOO_MANY_USERS_STR$=You have reached the maximum number of user accounts allowed by your license.  To create a new user account, you must purchase an upgraded license.
+$SESS_LIC_TOO_MANY_SESSIONS_STR$=You have reached the maximum number of concurrent sessions allowed by your license.  To allow more concurrent sessions, you must purchase an upgraded license.
+$SESS_LIC_NO_REMOTE_ADMIN_STR$=Your license does not allow for remote server administration.  To enable remote server administration, you must purchase an upgraded license.
+$SESS_LIC_NO_FVJV_STR$=FTP Voyager JV is not available with this license.
+$SESS_LIC_NO_WEB_CLIENT_STR$=Browser access is not available with this Serv-U license.  Please contact this server's administrator to request a Serv-U upgrade.
+$SESS_LIC_NO_PASSWORD_RECOVERY_STR$=License does not allow for password recovery.
+
+<!-- password recovery -->
+$SESS_PASSWORD_RECOVERY_DISABLED_STR$=Password recovery is disabled.  Please contact your administrator for assistance.
+$SESS_PASSWORD_RECOVERY_CHANGE_DENIED_STR$=Password recovery denied. User not allowed to change password.  Please contact your administrator for assistance.
+
+<!-- Port() results -->
+<!-- $FTPSESS_PORT_ONLY_CLIENT_IP_ALLOWED_STR$= -- placeholder -- -->
+<!-- $FTPSESS_PORT_INVALID_PORT_NUMBER_STR$= -- placeholder -- -->
+
+<!-- EPort() results -->
+<!-- $FTPSESS_EPRT_PROTOCOL_NOT_SUPPORTED_STR= -- placeholder -- -->
+
+<!-- Pasv() results -->
+<!-- $FTPSESS_PASV_UNABLE_TOSETUP_LISTEN_SOCK_STR$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_ONLY_CLIENT_IP_ALLOWED_STR$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_TOO_MANY_PASV_REQUESTS_STR$= -- placeholder -- -->
+
+<!-- EPasv() results -->
+<!-- $FTPSESS_EPSV_PROTOCOL_NOT_SUPPORTED_STR= -- placeholder -- -->
+<!-- $FTPSESS_EPSV_PROTOCOL_1_NOT_SUPPORTED_STR= -- placeholder -- -->
+<!-- $FTPSESS_EPSV_PROTOCOL_2_NOT_SUPPORTED_STR= -- placeholder -- -->
+
+<!-- Mlsd() results  -->
+<!-- $FTPSESS_MLSD_WILDCARDS_NOT_ALLOWED_STR$= -- placeholder -- -->
+<!-- $FTPSESS_MLSD_PATHNAME_NOT_DIRECTORY_STR$= -- placeholder -- -->
+
+<!-- data connection -->
+<!-- $FTPSESS_DATACHAN_IN_USE_STR$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_OUT_OF_NETWORK_SOCKETS_STR$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CANNOT_OPEN_STR$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CLOSED_ABORTED_STR$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_NOT_SPECIFIED_STR$= -- placeholder -- -->
+
+<!-- validation results -->
+$SU_VALID_USER_EXISTS_STR$=ERROR: A user account with that ID already exists.
+$SU_VALID_GROUP_EXISTS_STR$=ERROR: A group with that name already exists.
+$SU_VALID_ATTR_LESS_THAN_MIN_STR$=ERROR: The provided value is too small.  Please use a large value.
+$SU_VALID_ATTR_GREATER_THAN_MAX_STR$=ERROR: The provided value is too large.  Please use a smaller value.
+$SU_VALID_INVALID_RESPONSE_CODE_FORMATTING_STR$=ERROR: This FTP command requires special format strings to be present.  Please preserve the format strings when editing the response text.
+$SU_VALID_PATH_CONTAINS_WILDCARD_CHARS_STR$=The specified path name cannot contain wildcard character such as * and ?.
+$SU_VALID_EMPTY_PHYSICAL_PATH_STR$=ERROR: Please specify a physical path.
+$SU_VALID_EMPTY_VIRTUAL_PATH_STR$=ERROR: Please specify a virtual path.
+$SU_VALID_LOGIN_ID_EMPTY_STR$=ERROR: Please provide a unique login ID for the user.
+$SU_VALID_GROUP_NAME_EMPTY_STR$=ERROR: Please provide a unique name for the group.
+$SU_VALID_DOMAIN_EXISTS_STR$=ERROR: A domain with that name already exists.
+$SU_VALID_ORGANIZATION_EXISTS_STR$=ERROR: A user collection with that name already exists.
+$SU_VALID_PERMISSION_DENIED_STR$=ERROR: Permission denied.
+$SU_VALID_UNABLE_TO_CREATE_SSL_METHOD_STR$=OpenSSL ERROR: Unable to create the SSL method.
+$SU_VALID_UNABLE_TO_CREATE_SSL_CONTEXT_STR$=OpenSSL ERROR: Unable to create SSL context.
+$SU_VALID_CERT_PATH_IS_EMPTY_STR$=ERROR: Please specify a valid path to a certificate file.
+$SU_VALID_UNABLE_TO_LOAD_CERT_FILE_STR$=ERROR: Unable to load the certificate.  Please make sure the path is correct.
+$SU_VALID_UNABLE_TO_LOAD_PRIVATE_KEY_FILE_STR$=ERROR: Unable to load the private key file.  Please make sure that the path and private key password are correct.
+$SU_VALID_UNABLE_TO_LOAD_OPENSSL_STR$=Unable to load OpenSSL libraries.
+$SU_VALID_PHYSICAL_PATH_INVALID_STR$=ERROR: The provided physical path is invalid.
+$SU_VALID_VIRTUAL_PATH_INVALID_STR$=ERROR: The provided virtual path is invalid.
+$SU_VALID_HOST_NAME_EXISTS_STR$=ERROR: The provided virtual host name is already in use.
+$SU_VALID_FTP_RESP_REQUIRES_COMMAND_RESULT_STR$=ERROR: The FTP command response needs to include the $CommandResult macro to function properly.
+$SU_VALID_FTP_RESP_READ_ONLY_STR$=ERROR: The selected FTP command response is read-only and cannot be modified.
+$SU_VALID_USER_CANNOT_BE_ADMIN_STR$=ERROR: Domain admin cannot create another admin.
+$SU_VALID_GROUP_CANNOT_BE_ADMIN_STR$=ERROR: Domain admin cannot create an admin group.
+$SU_VALID_HOME_DIR_CANNOT_CONTAIN_HOME_VAR_STR$=ERROR: The home directory cannot contain the %HOME% macro.
+$SU_VALID_CANNOT_LOAD_GDI_PLUS_STR$=$SESS_CANT_LOAD_GDI_PLUS_STR$
+$SU_VALID_NOT_AN_IMAGE_STR$=ERROR: The provided file is not a valid image file.
+$SU_VALID_INVALID_IMAGE_SIZE_STR$=ERROR: The dimensions for the provided image are invalid.  Dimensions for custom logo images must have a width of 400 pixels and a height of 100 pixels.
+$SU_VALID_NOT_FOUND_STR$=The specified item was not found.
+$SU_VALID_EV_SUBJECT_EMPTY_STR$=This event must contain an email subject.
+$SU_VALID_EV_BODY_EMPTY_STR$=This event must contain text for the email body.
+$SU_VALID_EV_TO_ADDRESS_EMPTY_STR$=This event must contain an email to address.
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_STR$=Please enter a valid destination email address.
+$SU_VALID_EV_BALLON_TIP_TITLE_TOO_LARGE_STR$=The balloon tip title for this event is too large.
+$SU_VALID_EV_BALLON_TIP_MESSAGE_TOO_LARGE_STR$=The balloon tip message for this event is too large.
+$SU_VALID_EV_BALLON_TIP_EMPTY_STR$=This event must contain a balloon tip title and message.
+$SU_VALID_EV_EXE_PATH_EMPTY_STR$=This event must contain a path to an executable file.
+$SU_VALID_EV_EXE_PARAMETERS_CONTAIN_CR_LF_STR$=The command line parameters for this action must not contain line feeds or new lines.
+$SU_VALID_EV_INVALID_VAR_FOR_ADMIN_STR$=Domain admin cannot use the entered variables for this action.<br><br> You may use the following:<br>$PathName<br>$FileName<br>$OldPathName<br>$OldFileName
+$SU_VALID_INVALID_SMTP_EMAIL_ADDRESS_STR$=SMTP email address is invalid.
+$SU_VALID_INVALID_EMAIL_ADDRESS_STR$=Email address is invalid.
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_BCC_STR$=BCC email address is invalid.
+$SU_VALID_NOT_A_NUMBER_STR$=A numeric field does not contain a number.  Please enter a numeric value.
+$SU_VALID_NOT_A_DOUBLE_STR$=A floating point field does not contain a floating point number.  Please enter a valid floating point number.
+$SU_VALID_INVALID_FILE_NAME_CHARACTERS_STR$=A field contains invalid characters.  The field cannot contain any of the following characters: \/:"&lt;&gt;|
+$SU_VALID_FILE_NAME_CONTAINS_WILDCARD_STR$=A field contains wildcard characters.  The field cannot contain any of the following characters: *?
+$SU_VALID_GROUP_ADMIN_MUST_BE_GROUP_MEMBER_STR$=A Group Administrator must be a member of at least one group.  Please make this user a member of a group.
+$SU_VALID_INVALID_IP_ADDRESS_STR$=The specified IP address is invalid.  Please enter a valid IP address.
+$SU_VALID_INVALID_IP_MASK_STR$=The specified IP mask appears to be invalid.  Please enter a valid IP address mask.
+$SU_VALID_GROUP_NAME_INVALID_STR$=ERROR: The provided group name is invalid. Please enter a valid name for the group.
+
+<!-- NOTE TO TRANSLATORS: The following BLOCK MUST be removed from your translation -->
+<!-- localized strings, keep these at the end of this file, they "overwrite" any previously defined string -->
+<!--#include de "Result_DE.strings"-->
+<!--#include fr "Result_FR.strings"-->
+<!--#include it "Result_IT.strings"-->
+<!--#include es "Result_ES.strings"-->
+<!--#include pt "Result_PT.strings"-->
+<!--#include se "Result_SE.strings"-->
+<!--#include fi "Result_FI.strings"-->
+<!--#include no "Result_NO.strings"-->
+<!--#include dk "Result_DK.strings"-->
+<!--#include ru "Result_RU.strings"-->
+<!--#include zh,TW "Result_TW.strings"-->
+<!--#include zh,CN "Result_CN.strings"-->
+<!--#include jp "Result_JP.strings"-->

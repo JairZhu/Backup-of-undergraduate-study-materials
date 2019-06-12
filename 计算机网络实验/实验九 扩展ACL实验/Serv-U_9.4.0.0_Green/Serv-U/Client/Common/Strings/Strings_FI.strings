@@ -1,0 +1,132 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file. This has strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- image name for the transparent distributors logo -->
+$DISTRIBUTOR_LOGO_IMAGE$=Upstream-Logo.png
+
+<!-- The following 4 macros should be set to your reseller company contact information so they can be displayed in the program information page. -->
+$LOCALIZE_NAME$=RhinoSoft.com
+$LOCALIZE_STREET$=P.O. Box 53
+$LOCALIZE_CITY_ETC$=Helenville, WI 53137
+$LOCALIZE_URL$=www.upstream.se
+
+<!-- ******************* SESSION ERRORS ******************* -->
+<!-- **************** GetResultText.htm **************** -->
+<!-- GetResultText() -->
+$LOGIN_FAIL_STR$=VIRHE: Kirjautuminen epäonnistui.
+$UNKNOWN_ERROR$=VIRHE: Toiminto epäonnistui, tapahtui tuntematon virhe.
+$AJAX_NOT_SUPPORTED$=Selaimesi ei tue AJAX:ia.
+$ERROR_TITLE$=Tapahtui virhe
+$SESS_CANNOT_CREATE_DIR1_STR$=Hakemiston luontivirhe, hakemiston luonti ei onnistu:
+$SESS_CANNOT_CREATE_DIR2_STR$=Sinulla ei ole lupaa luoda hakemistoa tähän.
+$SESS_CANNOT_RENAMEDIR1_STR$=Hakemiston uudelleennimeämisvirhe, hakemiston nimeäminen uudelleen ei onnistu:
+$SESS_CANNOT_RENAMEFILE1_STR$=Tiedoston uudelleennimeämisvirhe, tiedoston nimeäminen uudelleen ei onnistu:
+$SESS_CANNOT_RENAMEDIR2_STR$=Sinulla ei ole lupaa nimetä tätä hakemistoa uudelleen.
+$SESS_CANNOT_RENAMEFILE2_STR$=Sinulla ei ole lupaa nimetä tätä tiedostoa uudelleen.
+$SU_VALID_OPENSSL_GENERIC_ERROR_STR$=VIRHE: Salauskirjaston latausvirhe.  Asenna sovellus uudelleen.
+
+<!-- Common Strings -->
+$GO$=Siirry
+$FILES$=Tiedostot
+$DIRECTORIES$=Hakemistot
+$SIZE$=Koko
+$LOGGING_IN_DIALOG_TITLE$=Sisäänkirjautuminen
+$HELP$=Ohje
+$LOGOUT$=Uloskirjautuminen
+$NAME$=Nimi
+$USER$=Käyttäjä
+$MANAGEMENT_CONSOLE$=Hallintakonsoli
+$SUPPORT$=Tuki
+$FVJV_LICENSE_INFO$=FTP Voyager JV ei ole käytettävissä nykyisellä lisenssillä.  Jos haluat käyttää FTP Voyager JV sovellusta, sinun on ostettava lisenssi, jolloin sovelluksen toiminnot ovat käytettävissä. <br /><br /> Haluatko FTP Voyager JV sovelluksen ostoa koskevia lisätietoja?
+$FS_ABBREV_GIGABYTE$=Gt
+$FS_ABBREV_MEGABYTE$=Mt
+$FS_ABBREV_KILOBYTE$=Kt
+$FS_BYTES$=bittiä
+$DID_YOU_KNOW_BALLOON_TITLE$=Tiesitkö?
+<!-- Buttons -->
+$YES_BUTTON$=Kyllä
+$NO_BUTTON$=Ei
+$OK_BUTTON$=OK
+$CLOSE_BUTTON$=Sulje
+$SEND_BUTTON$=Lähetä
+$HELP_BUTTON$=Ohje
+$SAVE_BUTTON$=Tallenna
+$ADD_BUTTON$=Lisää
+$EDIT_BUTTON$=Muokkaa
+$DELETE_BUTTON$=Poista
+$RENAME_BUTTON$=Nimeä uudelleen
+$CANCEL_BUTTON$=Peruuta
+$SELECT_BUTTON$=Valitse
+$CLOSE_CANCEL$=Sulje/Peruuta
+$DEFAULT_BUTTON$=Oletus
+$CREATE_BUTTON$=Luo
+$BROWSE$=Selaa
+$WIZARD_BUTTON$=Ohjattu toiminto
+$PARENT_DIR$=Päähakemisto
+$REFRESH$=Päivitä
+$UP_ONE_DIRECTORY$=Siirry ylempään hakemistoon
+$REFRESH_ALT$=Päivitä
+$NEW_DIR_NAME_LABEL$=Uusi hakemisto
+$CREATE_DIR$=Luo hakemisto
+$PLEASE_ENABLE_COOKIES$=Serv-U edellyttää, että evästeet on käytössä.
+
+
+<!-- **************** BusyDialog.htm **************** -->
+$BUSY_DIALOG_TITLE$=Suorittaa toimintoa
+$SAVING_DIALOG_TITLE$=Tallentaa
+$LOADING_DIALOG_TITLE$=Lataa
+$DELETING_DIALOG_TITLE$=Poistaa
+
+
+
+<!-- **************** ChangePasswordDialog.htm **************** -->
+$OLD_PASSWORD$=Vanha salasana
+$NEW_PASSWORD$=Uusi salasana
+$USER_CHANGE_PASSWORD_TITLE$=Vaihda salasanaa
+$VERIFY_PASSWORD$=Vahvista salasana
+$PASSWORDS_DONT_MATCH$=Uusi salasana ei ole sama kuin salasanan vahvistus.
+$PASSWORD_CHANGED$=Salasanasi on vaihdettu.
+
+
+<!-- **************** FVJVLoggedIn.htm **************** -->
+$FVJV_NO_JAVA_WARNING$=Java runtime -sovellusta ei ole asennettu tietokoneelle.  FTP Voyager JV tarvitsee toimiakseen Java runtime environment -sovelluksen.  Lataa ja asenna uusin Sun Microsystemsin julkaisema Java-sovellusversio alla olevasta linkistä.
+$FVJV_DL_JAVA_LINK$=Lataa Java nyt
+$FVJV_JAVA_RESTART$=Kun Java on asennettu, lataa FTP Voyager JV uudelleen alla olevasta linkistä:
+$FVJV_JAVA_RESTART_LINK$=Lataa uudelleen FTP Voyager JV.
+$FVJV_IE_CONSIDERATIONS$=FTP Voyager JV -sovelluksen käyttö Internet Explorer -selaimessa
+$FVJV_IE_DL_FILE$=Internet Explorer saattaa tuoda näyttöön alla olevan kaltaisen viestin, jossa selain ilmoittaa, että tiedostojen lataaminen on estetty turvallisuussyistä.  FTP Voyager JV -sovellus tarvitsee toimiakseen tiedostoa.  Jos näyttöön tulee vastaava viesti, napsauta Internet Explorer -selaimessa näkyvää viestiä ja valitse vaihtoehto "Lataa tiedosto…".
+$FVJV_MOZILLA_CONSIDERATIONS$=FTP Voyager JV -sovelluksen käyttö Mozilla Firefox -selaimessa
+$FVJV_MOZ_RUN_FILE$=Mozilla Firefox saattaa tuoda näyttöön alla olevan kaltaisen viestin, jossa Firefox kysyy, mitä FTP Voyager JV -käynnistystiedostolle tehdään.  Avaa tiedosto sovelluksessa Java Web Start Launcher (oletus), jolloin FTP Voyager JV -sovellus käynnistyy.  Kun valitset valintaruudun "Tee näin jatkossa kaikille tämäntyyppisille tiedostoille", sinulle ei enää jatkossa esitetä tätä kysymystä.
+$FVJV_CLOSING$=FTP Voyager JV -sovelluksen käytön lopettaminen
+$FVJV_SESSION_INFO$=FTP Voyager JV voidaan sulkea käytön lopettamisen jälkeen.
+$FVJV_RELOGIN_INFO$=Kirjaudu uudelleen Serv-U -tiedostopalvelimelle alla olevasta linkistä:
+$FVJV_RETURN_CONSOLE$=Palaa hallintakonsoliin alla olevasta linkistä:
+$FVJV_RELOGIN$=Napsauta tästä, kun olet lopettanut FTP Voyager JV -sovelluksen käytön.
+$FVJV_RESTART$=Käynnistä uudelleen FTP Voyager JV
+$FVJV_RESTART_LINK$=Käynnistä uudelleen FTP Voyager JV napsauttamalla tästä.
+$FVJV_JAVA_WARNING$=Java-tietoturvavaroitus
+$FVJV_JAVA_WARNING_INFO$=Java saattaa tuoda näyttöön alla olevan kaltaisen viestin, jossa käyttäjää pyydetään vahvistamaan sovelluksen suorittaminen.  Jatka FTP Voyager JV -sovelluksen lataamista napsauttamalla painiketta Suorita.
+$FVJV_APPLE_DETECTED$=Serv-U on havainnut, että käytät ohjelmaa Apple Mac OS X.  FTP Voyager JV vaatii toimiakseen $FVJV_REQUIRE_JAVA_VERSION$.
+$FVJV_JAVA_WARNING_INFO_APPLE$=Java saattaa näyttää alla näkyvän viestin kaltaisen tietoturvavaroituksen ja pyytää sinua vahvistamaan, että haluat käynnistää sovelluksen.  Klikkaa "Trust" -painiketta jatkaaksesi FTP Voyager JV -ohjelman lataamista.
+$FVJV_MOZ_RUN_FILE_APPLE$=Mozilla Firefox saattaa näyttää alla näkyvän viestin kaltaisen viestin, jossa kysytään miten Firefoxin tulee avata FTP Voyager JV -ohjelman käynnistystiedosto.  Avaa se "Java Web Start Launcher -ohjelmalla" (oletusasetus) käynnistääksesi FTP Voyager JV:n.
+$FVJV_OTHER_ALTERNATIVES$=Muut vaihtoehdot
+$FVJV_REQUIRE_JAVA_VERSION$=<strong>Java 1.6 Runtime</strong>
+$FVJV_SAFARI_CONSIDERATIONS$=FTP Voyager JV:n käyttäminen Safarissa
+$FVJV_SAFARI_RUN_FILE$=Safari saattaa näyttää alla näkyvän viestin kaltaisen viestin, jossa kysytään miten selaimen tulee avata FTP Voyager JV -ohjelman käynnistystiedosto.  Klikkaa "Open" käynnistääksesi FTP Voyager JV -ohjelman.  Jos FTP Voyager JV ei käynnisty, valitse ladattu "jnlp"-tiedosto ja avaa se "Java Web Start Launcher" -ohjelmalla.
+$FVJV_SUPPORTED_BROWSERS$=Voit yrittää käynnistää FTP Voyager JV:n toisella selaimella.  Alla on lista selaimista, jotka tukevat FTP Voyager JV- ja Basic Web Client -ohjelmia:
+$LI_FVJV_SUPPORTED_BROWSER_IE$=Internet Explorer
+$LI_FVJV_SUPPORTED_BROWSER_FF$=Mozilla Firefox
+$LI_FVJV_SUPPORTED_BROWSER_SAFARI$=Safari
+$FVJV_LAUNCH_BWC$=Käynnistä Basic Web Client
+
+
+<!-- **************** FVJV Launch.jnlp **************** -->
+$FVJV_LAUNCH_TITLE$=FTP Voyager JV by RhinoSoft.com
+$FVJV_TITLE$=FTP Voyager JV
+$FVJV_VENDOR$=Rhino Software, Inc.
+
+
+<!-- **************** GoToDialog.htm **************** -->
+$GO_TO_DIRECTORY$=Siirry hakemistoon
+$GO_TO_PATH$=Polku

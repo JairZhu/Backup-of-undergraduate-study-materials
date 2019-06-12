@@ -1,0 +1,200 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Web Client\Include\ -->
+
+<!-- General -->
+$CLICK_HERE_CURRENT_DIR$=<a href="%FILE%ListDir.htm?Dir=%CURRENT_DIR%">Klicka här för en lista över innehållet i den aktuella mappen.</a>
+$WARN_IMAGE$=<img src="%FILE%Images\warn.gif" style="float:left;">
+$DELETE$=Ta bort
+$OPEN$=Öppna
+$CURRENTLY_LOCATED$=Placerad i
+$USE_INHERITED$=standard värdet
+$NO_SCRIPT_TEXT$=Det verkar som att din webläsare inte är konfigurerad för JavaScript. Denna sidan kräver att JavaScript är tillåtet.
+$PLEASE_ENTER_USER_NAME$=Skriv in ett användarnamn
+
+
+<!-- Login -->
+$LOGIN_TITLE$=Serv-U från RhinoSoft.com
+$LANGUAGE$=Språk
+$PASSWORD$=Lösenord
+$LOGIN$=Logga in
+$CHANGE_PASSWORD$=Byt lösenord
+$REMEMBER_USER$=Kom ihåg mig
+$RELOAD$=Uppdatera
+$JSCRIPT_DISABLED_WARN$=JavaScript är avaktiverat i din webläsare.  För att använda Serv-U File Server måste JavaScript vara aktiverat. <br /><br />Klicka på Uppdatera nedan efter att JavaScript har aktiverats i din webläsare.
+$IE_NOT_COMPATIBLE_WARN$=Du använder en version av Internet Explorer som inte stöds. Uppdatera till Internet Explorer 6.0 eller senare för att använda Serv-U.
+$BROWSER_NOT_COMPATIBLE_WARN$=Webbläsaren som du använder är inte kompatibel med den aktuella versionen av Serv-U. Använd Internet Explorer 6.0+, Firefox 1.0+, Safari 3+ eller Opera 9+. 
+
+
+<!-- Languages -->
+$ENGLISH$=English (Engelska)
+$GERMAN$=Deutsch (Tyska)
+$ITALIAN$=Italiano (Italienska)
+$FRENCH$=Français (Franska)
+$SPANISH$=Español (Spanska)
+$PORTUGUESE$=Português (Portugisiska)
+$SWEDISH$=Svenska
+$FINISH$=Suomi (Finska)
+$NORWEGIAN$=Norsk (Norska)
+$DANISH$=Dansk (Danska)
+$RUSSIAN$=Русский (Ryska)
+$TRADITIONAL_CHINESE$=繁體中文 (Traditionell kinesiska)
+$SIMPLIFIED_CHINESE$=简体中文 (Enkel kinesiska)
+$JAPANESE$=日本語 (Japanska)
+
+
+<!-- Logout -->
+$LOGOUT_TITLE$=Utloggad
+$LOGOUT_DESC$=Du har blivit utloggad.  <a href="%LOGIN%">Klicka här för att logga in på nytt.</a>
+$LOGGED_OUT_MSG$=Du har loggats ut.
+
+<!-- Login Change Password -->
+$PASSWORD_EXPIRED_TITLE$=Lösenordet har gått ut - byt lösenord
+$PASSWORD_EXPIRED_DESC$=Ditt lösenord har gått ut, byt lösenord för att gå vidare.
+
+
+<!-- Session Not Found -->
+$SESSION_NOT_FOUND_TITLE$=Obehörig - sessionen kunde inte hittas
+$SESSION_NOT_FOUND_HEAD$=401 Obehörig, sessionen finns inte.
+$SESSION_NOT_FOUND_DESC$=Den angivna sessionen finns inte. Detta kan bero på inaktivitet.  Logga in på nytt och försök igen.
+
+
+<!-- Not Logged In -->
+$NOT_LOGGED_IN_TITLE$=Obehörig - inte inloggad
+$NOT_LOGGED_IN_HEAD$=401 Obehörig, du är inte inloggad.
+$NOT_LOGGED_IN_DESC$=Du är inte behörig att använda den begärda funktionen.  <a href="%LOGIN%">Var vänlig logga in innan du använder den här funktionen.</a>
+
+
+<!-- Permission Denied -->
+$PERMISSION_DENIED_TITLE$=Åtkomst nekad.
+$PERMISSION_DENIED_DESC$=Åtkomst nekad
+
+
+<!-- Listing -->
+$CURR_DIR_HOST$=%HOST%
+$CURR_DIR_NAME$=%CURRENT_DIR_NAME%
+$MOD_TIME$=Tid
+$ATTRS$=Attribut
+$THUMBNAIL_LIST$=Visa som miniatyrer
+$UPLOAD_ACTION$=Ladda upp
+$UPLOAD$=Ladda upp
+$UPLOAD_ALT$=Ladda upp
+$THUMBNAILS_ALT$=Visa som miniatyrer
+$DETAILS_ALT$=Detaljer
+$CREATE_DIR_ALT$=Skapa mapp
+$FILETOOLS$=Verktyg
+$DOWNLOAD$=Ladda ner
+$THUMBNAIL_SIZE$=Storlek
+$SELECT_THUMBNAIL_SIZE$=Ange storlek
+$PREVIEW_IMAGE$=Förhandsvisa bild
+$CHANGE_PASSWORD_BUTTON$=Byt lösenord
+$FILE_PATH$=Filens sökväg
+$PLAY_MEDIA$=Spela media
+$PLAY_LIST$=Spela listan
+$AUDIO_PLAY_LIST$=Musik spel-lista
+$PLAYLIST_SIZE$=Spel-listans storlek
+$SHUFFLE_PLAYLIST$=Blanda spel-listan
+$NEXT_MEDIA_FILE$=Nästa mediafil
+$PREVIOUS_MEDIA_FILE$=Föregående mediafil
+$HOME$=Hem
+$FOLDER_EMPTY$=Mappen är tom
+$BACK$=Tillbaka
+$FORWARD$=Framåt
+$HISTORY_LIST$=Historik
+$NO_FILES_FOUND$=Inga filer hittades.
+$SEARCH_ACTION$=Sök
+
+
+<!-- Thumbnail Listing -->
+$DETAIL_LIST$=Detaljer
+
+
+<!-- STOR File Uploaded -->
+$STOR_FILE_UPLOADED_TITLE$=Filen har laddats upp
+$STOR_FILE_UPLOADED_DESC$=Filen har laddats upp till servern.<br><br>$CLICK_HERE_CURRENT_DIR$
+
+
+<!-- Rename -->
+$RENAME_TITLE$=Byt namn
+$RENAME_DESC$=Skriv in det nya namnet:
+$NEW_NAME$=Nytt namn
+$RENAME$=Byt namn
+
+
+<!-- Delete -->
+$DELETE_DIR$=Är du säker på att du vill ta bort den här mappen?
+$DELETE_FILE$=Är du säker på att du vill ta bort den här filen?
+
+
+<!-- Style Swap Properties -->
+$BOX_WIDTH_SMALL$=boxwidth300
+
+
+<!-- Overwrite file on upload -->
+$OVERWRITE_FILE$=Är du säker på att du vill skriva över den här flen?
+
+<!-- Search -->
+$FILE_SEARCH_DESC$=Hela eller del av filnamnet
+$FILE_SEARCH_TITLE$=Filsökning
+$SEARCH_SAMPLES$=Sökexempel
+$SEARCH_RESULTS$=Sökresultat
+
+
+<!-- **************** ImagePreviewDialog.htm **************** -->
+$IMAGE_DIALOG_TITLE$=Förhandsvisa bilden
+$PREVIOUS_IMAGE$=Tidigare bild
+$PAUSE_SLIDESHOW$=Pausa bildspelet
+$PLAY_SLIDESHOW$=Spela bildspelet
+$NEXT_IMAGE$=Nästa bild
+$OF$=av
+$IMAGES$=Bilder
+$SLIDE_SHOW$=Bildspel
+$SLIDE_SHOW_SPEED$=Bildspelets hastighet
+$FAST$=Snabb
+$SLOW$=Långsam
+
+
+<!-- **************** AlertDialog.htm **************** -->
+$SELECT_FILE_DELETE$=Markera först en fil eller mapp att ta bort.
+$SELECT_FILE_RENAME$=Markera först en fil eller mapp att byta namn på
+$RECOMMEND_IE_UPGRADE_1$=Om du använder en äldre version av Microsoft Internet Explorer. Internet Explorer 8.0 och senare inkluderar många prestanda- och funktionsförbättringar som förbättrar upplevelsen.
+$RECOMMEND_IE_UPGRADE_2$=<a class="links" href="http://www.microsoft.com/ie" target="_blank">Klicka här</a> för att ladda ner den senaste versionen av Internet Explorer.
+
+
+<!-- **************** AskUserPlacementDialog.htm **************** -->
+$ASK_USER_TITLE$=Användarens alternativ
+$CLIENT_SELECTION$=Användarens val
+$USER_PLACEMENT_DESC1$=Välj hur du vill ansluta till kontot.  Webbklienten är ett lättanvänt, webbaserat gränssnitt.
+$USER_PLACEMENT_DESC2$=FTP Voyager JV är en komplett FTP-klient som använder sig av Java i webbläsaren.
+$BASIC_WEB_CLIENT$=Webbklienten
+$FVJV$=FTP Voyager JV
+
+
+<!-- **************** LoggedInDialog.htm **************** -->
+$LOGGED_IN_DIALOG_TITLE$=Nu inloggad
+$LOGGED_IN_DESC$=Du är nu inloggad. Klicka på OK för att starta om sessionen och ansluta på nytt.
+
+
+<!-- **************** FVJVLoggedInDialog.htm **************** -->
+$FVJV_LOGGED_IN_DESC$=Du är nu inloggad. 
+$FVJV_LOGGED_IN_ACTION$=Klicka här för att starta om sessionen och ansluta på nytt.
+
+
+<!-- **************** UploadProgressDialog.htm **************** -->
+$UPLOAD_PROGRESS$=Uppladdning pågår
+$TRANSFER_RATE$=Överföringshastighet
+$WRITTEN$=Skrivet
+$REMAINING$=Återstår
+$TIME_REMAINING$=Tid som återstår
+$DESTINATION$=Mål
+$KB_SEC_LABEL$=KB/sekund
+$PLEASE_SELECT_FILE_UPLOAD$=Klicka på Visa och välj en fil att ladda upp.
+$UPLOADING$=Laddar upp
+$LARGE_FILE_UPLOAD_WARN$=Status för filer större än 2GB kan visas inkorrekt på grund av din webbläsare.
+$MOZ_LARGE_FILE_UPLOAD_WARN$=Mozilla webbläsare tillåter inte uppladdning av filer större än 2GB.
+$UNABLE_TO_UPLOAD$=Webbläsaren kunde inte ladda upp filen.  Filen kan vara för stor för den webbläsaren du använder.  $MOZ_LARGE_FILE_UPLOAD_WARN$
+
+<!-- **************** PasswordRecoveryDialog.htm **************** -->
+$RECOVER_PASSWORD_TITLE$=Återställ lösenord
+$PASSWORD_RECOVERED$=Återställningen av lösenord lyckades. Lösenordet har skickats med e-post.
+$PASSWORD_RECOVER_FAILURE_ERROR$=Återställningen av lösenord misslyckades.  Kontakta din administratör för hjälp.

@@ -1,0 +1,1559 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- Server -->
+$WEB_ADMIN$=Web管理者
+
+<!-- Time Format: This string is used to define how the time of day is displayed in your locale.  The following are possible values: -->
+<!-- %H: Hour in 24-hour format (00-23), %I: Hour in 12-hour format (1-12), %M: Minute as a decimal number (00-59), %p: Current locale痴 A.M./P.M. indicator for 12-hour clock (optional) -->
+<!-- US time is the default, which is displayed as "12:34 PM" -->
+$LOCALE_TIME_FORMAT$=%I:%M %p
+$TIME_AM$=AM
+$TIME_PM$=PM
+
+<!-- The following values indicate the width to be used for certain HTML elements since some languages require more space to display the same text and -->
+<!-- unilaterally increasing the available space for all languages based upon this creates a lot of white space.  Translators do not need to do anything -->
+<!-- with these values. -->
+$USER_ATTRS_DIALOG_WIDTH$=645
+$GROUP_ATTRS_DIALOG_WIDTH$=645
+$VISTA_DIALOG_INCREASE$=0
+$TREE_NAV_WIDTH$=215
+$CONNECTION_GROUP_WIDTH$=565
+$CONTAINER_CONNECTION_GROUP_WIDTH$=570
+$LOG_FILE_GROUP_HEIGHT$=295
+$OPERA_LOG_FILE_GROUP_HEIGHT$=320
+$DOMAIN_INFO_GROUP_HEIGHT$=215
+$USER_INFO_LEFT_CONTAIN_WIDTH$=200
+$USER_INFO_RIGHT_CONTAIN_WIDTH$=325
+$USER_INFO_INPUT_WIDTH_ADD$=0
+$USER_INFO_RIGHT_PUBKEY_WIDTH$=395
+
+
+<!-- **************** header.htm **************** -->
+$CONSOLE_TITLE$=Serv-U ファイル・サーバ管理コンソール
+$FVJV$=FTP Voyager JV
+$BASIC_WEB_CLIENT$=Webクライアント
+$CURRENTLYLOGGEDIN$=ログイン
+$CURRENTLY_EDITING_DOMAIN$=ドメインの管理
+$CURRENTLY_EDITING_SERVER$=管理
+$LOCAL_ADMIN$=ローカル管理
+$HOME$=ホーム
+
+
+<!-- **************** Console.htm **************** -->
+<!-- HTML -->
+$MANAGE_SERVER$=サーバの管理
+$SERVER$=サーバ
+$NAVIGATION$=ナビゲーション
+<!-- Javascript -->
+$SELECT_DOMAIN_MSG$="$MANAGE_DOMAIN_BUTTON$" ボタンを選択してドメンを選択、または作成してください。
+$SELECT_A_DOMAIN_TO_DELETE$=削除するドメインを選択してください。
+$ASK_DELETE_DOMAIN$=本当に選択したドメインを削除してもよいですか？
+$SELECT_ONLY_ONE_DOMAIN$=ドメインを一つだけ選択してください。
+$SELECT_ONLY_ONE_DOMAIN_EDIT$=編集するドメンを一つだけを選択してください。
+$SELECT_ONE_DOMAIN_EDIT$=編集するドメインを一つ選択してください。
+$SELECT_A_DOMAIN$=ドメインの選択
+<!-- Manage Domain -->
+$MANAGE_DOMAIN_BUTTON$=ドメインの管理
+$DOMAINS$=ドメイン
+$DOMAIN$=ドメイン
+$DOMAINNAME$=ドメイン名
+$DESCRIPTION$=説明
+<!-- New Domain Dialog -->
+$NEW_DOMAIN$=新規ドメイン
+$NEW_DOMAIN_BUTTON$=新規ドメイン
+$CREATE_NEW_DOMAIN$=新しいドメインの作成
+<!-- Domain Details -->
+$DOMAIN_DETAILS$=ドメインの詳細
+$DOMAIN_NAME_AND_DESCRIPTION$=ドメイン名と説明の編集
+$CONFIGURE_LISTENERS$=ドメインのリスナー構成
+$CONFIGURE_VIRTUAL_HOSTS$=仮想ホスト名の管理
+$CONFIGURE_IPACCESS$=ドメインIPアクセス・ルールの構成
+$CONFIGURE_DOMAIN_DATABASE$=ドメインアカウントとグループのデータベース・アクセス設定
+$CONFIGURE_DOMAIN_EVENTS$=ドメイン・イベントの作成、編集、削除
+<!-- Users -->
+$USERS$=ユーザ
+$CREATE_MODIFY_DELETE_USER$=ユーザ・アカウントの作成・変更・削除
+$CREATE_MODIFY_DELETE_DB_USER$=データベースに保存されたユーザ・アカウントの作成・変更・削除
+$CONFIG_WIN_AUTH_SETTINGS$=Windows認証設定の構成
+<!-- Groups-->
+$GROUPS$=グループ
+$CREATE_MODIFY_DELETE_GROUP$=ユーザ・グループの作成・変更・削除
+$CREATE_MODIFY_DELETE_DB_GROUP$=データベースに保存されたユーザ・グループの作成・変更・削除
+$CREATE_MODIFY_DELETE_WIN_GROUP$=Windowsユーザー・グループの作成・変更・削除
+<!-- Directories -->
+$CONFIGURE_DIRECTORY_ACCESS$=ドメインの全てのユーザのディレクトリ・アクセス権の構成
+$CREATE_MAINTAIN_VIRTUAL_PATHS$=データベースに保存されたユーザ・グループの作成・変更・削除
+<!-- Limts & Settings -->
+$LIMITS$=制限と設定
+$CREATE_MAINTAIN_LIMITS$=ドメインに適用する制限の作成と管理
+$MAINTAIN_DOMAIN_SETTINGS$=ドメイン設定の管理
+$MAINTAIN_DOMAIN_FTPCP$=ドメインの高度なFTPコマンド設定と動作の構成
+$MAINTAIN_DOMAIN_ENCRYPTION$=SSL・SSH証明書の作成と指定、および暗号化設定の構成
+<!-- Domain Activity -->
+$DOMAIN_ACTIVITY$=ドメイン・アクティビティ
+$VIEW_CONNECTED_USERS$=現在接続されているユーザを表示
+$VIEW_DOMAIN_STATS$=ドメイン・セッションと転送統計の表示
+$VIEW_USER_GROUP_STATS$=ユーザとグループ統計の表示
+$VIEW_DOMAIN_LOG$=ドメインログの表示
+$CONFIGURE_DOMAIN_LOG$=ドメインログの構成
+<!-- Server Details -->
+$SERVERDETAILS$=サーバの詳細
+$CONFIGURE_SERVER_IP_ACCESS$=サーバIPアクセスルールの構成
+$CONFIGURE_SERVER_DATABASE$=グローバル・アカウントとグループのデータベース・アクセス設定の設定
+$CONFIGURE_SERVER_LICENSE$=現在のライセンス情報の表示
+$VIEW_SERVER_INFO$=インストールに関する情報の表示
+$CONFIGURE_SERVER_EVENTS$=サーバ・イベントの作成、編集、削除
+<!-- Global Users -->
+$GLOBALUSERS$=グローバル・ユーザ
+$CREATEMODIFYGLOBALUSER$=グローバル・ユーザ・アカウントの作成・変更・削除
+$CREATE_MODIFY_DELETE_DB_GLOBAL_USER$=データベースに保存されたグローバル・ユーザ・アカウントの作成・変更・削除
+<!-- Global Groups -->
+$GLOBALGROUPS$=グローバル・グループ
+$CREATEMODIFYGLOBALGROUPS$=グローバル・ユーザ・グループの作成・変更・削除
+$CREATE_MODIFY_DELETE_DB_GLOBAL_GROUP$=データベースに保存されたグローバル・ユーザ・グループの作成・変更・削除
+<!-- Global Directories -->
+$GLOBALDIRECTORIES$=グローバル・ディレクトリ
+$CONFIGURESERVERDIRACCESS$=このサーバの全てのユーザへのディレクトリ・アクセス権の構成
+$CREATEMAINTAINVIRTUALPATHSSERVER$=仮想パスの作成と管理（ホームディレクトリ外のロケーションへのアクセスを与えます）
+<!-- Server Limits & Settings -->
+$SERVERLIMITS$=サーバ制限と設定
+$CREATEMAINTAINSERVERLIMITS$=サーバに適用する制限の作成と管理
+$MAINTAINSERVERSETTINGS$=サーバ設定、Anti-hammer、パスワード復元、およびカスタムロゴを管理
+$MAINTAIN_SERVER_FTPCP$=全てのサーバでのドメインの高度なFTPコマンド設定と動作の構成
+$MAINTAINSERVERENCRYPTION$=SSL・SSH証明書の作成と指定、および暗号化設定の構成
+<!-- Server Activity -->
+$SERVERACTIVITY$=サーバ・アクティビティ
+$VIEW_SERVER_STATS$=サーバ・セッションと転送統計の表示
+$VIEW_SERVER_LOG$=サーバ・ログの表示
+<!-- Bubble tip dialog -->
+$HOME_LINK_BALLOON_TIP$=Serv-U管理コンソールの、どのページが開いていてもServ-Uロゴをクリックすることでホームへ戻ることができます。
+$TREE_NAV_BALLOON_TIP$=それぞれの構成ページのクイック起動リンクリンクでドメインの完全なリストのためにプルダウンアイコンのクリックすることができます。
+
+<!-- **************** TreeNav.htm **************** -->
+<!-- Domain Details -->
+$DOMAIN_NAME_AND_DESCRIPTION_TREE$=ドメイン名 &amp; 説明
+$CONFIGURE_LISTENERS_TREE$=リスナー
+$CONFIGURE_VIRTUAL_HOSTS_TREE$=仮想ホスト
+$CONFIGURE_IPACCESS_TREE$=IPアクセス・ルール
+$CONFIGURE_DOMAIN_DATABASE_TREE$=データベース・アクセス
+$CONFIGURE_DOMAIN_EVENTS_TREE$=ドメイン・イベント
+<!-- Users -->
+$CREATE_MODIFY_DELETE_USER_TREE$=ユーザ・アカウント
+$CREATE_MODIFY_DELETE_DB_USER_TREE$=データベース・ユーザ・アカウント
+$CONFIG_WIN_AUTH_SETTINGS_TREE$=Windows認証
+<!-- Groups-->
+$CREATE_MODIFY_DELETE_GROUP_TREE$=ユーザ・グループ
+$CREATE_MODIFY_DELETE_DB_GROUP_TREE$=グループ・データベース・アカウント
+$CREATE_MODIFY_DELETE_OU_GROUP_TREE$=Windowsグループ
+<!-- Directories -->
+$CONFIGURE_DIRECTORY_ACCESS_TREE$=ディレクトリ・アクセス権
+$CREATE_MAINTAIN_VIRTUAL_PATHS_TREE$=仮想パス
+<!-- Limts & Settings -->
+$CREATE_MAINTAIN_LIMITS_TREE$=ドメイン制限
+$MAINTAIN_DOMAIN_SETTINGS_TREE$=ドメイン設定
+$MAINTAIN_DOMAIN_FTPCP_TREE$=FTPコマンド設定
+$MAINTAIN_DOMAIN_ENCRYPTION_TREE$=暗号化設定
+<!-- Domain Activity -->
+$VIEW_CONNECTED_USERS_TREE$=接続ユーザ
+$VIEW_DOMAIN_STATS_TREE$=セッション &amp; 転送状況
+$VIEW_USER_GROUP_STATS_TREE$=ユーザ &amp; グループ状況
+$VIEW_DOMAIN_LOG_TREE$=ドメイン・ログ
+$CONFIGURE_DOMAIN_LOG_TREE$=構成ログ
+<!-- Server Details -->
+
+$CONFIGURE_SERVER_IP_ACCESS_TREE$=IPアクセスルール
+$CONFIGURE_SERVER_DATABASE_TREE$=データベース・アクセス
+$CONFIGURE_SERVER_LICENSE_TREE$=ライセンス情報
+$VIEW_SERVER_INFO_TREE$=インストール情報
+$CONFIGURE_SERVER_EVENTS_TREE$=サーバイベント
+<!-- Global Users -->
+$CREATEMODIFYGLOBALUSER_TREE$=グローバル・ユーザ・アカウント
+$CREATE_MODIFY_DELETE_DB_GLOBAL_USER_TREE$=グローバル・ユーザ・アカウント
+<!-- Global Groups -->
+$CREATEMODIFYGLOBALGROUPS_TREE$=グローバル・ユーザ・グループ
+$CREATE_MODIFY_DELETE_DB_GLOBAL_GROUP_TREE$=グローバル・グループ・アカウント
+<!-- Global Directories -->
+$CONFIGURESERVERDIRACCESS_TREE$=ディレクトリ・アクセス権
+$CREATEMAINTAINVIRTUALPATHSSERVER_TREE$=仮想パス
+<!-- Server Limits & Settings -->
+$CREATEMAINTAINSERVERLIMITS_TREE$=サーバ制限
+$MAINTAINSERVERSETTINGS_TREE$=サーバ設定
+$MAINTAIN_SERVER_FTPCP_TREE$=Advanced FTPコマンド設定
+$MAINTAINSERVERENCRYPTION_TREE$=暗号化設定
+<!-- Server Activity -->
+$VIEW_SERVER_STATS_TREE$=セッション &amp; 転送状況
+$VIEW_SERVER_LOG_TREE$=サーバログ
+
+
+
+<!-- **************** DomainWizardDialog.htm **************** -->
+$DOMAIN_WIZARD$=ドメイン・ウィザード
+$DOMAIN_WIZARD_INFO$=Serv-Uドメイン・ウィザードへようこそ。このウィザードでは、お客様のファイルサーバでドメインを作成するお手伝いをします。
+$DOMAIN_NAME_WIZARD_DESCR$=各ドメイン名は、ファイル・サーバ上で他のドメインと区別するため重複しない名前としてください。
+$DOMAIN_DESCR_WIZARD_DESCR$=ドメインの説明には追加情報を含むことができます。説明入力は任意です。
+$DOMAIN_TYPE_WIZARD_DESCR$=様々なプロトコルを通してファイルサーバーへのアクセスを提供するためにドメインを使用することができます。幾つかのプロトコルは、利用可能とするためにセキュア、プロフェッショナル、またはコーポレート版のライセンスを必要とします。このドメインが使用するべきで、プロトコルとそれらの適切なポートを選択してください。
+$DOMAIN_IP_WIZARD_DESCR$=IPアドレス、またはドメインが接続要求に対してリッスン（開く）べきでアドレスを指定します。すべての利用可能なIPアドレスを使用する場合は空白の状態にしてください。ドメイン名を指定した場合は、そのIPアドレスはどのような必要なデータ接続にも使用さます。
+$PLEASE_ENTER_DOMAIN_NAME$=ドメインで使用する他と重複しない名前を入力してください。
+$CONFIRM_CREATE_DOMAIN$=Serv-Uへようこそ。ドメインがありません。<br />すぐにドメインを設定しますか？
+$CONFIRM_CREATE_USER$=このドメインにはユーザが含まれていません。すぐに、このドメインのユーザアカウントを作成しますか？
+
+
+<!-- **************** UserInfoLayer.htm **************** -->
+$USERINFO$=ユーザ情報
+$USERINFOMSG$=ユーザアカウント情報では、このアカウントへ与えるログイン証明書と権限を指定します。
+$USER_TEMPLATE_INFOMSG$=デフォルトユーザテンプレートは、新しいユーザが作成され際に、デフォルト設定を構成するために使用されます。テンプレートを構成して、デフォルト設定と必要なオプションを使用することですぐに新しいユーザを追加してください。
+$USERNAME$=ログインID
+$FULLNAME$=フルネーム
+$PASSWORD$=パスワード
+$PASSWORDTYPE$=パスワードの種類
+$ADMINPRIV$=管理者権限
+$HOMEDIR$=ホーム・ディレクトリ
+$ACCOUNT_TYPE$=アカウントの種類
+$ACCOUNT_EXPIRE_DATE$=アカウント有効期限
+$ENABLE_ACCOUNT$=アカウントを有効
+$LOCK_HOME_DIR$=ユーザをホームディレクトリにロック
+$WEB_CLIENT_STARTUP$=デフォルトWebクライアント
+$ALWAYS_ALLOW_LOGIN$=常にログインを許可
+$PASSWORD_INVALIDATED$=パスワードの種類を変更すると、アカウントの保存されたパスワードは無効となります。パスワードの種類を変更するために、ユーザアカウントのパスワードはリセットされなければなりません。
+$SSH_PUBLIC_KEY_PATH$=SSHパブリックキーのパス
+$CREATE_SSH_KEY_PAIR$=キーペアの作成
+$EMAIL$=電子メールアドレス
+<!-- Password Types -->
+$PASSWORD_REGULAR_DESC$=通常のパスワード
+$PASSWORD_MD4_DESC$=OTP S/KEY MD4
+$PASSWORD_MD5_DESC$=OTP S/KEY MD5
+<!-- Password Encrypt Types -->
+$PASSWORD_ENCRYPT_ONEWAY_DESC$=One-way 暗号化 (より安全)
+$PASSWORD_ENCRYPT_TWOWAY_DESC$=シンプル Two-way 暗号化 (少ない安全)
+$PASSWORD_ENCRYPT_ONEWAY_STR$=One-way 暗号化
+$PASSWORD_ENCRYPT_TWOWAY_STR$=シンプル Two-way 暗号化
+$NO_ENCRYPTION$=暗号化なし（推奨されません）
+$PASSWORD_ENCRYPT_MODE$=パスワードの暗号化種類
+$USE_SERVER_SETTINGS$=サーバ設定を使用
+$ENABLE_PASSWORD_RECOVER_DESC$=ユーザによるパスワードの復元を許可
+$DOMAIN_PASSWORD_ENCRYPT_WIZARD_DESCR$=Serv-Uはパスワードを復元することができます。（電子メールによるユーザログイン情報の送信） two-way 暗号化を使用して、ユーザパスワードを保存してください。one-way 暗号化を使用した場合、復元が使用されると、新くランダムなパスワードが作成されます。
+$ENCRYPTION$=暗号化
+$ENABLE_PASSWORD_ENCRYPTION_DESC$=パスワード暗号化を有効
+$ON$=オン
+$OFF$=オフ
+$CHANGE_SERVER_SETTINGS$=サーバ設定を変更
+<!-- Administrator Privileges -->
+$PRIV_NONE_DESC$=権限なし
+$PRIV_DOMAIN_DESC$=ドメイン管理者
+$PRIV_GROUP_DESC$=グループ管理者
+$PRIV_SYSTEM_DESC$=システム管理者
+$PRIV_DOMAIN_RO_DESC$=読み取り専用ドメイン管理者
+$PRIV_GROUP_RO_DESC$=読み取り専用グループ管理者
+$PRIV_SYSTEM_RO_DESC$=読み取り専用システム管理者
+<!-- Account Types -->
+$ACCT_TYPE_PERM_DESC$=継続
+$ACCT_TYPE_DISABLE_DESC$=自動的に無効
+$ACCT_TYPE_DELETE_DESC$=自動的に削除
+<!-- Default Web Client Types -->
+$WEB_CLIENT_BASIC_DESC$=Webクライアント
+$WEB_CLIENT_FVJV_DESC$=FTP Voyager JV
+$WEB_CLIENT_ASK_DESC$=クライアントのプロンプト・ユーザ
+
+
+<!-- **************** MembershipLayer.htm **************** -->
+$GROUPINFO$=グループ・メンバーシップは様々な基本的属性をグループのメンバーであるユーザに割当てます。ユーザは複数のグループのメンバーであるかもしれません。その場合、グループ・メンバーシップの順番は重要です。
+$GROUPLABEL$=ユーザは次のメンバーです
+$SELECT_ONE_GROUP_MEMBERSHIP_DELETE$=メンバーリストからユーザを削除するために一つのグループを選択してください。
+
+
+<!-- **************** GroupsDialog **************** -->
+$SELECT_GROUP_DIALOG_TITLE$=利用可能なグループ
+$SELECT_ONLY_ONE_AVAILABLE_GROUP$=ユーザをメンバーとして、そのグループに追加するために、一つのグループを選択してください。
+
+<!-- **************** EventEmailGroupsDialog **************** -->
+$GROUP_EMAIL_LIST_DIALOG_TITLE$=グループ電子メールリスト
+$SELECT_ONLY_ONE_EMAIL_GROUP$=電子メールイベントに追加する一つのグループを選択してください。
+$ASK_DELETE_GROUP_EMAIL$=この電子メールイベントから本当にグループを削除してもよろしいですか？
+$SELECT_ONE_GROUP_EMAIL_DELETE$=電子メールイベントのリストから削除するグループを選択してください。
+$EMAIL_GROUPS_INFO$=イベントが発生したさい、左のリストに追加されたグループへ通知されます。電子メール通知は有効なEメールのアドレスを持つ、これらのグループの全員に送られます。
+<!-- **************** MessageFileLayer.htm **************** -->
+$MSGFILE$=メッセージ・ファイル
+$WELCOME_MSG$=Welcomeメッセージ
+$MSGFILEINFO$=WelcomeメッセージFTPかHTTPログインが成功した後にユーザに送信されます。このメッセージファイルはグループメンバーシップを通して継承されるどのメッセージよりも優先されます。メッセージファイルはシンボリックパラメータの使用をサポートします。
+$MSGFILECHKLABEL$=メッセージファイルのテキストにレスポンス・コードを含む
+$WELCOME_MSG_CHECK_LABEL$=FTP接続のWelcomeメッセージのテキストにレスポンス・コードを含む
+$MSGFILELABEL$=メッセージ・ファイルのパス
+$WELCOME_MSG_TEXT_INFO$=メッセージファイルのパスを指定する代わりに、以下のテキストボックスで入力することができます。上で指定されたメッセージファイルの代わりに、規定されたテキストはWelcomeメッセージはとして送られます。
+$SIGNON_MESSAGE_OVERRIDE$=カスタムWelcomeメッセージを持つグループWelcomeメッセージを上書き継承
+
+
+<!-- **************** IPAccessLayer.htm **************** -->
+$IPACCESS$=IPアクセス
+$USER_IP_ACCESS_INFO$=ユーザがログインを試みた際に、ユーザIPアクセス・ルールは最後にチェックされます。これらのアクセス・ルールは特定のユーザに適用されるだけです。メンバーシップを通じてグループでルールを継承することができます。
+$GROUP_IP_ACCESS_INFO$=グループIPアクセス・ルールは、このグループのメンバーである、すべてのユーザアカウントによって継承されます。それらはユーザレベルで指定されたルールと対立した場合には優先されます。
+$RULE_ADDRESS$=アドレス
+$RULE_ALLOW$=許可
+$RULE_DENY$=拒否
+$EXPIRES_IN$=有効期限
+$RULE_EXPIRED$=期限切れ
+$SELECT_ONLY_ONE_IPACCESS_EDIT$=編集するために一つのIPアクセス・ルールだけを選択してください。
+$SELECT_ONE_IPACCESS_EDIT$=編集する一つのIPアクセス・ルールを選択してください。
+$SELECT_ONE_IPACCESS_DELETE$=削除するIPアクセス・ルールを選択してください。
+$ASK_DELETE_IPACCESS$=本当に選択したIPアクセス・ルールを削除してもよろしですか？
+$ENABLE_SORT_VIEW$=ソートモードを有効
+$CONFIRM_SORT_IP$=あなたは、ソートモードでリストを参照することを選択しました。このモードでリストをソートすることは、これらのルールが処理される順序に影響しません。<br /><br />本当にソートモードを使用してもよろしいですか？
+
+
+<!-- **************** IPAccessDialog.htm **************** -->
+$IP_ACCESS_DIALOG_TITLE$=IPアクセス・ルール
+$RULE$=ルール
+$RULE_ALLOW_LABEL$=アクセスを許可
+$RULE_DENY_LABEL$=アクセスを拒否
+$IP_ACCESS_TIPS$=IPアクセスのヒント
+$IP_RULE_MATCH$=完全に一致
+$IP_RULE_RANGE$=範囲（IP番号のみ）
+$IP_RULE_ANY$=何れかに一致
+$IP_RULE_ANY_CHAR$=何れかの文字に一致
+$DNS4ME_SERVICE$=DNS4Me ダイナミックDNSサービス
+$DNS4ME_SERVICE_NOTE$=ダイナミックIPアドレスによるIPベースのアクセスをクライアントに提供したいですか?　DNS4Meドメイン名のための許可アクセス・ルールを作成してください。
+$PLEASE_ENTER_RULE$=IPアクセス・ルールを入力してください。
+$IP_ACCESS_RULE_LABEL$=IPアドレス/名前/マスク
+$IP_RULE_CIDR$=CIDR表記
+
+
+<!-- **************** DirAccessLayer.htm **************** -->
+$DIRACCESS$=ディレクトリ・アクセス
+$USER_DIR_ACCESS_INFO$=ユーザ・ディレクトリ・アクセス・ルールは、ユーザがアクセスするファイルとディレクトリを定義します。ユーザレベルでは、ドメインで定義されるそれらのルールとサーバレベルと同様に、これらのルールはユーザが属する、どのようなグループからも継承されます。
+$GROUP_DIR_ACCESS_INFO$=グループ・ディレクトリ・アクセス・ルールは、このグループのメンバーである、すべてのユーザアカウントによって継承されます。それらをユーザアカウントディレクトリ・アクセス・ルールの前、または後に適用して、これらを優先することができます。
+$PATH$=パス
+$ACCESS$=アクセス
+$MAX_SIZE$=最大サイズ
+$SELECT_ONLY_ONE_DIRACCESS_EDIT$=編集するディレクトリ・アクセス・ルールを一つだけを選択してください。
+$SELECT_ONE_DIRACCESS_EDIT$=編集する一つのディレクトリ・アクセス・ルールを選択してください。
+$SELECT_ONE_DIRACCESS_DELETE$=削除するディレクトリ・アクセス・ルールを選択してください。
+$ASK_DELETE_DIRACCESS$=本当に選択したディレクトリ・アクセス・ルールを削除してもよろしいですか？
+
+
+<!-- **************** DirAccessDialog.htm **************** -->
+$DIR_ACCESS_DIALOG_TITLE$=ディレクトリ・アクセス・ルール
+$DIR_ACCESS_FILES$=ファイル
+$DIR_ACCESS_DIRS$=ディレクトリ
+$DIR_ACCESS_SUBDIRS$=サブディレクトリ
+$MAX_SIZE_DISP$=ディレクトリ容量の最大サイズ
+$MAX_SIZE_LABEL$=MB
+$MAX_SIZE_COMMENT$=（空白は制限なし）
+$EXECUTE_CAUTION$=実行アクセスはユーザにリモートからの他のプログラムとファイルの実行を許可します。
+$DIR_ACCESS_FULL_ACCESS$=フルアクセス
+$DIR_ACCESS_RO_ACCESS$=読み取り専用
+$DIR_ACCESS_AS_WIN_USER$=Windowsユーザとしてアクセス
+$USER_NAME$=ユーザ名
+
+<!-- Dir Access Mask Labels -->
+$ACCESS_READ$=リード
+$ACCESS_WRITE$=書き込み
+$ACCESS_APPEND$=付加
+$ACCESS_DELETE$=削除
+$ACCESS_RENAME$=リネーム
+$ACCESS_EXECUTE$=実行
+$ACCESS_LIST$=リスト
+$ACCESS_CREATE$=作成
+$ACCESS_REMOVE$=消去
+$ACCESS_INHERIT$=継承
+$PLEASE_ENTER_PATH$=ディレクトリ・パスを入力してください。
+
+
+<!-- **************** VirtualPathLayer.htm **************** -->
+$VIRPATHS$=仮想パス
+$VIRTUALPATHINFO$=仮想パスはユーザのホームディレクトリのディレクトリ構造外に、ユーザによって受け取られたディレクトリ・リストにある、物理的なパスをリンクするために使用されています。仮想パスは一般的なショートカット・リンクに変わる方法です。
+$VIRPATH_PHYSICAL$=物理パス
+$VIRPATH_MAPPED_TO$=仮想パス
+$SELECT_ONLY_ONE_VIRPATH_EDIT$=編集する仮想パスを一つだけ選択してください。
+$SELECT_ONE_VIRPATH_EDIT$=編集する一つの仮想パスを選択してください。
+$SELECT_ONE_VIRPATH_DELETE$=削除する仮想パスを選択してください。
+$ASK_DELETE_VIRPATH$=本当に選択した仮想パスを削除してもよろしいですか？
+$VIRPATH_INCLUDE_IN_MAX_SIZE$=\"最大ディレクトリサイズ\"計算を含む
+
+
+<!-- **************** VirtualPathDialog.htm **************** -->
+$VIRPATH_DIALOG_TITLE$=仮想パス
+$VIRPATH_DIALOG_INFO$=「物理パス」は仮想ロケーションにマップすることを望むパスです。「仮想パス」は、どこでその表示名を含め、どの位置にマップするかを定義します。
+$VIRPATH_VIRTUAL$=仮想パス
+$PLEASE_ENTER_VIRPATH$=物理パス、仮想パスの両方を入力してください。
+
+
+<!-- **************** EventsLayer.htm **************** -->
+$EVENTS$=イベント
+$EVENT$=イベント
+$EVENTS_INFO$=指定されたイベントがサーバで発生した場合、イベントは管理者に情報を知らせるために使用されます。
+$EVENT_TYPE$=イベントの種類
+$ASK_DELETE_EVENT$=本当に選択したイベントを削除してもよろしいですか？
+$SELECT_ONLY_ONE_EVENT_EDIT$=編集する１つのイベントを選択してください。
+$SELECT_ONE_EVENT_EDIT$=編集するイベントを選択してください。
+$SELECT_ONE_EVENT_DELETE$=削除するイベントを選択してください。
+$CREATE_COMMON_EVENTS_BUTTON$=共通するイベントの作成
+$TEST_EVENTS_BUTTON$=イベントのテスト
+$SELECT_ONLY_ONE_EVENT_TEST$=テストするイベントを１つ選択してください。
+$SELECT_ONE_EVENT_TEST$=テストするイベントを選択してください。
+$CONFIG_SMTP_BUTTON$=SMTP構成
+$SMTP_CONFIG_WARN$=ドメインかサーバレベルでSMTP構成を行なう必要があります。
+$EVENT_DISPATCHED_SUCCESS$=テストイベントは正しくサーバに配送されました。
+
+<!-- **************** EventsDialog.htm **************** -->
+$EVENTS_NAME_LABEL$=イベント名
+$EVENTS_ACTION_LABEL$=アクション
+$EVENTS_EMAIL_TO_LABEL$=宛先
+$EVENTS_EMAIL_BCC_LABEL$=BCC
+$EVENTS_EMAIL_TO_NOTE$=複数のメールアドレスを指定する場合、カンマ、スペース、またはセミコロンでEメールアドレスを指定してください。
+$GROUP_EMAIL_TO_NOTE$=電子メールでの通知にグループを追加
+$GROUP_EMAIL_BCC_NOTE$=電子メールでのBCCでの通知にグループを追加
+$EVENTS_EMAIL_SUBJECT_LABEL$=件名
+$EVENTS_EMAIL_BODY_LABEL$=本文
+$EVENTS_BALLOON_TITLE_LABEL$=バルーン・タイトル
+$EVENTS_BALLOON_INFO_LABEL$=バルーン情報
+$EVENTS_COMMAND_LINE_LABEL$=共通ライン・パラメータ
+$EVENT_ACTION_GROUP$=イベント・アクション
+$EVENT_INFO_GROUP$=イベント情報
+$PLEASE_ENTER_EVENT_NAME$=イベントの名前を入力してください。
+$WARN_DOMAIN_ADMIN_EVENTS$=ドメイン管理者はこのアクションへのアクセス権を持っていません。
+$DATA$=データ
+$EVENTS_EXEC_PATH_LABEL$=実行可能なパス
+$ENABLE_EVENT$=イベントを有効
+$CONFIRM_EMAIL_INFO_DELETE$=この機能を無効にすると、件名と本文はデフォルト値にリセットされます。<BR /><BR />本当にこの機能を無効にしてよろしいですか？
+$EVENTS_EXEC_WAIT_LABEL$=完成待ち時間
+$EVENTS_EXEC_WAIT_SEC$=0-30 秒, 0 は待ち時間なし
+$CONFIRM_WAIT_DELAY_EXEC$=待ち時間は設定された秒数の間、すべてのServ-U処理を遅延させます。この設定の使用には十分な注意が必要です。<BR /><BR />本当に待ち時間を設定し手もよろしいですか？
+$EVENTS_FILTERS$=イベント・フィルター
+$EVENTS_FILTER$=イベント・フィルター
+$FILTER_EVENT_INFO$=フィルタは、特定のシナリオのためにイベント・トリガーを許可、または拒否するためにイベントフィルタ・だ愛ログで選択される基準を使用することに使用されるかもしれません。
+$EVENT_RULE_LOGIC$=ロジック
+$EVENTS_RULE_VAR$=変数
+$EVENTS_RULE_CONSTANT$=定数
+$EVENTS_RULE_COMP$=比較
+$EVENTS_RULE_DATA_TYPE$=日付種類
+$IF$=もし
+$FILTER_COMPS$=フィルター比較
+$FILTER_COMP_INFO$=比較は、イベントを許可、または拒否するシナリオを定義するためにイベントフィルタに追加されなければなりません。
+$AND$=AND
+$OR$=OR
+$RULE_COMP_ADVANCED_OPTION$=比較詳細オプション
+$FILTER_ENABLED$=フィルターを有効
+$SELECT_ONLY_ONE_FILTER_COMP_EDIT$=編集する一つのフィルター比較を選択してください。
+$ASK_DELETE_FILTER_COMP$=本当に選択されたフィルター比較を削除してもよろしいですか？
+$SELECT_ONE_FILTER_COMP_DELETE$=削除する一つのフィルター比較を選択してください。
+$SELECT_ONLY_ONE_EVENT_FILTER_EDIT$=編集する一つのフィルターを選択してください。
+$ASK_DELETE_EVENT_FILTER$=本当に選択されたフィルターを削除してもよろしいですか?
+$SELECT_ONE_EVENT_FILTER_DELETE$=削除する一つのフィルターを選択してください。
+$FILTER_INFO_GROUP$=フィルター情報
+$FILTER_RULE_INFO$=フィルターには、他のフィルターからそれらを特定するユニークな名前と説明を持つかもしれません。フィルターを有効、または無効してください。そして、適切なフィルターロジックを選択し、以下のツールを使用することでフィルター比較を追加してください。  
+$PLEASE_ENTER_FILTER_NAME$=フィルターのためにユニークな名前を入力してください。
+
+<!-- *************** Server Events ******************** -->
+$SUEVENT_ID_SERVER_START_TEXT$=サーバを開始
+$SUEVENT_ID_SERVER_STOP_TEXT$=サーバを停止
+<!-- *************** Domain and Server Events ********* -->
+$SUEVENT_ID_DOMAIN_START_TEXT$=ドメインを開始
+$SUEVENT_ID_DOMAIN_STOP_TEXT$=ドメインを停止
+$SUEVENT_ID_SESSION_CONNECT_TEXT$=セッションの接続
+$SUEVENT_ID_SESSION_DISCONNECT_TEXT$=セッションの切断
+$SUEVENT_ID_SESSION_CONNECT_FAILURE_TEXT$=セッション接続の失敗
+$SUEVENT_ID_LOG_DELETED_TEXT$=ログファイルは削除されました
+<!-- *************** User, Group, Domain and Server Events ********* -->
+$SUEVENT_ID_USER_LOGIN_TEXT$=ユーザのログイン
+$SUEVENT_ID_USER_LOGOUT_TEXT$=ユーザのログアウト
+$SUEVENT_ID_USER_LOGIN_FAILURE_TEXT$=ユーザログインの失敗
+$SUEVENT_ID_USER_PASSWORD_CHANGE_TEXT$=ユーザ・パスワードの変更
+$SUEVENT_ID_USER_PASSWORD_CHANGE_FAILURE_TEXT$=ユーザ・パスワード変更の失敗
+$SUEVENT_ID_USER_ENABLED_TEXT$=ユーザの有効
+$SUEVENT_ID_USER_DISABLED_TEXT$=ユーザの無効
+$SUEVENT_ID_USER_DELETED_TEXT$=ユーザの削除
+$SUEVENT_ID_USER_ADDED_TEXT$=ユーザの追加
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_SENT_TEXT$=パスワード復元の送信
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_FAILED_TEXT$=パスワード復元失敗
+$SUEVENT_ID_IP_BLOCKED_TEXT$=ブロックされたIP
+$SUEVENT_ID_IP_BLOCKED_TIME_TEXT$=ブロックされたIPの時間
+$SUEVENT_ID_TOO_MANY_SESSIONS_TEXT$=多すぎるセッション
+$SUEVENT_ID_TOO_MANY_SESSIONS_ON_IP_TEXT$=IPでの多すぎるセッション
+$SUEVENT_ID_FILE_UPLOAD_TEXT$=ファイルのアップロード
+$SUEVENT_ID_FILE_UPLOAD_FAIL_TEXT$=ファイル・アップロードの失敗
+$SUEVENT_ID_FILE_DOWNLOAD_TEXT$=ファイルのダウンロード
+$SUEVENT_ID_FILE_DOWNLOAD_FAIL_TEXT$=ファイル・ダウンロードの失敗
+$SUEVENT_ID_FILE_DELETE_TEXT$=ファイルの削除
+$SUEVENT_ID_FILE_MOVE_TEXT$=ファイルの移動
+$SUEVENT_ID_DIR_CREATE_TEXT$=ディレクトリの作成
+$SUEVENT_ID_DIR_DELETE_TEXT$=ディレクトリの削除
+$SUEVENT_ID_DIR_CHANGE_TEXT$=ディレクトリの変更
+$SUEVENT_ID_DIR_MOVE_TEXT$=ディレクトリの移動
+$SUEVENT_ID_QUOTA_OVERAGE_TEXT$=クォータ制限を越えました
+$SUEVENT_ID_DISK_SPACE_OVERAGE_TEXT$=ディスクスペースを越えました
+$SUEVENT_ID_IP_ADDR_AUTO_BLOCKED_TIME_TEXT$=IPはアクセスルールに自動追加されました
+<!-- *************** Event Actions ********* -->
+$SUEVENT_ACTION_EMAIL_TEXT$=Eメールの送信
+$SUEVENT_ACTION_BALLOON_TIP_TEXT$=バルーンTipの表示
+$SUEVENT_ACTION_EXEC_TEXT$=コマンドの実行
+<!-- *************** Event Comparisons ********* -->
+$SURULE_COMP_EQUAL_STR$== (次とイコール)
+$SURULE_COMP_NOT_EQUAL_STR$=!= (次とイコールではない)
+$SURULE_COMP_LESS_THAN_STR$=< (次より少ない)
+$SURULE_COMP_LESS_THAN_EQUAL_STR$=<= (次より少ない、またはイコール)
+$SURULE_COMP_GREATER_THAN_STR$=> (次より大きい)
+$SURULE_COMP_GREATER_THAN_EQUAL_STR$=>= (次ぎよい大きい、またはイコール)
+<!-- *************** Event Data Types ********* -->
+$SURULE_TYPE_STRING_STR$=(abcd) 文字列
+$SURULE_TYPE_CASE_SENSITIVE_STRING_STR$=(AbCd) 大・小文字を区別する文字列
+$SURULE_TYPE_INTEGER_STR$=(-123) 符号付き整数
+$SURULE_TYPE_UNSIGNED_INTEGER_STR$=(123) 符号なし整数
+$SURULE_TYPE_DOUBLE_STR$=(12345.67) 倍精度浮動小数点
+$SURULE_TYPE_IP_ADDRESS_STR$=(192.168.5.1) IPv4 と IPv6 アドレス
+
+<!-- **************** CommonEventsDialog.htm **************** -->
+$COMMON_EVENTS$=共通イベント
+$COMMON_EVENT_ACTION_GROUP$=共通イベント・アクション
+$COMMON_EVENT_INFO$=自動的に共通で使用されたイベントを作成します。
+
+<!-- **************** SMTPConfigDialog.htm **************** -->
+$SMTP_CONFIG_INFO_DOMAIN$=電子メール通知とイベントのEメールアクションで使用されるSMTPサーバをServ-Uで構成してください。この構成は全体のドメインで設定される必要があるだけです。
+$SMTP_CONFIG_INFO_SERVER$=電子メール通知とイベントののEメール送信で使用されるSMTPサーバをServ-Uで構成してください。この構成は全体のサーバかドメインで設定されるだけです。
+$SMTP_SERVER_LABEL$=SMTPサーバ
+$SMTP_PORT_LABEL$=SMTPサーバ・ポート
+$SMTP_ACCOUNT_NAME_LABEL$=アカウント名
+$SMTP_ACCOUNT_PASSWORD_LABEL$=パスワード
+$SMTP_FROM_ADDRESS_LABEL$=送信元Eメールアドレス
+$SMTP_CONFIG_TITLE$=SMTP構成
+$SMTP_SERVER_GROUP$=サーバ情報
+$SMTP_AUTH_GROUP$=認証情報
+$SMTP_USE_SPA$=セキュア・パスワード認証を使用
+$SMTP_REQUIRE_LOGIN$=サーバは認証が必要
+$SMTP_FROM_NAME_LABEL$=送信者名（From Name）
+$SMTP_REQUIRE_SSL$=このサーバはセキュア接続が必要 (SSL)
+$SMTP_USE_SSL_CERT$=このサーバに接続するときSSL証明書を使用
+
+<!-- **************** LimitsLayer.htm **************** -->
+$LIMITS_INFO$=制限はFTPサーバの様々な設定を定義するために使用されます。それらの値はや時間や曜日などにの異なる方法で制限を適用することができます。
+$LIMIT_TYPE$=制限の種類
+$CONNECTION_LIMIT$=接続
+$PASSWORD_LIMIT$=パスワード
+$DIR_LIST_LIMIT$=ディレクトリ・リスト
+$TRANSFER_LIMIT$=データ転送
+$ADVANCED_LIMIT$=詳細
+$LIMIT_APPLIED_TOD$=適用された日付と時間
+$MONDAY_ABBREV$=月曜日
+$TUESDAY_ABBREV$=火曜日
+$WEDNESDAY_ABBREV$=水曜日
+$THURSDAY_ABBREV$=木曜日
+$FRIDAY_ABBREV$=金曜日
+$SATURDAY_ABBREV$=土曜日
+$SUNDAY_ABBREV$=日曜日
+$LIMIT_NOT_LIMITED$=常に
+$LIMIT_CHARACTERS$=キャラクタ
+$LIMIT_CHARACTER$=キャラクタ
+$LIMIT_SESSIONS$=セッション
+$LIMIT_SESSION$=セッション
+$LIMIT_MINUTES$=分
+$LIMIT_MINUTE$=分
+$LIMIT_UNLIMITED$=無制限
+$LIMIT_NO_TIMEOUT$=タイムアウトなし
+$LIMIT_NEVER_EXPIRES$=期限切れなし
+$LIMIT_NO_MINIMUM$=最小値なし
+$LIMIT_SFTP_VERSION$=バージョン (3-6)
+$LIMIT_VERSION$=バージョン
+$LIMIT_CANT_DELETE_INHERITED$=デフォルト制限値は削除できません。この制限より優先するには、要求値を持つ別の制限を作成してください。
+$ASK_DELETE_LIMIT$=本当にこの制限を削除してよろしいですか？
+$SELECT_A_LIMIT_TO_DELETE$=削除する一つの制限を選択してください。
+$LIMIT_CANT_EDIT_INHERITED$=デフォルト制限値は編集できません。この制限より優先するには、要求値を持つ別の制限を作成してください。
+$SELECT_A_LIMIT_TO_EDIT$=編集する一つの制限を選択してください。
+$RATIOS_QUOTAS_BUTTON$=転送率とクォータ
+$LIMIT_CREATE_NEW$=制限を作成しますか？
+$SSH_AUTH_TYPE_PWD_AND_PUB$=パスワードとパブリックキー 
+$SSH_AUTH_TYPE_PWD_OR_PUB$=パスワード、またはパブリックキー 
+$SSH_AUTH_TYPE_PUB$=パブリックキーのみ
+$SSH_AUTH_TYPE_PWD$=パスワードのみ
+
+<!-- **************** LimitsDialog.htm **************** -->
+$LIMIT_EDIT_INFO$=詳細制限オプションは、制限の値が適用される、時刻や曜日を構成することができます。
+$LIMIT_LABEL$=制限
+$LIMIT_START_TIME$=開始時刻
+$LIMIT_END_TIME$=終了時刻
+$LIMITS_DIALOG_TITLE$=制限
+$LIMIT_TIME_OF_DAY$=時刻
+$LIMIT_APPLY_TOD$=この時刻にだけに制限を適用
+$LIMIT_DAYS_OF_WEEK$=週
+$DAY_MONDAY$=月曜日
+$DAY_TUESDAY$=火曜日
+$DAY_WEDNESDAY$=水曜日
+$DAY_THURSDAY$=木曜日
+$DAY_FRIDAY$=金曜日
+$DAY_SATURDAY$=土曜日
+$DAY_SUNDAY$=日曜日
+$ADVANCED_BUTTON$=詳細
+$LIMIT_INVALID_TOD$=次の形式で有効な時刻を入力してください - HH:MM
+
+<!-- **************** LoginLimitDialog.htm **************** -->
+$LOGIN_LIMIT_EDIT_INFO$=ログイン制限オプションはユーザ、またはグループがログインできることを許可する週の曜日と時刻を設定することができます。
+$AVAILABILITY$=利用内容
+$LOGIN_LIMIT_DIALOG_TITLE$=利用内容設定
+
+<!-- **************** GroupInfoLayer.htm **************** -->
+$GROUPINFOMSG$=すべてのグループ設定が、このグループのメンバーであるユーザアカウントに適用されます。グループ設定より優先するには、特定のユーザアカウントで設定を編集してください。
+$GROUP_TEMPLATE_INFOMSG$=デフォルト・グループ・テンプレートは、新しいグループが作成される際に、デフォルト設定を構成するために使用されます。テンプレートを構成して、デフォルト設定と必要なオプションを使用することですぐに新しいグループを追加してください。
+$GROUP_INFO_TAB$=グループ情報
+$GROUPNAME$=グループ名
+$GROUP_APPLY_DIR_ACCESS$=グループ・ディレクトリ・アクセス・ルールを最初に適用
+
+
+<!-- **************** MembersLayer.htm **************** -->
+$GROUP_MEMBERS$=グループ・メンバー
+$GROUP_MEMBERS_INFO$=現在、以下のリストのユーザは、このグループのメンバーです。ユーザレベルより優先されない場合、グループのメンバーはグループ設定を継承します。このグループへユーザを追加、または削除するには、ユーザアカウントを編集する必要があります。
+$GROUP_MEMBERS_WINDOWS_GROUP$=全てのWindowsユーザ・アカウントは、このグループのメンバーです。
+$MEMBER_OF_GROUPS$=グループのメンバー
+$AVAILABLE_GROUPS$=利用可能なグループ
+
+
+<!-- **************** BrowseDialog.htm **************** -->
+$DIRECTORY_PATH$=ディレクトリ・パス
+$APPLY_BUTTON$=適用
+$DRIVES$=ドライブ
+$SELECT_DRIVE$=ドライブの選択
+
+
+<!-- **************** CURRENTLY UNCLASSIFIED STRINGS (HOMELESS) **************** -->
+$SSLOPTIONS$=SSLオプション
+$SSHOPTIONS$=SSHオプション
+$LOGGING$=ロギング
+$GLOBALGROUPSLABEL$=FTPドメインの現在のすべてのグループのリスト
+$GLOBALIPACCESSINFO$=全てのFTPサーバに、サーバIPアクセス・ルールは適用されます。Welcomeメッセージを発行する前に、それらはすぐ物理接続が確立した時点でクライアントコンピュータに適用されます。
+$MEMBERS$=メンバー
+$NO_SCRIPT_TEXT$=ブラウザでJavaScriptの実行が許可されていないように思われます。このページはJavaScriptが有効にされている必要があります。
+$NO_LOG_EXISTS$=このドメインのログファイルは設定されていません。<br /><br />ログファイルを設定しますか？
+$FEATURE_NOT_AVAILABLE$=現在のライセンスでは、この機能を使用できません。この機能を使用する場合、ライセンスをアップグレーをご検討ください。
+
+
+<!-- **************** GENERAL STRINGS **************** -->
+<!-- General -->
+$VALUE$=値
+$GLOBAL$=グローバル
+$RULES$=ルール
+$NORULES$=何もルールがありません
+$USE_INHERITED$=デフォルト値を継承
+$DAY$=日
+$DAYS$=日
+$CAUTION$=警告
+$PROPERTIES$=プロパティ
+$NEW$=新規
+$SELECT_ALL$=全てを選択
+$CLEAR_LOG$=ログをクリア
+$NONE$=なし
+$BITS$=ビット
+
+
+<!-- **************** License Strings **************** -->
+$LICENSE_DISABLED_FEATURE$=現在のライセンスではこの機能は利用可能ではありません。この機能は無効とされました。
+$UPGRADE_LICENSE_NOTE$=この機能を有効にするには、ライセンスをアップグレードする必要があります。アップグレードは次のURLから行えます。:
+
+
+<!-- **************** ActivityMonitor.htm **************** -->
+<!-- Grid strings -->
+$NOT_APPLICABLE$=N/A
+$ID$=ID
+$CONN_TYPE$=種類
+$IP_ADDR_OR_HOST$=IPアドレス / ホスト名
+$SERVER_ADDRESS$=サーバ・アドレス
+$LOCATION$=ロケーション
+$LAST_COMMAND$=最後のコマンド
+$CLIENT_SOFTWARE$=クライアント
+<!-- Session info -->
+$ACTIVITY_SESS_INFO$=アクティブ・セッション情報
+$IP_ADDRESS$=IPアドレス
+$ACTIVITY_DL$=ダウンロード
+$ACTIVITY_UL$=アップロード
+$ACTIVITY_SINCE$=いつから
+$ACTIVITY_SPEED$=速度
+$ACTIVITY_TIME_ON$=時間
+$ACTIVITY_AVG_DL_SPEED$=DL平均速度
+$ACTIVITY_IDLE$=保留
+$ACTIVITY_AVG_UL_SPEED$=UL平均速度
+$ACTIVITY_SEC_ABBREV$=秒
+$ACTIVITY_KBSEC_ABBREV$=KB/秒
+$ACTIVITY_FILES$=ファイル
+$ACTIVTY_ACCESS$=ユーザ権限
+$NOT_LOGGED_IN$=まだログインしていません
+$ACCESS_NONE$=なし
+$ACCESS_SYSADMIN$=システム管理者
+$ACCESS_DOMADMIN$=ドメイン管理者
+$SELECTED_PUBLIC_KEY_PROTOCOL$=パブリックキー・プロトコル
+$SERVER_TO_CLIENT$=S--&gt;C
+$CLIENT_TO_SERVER$=C--&gt;S
+<!-- Buttons -->
+$KILL_USER_BUTTON$=切断
+$SPY_CHAT_BUTTON$=監視とチャット
+$BROADCAST_MESSAGE_BUTTON$=一斉配信
+$ABORT_BUTTON$=中止
+<!-- Alerts -->
+$DISCONNECT_SELECT$=切断するセッションを選択してください。
+$SPY_CHAT_SELECT$=追加情報を表示する一つのセッションを選択してください。
+$SEND_MESSAGE_ONLY_FTP$=メッセージはFTPセッションでのみ送信することができます。
+$SPY_CHAT_NO_HTTP$=HTTPセッションは監視ダイアログを表示できません。FTP、またはSFTPセッションを選択してください。
+$ABORT_SELECT_ITEM$=最も新しいコマンドを中止するセッションを選択してください。
+$ABORT_CONFIRM_SESSION$=本当に選択したセッションの最新のコマンドを中止してもよろしいですか？
+$BROADCAST_NO_FTP_SESSIONS$=一斉配信メッセージを受け取れるアクティブなFTPセッションがありません。
+$COMMAND_DENIED$=コマンドを実行することができません: 対象ユーザのアカウント権限は高いです。
+
+
+<!-- **************** DisconnectDialog.htm **************** -->
+<!-- Java Script -->
+$DISCONNECT_DIALOG_TITLE$=セッションを切断
+$DISCONNECT_ACTION$=アクション
+$DISCONNECT_KICK$=切断
+$DISCONNECT_BAN$=切断しIPを次の時間禁止
+$DISCONNECT_BAN_LABEL$=分
+$DISCONNECT_BLOCK$=切断しIPを恒久的にブロック
+$DISCONNECT_LEVEL_LABEL$=次のIPルールへ適用
+$DISCONNECT_LEVEL_SERVER$=全てのサーバ
+$DISCONNECT_LEVEL_DOMAIN$=現在のドメイン
+$DISCONNECT_DISABLE_ACCT$=ユーザアカウントを無効
+$DISCONNECT_MESSAGE$=ユーザーへのメッセージ
+$DISCONNECT_NO_DURATION$=IPアドレスを禁止する時間（分）を入力してください。
+
+
+<!-- **************** SendMessageDialog.htm **************** -->
+<!-- Java Script -->
+$SEND_MESSAGE_DIALOG_TITLE$=メッセージの送信
+$SEND_MESSAGE_LABEL$=メッセージの内容
+$SEND_MESSAGE_NO_TEXT$=指定されたセッションへ送信するメッセージを入力してください。
+<!-- Session message strings -->
+$SESSION_MESSAGE_DIALOG_TITLE$=メッセージの送信
+$SESSION_MESSAGE_LABEL$=メッセージの内容
+$SESSION_MESSAGE_NOTE$=注意:すべてのFTPクライアントが、サーバから要求されていないデータの受信をサポートしているとは限りません。
+$SESSION_MESSAGE_NO_TEXT$=指定されたセッションへ送信するメッセージを入力してください。
+<!-- Broadcast message strings -->
+$BROADCAST_MESSAGE_DIALOG_TITLE$=メッセージの一斉配信
+$BROADCAST_MESSAGE_LABEL$=メッセージの内容
+$BROADCAST_MESSAGE_NOTE$=注意:メッセージはFTPセッションでのみ送信することができます。 すべてのFTPクライアントが、サーバから要求されていないデータの受信をサポートしているとは限りません。
+$BROADCAST_MESSAGE_NO_TEXT$=接続されている全てのFTPセッションへ送信するメッセージを入力してください。
+
+
+<!-- **************** SpyChatDialog.htm **************** -->
+<!-- Java Script -->
+$SPY_CHAT_DIALOG_TITLE$=セッション情報の詳細
+$SESSION_LOG$=セッション・ログ
+$SPY_STATS$=セッション情報
+$SPY_CHAT$=チャット
+$UNKNOWN_USER$=不明なユーザ
+$SESSION_DISCONNECT$=セッションは切断されました。
+
+
+<!-- **************** Server.htm **************** -->
+<!-- Main Page -->
+$SERVER_PAGE_INFO$=ファイル・サーバ全体に関係する情報を表示します。（サーバ全体のアクセス・ルール、ライセンス、登録情報）
+<!-- IP Access Tab -->
+$SERVER_IP_ACCESS_INFO$=物理的な接続がファイルサーバーで確立された際に、サーバIPアクセス・ルールはチェックされます。（Welcomeメッセージは送信されます。）
+<!-- License Information Tab -->
+$LICENSE$=ライセンス情報
+$LICENSE_INFO$=現在のServ-Uライセンスに関する情報は以下に表示されます。情報は制限事項、限定事項、およびアップグレード情報を含みます。インストールされたServ-Uの登録を行う、または現在のライセンスを変更する場合は「登録」ボタンをクリックしてください。
+$REGGIE_INFO_GROUP$=登録情報
+$REGGIE_NAME$=名前
+$REGGIE_EMAIL$=電子メールアドレス
+$REGGIE_EDITION$=Serv-Uの種類
+$REGGIE_COPIES$=コピー数
+$REGGIE_DATE$=発行日
+$REGGIE_UPDATES$=アップデート
+$REGGIE_UNREGISTERED$=未登録
+$REGGIE_TRIAL$=試用版
+$REGGIE_PERSONAL$=パーソナル
+$REGGIE_STANDARD$=スタンダード
+$REGGIE_HOME$=ホーム
+$REGGIE_PRO$=プロフェッショナル
+$REGGIE_CORP$=コーポレート
+$REGGIE_BRONZE$=ブロンズ
+$REGGIE_SILVER$=シルバー
+$REGGIE_GOLD$=ゴールド
+$REGGIE_TEMP$=暫定
+$REGGIE_SITE$=サイト
+$REGGIE_DEPT$=デーパートメント
+$REGGIE_ENT$=エンタープライズ
+$REGGIE_EXPIRE$=有効期限
+$REGGIE_DAYS_REMAIN$=日間 - 残日数
+$REGGIE_TRIAL_EXPIRED$=試用期限は切れました
+$REGGIE_FREE_FOR_LIFE$=アップグレード保護は決して期限が切れません
+$EDITION_INFO_GROUP$=種類に関する情報
+$EDITION_ENABLED$=有効
+$EDITION_DISABLED$=無効
+$EDITION_UNLIMITED$=無制限
+$EDITION_MAX_DOMAINS$=最大ドメイン
+$EDITION_MAX_USER$=最大ユーザ・アカウント
+$EDITION_MAX_SESSIONS$=最大セッション
+$EDITION_REMOTE_ADMIN$=リモート管理
+$EDITION_ODBC$=ODBC認証
+$EDITION_WEB_CLIENT$=Webクライアント
+$EDITION_WINDOWS_AUTH$=Windows認証
+$EDITION_EVENTS$=イベント / 電子メール通知
+$EDITION_USER_PASSWORD_RECOVER$=ユーザ・パスワードの復元
+$EDITION_VIRTUAL_PATHS$=仮想パス
+$EDITION_VIRTUAL_HOSTS$=仮想ホスト
+$EDITION_QUOTAS$=クォータ
+$EDITION_RATIOS$=転送率
+$EDITION_ENCRYPTION$=FTPS (FTP over SSL)
+$EDITION_FIPS$=OpenSSL FIPS 140-2
+$ENABLE_FIPS$=FIPS 140-2 モードを有効
+$CONFIRM_FIPS_MODE_TEXT$=FIPSモードを使用せずに作成された証明書とプライベートキーは、動作しないかもしれません。サーバと個々のドメインのために証明書とプライベートキーを再度、作成する必要があるかもしれません。
+$CONFIRM_FIPS_MODE$=サーバ証明書とプライベートキーを確認しますか?
+$EDITION_CA_CERTIFICATE$=CA証明書
+$EDITION_CUSTOM_LOGO$=カスタムHTTPロゴ
+$EDITION_CUSTOM_LOGO_TITLE$=カスタムHTTPロゴ、ログオン・ページ・テキスト、タイトル
+$EDITION_USER_GROUP_STATS$=ユーザとグループ統計
+$EDITION_ENCRYPTION_SSH$=SFTP over SSH2
+$EDITION_ENCRYPTION_HTTPS$=HTTPS
+$EDITION_FVJV$=FTP Voyager JV
+$EDITION_INTEGRATION_DLL$=DLL統合アドオン
+$ADDITIONAL_PROD_INFO_GROUP$=追加製品
+$REGISTER_BUTTON$=登録
+$UPDATE_BUTTON$=アップデート
+$LOST_ID_BUTTON$=IDの紛失
+$PURCHASE_BUTTON$=ご購入
+$PURCHASE_UPDATE$=アップデートの購入
+$ENTER_LICENCE_ID_BUTTON$=ライセンスIDの入力
+$UPDATE_NOTICE_BALLOON_TITLE$=Serv-U期限の通知
+$UPDATE_NOTICE_BALLOON_TIP$=アップグレード保証はあと90日で期限切れとなります。  <p>アップグレード保証の更新を行う場合以下のボタンをクリックしてください。</p>
+$UPGRADE_UNLIMITED$=アップグレードにより変更できます。
+$UPGRADE_TO_ENABLE$=アップグレードにより有効にできます。
+$ENABLE_FVJV$=FTP Voyager JVを有効にしてください。
+$UPGRADE_TO_FVJV$=Serv-Uライセンスのアップグレードにより、Serv-UにFTP Voyager JVを追加してください。
+<!-- Program Information Tab -->
+$PROGRAM_INFO$=プログラム情報
+$FILE_SERVER$=ファイルサーバ
+$VERSION$=バージョン
+$DATE_INFO_GROUP$=インストール情報
+$BUILD_DATE$=作成日
+$INSTALL_DATE$=インストール日
+$CONTACT_INFO_GROUP$=お問い合わせ情報
+$DEV_INFO_GROUP$=開発情報
+$DEVELOPED_BY$=開発元
+$TRANSLATION_BY$=翻訳
+$COPYRIGHT$=Copyright
+$LEGAL_INFO_GROUP$=法律に関して
+$LEGAL_INFORMATION$=警告:このコンピュータ・プログラムは著作権法と国際協定によって保護されています。このプログラムを権限を持たないいかなる部分も複製、分配は、厳しい刑事上の、そして民事の法の下で可能な最大の範囲の刑罰を遂行されるでしょう。
+$FVJV_PRODUCT_INFO$=FTP Voyager JVはServ-U ファイル・サーバで使用されるように専用に設計された完全な機能を持つファイル転送クライアントです。<br /><br /><a href="%FVJV_HOME%" target="_blank">こちら</a>からFTP Voyager JV Webサイトを参照してください。
+
+
+<!-- **************** RegistrationDialog.htm **************** -->
+$REGISTRATION_DIALOG_TITLE$=登録ID
+$REGISTRATION_CLEAR_CONFIRM$=登録IDを削除することによって、Serv-Uは登録されていない状態となります。本当に登録情報を削除してもよいですか？
+$REGISTRATION_FAIL$=登録IDは有効ですが、ディスクに保存することができませんでした。Serv-Uファイルサーバを登録するために、お客様の登録メッセージを含む、次の指示に従ってください。
+$PASTE_REGGIE_BUTTON$=登録IDの貼り付け
+
+<!-- **************** Domain.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_SAVED_RESULT$=ドメインの値は保存されました。
+$SELECT_ONLY_ONE_LISTENER_EDIT$=編集するリスナーを一つだけ選択してください。
+$SELECT_ONE_LISTENER_EDIT$=編集する一つのリスナーを選択してください。
+$SELECT_ONE_LISTENER_DELETE$=削除する一つのリスナーを選択してください。
+$ASK_DELETE_LISTENER$=選択したリスナーを本当に削除してよいですか？?
+$SELECT_ONLY_ONE_VIRTUAL_HOST_EDIT$=編集する仮想ホスト名を一つだけ選択してください。
+$SELECT_ONE_VIRTUAL_HOST_EDIT$=編集する一つの仮想ホストを選択してください。
+<!-- Main Page -->
+$DOMAIN_PAGE_INFO$=選択されたドメインに関する基本情報を定義します。（ドメイン・リスナー設定 - 接続要求の取扱い／IPアクセス・ルール - だれがドメインに接続することができるかを決定します）
+<!-- Domain Tab -->
+$SETTINGS_TAB$=設定
+$DOMAIN_INFO_TAB$=ドメイン名と説明の変更を行ってください。保存ボタンにより変更を保存してください。
+$ENABLE_DOMAIN$=ドメインを有効
+$DOMAIN_INFO_GROUP$=ドメイン情報
+$DOMAIN_HOME_DIR$=ドメイン・ホーム・ディレクトリ
+$MAXIMUM_SIZE$=最大サイズ
+$MAXIMUM_SIZE_MB_NOTE$=ご注意: 最大ドメイン・ホーム・ディレクトリ・サイズの設定はServ-Uがアップロード前とアップロード中に既存のファイルとサブフォルダをチェックします。これは既存のディレクトリ構造に左右される非常に時間を要する操作になるかもしれません。
+$BLANK_FOR_NO_LIMIT$=空白は制限なし
+$PLEASE_ENTER_DOMAIN_HOME_DIR$=ドメイン・ホームディレクトリのパスを入力してください。パスが入力されない場合、ドメイン・ホームディレクトリ最大サイズは空白であるべきです。
+<!-- Listeners Tab -->
+$LISTENERS_TAB$=リスナー
+$LISTENERS_INFO_TAB$=このドメインが、どのように接続要求を受け入れるかを定義します。リストされているこのドメインのリスナーの下のボタンを使用してください。どのリスナーも指定されない場合、別のドメイン・リスナーを利用して、このドメインは仮想ドメインとしてだけ動作します。
+$LISTENER_DIALOG_TITLE$=リスナー
+$LISTENER_IP$=IPアドレス
+$LISTENER_IP_LABEL$=（空白は全て）
+$LISTENER_PORT$=ポート
+$LISTENER_TYPE$=種類
+$LISTENER_IP_ALL$=<< 利用可能な全てのIPアドレス >>
+$LISTENER_TYPE_FTP_DESC$=FTP と Explicit SSL/TLS
+$LISTENER_TYPE_IMPLICIT_SSL_DESC$=Implicit FTPS (SSL/TLS)
+$LISTENER_TYPE_SSH_DESC$=SSHを使用したSFTP
+$LISTENER_TYPE_HTTP_DESC$=HTTP
+$LISTENER_TYPE_HTTPS_DESC$=HTTPS (SSL暗号化されたHTTP)
+$ENABLE_LISTENER$=リスナーを有効
+$LISTENER_PASV_DOMAIN$=PASV IPアドレス、またはドメイン名
+$LISTENER_SFTP_UNAVAILABLE$=SFTPはServ-Uコーポレート版でのみ利用可能です。この機能をご使用いただく場合は、ライセンスをアップグレードしてください。
+$LISTENER_SSL_UNAVAILABLE$=SSLは現在ご利用いただいておりますServ-Uライセンス情報では利用できません。この機能を使用するには、ライセンスをアップグレードしてください。
+$PASV_IP_ADDRESS$=PASV IPアドレス
+$USE_PASV_IP_SSL_ONLY$=SSL接続のみで使用
+$USE_PASV_IP_LAN_ONLY$=LAN接続のみで使用
+$LISTENER_IPV4_ALL$=<< 利用可能な全てのIPv4 アドレス >>
+$LISTENER_IPV6_ALL$=<< 利用可能な全てのIPv6 アドレス >>
+$LISTENER_IPV4$=IPv4 アドレス
+$LISTENER_IPV6$=IPv6 アドレス
+$CREATE_IPV4$=IPv4 リスナーの作成
+$CREATE_IPV6$=IPv6 リスナーの作成
+$PLEASE_CREATE_IP_LISTENER$=IPタイプに関連付けられた、どちらか、または両方のチェックボックスをチェックして、IPv4／IPv6アドレスを作成してください。
+<!-- Virtual Hosts Tab-->
+$VIRTUAL_HOSTS_TAB$=仮想ホスト
+$VIRTUAL_HOSTS_INFO_TAB$=仮想ホストは、リスナーが複数ドメインによって共有されるとき、特定のドメインにアクセスするために使用されます。FTP接続では、HOSTコマンドが使用されています。HTTP接続では、クライアントによって送られたホストヘッダーが、適切なドメインを決定するために調べられます。
+$VIRTUAL_HOST_NAME$=仮想ホスト名
+$ASK_DELETE_VIRTUAL_HOST$=本当に選択された仮想ホスト名を削除してもよろしいですか？
+$SELECT_ONE_VIRTUAL_HOST_DELETE$=削除する一つの仮想ホスト名を選択してください。
+<!-- IP Access Tab -->
+$DOMAIN_IP_ACCESS_INFO$=クライアントコンピュータが、直接、または仮想ドメイン方法を通してドメインへ接続することを試みると、ドメインIPアクセス・ルールはチェックされます。これらのアクセス・ルールは、このドメインだけに適用されます。
+<!-- Database Tab -->
+$DATABASE$=データベース
+$DATABASE_INFO$=Serv-Uは、追加ユーザとグループをロードするために、外部のデータベースを使用することができます。データベースはODBCドライバーをインストールする必要があります。そして、システム上のODBCデータソースは必須です。この様にしてロードされたユーザとグループが、ローカルに作成されたユーザと競合した場合には優先されません。
+
+
+<!-- **************** DatabaseTab.htm **************** -->
+$DATA_SOURCE_GROUP$=データベース・ソース・情報
+$ODBC_SOURCE$=データ・ソース名
+$ODBC_ACCOUNT$=データベース・ログインID
+$ODBC_PASSWORD$=データベース・パスワード
+$ODBC_AUTO_CREATE_TABLES$==自動的に要求されたテーブルを作成
+$ODBC_AUTO_CREATE_COLUMNS$=自動的に要求されたコラムを作成
+$ODBC_EDIT_SQL_TEMPLATES$=SQLテンプレート
+$ODBC_COLUMN_MAPPING_INFO$=デフォルトでServ-Uは適切な名前でデータ保存するために、必要なテーブルとコラムを作成します。しかしながら、希望するテーブルとコラム名を使用する場合に、手動でServ-Uを構成することができます。
+$ODBC_MAP_USER_COLUMNS$=ユーザ・テーブル・マッピング
+$ODBC_MAP_GROUP_COLUMNS$=グループ・テーブル・マッピング
+
+
+<!-- **************** DatabaseDialog.htm **************** -->
+$DATABASE_DIALOG_TITLE$=データベース・マッピング
+$DATABASE_MAPPING_INFO$=データベース・コラム・マッピングを構成する、以下のオブジェクト・タイプを選択してください。ダブルクリック、または編集ボタンを使用することによって、値をマッピングするコラムを編集することができます。
+$TABLE_MAPPING_OBJ$=オブジェクト・テーブル
+$DATABASE_RENAME_DIALOG_TITLE$=マップされたデータベース値を編集
+$DATABASE_RENAME_DIALOG_DESC$=新しいマップされたデータベース値を入力してください。
+$DB_ATTRIBUTE$=属性
+$DB_COLUMN_NAME$=マップされたデータベース値
+$DB_USER_INFO$=ユーザ情報テーブル
+$DB_USER_GROUP$=ユーザ・グループ・テーブル
+$DB_USER_DIRACCESS$=ユーザ・ディレクトリ・アクセス・テーブル
+$DB_USER_VIRPATH$=ユーザ・仮想パス・テーブル
+$DB_USER_IPACCESS$=ユーザIPアクセス・テーブル
+$DB_USER_EVENTS$=ユーザ・イベント・テーブル
+$DB_USER_FREEFILES$=ユーザ転送率制限を受けないファイル・テーブル
+$DB_USER_USERFILES$=ユーザごとのファイル転送率テーブル
+$DB_USER_USERBYTES$=ユーザごとのバイト転送率テーブル
+$DB_USER_SESSFILES$=ユーザごとのセッション・ファイル転送率テーブル
+$DB_USER_SESSBYTES$=セッションごとのバイト転送率テーブル
+$DB_GROUP_INFO$=グループ情報テーブル
+$DB_GROUP_DIRACCESS$=グループ・ディレクトリ・アクセス・テーブル
+$DB_GROUP_VIRPATH$=グループ仮想パス・テーブル
+$DB_GROUP_IPACCESS$=グループIPアクセス・テーブル
+$DB_GROUP_EVENTS$=グループ・イベント・テーブル
+$DB_GROUP_FREEFILES$=グループ転送率制限を受けないファイル・テーブル
+$SELECT_DB_COLUMN_EDIT$=編集するデータベース・マッピングの値を選択してください。
+$DB_NO_EMPTY_COLUMN$=このデータベース・マッピングの値を空白にすることはできません。
+$DB_USER_AVAILABILITY$=ユーザ属性利用可能テーブル
+$DB_GROUP_AVAILABILITY$=グループ属性利用可能テーブル
+$ENABLE_TABLE$=テーブルを有効
+
+<!-- **************** SQLTemplateDialog.htm **************** -->
+$SQL_TEMPLATE_DIALOG_TITLE$=SQLテンプレート
+$SQL_TEMPLATE_INFO$=以下のテンプレートは、外部のデータベースを管理するために、Serv-Uが使用したSQLテンプレートを構築するために使用されます。これらのテンプレートを変更することは、ODBCの動作を停止するでしょう。編集はお客様の責任において行ってください。
+$SQLT_TEMPLATE$=テンプレート
+$SQLT_SELECT_ALL$=全ての行をリスト
+$SQLT_SELECT_ROW$=特定の行をリスト
+$SQLT_SELECT_ROW_SORT$=特定の行をリストしてソート
+$SQLT_DELETE_ROW$=行を削除
+$SQLT_INSERT_ROW$=行を挿入
+$SQLT_UPDATE_ROW$=行を更新
+$SELECT_SQL_TEMPLATE_EDIT$=編集するSQLテンプレートの値を選択してください。
+
+
+<!-- **************** DomainUsers.htm **************** -->
+<!-- Java Script -->
+$VIRTUAL_HOST_DIALOG_TITLE$=新しいバーチャル・ホスト名
+$VIRTUAL_HOST_NAME_EMPTY$=このドメインの仮想ホスト名を指定してください。
+
+
+<!-- **************** DomainUsers.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_USERS_TAB$=ドメイン・ユーザ
+$CONFIRM_USE_USER_WIZARD$=ユーザを作成するためにウィザードを使用しますか？
+<!-- Main Page -->
+$DOMAIN_USERS_INFO$=このドメインのユーザを作成、編集、削除します。
+<!-- Users Tab -->
+$DOMAIN_USERS_TAB_DESCRIPTION$=このリストはアクティブなドメインに接続できるユーザ・アカウントを表示します。このリスト、およびリストボタンを使用して、このドメインのユーザを管理してください。
+
+
+<!-- **************** ServerUsers.htm **************** -->
+<!-- Java Script -->
+$SERVER_USERS_TAB$=グローバル・ユーザ
+<!-- Main Page -->
+$SERVER_USERS_INFO$=すべてのドメインのファイルサーバーで、グローバルなユーザアカウントの作成、変更、削除を行ってください。
+<!-- Users Tab -->
+$SERVER_USERS_TAB_DESCRIPTION$=このリストはファイルサーバー上の全てのドメインに接続することができるグローバル・ユーザアカウントをリストしています。個々のドメインでアカウントを作成することにより、グローバル・アカウントより優先にすることができます。
+
+
+<!-- **************** UsersInclude.htm **************** -->
+<!-- Java Script -->
+$SELECT_ONLY_ONE_USER_EDIT$=編集するユーザを一つだけ選択してください。
+$SELECT_ONE_USER_EDIT$=編集する一つのユーザを選択してください。
+$SELECT_ONLY_ONE_USER_COPY$=コピーするユーザを選択してください。
+$SELECT_ONE_USER_COPY$=コピーする一つのユーザを選択してください。
+$SELECT_A_USER_TO_DELETE$=削除するユーザを選択してください。
+$ASK_DELETE_USER$=本当に選択したユーザを削除してもよろしいですか？
+$NOUSERS$=ユーザアカウントがありません。
+$GENERAL_USERS_NAME$=全般
+$GENERAL_ODBC_USERS$=全般データベース
+$USER_TEMPLATE_INFO$=新しいユーザをより早く作成するために、ユーザテンプレートを構成することができます。新しいユーザを作成する際に、デフォルト設定はテンプレートユーザから取得されます。
+$DEFAULT_USER_TEMPLATE$=デフォルトのユーザ・テンプレート
+$USER_LIMITS_TAB_INFO$=制限は構成する責任をもつサーバの領域に基づいて分類されます。制限は同じオプションで時刻と曜日に基づいて適用される複数の値を指定することができます。ユーザレベル制限は他のレベルで指定されるすべての制限値より優先されます。
+$ODBC_USERS_NOT_CONFIGURED$=データベースがありません。データベースユーザを管理する前に、データベース接続が構成される必要があります。
+$USER_CANT_LIST_HOMEDIR$=このユーザアカウントは、そのホームディレクトリにアクセスすることができません。アカウントのディレクトリ・アクセス・ルールを確認してください。
+$USER_PRIV_CANT_EDIT$=ドメイン管理者と同等か、それ以上の管理権限でユーザアカウントを編集していないため、このアカウントを編集することができません。
+$SELECT_USERS_TO_MOVE$=異なるコレクションへ移動するユーザを選択してください。
+$SELECT_USERS_TO_MOVE_ODBC$=ODBCデータベースに移動するユーザを選択してください。
+$CHECK_SYSADMIN_CONFIG$=それらのホームディレクトリが\"\\\"である場合、システム管理者アカウントは最も効果的です。そして、それらのホームディレクトリはアカウントはロックされません。そうでない場合、これらのアカウントは、ファイルサーバを管理するとき、自身のホームディレクトリ外のパスを使用することを制限されます。<br /><br />このアカウントに追加の変更を行いますか？
+$NO_COLLECTION_TO_MOVE_TO$=コレクションがありません。コレクションを作成しますか？ 
+$SELECT_USERS_TO_RECOVER_PASSWORD$=パスワードを復元するユーザを選択してください。
+$CANNOT_DECRYPT_CONFIRM_MSG_1$=Serv-Uは選択されたユーザのパスワードを複合化することができません。パスワードの復元を続行すると、次のユーザのパスワードは変更されます。:
+$CANNOT_DECRYPT_CONFIRM_MSG_2$=本当に選択されたユーザのパスワードを復元してよろしいですか?
+$NO_SMTP_CONFIG$=メールを送信するためのSMTP構成がありません。SMTP構成は\"制限と設定\" 内の \"設定\" タブで行うことができます。
+$COLL_GROUP_WIDTH_1$=520
+$COLL_GROUP_WIDTH_2$=650
+<!-- Users Tab -->
+$SELECT_USER_COLLECTION$=ユーザ・コレクションの選択
+$USER_ORG_PROPERTIES$=ユーザ・コレクション
+$ORG_NAME$=コレクション名
+$EMPTY_ORG_NAME$=このユーザ・コレクションの名前を入力してください。
+$NO_RENAME_GENERAL_ORG$=デフォルト全般コレクションの名前を変更することはできません。
+$NO_DELETE_GENERAL_ORG$=デフォルト全般コレクションを削除することはできません。
+$ORG_DELETE_CONFIRM$=本当に選択したユーザ・コレクションを削除してもよろしいですか？コレクションを削除すると、そのコレクションに含まれる全てのユーザアカウントが削除されます。
+$USER_NAME_LOGIN_ID_COLUMN$=ログインID
+$FULL_NAME_COLUMN$=フルネーム
+$LAST_LOGIN_TIME$=最終ログイン日時
+$USER_PROPERTIES$=ユーザ・プロパティ
+$DEFAULT_USER_BUTTON$=テンプレート
+$ENABLE_DEFAULT_USER$=ユーザ・テンプレートを使用
+$USER_WIZARD_BALLOON_TITLE$=Serv-Uユーザを作成
+$USER_WIZARD_BALLOON_TIP$=Serv-Uウィザードを使用すると簡単にユーザを作成することができます。<p>以下のボタンをクリックして、ユーザの作成を開始してください。</p>
+$MOVE_BUTTON$=移動
+$MOVE_USERS_BALLOON_TITLE$=ユーザの移動
+$MOVE_USER_BALLOON_TIP$=新しい、または異なる組織にユーザを移動することにより、Serv-Uの性能を向上させてください。移動するユーザをリストから選択して、次に「移動」ボタンをクリックしてください。
+$MOVE_USERS_TO_ODBC_CONFIRM$=本当に選択されたユーザをODBCデータベースへ移動してもよいですか?
+$MOVE_ODBC_BUTTON$=データベースへ移動
+$COPY_BUTTON$=コピー
+$FILTER_USERS$=ユーザーをフィルタ
+$FILTER_GROUPS$=グループをフィルタ
+$ENTER_FILTER_INPUT$=フィルタ入力を入れてください。
+$WILL_DISABLE_ON$=期限切れ
+$EXPIRED$=期限が切れました
+$WILL_DELETE_ON$=削除されます
+
+<!-- ODBC Users Tab -->
+$ODBC_USERS_TAB_NAME$=データベース・ユーザ
+$ODBC_USERS_TAB_INFO$=データベースユーザは指定されたODBCデータ・ソースからロードされます。それらはローカル・ユーザ・アカウント・データベースを補足します。このインタフェース、またはデータベースによりサポートされるものを通じて、この様に保存されたユーザアカウントを変更することができます。
+<!-- Windows Auththentication Tab -->
+$WINDOWS_AUTH_TAB_NAME$=Windows認証
+$WINDOWS_AUTH_TAB_INFO$=Windows認証が有効であるとき、クライアントは、Serv-Uユーザ・データベース・ローカル・アカウントの代わりに有効なWindowsアカウントを使用することでログインすることができます。Serv-Uユーザデータベースで既にアカウントが存在する場合、それはWindowsアカウントより優先されます。
+$WINDOWS_DOMAIN_NAME$=Windowsドメイン名
+$ENABLE_WINDOWS_AUTH$=Windows認証を有効
+$WINDOWS_AUTH_USE_GROUP_HOMEDIR$=アカウント・ホーム・ディレクトリの代わりにWindowsユーザ・グループ・ホームディレクトリを使用
+$OPTIONAL$=オプション
+
+
+<!-- **************** UserWizardDialog.htm **************** -->
+<!-- Main Page -->
+$USER_WIZARD$=ユーザ・ウィザード
+$ACCESS_RIGHTS$=アクセス権
+$USER_WIZARD_INFO$=Serv-Uユーザ・アカウント・ウィザードへようこそ。このウィザードでは、ファイルサーバへアクセスするための新しいユーザを作成することができます。
+$READ_WRITE_DESC$=読み取り専用と書き込みアクセス
+$READ_ONLY_DESC$=読み取り専用アクセス
+$USER_NAME_WIZARD_DESCR$=ログインIDは、ファイルサーバーにログインするのを試みるとき、それらのアカウントを特定するためにクライアントによって提供されます。
+$USER_PASSWORD_WIZARD_DESCR$=パスワードを入力しない（空白）とすることもできます。空白とした場合はログインIDのみで、そのアカウントへアクセスできることになります。
+$USER_HOME_DIR_WIZARD_DESCR$=ホーム・ディレクトリはユーザが、ファイルサーバーへログインした後に、位置する物理的な場所です。ユーザがホームディレクトリにロックすることにより、ホーム・ディレクトリを「/」として表示することによって、アカウントのホームディレクトリの位置を隠します。
+$USER_ACCESS_RIGHTS_WIZARD_DESCR$=ホームディレクトリでユーザに与えるアクセス権を選択してください。読み取り専用アクセスはユーザにファイルの参照とダウンロードだけを許可します。フルアクセスはホームディレクトリでユーザにファイルとディレクトリに関する全ての操作を与えます。
+$FULL_ACCESS$=フル・アクセス
+$PLEASE_ENTER_USER_NAME$=ログインIDを入力してください。
+$PLEASE_ENTER_HOME_DIR$=ホームディレクトリを入力してください。
+$USER_EMAIL_WIZARD_DESCR$=電子メールアドレスは空白でかまいません。しかしクライアントへの電子メールの送信に使用されます。
+
+
+<!-- **************** DomainGroups.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_GROUPS_TAB$=ドメイン・グループ
+<!-- Main Page -->
+$DOMAIN_GROUPS_INFO$=アクティブなドメインのグループを作成、編集、削除します。
+<!-- Groups Tab -->
+$DOMAIN_GROUPS_TAB_DESCRIPTION$=このリストは、このドメインでユーザアカウントに利用可能なグループを表示します。グループはアカウント設定をグループのメンバーである、各ユーザアカウントに割当てます。アカウントは複数のグループのメンバーであるかもしれません。ユーザ・アカウント・レベルでの対応する設定でグループ設定をより優先させることができます。
+
+
+<!-- **************** ServerGroups.htm **************** -->
+<!-- Java Script -->
+$SERVER_GROUPS_TAB$=グローバル・グループ
+<!-- Main Page -->
+$SERVER_GROUPS_INFO$=ファイルサーバでグローバル・アカウントにより使用されるグループを作成、編集、削除してください。
+<!-- Groups Tab -->
+$SERVER_GROUPS_TAB_DESCRIPTION$=このリストはファイルサーバーのグローバル・ユーザアカウントで利用可能なグローバル・グループを表示します。これらのグループはグローバル・ユーザ・アカウントにより、参加することができるだけです。グループは、アカウント設定をグループのメンバーである各ユーザ・アカウントに割当てます。アカウントは複数のグループのメンバーであるかもしれません。ユーザ・アカウント・レベルで対応する設定でグループ設定よりも優先することができます。
+
+
+<!-- **************** GroupsInclude.htm **************** -->
+<!-- Java Script -->
+$SELECT_ONLY_ONE_GROUP_EDIT$=編集するグループを一つだけ選択してください。
+$SELECT_ONE_GROUP_EDIT$=編集する一つのグループを選択してください。
+$SELECT_A_GROUP_TO_DELETE$=削除するグループを選択してください。
+$ASK_DELETE_GROUP$=本当に選択したグループを削除してもよろしいですか？
+$GROUP_TEMPLATE_INFO$=グループ・テンプレートを構成することにより、新しいグループの作成を容易に行うことができます。新しいグループを作成する際に、このデフォルト設定がテンプレート・グループから読み込まれます。
+$DEFAULT_GROUP_TEMPLATE$=デフォルト・グループ・テンプレート
+$GROUP_LIMITS_TAB_INFO$=制限は構成する責任をもつサーバの領域に基づいて分類されます。制限は同じオプションで時刻と曜日に基づいて適用される複数の値を指定することができます。グループレベル制限はユーザ・レベルではなく、ドメインとサーバレベルの制限値より優先されます。
+$ODBC_GROUPS_NOT_CONFIGURED$=データベースがありません。データベース・グループを管理する前に、データベース接続が構成される必要があります。
+$SELECT_GROUPS_TO_MOVE$=移動するグループを選択してください。
+$CONFIRM_MOVE_GROUP_START$=本当に
+$CONFIRM_MOVE_ODBC_GROUP_END$=グループをデータベース・グループ・コレクションへ移動してもよろしいですか？
+$CONFIRM_MOVE_GROUP_END$=データベース・グループをグループコレクションへ移動してもよろしいですか？
+<!-- Groups Tab -->
+$GROUP_PROPERTIES$=グループ・プロパティ
+$DEFAULT_GROUP_BUTTON$=テンプレート
+$ENABLE_DEFAULT_GROUP$=グループテンプレートを使用
+$WINDOWS_AUTH_GROUP_CONFIG$=Windowsユーザ・グループを構成
+$WINDOWS_AUTH_GROUP_NAME$=デフォルト・Windowsユーザ・グループ
+$MOVE_GROUP_BUTTON$=グループの移動
+$OU_GROUP_CONFIG$=OU グループ構成
+$REQUIRE_FULL_QUAL_GRP_MEMB$=ログインのために完全修飾グループ・メンバーシップが必要
+
+<!-- ODBC Groups Tab -->
+$ODBC_GROUPS_TAB_NAME$=データベース・グループ
+$ODBC_GROUPS_TAB_INFO$=データベース・グループは指定されたODBCデータ・ソースからロードされます。それらはグループ・ユーザ・アカウント・データベースを補足します。このインタフェース、またはデータベースによりサポートされるものを通じて、この様に保存されたユーザアカウントを変更することができます。
+
+<!-- Windows Groups Tab -->
+$WINDOWS_GROUPS_TAB_NAME$=Windows グループ
+$WINDOWS_GROUPS_TAB_INFO$=Windows Organizational Units(OU)（組織単位）の設定を表すグループを、作成、管理します。同じ名前のドメインのActive Directory構成を使用して、WindowsのOUを一致させグループを配置します。OUのメンバーであるWindows Activeディレクトリユーザはこれらのグループ設定を使用します。これらのユーザはこのリストで定義されるどんな部門のメンバーであるかもしれません。また、すべてのWindowsの認証されたユーザが「Windowsユーザグループ」のメンバーです。
+$WIN_AUTH_TURNED_OFF$=Windowsグループは現在、無効です。有効にするには\"ユーザー | Windows 認証\"、タブに移動してWindows 認証を使用するチェックボックスを有効にしてください。<br \/><br \/>
+$ADD_CHILD_BUTTON$=子を追加
+$SELECT_ONLY_ONE_GROUP_PARENT_EDIT$=子を追加する、1つのグループだけを選択してください。
+$SELECT_ONE_GROUP_PARENT_EDIT$=子が追加されるべき、ただ一つのグループを選択してください。
+
+<!-- **************** ServerDir.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$SERVER_DIRECTORIES_PAGE_INFO$=ファイルサーバーのすべてのユーザで利用可能な基本的なディレクトリ構造を構成してください。（デフォルト・ディレクトリ・アクセス・ルールと仮想パスを含む）
+<!-- Directory Access Tab -->
+$SERVER_DIR_ACCESS$=サーバ・ディレクトリ・アクセス・ルールは、定義するファイルと、このドメインのすべてのユーザがアクセスできるディレクトリのグローバル・ルールです。ドメイン、グループ、およびユーザレベルにより、これらのルールよりも優先することができます。
+
+
+<!-- **************** DomainDir.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$DOMAIN_DIRECTORIES_PAGE_INFO$=デフォルト・ディレクトリ・アクセス・ルールと仮想パスを含む、ドメインのすべてのユーザで利用可能な基本的なディレクトリ構造を構成してください。
+<!-- Directory Access Tab -->
+$DOMAIN_DIR_ACCESS$=ドメイン・ディレクトリ・アクセス・ルールは、定義するファイルと、このドメインのすべてのユーザがアクセスできるディレクトリのグローバル・ルールです。グループとユーザレベルにより、これらのルールより優先することができます。
+
+
+<!-- **************** ServerLimits.htm **************** -->
+<!-- Main Page -->
+$SERVER_LIMITS$=サーバ制限と設定
+$SERVER_LIMITS_PAGE_TITLE$=サーバ制限と設定
+$SERVER_LIMITS_INFO$=制限と設定は、全体のファイルサーバーのための、基本の設定と動作を構成するのために使用されます。（FTPコマンド処理のカスタマイズ、SSL/SSH暗号化と証明書オプションを含む）このレベルで構成される制限と設定は、すべてのドメイン、グループ、ユーザに継承されます。
+$SERVER_LIMITS_TAB_INFO$=制限は構成する責任をもつサーバの領域に基づいて分類されます。制限は同じオプションで時刻と曜日に基づいて適用される複数の値を指定することができます。サーバレベル制限はユドメイン、グループ、およびユーザレベルの制限値より優先されます。
+$SERVER_SETTINGS_TAB_INFO$=サーバレベル設定は、ファイルサーバーのグローバル動作を構成します。優先されない場合、デフォルト値のいくつかの設定がドメイン、ユーザ・アカウント、グループによって使用されます。各設定に関する詳細な情報に関しては、ヘルプを参照してください。
+$SERVER_ENCRYPTION_TAB_INFO$=このドメインの暗号化オプションを構成してください。(ドメインはサーバレベル設定よりも優先されます)暗号化オプションはSSLとSSHベースの接続の両方に利用可能です。サーバレベルで指定されるデフォルト・オプションを使用するには、証明書とプライベートキーのパスを空白の状態にしてください。
+
+
+<!-- **************** DomainLimits.htm **************** -->
+<!-- Main Page -->
+$DOMAIN_LIMITS$=ドメイン制限と設定
+$DOMAIN_LIMITS_PAGE_TITLE$=ドメイン制限と設定
+$DOMAIN_LIMITS_INFO$=制限と設定は、このドメインの基本設定と動作いを構成するために使用されます。（FTPコマンド処理のカスタマイズ、SSL/SSH暗号化と証明書オプションを含む）
+$DOMAIN_LIMITS_TAB_INFO$=制限は構成する責任をもつドメインの領域に基づいて分類されます。制限は同じオプションで時刻と曜日に基づいて適用される複数の値を指定することができます。ドメイン・レベルの制限はサーバ・レベルの制限値より優先されます。
+$DOMAIN_SETTINGS_TAB_INFO$=ドメインレベル設定は、サーバによって構成されたものより優先されます。優先されない場合、デフォルト値のいくつかの設定がドメイン、ユーザ・アカウント、グループによって使用されます。各設定に関する詳細な情報に関しては、ヘルプを参照してください。
+$DOMAIN_ENCRYPTION_TAB_INFO$=このドメインの暗号化オプションを構成してください。(ドメインはサーバレベル設定よりも優先されます)暗号化オプションはSSLとSSHベースの接続の両方に利用可能です。サーバレベルで指定されるデフォルト・オプションを使用するには、証明書とプライベートキーのパスを空白の状態にしてください。
+$CERTIFICATE_SHARE_NOTE$=<strong>注意:</strong> リスナーを共有するドメインは、各暗号化方法で一つの証明書だけを使用することができます。
+
+
+<!-- **************** LimitsInclude.htm **************** -->
+<!-- Limits Tab -->
+$LIMITS_TAB$=制限
+<!-- Settings Tab -->
+$LOCAL_ADMIN_CHANGE_PASSWORD_TITLE$=ローカル管理者パスワードの変更
+$CONNECTION_GROUP$=接続設定
+$AH_CHECK_LABEL$=次の回数以上の接続をブロック
+$AH_TIMES_WITHIN$=回以内
+$AH_SECONDS_FOR$=秒の内に
+$SSH_HIDE_SERVER_ID$=SSHアイデンティティからサーバ情報を隠す
+$EDIT_RATIO_FREE_FILES$=転送率制限を受けないファイル
+$CLIENT_SUPPORT_LINK$=クライアント・サポート・リンク
+$CUSTOM_LOGO$=ロゴの変更
+$CUSTOM_LOGO_TITLE$=カスタムHTTPロゴ、ログオンページ・テキスト、タイトル
+$CUSTOM_LOGO_PATH$=変更するロゴのパス
+$CUSTOM_LOGO_NOTE$=<strong>ご注意:</strong> 変更するロゴの画像サイズは400ピクセル（幅）×100ピクセル（高さ）である必要があります。
+$PASSWORD_RECOVERY_EMAIL_GROUP$=パスワード復元メッセージ
+$PR_CHECK_LABEL$=デフォルトメッセージを使用
+$INTEGRATION_DLL_PATH$=DLL統合パス
+$INTEGRATION_DLL_GROUP$=DLL統合
+$INTEGRATION_DLL_TEXT$=DLL統合を使用するには、Windowsソフトウェアを書き込みできることを必要とします。DLL自身が書き込みできない、またはそれが信頼できるソースであることを把握していない場合、ここでDLLを選択しないでください。外部のDLLを使用した場合、それはセキュリティの問題を持つことができます。DLL統合の書き込み関しては、ヘルプファイルを参照してください。
+$FOR_PERMANENTLY$=恒久的に
+$CUSTOM_LOGIN_TEXT$=HTTPログイン・ページ・テキスト
+$HTTP_LOGIN_TEXT_GROUP$=カスタムHTTPログイン・メッセージ
+$CUSTOM_TITLE_TEXT$=HTTPログイン・タイトル・テキスト（HTMLではない)
+
+<!-- FTP Command Processor Tab -->
+$FTP_COMMANDS_TAB$=FTPコマンド
+$SERVER_FTPCP_TAB$=サーバFTPコマンド処理はデフォルトで、すべてのドメインに使用されます。それは、FTPコマンドのテキスト応答、FTPコマンド設定、またはクライアントのFTPコマンドの使用を無効にするなどの、詳細な動作を構成します。ドメイン・レベルの設定はこの設定よりも優先されます。
+$DOMAIN_FTPCP_TAB$=ドメインFTPコマンド処理は、サーバレベルで指定される同等な設定よりも優先されます。それは、FTPコマンドのテクストレスポンス、各FTPコマンドの設定、またはクライアントによるFTP込まんんどの無効化のような詳細な動作を構成します。
+$FTPCP_USE_DEFAULT$=デフォルトの設定を使用
+$FTPCP_USE_OVERRIDE$=カスタム設定を使用
+$FTP_COMMAND$=コマンド
+$FTPCP_DEFAULT$=現在このドメインは、ファイルサーバーによって定義されている、デフォルトFTPコマンド設定と応答を使用しています。これらの設定よりも優先させる場合は、\"$FTPCP_USE_OVERRIDE$\"ボタンをクリックしてください。
+$FTPCP_OVERRIDE$=現在このドメインは、カスタムFTPコマンド設定と応答を使用しています。ファイルサーバーで定義されているデフォルト設定に戻るには、\"$FTPCP_USE_DEFAULT$\"ボタンをクリックしてください。
+$CONFIRM_FTPCP_DELETE$=デフォルト設定へ戻すことにより、カスタムFTPコマンド設定と応答は削除されます。そして、ドメインはサーバのFTPコマンド設定と応答を使用します。本当にデフォルト設定を使用してよろしいですか？
+$SELECT_ONE_COMMAND_EDIT$=編集するFTPコマンドを選択してください。
+$GLOBAL_PROPERTIES$=グローバル・プロパティ
+$DISABLE_COMMAND$=コマンドを無効
+$ENABLE_COMMAND$=コマンドを有効
+$FIPS_NOTE$=<strong>ご注意:</strong>  FIPS 140-2モードを使用すると、一部のクライアントは機能しないかもしれません。(SSHとSSLの両方に適用します)
+$SSL_OPTION_NOT_AVAILABLE$=<strong>ご注意:</strong>  FIPS 140-2モードを有効にすると、これらのオプションは上書きされます。
+$FIPS_OPTIONS$=FIPS オプション
+<!-- Encryption Tab -->
+$ENCRYPTION_TAB$=暗号化
+$SSL_CERTIFICATE_OPTIONS$=SSL証明書（FTPSとHTTPS）
+$SSH_PRIVATE_KEY_OPTIONS$=SSHプライベートキー(SFTP)
+$CERTIFICATE$=証明書のパス
+$PRIVATE_KEY$=プライベートキーのパス
+$CACERTIFICATE$=CA (認証機関)の証明書パス
+$VIEW_CERTIFICATE$=証明書の表示
+$CREATE_CERTIFICATE$=証明書の作成
+$CREATE_PRIVATE_KEY$=プライベートキーの作成
+$SSL_OPTIONS$=詳細SSLオプション
+$SSL_WEAK_CIPHERS$=低いセキュリティSSL暗号を有効
+$SSL_DISABLE_V2$=SSLv2のサポートを無効
+$SSH_CIPHERS$=SSH暗号
+$SSH_MACs$=SSH MACs
+$SSH_AES128$=AES-128
+$SSH_3DES$=3重のDES
+$SSH_Blowfish$=Blowfish
+$SSH_AES192$=AES-192
+$SSH_AES256$=AES-256
+$SSH_CAST128$=CAST-128
+$SSH_CBC$=CBC
+$SSH_MACMD5$=MD5
+$SSH_MACSHA1$=SHA1
+$SSH_MACSHA1_96$=SHA1 96
+
+
+<!-- **************** ServerSettingsTab.htm **************** -->
+$NETWORK_SETTINGS$=ネットワーク設定
+$ENABLE_UPNP$=UPnPを経由するファイアウォールの自動構成
+$PACKET_TIMEOUT$=パケット・タイムアウト
+$SECONDS$=秒
+$PASV_PORT_RANGE$=PASVポートの範囲
+$ADVANCED_SETTINGS$=詳細設定
+$DIR_LISTING_MASK$=ディレクトリ・リンク・マスク
+$MAX_SIMUL_THUMBS$=同時最大サムネイル数
+$UPLOAD_FILE_MODE$=ファイルのアップロード・アクセス
+$DOWNLOAD_FILE_MODE$=ファイルのダウンロードアクセス
+$FILE_MODE_READ$=読み取りアクセスを許可
+$FILE_MODE_DENY$=アクセスなしを許可
+$FILE_MODE_FULL$=フルアクセスを許可
+$ADMIN_PASSWORD_BUTTON$=管理パスワードの変更
+
+
+<!-- **************** RatioQuotaDialog.htm **************** -->
+$RATIO_QUOTA_DIALOG_TITLE$=転送率とクォータ管理
+$RATIO_GROUP$=転送率
+$RATIO_ENABLE$=転送率を有効
+$RATIO_FPS$=各セッションのファイルをカウント
+$RATIO_BPS$=各セッションのバイトをカウント
+$RATIO_FAS$=全てのセッションのファイルをカウント
+$RATIO_BAS$=全てのセッションのバイトをカウント
+$RATIO_LABEL$=転送率
+$RATIO_UPLOADS$=アップロード
+$RATIO_DOWNLOADS$=ダウンロード
+$RATIO_CREDIT$=クレジット
+$QUOTA_GROUP$=クォータ
+$QUOTA_MAXIMUM$=最大
+$QUOTA_CURRENT$=現在
+
+
+<!-- **************** RatioFreeFilesDialog.htm **************** -->
+$RATIO_FREE_FILE_DIALOG_TITLE$=転送率制限を受けないファイル
+$RATIO_FREE_FILE_INFO$=転送率制限を受けないファイルは、与えられたアップロード・ダウンロード率をカウントされることなく転送されます。個々のファイルを指定、またはファイルマスクを指定するためにワイルドカード("*"と "?")を使用することができます。パスのないファイル名は、全てのディレクトリで適合するファイル名を含むファイルに適用されます。
+$RATIO_FREE_FILE_EDIT_DIALOG_TITLE$=転送率制限を受けないファイルの情報
+$FREE_FILE_PATH$=転送率制限を受けないファイルのパス
+$FREE_FILE_MASK_EMPTY$=転送率制限を受けないファイルに使用されるファイルのパス、またはマスクを指定してください。
+$SELECT_ONLY_ONE_RATIO_FREE_FILE_EDIT$=編集するための転送率制限を受けないファイルを一つだけ選択してください。
+$SELECT_ONE_RATIO_FREE_FILE_EDIT$=編集する一つの転送率制限を受けないファイルを選択してください。
+$SELECT_RATIO_FREE_FILE_DELETE$=削除する転送率制限を受けないファイルを選択してください。
+$ASK_DELETE_RATIO_FREE_FILE$=本当に選択した転送率制限を受けないファイルを削除してもよろしいですか？
+
+
+<!-- **************** NewCertificateDialog.htm **************** -->
+$NEW_CERTIFICATE_DIALOG_TITLE$=新しい証明書の作成
+$NEW_CERTIFICATE_INFO$=このユーティリティでは提供された情報から自己署名証明書(.crt)と同じく、証明書要求(.csr)とプライベートキー・ファイル(.key)を作成します。
+$CERT_OUTPUT_GROUP$=出力先
+$CERT_SET_NAME$=証明書のセット名
+$CERT_OUTPUT_PATH$=出力先のパス
+$CERT_INFORMATION$=証明書情報
+$CERT_CITY_TOWN$=市／町
+$CERT_STATE_PROVINCE$=都道府県
+$CERT_COUNTRY$=国（2文字の省略記号）
+$CERT_PASSWORD$=パスワード
+$CERT_ORGANIZATION$=組織
+$CERT_COMMON_NAME$=一般名称
+$CERT_DOMAIN_NAME$=ドメイン名
+$CERT_UNIT$=部署
+$NEW_CERT_EMPTY_FIELD$=証明書を作成するには全ての項目を入力する必要があります。
+$NEW_CERT_TWO_DIGIT_COUNTRY$=証明書で使用される2文字の国コードを入力してください。
+$NEW_CERT_USE_NOW$=証明書の作成は完了しました。3個の証明書ファイルが指定されたアウトプット・パスに作成されました。すぐに新しい証明書を使用しますか？
+
+
+<!-- **************** ViewCertificateDialog.htm **************** -->
+$VIEW_CERTIFICATE_DIALOG_TITLE$=証明書の表示
+$CERT_ISSUER_GROUP$=権限の発行
+$CERT_SUBJECT_GROUP$=件名
+$CERT_VALID_GROUP$=有効期限
+$CERT_COUNTRY_VIEW$=国
+$CERT_FROM$=から
+$CERT_THROUGH$=経由
+
+
+<!-- **************** NewCertificateDialog.htm **************** -->
+$NEW_PRIVATE_KEY_DIALOG_TITLE$=新しいプライベートキーの作成
+$NEW_PRIVATE_KEY_INFO$=このユーティリティでは、SSHのセキュアなセッションに使用される、新しいプライベートキー・ファイルを作成します。キーより長いほどセッションは、より安全ですが、長すぎるキーは性能へ影響を与えるかもしれません。
+$PRIVATE_KEY_OUTPUT_GROUP$=出力先
+$PRIVATE_KEY_NAME$=プライベートキー名
+$PRIVATE_KEY_OUTPUT_PATH$=出力先のパス
+$PRIVATE_KEY_INFORMATION$=プライベートキー情報
+$PRIVATE_KEY_TYPE$=キーの種類
+$PRIVATE_KEY_TYPE_DSA$=DSA （多くのサーバがサポート）
+$PRIVATE_KEY_TYPE_RSA$=RSA
+$PRIVATE_KEY_LENGTH$=キーの長さ（ビット）
+$PRIVATE_KEY_LEN_1024$=1024 （最良のパフォーマンス）
+$PRIVATE_KEY_LEN_4096$=4096 （最良のセキュリティ）
+$PRIVATE_KEY_PASSWORD$=パスワード
+$NEW_PRIVATE_KEY_EMPTY_FIELD$=プライベートキーと出力先パスの名前を入力してください。
+$NEW_PRIVATE_KEY_USE_NOW$=プライベートキーの作成は完了しました。すぐに新しいプライベートキーを使用しますか？
+<!-- **************** NewSSHKeyPairDialog.htm **************** -->
+$SSH_KEY_PAIR_OUTPUT_GROUP$=キーペアの出力
+$SSH_KEY_PAIR_NAME$=キーペア名
+$SSH_PUBLIC_KEY_INFORMATION$=キー情報
+$NEW_SSH_KEY_PAIR_INFO$=このユーティリティは、SSHの安全なセッションに使用されるための新しいSSHキーペアファイルを作成します。キーの長さがより長いほどセキュリティは高いですが、長すぎるキーは性能に影響を与えるかもしれません。
+$NEW_SSH_KEY_PAIR_DIALOG_TITLE$=新規SSHキーペアの作成
+$NEW_PUBLIC_KEY_USE_NOW$=キーペアの作成は完了しました。 新しいパブリックキーをすぐに使用しますか？
+<!-- **************** FTPCommandDialog.htm **************** -->
+$FTP_COMMAND_DIALOG_TITLE$=FTPコマンド・プロパティ
+$FTP_RESPONSES$=FTP応答
+$COMMAND_RESPONSE_INFO$=コマンドに対応して送信可能なレスポンスが以下に記載されています。それぞれのコードの応答テキストをカスタマイズすることができます。
+$RESPONSE_CODE$=コード
+$RESPONSE_TEXT$=応答テキスト
+$ADVANCED_OPTIONS$=詳細オプション
+<!-- FTP Response Dialog -->
+$FTP_RESPONSE_DIALOG_TITLE$=FTP応答テキストの編集
+$EDIT_RESPONSE_INFO$=それぞれのFTP応答のテキストの一部を編集することができます。また特別な変数を応答に挿入することができます。詳しい情報に関しては、ヘルプ文書を参照してください。
+$SELECT_ONE_RESPONSE_EDIT$=編集するFTPコマンドを選択してください。
+<!-- Information Tab -->
+$INFORMATION$=情報
+$COMMAND_GENERAL_INFO$=FTPコマンドとその使用に関する概要が以下に表示されます。リンクをたどりコマンドに関する追加詳細情報を参照することができます。各コマンドを無効にすることができます（クライアントによって発行される場合、それらは認識されません。）
+$ADDTL_INFO$=追加情報
+$CLICK_ADDTL_INFO$=コマンドの追加情報はこちらをクリックしてください。
+<!-- Message File Tab -->
+$SECOND_MSG_FILE_INFO$=上記で指定されたファイルが見つからない場合、セカンダリ・メッセージファイル・パスが使用されます。プライマリ・メッセージファイル・パスが、現在のユーザディレクトリにかんれしている場合、これは便利な場合があります。
+$SECOND_MSG_FILE$=セカンダリ・メッセージ・ファイル・パス
+$MSG_FILE_FTPCP$=このメッセージファイルは、FTPユーザへのサインオン・メッセージを指定するために使用されます。クライアントがFTPサーバに接続した際に、メッセージファイルの内容は通常のFTPグリーティングと共に送信されます。
+$MSG_FILE_CDUP$=ユーザが現在のディレクトリを変更した際に、メッセージファイルの内容はコマンドへの通常応答と共に送信されます。メッセージファイルはシンボリック・パラメタのユーザをサポートします。詳しい情報に関してヘルプ文書を参照してください。
+$MSG_FILE_CWD$=$MSG_FILE_CDUP$
+$MSG_FILE_QUIT$=ユーザがFTPセッションを終了する際に、メッセージファイルの内容はコマンドへの通常応答と共に送信されます。メッセージファイルはシンボリック・パラメタのユーザをサポートします。詳しい情報に関してヘルプ文書を参照してください
+<!-- LIST Advanced Tab -->
+$DIR_LIST_STYLE$=ディレクトリ・リストのスタイル
+$LIST_ADVANCED_INFO$=以下でLISTコマンドへの応答形式を構成することができます。ほとんどの情況下では、デフォルト設定が多くのFTPクライアントで動作するでしょう。
+$LIST_STYLE_UNIX$=UNIXスタイル・リスト（デフォルト）
+$LIST_STYLE_IIS$=IISスタイル・リスト
+$LIST_STYLE_DOS$=DOSスタイル・リスト
+$ALLOW_LIST_STYLE_CHANGE$=クライアントによるコマンド命令の使用によりLISTスタイルの変更を許可
+$ALLOW_LIST_FULL_PATH$=特定のファイルをリストする際、ファイルのフルパスをリストする。
+<!-- MKD Advanced Tab -->
+$MKD_ADVANCED_INFO$=指定された親ディレクトリが存在しない場合、ディレクトリは自動的に作成されます。
+$ALLOW_CREATE_PARENT_DIR$=MKDコマンドは、存在しない親ディレクトリの作成を許可します。
+<!-- MDTM Advanced Tab -->
+$MDTM_ADVANCED_INFO$=クライアントがリモートファイルの日付と時間を変更するのを許可するためにMDTMコマンドを使用することができます。以下のチェックボックスを使用して動作を構成してください。
+$MDTM_CHANGE_TIME$=MDTMコマンドによるファイル日付／時刻の変更を許可
+$MDTM_BLOCK_FUTURE$=未来の日付と時刻をブロック
+<!-- NLST Advanced Tab -->
+$NLST_ADVANCED_INFO$=一般的にNLSTコマンドはファイルをリストアップするだけです。以下のボックスをチェックして、ディレクトリをリストアップしてください。
+$NLST_LIST_DIRS$=NLSTコマンドによりディレクトリもリスト
+$NLST_LIST_EMPTY$=550エラーを返す代わりに空のディレクトリをリスト
+<!-- FTPCP Advanced Tab -->
+$FTPCP_ADVANCED_INFO$=以下のオプションは一般的に、FTPプロトコルに適用されます。各オプションに関する詳しい情報に関してヘルプ文書を参照してください。
+$FTPCP_BLOCK_FXP$=\"FTP_bounce\" 攻撃と FXP (server-to-server transfers)をブロック
+$FTPCP_INC_RESP_CODE$=複数応答の全ての行で応答コードを含む
+$FTPCP_UTF8_DEFAULT$=全ての送受信されたパスとファイル名にUTF-8エンコーディングを使用
+
+
+<!-- **************** ImportExportUsersDialog.htm **************** -->
+$EXPORT_USER_PATH$=エクスポートするファイルのパス
+$IMPORT_USER_PATH$=インポートするファイルのパスh
+$IMPORT_USER_DIALOG_TITLE$=ユーザのインポート
+$EXPORT_USER_DIALOG_TITLE$=ユーザのエクスポート
+$IMPORT_MSG$=ユーザは次からインポートされました:
+$IMPORT_MSG_EXIST1$=ユーザはインポートされました。
+$IMPORT_MSG_EXIST2$=ユーザは既に存在し次のファイルからインポートされませんでした。:
+$EXPORT_MSG$=ユーザは次へエクスポートされました:
+$EXPORT_USERS_CONFIRM$=すべてのユーザをエクスポートしますか？
+$EXPORT_USERS_YES_CONFIRM$=\"はい\" を選択した場合、このドメイン/サーバの全てのユーザをエクスポートします。
+$EXPORT_USERS_NO_CONFIRM$=\"いいえ\"を選択した場合、このユーザカテゴリーのユーザだけをエクスポートします。
+<!-- Java Script -->
+$PLEASE_ENTER_IMPORT_PATH$=インポートするファイルのパスを入力してください。
+$PLEASE_ENTER_EXPORT_PATH$=ユーザをエクスポートするパスとファイル名を入力してください。
+<!-- **************** DomainActivity.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$DOMAIN_ACTIVITY_INFO$=現在のドメイン・アクティビティとログに関する情報を表示します。設定タブではファイルとリアルタイム・ログ情報の構成を行うことができます。
+<!-- Sessions Tab -->
+$SESSIONS_TAB$=セッション
+$SESSIONS_INFO$=現在のアクティブなセッション情報が以下に表示されます。セッション情報の表示、ユーザとのチャット、またはユーザを禁止することができます。
+<!-- User and Group Stats Tab -->
+$USER_GROUP_STATS_SELECTION$=ユーザ、またはグループ統計選択
+$USER_GROUP_STATS_TAB$=ユーザとグループの統計
+$USER_STATS$=ユーザの統計
+$SELECT_USER_STATS$=ユーザ
+$USER_GROUP_STATS_INFO$=ユーザとグループに関する統計表示は、セッション情報、転送統計、アクティビティ合計を含みます。
+$GROUP_STATS$=グループの統計
+$SELECT_GROUP_STATS$=グループ
+$SELECT_COLLECTION$=コレクション
+$SAVE_STATS_BUTTON$=統計を保存
+<!-- Stats Tab -->
+$STATS_TAB$=統計
+$DOMAIN_STATS_INFO$=現在のドメインの統計を表示することができます。（セッション情報、転送統計、現在のアクティビティ合計）
+<!-- Log Tab -->
+$LOG_DISPLAY_INFO$=ドメインログはリアルタイムに更新され以下に表示されます。リアルタイムでの更新を一時停止するには「一時停止」をチェックしてください。
+$LOG_TAB$=ログ
+$FREEZE_LOG$=一時停止
+$LEGEND_BUTTON$=ログの例
+$LOG_LEGEND$=ログの例
+$FILTER_BUTTON$=フィルタ
+$FILTER_LOG_BUTTON$=ログのフィルタ
+$FILTER_DIALOG_TITLE$=文字列でログをフィルタ
+$LOG_FILTER_INFO$=ログは入力された文字列を含む内容だけを表示します。
+$RESET_BUTTON$=リセット
+$COPY_CLIPBOARD$=クリップボードへコピー
+<!-- Settings Tab -->
+$LOG_SETTINGS_INFO$=ログに記録したいアクティビティを左側のチェックボックスで構成してください。右側の設定では、情報をどのようにファイルに記録するかをコントロールします。
+$LOG_FILE_LABEL$=ファイル
+$LOG_SCREEN_LABEL$=画面
+$LOG_FILE_PATH$=ログファイル・パス名
+$ENABLE_LOG_TO_FILE$=ファイルへのログを有効
+$SYSTEM_MESSAGES_LABEL$=システム・メッセージ
+$SECURITY_MESSAGES_LABEL$=セキュリティ・メッセージ
+$IP_NAMES_LABEL$=IP名
+$DOWNLOADS_LABEL$=ダウンロード
+$UPLOADS_LABEL$=アップロード
+$FILE_DELETIONS_LABEL$=ファイルの削除
+$FILE_AND_DIRECTORY_RENAMES_LABEL$=ファイルとディレクトリの名前変更
+$DIRECTORY_CREATIONS_LABEL$=ディレクトリの作成
+$DIRECTORY_DELETIONS_LABEL$=ディレクトリの削除
+$ODBC_CALLS_LABEL$=ODBC呼び出し
+$ODBC_ERRORS_LABEL$=ODBCエラー
+$TRIGGERED_EVENT_LABEL$=トリガー・イベント
+$FTP_COMMANDS_LABEL$=FTPコマンド
+$FTP_REPLIES_LABEL$=FTP応答
+$SSH_COMMANDS_LABEL$=SSHコマンド
+$SSH_REPLIES_LABEL$=SSH応答
+$HTTP_COMMANDS_LABEL$=HTTPコマンド
+$HTTP_REPLIES_LABEL$=HTTP応答
+$LOG_FILE_SETTINGS$=ファイルへのロギング設定
+$LOG_FILE_PARAMETERS_LABEL$=ログ・ファイル・パスのタグ
+$DAY_OF_MONTH_LABEL$=日付
+$MONTH_TEXT_LABEL$=月（テキスト）
+$MONTH_NUMBER_LABEL$=数値による月 (1-12)
+$4_DIGIT_YEAR_LABEL$=4文字での年
+$2_DIGIT_YEAR_LABEL$=2文字での年
+$DOMAIN_NAME_LABEL$=ドメイン名
+$LOG_ROTATE_SETTING$=ログファイルを自動的にローテーション
+$LOG_ROTATE_NEVER_DESC$=なし
+$LOG_ROTATE_DAILY_DESC$=日次
+$LOG_ROTATE_WEEKLY_DESC$=週次
+$LOG_ROTATE_MONTHLY_DESC$=月次
+$LOG_ROTATE_YEARLY_DESC$=年次
+$LOG_IP_ACCESS_BUTTON$=ログしないIP
+$PLEASE_ENTER_LOG_FILE_NAME$=ログファイルのファイル名を含む必要があります。
+$LOG_FILE_NAMING_EXAMPLES$=例:<br>/Serv-U-Log.txt<br>/Serv-U-Log%M.txt<br>/Serv-U-Log%N-%Y.txt<br>/Serv-U-Log%N-%D-%Y.txt<br>/Serv-U-Log-%S.txt
+$KEEP_UP_TO$=保持する
+$LOG_EXCEED_FILES$=ログファイル
+$LOG_EXCEED_BYTES$=ログファイル（MB）
+$ZERO_NO_DELETE$=0 は全てのログファイルを保持
+
+<!-- **************** LogIPAccessListDialog.htm **************** -->
+$LOG_IP_ACCESS_LIST_DIALOG_TITLE$=IPルールをログしない
+$LOG_IP_ACCESS_LIST_INFO$=以下のIPルールはログされないIPアドレスを特定します。ロールはスクリーンログ、ファイルログ、または両方に適用することができます。
+$APPLIES_TO$=次を適用
+$LOG_FILE$=ファイル
+$LOG_SCREEN$=スクリーン
+$LOG_BOTH$=両方
+$LOG_NONE$=無効
+
+
+<!-- **************** LogIPAccessDialog.htm **************** -->
+$LOG_IP_ACCESS_DIALOG_TITLE$=IPルールをログしない
+$LOG_APPLY_SCREEN$=スクリーンに適用
+$LOG_APPLY_FILE$=ファイルに適用
+
+
+<!-- **************** ServerActivity.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$SERVER_ACTIVITY_INFO$=ファイルサーバー上のすべてのドメインの情報を表示して、ユーザセッションの管理を行います。ログ・タブではサーバ全体のメッセージと情報を表示します。
+<!-- Stats Tab -->
+$SERVER_STATS_INFO$=すべてのドメインを含むファイルサーバ全体の統計を表示します。（セッション情報、転送統計、現在のアクティビティ合計）
+<!-- Log Tab -->
+$SERVER_LOG_DISPLAY_INFO$=サーバログはリアルタイムに更新され以下に表示されます。サーバログは開始情報、グローバル・メッセージ、エラーを含みます。
+
+
+<!-- **************** DomainAttrStats.htm **************** -->
+<!-- HTML -->
+$UP_TIME$=動作可能時間
+$SESSIONS_CURRENT$=現在のセッション
+$SESSIONS_LAST_DAY$=24時間内のセッション
+$SESSIONS_TOTAL$=セッション合計
+$SESSIONS_PASSWORD_CHANGED_ON$=最後に変更されたパスワード
+$SESSIONS_MAX$=セッションの最高値
+$SESSIONS_AVG_TIME$=セッション長の平均
+$SESSIONS_LONGEST$=最長セッション
+$TRANSFER_DL_SPEED$=ダウンロード速度
+$TRANSFER_AVG_DL_SPEED$=平均DLスピード
+$TRANSFER_DOWNLOADED$=ダウンロード
+$TRANSFER_UL_SPEED$=アップロード速度
+$TRANSFER_AVG_UL_SPEED$=平均ULスピード
+$TRANSFER_UPLOADED$=アップロード
+$LOGIN_STATS_LOGINS$=ログイン
+$LOGIN_STATS_LOGOUTS$=ログアウト
+$LOGIN_STATS_CURRENT_LOGINS$=現在のログイン
+$LOGIN_STATS_MOST_CURRENT_LOGINS$=最大ログイン
+$LOGIN_STATS_LAST_LOGIN$=最終ログイン日時
+$LOGIN_STATS_LAST_LOGOUT$=最終ログアウト日時
+$LOGIN_STATS_AVERAGE_LOGIN_SEC$=ログイン平均継続時間
+$LOGIN_STATS_LONG_LOGIN_SEC$=ログイン最長継続時間
+$LOGIN_STATS_SHORT_LOGIN_SEC$=ログイン最小継続期間
+$STATS_DURATION$=継続期間統計
+<!-- Java Script -->
+$SESSION_STATS$=セッション統計
+$TRANSFER_STATS$=転送統計
+$LOGIN_STATS$=ログイン統計
+
+
+<!-- **************** ChangeDomainDialog.htm **************** -->
+<!-- Java Script -->
+$CHANGE_DOMAIN_BUTTON$=ドメインの変更
+<!-- Main Page -->
+
+
+<!-- **************** Common Wizard Nav Dialog **************** -->
+<!-- Java Script -->
+$NEXT_BUTTON$=次へ
+$BACK_BUTTON$=戻る
+$FINISH_BUTTON$=完了
+<!-- Main Page -->
+$STEP$=ステップ
+$OF$=／
+
+<!-- **************** Save Stats Dialog **************** -->
+$SAVE_STATS_DIALOG_TITLE$=統計をファイルへ保存
+$PLEASE_ENTER_STATS_SAVE_PATH$=統計ファイルのパスとファイル名を入力してください。
+$SAVE_STATS_PATH$=統計ファイルパス
+$SAVE_GROUP_STATS_MSG$=グループ統計は次のファイルへ保存されました。:
+$SAVE_USER_STATS_MSG$=ユーザ統計は次のファイルへ保存されました。:
+
+<!-- **************** Move Users Dialog **************** -->
+$MOVE_USERS_TITLE$=ユーザを移動
+$MOVE_USER_DESCR$=ユーザを移動することを望むコレクションを選択してください。
+$MOVE_TO_ODBC$=データベースへ移動
+$MOVE_TO_SERVU$=Serv-Uへ移動
+
+
+<!-- **************** Bubble Tip Dialogs **************** -->
+$DONT_SHOW_AGAIN$=次回このメッセージを表示しない。

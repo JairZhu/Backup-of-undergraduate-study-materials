@@ -1,0 +1,10 @@
+<!--#include "..\Common\Strings\Result.strings"-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<result>%RESULT%</result>
+<ResultText>%RESULT_TEXT%</ResultText>
+<welcomemsg>%CHTTPSession.%SESSION_ID%.UserSignOnMessage%</welcomemsg>
+<userplacement>%CHTTPSession.%SESSION_ID%.WebClientStartupMode%</userplacement>
+<usertype>%CHTTPSession.%SESSION_ID%.UserType%</usertype>
+<sessionid>%ENC_SESSION_ID%</sessionid>
+</response>

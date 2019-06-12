@@ -1,0 +1,44 @@
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<ratios>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<ratio>
+%ADD_LIST_STRING%		<Name>SessionFilesUlDlRatio</Name>
+%ADD_LIST_STRING%		<UploadValue>%CSessionFilesUlDlRatio.%LIST_ID%.UploadValue%</UploadValue>
+%ADD_LIST_STRING%		<DownloadValue>%CSessionFilesUlDlRatio.%LIST_ID%.DownloadValue%</DownloadValue>
+%ADD_LIST_STRING%		<Credit>%CSessionFilesUlDlRatio.%LIST_ID%.Credit%</Credit>
+%ADD_LIST_STRING%		<ControlVal>0</ControlVal>
+%ADD_LIST_STRING%		<ID>%LIST_ID%</ID>
+%ADD_LIST_STRING%	</ratio>
+%CUser.%ID%.SessionFilesUlDlRatio.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<ratio>
+%ADD_LIST_STRING%		<Name>SessionBytesUlDlRatio</Name>
+%ADD_LIST_STRING%		<UploadValue>%CSessionBytesUlDlRatio.%LIST_ID%.UploadValue%</UploadValue>
+%ADD_LIST_STRING%		<DownloadValue>%CSessionBytesUlDlRatio.%LIST_ID%.DownloadValue%</DownloadValue>
+%ADD_LIST_STRING%		<Credit>%CSessionBytesUlDlRatio.%LIST_ID%.Credit%</Credit>
+%ADD_LIST_STRING%		<ControlVal>1</ControlVal>
+%ADD_LIST_STRING%		<ID>%LIST_ID%</ID>
+%ADD_LIST_STRING%	</ratio>
+%CUser.%ID%.SessionBytesUlDlRatio.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<ratio>
+%ADD_LIST_STRING%		<Name>UserFilesUlDlRatio</Name>
+%ADD_LIST_STRING%		<UploadValue>%CUserFilesUlDlRatio.%LIST_ID%.UploadValue%</UploadValue>
+%ADD_LIST_STRING%		<DownloadValue>%CUserFilesUlDlRatio.%LIST_ID%.DownloadValue%</DownloadValue>
+%ADD_LIST_STRING%		<Credit>%CUserFilesUlDlRatio.%LIST_ID%.Credit%</Credit>
+%ADD_LIST_STRING%		<ControlVal>2</ControlVal>
+%ADD_LIST_STRING%		<ID>%LIST_ID%</ID>
+%ADD_LIST_STRING%	</ratio>
+%CUser.%ID%.UserFilesUlDlRatio.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<ratio>
+%ADD_LIST_STRING%		<Name>UserBytesUlDlRatio</Name>
+%ADD_LIST_STRING%		<UploadValue>%CUserBytesUlDlRatio.%LIST_ID%.UploadValue%</UploadValue>
+%ADD_LIST_STRING%		<DownloadValue>%CUserBytesUlDlRatio.%LIST_ID%.DownloadValue%</DownloadValue>
+%ADD_LIST_STRING%		<Credit>%CUserBytesUlDlRatio.%LIST_ID%.Credit%</Credit>
+%ADD_LIST_STRING%		<ControlVal>3</ControlVal>
+%ADD_LIST_STRING%		<ID>%LIST_ID%</ID>
+%ADD_LIST_STRING%	</ratio>
+%CUser.%ID%.UserBytesUlDlRatio.List%
+</ratios>

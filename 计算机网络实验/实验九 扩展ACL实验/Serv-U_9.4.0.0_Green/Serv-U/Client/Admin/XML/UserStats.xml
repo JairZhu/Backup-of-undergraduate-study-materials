@@ -1,0 +1,33 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<stats>
+<SessionCount>%CUser.%ID%.SessionCount%</SessionCount>
+<SessionTotal>%CUser.%ID%.SessionTotal%</SessionTotal>
+<SessionsInPast24Hours>%CUser.%ID%.SessionsInPast24Hours%</SessionsInPast24Hours>
+<MostConcurrentSessions>%CUser.%ID%.MostConcurrentSessions%</MostConcurrentSessions>
+<AverageConnectSeconds>%CUser.%ID%.AverageConnectSeconds%</AverageConnectSeconds>
+<MaxConnectSeconds>%CUser.%ID%.MaxConnectSeconds%</MaxConnectSeconds>
+<UploadTransferRateBytesSec>%CUser.%ID%.UploadTransferRateBytesSec%</UploadTransferRateBytesSec>
+<DownloadTransferRateBytesSec>%CUser.%ID%.DownloadTransferRateBytesSec%</DownloadTransferRateBytesSec>
+<BytesUploaded>%CUser.%ID%.BytesUploaded%</BytesUploaded>
+<BytesDownloaded>%CUser.%ID%.BytesDownloaded%</BytesDownloaded>
+<FilesUploaded>%CUser.%ID%.FilesUploaded%</FilesUploaded>
+<FilesDownloaded>%CUser.%ID%.FilesDownloaded%</FilesDownloaded>
+<AverageUploadRate>%CUser.%ID%.AverageUploadRate%</AverageUploadRate>
+<AverageDownloadRate>%CUser.%ID%.AverageDownloadRate%</AverageDownloadRate>
+<PasswordChangedOn>%CUser.%ID%.PasswordChangedOn%</PasswordChangedOn>
+<Logins>%CUser.%ID%.Logins%</Logins>
+<Logouts>%CUser.%ID%.Logouts%</Logouts>
+<CurrentLogins>%CUser.%ID%.CurrentLogins%</CurrentLogins>
+<MostConcurrentLogins>%CUser.%ID%.MostConcurrentLogins%</MostConcurrentLogins>
+<LastLoginTime>%CUser.%ID%.LastLoginTime%</LastLoginTime>
+<LastLogoutTime>%CUser.%ID%.LastLogoutTime%</LastLogoutTime>
+<AverageLoginSeconds>%CUser.%ID%.AverageLoginSeconds%</AverageLoginSeconds>
+<LongestLoginDurationSeconds>%CUser.%ID%.LongestLoginDurationSeconds%</LongestLoginDurationSeconds>
+<ShortestLoginDurationSeconds>%CUser.%ID%.ShortestLoginDurationSeconds%</ShortestLoginDurationSeconds>
+<RunningSeconds>%%%%CUser.%ID%.Parent%.Parent%.Parent%.RunningSeconds%</RunningSeconds>
+<result>%RESULT%</result>
+<ResultText>%RESULT_TEXT%</ResultText>
+<UnloadResult>%%%CUser.%ID%.Parent%.Parent%.UnloadUser%</UnloadResult>
+</stats>

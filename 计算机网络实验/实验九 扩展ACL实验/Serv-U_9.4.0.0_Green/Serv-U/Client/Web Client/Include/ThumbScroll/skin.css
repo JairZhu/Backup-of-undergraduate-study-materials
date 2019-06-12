@@ -1,0 +1,112 @@
+.jcarousel-skin-tango .jcarousel-container {
+    -moz-border-radius: 10px;
+    /*background: #F0F6F9;
+    border: 1px solid #346F97;*/
+	background: #e1e1e1;
+    border: 1px solid #a0a0a0;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    padding: 0px 40px;
+}
+
+
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+  /*  margin-right: 15px;*/
+}
+
+
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #e1e1e1;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(/Web%20Client/Include/ThumbScroll/Images/next-horizontal.png) no-repeat 0 0;
+}
+.aw-ie6 .jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(/Web%20Client/Include/ThumbScroll/Images/next-horizontal-ie6.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover {
+    background-position: -32px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+    background-position: -64px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(/Web%20Client/Include/ThumbScroll/Images/prev-horizontal.png) no-repeat 0 0;
+}
+.aw-ie6 .jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(/Web%20Client/Include/ThumbScroll/Images/prev-horizontal-ie6.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {
+    background-position: -32px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+    background-position: -64px 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: -96px 0;
+}
+
+.img-shadow {
+  float:left;
+  background: url(/Web%20Client/Images/ShadowAlpha.png) no-repeat bottom right !important;
+  background: url(/Web%20Client/Images/shadow2.gif) no-repeat bottom right;
+  margin: 10px 0 0 10px !important;
+  margin: 10px 0 0 5px;
+  }
+
+.img-shadow img {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  margin: -6px 6px 6px -6px;
+  padding: 2px;
+  } 

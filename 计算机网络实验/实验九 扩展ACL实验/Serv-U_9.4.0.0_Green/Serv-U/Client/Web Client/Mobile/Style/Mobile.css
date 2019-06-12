@@ -1,0 +1,174 @@
+
+body {
+    margin: 0;
+    font-family: Helvetica;
+    background-color: #ffffff !important;
+    /*background-image: url(../../../Common/Images/BusyGrid.gif);
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-position: 50% 50%; */
+    color: #000000;
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: none;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+}
+body  ul  li {
+    position: relative;
+    margin: 0 0 0 -40px;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 8px 0 8px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    list-style: none;
+    overflow:hidden;
+}
+
+a[selected] {
+    background-color: #194fdb ;
+    background-image: url(/Web%20Client/Mobile/Images/listArrowSel.png), url(/Web%20Client/Mobile/Images/selection.png) ;
+    background-repeat: no-repeat, repeat-x;
+    background-position: right center, left top;
+    color: #FFFFFF !important;
+}
+a:hover,a:link {
+	color:#000000 !important;
+}
+a[selected="progress"] {
+    background-image: url(/Web%20Client/Mobile/Images/loading.gif), url(/Web%20Client/Mobile/Images/selection.png) !important;
+    color: #FFFFFF !important;
+}
+a[selected="progress-dir"] {
+    background-image: url(/Web%20Client/Mobile/Images/loading.gif), url(/Web%20Client/Mobile/Images/selection.png) !important;
+     background-repeat: no-repeat, repeat-x !important;
+    background-position: right center, left top !important;
+    color: #FFFFFF !important;
+}
+
+a[selected="done"]{
+	background-color:transparent !important;
+    background-image: url(/Web%20Client/Mobile/Images/listArrow.png) !important;
+    background-repeat: no-repeat;
+    background-position: right center;
+    color: #000000 !important;
+}
+a[selected="done-dir"]{
+	background-color:transparent !important;
+    background-image: none !important;
+    background-repeat: no-repeat;
+    background-position: right center;
+    color: #000000 !important;
+}
+body  ul  li  a {
+    display: block;
+    margin: -8px 0 -8px -10px;
+    padding: 8px 0 8px 60px;
+    text-decoration: none;
+    color: #000000 ;
+    background: url(/Web%20Client/Mobile/Images/listArrow.png) no-repeat right center;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+body  ul  li.dir { 
+	background:url(/Web%20Client/ThumbnailIcons/directory.gif) 6px 10px  no-repeat; 
+}
+div.file-info
+{
+	font-size:8pt;color:green;
+}
+
+#preloader {
+    display: none;
+    background-image: url(/Web%20Client/Mobile/Images/loading.gif), url(/Web%20Client/Mobile/Images/selection.png),
+        url(/Web%20Client/Mobile/Images/listArrowSel.png), url(%COMMON_FILE%Images/BusyGrid.gif),
+        url(/Web%20Client/Mobile/Images/blueButton.png), url(/Web%20Client/Mobile/Images/PreviousArrow.png), url(/Web%20Client/Mobile/Images/NextArrow.png), 
+        url(/Web%20Client/Mobile/Images/PreviousArrow-off.png), url(/Web%20Client/Mobile/Images/NextArrow-off.png);
+}
+.info-box div.text{
+	text-align:left;padding:5px 5px 5px 5px;
+}
+.info-title{
+	color:#859ab6;
+	font-weight:bold;
+}
+.button-highlight{
+	-webkit-tap-highlight-color:rgba(253,253,253,0.6);
+}
+.info-box {
+	line-height:33px;
+	width:100%;
+	margin:5px auto 5px auto;
+	background:#ffffff;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.Button-Mobile, .info-box, .Button-Mobile-blue  {
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius:  10px;
+	-webkit-border-top-left-radius:  10px;
+	-webkit-border-top-right-radius:  10px;
+	border: 1px solid #90a0b5;
+	vertical-align:middle;
+}
+.Button-Mobile {
+
+	color:#859ab6;
+	font-weight:bold;
+	line-height:33px;
+	margin:5px auto 5px auto;
+	background:#ffffff;
+}
+
+.Button-Mobile-Blue {
+
+	color:#859ab6;
+	font-weight:bold;
+	line-height:33px;
+	margin:6px auto 0 auto;
+	-webkit-border-image: url(/Web%20Client/Mobile/Images/blueButton.png) 0 5 0 5;
+	text-align:center;
+	color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    background-color:Blue;
+}
+#Mobile-Toolbar,#File-Toolbar,#Image-Toolbar{
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px;
+    height: 45px;
+    background: url(/Web%20Client/Mobile/Images/toolbar.png) #6d84a2 repeat-x;
+     -webkit-box-sizing: border-box;
+    border-bottom: 1px solid #2d3642;
+    border-top: 1px solid #6d84a2;
+	
+}
+.login-logo-bg
+{
+	background:url(/Web%20Client/Images/Mobile-bg-fill-top.png)repeat-x left bottom;
+	padding-bottom:10px;
+}
+input.text,select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 8px 0;
+    padding: 6px 0px 6px 0px;
+    font-size: 16px;
+    font-weight: normal;
+}
+button.login-btn
+{
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100px;
+    margin: 0 0 8px 0;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.dir-info-icon{
+	float:left;height:48px;width:36px;margin-left:5px;/*border-left:2px dashed #7c7c7c;*/
+}

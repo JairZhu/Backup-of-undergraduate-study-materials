@@ -1,0 +1,554 @@
+﻿// Serv-U_JA.str - contains Japanese string definitions for the Serv-U RES resource files
+//
+// Strings entered in this file must be one per line and in the format of:
+// $RSIDS_SOME_STRING_NAME$=Some string value
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup dialog
+
+// upgrade notice strings
+$RSIDS_UPGRADENOTICE_TITLE$=セットアップ - Serv-U
+$RSIDS_UPGRADENOTICE_BACKUP$=以前のServ-Uのインストールは以下のディレクトリへ行われました。:
+$RSIDS_UPGRADENOTICE_IMPORTED$=以下の情報がインポートされました:
+$RSIDS_UPGRADENOTICE_IMPORT_INFO$=%d ドメイン, %d ユーザ・アカウント, %d グループ
+
+// old reggie strings
+$RSIDS_OLDREGGIE_TITLE$=セットアップ - Serv-U
+$RSIDS_OLDREGGIE_INVALID$=このバージョンでは、現在のServ-U登録キーは有効ではありません。アップグレード保証の期限が過ぎていると思われます。\n\nアップグレード保証の更新を行うには、以下のリンクを参照してください。:
+$RSIDS_OLDREGGIE_CUSTOMER_SUPPORT$=http://www.RhinoSoft.com/customer/
+$RSIDS_OLDREGGIE_WARNING$=このインストールを継続した場合、Serv-Uは登録されていないため、正しく動作しないでしょう。機能するのをやめるかもしれません。このインストールを中断することをお勧めします。
+$RSIDS_OLDREGGIE_INSTRUCTIONS$=このインストールを中止するには、キャンセルボタンをクリックしてください。このインストールを継続するには、次へをクリックしてください。
+
+// beta warning strings
+$RSIDS_BETAWARNING_TITLE$=セットアップ - Serv-U
+$RSIDS_BETAWARNING_WARNING$=Serv-Uのベータバージョンをインストールしています。Serv-U のベータバージョンは、開発バージョンであり、重大なバグがある可能性を理解いただける場合にのみご使用ください。
+$RSIDS_BETAWARNING_CEASE$=このソフトウェアは、%d日以降機能を停止するでしょう。詳細はサーバログを参照してください。
+$RSIDS_BETAWARNING_CONTINUE$=このインストールを継続することは、ベータバージョンのソフトウェアをインストールすることによる危険を理解することを意味しています。
+$RSIDS_BETAWARNING_INSTRUCTIONS$=このインストールを中止するには、キャンセルボタンをクリックしてください。このインストールを継続するには、次へをクリックしてください。
+$RSIDS_BETAWARNING_BUILT$=作成日:
+$RSIDS_BETAWARNING_EXPIRES$=有効期限:
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup string table
+
+IDS_OLDREGGIE_COMMENT=次へ進む前に、登録IDに関して以下の情報をお読みください。
+IDS_OLDREGGIE_HEADER=無効な登録ID
+IDS_SERVER_SECURITY_REQD=Serv-U 6はセキュリティ設定が有効ではない状態の実行をサーバで許可していました。このオプションは廃止されました。
+IDS_DIR_CACHE_OBSOLETE=Serv-U 6でディレクトリ・キャッシュ機能は廃止されました。Serv-U 8は別々のスレッドでディレクトリリストを実行します。
+IDS_SEND_RECV_BUFFERS=送受信バッファサイズは、最大データ転送速度を達成するためにServ-Uによって自動的に計算されます。
+IDS_LINKS_DEPRECATED=Serv-U内蔵のUNIXスタイルリンクの作成はサポートされません。代わりに仮想パス機能を使用してください。
+IDS_NO_GROUP_ADMIN=Serv-U 8からグループ管理特権は削除されました。現在この管理レベルを含むアカウントは管理権利を全く持っていません。
+IDS_SHUTTING_DOWN=Serv-Uをシャットダウン...
+IDS_UPDATING_DATA=データファイルをアップグレード...
+IDS_BACKING_UP=設定をバックアップ...
+
+IDS_CHECKING_REGGIE=登録IDを確認...
+IDS_UPNP_DISCOVER=UPnP発見を待機中...
+IDS_UN_HEADER=アップグレード通知
+IDS_UN_COMMENT=Serv-Uデータをインポートしている間に、記録された以下の通知を再検討してください。
+IDS_TRAY_PASSWORD_SET=Serv-U管理コンソールは、以前のServ-Uで使用されていたのと同じパスワードを必要とするでしょう。
+IDS_LOCK_IN_HOME_CHANGE=ユーザがホームディレクトリにロックされなかった場合、以前のバージョンは「/」によりユーザのホームディレクトリをリストアップしました。この設定(RootIsDrives)はサーバ、ドメイン、ユーザ、またはグループで変更されるかもしれません。
+IDS_ODBC_DOMAIN_UPGRADED=ODBCドメインユーザとグループは、Serv-U 8の保存形式で新しいテーブルとコラムにコピーされました。SQLテンプレート文字列は、Serv-U 8のデフォルトにリセットされました。データベースからは、元にデータは削除されていません。
+
+IDS_BETA_HEADING=Serv-U ベータインストール
+IDS_BETA_COMMENT=このServ-Uに関する以下の重要な情報をお読みください。
+IDS_MSG_TAGS_CHANGED=Serv-Uからのメッセージ変数は変更されました。変数名は今、 "%" の代わりに "$" から開始されなければなりません。メッセージファイルを使用している場合、手動で変数を変更する必要があります。
+
+/////////////////////////////////////////////////////////////////////////////
+// password recovery message strings
+IDS_PWDREC_SUBJECT=アカウント情報
+IDS_PWDREC_MESSAGE=$FullNameSpace様,\n\nあなたのログイン情報は要求されました。:\n\nログインID:\t$Name\nパスワード:\t$Password\n\nご不明な点はシステム管理者へご確認ください。\nこれらはアカウント情報を含むため\取り扱いにはご注意ください。
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES dialog
+
+// theme editor strings
+$RSIDS_THEMEEDITOR_TITLE$=テーマ・エディタ
+$RSIDS_THEMEEDITOR_DESC$=Serv-U テーマエディタはServ-Uトレイアプリケーションがシステムトレーで、どのように動作するかを設定します。ファイルメニューからテーマを開き、そして保存してください。
+$RSIDS_THEMEEDITOR_NAME$=名前(&N):
+$RSIDS_THEMEEDITOR_ICON_LISTS$=アイコン一覧(&I):
+$RSIDS_THEMEEDITOR_EDIT$=編集(&E)...
+
+// icon list strings
+$RSIDS_ICONLIST_TITLE$=アイコン一覧
+$RSIDS_ICONLIST_DESC$=以下で表示されているｱｲｺﾝは、選択されたServ-U状態を示すために使用されます。ｱｲｺﾝのﾌｧｲﾙﾊﾟｽと表示時間を指定して、ｱﾆﾒｰｼｮﾝを製作してください。
+$RSIDS_ICONLIST_ICONS$=アイコン(&I):
+$RSIDS_ICONLIST_ADD$=追加(&A)...
+$RSIDS_ICONLIST_EDIT$=編集(&E)...
+$RSIDS_ICONLIST_DELETE$=削除(&D)
+$RSIDS_ICONLIST_MOVE_UP$=上へ移動(&O)
+$RSIDS_ICONLIST_MOVE_DOWN$=下へ移動(&V)
+$RSIDS_ICONLIST_CLOSE$=閉じる(&C)
+$RSIDS_ICONLIST_INFO$=ｱｲｺﾝは16x16ﾋﾟｸｾﾙで、多くのイメージタイプがサポートされます。
+
+// icon dialog strings
+$RSIDS_ICON_TITLE$=Icon
+$RSIDS_ICON_OK$=OK
+$RSIDS_ICON_CANCEL$=キャンセル
+$RSIDS_ICON_FILE_PATH$=画像ファイルのパス(&I):
+$RSIDS_ICON_DURATION$=持続時間(&D):
+$RSIDS_ICON_TIME_INFO$=(ミリ秒; 1000 ミリ秒 = 1 秒)
+$RSIDS_ICON_BROWSE$=参照(&B)...
+$RSIDS_ICON_INFO$=画像ﾌｧｲﾙはWindowsにより認識される種類であるかもしれません。16ｘ16ﾋﾟｸｾﾙを推奨します。ｼｽﾃﾑﾄﾚｲ上に表示された場合、ｲﾒｰｼﾞは16x16に自動調整されます。
+
+// managment console strings
+$RSIDS_MANAGMENTCONSOLE_TITLE$=Serv-U 管理コンソール
+
+// warn esc strings
+$RSIDS_WARNESC_TITLE$=Windows インターネットのセキュリティ強化の構成が有効
+$RSIDS_WARNESC_OK$=OK
+$RSIDS_WARNESC_CANCEL$=キャンセル
+$RSIDS_WARNESC_DONT_WARN$=次回このメッセージを表示しない(&D)
+$RSIDS_WARNESC_ENABLED$=このコンピュータではマイクロソフトの「インターネットのセキュリティ強化の構成(ESC)」が有効です。
+$RSIDS_WARNESC_TROUBLESHOOT$=Serv-U 管理コンソールが正しく動作するように、システムを調整する必要があるでしょう。管理コンソールで「ハング」か「ロックする」が表示される場合、以下の内容をお試しください。:
+$RSIDS_WARNESC_ADD$=*" http://localhost "、又は、" http://127.0.0.1 "（の両方）を「インターネットオプション」の信頼するサイトに追加してください。...
+$RSIDS_WARNESC_DISABLE$=*コントロール・パネルのプログラムの追加と削除、Windowsコンポーネントの追加と削除にある、Internet Explorerのセキュリティ強化の構成を無効にしてください。
+$RSIDS_WARNESC_REBOOT$=上記の方法によっては、コンピュータの再起動を必要とするばあいがあります。マイクロソフトは、これらの変更を行う前に全てのインターネット・エクスプローラーを閉じることを推奨しますが、弊社では再起動を行っていただくことを推奨いたします。
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES menu
+
+// file strings
+$RSIDS_FILE_FILE$=ファイル(&F)
+$RSIDS_FILE_OPEN$=開く(&O)...
+$RSIDS_FILE_SAVE$=保存(&S)
+$RSIDS_FILE_SAVE_AS$=名前を付けて保存(&A)...
+$RSIDS_FILE_EXPORT$=エクスポート(&E)...
+$RSIDS_FILE_IMPORT$=インポート...
+$RSIDS_FILE_CLOSE$=閉じる(&C)
+
+// help strings
+$RSIDS_HELP_HELP$=ヘルプ(&H)
+$RSIDS_HELP_MORE_THEMES$=他のテーマ(&M)...
+$RSIDS_HELP_SHARE_THEME$=共有テーマ(&S)...
+$RSIDS_HELP_ABOUT$=Serv-Uトレイについて(&A)...
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES string table
+
+IDS_SERVICE_DESC=ファイルサービスを提供しリモートFTP、SSH、Web(HTTP)クライアントがこのコンピュータに接続するのを許可します。
+IDS_SUEXE_SERVICE_DESC=FTPサービスを提供するために、リモートFTPクライアントがこのコンピュータに接続するのを許可します。
+IDS_ON=オン
+IDS_OFF=オフ
+IDS_BLANK= 
+IDS_SSH_CHANGE_PASSWORD_PROMPT=新しいパスワードを入力してください
+
+IDS_EVENT=イベント
+IDS_USER_WELCOME_MESSAGE=ユーザWelcomeメッセージ
+IDS_DATA1_SUEVENT_ID_USER_LOGIN=ユーザ $Name はログインされました ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGIN=次から接続されました $IP ($IPName)\n$UThisName アクティブなセッション\n$UserSessions24H はログインから24時間経過しています。
+IDS_DATA1_SUEVENT_ID_USER_LOGOUT=ユーザ $Name はログアウトしました ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGOUT=IP: $IP ($IPName)\n$UThisName アクティブなセッション残り\n$UserSessions24H はログインから24時間経過しています。
+IDS_DATA1_SUEVENT_ID_USER_LOGIN_FAILURE=無効な $Protocol ログイン試行： $Name
+IDS_DATA2_SUEVENT_ID_USER_LOGIN_FAILURE=IP: $IP ($IPName)
+IDS_DATA1_SUEVENT_ID_USER_ADDED=新しいアカウント情報
+IDS_DATA2_SUEVENT_ID_USER_ADDED=あなたのログイン情報はつぎの通りです。:\n\nログインID:\t$Name\nパスワード:\t$Password\n\nご不明な点がございます場合、システム管理者へお問い合わせください。\nこれらは、このサーバのアカウント情報を含むため、\n取り扱いにはご注意ください。
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED=$IP はブロックされました
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED=$IP ($IPName) は恒久的にブロックされました
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED_TIME=$IP は一時的にブロックされています
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED_TIME=$IP ($IPName) は、次の時間ブロックされます： $TimeRemaining
+IDS_DATA1_SUEVENT_ID_FILE_UPLOAD=$Name はファイルをアップロードしました
+IDS_DATA2_SUEVENT_ID_FILE_UPLOAD=$LocalPathName\nSize: $FileSizeFmt バイト ($FileSizeKB KB)\n$TransferBytes バイト転送されました。 $TransferKBPerSecond KB/秒 \nプロトコル: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DOWNLOAD=$Name はファイルをダウンロードしました
+IDS_DATA2_SUEVENT_ID_FILE_DOWNLOAD=$LocalPathName\nSize: $FileSizeFmt baito バイト ($FileSizeKB KB)\n$TransferBytes バイト転送されました。 $TransferKBPerSecond KB/秒 \nプロトコル: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DELETE=$Name はファイルを削除しました
+IDS_DATA2_SUEVENT_ID_FILE_DELETE=$LocalPathName\nプロトコル: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_MOVE=$Name はファイルの名前の変更、または移動しました。
+IDS_DATA2_SUEVENT_ID_FILE_MOVE=$OldLocalPathName\n\n-- は、次へ変更 --\n\n$LocalPathName
+IDS_DATA1_SUEVENT_ID_DIR_CREATE=$Name はディレクトリを作成しました
+IDS_DATA2_SUEVENT_ID_DIR_CREATE=$LocalPathName\nプロトコル: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_DELETE=$Name は、ディレクトリを削除しました
+IDS_DATA2_SUEVENT_ID_DIR_DELETE=$LocalPathName\nプロトコル: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_MOVE=$Name はディレクトリの名前変更、または移動しました
+IDS_DATA2_SUEVENT_ID_DIR_MOVE=$OldLocalPathName\n\n-- は、次へ変更 --\n\n$LocalPathName
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-FTP-Responses string table
+// this section is intentionally not translated, translation is optional
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-SSH string table
+// this section is intentionally not translated, translation is optional
+
+// misc. strings
+IDS_SU_HTTP_ENCRYPTED=<< 暗号化済み >>
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Tray string table
+
+// tray pop-up menu
+IDS_SU_TRAY_MENU_START_ADMIN=管理コンソールの開始(&M)...
+IDS_SU_TRAY_MENU_START_SU=Serv-Uの開始(&S)
+IDS_SU_TRAY_MENU_STOP_SU=Serv-Uの停止(&S)
+IDS_SU_TRAY_MENU_THEMES=テーマ(&T)
+IDS_SU_TRAY_MENU_SHOW_NOTIFICATIONS=通知の表示(&D)
+IDS_SU_TRAY_MENU_START_AUTOMATICALLY=自動的にトレイを開始(&U)
+IDS_SU_TRAY_MENU_START_SERV_U_SERVICE=Serv-Uをサービスとして開始(&V)
+IDS_SU_TRAY_MENU_USE_BROWSER=システム・ブラウザを使用(&B)
+IDS_SU_TRAY_MENU_KB=知識ベース(&K)...
+IDS_SU_TRAY_MENU_SUPPORT=技術サポート(&E)...
+IDS_SU_TRAY_MENU_ABOUT=Serv-Uトレイに関して(&A)...
+IDS_SU_TRAY_MENU_REGISTER=登録(&R)...
+IDS_SU_TRAY_MENU_EXIT_TRAY=トレイの終了(&E)
+
+// sub-menus
+IDS_SU_TRAY_MENU_DEFAULT_THEME=デフォルト(&D)
+IDS_SU_TRAY_MENU_DEFAULT_NO_ANI_THEME=アニメーションなしのデフォルト(&E)
+IDS_SU_TRAY_MENU_CLASSIC_THEME=古典的な緑のUマーク(&C)
+IDS_SU_TRAY_MENU_CUSTOM_THEME=カスタム(&U)
+IDS_SU_TRAY_MENU_THEME_EDITOR=テーマ・エディタ(&T)...
+
+// server states
+IDS_SERVER_STATE_NOT_RUNNING=実行されていません
+IDS_SERVER_STATE_RUNNING=実行中
+IDS_SERVER_STATE_RUNNING_LISTEN_ERROR=実行中、リスニング・エラー
+IDS_SERVER_STATE_SESSION_CONNECTED=セッションが接続されています
+IDS_SERVER_STATE_TRANSFERRING=転送中
+IDS_SERVER_STATE_PAST_TRIAL=Serv-Uの試用期間は終了しました。
+
+// management console strings
+IDS_SERVER_UP_TIME_FMT=サーバ実行時間: %s 日, %02d:%02d:%02d
+IDS_SERVER_SESSIONS_FMT=セッション: %s 現在; %s 経過（24 時間）; %s 合計
+IDS_SERVER_TRANSFER_STATS_FMT=アップ: %s; ダウン: %s
+IDS_SU_TRAY_BYTES_FMT=%s バイト
+IDS_SU_TRAY_KB_FMT=%s KB
+IDS_SU_TRAY_MB_FMT=%s MB
+IDS_SU_TRAY_GB_FMT=%s GB
+IDS_SU_TRAY_DOMAINS_FMT=ドメイン: %s／%s オンライン
+
+// tray tooltip strings
+IDS_SU_TRAY_TT_STATUS_FMT=状態: %s アップ; %s ダウン; %s セッション
+IDS_SU_TRAY_TT_RECVD_FMT=受信: %s; %s ファイル
+IDS_SU_TRAY_TT_SENT_FMT=送信: %s; %s ファイル
+IDS_SU_TRAY_TT_BPS_FMT=%s Bytes/s
+IDS_SU_TRAY_TT_KBS_FMT=%s KB/秒
+IDS_SU_TRAY_TT_MBS_FMT=%s MB/秒
+IDS_SU_TRAY_TT_GBS_FMT=%s GB/秒
+IDS_SU_TRAY_TT_64_CHARS_FMT=%s; %d セッション; %s 送信; %s 受信
+IDS_SU_TRAY_TT_STOPPED=Serv-U ファイルサーバは停止しています。
+IDS_SU_TRAY_STATUS_CHANGED=Serv-U ファイルサーバの状態
+IDS_SU_TRAY_STATUS_ONLINE=Serv-U File サーバはオンラインです。
+IDS_SU_TRAY_STATUS_OFFLINE=Serv-U File サーバはオフラインです。
+IDS_SU_TRAY_UPDATE=新しいバージョンが利用可能です
+IDS_SU_TRAY_UPDATE_AVAILABLE=Serv-Uのアップデートが利用できます。こちらをクリックして詳細を確認してください。
+IDS_SU_TRAY_STATUS_BETA_EXPIRED=このServ-Uベータ版は有効期限が切れました。
+IDS_SU_TRAY_LICENSE_VIOLATION=Serv-Uライセンス違反
+IDS_SU_TRAY_LICENSE_VIOLATION_NO_CONNS=ライセンス違反が発生しました。Serv-Uは、これが解決されるまで接続を受け付けません。
+
+// trial / reggie baloon tip strings
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_TITLE=Serv-Uの試用期間は終了しました。
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_BODY=30日の試用期間が終了しました。Serv-Uは接続を受け付ることができません。\r\n\r\nこちらをクリックして、Serv-Uを購入をご検討ください。
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_TITLE=Serv-Uの試用期間はまもなく終了します。
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_BODY_FMT=30日の試用期間は %s 日間後に終了となります。試用期間が終了すると、Serv-Uは接続を受け付けることができません。\r\n\r\nこちらをクリックして、Serv-Uの購入をご検討ください。
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_TITLE=Serv-Uのアップデート有効期限は間もなく期限切れとなります。
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_BODY_FMT=アップデートの有効期限は、あと%sで期限切れとなります。アップデートの有効期限が期限切れとなった場合、新しいバージョンのServ-Uを使用いただくことはできません。\r\n\r\nこちらをクリックして、ライセンスをアップデートしてください。
+
+// misc. strings
+IDS_SU_TRAY_STATE=状態
+IDS_SU_TRAY_IMAGES=画像
+IDS_TRAY_THEME_FILE_OPEN_FILTERS=Serv-Uトレイ・テーマファイル (*.SU-Theme)|*.SU-Theme|全てのファイル (*.*)|*.*||
+IDS_TRAY_THEME_FILEARCH_OPEN_FILTERS=Serv-Uテーマ (*.SU-Theme; *.SU-Theme-Archive)|*.SU-Theme; *.SU-Theme-Archive|Serv-Uトレイ・テーマ・ファイル (*.SU-Theme)|*.SU-Theme|Serv-U トレイ・テーマ・アーカイブ・ファイル (*.SU-Theme-Archive)|*.SU-Theme-Archive|全てのファイル (*.*)|*.*||
+IDS_SERVU_THEMES_DIR=Serv-U トレイ・テーマ
+IDS_TRAY_USER_THEME_DIR_TIP=ユーザが定義したServ-Uトレイ・テーマを含む
+// CAUTION: do not exceed 255 characters for this (or any) string
+IDS_DELETE_CREATED_DIRS_FMT=Serv-Uは、コンピュータでユーザによって作成されたデータを含むディレクトリを作成しました。\r\n\r\n例:\r\n%s\r\n\r\nこれらのディレクトリと含まれるファイルを削除したいですか?
+IDS_UNABLE_TO_LOAD_SELECTED_THEME=選択されたテーマファイルをロードできませんでした。
+IDS_UNABLE_TO_STORE_THEME=指定されたファイルにテーマを保存できません。
+IDS_THEME_CHANGED_SAVE=このテーマへの変更を行いました。\r\n\r\nこのテーマを保存しますか？
+IDS_SU_TRAY_FILE_NAME=ファイル名
+IDS_SU_TRAY_DURATION=継続期間
+IDS_SU_TRAY_INVALID_ICON=指定されたファイルは、Windowsで認識されない、また有効な\r\nイメージ・ファイルではありません。有効なイメージファイルを選択してください。
+IDS_TRAY_ALL_IMAGE_FILES=全ての画像ファイル
+IDS_TRAY_ALL_FILES=全てのファイル
+IDS_TRAY_THEME_ARCHIVEFILE_OPEN_FILTERS=Serv-Uトレイ・テーマ・アーカイブ・ファイル (*.SU-Theme-Archive)|*.SU-Theme-Archive|All Files (*.*)|*.*||
+IDS_UNABLE_TO_LOAD_ZLIB=zlib1.dllをロードできません。Serv-Uの再インストールをお試しください。
+IDS_UNABLE_TO_CREATE_THEME_ARCHIVE_FILE=指定されたアーカイブ・ファイルを作成できません。
+IDS_UNABLE_TO_OPEN_THEME_ARCHIVE_FILE=指定されたアーカイブ・ファイルを開けません。
+IDS_THEME_ARCHIVED=指定されたファイルにテーマは保存されました。
+IDS_THEME_IMPORTED=指定されたアーカイブ・ファイルからテーマはインポートされました。
+IDS_THEME_FILE_DESC=Serv-Uテーマ・ファイル
+IDS_THEME_ARCHIVE_FILE_DESC=Serv-Uテーマ・アーカイブ・ファイル
+IDS_IMPORT_ARCHIVE_FILE=選択したファイルはServ-Uテーマ・アーカイブ・ファイルであると思われます。\r\n\r\n最初にこのファイルをインポートしますか？
+IDS_MANAGEMENT_CONSOLE=Serv-U管理コンソール
+IDS_TRAY_SERVER_NOT_LISTENING_HTTP_HTTPS=Serv-Uエンジンは、HTTP、またはHTTPS要求に応答することができません。
+IDS_MANAGEMENT_CONSOLE_ALREADY_RUNNING=管理コンソールは、このコンピュータで既に動作しています。\r\n\r\nブラウザを使用してログインするか、または、もう一方のセッションを終了してください。\r\nRDP(リモート・デスクトップ・プロトコル)が動作しているとき、このエラーが発生します。
+IDS_USERS_ARE_CONNECTED_SERVICE_CHANGE=現在、サーバに接続しているユーザーがいます。サービスモードの変更は、これらのユーザを切断して、Serv-Uは再起動します。\r\n\r\n本当に今すぐこの変更を行いますか？
+IDS_CANNOT_EXEC_SERVICE_SETTING_NOT_CHANGED=サービス設定を変更するために、Serv-U.exeを実行することができません。\r\n\r\nユーザー・アカウント制御(UAC)が、ユーザーアカウントで有効されている場合、\r\nUAC設定を変更するか、無効にしてください。
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Log string table
+
+// system log strings
+IDS_LOG_SERVER_START_WELCOME_FMT=%s バージョン %s (%s) - %s, All Rights Reserved
+IDS_LOG_SERVER_START_BUILD_DATE_FMT=作成日: %s
+IDS_LOG_SERVER_OPENSSL_INIT_OKAY=SSL/TLSライブラリのロード
+IDS_LOG_SERVER_OPENSSL_INIT_FAIL=SSL/TLSライブラリはロードできません
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_ON=FIPS 140-2 モードが有効です。  Serv-Uは、FIPS 140-2 Implementation GuidanceセクションG.5ガイドラインあたり1個のマイクロソフトWindowsプラットホームで動作し、埋め込まれたFIPS140-2で有効にされた暗号のモジュール(証明書#1051)を使用します。
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_OFF=FIPS 140-2 モードは無効です。
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_NOT_SUPPORTED=FIPS 140-2はこのコンピュータでサポートされていないかもしれません。FIPS 140-2モードは、すべてのハードウェアプラットホームで動作するものではありませんが、多くの新しいプラットホームでテストされました。このモードはPentium IIIより以前の古いハードウェアプラットホームで利用できないかもしれません。
+IDS_LOG_SERVER_STOPPING=サーバは終了されます...
+IDS_LOG_SERVER_STOP=サーバは停止しました
+IDS_LOG_CMD_LISTENING_FMT=%s サーバはポート番号 %u, IP %s で動作しています。
+IDS_LOG_CMD_NOT_LISTENING_IN_USE_FMT=%s サーバは次のIPで動作していません %s: ポート番号 %u は既に使用されています。
+IDS_LOG_CMD_NOT_LISTENING_FMT=%s サーバは次のIPで動作していません %s: ポート番号 %u
+IDS_LOG_CMD_NOT_LISTENING_ADDR_NOT_AVAIL_FMT=%s サーバは次のIPで動作していません %s: 使用されていない他のIPアドレスを試しますか？
+IDS_LOG_CMD_CLOSED_FMT=%s サーバは次のポート、IPで停止しています。ポート %u, IP %s
+IDS_LOG_PERM_DATA_LISTENING_FMT=次のポートナンバーでPASV FTP接続の開始します： %u
+IDS_LOG_PERM_DATA_NOT_LISTENING_FMT=次のポート番号でPASV FTPを接続を開始できません： %u
+IDS_LOG_PERM_DATA_NOT_LISTENING_IN_USE_FMT=PASV FTPを接続を開始できません。ポート番号 %u は既に使用されています
+IDS_LOG_PERM_DATA_NOT_LISTENING_ADDR_NOT_AVAIL_FMT=次のポート番号PASV FTP接続を開始できません。： %u, 使用されていない他のIPアドレスを試しますか？
+IDS_LOG_PERM_DATA_CLOSED_FMT=次のポート番号でのPASV FTP接続は停止しています。： %u
+IDS_LOG_DOMAIN_STARTED=ドメインは開始されています
+IDS_LOG_DOMAIN_STOPPED=ドメインは停止されています
+IDS_LOG_SERVER_START_BETA_EXPIRED_FMT=ベータ版の試用期限は切れました。このビルドはあと %d 日間、動作するでしょう。
+IDS_LOG_SERVER_START_BETA_NOTICE_FMT=これはベータバージョンです。このビルドはあと%d日間、動作するでしょう。
+IDS_LOG_EVENT_COULD_NOT_EXEC_FMT=イベント エラー: "%s" を実行できませんでした。
+IDS_LOG_EVENT_COULD_NOT_EMAIL_FMT=イベント エラー: メッセージを送信できませんでした %s: %s
+IDS_LOG_SOCKET_TIME_OUT_FMT=ソケット・タイムアウト  %s 秒間、動作がありませんでした。
+IDS_LOG_EMAIL_RETRY_FMT=EMAIL RETRY: 電子メールの再送を試みました。%s へサーバ %s のポート %d を使用して。
+IDS_LOG_EMAIL_CANT_CONNECT_FMT=SMTP サーバ %s のポート %d へ接続できません。
+IDS_LOG_EMAIL_SSL_CONNECT_FAIL_FMT=SSL ネゴシエーションに失敗しました： SMTPサーバ "%s" のポート %d (SSL エラー: "%s")
+IDS_LOG_WINSOCK_INIT_FMT=WinSock バージョン %d.%d は初期化されました。
+IDS_LOG_WINSOCK_INIT_FAILED_FMT=エラー: WinSockの初期化に失敗しました。 (エラー: %d)
+
+// UPnP log strings
+IDS_LOG_UPNP_FOUND_DEVICE_FMT=UPnP: デバイスを発見しました: %s: %s ( %s サブネット)
+IDS_LOG_UPNP_DEVICE_DISCOVERY_COMPLETE_FMT=UPnP: デバイスの発見は完了しました: %s: %s [%s] ( %s サブネット)
+IDS_LOG_UPNP_MAP_SUCCESSFUL_FMT=UPnP: ポートのﾎﾟｰﾄマッピングは成功しました %d から IP %s
+IDS_LOG_UPNP_MAP_ERROR_FMT=UPnP: マッピング・ポート・エラー %d から IP %s (HTTP: %d - UPnP: %s - Desc: %s)
+IDS_LOG_UPNP_DELETE_MAP_SUCCESSFUL_FMT=UPnP: ポート%d からIP%sのポート・マップ削除は成功しました
+IDS_LOG_UPNP_DELETE_MAP_ERROR_FMT=UPnP: ポート %d から %s ポートマッピングの削除エラー(HTTP: %d - UPnP: %s - Desc: %s)
+IDS_LOG_UPNP_DELETE_MAPS_SUCCESSFUL_FMT=UPnP: ポート %d-%d から IP %sのポート・マップの削除は成功しました
+IDS_LOG_UPNP_MAPS_SUCCESSFUL_FMT=UPnP: ポート %d-%d から IP %s のポートマッピングは成功しました
+IDS_LOG_UPNP_DELETE_MAPS_ERROR_FMT=UPnP: ポート %d-%d から IP %s のマッピング削除エラー
+IDS_LOG_UPNP_MAPS_ERROR_FMT=UPnP: ポート %d-%d から IP %s へのマッピングエラー
+IDS_LOG_UPNP_TIMEOUT=タイムアウト
+IDS_LOG_UPNP_NA=N/A
+IDS_LOG_UPNP_DEAD_DEVICE_FMT=UPnP: 利用できないデバイス: %s: %s [%s] (%s サブネット)
+IDS_LOG_UPNP_NO_DEVICES_REMAIN=UPnP: 利用可能なUPnPデバイスがありません。必要に応じて設定を再読み込みしてください。
+IDS_LOG_UPNP_DEVICE_REDISCOVERY_FMT=UPnP: デバイスからの応答がありません。再試行 %d: %s: %s [%s] ( %s サブネット)
+IDS_LOG_UPNP_DEVICE_INSPECTION=UPnP: デバイスの点検:  %s: %s [%s] (%s サブネット)
+
+// socket types
+// ^^^^^ intentionally not translated ^^^^^
+
+// session log strings
+IDS_LOG_RECEIVING_FILE_FMT=ファイルを受信しています "%s"
+IDS_LOG_RECEIVED_FILE_FMT=ファイルの受信 "%s" は成功しました。 (%s KB/秒 - %s バイト)
+IDS_LOG_SENDING_FILE_FMT=ファイルを送信しています "%s"
+IDS_LOG_SENDING_THUMBNAIL_FMT=サムネイルを送信しています。 (%s x %s) "%s"
+IDS_LOG_SENT_FILE_FMT=ファイルの送信 "%s" は成功しました。 (%s KB/秒 - %s バイト)
+IDS_LOG_SENT_THUMBNAIL_FMT=サムネイルの送信 (%s x %s) "%s" は成功しました (%s KB/秒 - %s バイト)
+IDS_LOG_FILE_DELETED_FMT=ファイルの削除: "%s"
+IDS_LOG_FILE_DIR_RENAME_FMT=名前の変更 "%s" から "%s"
+IDS_LOG_DIR_CREATE_FMT=ディレクトリの作成: "%s"
+IDS_LOG_DIR_DELETE_FMT=ディレクトリの削除: "%s"
+IDS_LOG_IP_ADDRESS_REVERSE_DNS_FMT=IP-名: %s (%s)
+
+// SSH log command strings
+IDS_SSH_UNEXPECTED_MESSAGE_FMT=許可されていない SSH2 コマンド (0x%08x - %d)
+IDS_SSH2_MSG_USERAUTH_REQUEST_FMT=SSH2_MSG_USERAUTH_REQUEST: ユーザ: %s; サービス: %s; 種類: %s
+IDS_SSH_STATUS_COMMAND_FMT={0x%08x} %s
+IDS_SSH_FXP_INIT_FMT=SSH_FXP_INIT: クライアント・バージョン %d (%s)
+IDS_SSH_FXP_OPEN_FMT={0x%08x} SSH_FXP_OPEN: パス: "%s"
+IDS_SSH_FXP_CLOSE_FMT={0x%08x} SSH_FXP_CLOSE: ハンドル: 0x%08x
+IDS_SSH_FXP_READ_FMT={0x%08x} SSH_FXP_READ: ハンドル: 0x%08x; %u バイト
+IDS_SSH_FXP_WRITE_FMT={0x%08x} SSH_FXP_WRITE: ハンドル: 0x%08x; %u バイト
+IDS_SSH_FXP_STAT_FMT={0x%08x} %s: パス: "%s"
+IDS_SSH_FXP_FSTAT_FMT={0x%08x} SSH_FXP_FSTAT: ハンドル: 0x%08x
+IDS_SSH_FXP_SETSTAT_FMT={0x%08x} SSH_FXP_SETSTAT: パス: "%s"
+IDS_SSH_FXP_FSETSTAT_FMT={0x%08x} SSH_FXP_FSETSTAT: ハンドル: 0x%08x
+IDS_SSH_FXP_OPENDIR_FMT={0x%08x} SSH_FXP_OPENDIR: パス: "%s"
+IDS_SSH_FXP_READDIR_FMT={0x%08x} SSH_FXP_READDIR: ハンドル: 0x%08x
+IDS_SSH_FXP_REMOVE_FMT={0x%08x} SSH_FXP_REMOVE: パス: "%s"
+IDS_SSH_FXP_MKDIR_FMT={0x%08x} SSH_FXP_MKDIR: パス: "%s"
+IDS_SSH_FXP_RMDIR_FMT={0x%08x} SSH_FXP_RMDIR: パス: "%s"
+IDS_SSH_FXP_REALPATH_FMT={0x%08x} SSH_FXP_REALPATH: パス: "%s"
+IDS_SSH_FXP_RENAME_FMT={0x%08x} SSH_FXP_RENAME: 古い: "%s"; 新しい: "%s"
+IDS_SSH_FXP_READLINK_FMT={0x%08x} SSH_FXP_READLINK: パス: "%s"
+
+// SSH login reply strings
+IDS_SSH2_MSG_USERAUTH_SUCCESS=SSH2_MSG_USERAUTH_SUCCESS: ログイン成功
+IDS_SSH2_MSG_USERAUTH_FAILURE=SSH2_MSG_USERAUTH_FAILURE: ログイン失敗
+IDS_SSH2_MSG_USERAUTH_PASSWD_CHANGEREQ=SSH2_MSG_USERAUTH_PASSWD_CHANGEREQ: パスワードは有効期限切れです
+
+// SSH log reply strings
+IDS_SSH_STATUS_REPLY_FMT={0x%08x} %s: %s
+IDS_SSH_FXP_INIT_REPLY_FMT=SSH_FXP_VERSION: サーバ・バージョン %d
+IDS_SSH_FXP_OPEN_REPLY_FMT={0x%08x} SSH_FXP_HANDLE: ファイルのハンドル: 0x%08x
+IDS_SSH_FXP_OPENDIR_REPLY_FMT={0x%08x} SSH_FXP_HANDLE: ディレクトリのハンドル: 0x%08x
+IDS_SSH_FXP_READDIR_REPLY_FMT={0x%08x} SSH_FXP_NAME: 見つかりました %u アイテム
+IDS_SSH_FXP_REALPATH_REPLY_FMT={0x%08x} SSH_FXP_NAME: パス: "%s"
+IDS_SSH_FXP_ATTRS_REPLY_FMT={0x%08x} SSH_FXP_ATTRS
+IDS_SSH_FXP_DATA_REPLY_FMT={0x%08x} SSH_FXP_DATA: %u バイト
+
+// SSH_FXP_STAT error strings
+// ^^^^^ intentionally not translated ^^^^^
+
+// HTTP log command strings
+IDS_HTTP_LOGIN_FMT=HTTP_LOGIN: ユーザ: %s
+IDS_HTTP_LOGIN_DOMAIN_FMT=HTTP_LOGIN: ユーザ: %s; ドメイン: %s
+IDS_HTTP_LOGOUT=HTTP_LOGOUT
+IDS_HTTP_LIST_FMT=HTTP_LIST: パス: "%s"
+IDS_HTTP_DOWNLOAD_FMT=HTTP_DOWNLOAD: パス: "%s"
+IDS_HTTP_DOWNLOAD_THUMBNAIL_FMT=HTTP_DOWNLOAD: パス: "%s"; サムネイル: 1; 幅: %d; 高さ: %d
+IDS_HTTP_UPLOAD_FMT=HTTP_UPLOAD: パス: "%s"
+IDS_HTTP_DELETE_FMT=HTTP_DELETE: パス: "%s"
+IDS_HTTP_DELETE_DIR_FMT=HTTP_DELETE_DIR: パス: "%s"
+IDS_HTTP_CREATE_DIR_FMT=HTTP_CREATE_DIR: パス: "%s"
+IDS_HTTP_RENAME_FMT=HTTP_RENAME: 古い: "%s"; 新しい: "%s"
+IDS_HTTP_START_FVJV=HTTP_START_FVJV
+IDS_HTTP_START_ADMIN=HTTP_START_ADMIN
+IDS_HTTP_NOOP=HTTP_NOOP
+IDS_HTTP_ADMIN_COMMAND_FMT=HTTP_ADMIN_COMMAND: %s
+IDS_HTTP_ADMIN_COMMAND_OBJECT_FMT=HTTP_ADMIN_COMMAND: %s; オブジェクト: "%s"
+IDS_HTTP_ADMIN_COMMAND_OBJECT_ID_FMT=HTTP_ADMIN_COMMAND: %s; オブジェクト: "%s"; ID: %s
+IDS_HTTP_BUILD_PLAYLIST_FMT=HTTP_BUILD_PLAYLIST: %s ファイルはプレイリストに追加されました
+IDS_HTTP_GET_PLAYLIST_FMT=HTTP_GET_PLAYLIST: %s ファイルはプレイリストにあります
+IDS_HTTP_SPACE_AVAILABLE_FMT=HTTP_SPACE_AVAILABLE: パス: "%s"
+IDS_HTTP_DIRECTORY_SIZE_FMT=HTTP_DIRECTORY_SIZE: パス: "%s"
+
+// other HTTP replies
+IDS_HTTP_RETR_ERROR_REPLY_FMT=HTTP_ERROR: 読み出せません "%s"
+IDS_HTTP_STOR_ERROR_REPLY_FMT=HTTP_ERROR: 保存できません "%s"
+
+// HTTP log reply strings
+IDS_HTTP_OKAY_REPLY=HTTP_OKAY (%d): okay
+IDS_HTTP_CREATED_REPLY=HTTP_CREATED (%d): 作成されました
+IDS_HTTP_ACCEPTED_REPLY=HTTP_ACCEPTED (%d): 受け入れられました
+IDS_HTTP_NO_CONTENT_REPLY=HTTP_NO_CONTENT (%d): 内容がありません
+IDS_HTTP_OKAY_REPLY_FMT=HTTP_OKAY (%d): %s
+IDS_HTTP_MOVED_PERMANENTLY_REPLY=HTTP_MOVED_PERMANENTLY (%d): 恒久的に移動
+IDS_HTTP_MOVED_TEMPORARILY_REPLY=HTTP_MOVED_TEMPORARILY (%d): 一時的に移動
+IDS_HTTP_NOT_MODIFIED_REPLY=HTTP_NOT_MODIFIED (%d): 変更されませんでした
+IDS_HTTP_BAD_REQUEST_REPLY=HTTP_BAD_REQUEST (%d): 無効な要求
+IDS_HTTP_UNAUTHORIZED_REPLY=HTTP_UNAUTHORIZED (%d): 許可されていません
+IDS_HTTP_FORBIDDEN_REPLY=HTTP_FORBIDDEN (%d): forbidden
+IDS_HTTP_NOT_FOUND_REPLY=HTTP_NOT_FOUND (%d): 見つかりません
+IDS_HTTP_INTERNAL_SERVER_ERROR_REPLY=HTTP_INTERNAL_SERVER_ERROR (%d): 内部サーバエラー
+IDS_HTTP_NOT_IMPLEMENTED_REPLY=HTTP_NOT_IMPLEMENTED (%d): 実行されていません
+IDS_HTTP_BAD_GATEWAY_REPLY=HTTP_BAD_GATEWAY (%d): 無効なゲートウェイ
+IDS_HTTP_SERVICE_UNAVAILABLE_REPLY=HTTP_SERVICE_UNAVAILABLE (%d): サービスは利用できません
+
+// system log strings
+IDS_SYSLOG_OPENED_INTEGRATION_DLL_FMT=DLL統合は開かれました: "%s"
+IDS_SYSLOG_CLOSED_INTEGRATION_DLL_FMT=DLL統合は閉じられました DLL: "%s"
+IDS_SYSLOG_CANT_LOAD_INTEGRATION_DLL_FMT=DLL統合をひらけません: "%s"
+IDS_SYSLOG_CANT_LOAD_INTEGRATION_DLL__NO_LIC_FMT=DLL統合を許可されていません:  "%s"
+
+// security log strings
+IDS_SECLOG_CONNECTED_FMT=接続されています： %s (ローカルアドレス %s, ポート %d)
+IDS_SECLOG_IP_BANNED_FMT=次のIPアドレスからの接続を拒否： %s (ローカルアドレス %s, ポート %d)
+IDS_SECLOG_CLOSED_SESSION=セッションを閉じました
+IDS_SECLOG_IDLE_TIMEOUT=セッションの保留タイムアウト
+IDS_SECLOG_SESSION_TIMEOUT=最大セッション時間を超えました
+IDS_SECLOG_SSL_ACCEPT_FAILED_FMT=SSL接続を確立することができません (%s)
+IDS_SECLOG_USER_ADMIN_DENIED_FMT=ユーザ "%s" は管理者モードでのアクセスを試みましたが拒否されました。
+IDS_SECLOG_USER_SERVER_ADMIN_FMT=次のユーザは管理者モードでサーバに入りました "%s"
+IDS_SECLOG_USER_DOMAIN_ADMIN_FMT=次のユーザは管理者モードでドメインに入りました "%s"
+IDS_SECLOG_USER_GROUP_ADMIN_FMT=次のユーザは管理者モードでグループへ入りました "%s"
+IDS_SECLOG_USER_PASSWORD_CHANGE_FMT=ユーザ "%s" はパスワードを変更しました。
+IDS_SECLOG_PASSWORD_WRONG_TOO_MANY_TIMES_FMT=次のユーザは誤ったパスワードを多く試行しました "%s" - 切断
+IDS_SECLOG_USER_IP_BANNED_FMT=次のユーザの接続は切断されました "%s" IPアドレス %s から(ローカルアドレス %s, ポート %d)
+IDS_SECLOG_USER_NO_HOME_FMT=ユーザのログインエラー "%s",ホームディレクトリ "%s" は存在しません
+IDS_SECLOG_USER_LOGGED_IN_FMT=ユーザ "%s" はログインしました
+IDS_SECLOG_USER_LOGGED_OUT_FMT=ユーザ "%s" はログアウトしました
+IDS_SECLOG_ANONYMOUS_USER_LOGGED_IN_FMT=ANONYMOUS ログイン, パスワード: %s
+IDS_SECLOG_BLOCKING_IP_FMT=ブロック IP %s
+IDS_SECLOG_BLOCKING_IP_FOR_FMT=ブロック IP %s の %d:%02d
+IDS_SECLOG_ADMIN_OPERATION_DENIED_FMT=OPERATION: %s
+IDS_SECLOG_LIC_NO_REMOTE_ADMIN_FMT=ライセンス: リモート管理は許可されていません。IPアドレス %s, ユーザ %s.
+IDS_SECLOG_LIC_TOO_MANY_SESSIONS_FMT=LICENSE: ライセンスのセッション数を超えました, IPアドレス %s, ユーザ %s.
+IDS_SECLOG_LIC_NET_REGGIE_VIOLATION_FMT=LICENSE: ライセンス違反が検出されました。現在のライセンスは%d台のコンピュータに有効です。現在、このライセンスを使用する%d台のコンピュータがあります。これが修正されるまでServ-Uは接続を受け付けないでしょう。
+IDS_SECLOG_LIC_NET_REGGIE_VIOLATION2_FMT=LICENSE: 我々に連絡してください %s
+IDS_SECLOG_LIC_VALID_ID_PRESENT=有効な登録キーを発見しました
+IDS_SECLOG_LIC_PAST_TRIAL=LICENSE: 試用期間が終了しました。Serv-Uは接続を受け付けません。
+IDS_SECLOG_SSL_CANT_OPEN_CERT_FILE_FMT=証明書ファイルを開けません: %s
+IDS_SECLOG_SSL_CANT_OPEN_PRIVATE_KEY_FILE_FMT=プライベートキーファイルを開けません: %s
+IDS_SECLOG_SSL_CANT_LOAD_TRUSTED_CA_FILE_FMT=信用された証明機関ファイルを開くことができません: %s
+IDS_SECLOG_FAILED_LOGIN_FMT=無効な信用証明ログイン; ユーザ: "%s"; パスワード: "%s"
+IDS_SECLOG_CONNECTION_ACCEPTED_FMT=次へ接続 %s (ローカルアドレス %s, ポート %d) ACCEPTED
+IDS_SECLOG_CONNECTION_DENIED_FMT=次へ接続 %s (ローカルアドレス %s, ポート %d) DENIED
+IDS_SECLOG_SSL_CLIENT_ERROR=クライアント エラー: クライアントはSSL証明書を拒否したかもしれません。SSL証明書が認証局によって発行されていることを確実にしてください。
+IDS_SECLOG_USER_REQUESTED_PASSWORD_RECOVERY_FMT=ユーザ "%s" はパスワードのリカバリを要求しました。
+IDS_SECLOG_INTEGRATION_CONNECTION_DENIED_FMT=DLL統合: 次のIPアドレスの接続は拒否されました： %s (ローカルアドレス %s, ポート %d)
+
+// ODBC
+IDS_ODBC_ERROR=ODBC ERROR: 
+
+// triggered event log strings
+IDS_TELOG_EVENT_FMT=Event: %s (%s); 種類: %s
+IDS_TELOG_EMAIL_FMT=EMAIL; 宛先: %s
+IDS_TELOG_BALLOON_TIP_FMT=BALLOON TIP; "%s"
+IDS_TELOG_EXEC_FMT=実行; パス "%s"
+IDS_TELOG_EMAIL_ADDRESS_FMT=%s; BCC: %s
+
+// general response code values
+// ^^^^^ intentionally not translated ^^^^^
+
+// CheckUser() results
+// ^^^^^ intentionally not translated ^^^^^
+
+// CheckPassword() results
+// ^^^^^ intentionally not translated ^^^^^
+
+// ChangePassword() results
+// ^^^^^ intentionally not translated ^^^^^
+
+// Xcrc() results
+// ^^^^^ intentionally not translated ^^^^^
+
+// List() responses
+// ^^^^^ intentionally not translated ^^^^^
+
+// Retrieve() & Store() responses
+// ^^^^^ intentionally not translated ^^^^^
+
+// GetUniqueFileName() results (must be greater than Store() results)
+// ^^^^^ intentionally not translated ^^^^^
+
+// SetLastWriteTime() results
+// ^^^^^ intentionally not translated ^^^^^
+
+// SSL certificate creation
+// ^^^^^ intentionally not translated ^^^^^
+
+// licensing results
+// ^^^^^ intentionally not translated ^^^^^
+
+// validation results (the values here are a continuation of the above return codes)
+// ^^^^^ intentionally not translated ^^^^^
+
+// ODBC
+// ^^^^^ intentionally not translated ^^^^^
+
+/////////////////////////////////////////////////////////////////////////////
+// statistic strings used for saving stats to .CSV file, translation is okay
+$IDS_NAME$=名前
+$IDS_CURRENT_SESSIONS$=現在のセッション
+$IDS_HIGHEST_NUMBER_OF_SESSIONS$=最大セッション数
+$IDS_24_HOUR_SESSIONS$=24時間のセッション
+$IDS_TOTAL_SESSIONS$=合計セッション
+$IDS_AVERAGE_SESSION_LENGTH$=平均セッション長
+$IDS_LONGEST_SESSION_LENGTH$=最長セッション長
+
+$IDS_LOGINS$=ログイン
+$IDS_LOGOUTS$=ログアウト
+$IDS_CURRENT_LOGGED_IN$=現在のログイン
+$IDS_MOST_LOGGED_IN$=最高ログイン
+$IDS_AVERAGE_LOGIN_DURATION$=平均ログイン期間
+$IDS_LONGEST_LOGIN_DURATION$=最長ログイン期間
+$IDS_SHORTEST_LOGIN_DURATION$=最短ログイン期間
+$IDS_LAST_LOGIN_TIME$=最後のログイン時刻
+$IDS_LAST_LOGOUT_TIME$=最後のログアウト時刻
+
+$IDS_DOWNLOAD_RATE_KB_SEC$=ダウンロードレート KB/Sec
+$IDS_UPLOAD_RATE_KB_SEC$=アップロードレート KB/Sec
+$IDS_AVERAGE_DOWNLOAD_RATE_KB_SEC$=平均ダウンロードレート KB/Sec
+$IDS_AVERAGE_UPLOAD_RATE_KB_SEC$=A平均アップロードレート KB/Sec
+$IDS_DOWNLOAD_RATE_BYTES_SEC$=ダウンロードレート Bytes/Sec
+$IDS_UPLOAD_RATE_BYTES_SEC$=アップロードレート Bytes/Sec
+$IDS_BYTES_DOWNLOADED$=ダウンロードバイト数
+$IDS_FILES_DOWNLOADED$=ダウンロードファイル数
+$IDS_BYTES_UPLOADED$=アップロードバイト数
+$IDS_FILES_UPLOADED$=アップロードファイル数

@@ -1,0 +1,180 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Web Client\Include\ -->
+
+<!-- General -->
+$CLICK_HERE_CURRENT_DIR$=<a href="%FILE%ListDir.htm?Dir=%CURRENT_DIR%">Tryk her for at oprette en oversigt over det aktive katalog.</a>
+$WARN_IMAGE$=<img src="%FILE%Images\warn.gif" style="float:left;">
+$DELETE$=Slet
+$OPEN$=Åbn
+$CURRENTLY_LOCATED$=Logget på nu
+$USE_INHERITED$=Overfør standardværdi
+$NO_SCRIPT_TEXT$=Det virker som om, at din browser ikke er aktiveret til at køre JavaScript.  Denne side kræver, at JavaScript er aktiveret.
+$PLEASE_ENTER_USER_NAME$=Indtast venligst et brugernavn.
+
+
+<!-- Login -->
+$LOGIN_TITLE$=Serv-U fra RhinoSoft.com
+$LANGUAGE$=Sprog
+$PASSWORD$=Adgangskode
+$LOGIN$=Login
+$CHANGE_PASSWORD$=Skift adgangskode
+$REMEMBER_USER$=Husk mig
+$RELOAD$=Genindlæs
+$JSCRIPT_DISABLED_WARN$=JavaScript er ikke aktiveret i browserens indstillinger.  For at kunne bruge en Serv-U filserver skal JavaScript være aktiveret. <br /><br />Tryk på "Genindlæs" herunder, efter at JavaScript er blevet aktiveret i browserens indstillinger.
+$IE_NOT_COMPATIBLE_WARN$=Du anvender en inkompatibel version af Internet Explorer. Opdater venligst til Internet Explorer 6.0 eller højere for at kunne bruge Serv-U.
+$BROWSER_NOT_COMPATIBLE_WARN$=Den browser du benytter, er ikke kompatibel med den aktuelle version af Serv-U. Brug enten Internet Explorer 6.0+ eller Firefox 1.0+.
+
+
+<!-- Languages -->
+$ENGLISH$=English (Engelsk)
+$GERMAN$=Deutch (Tysk)
+$ITALIAN$=Italiano (Italiensk)
+$FRENCH$=Français (Fransk)
+$SPANISH$=Español (Spansk)
+$PORTUGUESE$=Português (Portugiser)
+$SWEDISH$=Svenska (Svensk)
+$FINISH$=Suomi (Fuldende)
+$NORWEGIAN$=Norsk (Nordmand)
+$DANISH$=Dansk
+$RUSSIAN$=Русский (Rusland)
+$TRADITIONAL_CHINESE$=繁體中文 (Traditionel kinesisk)
+$SIMPLIFIED_CHINESE$=简体中文 (Forenklet kinesisk)
+$JAPANESE$=日本語 (Japansk)
+
+
+<!-- Logout -->
+$LOGOUT_TITLE$=Logget af
+$LOGOUT_DESC$=Du er nu blevet logget af.  <a href="%LOGIN%">Tryk her for at logge på igen.</a>
+
+
+<!-- Login Change Password -->
+$PASSWORD_EXPIRED_TITLE$=Adgangskoden er udløbet - Skift adgangskode
+$PASSWORD_EXPIRED_DESC$=Din adgangskode er udløbet. Skift venligst din adgangskode, før du fortsæter.
+
+
+<!-- Session Not Found -->
+$SESSION_NOT_FOUND_TITLE$=Uautoriseret - Sessionen blev ikke fundet
+$SESSION_NOT_FOUND_HEAD$=401 uautoriseret. Sessionen er angivet, men findes ikke
+$SESSION_NOT_FOUND_DESC$=Den angivne session findes ikke.  Dette kan være grundet en lang periode med aktivitet.  Prøv at logge på igen.
+
+
+<!-- Not Logged In -->
+$NOT_LOGGED_IN_TITLE$=Uautoriseret - Ikke logget på
+$NOT_LOGGED_IN_HEAD$=401 uautoriseret. Du er ikke logget på
+$NOT_LOGGED_IN_DESC$=Du er ikke autoriseret til at udføre den ønskede handling.  <a href="%LOGIN%">Log venligst på, før du forsøger denne handling.</a>
+
+
+<!-- Permission Denied -->
+$PERMISSION_DENIED_TITLE$=Tilladelse afvist
+$PERMISSION_DENIED_DESC$=Tilladelse afvist
+
+
+<!-- Listing -->
+$CURR_DIR_HOST$=%HOST%
+$CURR_DIR_NAME$=%CURRENT_DIR_NAME%
+$MOD_TIME$=Tid
+$ATTRS$=Attributter
+$THUMBNAIL_LIST$=Miniaturer
+$UPLOAD_ACTION$=Upload
+$UPLOAD$=Upload
+$UPLOAD_ALT$=Upload
+$THUMBNAILS_ALT$=Miniaturer
+$DETAILS_ALT$=Detaljer
+$CREATE_DIR_ALT$=Opret katalog
+$FILETOOLS$=Værktøjer
+$DOWNLOAD$=Download
+$THUMBNAIL_SIZE$=Størrelse af miniature
+$SELECT_THUMBNAIL_SIZE$=Vælg størrelse
+$PREVIEW_IMAGE$=Eksempel på billede
+$CHANGE_PASSWORD_BUTTON$=Skift adgangskode
+$FILE_PATH$=Filsti
+$PLAY_MEDIA$=Afspilningsmedie
+$PLAY_LIST$=Afspilningsliste
+$AUDIO_PLAY_LIST$=Audio-afspilningsliste
+$PLAYLIST_SIZE$=Afspilningslistens størrelse
+$SHUFFLE_PLAYLIST$=Blanding afspilningsliste
+$NEXT_MEDIA_FILE$=Næste mediefil
+$PREVIOUS_MEDIA_FILE$=Forrige mediefil
+$HOME$=Hjem
+
+<!-- Thumbnail Listing -->
+$DETAIL_LIST$=Detaljer
+
+
+<!-- STOR File Uploaded -->
+$STOR_FILE_UPLOADED_TITLE$=Filen er uploadet
+$STOR_FILE_UPLOADED_DESC$=Filen er blevet uploadet.<br><br>$CLICK_HERE_CURRENT_DIR$
+
+
+<!-- Rename -->
+$RENAME_TITLE$=Omdøb
+$RENAME_DESC$=Indtast det nye navn:
+$NEW_NAME$=Nyt navn
+$RENAME$=Omdøb
+
+
+<!-- Delete -->
+$DELETE_DIR$=Er du sikker på, at du vil slette det valgte katalog?
+$DELETE_FILE$=Er du sikker på, at du vil slette den valgte fil?
+
+
+<!-- Style Swap Properties -->
+$BOX_WIDTH_SMALL$=boksbredde300
+
+
+<!-- Overwrite file on upload -->
+$OVERWRITE_FILE$=Er du sikker på, at du vil overskrive denne fil?
+
+
+<!-- **************** ImagePreviewDialog.htm **************** -->
+$IMAGE_DIALOG_TITLE$=Eksempel på billede
+$PREVIOUS_IMAGE$=Forrige billede
+$PAUSE_SLIDESHOW$=Sæt lysbilledshow på pause
+$PLAY_SLIDESHOW$=Afspil lysbilledshow
+$NEXT_IMAGE$=Næste billede
+$OF$=of
+$IMAGES$=Billeder
+$SLIDE_SHOW$=Lysbilledshow
+$SLIDE_SHOW_SPEED$=Hastighed for lysbilledshow
+$FAST$=Hurtigt
+$SLOW$=Langsomt
+
+
+<!-- **************** AlertDialog.htm **************** -->
+$SELECT_FILE_DELETE$=Vælg venligst først en fil eller et katalog, der skal slettes.
+$SELECT_FILE_RENAME$=Vælg venligst først en fil eller et katalog, der skal omdøbes.
+
+
+<!-- **************** AskUserPlacementDialog.htm **************** -->
+$ASK_USER_TITLE$=Klientindstillinger
+$CLIENT_SELECTION$=Klientvalg
+$USER_PLACEMENT_DESC1$=Vælg venligst, hvordan du ønsker at etablere adgang til din konto.  Basic Web Client er et letanvendeligt, browserbaseret interface.
+$USER_PLACEMENT_DESC2$=FTP Voyager JV er en fuldt funktionel FTP-klient, der anvender Java i browseren.
+$BASIC_WEB_CLIENT$=Basic Web Client
+$FVJV$=FTP Voyager JV
+
+
+<!-- **************** LoggedInDialog.htm **************** -->
+$LOGGED_IN_DIALOG_TITLE$=Logget på nu
+$LOGGED_IN_DESC$=Du er nu logget på. Tryk på OK for at genstarte sessionen og foretage login.
+
+
+<!-- **************** FVJVLoggedInDialog.htm **************** -->
+$FVJV_LOGGED_IN_DESC$=Du er nu logget på. 
+$FVJV_LOGGED_IN_ACTION$=Tryk her for at genstarte sessionen og foretage login.
+
+
+<!-- **************** UploadProgressDialog.htm **************** -->
+$UPLOAD_PROGRESS$=Status for upload
+$TRANSFER_RATE$=Overførselshastighed
+$WRITTEN$=Skrevet
+$REMAINING$=Mangler
+$TIME_REMAINING$=Tid tilbage
+$DESTINATION$=Destination
+$KB_SEC_LABEL$=KB/sek
+$PLEASE_SELECT_FILE_UPLOAD$=Anvend venligst knappen Gennemse for at vælge en fil til upload.
+$UPLOADING$=Uploader
+$LARGE_FILE_UPLOAD_WARN$=Uploadstatus for filer, der er større end 2 GB, kan være ufuldstændig eller upræcis pga. din webbrowser.
+$MOZ_LARGE_FILE_UPLOAD_WARN$=Mozilla-browsere tillader ikke upload af filer, der er større end 2 GB.
+$UNABLE_TO_UPLOAD$=Webbrowseren kunne ikke uploade filen.  Filen er muligvis for stor for den anvendte webbrowser.  $MOZ_LARGE_FILE_UPLOAD_WARN$

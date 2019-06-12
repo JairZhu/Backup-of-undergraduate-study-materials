@@ -1,0 +1,204 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Web Client\Include\ -->
+
+<!-- General -->
+$CLICK_HERE_CURRENT_DIR$=<a href="%FILE%ListDir.htm?Dir=%CURRENT_DIR%">こちらをクリックして現在のディレクトリを表示してください。</a>
+$WARN_IMAGE$=<img src="%FILE%Images\warn.gif" style="float:left;">
+$DELETE$=削除
+$OPEN$=開く
+$CURRENTLY_LOCATED$=現在の場所
+$USE_INHERITED$=デフォルト値を使用
+$NO_SCRIPT_TEXT$=ブラウザでJavaScriptの実行が有効にされていないようです。このページは、JavaScriptが有効にされている必要があります。
+$PLEASE_ENTER_USER_NAME$=ログインIDを入力してください。
+$FOLDER_SIZE$=フォルダ・サイズ
+$DIR_PROPERTIES$=ディレクトリ・プロパティ
+$MODIFIED_TIME$=更新日時
+$CREATED_TIME$=作成日時
+$LAST_ACCESSED_TIME$=アクセス日時
+
+<!-- Login -->
+$LOGIN_TITLE$=Serv-U from RhinoSoft.com
+$LANGUAGE$=言語
+$PASSWORD$=パスワード
+$LOGIN$=ログイン
+$CHANGE_PASSWORD$=パスワードの変更
+$REMEMBER_USER$=ユーザ名を保存
+$RELOAD$=更新
+$JSCRIPT_DISABLED_WARN$=Javaスクリプトがブラウザ設定で無効にされています。Serv-Uファイルサーバを使用するにはJavaスクリプトが有効でなければなりません。<br /><br />Javaスクリプトをブラウザ設定で有効して、「更新」をクリックしてください。
+$IE_NOT_COMPATIBLE_WARN$=このInternet Explorerのバージョンでは使用できません。Internet Explorer6.0以上へアップデートして、Serv-Uを使用してください。
+$BROWSER_NOT_COMPATIBLE_WARN$=使用されているブラウザは、Serv-Uと互換性がありません。Internet Explorer 6.0以上、Firefox 1.0、Safari 3、またはOpera 9以上をご使用ください。
+
+<!-- Languages -->
+$ENGLISH$=English （英語）
+$GERMAN$=Deutsch (ドイツ語)
+$ITALIAN$=Italiano (イタリア語)
+$FRENCH$=Français (フランス語)
+$SPANISH$=Español (スペイン語)
+$PORTUGUESE$=Português (ポルトガル語)
+$SWEDISH$=Svenska (スウェーデン語)
+$FINISH$=Suomi (フィンランド語)
+$NORWEGIAN$=Norsk (ノルウェー語)
+$DANISH$=Dansk (デンマーク語)
+$RUSSIAN$=Русский （ロシア語）
+$TRADITIONAL_CHINESE$=繁體中文 （繁体字中国語）
+$SIMPLIFIED_CHINESE$=简体中文 （簡体字中国語）
+$JAPANESE$=日本語
+
+
+<!-- Logout -->
+$LOGOUT_TITLE$=ログアウト
+$LOGOUT_DESC$=ログアウトしています。  <a href="%LOGIN%">こちらをクリックして再度ログインしてください。</a>
+$LOGGED_OUT_MSG$=ログアウトされています。
+
+
+<!-- Login Change Password -->
+$PASSWORD_EXPIRED_TITLE$=パスワードの期限切れです。 - パスワードを変更してください。
+$PASSWORD_EXPIRED_DESC$=パスワードの有効期限が切れています。継続する前にパスワードを変更してください。
+
+
+<!-- Session Not Found -->
+$SESSION_NOT_FOUND_TITLE$=許可されていません - セッションが見つかりません
+$SESSION_NOT_FOUND_HEAD$=401 許可されていません。セッションは指定されていますが存在しません。
+$SESSION_NOT_FOUND_DESC$=指定されたセッションは存在しません。これは長時間のアクティビティによる影響かもしれません。再度ログインしてください。
+
+
+<!-- Not Logged In -->
+$NOT_LOGGED_IN_TITLE$=許可されていません - ログインしていません
+$NOT_LOGGED_IN_HEAD$=401 許可されていません。ログインしていません
+$NOT_LOGGED_IN_DESC$=要求された操作を実行を許可されていません。 <a href="%LOGIN%">この操作を行う前にログインしてください。</a>
+
+
+<!-- Permission Denied -->
+$PERMISSION_DENIED_TITLE$=権限がありません
+$PERMISSION_DENIED_DESC$=権限がありません
+
+
+<!-- Listing -->
+$CURR_DIR_HOST$=%HOST%
+$CURR_DIR_NAME$=%CURRENT_DIR_NAME%
+$MOD_TIME$=時間
+$ATTRS$=属性
+$THUMBNAIL_LIST$=サムネイル
+$UPLOAD_ACTION$=アップロード
+$UPLOAD$=アップロード
+$UPLOAD_ALT$=アップロード
+$THUMBNAILS_ALT$=サムネイル
+$DETAILS_ALT$=詳細
+$CREATE_DIR_ALT$=ディレクトリの作成
+$FILETOOLS$=ツール
+$DOWNLOAD$=ダウンロード
+$THUMBNAIL_SIZE$=サムネイルのサイズ
+$SELECT_THUMBNAIL_SIZE$=サイズの選択
+$PREVIEW_IMAGE$=画像のプレビュー
+$CHANGE_PASSWORD_BUTTON$=パスワードの変更
+$FILE_PATH$=ファイルのパス
+$PLAY_MEDIA$=メディアを再生
+$PLAY_LIST$=リストを再生
+$AUDIO_PLAY_LIST$=オーディオ・プレイリスト
+$PLAYLIST_SIZE$=プレイリストのサイズ
+$SHUFFLE_PLAYLIST$=シャッフル・プレイリスト
+$NEXT_MEDIA_FILE$=次のメディア・ファイル
+$PREVIOUS_MEDIA_FILE$=前のメディア・ファイル
+$HOME$=ホーム
+$FOLDER_EMPTY$=フォルダは空です。
+$BACK$=戻る
+$FORWARD$=進む
+$HISTORY_LIST$=ヒストリ・リスト
+$SEARCH_ACTION$=検索
+$NO_FILES_FOUND$=ファイルは見つかりませんでした。
+$HTTP_MEDIA_PLAY_DISABLED$=HTTPメディア・プレイバックは管理者によって無効にされています。
+
+
+<!-- Thumbnail Listing -->
+$DETAIL_LIST$=詳細
+
+
+<!-- STOR File Uploaded -->
+$STOR_FILE_UPLOADED_TITLE$=ファイルはアップロードされました。
+$STOR_FILE_UPLOADED_DESC$=ファイルのアップロードに成功しました。<br><br>$CLICK_HERE_CURRENT_DIR$
+
+
+<!-- Rename -->
+$RENAME_TITLE$=名前の変更
+$RENAME_DESC$=新しい名前の入力:
+$NEW_NAME$=新しい名前
+$RENAME$=名前の変更
+
+
+<!-- Delete -->
+$DELETE_DIR$=本当に選択したディレクトリを削除してよろしいですか？
+$DELETE_FILE$=本当に選択したファイルを削除してもよろしいですか？
+
+
+<!-- Style Swap Properties -->
+$BOX_WIDTH_SMALL$=boxwidth300
+
+
+<!-- Overwrite file on upload -->
+$OVERWRITE_FILE$=本当にファイルを上書きしてもよろしいですか？
+
+<!-- Search -->
+$FILE_SEARCH_DESC$=ファイルの一部、または全て
+$FILE_SEARCH_TITLE$=ファイルの検索
+$SEARCH_SAMPLES$=検索例
+$SEARCH_RESULTS$=検索結果
+
+
+<!-- **************** ImagePreviewDialog.htm **************** -->
+$IMAGE_DIALOG_TITLE$=画像のプレビュー
+$PREVIOUS_IMAGE$=前の画像
+$PAUSE_SLIDESHOW$=スライドショーを一時停止
+$PLAY_SLIDESHOW$=スライドショーを再生
+$NEXT_IMAGE$=次の画像
+$OF$=／
+$IMAGES$=画像
+$SLIDE_SHOW$=スライドショー
+$SLIDE_SHOW_SPEED$=スライドショーの速さ
+$FAST$=速い
+$SLOW$=遅い
+$THUMBNAIL_SCROLL$=サムネイルのスクロール
+
+<!-- **************** AlertDialog.htm **************** -->
+$SELECT_FILE_DELETE$=最初に削除するファイルかディレクトリを選択してください。
+$SELECT_FILE_RENAME$=最初に名前を変更するファイルかディレクトリを選択してください。
+$RECOMMEND_IE_UPGRADE_1$=Microsoft Internet Explorerの古いバージョンが使用されています。インターネット・エクスプローラー8.0は、より良い性能改善と新機能を含んでいます。
+$RECOMMEND_IE_UPGRADE_2$=<a class="links" href="http://www.microsoft.com/ie" target="_blank">こちらをクリックClick here</a>して最新のInternet Explorerをダウンロードしてください。
+
+
+<!-- **************** AskUserPlacementDialog.htm **************** -->
+$ASK_USER_TITLE$=クライアント・オプション
+$CLIENT_SELECTION$=クライアントの選択
+$USER_PLACEMENT_DESC1$=アカウントにアクセスする方法を選択してください。Webクライアントは操作が容易なブラウザベースのインターフェースです。
+$USER_PLACEMENT_DESC2$=FTP Voyager JVはブラウザでJavaを利用する全ての機能を持ったFTPクライアントを提供します。
+$BASIC_WEB_CLIENT$=Webクライアント
+$FVJV$=FTP Voyager JV
+
+
+<!-- **************** LoggedInDialog.htm **************** -->
+$LOGGED_IN_DIALOG_TITLE$=既にログインしています。
+$LOGGED_IN_DESC$=既にログインしています。OKをクックしてセッションとログインをリスタートしてください。
+
+
+<!-- **************** FVJVLoggedInDialog.htm **************** -->
+$FVJV_LOGGED_IN_DESC$=既にログインしています。
+$FVJV_LOGGED_IN_ACTION$=OKをクックしてセッションとログインをリスタートしてください。
+
+
+<!-- **************** UploadProgressDialog.htm **************** -->
+$UPLOAD_PROGRESS$=アップロード処理
+$TRANSFER_RATE$=転送率
+$WRITTEN$=書き込み
+$REMAINING$=残り
+$TIME_REMAINING$=残り時間
+$DESTINATION$=場所
+$KB_SEC_LABEL$=KB/秒
+$PLEASE_SELECT_FILE_UPLOAD$=参照ボタンを使用してアップロードするファイルを選択してください。
+$UPLOADING$=アップロードしています
+$LARGE_FILE_UPLOAD_WARN$=ご使用のブラウザでは2GB以上のファイルは、正しくアップロードされないかもしれません。
+$MOZ_LARGE_FILE_UPLOAD_WARN$=Mozillaブラウザは2GB以上のファイルのアップロードを許可しません。
+$UNABLE_TO_UPLOAD$=ウェブ・ブラウザはファイルをアップロードすることができませんでした。使用されているウェブ・ブラウザではファイルが大きすぎるかもしれません。  $MOZ_LARGE_FILE_UPLOAD_WARN$
+<!-- **************** PasswordRecoveryDialog.htm **************** -->
+$RECOVER_PASSWORD_TITLE$=パスワードの復元
+$PASSWORD_RECOVERED$=パスワードの復元は成功しました。パスワードは電子メールで送られました。
+$PASSWORD_RECOVER_FAILURE_ERROR$=パスワードの復元は失敗しました。システム管理者へ連絡してください。 

@@ -1,0 +1,95 @@
+﻿<!-- Help-TOC-Strings_TW.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- String table for Help-table of contents -->
+$TITLE$=幫助目錄
+$HELP_CONTENTS_TAB$=目錄
+$HELP_INDEX_TAB$=索引
+
+
+$SERVU_FILE_SERVER$=Serv-U 檔伺服器
+	$OVERVIEW$=概述
+	$SERVU_EDITIONS$=Serv-U 版本
+	$HOW_TO_PURCHASE$=如何購買
+
+$CONTACTING_RHINOSOFT$=接洽RhinoSoft.com
+	$CONTACT_TECH_SUPPORT$=技術支援
+
+$GETTING_STARTED$=入門指南
+	$QUICK_START$=快速入門嚮導
+	$SERVU_CONCEPTS$=伺服器概念
+	$NAV_SERVU$=管理控制臺導航
+	$UIC_INFO$=使用者介面規範
+
+$SERVER$=伺服器
+	$SERVER_OVERVIEW$=伺服器概述
+	$CONF_SERVER_DETAILS$=伺服器詳細資訊
+		$SERVERCONF_IP_ACL$=IP 訪問規則
+		$SERVERCONF_DATABASE_ACCESS$=資料庫訪問
+		$SERVERCONF_LICENSE_DETAILS$=許可證資訊
+		$SERVERCONF_PROG_INFO$=程式資訊
+                $SERVERCONF_EVENTS$=伺服器事件
+	$CONF_SERVER_DIRECTORIES$=全局目錄
+		$DIRCONF_DIR_ACCESS$=目錄訪問
+		$DIRCONF_VIR_PATHS$=虛擬路徑
+	$CONF_SERVER_LIMITS_SETTINGS$=伺服器限制和設定
+		$LIMITSETTCONF_SERVER_LIMITS$=伺服器限制
+		$LIMITSETTCONF_MAINT_SERVER_SETTINGS$=伺服器設定
+		$LIMITSETTCONF_CUSTOM_COMMANDS$=FTP 設定
+		$LIMITSETTCONF_ENCRYPTION$=加密
+	$CONF_SERV_ACTIVITY_VIEW$=伺服器活動
+		$ACTVIEW_SERVER_SESS$=伺服器連線期間
+		$ACTVIEW_SERVER_STATS$=伺服器統計
+		$ACTVIEW_SERVER_LOG$=伺服器記錄檔
+
+$DOMAIN$=域
+	$DOMAIN_OVERVIEW$=域概述
+	$CONF_DOMAIN_DETAILS$=域詳細資訊
+		$DOMAINCONF_NAME_DESC$=名稱和描述
+		$DOMAINCONF_LISTENERS$=監聽器
+		$DOMAINCONF_VHOST_NAMES$=虛擬主機
+		$DOMAINCONF_IP_ACL$=IP 訪問規則
+		$DOMAINCONF_DATABASE$=資料庫訪問
+                $DOMAINCONF_EVENTS$=域事件
+                $SMTP_CONFIG$=SMTP 組態
+	$CONF_DOMAIN_DIRECTORIES$=域目錄
+		<!-- Child nodes defined at the Server level -->
+	$CONF_DOMAIN_LIMITS_SETTINGS$=域限制和設定
+		$LIMITSETTCONF_DOM_LIMITS$=域限制
+		$LIMITSETTCONF_MAINT_DOM_SETTINGS$=域設定
+		<!-- Additional child nodes defined at the Server level -->
+	$DOMAIN_ACTIVITY_VIEW$=域活動
+		$ACTVIEW_USERS$=域活動
+		$ACTVIEW_SESSION_STATS$=域統計
+		$ACTVIEW_VIEW_DOMAIN_LOG$=檢視域記錄檔
+		$ACTVIEW_CONF_LOG$=組態域記錄檔
+                $ACTVIEW_USER_GROUP_STATS$=使用者和群組統計
+
+$CONF_DOMAIN_USERS$=使用者
+	$USERCONF_ABOUT$=關於使用者帳號
+	$USERCONF_USER_INFO$=使用者資訊
+	$USERCONF_GROUPS$=群組
+	$USERCONF_WELCOME_MSG$=歡迎消息
+	$USERCONF_IP_ACL$=IP 訪問規則
+	$USERCONF_DIR_ACCESS$=目錄訪問規則
+	$USERCONF_VIR_PATHS$=虛擬路徑
+	$USERCONF_LIMITS_SETTINGS$=限制和設定
+        $USERCONF_EVENTS$=使用者事件
+	$USERCONF_QUOTAS_RATIOS$=配額和傳輸率
+	$USERCONF_WINDOWS_AUTH$=Windows 驗證
+        $USERCONF_SSH_KEY$=SSH 密鑰信息
+
+$CONF_DOMAIN_GROUPS$=群組
+	$GROUPCONF_ABOUT$=關於群組
+	$GROUPCONF_GROUP_INFO$=群組資訊
+	$GROUPCONF_MEMBERS$=群組成員
+	$GROUPCONF_WELCOME_MSG$=歡迎消息
+	$GROUPCONF_IP_ACL$=IP 訪問規則
+	$GROUPCONF_DIR_ACCESS$=目錄訪問規則
+	$GROUPCONF_VIR_PATHS$=虛擬路徑
+	$GROUPCONF_LIMITS_SETTINGS$=限制和設定
+        $GROUPCONF_EVENTS$=群組事件
+	$GROUPCONF_QUOTAS_RATIOS$=配額和傳輸率
+
+$ADDITIONAL_REFERENCE$=其他參考
+	$SYSTEM_VARS$=系統變數

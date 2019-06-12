@@ -1,0 +1,518 @@
+﻿// Serv-U_DE.str - contains German string definitions for the Serv-U RES resource files
+//
+// Strings entered in this file must be one per line and in the format of:
+// $RSIDS_SOME_STRING_NAME$=Some string value
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup dialog
+
+// upgrade notice strings
+$RSIDS_UPGRADENOTICE_TITLE$=Installation - Serv-U
+$RSIDS_UPGRADENOTICE_BACKUP$=Ihre vorherige Installation von Serv-U wurde in folgendem Verzeichnis gesichert:
+$RSIDS_UPGRADENOTICE_IMPORTED$=Folgende Informationen wurden importiert:
+$RSIDS_UPGRADENOTICE_IMPORT_INFO$=%d Domäne(n), %d Benutzerkonto(en), %d Gruppe(n)
+
+// old reggie strings
+$RSIDS_OLDREGGIE_TITLE$=Installation - Serv-U
+$RSIDS_OLDREGGIE_INVALID$=Ihre aktuelle Serv-U Registrierung ist für diese Version nicht gültig, wahrscheinlich ist die Updategarantie vorüber.\n\nUm die Updategarantie zu verlängert, folgen Sie bitte diesen Link:
+$RSIDS_OLDREGGIE_CUSTOMER_SUPPORT$=http://www.kapper.net/customer/
+$RSIDS_OLDREGGIE_WARNING$=Wenn Sie mit der Installation fortfahren, läuft Serv-U unregistriert und dies ist eventuell nicht in Ihrem Sinne.  Wir empfehlen Ihnen, die Installation abzubrechen.
+$RSIDS_OLDREGGIE_INSTRUCTIONS$=Um die Installation abzubrechen, klicken Sie auf Abbrechen. Um fortzufahren auf Weiter.
+
+// beta warning strings
+$RSIDS_BETAWARNING_TITLE$=Installation - Serv-U
+$RSIDS_BETAWARNING_WARNING$=Sie installieren eine Beta Version von Serv-U.  Serv-U Beta Versionen sind als Entwicklungsversionen zu betrachten und sollten nur in dem Bewusstsein verwendet werden, dass eventuell Fehler enthalten sind.
+$RSIDS_BETAWARNING_CEASE$=Diese Software stellt seine Funktionen %d Tage nach dem Build Date (generiert am) ein.  Im Serverlog finden Sie dazu weitere Informationen.
+$RSIDS_BETAWARNING_CONTINUE$=Mit der Fortsetzung der Installation, sind Sie mit den Risiken, die Sie mit der Installation von Beta-Software eingehen, einverstanden.
+$RSIDS_BETAWARNING_INSTRUCTIONS$=Um diese Installation abzubrechen, klicken Sie auf Abbrechen. Um fortzufahren, auf Weiter.
+$RSIDS_BETAWARNING_BUILT$=Generiert am:
+$RSIDS_BETAWARNING_EXPIRES$=Läuft ab am:
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup string table
+
+IDS_OLDREGGIE_COMMENT=Bitte Lesen Sie folgend Informationen über Ihre Registrierung, bevor Sie fortfahren.
+IDS_OLDREGGIE_HEADER=Ungültiger Registrierungsschlüssel
+IDS_SERVER_SECURITY_REQD=Serv-U 6 ermöglichte es, den Server ohne Sicherheitseinstellung zu starten.  Diese Möglichkeit besteht nicht mehr.
+IDS_DIR_CACHE_OBSOLETE=Die Funktion Verzeichnis-Cache aus Version 6 wurde als überflüssig entfernt.  Serv-U 8 führt Verzeichnislistings in anderen Threads aus.
+IDS_SEND_RECV_BUFFERS=Sende- und Empfangspuffergrössen werden nun automatisch von Serv-U kalkuliert, um die maximale Transferrate zu erreichen.
+IDS_LINKS_DEPRECATED=Das Anlegen von eingebauten UNIX-mässigen Links wird von Serv-U nicht mehr unterstützt.  Bitte verwenden Sie stattdessen Sie Virtuelle Pfadzuweisungen.
+IDS_NO_GROUP_ADMIN=Das Gruppenadministrator Recht wurde in der Version 8 entfernt. Konten mit diesem Rechte haben nun keine administrativen Rechte mehr.
+IDS_SHUTTING_DOWN=Serv-U wird heruntergefahren...
+IDS_UPDATING_DATA=Dateien werden aktualisert...
+IDS_BACKING_UP=Einstellungen werden gesichert...
+
+IDS_CHECKING_REGGIE=Registrierung wird geprüft...
+IDS_UPNP_DISCOVER=Warte auf UPnP Suche...
+IDS_UN_HEADER=Upgrade Hinweise
+IDS_UN_COMMENT=Bitte prüfen Sie folgende Hinweise, die während dem Import Ihrer Serv-U Daten aufgezeichnet werden.
+IDS_TRAY_PASSWORD_SET=Die Serv-U Management Konsole erfordert das gleiche Kennwort, wie Sie es in der vorherigen Serv-U Version verwendet haben.
+IDS_LOCK_IN_HOME_CHANGE=Vorherige Versionen zeigen das Stammverzeichnis des Benutzers als "/", wenn dieser nicht darin beschränkt war. Diese Einstellung (RootIsDrives) wurde für den Server, die Domäne, den Benutzer oder die Gruppe geändert.
+IDS_ODBC_DOMAIN_UPGRADED=Ihre ODBC Domänenbenutzer und -Gruppen wurden in neue Tabellen und Zeilen im Serv-U 8 Format kopiert. Die SQL Vorlagen wurde auf Serv-U 8 Standards geändert. Ihre Originaldaten wurden NICHT aus Ihrer Datenbank entfernt!
+
+IDS_BETA_HEADING=Serv-U Beta Installation
+IDS_BETA_COMMENT=Bitte lesen Sie folgende wichtigen Informationen über diesen Serv-U Build.
+IDS_MSG_TAGS_CHANGED=Nachrichtenvariable von Serv-U haben sich gerändert. Variablennamen müssen mit "$" anstatt "%" beginnen. Wenn Sie Nachrichtendateien verwenden, müssen Sie diese Variable händisch ändern.
+
+/////////////////////////////////////////////////////////////////////////////
+// password recovery message strings
+IDS_PWDREC_SUBJECT=Ihre Konto Informationen
+IDS_PWDREC_MESSAGE=Hallo$SpaceFullName,\n\njemand hat Ihre Anmeldeinformationen angefordert:\n\nBenutzername:\t$Name\Kennwort:\t$Password\n\nSollten Sie Fragen haben, kontaktieren Sie bitte Ihren Systemadministrator.\nBitte behalten Sie diese Informationen für sich, da es sich um\nIhre persönlichen Zugangsdaten zu diesem Server handelt.\n\nDanke!
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES dialog
+
+// theme editor strings
+$RSIDS_THEMEEDITOR_TITLE$=Themen Editor
+$RSIDS_THEMEEDITOR_DESC$=Der Serv-U Themeneditor erlaubt es Ihnen zu definieren, wie die Serv-U Symbolleisten Applikation arbeitet.  Verwenden Sie das Datei Menü um Themen zu Öffnen und Speichern.
+$RSIDS_THEMEEDITOR_NAME$=&Name:
+$RSIDS_THEMEEDITOR_ICON_LISTS$=&Symbollisten:
+$RSIDS_THEMEEDITOR_EDIT$=&Bearbeiten...
+
+// icon list strings
+$RSIDS_ICONLIST_TITLE$=Symbolliste
+$RSIDS_ICONLIST_DESC$=Die unten aufgelisteten Symbole werden dazu verwendet den Status von Serv-U zu zeigen.  Definieren Sie einen Pfad zu Symboldateien und die Laufzeit.
+$RSIDS_ICONLIST_ICONS$=S&ymbole:
+$RSIDS_ICONLIST_ADD$=&Hinzufügen...
+$RSIDS_ICONLIST_EDIT$=&Bearbeiten...
+$RSIDS_ICONLIST_DELETE$=&Löschen
+$RSIDS_ICONLIST_MOVE_UP$=Nach &Oben
+$RSIDS_ICONLIST_MOVE_DOWN$=Nach &Unten
+$RSIDS_ICONLIST_CLOSE$=&Schließen
+$RSIDS_ICONLIST_INFO$=Symbole sollten nur 16x16 pixels gross sein, die meisten Bildtypen werden unterstützt.
+
+// icon dialog strings
+$RSIDS_ICON_TITLE$=Symbol
+$RSIDS_ICON_OK$=OK
+$RSIDS_ICON_CANCEL$=Abbrechen
+$RSIDS_ICON_FILE_PATH$=&Pfad zur Bilddatei:
+$RSIDS_ICON_DURATION$=&Ablaufzeit:
+$RSIDS_ICON_TIME_INFO$=(Millisekunden; 1000 Millisekunden = 1 Sekunde)
+$RSIDS_ICON_BROWSE$=&Durchsuchen...
+$RSIDS_ICON_INFO$=Die Bildatei kann von jedem Typ sein, den Windows erkennt.  Die empfohlene Grösse ist 16x16 Pixel.  Alle Bilder werden auf 16x16 angepasst, wenn Sie in der Symbolleiste angezeigt werden.
+
+// managment console strings
+$RSIDS_MANAGMENTCONSOLE_TITLE$=Serv-U Management Konsole
+
+// warn esc strings
+$RSIDS_WARNESC_TITLE$=Windows Erweiterte Internet Sicherheitskonfiguration aktiviert
+$RSIDS_WARNESC_OK$=OK
+$RSIDS_WARNESC_CANCEL$=Abbrechen
+$RSIDS_WARNESC_DONT_WARN$=&Nachricht nicht mehr anzeigen.
+$RSIDS_WARNESC_ENABLED$=Auf diesem Computer ist die "Erweiterte Internet Sicherheitskonfiguration (ESC)" von Microsoft aktiviert.
+$RSIDS_WARNESC_TROUBLESHOOT$=Damit die Serv-U Management Konsole richtig funktioniert, müssen Sie Ihr System anpassen.  Wenn die Management Konsole "hängt" oder "eingeforen" ist, müssen Sie wahrscheinlich Ihr System anpassen, bitte versuchen Sie folgendes:
+$RSIDS_WARNESC_ADD$=* Hinzufügen von "http://localhost" und/oder "http://127.0.0.1" zu Ihren vertrauenswürdigen Seiten unter "Internetoptionen | Sicherheit" in der Systemsteuerung.
+$RSIDS_WARNESC_DISABLE$=* Deaktivieren von "Internet Explorer erweiterte Sicherheitskonfiguartion" in der Systemsteuerung unter "Software | Windowskomponenten hinzufügen/entfernen".
+$RSIDS_WARNESC_REBOOT$=Jede dieser Lösungen erfordern einen Neustart Ihres Rechners.  Microsoft empfiehlt, vor diesen Änderungen alle Programme und geöffnete Internet Explorer Fenster zu schließen, wir haben die Erfahrung gemacht, dass ein Neustart die beste Lösung ist.
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES menu
+
+// file strings
+$RSIDS_FILE_FILE$=&Datei
+$RSIDS_FILE_OPEN$=&Öffnen...
+$RSIDS_FILE_SAVE$=&Speichern
+$RSIDS_FILE_SAVE_AS$=S&peichern unter...
+$RSIDS_FILE_EXPORT$=&Exportieren...
+$RSIDS_FILE_IMPORT$=Importieren...
+$RSIDS_FILE_CLOSE$=S&chließen
+
+// help strings
+$RSIDS_HELP_HELP$=&Hilfe
+$RSIDS_HELP_MORE_THEMES$=&Mehr Themen...
+$RSIDS_HELP_SHARE_THEME$=&Themen teilen...
+$RSIDS_HELP_ABOUT$=&Über Serv-U Symbol...
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES string table
+
+IDS_SERVICE_DESC=Bietet Dateidienste und erlaubt den Zugriff auf diesen Computer via FTP, SSH und Web (HTTP) Clients.
+IDS_SUEXE_SERVICE_DESC=Bietet FTP Dienste und erlaubt FTP Clients sich mit diesem Computer zu verbinden.
+IDS_ON=ein
+IDS_OFF=aus
+IDS_BLANK= 
+IDS_SSH_CHANGE_PASSWORD_PROMPT=Bitte geben Sie ein neues Kennwort ein
+
+IDS_EVENT=Ereignis
+IDS_USER_WELCOME_MESSAGE=Benutzer Willkommensnachricht
+IDS_DATA1_SUEVENT_ID_USER_LOGIN=Benutzer "$Name" hat sich angemeldet ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGIN=Verbindung von $IP ($IPName)\n$UThisName aktive Sitzungen \n$UserSessions24H Anmeldungen innerhalb der letzten 24 Stunden
+IDS_DATA1_SUEVENT_ID_USER_LOGOUT=Benutzer "$Name" hat sich abgemeldet ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGOUT=IP: $IP ($IPName)\n$UThisName noch aktive Sitzungen\n$UserSessions24H Anmeldungen innerhalb der letzten 24 Stunden
+IDS_DATA1_SUEVENT_ID_USER_LOGIN_FAILURE=Ungültiger $Protocol Ameldeversuch von "$Name"
+IDS_DATA2_SUEVENT_ID_USER_LOGIN_FAILURE=IP: $IP ($IPName)
+IDS_DATA1_SUEVENT_ID_USER_ADDED=Neue Konto Informationen
+IDS_DATA2_SUEVENT_ID_USER_ADDED=Willkommen! Ihr Konto wurde angelegt. Die Anmeldedaten lauten:\n\nBenutzername:\t$Name\Kennwort:\t$Password\n\nWenn Sie Fragen dazu haben, kontaktieren Sie bitte Ihren Systemadministrator.\nBitte behalten Sie diese Informationen für sich, da sie Ihren persönlichen Zugang zu diesem Server betreffen\n\nDanke!
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED=$IP wurde gesperrt
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED=$IP wurde gesperrt
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED=$IP ($IPName) permanent gesperrt
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED_TIME=$IP wurde temporär gesperrt
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED_TIME=$IP ($IPName) gesperrt für $TimeRemaining
+IDS_DATA1_SUEVENT_ID_FILE_UPLOAD="$Name" hat Datei zum Server transferiert
+IDS_DATA2_SUEVENT_ID_FILE_UPLOAD=$LocalPathName\nGröße: $FileSizeFmt Bytes ($FileSizeKB KB)\n$TransferBytes Bytes transferiert. $TransferKBPerSecond KB/Sek.\nProtokoll: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DOWNLOAD="$Name" hat Datei heruntergeladen
+IDS_DATA2_SUEVENT_ID_FILE_DOWNLOAD=$LocalPathName\nGröße: $FileSizeFmt Bytes ($FileSizeKB KB)\n$TransferBytes Bytes transferiert. $TransferKBPerSecond KB/Sek.\nProtokoll: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DELETE="$Name" hat Datei gelöscht
+IDS_DATA2_SUEVENT_ID_FILE_DELETE=$LocalPathName\nProtokoll: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_MOVE="$Name" hat Datei umbenannt oder verschoben
+IDS_DATA2_SUEVENT_ID_FILE_MOVE=$OldLocalPathName\n\n-- geändert zu --\n\n$LocalPathName
+IDS_DATA1_SUEVENT_ID_DIR_CREATE="$Name" hat Verzeichnis angelegt
+IDS_DATA2_SUEVENT_ID_DIR_CREATE=$LocalPathName\nProtokoll: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_DELETE="$Name" hat Verzeichnis gelöscht
+IDS_DATA2_SUEVENT_ID_DIR_DELETE=$LocalPathName\nProtokoll: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_MOVE="$Name" hat Verzeichnis umbenannt oder verschoben
+IDS_DATA2_SUEVENT_ID_DIR_MOVE=$OldLocalPathName\n\n-- geändert zu --\n\n$LocalPathName
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-FTP-Responses string table
+// this section is intentionally not translated, translation is optional
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-SSH string table
+// this section is intentionally not translated, translation is optional
+
+// misc. strings
+IDS_SU_HTTP_ENCRYPTED=<< verschlüsselt >>
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Tray string table
+
+// tray pop-up menu
+IDS_SU_TRAY_MENU_START_ADMIN=Starte &Management Konsole...
+IDS_SU_TRAY_MENU_START_SU=&Starte Serv-U
+IDS_SU_TRAY_MENU_STOP_SU=Sto&ppe Serv-U
+IDS_SU_TRAY_MENU_THEMES=&Themen
+IDS_SU_TRAY_MENU_SHOW_NOTIFICATIONS=&Zeige Informationen
+IDS_SU_TRAY_MENU_START_AUTOMATICALLY=Starte Serv-U Symbol a&utomatisch
+IDS_SU_TRAY_MENU_START_AUTOMATICALLY=Standard &ohne Animation
+IDS_SU_TRAY_MENU_START_SERV_U_SERVICE=Starte Serv-U als &Dienst
+IDS_SU_TRAY_MENU_USE_BROWSER=Verwende Standard&browser
+IDS_SU_TRAY_MENU_KB=&Knowledgebase...
+IDS_SU_TRAY_MENU_SUPPORT=T&echnischer Support...
+IDS_SU_TRAY_MENU_ABOUT=&Info über Serv-U Symbol...
+IDS_SU_TRAY_MENU_REGISTER=&Registerieren...
+IDS_SU_TRAY_MENU_EXIT_TRAY=S&chließe Serv-U Symbol
+
+// sub-menus
+IDS_SU_TRAY_MENU_DEFAULT_THEME=&Standard
+IDS_SU_TRAY_MENU_DEFAULT_NO_ANI_THEME=Standard &ohne Animation
+IDS_SU_TRAY_MENU_CLASSIC_THEME=&Klassisches grünes U
+IDS_SU_TRAY_MENU_CUSTOM_THEME=&Benutzerdefiniert
+IDS_SU_TRAY_MENU_THEME_EDITOR=&Themen Editor...
+
+// server states
+IDS_SERVER_STATE_NOT_RUNNING=Läuft nicht
+IDS_SERVER_STATE_RUNNING=Läuft
+IDS_SERVER_STATE_RUNNING_LISTEN_ERROR=Läuft, Fehler bei Protokollen
+IDS_SERVER_STATE_SESSION_CONNECTED=Sitzung verbunden
+IDS_SERVER_STATE_TRANSFERRING=Transfers
+IDS_SERVER_STATE_PAST_TRIAL=Serv-U Testzeitraum abgelaufen
+
+// management console strings
+IDS_SERVER_UP_TIME_FMT=Server online seit: %s Tagen, %02d:%02d:%02d
+IDS_SERVER_SESSIONS_FMT=Sitzungen: %s aktuell; %s innerhalb der letzten 24 h; %s Gesamt
+IDS_SERVER_TRANSFER_STATS_FMT=Up: %s; Down: %s
+IDS_SU_TRAY_BYTES_FMT=%s Bytes
+IDS_SU_TRAY_KB_FMT=%s KB
+IDS_SU_TRAY_MB_FMT=%s MB
+IDS_SU_TRAY_GB_FMT=%s GB
+IDS_SU_TRAY_DOMAINS_FMT=Domänen: %s von %s online
+
+IDS_SU_TRAY_TT_STATUS_FMT=Status: %s Up; %s Down; %s Sitzung(en)
+IDS_SU_TRAY_TT_RECVD_FMT=Empfangen: %s; %s Datei(en)
+IDS_SU_TRAY_TT_SENT_FMT=Gesendet: %s; %s Datei(en)
+IDS_SU_TRAY_TT_BPS_FMT=%s Bytes/s
+IDS_SU_TRAY_TT_KBS_FMT=%s KB/s
+IDS_SU_TRAY_TT_MBS_FMT=%s MB/s
+IDS_SU_TRAY_TT_GBS_FMT=%s GB/s
+IDS_SU_TRAY_TT_64_CHARS_FMT=%s; %d Sitzung(en); %s gesendet; %s empfangen
+IDS_SU_TRAY_TT_STOPPED=Der Serv-U Fileserver wurde gestoppt.
+IDS_SU_TRAY_STATUS_CHANGED=Serv-U FileServer Status
+IDS_SU_TRAY_STATUS_ONLINE=Der Serv-U Fileserver ist online.
+IDS_SU_TRAY_STATUS_OFFLINE=Der Serv-U Fileserver ist offline.
+IDS_SU_TRAY_UPDATE=Neue Version verfügbar.
+IDS_SU_TRAY_UPDATE_AVAILABLE=Ein Update für Serv-U ist verfügbar.  Klicken Sie hier für weitere Informationen.
+IDS_SU_TRAY_STATUS_BETA_EXPIRED=Diese Serv-U Beta Version ist abgelaufen.
+IDS_SU_TRAY_LICENSE_VIOLATION=Serv-U Lizenzverletzung
+IDS_SU_TRAY_LICENSE_VIOLATION_NO_CONNS=Eine Lizenzverletzung ist aufgetreten.  Serv-U erlaubt keine Verbindungen, bis dies korrigiert wird.
+
+// trial / reggie baloon tip strings
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_TITLE=Serv-U Testzeitraum abgelaufen
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_BODY=Ihr 30-Tage Testzeitraum ist abgelaufen. Serv-U erlaubt keine Verbindungen, bis eine Lizenz eingegeben wird.\r\n\r\nKlicken Sie hier, um Serv-U zu kaufen.
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_TITLE=Serv-U Testzeitraum beinahe abgelaufen
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_BODY_FMT=Ihr 30-Tage Testzeitraum endet in %s Tag(en). Nach diesem Testzeitraum erlaubt Serv-U keine Verbindungen mehr.\r\n\r\nKlicken Sie hier, um Serv-U zu kaufen.
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_TITLE=Serv-U Updategarantie beinahe vorüber
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_BODY_FMT=Die Updategarantie Ihrer Serv-U Kopie endet in %s Tag(en).  Nach dem Ende des Updategarantiezeiraums können Sie keinen neuen Version von Serv-U verwenden.\r\n\r\nKlicken Sie hier, um ein Updateverlänerung zu kaufen.
+
+// misc. strings
+IDS_SU_TRAY_STATE=Status
+IDS_SU_TRAY_IMAGES=Bilder
+IDS_TRAY_THEME_FILE_OPEN_FILTERS=Serv-U Symbol Themen Dateien (*.SU-Theme)|*.SU-Theme|All Files (*.*)|*.*||
+IDS_TRAY_THEME_FILEARCH_OPEN_FILTERS=Serv-U Themen (*.SU-Theme; *.SU-Theme-Archive)|*.SU-Theme; *.SU-Theme-Archive|Serv-U Tray Theme Files (*.SU-Theme)|*.SU-Theme|Serv-U Tray Theme Archive Files (*.SU-Theme-Archive)|*.SU-Theme-Archive|All Files (*.*)|*.*||
+IDS_SERVU_THEMES_DIR=Serv-U Symbol Themen
+IDS_TRAY_USER_THEME_DIR_TIP=Beinhaltet Benuterdefinierte Serv-U Symbol Themen
+// CAUTION: do not exceed 255 characters for this (or any) string
+IDS_DELETE_CREATED_DIRS_FMT=Serv-U legt Verzeichnisse an, die Dateien beinhalten, die von Benutzern dieses Computers angelegt werden.\r\n\r\nZum Beispiel:\r\n%s\r\n\r\nMöchten Sie diese Verzeichnisse und Dateien löschen?
+IDS_UNABLE_TO_LOAD_SELECTED_THEME=Fehler beim Laden der gewählten Themendatei.
+IDS_UNABLE_TO_STORE_THEME=Fehler beim Speichern des Themas auf die angegebene Datei.
+IDS_THEME_CHANGED_SAVE=Sie haben das Theme geändert.\r\n\r\nMöchten Sie diese Änderungen speichern?
+IDS_SU_TRAY_FILE_NAME=Dateiname
+IDS_SU_TRAY_DURATION=Laufzeit
+IDS_SU_TRAY_INVALID_ICON=Die angegebene Datei wird von Windows nicht erkannt und ist\r\nmöglicherweise kein gültige Bilddatei.  Bitte wählen Sie eine gültige Bilddatei.
+IDS_TRAY_ALL_IMAGE_FILES=Alle Bilddateien
+IDS_TRAY_ALL_FILES=Alle Dateien
+IDS_TRAY_THEME_ARCHIVEFILE_OPEN_FILTERS=Serv-U Symbol Themen Archiv Dateien (*.SU-Theme-Archive)|*.SU-Theme-Archive|All Files (*.*)|*.*||
+IDS_UNABLE_TO_LOAD_ZLIB=Fehler beim Laden von zlib1.dll.  Versuchen Sie eine Neuinstallation von Serv-U.
+IDS_UNABLE_TO_CREATE_THEME_ARCHIVE_FILE=Fehler beim Anlegen der angegebenen Themenarchivdatei.
+IDS_UNABLE_TO_OPEN_THEME_ARCHIVE_FILE=Fehler beim Öffnen der angegebenen Themearchivedatei.
+IDS_THEME_ARCHIVED=Thema in der angegebenen Archivdatei gespeichert.
+IDS_THEME_IMPORTED=Theme von der angegebenen Archivedatei importiert.
+IDS_THEME_FILE_DESC=Serv-U Themendatei
+IDS_THEME_ARCHIVE_FILE_DESC=Serv-U Themenarchivdatei
+IDS_IMPORT_ARCHIVE_FILE=Die ausgewählte Datei ist offenbar eine Serv-U Themenarchivdatei.\r\n\r\nMöchten Sie deise zuerst importieren?
+IDS_MANAGEMENT_CONSOLE=Serv-U Management Konsole
+IDS_TRAY_SERVER_NOT_LISTENING_HTTP_HTTPS=Die Serv-U Engine bearbeitet keine HTTP oder HTTPs Anforderungen.
+IDS_MANAGEMENT_CONSOLE_ALREADY_RUNNING=Die Management Konsole läuft gerade auf diesem Computer.\r\n\r\nMelden Sie sich entweder über einen Browser an oder beenden Sie die andere Sitzung.\r\nDieser Fehler tritt meist dann auf, wenn RDP (Remote Desktop Protokol) verwendet wird).
+IDS_USERS_ARE_CONNECTED_SERVICE_CHANGE=Es sind noch Benutzer an Ihrem Server angemeldet. Das Ändern des Servicemodus erfordert einen Neustart von Serv-U und ein Abbmelden der Benutzer.\r\n\r\nSind Sie sicher, diese Änderung jetzt machen zu wollen?
+IDS_CANNOT_EXEC_SERVICE_SETTING_NOT_CHANGED=Serv-U.exe kann nicht ausgeführt werden, um die Diensteinstellungen zu ändern.\r\n\r\nWenn die Benutzerkontensteuerung (UAC) für Ihr Benutzerkonto aktiviert ist\r\ndeaktivieren oder ändern Sie Ihre UAC Einstellungen.
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Log string table
+
+// system log strings
+IDS_LOG_SERVER_START_WELCOME_FMT=%s Version %s (%s) - %s, Alle Rechte vorbehalten
+IDS_LOG_SERVER_START_BUILD_DATE_FMT=Build Datum: %s
+IDS_LOG_SERVER_OPENSSL_INIT_OKAY=SSL/TLS Bibliotheken geladen
+IDS_LOG_SERVER_OPENSSL_INIT_FAIL=Fehler beim Laden der SSL/TLS Bibliotheken
+
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_ON=FIPS 140-2 Modus ist AKTIVIERT.  Serv-U verwendet ein integriertes FIPS 140-2-validated cryptographic Modul (Certificate #1051), das auf einer Microsoft Windows Plattform mit FIPS 140-2 Implementation Guidance section G.5 guidelines läuft.
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_OFF=FIPS 140-2 Modus ist DEAKTIVIERT.
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_NOT_SUPPORTED=FIPS 140-2 wird möglicherweise auf diesem Rechner nicht unterstützt.  Der FIPS 140-2 Modus läuft nicht auf allen Hardwareplattformen, wurde aber für die meisten neueren Plattformen getestet.  Dieser Modus ist auf Pentium III oder älteren Plattformen nicht verfügbar.
+IDS_LOG_SERVER_STOPPING=Server wird heruntergefahren...
+IDS_LOG_SERVER_STOP=Server gestoppt
+IDS_LOG_CMD_LISTENING_FMT=%s Server reagiert auf Anfragen auf Anschluss %u, IP %s
+IDS_LOG_CMD_NOT_LISTENING_IN_USE_FMT=%s SERVER REAGIERT NICHT AUF ANFRAGEN AUF IP %s: Anschluss %u wird schon verwendet
+IDS_LOG_CMD_NOT_LISTENING_FMT=%s SERVER REAGIERT NICHT AUF ANFRAGEN AUF IP %s: Anschluss %u
+IDS_LOG_CMD_NOT_LISTENING_ADDR_NOT_AVAIL_FMT=%s SERVER REAGIERT NICHT AUF ANFRAGEN AUF IP %s: verwenden Sie eine nicht existierende IP Adresse?
+IDS_LOG_CMD_CLOSED_FMT=%s Server stoppt auf Anfragen auf Anschluss %u, IP %s zu reagieren
+IDS_LOG_PERM_DATA_LISTENING_FMT=Warte auf PASV FTP Verbindungen auf Anschluss %u
+IDS_LOG_PERM_DATA_NOT_LISTENING_FMT=SERVER REAGIERT NICHT AUF PASV FTP Verbindungen, Anschluss %u
+IDS_LOG_PERM_DATA_NOT_LISTENING_IN_USE_FMT=SERVER REAGIERT NICHT AUF PASV FTP Verbindungen, Anschluss %u wird schon verwendet.
+IDS_LOG_PERM_DATA_NOT_LISTENING_ADDR_NOT_AVAIL_FMT=SERVER REAGIERT NICHT AUF PASV FTP  Verbindungen auf Anschluss %u, verwenden Sie eine nicht existierende IP Adresse?
+IDS_LOG_PERM_DATA_CLOSED_FMT=Server stoppt auf PASV FTP Verbindungen auf Anschluss %u zu warten
+IDS_LOG_DOMAIN_STARTED=Domäne gestartet
+IDS_LOG_DOMAIN_STOPPED=Domäne gestoppt
+IDS_LOG_SERVER_START_BETA_EXPIRED_FMT=BETA BUILD ABGELAUFEN.  Diese Version läuft bis zu %d Tage ab dem Build Datum.
+IDS_LOG_SERVER_START_BETA_NOTICE_FMT=DIES IST EINE BETA VERSION.  Diese Version läuft nur bis zu %d Tage ab dem Build Datum.
+IDS_LOG_EVENT_COULD_NOT_EXEC_FMT=EREIGNIS FEHLER: "%s" konnte nicht ausgeführt werden.
+IDS_LOG_EVENT_COULD_NOT_EMAIL_FMT=EREIGNIS FEHLER: Fehler beim Senden der Nachricht an %s: %s
+IDS_LOG_SOCKET_TIME_OUT_FMT=Socket timed out.  %s Sekunden Inaktivität.
+IDS_LOG_EMAIL_RETRY_FMT=EMAIL WIEDERHOLUNG: Versuche die E-Mail an %s über Server %s Anschluss %d erneut zu senden.
+IDS_LOG_EMAIL_CANT_CONNECT_FMT=Fehler beim Verbinden zum SMTP Server %s Anschluss %d.
+IDS_LOG_EMAIL_SSL_CONNECT_FAIL_FMT=SSL Aushandlungsfehler mit SMTP Server "%s" auf Anschluss %d (SSL Fehler: "%s").
+IDS_LOG_WINSOCK_INIT_FMT=WinSock Version %d.%d initialisiert.
+IDS_LOG_WINSOCK_INIT_FAILED_FMT=FEHLER: WinSock Initialisierung fehlgeschlagen (Fehler: %d)
+
+// UPnP log strings
+IDS_LOG_UPNP_FOUND_DEVICE_FMT=UPnP: Gerät gefunden: %s: %s (im %s Subnetz)
+IDS_LOG_UPNP_DEVICE_DISCOVERY_COMPLETE_FMT=UPnP: Geräterkennung abgeschlossen: %s: %s [%s] (im %s Subnetz)
+IDS_LOG_UPNP_MAP_SUCCESSFUL_FMT=UPnP: Erfolgreiches Portmapping auf Anschluss %d zur IP %s
+IDS_LOG_UPNP_MAP_ERROR_FMT=UPnP: Fehler beim Portmappping Anschluss %d zur IP %s (HTTP: %d - UPnP: %s - Beschr: %s)
+IDS_LOG_UPNP_DELETE_MAP_SUCCESSFUL_FMT=UPnP: Erfolgreiches Löschen eines Portmappings auf Anschluss %d zu IP %s
+IDS_LOG_UPNP_DELETE_MAP_ERROR_FMT=UPnP: Fehler beim Löschen eines Portmappings auf Anschluss %d zu IP %s (HTTP: %d - UPnP: %s - Beschr: %s)
+IDS_LOG_UPNP_DELETE_MAPS_SUCCESSFUL_FMT=UPnP: Erfolgreiches Löschen eines Portmappings der Anschlüsse %d-%d zu IP %s
+IDS_LOG_UPNP_MAPS_SUCCESSFUL_FMT=UPnP: Erfolgreiches Portmapping auf den Anschlüssen %d-%d zu IP %s
+IDS_LOG_UPNP_DELETE_MAPS_ERROR_FMT=UPnP: Fehler beim Löschen eines Portmappings der Anschlüsse %d-%d zu IP %s
+IDS_LOG_UPNP_MAPS_ERROR_FMT=UPnP: Fehler beim Protmapping auf Anschlüssen %d-%d zu IP %s
+IDS_LOG_UPNP_TIMEOUT=Timeout
+IDS_LOG_UPNP_NA=N/A
+IDS_LOG_UPNP_DEAD_DEVICE_FMT=UPnP: Gerät nicht länger verfügbar: %s: %s [%s] (in %s Subnetz)
+IDS_LOG_UPNP_NO_DEVICES_REMAIN=UPnP: Kein UPnP Gerät verfügbar, Neuladen der Einstellungen wie benötigt.
+IDS_LOG_UPNP_DEVICE_REDISCOVERY_FMT=UPnP: Geräte antwortet möglicherweise nicht, Neuerkennungsversuch %d: %s: %s [%s] (in %s Subnetz)
+IDS_LOG_UPNP_DEVICE_INSPECTION=UPnP: Untersuchtes Gerät:  %s: %s [%s] (in %s Subnetz)
+
+// socket types
+// ^^^^^ intentionally not translated ^^^^^
+
+// session log strings
+IDS_LOG_RECEIVING_FILE_FMT=Empfange Datei "%s"
+IDS_LOG_RECEIVED_FILE_FMT=Datei "%s" erfolgreich empfangen (%s KB/Sek - %s Bytes)
+IDS_LOG_SENDING_FILE_FMT=Sende Datei "%s"
+IDS_LOG_SENDING_THUMBNAIL_FMT=Sende Vorschaubild (%s x %s) "%s"
+IDS_LOG_SENT_FILE_FMT=Datei "%s" erfolgreich gesendet (%s KB/Sek - %s Bytes)
+IDS_LOG_SENT_THUMBNAIL_FMT=Sende Vorschaubild (%s x %s) "%s" erfolgreich (%s KB/Sek - %s Bytes)
+IDS_LOG_FILE_DELETED_FMT=Datei gelöscht: "%s"
+IDS_LOG_FILE_DIR_RENAME_FMT=Umbenennen von  "%s" auf "%s"
+IDS_LOG_DIR_CREATE_FMT=Verzeichnis angelegt: "%s"
+IDS_LOG_DIR_DELETE_FMT=Verzeichnis gelöscht: "%s"
+IDS_LOG_IP_ADDRESS_REVERSE_DNS_FMT=IP-Name: %s (%s)
+
+// SSH log command strings
+IDS_SSH_UNEXPECTED_MESSAGE_FMT=Unererkanntes SSH2 Kommando (0x%08x - %d)
+IDS_SSH2_MSG_USERAUTH_REQUEST_FMT=SSH2_MSG_USERAUTH_REQUEST: Benutzer: %s; Dienst: %s; Typ: %s
+IDS_SSH_STATUS_COMMAND_FMT={0x%08x} %s
+IDS_SSH_FXP_INIT_FMT=SSH_FXP_INIT: Client Version %d (%s)
+IDS_SSH_FXP_OPEN_FMT={0x%08x} SSH_FXP_OPEN: Pfad: "%s"
+IDS_SSH_FXP_CLOSE_FMT={0x%08x} SSH_FXP_CLOSE: Handle: 0x%08x
+IDS_SSH_FXP_READ_FMT={0x%08x} SSH_FXP_READ: Handle: 0x%08x; %u Bytes
+IDS_SSH_FXP_WRITE_FMT={0x%08x} SSH_FXP_WRITE: Handle: 0x%08x; %u Bytes
+IDS_SSH_FXP_STAT_FMT={0x%08x} %s: Pfad: "%s"
+IDS_SSH_FXP_FSTAT_FMT={0x%08x} SSH_FXP_FSTAT: Handle: 0x%08x
+IDS_SSH_FXP_SETSTAT_FMT={0x%08x} SSH_FXP_SETSTAT: Pfad: "%s"
+IDS_SSH_FXP_FSETSTAT_FMT={0x%08x} SSH_FXP_FSETSTAT: Handle: 0x%08x
+IDS_SSH_FXP_OPENDIR_FMT={0x%08x} SSH_FXP_OPENDIR: Pfad: "%s"
+IDS_SSH_FXP_READDIR_FMT={0x%08x} SSH_FXP_READDIR: Handle: 0x%08x
+IDS_SSH_FXP_REMOVE_FMT={0x%08x} SSH_FXP_REMOVE: Pfad: "%s"
+IDS_SSH_FXP_MKDIR_FMT={0x%08x} SSH_FXP_MKDIR: Pfad: "%s"
+IDS_SSH_FXP_RMDIR_FMT={0x%08x} SSH_FXP_RMDIR: Pfad: "%s"
+IDS_SSH_FXP_REALPATH_FMT={0x%08x} SSH_FXP_REALPATH: Pfad: "%s"
+IDS_SSH_FXP_RENAME_FMT={0x%08x} SSH_FXP_RENAME: alt: "%s"; neu: "%s"
+IDS_SSH_FXP_READLINK_FMT={0x%08x} SSH_FXP_READLINK: Pfad: "%s"
+
+// SSH login reply strings
+IDS_SSH2_MSG_USERAUTH_SUCCESS=SSH2_MSG_USERAUTH_SUCCESS: Login erfolgreich
+IDS_SSH2_MSG_USERAUTH_FAILURE=SSH2_MSG_USERAUTH_FAILURE: Login fehlgeschlagen
+IDS_SSH2_MSG_USERAUTH_PASSWD_CHANGEREQ=SSH2_MSG_USERAUTH_PASSWD_CHANGEREQ: Kennwort abgelaufen
+
+// SSH log reply strings
+IDS_SSH_STATUS_REPLY_FMT={0x%08x} %s: %s
+IDS_SSH_FXP_INIT_REPLY_FMT=SSH_FXP_VERSION: Server Version %d
+IDS_SSH_FXP_OPEN_REPLY_FMT={0x%08x} SSH_FXP_HANDLE: Datei Handle: 0x%08x
+IDS_SSH_FXP_OPENDIR_REPLY_FMT={0x%08x} SSH_FXP_HANDLE: Verzeichnis Handle: 0x%08x
+IDS_SSH_FXP_READDIR_REPLY_FMT={0x%08x} SSH_FXP_NAME: %u Elemente gefunden
+IDS_SSH_FXP_REALPATH_REPLY_FMT={0x%08x} SSH_FXP_NAME: Pfad: "%s"
+IDS_SSH_FXP_ATTRS_REPLY_FMT={0x%08x} SSH_FXP_ATTRS
+IDS_SSH_FXP_DATA_REPLY_FMT={0x%08x} SSH_FXP_DATA: %u Bytes
+
+// SSH_FXP_STAT error strings
+// ^^^^^ intentionally not translated ^^^^^
+
+// HTTP log command strings
+IDS_HTTP_LOGIN_FMT=HTTP_LOGIN: Benutzer: %s
+IDS_HTTP_LOGIN_DOMAIN_FMT=HTTP_LOGIN: Benutzer: %s; Domäne: %s
+IDS_HTTP_LOGOUT=HTTP_LOGOUT
+IDS_HTTP_LIST_FMT=HTTP_LIST: Pfad: "%s"
+IDS_HTTP_DOWNLOAD_FMT=HTTP_DOWNLOAD: Pfad: "%s"
+IDS_HTTP_DOWNLOAD_THUMBNAIL_FMT=HTTP_DOWNLOAD: Pfad: "%s"; Vorschaubild: 1; Breite: %d; Höhe: %d
+IDS_HTTP_UPLOAD_FMT=HTTP_UPLOAD: Pfad: "%s"
+IDS_HTTP_DELETE_FMT=HTTP_DELETE: Pfad: "%s"
+IDS_HTTP_DELETE_DIR_FMT=HTTP_DELETE_DIR: Pfad: "%s"
+IDS_HTTP_CREATE_DIR_FMT=HTTP_CREATE_DIR: Pfad: "%s"
+IDS_HTTP_RENAME_FMT=HTTP_RENAME: alt: "%s"; neu: "%s"
+IDS_HTTP_START_FVJV=HTTP_START_FVJV
+IDS_HTTP_START_ADMIN=HTTP_START_ADMIN
+IDS_HTTP_NOOP=HTTP_NOOP
+IDS_HTTP_ADMIN_COMMAND_FMT=HTTP_ADMIN_COMMAND: %s
+IDS_HTTP_ADMIN_COMMAND_OBJECT_FMT=HTTP_ADMIN_COMMAND: %s; Objekt: "%s"
+IDS_HTTP_ADMIN_COMMAND_OBJECT_ID_FMT=HTTP_ADMIN_COMMAND: %s; Objekt: "%s"; ID: %s
+IDS_HTTP_BUILD_PLAYLIST_FMT=HTTP_BUILD_PLAYLIST: %s Datei(en) zur Playlist hinzugefügt
+IDS_HTTP_GET_PLAYLIST_FMT=HTTP_GET_PLAYLIST: %s Datei(en) in der Playlist
+IDS_HTTP_SPACE_AVAILABLE_FMT=HTTP_SPACE_AVAILABLE: Pfad: "%s"
+IDS_HTTP_DIRECTORY_SIZE_FMT=HTTP_DIRECTORY_SIZE: Pfad: "%s"
+
+// other HTTP replies
+IDS_HTTP_RETR_ERROR_REPLY_FMT=HTTP_ERROR: Fehler beim Emfpangen "%s"
+IDS_HTTP_STOR_ERROR_REPLY_FMT=HTTP_ERROR: Fehler beim Speichern "%s"
+
+// HTTP log reply strings
+IDS_HTTP_OKAY_REPLY=HTTP_OKAY (%d): Okay
+IDS_HTTP_CREATED_REPLY=HTTP_CREATED (%d): angelegt
+IDS_HTTP_ACCEPTED_REPLY=HTTP_ACCEPTED (%d): akzeptiert
+IDS_HTTP_NO_CONTENT_REPLY=HTTP_NO_CONTENT (%d): kein Inhalt
+IDS_HTTP_OKAY_REPLY_FMT=HTTP_OKAY (%d): %s
+IDS_HTTP_MOVED_PERMANENTLY_REPLY=HTTP_MOVED_PERMANENTLY (%d): permanent verschoben
+IDS_HTTP_MOVED_TEMPORARILY_REPLY=HTTP_MOVED_TEMPORARILY (%d): temporär verschoben
+IDS_HTTP_NOT_MODIFIED_REPLY=HTTP_NOT_MODIFIED (%d): nicht geändert
+IDS_HTTP_BAD_REQUEST_REPLY=HTTP_BAD_REQUEST (%d): Fehlerhafte Anfrage
+IDS_HTTP_UNAUTHORIZED_REPLY=HTTP_UNAUTHORIZED (%d): nicht authorisiert
+IDS_HTTP_FORBIDDEN_REPLY=HTTP_FORBIDDEN (%d): verboten
+IDS_HTTP_NOT_FOUND_REPLY=HTTP_NOT_FOUND (%d): nicht gefunden
+IDS_HTTP_INTERNAL_SERVER_ERROR_REPLY=HTTP_INTERNAL_SERVER_ERROR (%d): interner Serverfehler
+IDS_HTTP_NOT_IMPLEMENTED_REPLY=HTTP_NOT_IMPLEMENTED (%d): nicht implementiert
+IDS_HTTP_BAD_GATEWAY_REPLY=HTTP_BAD_GATEWAY (%d): fehlerhaftes Gateway
+IDS_HTTP_SERVICE_UNAVAILABLE_REPLY=HTTP_SERVICE_UNAVAILABLE (%d): Service nicht verfügbar
+
+// system log strings
+IDS_SYSLOG_OPENED_INTEGRATION_DLL_FMT=Opened Integration DLL: "%s"
+IDS_SYSLOG_CLOSED_INTEGRATION_DLL_FMT=Closed Integration DLL: "%s"
+IDS_SYSLOG_CANT_LOAD_INTEGRATION_DLL_FMT=Fehler beim Öffnen der DLL Integration: "%s"
+IDS_SYSLOG_CANT_LOAD_INTEGRATION_DLL__NO_LIC_FMT=Fehlende Lizenz zum Öffnen der DLL Integration:  "%s"
+
+// security log strings
+IDS_SECLOG_CONNECTED_FMT=Verbunden zu %s (lokale Adresse %s, Anschluss %d)
+IDS_SECLOG_IP_BANNED_FMT=Verbindung von IP Adresse %s nicht erlaubt (lokale Adresse %s, Anschluss %d)
+IDS_SECLOG_CLOSED_SESSION=Sitzung geschlossen
+IDS_SECLOG_IDLE_TIMEOUT=Inaktivitäts-Timeout der Sitzung
+IDS_SECLOG_SESSION_TIMEOUT=Maximales Sitzugnszeit überschritten
+IDS_SECLOG_SSL_ACCEPT_FAILED_FMT=Fehler beim Einrichten der SSL Verbindung (%s)
+IDS_SECLOG_USER_ADMIN_DENIED_FMT=Benutzer "%s" versuchte aministrativen Zugang auf Server zu erhalten, dies wurde vereitelt.
+IDS_SECLOG_USER_SERVER_ADMIN_FMT=Server im ADMINISTRATIVEN Modus für Benutzer "%s" betreten
+IDS_SECLOG_USER_DOMAIN_ADMIN_FMT=Domäne im ADMINISTRATIVEN Modus für Benutzer "%s" betreten
+IDS_SECLOG_USER_GROUP_ADMIN_FMT=Wechsle in ADMINISTRATIVEN Modus der Gruppe für Benutzer "%s"
+IDS_SECLOG_USER_PASSWORD_CHANGE_FMT=Benutzer "%s" hat Kennwort geändert
+IDS_SECLOG_PASSWORD_WRONG_TOO_MANY_TIMES_FMT=Kennwort zuoft falsch für Benutzer "%s" - getrennt
+IDS_SECLOG_USER_IP_BANNED_FMT=Verbindung verwährt für Benutzer "%s" von IP Adresse %s (Lokal Adresse %s, Anschluss %d)
+IDS_SECLOG_USER_NO_HOME_FMT=Fehler beim Anmelden des Benutzers "%s", Stammverzeichnis "%s" existiert nicht
+IDS_SECLOG_USER_LOGGED_IN_FMT=Benutzer "%s" angemeldet
+IDS_SECLOG_USER_LOGGED_OUT_FMT=Benutzer "%s" abgemeldet
+IDS_SECLOG_ANONYMOUS_USER_LOGGED_IN_FMT=ANONYMOUS angemeldet, Kennwort: %s
+IDS_SECLOG_BLOCKING_IP_FMT=Blocke IP %s
+IDS_SECLOG_BLOCKING_IP_FOR_FMT=Blocke IP %s für %d:%02d
+IDS_SECLOG_ADMIN_OPERATION_DENIED_FMT=OPERATION: %s
+IDS_SECLOG_LIC_NO_REMOTE_ADMIN_FMT=LIZENZ: Fernwartung ist nicht erlaubt, IP Adresse %s, Benutzer %s.
+IDS_SECLOG_LIC_TOO_MANY_SESSIONS_FMT=LIZENZ: Lizenzierte Anzahl an Sitzungen überschritten, IP Adresse %s, Benutzer %s.
+IDS_SECLOG_LIC_NET_REGGIE_VIOLATION_FMT=LIZENZ: Eine Lizenz Verletzung wurde entdeckt.  Die aktuelle Lizenz ist für %d Computer gültig.  Derzeit verwenden %d Computer diese Lizenz.  Serv-U akzeptiert keine Verbindundungen, bis dies korrigiert wird.
+IDS_SECLOG_LIC_NET_REGGIE_VIOLATION2_FMT=LIZENZ: Bitte kontaktieren Sie uns unter %s
+IDS_SECLOG_LIC_VALID_ID_PRESENT=Gültiger Lizenzschlüssel gefunden
+IDS_SECLOG_LIC_PAST_TRIAL=LIZENZ: Testzeitraum ist vorbei. Serv-U wird keine Verbindungen mehr erlauben.
+IDS_SECLOG_SSL_CANT_OPEN_CERT_FILE_FMT=Fehler beim Öffnen der Zertifikatsdatei: %s
+IDS_SECLOG_SSL_CANT_OPEN_PRIVATE_KEY_FILE_FMT=Fehler beim Öffnen der Privaten Schlüsseldatei: %s
+IDS_SECLOG_SSL_CANT_LOAD_TRUSTED_CA_FILE_FMT=Fehler beim Öffnen der Datei für die vertrauenswürdigen Zertifikate: %s
+IDS_SECLOG_FAILED_LOGIN_FMT=Fehler beim Laden der Login Daten; Benutzer: "%s"; Kennwort: "%s"
+IDS_SECLOG_CONNECTION_ACCEPTED_FMT=Verbindung zu %s (Lokal Adresse %s, Anschluss %d) AKZEPTIERT
+IDS_SECLOG_CONNECTION_DENIED_FMT=Verbindung zu %s (Lokal Adresse %s, Anschluss %d) VERWEIGERT
+IDS_SECLOG_SSL_CLIENT_ERROR=CLIENT FEHLER: Client hat möglicherweise das SSL Zertifikat abgelehnt.  Vergewissern Sie sich, dass das SSL Zertifikat von einer authorisierten Zertifizierungsstelle ausgestellt wurde.
+IDS_SECLOG_USER_REQUESTED_PASSWORD_RECOVERY_FMT=Benutzer "%s" hat eine Kennwortwiederherstellung angefordert.
+IDS_SECLOG_INTEGRATION_CONNECTION_DENIED_FMT=DLL Integration: Verbindung fehlgeschlagen für IP Adresse %s (lokale Adresse %s, Anschluss %d)
+
+// ODBC
+IDS_ODBC_ERROR=ODBC FEHLER: 
+
+// triggered event log strings
+IDS_TELOG_EVENT_FMT=Ereignis: %s (%s); Typ: %s
+IDS_TELOG_EMAIL_FMT=EMAIL; An: %s
+IDS_TELOG_BALLOON_TIP_FMT=Hinweis; "%s"
+IDS_TELOG_EXEC_FMT=AUSFÜHREN; Pfad "%s"
+IDS_TELOG_EMAIL_ADDRESS_FMT=%s; BCC: %s
+
+/////////////////////////////////////////////////////////////////////////////
+// statistic strings used for saving stats to .CSV file, translation is okay
+$IDS_NAME$=Name
+$IDS_CURRENT_SESSIONS$=Aktuelle Sitzungen
+$IDS_HIGHEST_NUMBER_OF_SESSIONS$=Größte Anzahl an Sitzungen
+$IDS_24_HOUR_SESSIONS$=24-Stunden Sitzungen
+$IDS_TOTAL_SESSIONS$=Gesamtanzahl Sitzungen
+$IDS_AVERAGE_SESSION_LENGTH$=Durchschnittliche Sitzungslänge
+$IDS_LONGEST_SESSION_LENGTH$=Längste Sitzung
+
+$IDS_LOGINS$=Anmeldungen
+$IDS_LOGOUTS$=Abmeldungen
+$IDS_CURRENT_LOGGED_IN$=Aktuell angemeldet
+$IDS_MOST_LOGGED_IN$=Am häufigsten angemeldet
+$IDS_AVERAGE_LOGIN_DURATION$=Durchschnittliche Anmeldedauer
+$IDS_LONGEST_LOGIN_DURATION$=Längste Anmeldedauer
+$IDS_SHORTEST_LOGIN_DURATION$=Kürzeste Anmeldedauer
+$IDS_LAST_LOGIN_TIME$=Letzter Anmeldezeitpunkt
+$IDS_LAST_LOGOUT_TIME$=Letzter Abmeldezeitpunkt
+
+$IDS_DOWNLOAD_RATE_KB_SEC$=Download Geschwindigkeit KB/Sek
+$IDS_UPLOAD_RATE_KB_SEC$=Upload Geschwindigkeit KB/Sek
+$IDS_AVERAGE_DOWNLOAD_RATE_KB_SEC$=Durschnittliche Download Geschwindigkeit KB/Sek
+$IDS_AVERAGE_UPLOAD_RATE_KB_SEC$=Durschnittliche Upload Geschwindigkeit KB/Sek
+$IDS_DOWNLOAD_RATE_BYTES_SEC$=Download Geschwindigkeit Bytes/Sek
+$IDS_UPLOAD_RATE_BYTES_SEC$=Upload Geschwindigkeit Bytes/Sek
+$IDS_BYTES_DOWNLOADED$=Bytes vom Server
+$IDS_FILES_DOWNLOADED$=Files vom Server
+$IDS_BYTES_UPLOADED$=Bytes zum Server
+$IDS_FILES_UPLOADED$=Files zum Server

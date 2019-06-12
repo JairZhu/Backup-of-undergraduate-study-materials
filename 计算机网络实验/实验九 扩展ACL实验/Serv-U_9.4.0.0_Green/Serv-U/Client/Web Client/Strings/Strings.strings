@@ -1,0 +1,220 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Web Client\Include\ -->
+
+<!-- General -->
+$CLICK_HERE_CURRENT_DIR$=<a href="%FILE%ListDir.htm?Dir=%CURRENT_DIR%">Click here to list your current directory.</a>
+$WARN_IMAGE$=<img src="%FILE%Images\warn.gif" style="float:left;">
+$DELETE$=Delete
+$OPEN$=Open
+$CURRENTLY_LOCATED$=Currently located in
+$USE_INHERITED$=Inherit default value
+$NO_SCRIPT_TEXT$=It appears that your browser is not enabled to run JavaScript.  This page requires that JavaScript is enabled.
+$PLEASE_ENTER_USER_NAME$=Please enter a login ID.
+$FOLDER_SIZE$=Folder Size
+$DIR_PROPERTIES$=Directory Properties
+$MODIFIED_TIME$=Modified
+$CREATED_TIME$=Created
+$LAST_ACCESSED_TIME$=Last Accessed
+
+<!-- Login -->
+$LOGIN_TITLE$=Serv-U from RhinoSoft.com
+$LANGUAGE$=Language
+$PASSWORD$=Password
+$LOGIN$=Login
+$CHANGE_PASSWORD$=Change Password
+$REMEMBER_USER$=Remember me
+$RELOAD$=Reload
+$JSCRIPT_DISABLED_WARN$=Javascript is disabled in your browser settings.  To use Serv-U File Server javascript must be enabled. <br /><br />Click on "Reload" below after javascript has been enabled in your browser settings.
+$IE_NOT_COMPATIBLE_WARN$=You are using an incompatible verion of Internet Explorer. Please update to Internet Explorer 6.0 or higher to use Serv-U.
+$BROWSER_NOT_COMPATIBLE_WARN$=The browser you are using is incompatible with the current version of Serv-U.  Please use either Internet Explorer 6.0+, Firefox 1.0+, Safari 3+ or Opera 9+.
+
+<!-- Languages -->
+$ENGLISH$=English
+$GERMAN$=Deutsch (German)
+$ITALIAN$=Italiano (Italian)
+$FRENCH$=Français (French)
+$SPANISH$=Español (Spanish)
+$PORTUGUESE$=Português (Portuguese)
+$SWEDISH$=Svenska (Swedish)
+$FINISH$=Suomi (Finnish)
+$NORWEGIAN$=Norsk (Norwegian)
+$DANISH$=Dansk (Danish)
+$RUSSIAN$=Русский (Russian)
+$TRADITIONAL_CHINESE$=繁體中文 (Traditional Chinese)
+$SIMPLIFIED_CHINESE$=简体中文 (Simplified Chinese)
+$JAPANESE$=日本語 (Japanese)
+
+
+<!-- Logout -->
+$LOGOUT_TITLE$=Logged Out
+$LOGOUT_DESC$=You have been logged out.  <a href="%LOGIN%">Click here to login again.</a>
+$LOGGED_OUT_MSG$=You have been logged out.
+
+
+<!-- Login Change Password -->
+$PASSWORD_EXPIRED_TITLE$=Password Expired - Change Password
+$PASSWORD_EXPIRED_DESC$=Your password is expired, please change your password before continuing.
+
+
+<!-- Session Not Found -->
+$SESSION_NOT_FOUND_TITLE$=Unauthorized - Session Not Found
+$SESSION_NOT_FOUND_HEAD$=401 Unauthorized, session specified but doesn't exist
+$SESSION_NOT_FOUND_DESC$=The specified session does not exist.  This may be due to a long period of inactivity.  Try logging in again.
+
+
+<!-- Not Logged In -->
+$NOT_LOGGED_IN_TITLE$=Unauthorized - Not Logged In
+$NOT_LOGGED_IN_HEAD$=401 Unauthorized, you are not logged in
+$NOT_LOGGED_IN_DESC$=You are not authorized to perform the requested operation.  <a href="%LOGIN%">Please login before attempting this operation.</a>
+
+
+<!-- Permission Denied -->
+$PERMISSION_DENIED_TITLE$=Permission denied
+$PERMISSION_DENIED_DESC$=Permission denied
+
+
+<!-- Listing -->
+$CURR_DIR_HOST$=%HOST%
+$CURR_DIR_NAME$=%CURRENT_DIR_NAME%
+$MOD_TIME$=Time
+$ATTRS$=Attributes
+$THUMBNAIL_LIST$=Thumbnails
+$UPLOAD_ACTION$=Upload
+$UPLOAD$=Upload
+$UPLOAD_ALT$=Upload
+$THUMBNAILS_ALT$=Thumbnails
+$DETAILS_ALT$=Details
+$CREATE_DIR_ALT$=Create Directory
+$FILETOOLS$=Tools
+$DOWNLOAD$=Download
+$THUMBNAIL_SIZE$=Thumbnail Size
+$SELECT_THUMBNAIL_SIZE$=Select Size
+$PREVIEW_IMAGE$=Preview Image
+$CHANGE_PASSWORD_BUTTON$=Change Password
+$FILE_PATH$=File Path
+$PLAY_MEDIA$=Play Media
+$PLAY_LIST$=Play List
+$AUDIO_PLAY_LIST$=Audio Playlist
+$PLAYLIST_SIZE$=Playlist Size
+$SHUFFLE_PLAYLIST$=Shuffle Playlist
+$NEXT_MEDIA_FILE$=Next Media File
+$PREVIOUS_MEDIA_FILE$=Previous Media File
+$HOME$=Home
+$FOLDER_EMPTY$=Folder is empty
+$BACK$=Back
+$FORWARD$=Forward
+$HISTORY_LIST$=History List
+$SEARCH_ACTION$=Search
+$NO_FILES_FOUND$=No files found.
+$HTTP_MEDIA_PLAY_DISABLED$=HTTP media playback has been disabled by the administrator.
+
+
+<!-- Thumbnail Listing -->
+$DETAIL_LIST$=Details
+
+
+<!-- STOR File Uploaded -->
+$STOR_FILE_UPLOADED_TITLE$=File Uploaded
+$STOR_FILE_UPLOADED_DESC$=The file has been successfully uploaded.<br><br>$CLICK_HERE_CURRENT_DIR$
+
+
+<!-- Rename -->
+$RENAME_TITLE$=Rename
+$RENAME_DESC$=Enter the new name:
+$NEW_NAME$=New Name
+$RENAME$=Rename
+
+
+<!-- Delete -->
+$DELETE_DIR$=Are you sure you want to delete the selected directory?
+$DELETE_FILE$=Are you sure you want to delete the selected file?
+
+
+<!-- Style Swap Properties -->
+$BOX_WIDTH_SMALL$=boxwidth300
+
+
+<!-- Overwrite file on upload -->
+$OVERWRITE_FILE$=Are you sure you want to overwrite this file?
+
+<!-- Search -->
+$FILE_SEARCH_DESC$=All or part of the file name
+$FILE_SEARCH_TITLE$=File Search
+$SEARCH_SAMPLES$=Search Examples
+$SEARCH_RESULTS$=Search Results
+
+
+<!-- **************** ImagePreviewDialog.htm **************** -->
+$IMAGE_DIALOG_TITLE$=Preview Image
+$PREVIOUS_IMAGE$=Previous Image
+$PAUSE_SLIDESHOW$=Pause Slide Show
+$PLAY_SLIDESHOW$=Play Slide Show
+$NEXT_IMAGE$=Next Image
+$OF$=of
+$IMAGES$=Images
+$SLIDE_SHOW$=Slide Show
+$SLIDE_SHOW_SPEED$=Slide Show Speed
+$FAST$=Fast
+$SLOW$=Slow
+$THUMBNAIL_SCROLL$=Thumbnail Scroll
+
+<!-- **************** AlertDialog.htm **************** -->
+$SELECT_FILE_DELETE$=Please first select a file or directory to delete.
+$SELECT_FILE_RENAME$=Please first select a file or directory to rename.
+$RECOMMEND_IE_UPGRADE_1$=You are using an older version of Microsoft Internet Explorer. Internet Explorer 8.0 and greater include many performance and feature enhancements to improve your experience.
+$RECOMMEND_IE_UPGRADE_2$=<a class="links" href="http://www.microsoft.com/ie" target="_blank">Click here</a> to download the latest version of Internet Explorer.
+
+
+<!-- **************** AskUserPlacementDialog.htm **************** -->
+$ASK_USER_TITLE$=Client Options
+$CLIENT_SELECTION$=Client Selection
+$USER_PLACEMENT_DESC1$=Please select how you would like to access your account.  The Web Client is an easy-to-use, browser-based interface.
+$USER_PLACEMENT_DESC2$=FTP Voyager JV is a full-featured FTP client utilizing Java in the browser.
+$BASIC_WEB_CLIENT$=Web Client
+$FVJV$=FTP Voyager JV
+
+
+<!-- **************** LoggedInDialog.htm **************** -->
+$LOGGED_IN_DIALOG_TITLE$=Currently Logged In
+$LOGGED_IN_DESC$=You are currently logged in. Click OK to restart your session and login.
+
+
+<!-- **************** FVJVLoggedInDialog.htm **************** -->
+$FVJV_LOGGED_IN_DESC$=You are currently logged in. 
+$FVJV_LOGGED_IN_ACTION$=Click here to restart your session and login.
+
+
+<!-- **************** UploadProgressDialog.htm **************** -->
+$UPLOAD_PROGRESS$=Upload Progress
+$TRANSFER_RATE$=Transfer Rate
+$WRITTEN$=Written
+$REMAINING$=Remaining
+$TIME_REMAINING$=Time Remaining
+$DESTINATION$=Destination
+$KB_SEC_LABEL$=KB/sec
+$PLEASE_SELECT_FILE_UPLOAD$=Please select a file to upload using the browse button.
+$UPLOADING$=Uploading
+$LARGE_FILE_UPLOAD_WARN$=The upload status of files larger than 2GB may be incomplete and/or inaccurate due to your web browser.
+$MOZ_LARGE_FILE_UPLOAD_WARN$=Mozilla browsers do not allow the upload of files larger than 2GB.
+$UNABLE_TO_UPLOAD$=The web browser was unable to upload the file.  The file may be to large for the web browser you are using.  $MOZ_LARGE_FILE_UPLOAD_WARN$
+<!-- **************** PasswordRecoveryDialog.htm **************** -->
+$RECOVER_PASSWORD_TITLE$=Recover Password
+$PASSWORD_RECOVERED$=The Password recovery was successful.  The password has been emailed.
+$PASSWORD_RECOVER_FAILURE_ERROR$=Password recovery failed.  Please contact your administrator for assistance. 
+
+<!-- NOTE TO TRANSLATORS: The following BLOCK MUST be removed from your translation -->
+<!-- localized strings, keep these at the end of this file, they "overwrite" any previously defined string -->
+<!--#include de "Strings_DE.strings"-->
+<!--#include fr "Strings_FR.strings"-->
+<!--#include it "Strings_IT.strings"-->
+<!--#include es "Strings_ES.strings"-->
+<!--#include pt "Strings_PT.strings"-->
+<!--#include se "Strings_SE.strings"-->
+<!--#include fi "Strings_FI.strings"-->
+<!--#include no "Strings_NO.strings"-->
+<!--#include dk "Strings_DK.strings"-->
+<!--#include ru "Strings_RU.strings"-->
+<!--#include zh,TW "Strings_TW.strings"-->
+<!--#include zh,CN "Strings_CN.strings"-->
+<!--#include jp "Strings_JP.strings"-->

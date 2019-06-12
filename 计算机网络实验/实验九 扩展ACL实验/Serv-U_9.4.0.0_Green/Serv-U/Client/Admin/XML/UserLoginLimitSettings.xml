@@ -1,0 +1,11 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<UserLoginLimit>
+<todLimit>%CUser.%ID%.LimitToTimeOfDay%</todLimit>
+<todStart>%CUser.%ID%.StartTime%</todStart>
+<todEnd>%CUser.%ID%.EndTime%</todEnd>
+<todDays>%CUser.%ID%.TODDays%</todDays>
+<Result>%RESULT%</Result>
+<ResultText>%RESULT_TEXT%</ResultText>
+</UserLoginLimit>

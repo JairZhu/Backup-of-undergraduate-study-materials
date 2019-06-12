@@ -1,0 +1,235 @@
+﻿// Rhino_JA.str - contains Japanese string definitions for the RhinoRES resource files
+//
+// Strings entered in this file must be one per line and in the format of:
+// $RSIDS_SOME_STRING_NAME$=Some string value
+
+/////////////////////////////////////////////////////////////////////////////
+// dialog
+
+// about strings
+$RSIDS_ABOUT_TITLE$=%sに関して
+$RSIDS_ABOUT_CATEGORY$=ｶﾃｺﾞﾘ:
+$RSIDS_ABOUT_OK$=OK
+$RSIDS_ABOUT_CANCEL$=ｷｬﾝｾﾙ
+$RSIDS_ABOUT_HELP$=ﾍﾙﾌﾟ(&H)
+
+// program info strings
+$RSIDS_PROGRAMINFO_TITLE$=ﾌﾟﾛｸﾞﾗﾑ情報
+$RSIDS_PROGRAMINFO_VERSION$=ﾊﾞｰｼﾞｮﾝ
+$RSIDS_PROGRAMINFO_WRITTEN_BY$=RhinoSoft.com
+$RSIDS_PROGRAMINFO_TRANSLATION_BY$=翻訳:
+$RSIDS_PROGRAMINFO_COPYRIGHT$=Copyright © 1995-%d, Rhino Software, Inc.
+$RSIDS_PROGRAMINFO_DEVELOPED_BY$=開発元：
+// NOTE: leading and trailing spaces intentional
+$RSIDS_PROGRAMINFO_DEVELOPMENT$= 発行元 
+// NOTE: leading and trailing spaces intentional
+$RSIDS_PROGRAMINFO_CONTACT_INFO$= お問い合わせ情報 
+$RSIDS_PROGRAMINFO_RHINO_ADDRESS$=RhinoSoft.com\nP.O. Box 53\nHelenville, WI  53137
+$RSIDS_PROGRAMINFO_RHINO_HOME$=www.RhinoSoft.com
+// NOTE: leading and trailing spaces intentional
+$RSIDS_PROGRAMINFO_LEGAL$= 法律に関して 
+$RSIDS_PROGRAMINFO_BUILD_DATE$=作成日:
+$RSIDS_PROGRAMINFO_INSTALLED_ON$=ｲﾝｽﾄｰﾙ日:
+// NOTE: fill in the following strings with your distributor and translator information
+//		 if you do not wish to display one of these, leave them blank
+// EX:	 "$RSIDS_PROGRAMINFO_DISTRIBUTOR_ADDRESS$=ExampleSoftWerkz.com\n123 Example St.\nExampleville 012345"
+$RSIDS_PROGRAMINFO_DISTRIBUTOR_ADDRESS$=テクノブレスト\n神奈川県相模原市相武台\n1-25-8-3F
+// EX:	 "$RSIDS_PROGRAMINFO_DISTRIBUTOR_HOME$=www.ExampleSoftWerkz.com"
+$RSIDS_PROGRAMINFO_DISTRIBUTOR_HOME$=www.TechnoBlest.com
+// EX:	 "$RSIDS_PROGRAMINFO_TRANSLATOR$=ExampleSoftWerkz.com" or "$RSIDS_PROGRAMINFO_TRANSLATOR$=John Example"
+$RSIDS_PROGRAMINFO_TRANSLATOR$=www.TechnoBlest.com
+
+// eula strings
+$RSIDS_EULA_TITLE$=ﾗｲｾﾝｽ許諾
+
+// reggie strings
+$RSIDS_REGGIE_TITLE$=登録 ID
+// NOTE: leading and trailing spaces intentional
+$RSIDS_REGGIE_REGISTRATION_ID$= 登録ID(&R) 
+$RSIDS_REGGIE_LOST_ID$=IDの紛失(&L)...
+$RSIDS_REGGIE_HELP_REGISTERING$=登録に関するﾍﾙﾌﾟ(&E)...
+$RSIDS_REGGIE_PURCHASE$=ご購入(&P)...
+$RSIDS_REGGIE_NAME$=名前:
+$RSIDS_REGGIE_EMAIL$=電子ﾒｰﾙ:
+$RSIDS_REGGIE_COPIES$=ｺﾋﾟｰ:
+$RSIDS_REGGIE_LICENSE_TYPE$=ﾗｲｾﾝｽの種類:
+$RSIDS_REGGIE_USERS$=ﾕｰｻﾞ:
+$RSIDS_REGGIE_PURCHASE_DATE$=購入日:
+$RSIDS_REGGIE_UPDATES$=ｱｯﾌﾟﾃﾞｰﾄ:
+// NOTE: leading and trailing spaces intentional
+$RSIDS_REGGIE_REGISTERED_TO$= 登録内容 
+$RSIDS_REGGIE_DESC$=登録を行うことにより、お客様は%sを望む期間使用することができます。そして一定の期間ｱｯﾌﾟﾃﾞｰﾄを受けることができます。以下の情報はお客様の登録情報を反映しています。
+
+// thanks for purchase strings
+$RSIDS_THANKS_TITLE$=%sをご購入いただき、ありがとうございます
+$RSIDS_THANKS_CLOSE$=閉じる
+$RSIDS_THANKS_PRIMARY$=ﾌﾟﾗｲﾏﾘ購入ﾛｹｰｼｮﾝ(&P)...
+$RSIDS_THANKS_SECONDARY$=ｾｶﾝﾀﾞﾘ購入ﾛｹｰｼｮﾝ(&S)...
+$RSIDS_THANKS_FAX$=&FAX...
+$RSIDS_THANKS_PURCHASE_INSTRUCTIONS$=お客様は%sをｲﾝﾀｰﾈｯﾄから購入することができます。ﾌﾞﾗｳｻﾞが起動し、次のページが表示されます。：\n%s/purchase.htm
+$RSIDS_THANKS_PURCHASE_PRIMARY_ERROR$=もしﾌﾟﾗｲﾏﾘ購入ｻｰﾊﾞに接続できない場合、\n次のURLを試してください。\nhttp://www.RhinoSoft.com/purchase
+$RSIDS_THANKS_PURCHASE_SECONDARY_ERROR$=もしｾｶﾝﾀﾞﾘ購入ｻｰﾊﾞへ接続できない場合、このFAXﾌｫｰﾑを使用して、購入情報を以下へお送りください。：+1 (262) 560-9628 電話 +1 (262) 560-9627（米国）日本国内の販売に関しては http://www.technoblest.com までお問い合わせください。
+$RSIDS_THANKS_PURCHASE_COMPLETE$=ご購入いただき、ありがとうございます。\r\n我々のﾌﾟﾗｲﾏﾘ購入ｻｰﾊﾞに接続することができない場合、以下をご参照ください。
+
+// reggie violation strings
+$RSIDS_VIOLATION_TITLE$=%s ﾗｲｾﾝｽ違反
+$RSIDS_VIOLATION_CLOSE$=閉じる
+$RSIDS_VIOLATION_VIEW_LICENSE$=ﾗｲｾﾝｽ許諾の表示(&V)
+$RSIDS_VIOLATION_UNINSTALL$=ｱﾝｲﾝｽﾄｰﾙ(&U)
+$RSIDS_VIOLATION_DETECTED$=ライセンス違反が検出されました。このｺﾝﾋﾟｭｰﾀで使用される登録IDは一度に、%d台のｺﾝﾋﾟｭｰﾀへｲﾝｽﾄｰﾙすることを許可します。より多くのｺﾝﾋﾟｭｰﾀへｲﾝｽﾄｰﾙするには、ﾗｲｾﾝｽの追加購入が必要です。
+$RSIDS_VIOLATION_PURCHASE_MORE$=&追加ﾗｲｾﾝｽの購入(&P)
+$RSIDS_VIOLATION_LICENSE_ERROR$=このﾒｯｾｰｼﾞを間違って受け取っている場合、すぐにﾗｲｾﾝｽ情報を確認するためにRhinoSoft.comに連絡してください。
+$RSIDS_VIOLATION_COMPUTER_LIST$=以下のﾘｽﾄでは、お客様のﾈｯﾄﾜｰｸで現在、このｺﾝﾋﾟｭｰﾀと同じ登録IDを使用しているｺﾝﾋﾟｭｰﾀをすべてを示します。このｺﾝﾋﾟｭｰﾀで実行するには、これらのｺﾝﾋﾟｭｰﾀでｱﾝｲﾝｽﾄｰﾙを行うか、追加ﾗｲｾﾝｽを購入してください。
+// NOTE: leading and trailing spaces intentional
+$RSIDS_VIOLATION_COMPUTERS$= このﾗｲｾﾝｽを使用しているｺﾝﾋﾟｭｰﾀとﾕｰｻﾞ(&C) 
+
+// nag for money strings
+$RSIDS_NAG_TITLE$=%sをご登録ください。
+$RSIDS_NAG_PURCHASE$=ご購入(&P)...
+$RSIDS_NAG_PRICING$=価格(&C)...
+$RSIDS_NAG_REGISTER$=ご登録(&R)...
+$RSIDS_NAG_CLOSE$=閉じる
+$RSIDS_NAG_USING_FOR$=%s はこのｺﾝﾋﾟｭｰﾀにｲﾝｽﾄｰﾙされてから%ld日経過しています。このｿﾌﾄｳｪｱの購入をご検討ください。
+$RSIDS_NAG_ORDER_HELP$=価格と注文方法を参照するには「価格」ﾎﾞﾀﾝをｸﾘｯｸしてください。Webから購入を行うには「ご購入」をｸﾘｯｸしてください。
+$RSIDS_NAG_BENEFITS$=このｿﾌﾄｳｪｱの登録をすることにより、これらのﾀﾞｲｱﾛｸﾞは表示されなくなるでしょう。そして利用可能である場合、ｱｯﾌﾟﾃﾞｰﾄ情報が通知されるでしょう。さらに我々はこのｿﾌﾄｳｪｱを継続的にお客様へ提供することができます。
+$RSIDS_NAG_DISABLED$=このﾒｯｾｰｼﾞは%d日後に再び表示されるでしょう。\n\n機能の一部は評価期間終了後に無効にされるでしょう。登録を行うことにより、これらの機能は再び有効となります。
+
+// initial nag strings
+$RSIDS_INITIALNAG_TITLE$=%s 試用版
+$RSIDS_INITIALNAG_PURCHASE$=ご購入(&P)...
+$RSIDS_INITIALNAG_PRICING$=価格(&C)...
+$RSIDS_INITIALNAG_KNOWLEDGE_BASE$=ﾅﾚｯｼﾞ・ﾍﾞｰｽ(&K)...
+$RSIDS_INITIALNAG_SUPPORT$=ｻﾎﾟｰﾄ(&S)...
+$RSIDS_INITIALNAG_TUTORIAL$=ｵﾝﾗｲﾝ・ﾁｭｰﾄﾘｱﾙ(&O)...
+$RSIDS_INITIALNAG_CLOSE$=閉じる
+$RSIDS_INITIALNAG_THANK_YOU$=%sをご使用いただきありがとうございます。
+$RSIDS_INITIALNAG_PURCHASE_NOW$=ご購入いただくことにより、お客様は1年間の無償のアップグレードを受けることができます。
+$RSIDS_INITIALNAG_TRIAL_STATUS$=これは30日の試用期間のうち%s日経過しています。\r\n\n%sはあと%s日で使用できなくなります。
+$RSIDS_INITIALNAG_CONSIDER_PURCHASE$=継続した使用をするために%sのご購入をご検討ください。%sをご購入いただくことにより、このメッセージは表示されなくなります。
+
+// tip of the day strings
+$RSIDS_TOD_TITLE$=本日のﾜﾝﾎﾟｲﾝﾄ
+$RSIDS_TOD_CLOSE$=閉じる(&C)
+$RSIDS_TOD_PREVTIP$=戻る(&P)
+$RSIDS_TOD_NEXTTIP$=進む(&N)
+$RSIDS_TOD_STARTUP_TIPS$=開始時にﾜﾝﾎﾟｲﾝﾄを表示(&S)
+
+// inno setup strings
+$RSIDS_INNO_TITLE$=ﾀﾞｲｱﾛｸﾞ
+$RSIDS_INNO_NEXT$=次へ(&N) >
+$RSIDS_INNO_CANCEL$=ｷｬﾝｾﾙ
+
+// other products strings
+$RSIDS_OTHERPRODUCTS_TITLE$=その他のRhinoSoft.com製品
+$RSIDS_OTHERPRODUCTS_MORE_PRODUCTS$=%sをｲﾝｽﾄｰﾙいただき、ありがとうございます。我々は、このｿﾌﾄｳｪｱがお客様のお役にたつことを望んでおります。以下の製品はお客様のｲﾝﾀｰﾈｯﾄ利用のお役に立つかもしれません。ご興味がございましたら、詳しい情報と無料ﾀﾞｳﾝﾛｰﾄﾞのために以下のｱｲｺﾝをｸﾘｯｸしてください。RhinoSoft社Webｻｲﾄを表示します。
+
+// network info strings
+$RSIDS_NETINFO_TITLE$=ﾈｯﾄﾜｰｸ情報
+$RSIDS_NETINFO_NETDESC$=以下の情報はお客様のｺﾝﾋﾟｭｰﾀﾈｯﾄﾜｰｸ設定を表示しています。この情報はｿﾌﾄｳｪｱの問題が接続に関連していた場合、RhinoSoft.comの技術ｻﾎﾟｰﾄにより使用することができます。
+// NOTE: leading and trailing spaces intentional
+$RSIDS_NETINFO_NETINFO$= ﾈｯﾄﾜｰｸ情報 
+$RSIDS_NETINFO_ADAPTER$=ｱﾀﾞﾌﾟﾀ(&A):
+$RSIDS_NETINFO_IPCONFIG$=&Windows IP 構成:
+$RSIDS_NETINFO_SUPPORT$=ｻﾎﾟｰﾄ(&S)...
+
+// splash strings
+$RSIDS_SPLASH_COPYRIGHT$=Copyright © 1995-%d, Rhino Software, Inc.
+$RSIDS_SPLASH_VERSION$=ﾊﾞｰｼﾞｮﾝ
+$RSIDS_SPLASH_RHINOADDRESS1$=RhinoSoft.com
+$RSIDS_SPLASH_RHINOADDRESS2$=P.O. Box 53
+$RSIDS_SPLASH_RHINOADDRESS3$=Helenville, WI  53137
+$RSIDS_SPLASH_RHINOADDRESS4$=+1 (262) 560-9627
+$RSIDS_SPLASH_WARN1$=%s の発行元であるRhinoSoft.comの
+$RSIDS_SPLASH_WARN2$=明確な許可なく本プログラムを
+$RSIDS_SPLASH_WARN3$=再配布することはできません。
+$RSIDS_SPLASH_STATUS$=Status Area
+
+// new version strings
+$RSIDS_NEWVERSION_TITLE$=ｱｯﾌﾟﾃﾞｰﾄﾁｪｯｸ
+$RSIDS_NEWVERSION_DESC$=RhinoSoft.comは定期的に強化と新機能を含むｿﾌﾄｳｪｱの新しいﾊﾞｰｼﾞｮﾝをﾘﾘｰｽします。以下の概要を確認し、%sの最新版を使用しているかどうか確認してください。
+// NOTE: leading and trailing spaces intentional
+$RSIDS_NEWVERSION_SUMMARY$= 概要 
+$RSIDS_NEWVERSION_CURRENTLY_INSTALLED$=現在ｲﾝｽﾄｰﾙされているﾊﾞｰｼﾞｮﾝ:
+$RSIDS_NEWVERSION_AUTO_CHECK$=自動的にｿﾌﾄｳｪｱのｱｯﾌﾟﾃﾞｰﾄをﾁｪｯｸ(&A)
+$RSIDS_NEWVERSION_BUTTON$=Button
+$RSIDS_NEWVERSION_DOWNLOAD$=ﾀﾞｳﾝﾛｰﾄﾞ(&D)...
+// NOTE: leading and trailing spaces intentional
+$RSIDS_NEWVERSION_WHATS_NEW$= 最新情報(&W) 
+$RSIDS_NEWVERSION_CURRENTLY_RELEASED$=現在ﾘﾘｰｽされているﾊﾞｰｼﾞｮﾝ:
+$RSIDS_NEWVERSION_WEB_UPDATE$=www.RhinoSoft.comでのｱｯﾌﾟﾃﾞｰﾄがないかﾁｪｯｸしてください。
+
+
+/////////////////////////////////////////////////////////////////////////////
+// string table
+
+RSIDS_FILE_MISSING_FMT="%s" を見つけることができませんでした。
+RSIDS_WARNING=警告:このｺﾝﾋﾟｭｰﾀ・ﾌﾟﾛｸﾞﾗﾑは著作権法と国際協定によって保護されています。このﾌﾟﾛｸﾞﾗﾑを権限を持たないいかなる部分も複製、分配は、厳しい刑事上の、そして民事の法の下で可能な最大の範囲の刑罰を遂行されるでしょう。
+RSIDS_VERSION_FMT=ﾊﾞｰｼﾞｮﾝ %s
+RSIDS_REGGIE_FROM_CLIPBOARD=お客様の登録情報はWindowsｸﾘｯﾌﾟﾎﾞｰﾄﾞから読み込まれまし\nた。お客様は今、登録ﾕｰｻﾞとなりました。\n\n%sをご使用いただき、ありがとうございます。
+RSIDS_STANDARD=ｽﾀﾝﾀﾞｰﾄﾞ
+RSIDS_TEMPORARY=試用版（30日後に期限が切れます）
+RSIDS_ENTERPRISE=ｴﾝﾀｰﾌﾟﾗｲｽﾞ
+RSIDS_SITE_LICENSE=ｻｲﾄ
+
+RSIDS_FIXES=Fixes
+RSIDS_RETRIEVING_RELEASE_NOTES=最新のﾘﾘｰｽﾉｰﾄを検索します...
+RSIDS_CONTACTING_UPDATE_SERVER=ｱｯﾌﾟﾃﾞｰﾄｻｰﾊﾞに接続しています...
+RSIDS_UNLIMITED=無制限
+
+RSIDS_DEPARTMENT=ﾃﾞﾊﾟｰﾄﾒﾝﾄ
+RSIDS_SECURE=ｾｷｭｱ
+RSIDS_PROFESSIONAL=ﾌﾟﾛﾌｪｯｼｮﾅﾙ
+RSIDS_CORPORATE=ｺｰﾎﾟﾚｰﾄ
+RSIDS_BRONZE=ブロンズ
+RSIDS_SILVER=シルバー
+RSIDS_GOLD=ゴールド
+RSIDS_UPDATE=ｱｯﾌﾟﾃﾞｰﾄ(&U)...
+RSIDS_UPDATE_PERIOD_FMT=期限切れは%sです。あと%s日間残っています。
+RSIDS_TRIAL=試用版
+RSIDS_TRIAL_DAYS_REMAINING_FMT=%sで試用期間が切れます。あと %s 日間残っています。
+RSIDS_TRIAL_EXPIRED=試用期限が終了しました
+RSIDS_CUSTOMER_NAME_EMPTY_FMT=登録IDをｸﾘｱすることにより、%sは登録されていない状態となります。\n\n本当に登録情報をｸﾘｱしてもよろしいですか？
+RSIDS_INVALID_CUSTOMER_ID=無効な登録IDです。\n\nRhinoSoft.comの電子ﾒｰﾙ・ﾒｯｾｰｼﾞから情報を入力している場合、電子ﾒｰﾙ・ﾒｯｾｰｼﾞから正確に\n情報を入力指定いるか確認してください。\n\n有効な登録IDを得るために、http://www.RhinoSoft.com/sales へ連絡してください。
+RSIDS_USERID=ﾕｰｻﾞ ID
+RSIDS_COMPUTER=ｺﾝﾋﾟｭｰﾀ
+RSIDS_USER_NAME=ﾕｰｻﾞ名
+RSIDS_DIDYOUKNOW=ご存知ですか...
+RSIDS_TIP_FILE_MISSING=次のﾃｨｯﾌﾟｽﾌｧｲﾙミス:\r\n\r\n%s
+
+RSIDS_WELCOME=ようこそ
+// NOTE: replace this text with the english word for the translated language
+RSIDS_LANGUAGE=Japanese
+// NOTE: replace this text with your distributor home page or leave it as is
+RSIDS_DISTRIBUTOR_HOME=www.TechnoBlest.com
+RSIDS_FV_DESC=FTP Voyager - 初心者から上級者まで、ﾌｧｲﾙ転送をより簡単に実現します。ﾄﾞﾗｯｸﾞ・ｱﾝﾄﾞ・ﾄﾞﾛｯﾌﾟを使用できるｲﾝﾀｰﾌｪｰｽによりﾌｧｲﾙ転送をより身近なものとします。ｻｰﾊﾞ間の転送、ｽｹｼﾞｭｰﾘﾝｸﾞ、ﾚｼﾞｭｰﾑなどの拡張を持っています。
+RSIDS_D4_DESC=DNS4Me - ﾀﾞｲﾅﾐｯｸDNSｻｰﾋﾞｽによって、お客様のｺﾝﾋﾟｭｰﾀのｲﾝﾀｰﾈｯﾄの可能性をひろげてください。現在のIPｱﾄﾞﾚｽを使用して、選択したﾄﾞﾒｲﾝでFTPｻｰﾊﾞ、Webｻｲﾄや他のｲﾝﾀｰﾈｯﾄｻｰﾋﾞｽのﾎｽﾃｨﾝｸﾞを開始してください。
+RSIDS_AS_DESC=AllegroSurf - ご家庭や職場でｲﾝﾀｰﾈｯﾄを使用することは大きな負担です。インターネットはお客様にとって必要不可欠な情報を提供します。AllegroSurfは、利用可能な情報の参照とともに、強力なｲﾝﾀｰﾈｯﾄ接続共有を与えるでしょう。
+RSIDS_SU_DESC=Serv-U FTP Server - 現在提供される最もﾎﾟﾋﾟｭﾗｰで使いやすい、ｾｷｭｱなFTPｻｰﾊﾞです。Serv-UはFTPｻｰﾊﾞのｺﾝﾄﾛｰﾙを確実にします。
+RSIDS_INNOSETUP_CLOSE=閉じる(&C)
+RSIDS_INNOSETUP_EXIT_CAPTION=ｾｯﾄｱｯﾌﾟを終了
+RSIDS_INNOSETUP_EXIT_TEXT=ｾｯﾄｱｯﾌﾟは完了していません。今終了するとﾌﾟﾛｸﾞﾗﾑはｲﾝｽﾄｰﾙされないでしょう。\n\nｾｯﾄｱｯﾌﾟを再び実行することにより、ｲﾝｽﾄｰﾙを完了することができます。\n\nｾｯﾄｱｯﾌﾟを終了しますか？
+RSIDS_OTHER_PRODUCTS_HEADER=他のRhinoSoft.com製品をお試しください。
+RSIDS_OTHER_PRODUCTS_COMMENT=%s と共に私どもの他の製品もぜひお試しください。
+RSIDS_NETWORK_INFO=ﾈｯﾄﾜｰｸ・ﾊﾟﾗﾒｰﾀ
+RSIDS_NETWORK_INFO_DATA=値
+
+RSIDS_IP4_ADDRESS_FMT=IPv4ｱﾄﾞﾚｽ %d
+RSIDS_IP6_ADDRESS_FMT=IPv6ｱﾄﾞﾚｽ %d
+RSIDS_SUBNET_MASK_FMT=ｻﾌﾞﾈｯﾄﾏｽｸ %d
+RSIDS_NO_ADAPTERS_FOUND=*** ｱﾀﾞﾌﾟﾀが見つかりません ***
+RSIDS_MAC_ADDRESS=物理ｱﾄﾞﾚｽ
+RSIDS_YES=はい
+RSIDS_NO=いいえ
+RSIDS_IP4_DEFAULT_GATEWAY_FMT=ﾃﾞﾌｫﾙﾄ IPv4 ｹﾞｰﾄｳｪｲ %d
+RSIDS_IP6_DEFAULT_GATEWAY_FMT=ﾃﾞﾌｫﾙﾄ IPv6 ｹﾞｰﾄｳｪｲ %d
+RSIDS_HOST_NAME=ﾎｽﾄ名
+RSIDS_DNS_SUFFIX=ﾌﾟﾗｲﾏﾘDNSｻﾌｨｯｸｽ
+RSIDS_IP_ROUTING_ENABLED=IPﾙｰﾃｨﾝｸﾞが有効
+RSIDS_DNS_SERVER_FMT=DNSｻｰﾊﾞ %d
+RSIDS_DHCP_ENABLED=DHCPは有効
+RSIDS_NETWORK_INFO_CLIPBOARD=ﾈｯﾄﾜｰｸ情報はｸﾘｯﾌﾟﾎﾞｰﾄﾞにｺﾋﾟｰされました。
+RSIDS_NEW_VERSION=新しいﾊﾞｰｼﾞｮﾝが利用可能です。
+RSIDS_CURRENT_VERSION=最新版がｲﾝｽﾄｰﾙされています。
+RSIDS_RELEASE_NOTES=「ﾀﾞｳﾝﾛｰﾄﾞ」ﾎﾞﾀﾝをｸﾘｯｸして最新のﾊﾞｰｼﾞｮﾝをﾀﾞｳﾝﾛｰﾄﾞしてﾘﾘｰｽﾉｰﾄを参照してください。
+RSIDS_IP4_DHCP_SERVER_FMT=IPv4 DHCP ｻｰﾊﾞｰ
+RSIDS_IP6_DHCP_SERVER_FMT=IPv6 DHCP ｻｰﾊﾞｰ

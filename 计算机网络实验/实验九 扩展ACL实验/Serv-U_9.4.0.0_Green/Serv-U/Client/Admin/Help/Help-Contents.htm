@@ -1,0 +1,733 @@
+<!--#include "Strings/Help-TOC-Strings.strings"-->
+<!--#include "Strings/Help-Keyword-Strings.strings"-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>$TITLE$</title>
+	<style type="text/css">
+		/*margin and padding on body element
+		  can introduce errors in determining
+		  element position and are not recommended;
+		  we turn them off as a foundation for YUI
+		  CSS treatments. */
+		body {
+			margin:0;
+			padding:0;
+			background-image: url(%COMMON_FILE%Images/vert-bg-fade.png);
+			background-repeat: repeat-x;	
+			background-position: center;
+			background-color: #d4d0c8;
+			text-align:center;
+		}
+	</style>
+<link type="text/css" href="%COMMON_FILE%Scripts/Help/fonts/fonts-min.css" rel="stylesheet" />
+<link type="text/css" href="%COMMON_FILE%Scripts/Help/assets/css/treeview.css" rel="stylesheet" />
+<link type="text/css" href="%COMMON_FILE%Scripts/Help/assets/css/tree.css" rel="stylesheet" />
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/yahoo/yahoo.js"></script>
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/event/event.js"></script>
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/treeview/treeview.js"></script>
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/Help.js"></script>
+<script type="text/javascript" language="javascript">
+	// preload a couple images
+	LoadingImg1 = new Image();
+	LoadingImg1.src = "%COMMON_FILE%Images/HelpIndex-off.gif";
+	LoadingImg2 = new Image();
+	LoadingImg2.src = "%COMMON_FILE%Images/HelpContents.gif";
+	
+	// determine if the browser is IE or Moz and what version 
+	nBrowserVersion = parseInt(navigator.appVersion); // browser version being used
+	sBrowserType = navigator.appName; // type of browser....IE or Moz
+
+	// if IE then drop in this style otherwise use the other style
+	if (sBrowserType == "Microsoft Internet Explorer" && (nBrowserVersion >= 4)) {
+		document.write("<style type='text/css'>");
+		document.write("BODY{margin:10px;}");
+		document.write("</style>");
+	} // if
+	else{
+		document.write("<style type='text/css'>");
+		document.write("BODY{margin:10px 14px 10px 10px;}");
+		document.write("</style>");
+	} // else
+</script>
+
+
+<!--Additional custom style rules for this example:-->
+<style type="text/css">
+    #treewrapper {background: #fff; position:relative;}
+	#treediv {position:relative; width:200px; background: #fff; padding:1em;}
+    .icon-item { display:block; padding-left: 20px; background: transparent url(%COMMON_FILE%Scripts/Help/assets/img/pageitem.gif) no-repeat; }
+	a.highlightbuttonbox,a.highlightbuttonbox-head,a.highlightlinkbox,.offnavlinkbox,div.highlightbuttonbox,.imgprevbutton-off {
+	color:#000;
+	text-decoration:none;
+	padding:1px 2px 1px 2px;
+	line-height:26px;
+}
+	a.highlightbuttonbox,a.highlightlinkbox,.offnavlinkbox,div.highlightbuttonbox,.imgprevbutton-off {
+		border:1px solid #e9e9e6;
+	}
+	a.highlightbuttonbox-head{
+		border:1px solid #e9e9e6;
+	}
+	a.highlightbuttonbox:hover,a.highlightbuttonbox-head:hover,a.highlightlinkbox:hover,.onnavlinkbox,div.highlightbuttonbox:hover,.imgprevbutton-on{
+		background:#b6bdd2 ;
+		border:1px solid black;
+		color:#000!important;
+		text-decoration:none;
+		padding:1px 2px 1px 2px;	
+		cursor:pointer;
+		line-height:26px;
+	}
+	a.highlightbuttonbox-disabled{
+		background:#e9e9e6 ;
+		color:#969696;
+		border:1px solid #e9e9e6;
+		text-decoration:none;
+		padding:1px 2px 1px 2px;	
+		cursor:default;
+		line-height:26px;
+	}
+	div.highlightbuttonbox,div.highlightbuttonbox:hover,.imgprevbutton-on,.imgprevbutton-off{
+		height:16px;
+		line-height:16px;
+	}
+	.dividerline{
+	background: url(%COMMON_FILE%Images/Taskbar-bg.png) -2px -33px no-repeat;
+	height:26px;
+	line-height:26px;
+}
+</style>
+
+
+<!--end custom header content for this example-->
+</head>
+
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 0 auto;">
+	<tr>
+		<td style="width:21px;white-space:nowrap;text-align:center;">
+			<span ><a href="javascript:showIndex(false);"><img id="hlp-contents-img" src="%COMMON_FILE%Images/HelpContents-off.gif" border="0" align="middle" alt="$HELP_CONTENTS_TAB$" style="margin:1px 3px 0 0;border:none;cursor:default;"></a></span>
+		</td>									
+		<td style="white-space:nowrap;padding-right:5px;">
+			<span><a href="javascript:showIndex(false);" id="hlp-contents-txt" class="highlightbuttonbox-disabled">$HELP_CONTENTS_TAB$</a></span>						
+		</td>
+		<td style="white-space:nowrap;width:12px;">
+			<span class="dividerline">&nbsp;</span>
+		</td>
+		<td style="width:21px;white-space:nowrap;text-align:center;">
+			<span ><a href="javascript:showIndex(true);"><img id="hlp-index-img" src="%COMMON_FILE%Images/HelpIndex.gif" border="0" align="middle" alt="$HELP_INDEX_TAB$" style="margin:1px 3px 0 0;border:none;"></a></span>
+		</td>									
+		<td style="white-space:nowrap;">
+			<span><a href="javascript:showIndex(true);" id="hlp-index-txt" class="highlightbuttonbox">$HELP_INDEX_TAB$</a></span>						
+		</td>
+	</tr>
+</table>
+
+<div id="TOCpanebox" style="text-align:left;overflow:auto;width:100%;background-color:#fff;border: inset 2px #fff;">
+	<div id="treewrapper">
+		<div id="treediv"> </div>
+	</div>	
+	<div id="HelpIndex" style="display:none;">
+		<select id="HelpIndexSel" multiple="multiple" style="width:100%;height:99%;" ondblclick="javascript:GotoKeyword();" onkeyup="javascript:OnKeywordPress(event);">
+		</select>
+	</div>
+</div>
+</body>
+<script type="text/javascript" language="javascript">
+	//Wrap our initialization code in an anonymous function
+	//to keep out of the global namespace:
+	(function(){
+		var init = function() {
+			
+			//create the TreeView instance:
+			var tree = new YAHOO.widget.TreeView("treediv");
+			
+			//get a reusable reference to the root node:
+			var root = tree.getRoot();
+			var bExpandItem2_3, bExpandItem7_3, bExpandItem12_3, bExpandItem2_4, bExpandItem5_4, bExpandItem10_4, bExpandItem16_4, bExpandRootItem4, bExpandRootItem3, bExpandRootItem5, bExpandRootItem6, bExpandItem1_7 = false;			
+			var sNode = GetHelpVar("helpnode");
+			
+			// if we have a node to expand get the correct one and set the flag
+			switch (sNode) {			
+				case "Item2_3" :
+					bExpandItem2_3 = true;
+					bExpandRootItem3 = true;
+					break;
+
+				case "Item7_3" :
+					bExpandItem7_3 = true;
+					bExpandRootItem3 = true;
+					break;
+
+				case "Item12_3" :
+					bExpandItem12_3 = true;
+					bExpandRootItem3 = true;
+					break;
+
+				case "Item2_4" :
+					bExpandItem2_4 = true;
+					bExpandRootItem4 = true;
+					break;
+
+				case "Item5_4" :
+					bExpandItem5_4 = true;
+					bExpandRootItem4 = true;
+					break;
+
+				case "Item10_4" :
+					bExpandItem10_4 = true;
+					bExpandRootItem4 = true;
+					break;
+	
+				case "Item16_4" :
+					bExpandItem16_4 = true;
+					bExpandRootItem4 = true;
+					break;
+
+				case "RootItem3" :
+					bExpandRootItem3 = true;
+					break;
+
+				case "RootItem4" :
+					bExpandRootItem4 = true;
+					break;
+
+				case "RootItem5" :
+					bExpandRootItem5 = true;
+					break;
+
+				case "RootItem6" :
+					bExpandRootItem6 = true;
+					break;
+
+				case "Item1_7" :
+					bExpandItem1_7 = true;
+					bExpandRootItem3 = true;
+					break;
+			} // switch
+			
+			var RootItem1 = TreeTextNode("$SERVU_FILE_SERVER$", root, true, false);
+				
+				var Item1_1 = TreeTextNode("$OVERVIEW$", RootItem1, false, true,"Help-Overview.htm");
+
+				var Item2_1 = TreeTextNode("$SERVU_EDITIONS$", RootItem1, false, true,"Help-ServU-Editions.htm");
+
+				var Item3_1 = TreeTextNode("$HOW_TO_PURCHASE$", RootItem1, false, true,"Help-How-To-Purchase.htm");
+
+			var ContactRootItem = TreeTextNode("$CONTACTING_RHINOSOFT$", root, false, false);
+
+				var ContactItem_1 = TreeTextNode("$CONTACT_TECH_SUPPORT$", ContactRootItem, false, true,"Help-Contact-Tech.htm");
+
+				var ContactItem_2 = TreeTextNode("$CONTACTING_RHINOSOFT$", ContactRootItem, false, true,"Help-Contact.htm");
+
+			var RootItem2 = TreeTextNode("$GETTING_STARTED$", root, true, false);
+
+				var Item1_2 = TreeTextNode("$QUICK_START$", RootItem2, false, true,"Help-Quick-Start.htm");
+
+				var Item2_2 = TreeTextNode("$SERVU_CONCEPTS$", RootItem2, false, true,"Help-Serv-U-Concepts.htm");
+
+				var Item3_2 = TreeTextNode("$NAV_SERVU$", RootItem2, false, true,"Help-Nav-Serv-U.htm");
+
+				var Item4_2 = TreeTextNode("$UIC_INFO$", RootItem2, false, true,"Help-UIC-Info.htm");
+
+			var RootItem3 = TreeTextNode("$SERVER$", root, bExpandRootItem3, false);
+
+				var Item1_3 = TreeTextNode("$SERVER_OVERVIEW$", RootItem3, false, true,"Help-Server-Overview.htm");
+
+				var Item7_3 = TreeTextNode("$CONF_SERVER_DETAILS$", RootItem3, bExpandItem7_3, false);
+
+					var Item8_3 = TreeTextNode("$SERVERCONF_IP_ACL$", Item7_3, false, true,"Help-IP-ACL.htm");
+
+					var Item9_3 = TreeTextNode("$SERVERCONF_DATABASE_ACCESS$", Item7_3, false, true,"Help-Database-Access.htm");
+					
+					var Item16_3 = TreeTextNode("$SERVERCONF_EVENTS$", Item7_3, false, true,"Help-Events.htm");
+
+					var Item10_3 = TreeTextNode("$SERVERCONF_LICENSE_DETAILS$", Item7_3, false, true,"Help-License-Details.htm");
+
+					var Item11_3 = TreeTextNode("$SERVERCONF_PROG_INFO$", Item7_3, false, true,"Help-Prog-Info.htm");
+
+					var Item17_3 = TreeTextNode("$SMTP_CONFIG$", Item7_3, false, true,"Help-SMTP.htm");
+
+
+				var Item1_7 = TreeTextNode("$CONF_SERVER_DIRECTORIES$", RootItem3, bExpandItem1_7, false);
+
+					var Item2_7 = TreeTextNode("$DIRCONF_DIR_ACCESS$", Item1_7, false, true,"Help-Directory-Access.htm");
+
+					var Item3_7 = TreeTextNode("$DIRCONF_VIR_PATHS$", Item1_7, false, true,"Help-Virtual-Paths.htm");
+
+				var Item2_3 = TreeTextNode("$CONF_SERVER_LIMITS_SETTINGS$", RootItem3, bExpandItem2_3, false);
+
+					var Item3_3 = TreeTextNode("$LIMITSETTCONF_SERVER_LIMITS$", Item2_3, false, true,"Help-Limits-Settings-Server.htm");
+
+					var Item4_3 = TreeTextNode("$LIMITSETTCONF_MAINT_SERVER_SETTINGS$", Item2_3, false, true,"Help-Server-Settings.htm");
+
+					var Item5_3 = TreeTextNode("$LIMITSETTCONF_CUSTOM_COMMANDS$", Item2_3, false, true,"Help-Custom-FTP.htm");
+
+					var Item6_3 = TreeTextNode("$LIMITSETTCONF_ENCRYPTION$", Item2_3, false, true,"Help-Encryption-Server.htm");
+
+				var Item12_3 = TreeTextNode("$CONF_SERV_ACTIVITY_VIEW$", RootItem3, bExpandItem12_3, false);
+
+					var Item13_3 = TreeTextNode("$ACTVIEW_SERVER_SESS$", Item12_3, false, true,"Help-Domain-Server-Activity.htm");
+
+					var Item14_3 = TreeTextNode("$ACTVIEW_SERVER_STATS$", Item12_3, false, true,"Help-Domain-Server-Stats.htm");
+
+					var Item15_3 = TreeTextNode("$ACTVIEW_USER_GROUP_STATS$", Item12_3, false, true,"Help-User-Group-Stats.htm");
+
+					var Item16_3 = TreeTextNode("$ACTVIEW_SERVER_LOG$", Item12_3, false, true,"Help-Domain-Server-Log.htm");
+
+			var RootItem4 = TreeTextNode("$DOMAIN$", root, bExpandRootItem4, false);
+
+				var Item1_4 = TreeTextNode("$DOMAIN_OVERVIEW$", RootItem4, false, true,"Help-Domain-Overview.htm");
+
+				var Item10_4 = TreeTextNode("$CONF_DOMAIN_DETAILS$", RootItem4, bExpandItem10_4, false);
+
+					var Item11_4 = TreeTextNode("$DOMAINCONF_NAME_DESC$", Item10_4, false, true,"Help-Domain-Name-Description.htm");
+
+					var Item12_4 = TreeTextNode("$DOMAINCONF_LISTENERS$", Item10_4, false, true,"Help-Domain-Listeners.htm");
+
+					var Item13_4 = TreeTextNode("$DOMAINCONF_VHOST_NAMES$", Item10_4, false, true,"Help-Virtual-Hosts.htm");
+
+					var Item14_4 = TreeTextNode("$DOMAINCONF_IP_ACL$", Item10_4, false, true,"Help-IP-ACL.htm");
+
+					var Item15_4 = TreeTextNode("$DOMAINCONF_DATABASE$", Item10_4, false, true,"Help-Database-Access.htm");
+
+					var Item21_4 = TreeTextNode("$DOMAINCONF_EVENTS$", Item10_4, false, true,"Help-Events.htm");
+					
+					var Item22_4 = TreeTextNode("$SMTP_CONFIG$", Item10_4, false, true,"Help-SMTP.htm");
+
+
+				var Item2_4 = TreeTextNode("$CONF_DOMAIN_DIRECTORIES$", RootItem4, bExpandItem2_4, false);
+
+					var Item3_4 = TreeTextNode("$DIRCONF_DIR_ACCESS$", Item2_4, false, true,"Help-Directory-Access.htm");
+
+					var Item4_4 = TreeTextNode("$DIRCONF_VIR_PATHS$", Item2_4, false, true,"Help-Virtual-Paths.htm");
+
+				var Item5_4 = TreeTextNode("$CONF_DOMAIN_LIMITS_SETTINGS$", RootItem4, bExpandItem5_4, false);
+
+					var Item6_4 = TreeTextNode("$LIMITSETTCONF_DOM_LIMITS$", Item5_4, false, true,"Help-Limits-Settings-Domain.htm");
+
+					var Item7_4 = TreeTextNode("$LIMITSETTCONF_MAINT_DOM_SETTINGS$", Item5_4, false, true,"Help-Domain-Settings.htm");
+
+					var Item8_4 = TreeTextNode("$LIMITSETTCONF_CUSTOM_COMMANDS$", Item5_4, false, true,"Help-Custom-FTP.htm");
+
+					var Item9_4 = TreeTextNode("$LIMITSETTCONF_ENCRYPTION$", Item5_4, false, true,"Help-Encryption-Domain.htm");
+	
+				var Item16_4 = TreeTextNode("$DOMAIN_ACTIVITY_VIEW$", RootItem4, bExpandItem16_4, false);
+
+					var Item17_4 = TreeTextNode("$ACTVIEW_USERS$", Item16_4, false, true,"Help-Domain-Server-Activity.htm");
+
+					var Item18_4 = TreeTextNode("$ACTVIEW_SESSION_STATS$", Item16_4, false, true,"Help-Domain-Server-Stats.htm");
+
+					var Item22_4 = TreeTextNode("$ACTVIEW_USER_GROUP_STATS$", Item16_4, false, true,"Help-User-Group-Stats.htm");
+
+					var Item19_4 = TreeTextNode("$ACTVIEW_VIEW_DOMAIN_LOG$", Item16_4, false, true,"Help-Domain-Server-Log.htm");
+
+					var Item20_4 = TreeTextNode("$ACTVIEW_CONF_LOG$", Item16_4, false, true,"Help-Configure-Logs.htm");
+
+			var RootItem6 = TreeTextNode("$CONF_DOMAIN_USERS$", root, bExpandRootItem6, false);
+
+				var Item1_6 = TreeTextNode("$USERCONF_ABOUT$", RootItem6, false, true,"Help-About-User-Accts.htm");
+
+				var Item2_6 = TreeTextNode("$USERCONF_USER_INFO$", RootItem6, false, true,"Help-User-Info-Domain.htm");
+
+				var Item3_6 = TreeTextNode("$USERCONF_GROUPS$", RootItem6, false, true,"Help-User-Groups-Domain.htm");
+
+				var Item4_6 = TreeTextNode("$USERCONF_WELCOME_MSG$", RootItem6, false, true,"Help-Welcome-Message-Domain.htm");
+
+				var Item5_6 = TreeTextNode("$USERCONF_IP_ACL$", RootItem6, false, true,"Help-IP-ACL.htm");
+
+				var Item6_6 = TreeTextNode("$USERCONF_DIR_ACCESS$", RootItem6, false, true,"Help-Directory-Access.htm");
+
+				var Item7_6 = TreeTextNode("$USERCONF_VIR_PATHS$", RootItem6, false, true,"Help-Virtual-Paths.htm");
+
+				var Item8_6 = TreeTextNode("$USERCONF_LIMITS_SETTINGS$", RootItem6, false, true,"Help-Limits-Settings-User.htm");
+				
+				var Item12_6 = TreeTextNode("$USERCONF_EVENTS$", RootItem6, false, true,"Help-Events.htm");
+
+				var Item9_6 = TreeTextNode("$USERCONF_QUOTAS_RATIOS$", RootItem6, false, true,"Help-User-Quotas-Ratios.htm");
+
+				var Item10_6 = TreeTextNode("$USERCONF_WINDOWS_AUTH$", RootItem6, false, true,"Help-Windows-Auth.htm");
+
+				var Item11_6 = TreeTextNode("$USERCONF_SSH_KEY$", RootItem6, false, true,"Help-SSH-Key-Pair.htm");
+
+			var RootItem5 = TreeTextNode("$CONF_DOMAIN_GROUPS$", root, bExpandRootItem5, false);
+
+				var Item1_5 = TreeTextNode("$GROUPCONF_ABOUT$", RootItem5, false, true,"Help-About-Groups.htm");
+
+				var Item2_5 = TreeTextNode("$GROUPCONF_GROUP_INFO$", RootItem5, false, true,"Help-Group-Information.htm");
+
+				var Item3_5 = TreeTextNode("$GROUPCONF_MEMBERS$", RootItem5, false, true,"Help-Group-Members.htm");
+
+				var Item4_5 = TreeTextNode("$GROUPCONF_WELCOME_MSG$", RootItem5, false, true,"Help-Welcome-Message-Domain.htm");
+
+				var Item5_5 = TreeTextNode("$GROUPCONF_IP_ACL$", RootItem5, false, true,"Help-IP-ACL.htm");
+
+				var Item6_5 = TreeTextNode("$GROUPCONF_DIR_ACCESS$", RootItem5, false, true,"Help-Directory-Access.htm");
+
+				var Item7_5 = TreeTextNode("$GROUPCONF_VIR_PATHS$", RootItem5, false, true,"Help-Virtual-Paths.htm");
+
+				var Item8_5 = TreeTextNode("$USERCONF_LIMITS_SETTINGS$", RootItem5, false, true,"Help-Limits-Settings-Group.htm");
+				
+				var Item11_5 = TreeTextNode("$GROUPCONF_EVENTS$", RootItem5, false, true,"Help-Events.htm");
+
+				var Item9_5 = TreeTextNode("$GROUPCONF_QUOTAS_RATIOS$", RootItem5, false, true,"Help-Group-Quotas-Ratios.htm");
+
+				var Item10_5 = TreeTextNode("$GROUPCONF_SSH_KEY$", RootItem5, false, true,"Help-SSH-Key-Pair.htm");
+
+			var AddtlRefRoot = TreeTextNode("$ADDITIONAL_REFERENCE$", root, false, false);
+
+				var AddtlRefItem_1 = TreeTextNode("$SYSTEM_VARS$", AddtlRefRoot, false, true,"Help-System-Variables.htm");
+
+			tree.subscribe("labelClick", function(node) {
+				//alert(node.data.href + " label was clicked");
+				sHelpPageURL = node.data.helppage;
+				if(sHelpPageURL != "" && sHelpPageURL != null && sHelpPageURL != undefined)
+					parent.frames[2].location.href = "%ADMIN_FILE%Help/" + sHelpPageURL;
+			}); 
+			
+			tree.draw();
+		};
+		//Add an onDOMReady handler to build the tree when the document is ready
+		YAHOO.util.Event.onDOMReady(init);
+	})();
+
+
+	function TreeTextNode(sLabel,sParentObj,bIsOpen,bHasImage,sHref)
+	{
+		var NodeObj = {label: sLabel, helppage: sHref };
+		
+		TextTreeItem = new YAHOO.widget.TextNode(NodeObj, sParentObj, bIsOpen);
+
+		if(bHasImage)
+			TextTreeItem.labelStyle = "icon-item";
+		 
+		return(TextTreeItem);
+	} // TreeTextNode
+
+
+	function ResizeTOC() 
+	{
+		// define some vars for width/height
+		var w_maxWidth = 1600, w_maxHeight = 1200;
+
+		// if the browser is from here
+		if (navigator.appName.indexOf("Microsoft") != -1) {
+
+			// set the new width/height
+			//w_newWidth = document.body.clientWidth;			
+			w_newHeight = document.body.clientHeight - 4;
+		} // if
+		else {
+			// estimate the size of the scroll bar
+			var netscapeScrollWidth = 15;
+
+			// set the new width/height
+			//w_newWidth = window.innerWidth - netscapeScrollWidth;
+			w_newHeight = window.innerHeight - netscapeScrollWidth;
+		} // else
+
+		// if the new width is greater than the max width, set the new width to the max
+		//if (w_newWidth > w_maxWidth)	
+		//	w_newWidth = w_maxWidth;
+
+		// if the new height is greater than the max height, set the new height to the max
+		if (w_newHeight > w_maxHeight)
+			w_newHeight = w_maxHeight;
+			
+		//TOC container resize
+		document.getElementById("TOCpanebox").style.height = (w_newHeight - 15);
+	} // ResizeTOC
+
+
+	// gets the value of a query string parameter
+	function GetURLParameter(sParameterName)
+	{
+	  var sParameterValue = "";
+	  
+	  // the URL of the current page
+	  var sCurrentURL = window.location.href;
+	  
+		if ( sCurrentURL.indexOf("?") > -1 ){
+			var sParemeterString = sCurrentURL.substr(sCurrentURL.indexOf("?") + 1);    
+			var aParameterArray = sParemeterString.split("&");
+			
+			for ( var iParam = 0; iParam < aParameterArray.length; iParam++ ){
+				// find the position of the "="
+				nPos = aParameterArray[iParam].indexOf("=");
+
+				if (aParameterArray[iParam].substring(0,nPos + 1) == (sParameterName + "=")) {
+					var aParamPosition = aParameterArray[iParam].split("=");
+					sParameterValue = aParamPosition[1];
+					break;
+				} // if
+			} // for
+		} // if
+
+		return (sParameterValue);
+	} // GetURLParameter
+
+
+	function showIndex(bShow)
+	{
+		// show / hide the appropriate help stuff
+		document.getElementById("HelpIndex").style.display = (bShow) ? "block" : "none";
+		document.getElementById("treewrapper").style.display = (bShow) ? "none" : "block";
+		
+		// set up the buttons
+		document.getElementById("hlp-index-txt").className = (bShow) ? "highlightbuttonbox-disabled" : "highlightbuttonbox";
+		document.getElementById("hlp-index-img").src = (bShow) ? "%COMMON_FILE%Images/HelpIndex-off.gif" : "%COMMON_FILE%Images/HelpIndex.gif";
+		document.getElementById("hlp-index-img").style.cursor = (bShow) ? "default" : "pointer";
+		document.getElementById("hlp-contents-txt").className = (bShow) ? "highlightbuttonbox" : "highlightbuttonbox-disabled";
+		document.getElementById("hlp-contents-img").src = (bShow) ? "%COMMON_FILE%Images/HelpContents.gif" : "%COMMON_FILE%Images/HelpContents-off.gif";
+		document.getElementById("hlp-contents-img").style.cursor = (bShow) ? "pointer" : "default";
+	} // showIndex
+
+
+	function GotoKeyword()
+	{
+		// find the currently selected item
+		var sValue = document.getElementById("HelpIndexSel").value;
+
+		// send the content frame to this page
+		parent.frames[2].location.href = "%ADMIN_FILE%Help/" + sValue;
+	} // GotoKeyword
+
+
+	function OnKeywordPress(e)
+	{
+		// only go to the selected keyword if it's enter
+		// http://www.quirksmode.org/js/keys.html
+		if (e.keyCode == 13)
+			GotoKeyword();
+	} // OnKeywordPress
+
+
+	function KeywordSort(asVar1, asVar2)
+	{
+		// return < 0 if asVar1 should be first, 0 if they're equal, > 0 if asVar2 should be first
+		return (asVar1[1].localeCompare(asVar2[1]));
+	} // KeywordSort
+
+
+	// setup the resize handlers
+	window.onresize = ResizeTOC;
+	window.onload = ResizeTOC;
+
+	// I am the really, really big array of arrays that makes the keyword index work.  I am bigger than you.  Yes, even you.
+	var g_aasIndexKeywords = [
+		["Help-Overview.htm", "$OVERVIEW$"],
+		["Help-ServU-Editions.htm", "$SERVU_EDITIONS$"],
+		["Help-Nav-Serv-U.htm", "$HOMEPAGE$"],
+		["Help-Nav-Serv-U.htm", "$SWDOMAINS$"],
+		["Help-Domain-Overview.htm", "$CRDOMAINS$"],
+		["Help-Domain-Overview.htm", "$DELDOMAINS$"],
+		["Help-Domain-Name-Description.htm", "$ENDISDOMAINS$"],
+		["Help-Domain-Listeners.htm", "$ENDISLISTENERS$"],
+		["Help-Domain-Listeners.htm", "$HTTPLISTENER$"],
+		["Help-Domain-Listeners.htm", "$HTTPSLISTENER$"],
+		["Help-Domain-Listeners.htm", "$SFTPLISTENER$"],
+		["Help-Domain-Listeners.htm", "$SSHLISTENER$"],
+		["Help-Domain-Listeners.htm", "$FTPSLISTENER$"],
+		["Help-Domain-Listeners.htm", "$IMPFTPSLISTENER$"],
+		["Help-Domain-Listeners.htm", "$FTPLISTENER$"],
+		["Help-Domain-Listeners.htm", "$PASVIP$"],
+		["Help-Domain-Listeners.htm", "$LISTENIP$"],
+		["Help-Virtual-Hosts.htm", "$VIRTHOST$"],
+		["Help-IP-ACL.htm", "$IPACCESS$"],
+		["Help-IP-ACL.htm", "$ALLOWIPACC$"],
+		["Help-IP-ACL.htm", "$DENYIPACC$"],
+		["Help-Database-Access.htm", "$ODBCDSN$"],
+		["Help-Database-Access.htm", "$ODBCDATABASE$"],
+		["Help-Database-Access.htm", "$SQLTEMPLATES$"],
+		["Help-Database-Access.htm", "$GRTABLEMAP$"],
+		["Help-Database-Access.htm", "$USRTABLEMAPS$"],
+		["Help-About-User-Accts.htm", "$ADDCOLL$"],
+		["Help-About-User-Accts.htm", "$MVUSERS$"],
+		["Help-About-User-Accts.htm", "$USERTEMPL$"],
+		["Help-About-User-Accts.htm", "$USERWIZ$"],
+		["Help-User-Info-Domain.htm", "$USERINFO$"],
+		["Help-About-Groups.htm", "$GROUPS$"],
+		["Help-About-Groups.htm", "$GRTEMPL$"],
+		["Help-User-Info-Domain.htm", "$LOCKUSER$"],
+		["Help-User-Info-Domain.htm", "$ALWAYSALLOW$"],
+		["Help-User-Info-Domain.htm", "$ACCTTYPE$"],
+		["Help-User-Info-Domain.htm", "$AUTODISABL$"],
+		["Help-User-Info-Domain.htm", "$AUTODEL$"],
+		["Help-User-Info-Domain.htm", "$NOPRIV$"],
+		["Help-User-Info-Domain.htm", "$DOMAINADM$"],
+		["Help-User-Info-Domain.htm", "$SYSADM$"],
+		["Help-User-Info-Domain.htm", "$ADMPRIV$"],
+		["Help-User-Info-Domain.htm", "$PASSWD$"],
+		["Help-User-Info-Domain.htm", "$USERNAME$"],
+		["Help-User-Info-Domain.htm", "$LOGINID$"],
+		["Help-User-Info-Domain.htm", "$FULLNAME$"],
+		["Help-User-Info-Domain.htm", "$PASSTYPE$"],
+		["Help-User-Info-Domain.htm", "$ENACCT$"],
+		["Help-User-Info-Domain.htm", "$HOMEDIR$"],
+		["Help-Group-Members.htm", "$GRMEMBERS$"],
+		["Help-Welcome-Message-Domain.htm", "$WELCOMEMSG$"],
+		["Help-Custom-FTP.htm", "$RESPCODE$"],
+		["Help-Welcome-Message-Domain.htm", "$MSGFILE$"],
+		["Help-Welcome-Message-Domain.htm", "$OVRRIDEGRMSG$"],
+		["Help-Directory-Access.htm", "$DIRACCESS$"],
+		["Help-Directory-Access.htm", "$READPERM$"],
+		["Help-Directory-Access.htm", "$WRITEPERM$"],
+		["Help-Directory-Access.htm", "$APPEPERM$"],
+		["Help-Directory-Access.htm", "$DELPRM$"],
+		["Help-Directory-Access.htm", "$CREATEPERM$"],
+		["Help-Directory-Access.htm", "$RMPERM$"],
+		["Help-Directory-Access.htm", "$LISTPERM$"],
+		["Help-Directory-Access.htm", "$INHPERM$"],
+		["Help-Directory-Access.htm", "$EXEC$"],
+		["Help-Directory-Access.htm", "$QUOTA$"],
+		["Help-Directory-Access.htm", "$MAXDIRSZ$"],
+		["Help-Directory-Access.htm", "$FULLACC$"],
+		["Help-Directory-Access.htm", "$READONL$"],
+		["Help-Virtual-Paths.htm", "$PHYPATH$"],
+		["Help-Virtual-Paths.htm", "$VIRPATH$"],
+		["Help-Limits-Settings-Domain.htm", "$LIMSETT$"],
+		["Help-Limits-Settings-Domain.htm", "$APPDATETIME$"],
+		["Help-About-User-Accts.htm", "$DBUSERS$"],
+		["Help-Limits-Settings-Domain.htm", "$ATIMEOUT$"],
+		["Help-Limits-Settings-Domain.htm", "$IDLETIMEOUT$"],
+		["Help-Limits-Settings-Domain.htm", "$SESS$"],
+		["Help-Limits-Settings-Domain.htm", "$ENCRCONN$"],
+		["Help-Limits-Settings-Domain.htm", "$AUTOTIMEOUT$"],
+		["Help-Limits-Settings-Domain.htm", "$EXPPASS$"],
+		["Help-Limits-Settings-Domain.htm", "$COMPLEXPASS$"],
+		["Help-Limits-Settings-Domain.htm", "$PSWDLEN$"],
+		["Help-Limits-Settings-Domain.htm", "$HIDFILE$"],
+		["Help-Limits-Settings-Domain.htm", "$WINSHORTCUTS$"],
+		["Help-Limits-Settings-Domain.htm", "$DELPARTUL$"],
+		["Help-Limits-Settings-Domain.htm", "$MAXDLSPD$"],
+		["Help-Limits-Settings-Domain.htm", "$MAXULSPD$"],
+		["Help-Limits-Settings-Domain.htm", "$ASCII$"],
+		["Help-Limits-Settings-Domain.htm", "$URLTOASCII$"],
+		["Help-Limits-Settings-Domain.htm", "$CHECKDIRSZ$"],
+		["Help-User-Quotas-Ratios.htm", "$RATQUOTAS$"],
+		["Help-User-Quotas-Ratios.htm", "$XFERRATIO$"],
+		["Help-User-Quotas-Ratios.htm", "$XFERCRED$"],
+		["Help-User-Quotas-Ratios.htm", "$RATFREEFILE$"],
+		["Help-Windows-Auth.htm", "$WINAUTH$"],
+		["Help-Windows-Auth.htm", "$WINDOMAIN$"],
+		["Help-Windows-Auth.htm", "$CONFADAUTH$"],
+		["Help-Server-Settings.htm", "$CUSTFTPRESP$"],
+		["Help-Server-Settings.htm", "$CONNSETT$"],
+		["Help-Server-Settings.htm", "$CLIENTSUPTLNK$"],
+		["Help-Overview.htm", "$BWC$"],
+		["Help-Server-Settings.htm", "$ANTIHAMMER$"],
+		["Help-Server-Settings.htm", "$FTPBOUNCE$"],
+		["Help-Server-Settings.htm", "$FXP$"],
+		["Help-Encryption-Server.htm", "$SSLCERT$"],
+		["Help-Encryption-Server.htm", "$SSLENCRYPT$"],
+		["Help-Encryption-Server.htm", "$SSHKEY$"],
+		["Help-Nav-Serv-U.htm", "$SWDOMAIN$"],
+		["Help-License-Details.htm", "$LICENSE$"],
+		["Help-Overview.htm", "$FVJV$"],
+		["Help-License-Details.htm", "$EDINFO$"],
+		["Help-How-To-Purchase.htm", "$LOSTID$"],
+		["Help-How-To-Purchase.htm", "$PURCH$"],
+		["Help-Prog-Info.htm", "$BUILDDATE$"],
+		["Help-Prog-Info.htm", "$INSTDATE$"],
+		["Help-Prog-Info.htm", "$CONTACTINF$"],
+		["Help-Prog-Info.htm", "$DEVINF$"],
+		["Help-Prog-Info.htm", "$LEGALINF$"],
+		["Help-Directory-Access.htm", "$GLOBALDIR$"],
+		["Help-Directory-Access.htm", "$DOMDIR$"],
+		["Help-Server-Settings.htm", "$DIRMASK$"],
+		["Help-Server-Settings.htm", "$MAXTHMBS$"],
+		["Help-Server-Settings.htm", "$ULACCESS$"],
+		["Help-Server-Settings.htm", "$DLACCESS$"],
+		["Help-Server-Settings.htm", "$UPNP$"],
+		["Help-Server-Settings.htm", "$PKTTIMEOUT$"],
+		["Help-Server-Settings.htm", "$PASVRNG$"],
+		["Help-Server-Settings.htm", "$ADMPASS$"],
+		["Help-Encryption-Server.htm", "$LOWSECSSL$"],
+		["Help-Encryption-Server.htm", "$DISSSL2$"],
+		["Help-Encryption-Server.htm", "$SSHCIPH$"],
+		["Help-Encryption-Server.htm", "$AES128$"],
+		["Help-Encryption-Server.htm", "$AES192$"],
+		["Help-Encryption-Server.htm", "$AES256$"],
+		["Help-Encryption-Server.htm", "$BLOWFSH$"],
+		["Help-Encryption-Server.htm", "$CAST128$"],
+		["Help-Encryption-Server.htm", "$CBC$"],
+		["Help-Encryption-Server.htm", "$3DES$"],
+		["Help-Encryption-Server.htm", "$MD5$"],
+		["Help-Encryption-Server.htm", "$SHA1$"],
+		["Help-Domain-Server-Activity.htm", "$SESSID$"],
+		["Help-Domain-Server-Activity.htm", "$SESSTYP$"],
+		["Help-Domain-Server-Activity.htm", "$SESSLASTCMD$"],
+		["Help-Domain-Server-Activity.htm", "$SESSCLNT$"],
+		["Help-Domain-Server-Activity.htm", "$SESSIP$"],
+		["Help-Domain-Server-Activity.htm", "$SESSSERVADDR$"],
+		["Help-Domain-Server-Activity.htm", "$SESSLOC$"],
+		["Help-Domain-Server-Activity.htm", "$SESSSPY$"],
+		["Help-Domain-Server-Activity.htm", "$SESSDISC$"],
+		["Help-Domain-Server-Activity.htm", "$SESSDISCBAN$"],
+		["Help-Domain-Server-Activity.htm", "$SESSDISCMSG$"],
+		["Help-Domain-Server-Activity.htm", "$SESSABT$"],
+		["Help-Domain-Server-Activity.htm", "$SESSBRDCST$"],
+		["Help-Domain-Server-Activity.htm", "$SESSTIME$"],
+		["Help-Domain-Server-Stats.htm", "$AVGDLSPD$"],
+		["Help-Domain-Server-Stats.htm", "$AVGULSPD$"],
+		["Help-Domain-Server-Stats.htm", "$CURRSESS$"],
+		["Help-Domain-Server-Stats.htm", "$24HRSESS$"],
+		["Help-Domain-Server-Stats.htm", "$TOTALSESS$"],
+		["Help-Domain-Server-Stats.htm", "$AVGSESSLNG$"],
+		["Help-Domain-Server-Stats.htm", "$LONGSESS$"],
+		["Help-Domain-Server-Stats.htm", "$TOTALDL$"],
+		["Help-Domain-Server-Stats.htm", "$TOTALUL$"],
+		["Help-Domain-Server-Stats.htm", "$CURRDLSPD$"],
+		["Help-Domain-Server-Stats.htm", "$CURRULSPD$"],
+		["Help-Domain-Server-Log.htm", "$SERVLOG$"],
+		["Help-Domain-Server-Log.htm", "$VIEWDMLOG$"],
+		["Help-Configure-Logs.htm", "$CONFDMLOG$"],
+		["Help-Domain-Server-Log.htm", "$FILTERDMLOG$"],
+		["Help-Domain-Server-Log.htm", "$FRZLOG$"],
+		["Help-Domain-Server-Log.htm", "$LOGLGND$"],
+		["Help-UIC-Info.htm", "$BOLD$"],
+		["Help-UIC-Info.htm", "$TRISTAT$"],
+		["Help-UIC-Info.htm", "$INHERIT$"],
+		["Help-Custom-FTP.htm", "$DISABLFTPCOMM$"],
+		["Help-Custom-FTP.htm", "$GLOBALPROP$"],
+		["Help-Nav-Serv-U.htm", "$NAVI$"],
+		["Help-Domain-Server-Activity.htm", "$DOMACT$"],
+		["Help-Domain-Server-Activity.htm", "$SERVACT$"],
+		["Help-Domain-Server-Stats.htm", "$TRANSTAT$"],
+		["Help-About-User-Accts.htm", "$USERS$"],
+		["Help-About-User-Accts.htm", "$GLUSERS$"],
+		["Help-About-Groups.htm", "$GLGRPS$"],
+		["Help-Nav-Serv-U.htm", "$LOGOUT$"],		
+		["Help-Events.htm", "$EVENTS$"],
+		["Help-Events.htm", "$EVENTACTIONS$"],
+		["Help-Events.htm", "$EMAILACTIONS$"],
+		["Help-Events.htm", "$BALLOONACTIONS$"],
+		["Help-Events.htm", "$EXECUTEACTIONS$"],
+		["Help-Events.htm", "$COMMONEVENTS$"],		
+		["Help-SSH-Key-Pair.htm", "$PUBLICKEYAUTH$"],
+		["Help-SSH-Key-Pair.htm", "$PUBLICKEY$"],
+		["Help-SSH-Key-Pair.htm", "$KEYPAIR$"],		
+		["Help-Domain-Settings.htm", "$CUSTOMLOGO$"],
+		["Help-Domain-Settings.htm", "$PASSWORDRECOVERY$"],
+		["Help-Quick-Start.htm", "$QSGUIDE$"]];
+	
+
+	// sort the array
+	g_aasIndexKeywords.sort(KeywordSort);
+
+	// add the keywords to our select
+	var IndexSelOptions = document.getElementById("HelpIndexSel").options;
+	var nNumKeywords = 0;
+	for (var nIndex = 0; nIndex < g_aasIndexKeywords.length; nIndex++) {
+
+		// each keyword is a new option for the select control
+		nNumKeywords = IndexSelOptions.length++;
+		IndexSelOptions[nNumKeywords].value = g_aasIndexKeywords[nIndex][0];
+		IndexSelOptions[nNumKeywords].text = g_aasIndexKeywords[nIndex][1];
+	} // for
+</script>
+</html>

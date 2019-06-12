@@ -1,0 +1,202 @@
+﻿<!-- Result.strings - For ease of localization, strings have been separated into this file.  This has result strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- ******************** RESULT CODE TEXT ******************** -->
+<!-- NOTE: This file should contain all result codes and only	-->
+<!--	   result codes, all other strings should be placed		-->
+<!--	   in other string files.								-->
+
+<!-- shared result strings -->
+$OR_CONTACT_SYSTEM_ADMIN$=またはシステム管理者へ連絡してください。
+$CONTACT_SYSTEM_ADMIN$=システム管理者へ連絡してください。
+
+<!-- global results -->
+$SESS_OKAY_STR$=操作は成功しました。
+$SESS_FAIL_STR$=エラー: 操作を実行することができませんでした。
+$SESS_PENDING_STR$=エラー: 操作は、まだ実行されています。
+$SESS_PERMISSION_DENIED_STR$=エラー: アクセス先のファイル、またはディレクトリは利用可能ではありません。
+$SESS_INVALID_PARAMETER_STR$=エラー: 操作は成功しませんでした。パラメータは無効です。
+$SESS_BAD_SEQUENCE_OF_COMMANDS_STR$=エラー: コマンドの不正シーケンス
+$SESS_NOT_FOUND_STR$=エラー: 指定されたファイル、またはディレクトリは存在しません。
+$SESS_PATH_IS_PORT_STR$=エラー: 指定されたパスはWindows PORTです。操作を実行することができません。
+$SESS_LOGIN_TOO_MANY_INVALID_TRIES_STR$=ログイン試行が規定数を超えました。
+$SESS_COMMAND_PENDING_STR$=コマンドは現在実行中です。操作が完了するまでこの動作を実行することができません。
+$SESS_COMMAND_ABORTED_STR$=エラー: 操作は成功しませんでした。コマンドは中止されました。
+$SESS_INTERNAL_ERROR_STR$=エラー: 操作を実行することができません。内部サーバエラーが発生しました。
+$SESS_ALREADY_EXISTS_STR$=エラー: ファイル、またはフォルダは既に存在しています。
+$SESS_FILE_IS_DIR_STR$=エラー: 操作を実行することができませんでした。要求されたパスはディレクトリです。ファイルではありません。
+$SESS_DIR_IS_FILE_STR$=エラー: 操作を実行することができませんでした。要求されたパスはファイルです。ディレクトリではありません。
+$SESS_CANT_REST_EMPTY_FILE_STR$=空ファイルのファイル転送を再開することはきません。
+$SESS_CANT_REST_BEYOND_EOF_STR$=終了したファイルの転送を再開することはできません。
+$SESS_CANT_SET_FILE_POS_STR$=ファイル内にファイルの位置を設定することができません。
+<!-- $SESS_COMPRESSED_TRANSFER_COMPLETE_STR$= -- placeholder -- -->
+$SESS_UNAUTHORIZED_IP_STR$=エラー: IPアドレスは許可されていません。
+$SESS_TIME_OUT_STR$=エラー: セッション・タイムアウト
+$SESS_EXCEEDED_MAX_SESSION_TIME_STR$=エラー: このアカウントの最大セッション時間が超過しました。
+$SESS_TOO_MANY_SESSIONS_IP_STR$=エラー: セッションが使用するIPは多すぎます。
+$SESS_TOO_MANY_SESSIONS_STR$=エラー: セッションは多すぎます。
+$SESS_BLOCKED_STR$=ブロックされました。しばらくしてから再試行してください。 $OR_CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_DATA_SOCKET_CONNECT_STR$= -- placeholder -- -->
+<!-- $SESS_DATA_SOCKET_CLOSED_STR$= -- placeholder -- -->
+<!-- $SESS_DECR_USER_QUOTA_STR$= -- placeholder -- -->
+$SESS_NO_FILES_FOUND_STR$=エラー: ファイルは見つかりませんでした。
+<!-- $SESS_LOCK_CONFLICT_STR$= -- placeholder -- -->
+$SESS_ADMIN_ABORTED_STR$=エラー: 操作は管理者によって中止されました。
+$SESS_UNAUTHORIZED_STR$=エラー: ログインすることはできません。または管理者により切断されました。
+$SESS_CANT_DELETE_SESSION_DOMAIN_STR$=エラー: 現在ユーザアカウントでログインされているのを含むドメインを削除することができません。
+$SESS_NO_SUCH_PATH_STR$=要求されたファイル・パスが存在しましせん。通常、これは親ディレクトリが作成されていないことを意味します。この操作を試みる前に、親ディレクトリを作成してください。
+$SESS_INVALID_PATH_STR$=この操作には指定されたファイル、またはディレクトリのパスが有効ではありません。
+$SESS_PROTOCOL_NOT_ALLOWED_FOR_USER_STR$=Webブラウザで、このサーバにログインすることができません。このサーバを使用する方法に関しての情報を得るためにシステム管理者に連絡してください。
+$SESS_PERMISSION_DENIED_READ_ONLY_ADMIN_STR$=設定へ変更することはできません。アカウント情報に関してシステム管理者に連絡してください。
+$SESS_CANT_DELETE_SELF_STR$=現在使用しているユーザアカウントを削除することはできません。異なる管理アカウントでログイン、またはトレイアプリケーションを使用して、このアカウントを削除してください。
+$SESS_REVERSE_DNS_NAME_REQUIRED_TO_LOGIN_STR$=リバースDNS名は、このサーバへの接続とログインに必要です。詳しい情報のためにISP、またはシステム管理者に連絡してください。
+$SESS_USER_UNAVAILABLE_STR$=あなたのユーザアカウントは現在、利用可能ではありません。ユーザアカウントに関する詳しい情報のためにシステム管理者に連絡してください。
+$SESS_ODBC_USER_PASSWORD_TOO_LONG_STR$=指定されたパスワードは暗号化の際にデータベースで保存できない長さです。より短いパスワードを使用してください。
+
+<!-- CheckUser() results -->
+$SESS_USER_OKAY_NEED_PWD_STR$=エラー: ユーザはパスワードが必要です。
+$SESS_USER_NOT_FOUND_STR$=エラー: ユーザは見つかりません。
+$SESS_USER_OKAY_NEED_EMAIL_STR$=エラー: ユーザは電子メールが必要です。
+$SESS_USER_NO_ANONYMOUS_STR$=エラー: 匿名アクセスはありません。
+$SESS_USER_NEED_SECURE_CONNECTION_STR$=セキュアな接続のみで利用できます。  $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_USER_OKAY_NEED_SKEY_PWD_STR$= -- placeholder -- -->
+
+<!-- CheckPassword() results -->
+$SESS_PASSWORD_CANT_FIND_HOME_STR$=エラー: このアカウントのホーム・ディレクトリがありません。
+$SESS_PASSWORD_USE_REAL_EMAIL_ADDR_STR$=ログインする際には、実際のEメールのアドレスを使用してください。
+$SESS_PASSWORD_EXPIRED_CHANGE_STR$=パスワードの有効期限が切れました。継続するためにパスワードを変更してください。
+
+<!-- ChangePassword() results -->
+$SESS_CHG_PASSWORD_NO_OLD_PASSWORD_MATCH_STR$=古いパスワードは正しくありません。
+$SESS_CHG_PASSWORD_TOO_SHORT_STR$=エラー: 指定されたパスワードは短すぎます。
+$SESS_CHG_PASSWORD_NOT_COMPLEX_STR$=エラー: 指定されたパスワードは簡単すぎます。
+$SESS_CHG_PASSWORD_OLD_NEW_MATCH_STR$=新しいパスワードは古いパスワードとっ異なる必要があります。
+$SESS_CHG_PASSWORD_CANT_CHANGE_ANONYMOUS_STR$=匿名（anonymous）パスワードは変更できません。
+
+<!-- Xcrc() results -->
+$SESS_XCRC_CANNOT_READ_FROM_FILE_STR$=ファイルが利用できない、または操作がキャンセルされたためXCRC値を計算できませんでした。
+
+<!-- List() results -->
+<!-- $SESS_LIST_START_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_END_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_FILE_STR$= -- placeholder -- -->
+
+<!-- Retrieve() & Store() results -->
+<!-- $SESS_RETR_DATA_STR$= -- placeholder -- -->
+$SESS_CANT_LOAD_GDI_PLUS_STR$=内部エラー: 操作を実行するためにGDI+をロードすることができませんでした。  $CONTACT_SYSTEM_ADMIN$
+$SESS_CANT_CREATE_THUMBNAIL_STR$=内部エラー: サムネイル画像を作成できませんでした。
+$SESS_CANT_SAVE_THUMBNAIL_STR$=内部エラー: 一時サムネイル画像を保存することができません。サーバのディスクドライブは空き容量が不足しているかもしれません。
+<!-- $SESS_FILE_OPENED_STR$= -- placeholder -- -->
+$SESS_CANT_WRITE_STR$=内部エラー: サーバのハードドライブに書き込みができません。サーバのディスクドライブは空き容量が不足しているかもしれません。  $CONTACT_SYSTEM_ADMIN$
+$SESS_SERVER_STOP_PENDING_STR$=操作は利用可能ではありません。サーバはダウンしているかもしれません。
+$SESS_RETR_INSUFFICIENT_CREDIT_STR$=ダウンロードの前にアップロードする必要があります。ファイルのダウンロードを試みる前に、ファイルをアップロードしてください。
+$SESS_STOR_INSUFFICIENT_DISK_QUOTA_STR$=利用可能な領域が不足しています。アップロードを行う前に削除してください。
+$SESS_STOR_INSUFFICIENT_DISK_SPACE_STR$=利用可能な空き容量がありません。アップロードを行う前に削除してください。 $OR_CONTACT_SYSTEM_ADMIN$
+$SESS_STOR_FILE_TOO_LARGE_STR$=ファイルサイズが大き過ぎます。アップロードを行う前に空き容量を確保してください。または利用可能な領域が不足しています。  $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_STOR_DATA_WRITTEN_STR$= -- placeholder -- -->
+$SESS_APPE_CANT_RESTART_STR$=ファイルの位置が既に指定される場合、ファイルに追加することができません。
+
+<!-- GetUniqueFileName() results -->
+$SESS_STOU_CANT_CREATE_UNIQUE_NAME_STR$=ユニークなファイル名を作成することができません。
+
+<!-- SetLastWriteTime() results -->
+$SESS_FUTURE_TIME_STR$=現在より先の日時のため、ファイルの日付と時間を決定することができません。
+
+<!-- HTTP attribute list results -->
+<!-- $SESS_LIST_NO_CHANGE_STR$= -- placeholder -- -->
+
+<!-- SSL certificate creation results -->
+$SESS_SSL_CANT_CREATE_KEY_FILE_STR$=SSLエラー: キーファイルを作成できません。
+$SESS_SSL_CANT_WRITE_KEY_FILE_STR$=SSLエラー: キーファイルを書き込むことができません。
+$SESS_SSL_CANT_CREATE_CERT_FILE_STR$=SSLエラー: 証明書ファイルを作成できません。
+$SESS_SSL_CANT_WRITE_CERT_FILE_STR$=SSLエラー: 証明書ファイルを書き込むことができません。
+$SESS_SSL_CANT_CREATE_CERT_REQUEST_FILE_STR$=SSLエラー: 証明書要求ファイルを作成できません。
+
+<!-- licensing results -->
+$SESS_ID_INVALID_STR$=入力された登録IDは有効ではありません。有効な登録IDを入力してください。
+$SESS_ID_EXPIRED_STR$=入力された登録IDは、期間が切れています。このServ-Uのバージョンには、有効ではありません。新しい登録IDを入力してください。
+$SESS_LIC_TOO_MANY_DOMAINS_STR$=ライセンスで許可されているドメインの最大数に達しました。新しいドメインを作成するには、アップグレード・ライセンスを購入する必要があります。
+$SESS_LIC_TOO_MANY_USERS_STR$=ライセンスで許可されるユーザアカウントの最大数に達しました。新しいユーザアカウントを作成するには、アップグレード・ライセンスを購入する必要があります。
+$SESS_LIC_TOO_MANY_SESSIONS_STR$=ライセンスで許可される同時発生のセッションの最大数に達しました。これ以上の同時発生のセッションを許可するには、アップグレード・ライセンスを購入する必要があります。
+$SESS_LIC_NO_REMOTE_ADMIN_STR$=お客様のライセンスでは、リモートサーバ管理を利用できません。リモートサーバ管理を使用するには、アップグレード・ライセンスを購入する必要があります。
+$SESS_LIC_NO_FVJV_STR$=FTP Voyager JV は、このライセンスでは利用できません。
+$SESS_LIC_NO_WEB_CLIENT_STR$=ブラウザによるアクセスは、このServ-Uのライセンスでは利用できません。サーバ管理者に連絡して、Serv-Uアップグレードを要求してください。
+$SESS_LIC_NO_PASSWORD_RECOVERY_STR$=このライセンスはパスワードの復元を使用できません。
+
+<!-- password recovery -->
+$SESS_PASSWORD_RECOVERY_DISABLED_STR$=パスワードの復元は無効です。これらに関して管理者へご確認ください。
+$SESS_PASSWORD_RECOVERY_CHANGE_DENIED_STR$=パスワードの復元は拒否されました。ユーザはパスワード変更できませんでした。これらに関して管理者へご確認ください。
+
+<!-- Port() results -->
+<!-- $FTPSESS_PORT_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PORT_INVALID_PORT_NUMBER$= -- placeholder -- -->
+
+<!-- Pasv() results -->
+<!-- $FTPSESS_PASV_UNABLE_TOSETUP_LISTEN_SOCK$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_TOO_MANY_PASV_REQUESTS$= -- placeholder -- -->
+
+<!-- Mlsd() results  -->
+<!-- $FTPSESS_MLSD_WILDCARDS_NOT_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_MLSD_PATHNAME_NOT_DIRECTORY$= -- placeholder -- -->
+
+<!-- data connection -->
+<!-- $FTPSESS_DATACHAN_IN_USE$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_OUT_OF_NETWORK_SOCKETS$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CANNOT_OPEN$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CLOSED_ABORTED$= -- placeholder -- -->
+
+<!-- validation results -->
+$SU_VALID_USER_EXISTS_STR$=エラー: 既にそのIDはユーザアカウントとし存在します。
+$SU_VALID_GROUP_EXISTS_STR$=エラー: 既にその名前はグループとし存在します。
+$SU_VALID_ATTR_LESS_THAN_MIN_STR$=エラー: 入力された値は小さ過ぎます。大きい値を使用してください。
+$SU_VALID_ATTR_GREATER_THAN_MAX_STR$=エラー: 入力された値は大き過ぎます。小さい値を使用してください。
+$SU_VALID_INVALID_RESPONSE_CODE_FORMATTING_STR$=エラー: このFTPコマンドは、特別なフォーマットの文字列を提示することを必要とします。応答テキストを編集する際に、フォーマットの文字列を保存してください。
+$SU_VALID_PATH_CONTAINS_WILDCARD_CHARS_STR$=* 、 ? などのワイルドカードを指定されたパス名に使用することはできません。
+$SU_VALID_EMPTY_PHYSICAL_PATH_STR$=エラー: 物理的なパスを指定してください。
+$SU_VALID_EMPTY_VIRTUAL_PATH_STR$=エラー: 仮想パスを指定してください。
+$SU_VALID_LOGIN_ID_EMPTY_STR$=エラー: 重複しないログインIDをユーザに与えてください。
+$SU_VALID_GROUP_NAME_EMPTY_STR$=エラー: 重複しない名前をグループに与えてください。
+$SU_VALID_DOMAIN_EXISTS_STR$=エラー: 既にその名前はドメンとして存在します。
+$SU_VALID_ORGANIZATION_EXISTS_STR$=エラー: その名前によるユーザ・コレクションは既に存在します。
+$SU_VALID_PERMISSION_DENIED_STR$=エラー: 権限がありません
+$SU_VALID_UNABLE_TO_CREATE_SSL_METHOD_STR$=OpenSSL エラー: SSLメソッドを作成できません。
+$SU_VALID_UNABLE_TO_CREATE_SSL_CONTEXT_STR$=OpenSSL エラー: SSL コンテクストを作成できません
+$SU_VALID_CERT_PATH_IS_EMPTY_STR$=エラー: 証明書ファイルの有効なパスを指定してください。
+$SU_VALID_UNABLE_TO_LOAD_CERT_FILE_STR$=エラー: 証明書をロードすることができません。パスが正しいか確認してください。
+$SU_VALID_UNABLE_TO_LOAD_PRIVATE_KEY_FILE_STR$=エラー: プライベートキー・ファイルをロードすることができません。パスとプライベートキーのパスワードが正しいか確認してください。
+$SU_VALID_UNABLE_TO_LOAD_OPENSSL_STR$=OpenSSL ライブラリをロードできません。
+$SU_VALID_PHYSICAL_PATH_INVALID_STR$=エラー: 設定された物理的なパスは無効です。
+$SU_VALID_VIRTUAL_PATH_INVALID_STR$=エラー: 設定された仮想パスは無効です。
+$SU_VALID_HOST_NAME_EXISTS_STR$=エラー: 設定された仮想ホスト名は既に使用されています。
+$SU_VALID_FTP_RESP_REQUIRES_COMMAND_RESULT_STR$=ERROR: エラー: FTPコマンド応答が正しく機能するために、$CommandResultマクロを含む必要があります。
+$SU_VALID_FTP_RESP_READ_ONLY_STR$=エラー: 選択されたFTPコマンド応答は書き込み禁止です。これを変更することはできません。
+$SU_VALID_USER_CANNOT_BE_ADMIN_STR$=エラー: ドメイン管理者は他の管理者を作成できません。
+$SU_VALID_GROUP_CANNOT_BE_ADMIN_STR$=エラー: ドメイン管理者は管理者クループを作成できません。
+$SU_VALID_HOME_DIR_CANNOT_CONTAIN_HOME_VAR_STR$=エラー: ホームディレクトリは%HOME%マクロを含むことができません。
+$SU_VALID_CANNOT_LOAD_GDI_PLUS_STR$=$SESS_CANT_LOAD_GDI_PLUS_STR$
+$SU_VALID_NOT_AN_IMAGE_STR$=エラー: 指定されたファイルは有効な画像ファイルではありません。
+$SU_VALID_INVALID_IMAGE_SIZE_STR$=エラー: 指定された画像のサイズは有効ではありません。カスタムロゴ画像のサイズは、幅400ピクセル高さ100ピクセルの必要があります。
+$SU_VALID_NOT_FOUND_STR$=指定されたアイテムは見つかりません。
+$SU_VALID_EV_SUBJECT_EMPTY_STR$=このイベントはEメールの件名を含む必要があります。
+$SU_VALID_EV_BODY_EMPTY_STR$=このイベントはEメール本文のテキストを含む必要があります。
+$SU_VALID_EV_TO_ADDRESS_EMPTY_STR$=このイベントはEメールアドレスを含む必要があります。
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_STR$=有効な電子メールアドレスを入力してください。
+$SU_VALID_EV_BALLON_TIP_TITLE_TOO_LARGE_STR$=バルーン・ティップのタイトルは、このイベントには大きすぎます。
+$SU_VALID_EV_BALLON_TIP_MESSAGE_TOO_LARGE_STR$=バルーン・ティップ・メッセージは、このイベントには大きすぎます。
+$SU_VALID_EV_BALLON_TIP_EMPTY_STR$=このイベントはバルーン・ティップ・タイトルとメッセージを含む必要がります。
+$SU_VALID_EV_EXE_PATH_EMPTY_STR$=このイベントは実行可能なファイルへのパスを含む必要があります。
+$SU_VALID_EV_EXE_PARAMETERS_CONTAIN_CR_LF_STR$=このアクションのコマンドライン・パラメータは改行、または新規行を含んではいけません。
+$SU_VALID_EV_INVALID_VAR_FOR_ADMIN_STR$=ドメイン管理者は、このアクションに入力された変数を使用することができません。<br><br> 以下を使用してください:<br>$PathName<br>$FileName<br>$OldPathName<br>$OldFileName
+$SU_VALID_INVALID_SMTP_EMAIL_ADDRESS_STR$=SMTPのEメールアドレスは無効です。
+$SU_VALID_INVALID_EMAIL_ADDRESS_STR$=電子メールアドレスは無効です。
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_BCC_STR$=BCCの電子メールアドレスは無効です。
+$SU_VALID_NOT_A_NUMBER_STR$=数字フィールドは数を含んでいません。数値を入れてください。
+$SU_VALID_NOT_A_DOUBLE_STR$=浮動小数点フィールドは浮動小数点を含んでいません。有効な浮動小数点を入れてください。
+$SU_VALID_INVALID_FILE_NAME_CHARACTERS_STR$=フィールドは無効な文字列を含んでいます。フィールドは以下の文字を含むことができません。： \/:"&lt;&gt;|
+$SU_VALID_FILE_NAME_CONTAINS_WILDCARD_STR$=フィールドはワイルドカードキャラクタを含んでいます。フィールドは以下の文字列を含むことができません。: *?
+$SU_VALID_GROUP_ADMIN_MUST_BE_GROUP_MEMBER_STR$=グループ管理者は、少なくとも1つのグループのメンバーである必要があります。このユーザをグループのメンバーにしてください。
+$SU_VALID_INVALID_IP_ADDRESS_STR$=指定されたIPアドレスは無効です。有効なIPアドレスを入れてください。
+$SU_VALID_INVALID_IP_MASK_STR$=指定されたIPマスクは無効です。有効なIPアドレスマスクを入れてください。
+$SU_VALID_GROUP_NAME_INVALID_STR$=エラー: 与えられたグループ名は無効です。グループのために有効な名前を入力しください。

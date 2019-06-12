@@ -1,0 +1,202 @@
+﻿<!-- Result.strings - For ease of localization, strings have been separated into this file.  This has result strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- ******************** RESULT CODE TEXT ******************** -->
+<!-- NOTE: This file should contain all result codes and only	-->
+<!--	   result codes, all other strings should be placed		-->
+<!--	   in other string files.								-->
+
+<!-- shared result strings -->
+$OR_CONTACT_SYSTEM_ADMIN$=或接洽系統管理人以獲取更多幫助。
+$CONTACT_SYSTEM_ADMIN$=請接洽系統管理人以獲取更多幫助。
+
+<!-- global results -->
+$SESS_OKAY_STR$=作業成功。
+$SESS_FAIL_STR$=錯誤：作業無法執行。
+$SESS_PENDING_STR$=錯誤：作業仍在執行。
+$SESS_PERMISSION_DENIED_STR$=錯誤：無法訪問正嘗試訪問的檔或路徑。
+$SESS_INVALID_PARAMETER_STR$=錯誤：作業不成功，參數無效。
+$SESS_BAD_SEQUENCE_OF_COMMANDS_STR$=錯誤：壞指令序列。
+$SESS_NOT_FOUND_STR$=錯誤：指定的檔或目錄不存在。
+$SESS_PATH_IS_PORT_STR$=錯誤：指定的路徑是 Windows 埠，無法執行作業。
+$SESS_LOGIN_TOO_MANY_INVALID_TRIES_STR$=您已超過了登入嘗試的最大次數。
+$SESS_COMMAND_PENDING_STR$=一條命令當前未決。只有完成待處理的作業才能執行該作業。
+$SESS_COMMAND_ABORTED_STR$=錯誤：作業不成功，命令已中止。
+$SESS_INTERNAL_ERROR_STR$=錯誤：無法執行作業，發生內部錯誤。
+$SESS_ALREADY_EXISTS_STR$=錯誤：檔案或資料夾已存在。
+$SESS_FILE_IS_DIR_STR$=錯誤：無法執行作業，要求的路徑為目錄而不是檔。
+$SESS_DIR_IS_FILE_STR$=錯誤：無法執行作業，要求的路徑為檔而不是目錄。
+$SESS_CANT_REST_EMPTY_FILE_STR$=$SESS_FAIL_STR$
+$SESS_CANT_REST_BEYOND_EOF_STR$=$SESS_FAIL_STR$
+$SESS_CANT_SET_FILE_POS_STR$=$SESS_FAIL_STR$
+<!-- $SESS_COMPRESSED_TRANSFER_COMPLETE_STR$= -- placeholder -- -->
+$SESS_UNAUTHORIZED_IP_STR$=錯誤：未經授權的 IP 地址
+$SESS_TIME_OUT_STR$=錯誤：連線期間逾時。
+$SESS_EXCEEDED_MAX_SESSION_TIME_STR$=錯誤：已超過該帳號連線期間的最長時間。
+$SESS_TOO_MANY_SESSIONS_IP_STR$=錯誤：使用 IP 的連線期間數量太多。
+$SESS_TOO_MANY_SESSIONS_STR$=錯誤：連線期間數量太多。
+$SESS_BLOCKED_STR$=您已被阻止。請稍後重試，$OR_CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_DATA_SOCKET_CONNECT_STR$= -- placeholder -- -->
+<!-- $SESS_DATA_SOCKET_CLOSED_STR$= -- placeholder -- -->
+<!-- $SESS_DECR_USER_QUOTA_STR$= -- placeholder -- -->
+$SESS_NO_FILES_FOUND_STR$=錯誤：找不到檔。
+<!-- $SESS_LOCK_CONFLICT_STR$= -- placeholder -- -->
+$SESS_ADMIN_ABORTED_STR$=錯誤：管理人已中止該作業。
+$SESS_UNAUTHORIZED_STR$=錯誤：您已退出，或管理人已斷開您的連接。
+$SESS_CANT_DELETE_SESSION_DOMAIN_STR$=錯誤：無法移除包含當前已登入使用者帳號的域。
+$SESS_NO_SUCH_PATH_STR$=要求的檔路徑不存在，通常表示尚未創建上級目錄。請在嘗試執行該操作前創建上級目錄。
+$SESS_INVALID_PATH_STR$=指定檔或目錄路徑對該操作無效。
+$SESS_PROTOCOL_NOT_ALLOWED_FOR_USER_STR$=不允准您使用您的 web 瀏覽器登入該伺服器。請接洽您的系統管理人以獲得如何使用該伺服器的資訊。
+$SESS_PERMISSION_DENIED_READ_ONLY_ADMIN_STR$=不允許您更改任何設定。請接洽您的系統管理人以獲得有關您帳號的信息。
+$SESS_CANT_DELETE_SELF_STR$=您不能刪除您正在使用的使用者帳號。使用不同的管理帳號登入或使用託盤應用程式來移除此帳號。
+$SESS_REVERSE_DNS_NAME_REQUIRED_TO_LOGIN_STR$=需要反向 DNS 名稱以連接並登入到這台伺服器。請接洽您的 ISP 與/或您的系統管理人以獲得更多資訊。
+$SESS_USER_UNAVAILABLE_STR$=您的使用者帳號當前不可用。請接洽您的系統管理人以獲得關於您使用者帳號的更多資訊。
+$SESS_ODBC_USER_PASSWORD_TOO_LONG_STR$=指定的密碼在加密時對於資料庫存儲來說太長。請使用較短的密碼。
+
+<!-- CheckUser() results -->
+$SESS_USER_OKAY_NEED_PWD_STR$=錯誤：使用者需要密碼。
+$SESS_USER_NOT_FOUND_STR$=錯誤：未找到使用者。
+$SESS_USER_OKAY_NEED_EMAIL_STR$=錯誤：使用者需要發送電子信件。
+$SESS_USER_NO_ANONYMOUS_STR$=錯誤：無匿名訪問。
+$SESS_USER_NEED_SECURE_CONNECTION_STR$=僅可以在使用安全連接時進行連接。$CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_USER_OKAY_NEED_SKEY_PWD_STR$= -- placeholder -- -->
+
+<!-- CheckPassword() results -->
+$SESS_PASSWORD_CANT_FIND_HOME_STR$=錯誤：該帳號沒有根目錄。
+$SESS_PASSWORD_USE_REAL_EMAIL_ADDR_STR$=登入時請使用實際的郵箱位址。
+$SESS_PASSWORD_EXPIRED_CHANGE_STR$=密碼已過期。要繼續使用請變更密碼。
+
+<!-- ChangePassword() results -->
+$SESS_CHG_PASSWORD_NO_OLD_PASSWORD_MATCH_STR$=原密碼不正確。
+$SESS_CHG_PASSWORD_TOO_SHORT_STR$=錯誤：指定的密碼太短。
+$SESS_CHG_PASSWORD_NOT_COMPLEX_STR$=錯誤：指定的密碼過於簡單。
+$SESS_CHG_PASSWORD_OLD_NEW_MATCH_STR$=新密碼必須不同于原密碼。
+$SESS_CHG_PASSWORD_CANT_CHANGE_ANONYMOUS_STR$=無法變更為匿名方式。
+
+<!-- Xcrc() results -->
+$SESS_XCRC_CANNOT_READ_FROM_FILE_STR$=無法計算 XCRC 值，檔案不可用或作業取消。
+
+<!-- List() results -->
+<!-- $SESS_LIST_START_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_END_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_FILE_STR$= -- placeholder -- -->
+
+<!-- Retrieve() & Store() results -->
+<!-- $SESS_RETR_DATA_STR$= -- placeholder -- -->
+$SESS_CANT_LOAD_GDI_PLUS_STR$=內部錯誤：無法載入 GDI+ 以執行作業。$CONTACT_SYSTEM_ADMIN$
+$SESS_CANT_CREATE_THUMBNAIL_STR$=內部錯誤：無法創建縮略圖。
+$SESS_CANT_SAVE_THUMBNAIL_STR$=內部錯誤：無法保存臨時縮略圖。伺服器磁碟空間可能已滿。
+<!-- $SESS_FILE_OPENED_STR$= -- placeholder -- -->
+$SESS_CANT_WRITE_STR$=內部錯誤：無法寫入伺服器硬碟。伺服器磁碟空間可能已滿。$CONTACT_SYSTEM_ADMIN$
+$SESS_SERVER_STOP_PENDING_STR$=作業不可用，伺服器正在斷開。
+$SESS_RETR_INSUFFICIENT_CREDIT_STR$=必須在下載前上傳。請在嘗試下載檔前先上傳檔。
+$SESS_STOR_INSUFFICIENT_DISK_QUOTA_STR$=沒有足夠的可用配額。請在嘗試上傳前先移除。
+$SESS_STOR_INSUFFICIENT_DISK_SPACE_STR$=沒有足夠的可用磁碟空間。請在嘗試上傳前移除，$OR_CONTACT_SYSTEM_ADMIN$
+$SESS_STOR_FILE_TOO_LARGE_STR$=檔案太大。必須在上傳前騰出空間，否則沒有足夠的可用空間。$CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_STOR_DATA_WRITTEN_STR$= -- placeholder -- -->
+$SESS_APPE_CANT_RESTART_STR$=已指定檔案位置時無法附加到檔案。
+
+<!-- GetUniqueFileName() results -->
+$SESS_STOU_CANT_CREATE_UNIQUE_NAME_STR$=無法創建獨特的檔案名。
+
+<!-- SetLastWriteTime() results -->
+$SESS_FUTURE_TIME_STR$=無法設置檔案的日期與時間，因為這是未來檔案。
+
+<!-- HTTP attribute list results -->
+<!-- $SESS_LIST_NO_CHANGE_STR$= -- placeholder -- -->
+
+<!-- SSL certificate creation results -->
+$SESS_SSL_CANT_CREATE_KEY_FILE_STR$=SSL 錯誤：無法創建密鑰檔案。
+$SESS_SSL_CANT_WRITE_KEY_FILE_STR$=SSL 錯誤：無法編寫密鑰檔。
+$SESS_SSL_CANT_CREATE_CERT_FILE_STR$=SSL 錯誤：無法創建證書檔案。
+$SESS_SSL_CANT_WRITE_CERT_FILE_STR$=SSL 錯誤：無法編寫證書檔案。
+$SESS_SSL_CANT_CREATE_CERT_REQUEST_FILE_STR$=SSL 錯誤：無法創建證書請求檔案。
+
+<!-- licensing results -->
+$SESS_ID_INVALID_STR$=提供的註冊 ID 無效。請輸入有效的註冊 ID。
+$SESS_ID_EXPIRED_STR$=提供的註冊 ID 已過期，且對於該版本的 Serv-U 是無效的。請提供更新的註冊 ID。
+$SESS_LIC_TOO_MANY_DOMAINS_STR$=域數目已達到許可證允許的最大值。要創建新域必須購買升級後的許可證。
+$SESS_LIC_TOO_MANY_USERS_STR$=使用者帳號數已達到許可證允許的最大值。要創建新的使用者帳號，必須購買升級後的許可證。
+$SESS_LIC_TOO_MANY_SESSIONS_STR$=併發連線期間數已達到許可證允許的最大值。要允許更多數量的併發連線期間，必須購買升級後的許可證。
+$SESS_LIC_NO_REMOTE_ADMIN_STR$=您的許可證不允許遠端管理伺服器。要啟用遠端伺服器管理，必須購買升級後的許可證。
+$SESS_LIC_NO_FVJV_STR$=該許可證不能使用 FTP Voyager JV。
+$SESS_LIC_NO_WEB_CLIENT_STR$=該 Serv-U 許可證不能使用瀏覽器訪問。請接洽該伺服器的管理人以請求 Serv-U 的升級。
+$SESS_LIC_NO_PASSWORD_RECOVERY_STR$=許可證不提供密碼恢復。
+
+<!-- password recovery -->
+$SESS_PASSWORD_RECOVERY_DISABLED_STR$=禁用密碼恢復。請接洽您的管理人以獲得幫助。
+$SESS_PASSWORD_RECOVERY_CHANGE_DENIED_STR$=拒絕密碼恢復。不允許使用者變更密碼。請接洽您的管理人以獲得幫助。
+
+<!-- Port() results -->
+<!-- $FTPSESS_PORT_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PORT_INVALID_PORT_NUMBER$= -- placeholder -- -->
+
+<!-- Pasv() results -->
+<!-- $FTPSESS_PASV_UNABLE_TOSETUP_LISTEN_SOCK$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_TOO_MANY_PASV_REQUESTS$= -- placeholder -- -->
+
+<!-- Mlsd() results  -->
+<!-- $FTPSESS_MLSD_WILDCARDS_NOT_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_MLSD_PATHNAME_NOT_DIRECTORY$= -- placeholder -- -->
+
+<!-- data connection -->
+<!-- $FTPSESS_DATACHAN_IN_USE$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_OUT_OF_NETWORK_SOCKETS$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CANNOT_OPEN$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CLOSED_ABORTED$= -- placeholder -- -->
+
+<!-- validation results -->
+$SU_VALID_USER_EXISTS_STR$=錯誤：該使用者帳號的 ID 已存在。
+$SU_VALID_GROUP_EXISTS_STR$=錯誤：該名稱的群組已存在。
+$SU_VALID_ATTR_LESS_THAN_MIN_STR$=錯誤：指定的值太小。請使用較大的值。
+$SU_VALID_ATTR_GREATER_THAN_MAX_STR$=錯誤：指定的值太大。請使用較小的值。
+$SU_VALID_INVALID_RESPONSE_CODE_FORMATTING_STR$=錯誤：該 FTP 命令要求使用特殊格式的字串。編輯回應文本時請保留格式字串。
+$SU_VALID_PATH_CONTAINS_WILDCARD_CHARS_STR$=$SESS_FAIL_STR$
+$SU_VALID_EMPTY_PHYSICAL_PATH_STR$=錯誤：請指定物理路徑。
+$SU_VALID_EMPTY_VIRTUAL_PATH_STR$=錯誤：請指定虛擬路徑。
+$SU_VALID_LOGIN_ID_EMPTY_STR$=錯誤：請為使用者指定唯一的登入 ID。
+$SU_VALID_GROUP_NAME_EMPTY_STR$=錯誤：請為群組指定唯一名稱。
+$SU_VALID_DOMAIN_EXISTS_STR$=錯誤：該名稱的域已存在。
+$SU_VALID_ORGANIZATION_EXISTS_STR$=錯誤：使用該名稱的使用者集合已存在。
+$SU_VALID_PERMISSION_DENIED_STR$=錯誤：許可權被拒絕。
+$SU_VALID_UNABLE_TO_CREATE_SSL_METHOD_STR$=OpenSSL 錯誤：無法創建 SSL 方式。
+$SU_VALID_UNABLE_TO_CREATE_SSL_CONTEXT_STR$=OpenSSL 錯誤：無法創建 SSL 上下文。
+$SU_VALID_CERT_PATH_IS_EMPTY_STR$=錯誤：請為證書檔指定有效路徑。
+$SU_VALID_UNABLE_TO_LOAD_CERT_FILE_STR$=錯誤：無法載入證書。請確保路徑正確。
+$SU_VALID_UNABLE_TO_LOAD_PRIVATE_KEY_FILE_STR$=錯誤：無法載入私鑰檔。請確保路徑和私鑰密碼正確。
+$SU_VALID_UNABLE_TO_LOAD_OPENSSL_STR$=無法載入 OpenSSL 庫。
+$SU_VALID_PHYSICAL_PATH_INVALID_STR$=錯誤：提供的物理路徑無效。
+$SU_VALID_VIRTUAL_PATH_INVALID_STR$=錯誤：提供的虛擬路徑無效。
+$SU_VALID_HOST_NAME_EXISTS_STR$=錯誤：提供的虛擬主機名已被使用。
+$SU_VALID_FTP_RESP_REQUIRES_COMMAND_RESULT_STR$=錯誤：該 FTP 命令回應需要包含 $CommandResult 巨集以正確作業。
+$SU_VALID_FTP_RESP_READ_ONLY_STR$=錯誤：選取的 FTP 命令回應為唯讀且無法修改。
+$SU_VALID_USER_CANNOT_BE_ADMIN_STR$=錯誤：域管理人無法創建另一個管理人。
+$SU_VALID_GROUP_CANNOT_BE_ADMIN_STR$=錯誤：域管理人無法創建管理人組。
+$SU_VALID_HOME_DIR_CANNOT_CONTAIN_HOME_VAR_STR$=錯誤：根目錄不能包含 %HOME% 巨集。
+$SU_VALID_CANNOT_LOAD_GDI_PLUS_STR$=$SESS_CANT_LOAD_GDI_PLUS_STR$
+$SU_VALID_NOT_AN_IMAGE_STR$=錯誤：所提供的檔案不是有效的圖像檔案。
+$SU_VALID_INVALID_IMAGE_SIZE_STR$=錯誤：所提供的圖像尺寸無效。定制標誌圖像的尺寸必須為 400 圖元（寬） X 100 圖元（高）。
+$SU_VALID_NOT_FOUND_STR$=未找到指定專案。
+$SU_VALID_EV_SUBJECT_EMPTY_STR$=該事件必須包含電子信件主題。
+$SU_VALID_EV_BODY_EMPTY_STR$=該事件必須包含電子信件正文的文本。 
+$SU_VALID_EV_TO_ADDRESS_EMPTY_STR$=該事件必須包含電子信件位址。
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_STR$=該事件必須包含有效的電子信件位址。
+$SU_VALID_EV_BALLON_TIP_TITLE_TOO_LARGE_STR$=該事件的氣球提示標題太長。
+$SU_VALID_EV_BALLON_TIP_MESSAGE_TOO_LARGE_STR$=該事件的氣球提示消息量太大。
+$SU_VALID_EV_BALLON_TIP_EMPTY_STR$=該事件必須包含氣球提示標題與消息。
+$SU_VALID_EV_EXE_PATH_EMPTY_STR$=該事件必須包含指向可執行檔案的路徑。
+$SU_VALID_EV_EXE_PARAMETERS_CONTAIN_CR_LF_STR$=該作業的命令行參數必須沒有換行或新行。
+$SU_VALID_EV_INVALID_VAR_FOR_ADMIN_STR$=域管理人不能對該作業使用輸入的變數。<br><br> 您可以使用以下變數：<br>$PathName<br>$FileName<br>$OldPathName<br>$OldFileName
+$SU_VALID_INVALID_SMTP_EMAIL_ADDRESS_STR$=SMTP 電子信件位址無效。
+$SU_VALID_INVALID_EMAIL_ADDRESS_STR$=電子信件位址無效。
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_BCC_STR$=BCC 電子信件位址無效。
+$SU_VALID_NOT_A_NUMBER_STR$=數位欄位未包含數位。請輸入數位值。
+$SU_VALID_NOT_A_DOUBLE_STR$=浮點欄位未包含浮點數。請輸入有效的浮點數。
+$SU_VALID_INVALID_FILE_NAME_CHARACTERS_STR$=欄位包含無效字元。該欄位不能包含以下任何字元：\/:"&lt;&gt;|
+$SU_VALID_FILE_NAME_CONTAINS_WILDCARD_STR$=欄位包含萬用字元。該欄位不能包含以下任何字元：*?
+$SU_VALID_GROUP_ADMIN_MUST_BE_GROUP_MEMBER_STR$=組管理人必須為至少一個群組的成員。請將該使用者變成群組成員。
+$SU_VALID_INVALID_IP_ADDRESS_STR$=指定的 IP 位址無效。請輸入有效的 IP 位址。
+$SU_VALID_INVALID_IP_MASK_STR$=指定的 IP 遮罩似乎無效。請輸入有效的 IP 位址遮罩
+$SU_VALID_GROUP_NAME_INVALID_STR$=錯誤：提供的群組名稱無效。請輸入有效的群組名稱。

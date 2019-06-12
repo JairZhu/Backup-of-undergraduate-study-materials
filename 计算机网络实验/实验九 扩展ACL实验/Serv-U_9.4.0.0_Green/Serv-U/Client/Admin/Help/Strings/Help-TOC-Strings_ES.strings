@@ -1,0 +1,105 @@
+﻿<!-- Help-TOC-Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- String table for Help-table of contents -->
+$TITLE$=Tabla de ayuda de contenidos.
+$HELP_CONTENTS_TAB$=Contenidos.
+$HELP_INDEX_TAB$=Índice.
+
+
+$SERVU_FILE_SERVER$=Archivo servidor Serv-U 
+	$OVERVIEW$=vista general.
+	$SERVU_EDITIONS$=Ediciones Serv-U
+	$HOW_TO_PURCHASE$=Cómo comprar. 
+
+$CONTACTING_RHINOSOFT$=Contactando Rhinosoft.com
+	$CONTACT_TECH_SUPPORT$=Soporte técnico.
+
+$GETTING_STARTED$=Empezando.
+	$QUICK_START$=Guía rápida de comienzo.
+	$SERVU_CONCEPTS$=Conceptos del servidor. 
+	$NAV_SERVU$=Consola de navegación por la dirección. 
+	$UIC_INFO$=convención del usuario interfaz.
+
+$SERVER$=Server
+	$SERVER_OVERVIEW$=Vista general del servidor. 
+	$CONF_SERVER_DETAILS$=Detalles del servidor.
+		$SERVERCONF_IP_ACL$=Reglas de acceso IP
+		$SERVERCONF_DATABASE_ACCESS$=Acceso de la base de datos. 
+		$SERVERCONF_LICENSE_DETAILS$=información de licencia.
+		$SERVERCONF_PROG_INFO$=Programa de información.
+		$SERVERCONF_EVENTS$=Eventos del servidor.
+	$CONF_SERVER_DIRECTORIES$=Directorios globales.
+		$DIRCONF_DIR_ACCESS$=Directorios de acceso.
+		$DIRCONF_VIR_PATHS$=Caminos virtuales.
+	$CONF_SERVER_LIMITS_SETTINGS$=Limites del servidor y ajustes.
+		$LIMITSETTCONF_SERVER_LIMITS$=Límites del servidor.
+		$LIMITSETTCONF_MAINT_SERVER_SETTINGS$=Ajustes del servidor.
+		$LIMITSETTCONF_CUSTOM_COMMANDS$=Ajustes FTP
+		$LIMITSETTCONF_ENCRYPTION$=codificación
+	$CONF_SERV_ACTIVITY_VIEW$=Actividad del servidor.
+		$ACTVIEW_SERVER_SESS$=Sesión del servidor.
+		$ACTVIEW_SERVER_STATS$=Estadísticas del servidor.
+		$ACTVIEW_SERVER_LOG$=cargar servidor.
+
+$DOMAIN$=Dominio.
+	$DOMAIN_OVERVIEW$=vista general del dominio.
+	$CONF_DOMAIN_DETAILS$=detalles del dominio.
+		$DOMAINCONF_NAME_DESC$=Nombre y descripción.
+		$DOMAINCONF_LISTENERS$=Escuchadores.
+		$DOMAINCONF_VHOST_NAMES$=huéspedes virtuales.
+		$DOMAINCONF_IP_ACL$=Reglas de acceso IP
+		$DOMAINCONF_DATABASE$=Acceso de la base de datos.
+		$DOMAINCONF_EVENTS$=Eventos de dominio.
+		$SMTP_CONFIG$=configuración SMTP 
+	$CONF_DOMAIN_DIRECTORIES$=directorios dominio
+		<!-- Child nodes defined at the Server level -->
+	$CONF_DOMAIN_LIMITS_SETTINGS$=Límites del dominio & Ajustes
+		$LIMITSETTCONF_DOM_LIMITS$=Límites del dominio.
+		$LIMITSETTCONF_MAINT_DOM_SETTINGS$=Ajustes del dominio.
+		<!-- Additional child nodes defined at the Server level -->
+	$DOMAIN_ACTIVITY_VIEW$=Actividad del dominio.
+		$ACTVIEW_USERS$=Actividad del dominio.
+		$ACTVIEW_SESSION_STATS$=Estadísticas del dominio.
+		$ACTVIEW_VIEW_DOMAIN_LOG$=Vista de la carga del dominio.
+		$ACTVIEW_CONF_LOG$=Configura la carga del dominio.
+		$ACTVIEW_USER_GROUP_STATS$=Usuario &amp; Estadísticas de grupo.
+
+$CONF_DOMAIN_USERS$=Usuario
+	$USERCONF_ABOUT$=Sobre las cuentas de usuario.
+	$USERCONF_USER_INFO$=información del usuario.
+	$USERCONF_GROUPS$=Groupos
+	$USERCONF_WELCOME_MSG$=Mensaje de bienvenida
+	$USERCONF_IP_ACL$=Reglas de acceso IP
+	$USERCONF_DIR_ACCESS$=Reglas de acceso de directorio.
+	$USERCONF_VIR_PATHS$=Caminos virtuales.
+	$USERCONF_LIMITS_SETTINGS$=Limites y ajustes.
+	$USERCONF_EVENTS$=Eventos del usuario.
+	$USERCONF_QUOTAS_RATIOS$=Cuotas y Ratios.
+	$USERCONF_WINDOWS_AUTH$=Ventana de Autenticación.
+	$USERCONF_SSH_KEY$=Información clave SSH.
+
+$CONF_DOMAIN_GROUPS$=Grupos
+	$GROUPCONF_ABOUT$=Sobre los grupos.
+	$GROUPCONF_GROUP_INFO$=Información de Grupo.
+	$GROUPCONF_MEMBERS$=Miembros de Grupo.
+	$GROUPCONF_WELCOME_MSG$=Mensaje de bienvenida.
+	$GROUPCONF_IP_ACL$=Reglas de acceso IP
+	$GROUPCONF_DIR_ACCESS$=Reglas de acceso de directorio.
+	$GROUPCONF_VIR_PATHS$=Caminos Virtuales.
+	$GROUPCONF_LIMITS_SETTINGS$=Limites y ajustes.
+	$GROUPCONF_EVENTS$=Eventos Grupo.
+	$GROUPCONF_QUOTAS_RATIOS$=Cuotas y Ratios.
+	$GROUPCONF_SSH_KEY$=Información clave SSH.
+
+$ADDITIONAL_REFERENCE$=Referencia Adicional.
+	$SYSTEM_VARS$=Variables del sistema.
+
+
+<!-- localized strings, keep these at the end of this file, they "overwrite" any previously defined string -->
+<!--#include de "Help-TOC-Strings_DE.strings"-->
+<!--#include fr "Help-TOC-Strings_FR.strings"-->
+<!--#include it "Help-TOC-Strings_IT.strings"-->
+<!--#include zh,TW "Help-TOC-Strings_TW.strings"-->
+<!--#include zh,CN "Help-TOC-Strings_CN.strings"-->
+<!--#include jp "Help-TOC-Strings_JP.strings"-->

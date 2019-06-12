@@ -1,0 +1,181 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Web Client\Include\ -->
+
+<!-- General -->
+$CLICK_HERE_CURRENT_DIR$=<a href="%FILE%ListDir.htm?Dir=%CURRENT_DIR%">Tarkista nykyisen hakemiston sijainti napsauttamalla tästä.</a>
+$WARN_IMAGE$=<img src="%FILE%Images\warn.gif" style="float:left;">
+$DELETE$=Poista
+$OPEN$=Avaa
+$CURRENTLY_LOCATED$=Sijaitsee tällä hetkellä kohteessa
+$USE_INHERITED$=Peri oletusarvo
+$NO_SCRIPT_TEXT$=Selaimesi JavaScript-tuki ei ole kytketty päälle.  Tämän sivun tarkastelu edellyttää, että JavaScript on käytössä.
+$PLEASE_ENTER_USER_NAME$=Syötä käyttäjänimi.
+
+
+<!-- Login -->
+$LOGIN_TITLE$=Serv-U from RhinoSoft.com
+$LANGUAGE$=Kieli
+$PASSWORD$=Salasana
+$LOGIN$=Sisäänkirjautuminen
+$CHANGE_PASSWORD$=Vaihda salasanaa
+$REMEMBER_USER$=Muista minut
+$RELOAD$=Lataa uudelleen
+$JSCRIPT_DISABLED_WARN$=Javascript on kytketty pois päältä selaimen asetuksista.  Serv-U File Server -sovelluksen käyttö edellyttää, että Javascript on käytössä. <br /><br />Kytke Javascript käyttöön selaimen asetuksista ja napsauta sitten alla olevaa painiketta Lataa uudelleen.
+$IE_NOT_COMPATIBLE_WARN$=Käyttämäsi Internet Explorer -selainversiota ei tueta. Päivitä Internet Explorer -selainversioon 6.0 tai uudempaan, jos haluat käyttää Serv-U -sovellusta.
+$BROWSER_NOT_COMPATIBLE_WARN$=Käyttämäsi selain ei ole yhteensopiva nykyisen Serv-U -version kanssa. Käytä joko  Internet Explorer 6.0+  tai Firefox 1.0+ selainta.
+
+
+<!-- Languages -->
+$ENGLISH$=English (Englanti)
+$GERMAN$=Deutsch (Saksa)
+$ITALIAN$=Italiano (Italia)
+$FRENCH$=Français (Ranska)
+$SPANISH$=Español (Espanja)
+$PORTUGUESE$=Português (Portugali)
+$SWEDISH$=Svenska (Ruotsalainen)
+$FINISH$=Suomi
+$NORWEGIAN$=Norsk (Norjalainen)
+$DANISH$=Dansk (Tanskalainen)
+$RUSSIAN$=Русский (Venäjä)
+$TRADITIONAL_CHINESE$=繁體中文 (Perinteinen kiina)
+$SIMPLIFIED_CHINESE$=简体中文 (Yksinkertaistettu kiina)
+$JAPANESE$=日本語 (Japanilainen)
+
+
+<!-- Logout -->
+$LOGOUT_TITLE$=Uloskirjautuminen suoritettu
+$LOGOUT_DESC$=Sinut on kirjattu ulos järjestelmästä.  <a href="%LOGIN%">Kirjaudu sisään uudelleen napsauttamalla tästä.</a>
+
+
+<!-- Login Change Password -->
+$PASSWORD_EXPIRED_TITLE$=Salasana on vanhentunut - Vaihda salasanaa
+$PASSWORD_EXPIRED_DESC$=Salasanasi on vanhentunut, vaihda salasanaa ennen kuin jatkat järjestelmän käyttöä.
+
+
+<!-- Session Not Found -->
+$SESSION_NOT_FOUND_TITLE$=Käyttö estetty - istuntoa ei löytynyt
+$SESSION_NOT_FOUND_HEAD$=401 käyttö estetty, istunto on määritetty mutta sitä ei löytynyt
+$SESSION_NOT_FOUND_DESC$=Määritettyä istuntoa ei löytynyt.  Tämä voi johtua siitä, että järjestelmän käytössä on ollut tauko.  Yritä kirjautua sisään uudelleen.
+
+
+<!-- Not Logged In -->
+$NOT_LOGGED_IN_TITLE$=Käyttö estetty - Käyttäjä ei ole kirjautunut sisään
+$NOT_LOGGED_IN_HEAD$=401 käyttö estetty, et ole kirjautunut sisään
+$NOT_LOGGED_IN_DESC$=Sinulla ei ole riittävästi käyttöoikeuksia pyydetyn toiminnon suorittamiseen.  <a href="%LOGIN%">Kirjaudu sisään ennen kuin yrität suorittaa toimintoa.</a>
+
+
+<!-- Permission Denied -->
+$PERMISSION_DENIED_TITLE$=Käyttö estetty
+$PERMISSION_DENIED_DESC$=Käyttö estetty
+
+
+<!-- Listing -->
+$CURR_DIR_HOST$=%HOST%
+$CURR_DIR_NAME$=%CURRENT_DIR_NAME%
+$MOD_TIME$=Aika
+$ATTRS$=Ominaisuudet
+$THUMBNAIL_LIST$=Pienoiskuvat
+$UPLOAD_ACTION$=Lataa palvelimelle
+$UPLOAD$=Lataus palvelimelle
+$UPLOAD_ALT$=Lataa palvelimelle
+$THUMBNAILS_ALT$=Pienoiskuvat
+$DETAILS_ALT$=Lisätiedot
+$CREATE_DIR_ALT$=Luo hakemisto
+$FILETOOLS$=Työkalut
+$DOWNLOAD$=Lataa palvelimelta
+$THUMBNAIL_SIZE$=Pienoiskuvan koko
+$SELECT_THUMBNAIL_SIZE$=Valitse koko
+$PREVIEW_IMAGE$=Esikatselukuva
+$CHANGE_PASSWORD_BUTTON$=Vaihda salasanaa
+$FILE_PATH$=Tiedostopolku
+$PLAY_MEDIA$=Soitto media
+$PLAY_LIST$=Soittolista
+$AUDIO_PLAY_LIST$=Audio soittolista
+$PLAYLIST_SIZE$=Soittolistan koko
+$SHUFFLE_PLAYLIST$=Soittolistan selaus
+$NEXT_MEDIA_FILE$=Seuraava mediatiedosto
+$PREVIOUS_MEDIA_FILE$=Edellinen mediatiedosto
+$HOME$=Paluu
+
+
+<!-- Thumbnail Listing -->
+$DETAIL_LIST$=Lisätiedot
+
+
+<!-- STOR File Uploaded -->
+$STOR_FILE_UPLOADED_TITLE$=Tiedosto ladattu palvelimelle
+$STOR_FILE_UPLOADED_DESC$=Tiedoston lataus palvelimelle onnistui.<br><br>$CLICK_HERE_CURRENT_DIR$
+
+
+<!-- Rename -->
+$RENAME_TITLE$=Nimeä uudelleen
+$RENAME_DESC$=Syötä uusi nimi:
+$NEW_NAME$=Uusi nimi
+$RENAME$=Nimeä uudelleen
+
+
+<!-- Delete -->
+$DELETE_DIR$=Haluatko varmasti poistaa valitun hakemiston?
+$DELETE_FILE$=Haluatko varmasti poistaa valitun tiedoston?
+
+
+<!-- Style Swap Properties -->
+$BOX_WIDTH_SMALL$=boxwidth300
+
+
+<!-- Overwrite file on upload -->
+$OVERWRITE_FILE$=Haluatko varmasti korvata tämän tiedoston?
+
+
+<!-- **************** ImagePreviewDialog.htm **************** -->
+$IMAGE_DIALOG_TITLE$=Esikatselukuva
+$PREVIOUS_IMAGE$=Edellinen kuva
+$PAUSE_SLIDESHOW$=Keskeytä kuvaesitys
+$PLAY_SLIDESHOW$=Toista kuvaesitys
+$NEXT_IMAGE$=Seuraava kuva
+$OF$=/
+$IMAGES$=Kuvat
+$SLIDE_SHOW$=Kuvaesitys
+$SLIDE_SHOW_SPEED$=Kuvaesityksen nopeus
+$FAST$=Nopea
+$SLOW$=Hidas
+
+
+<!-- **************** AlertDialog.htm **************** -->
+$SELECT_FILE_DELETE$=Valitse ensin poistettava tiedosto tai hakemisto.
+$SELECT_FILE_RENAME$=Valitse ensin uudelleennimettävä tiedosto tai hakemisto.
+
+
+<!-- **************** AskUserPlacementDialog.htm **************** -->
+$ASK_USER_TITLE$=Asiakasvaihtoehdot
+$CLIENT_SELECTION$=Asiakkaan valinta
+$USER_PLACEMENT_DESC1$=Valitse tapa, jolla haluat käyttää tiliäsi.  Web-käyttöliittymä on helppokäyttöinen selainkäyttöliittymä.
+$USER_PLACEMENT_DESC2$=FTP Voyager JV on täysiverinen FTP-sovellus, joka hyödyntää Javaa selaimessa.
+$BASIC_WEB_CLIENT$=Web-käyttöliittymä
+$FVJV$=FTP Voyager JV
+
+
+<!-- **************** LoggedInDialog.htm **************** -->
+$LOGGED_IN_DIALOG_TITLE$=Tällä hetkellä sisäänkirjautuneena
+$LOGGED_IN_DESC$=Olet tällä hetkellä sisäänkirjautuneena. Aloita istunto uudelleen ja kirjaudu sisään napsauttamalla OK.
+
+
+<!-- **************** FVJVLoggedInDialog.htm **************** -->
+$FVJV_LOGGED_IN_DESC$=Olet tällä hetkellä sisäänkirjautuneena. 
+$FVJV_LOGGED_IN_ACTION$=Aloita istunto uudelleen ja kirjaudu sisään napsauttamalla tästä.
+
+
+<!-- **************** UploadProgressDialog.htm **************** -->
+$UPLOAD_PROGRESS$=Latauksen edistyminen palvelimelle
+$TRANSFER_RATE$=Siirtonopeus
+$WRITTEN$=Siirretty
+$REMAINING$=Jäljellä
+$TIME_REMAINING$=Aikaa jäljellä
+$DESTINATION$=Kohde
+$KB_SEC_LABEL$=Kt/s
+$PLEASE_SELECT_FILE_UPLOAD$=Valitse palvelimelle ladattava tiedosto Selaa-painikkeella.
+$UPLOADING$=Lataa palvelimelle
+$LARGE_FILE_UPLOAD_WARN$=Jos palvelimelle ladattavien tiedostojen koko on yli 2 Gt, edistymisen osoitin voi olla virheellinen tai vaillinainen selaimen ominaisuuksien vuoksi.
+$MOZ_LARGE_FILE_UPLOAD_WARN$=Mozilla-selaimet eivät salli tiedostokooltaan yli 2 Gt tiedostojen lataamista palvelimelle.
+$UNABLE_TO_UPLOAD$=Tiedoston lataaminen palvelimelle selaimella epäonnistui.  Tiedostokoko voi olla liian suuri käyttämällesi selaimelle.  $MOZ_LARGE_FILE_UPLOAD_WARN$

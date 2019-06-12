@@ -1,0 +1,546 @@
+<!--#include "Strings/Help-TOC-Strings.strings"-->
+<!--#include "Strings/Help-Keyword-Strings.strings"-->
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>$TITLE$</title>
+	<style type="text/css">
+		/*margin and padding on body element
+		  can introduce errors in determining
+		  element position and are not recommended;
+		  we turn them off as a foundation for YUI
+		  CSS treatments. */
+		body {
+			margin:0;
+			padding:0;
+			background-image: url(%COMMON_FILE%Images/vert-bg-fade.png);
+			background-repeat: repeat-x;	
+			background-position: center;
+			background-color: #d4d0c8;
+			text-align:center;
+		}
+	</style>
+<link type="text/css" href="%COMMON_FILE%Scripts/Help/fonts/fonts-min.css" rel="stylesheet" />
+<link type="text/css" href="%COMMON_FILE%Scripts/Help/assets/css/treeview.css" rel="stylesheet" />
+<link type="text/css" href="%COMMON_FILE%Scripts/Help/assets/css/tree.css" rel="stylesheet" />
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/yahoo/yahoo.js"></script>
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/event/event.js"></script>
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/treeview/treeview.js"></script>
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/Help.js"></script>
+<script type="text/javascript" language="javascript">
+	// preload a couple images
+	LoadingImg1 = new Image();
+	LoadingImg1.src = "%COMMON_FILE%Images/HelpIndex-off.gif";
+	LoadingImg2 = new Image();
+	LoadingImg2.src = "%COMMON_FILE%Images/HelpContents.gif";
+
+	// determine if the browser is IE or Moz and what version 
+	nBrowserVersion = parseInt(navigator.appVersion); // browser version being used
+	sBrowserType = navigator.appName; // type of browser....IE or Moz
+
+	// if IE then drop in this style otherwise use the other style
+	if (sBrowserType == "Microsoft Internet Explorer" && (nBrowserVersion >= 4)) {
+		document.write("<style type='text/css'>");
+		document.write("BODY{margin:10px;}");
+		document.write("</style>");
+	} // if
+	else{
+		document.write("<style type='text/css'>");
+		document.write("BODY{margin:10px 14px 10px 10px;}");
+		document.write("</style>");
+	} // else
+</script>
+
+<!--Additional custom style rules for this example:-->
+<style type="text/css">
+    #treewrapper {background: #fff; position:relative;}
+	#treediv {position:relative; width:200px; background: #fff; padding:1em;}
+    .icon-item { display:block; padding-left: 20px; background: transparent url(%COMMON_FILE%Scripts/Help/assets/img/pageitem.gif) no-repeat; }
+	a.highlightbuttonbox,a.highlightbuttonbox-head,a.highlightlinkbox,.offnavlinkbox,div.highlightbuttonbox,.imgprevbutton-off {
+	color:#000;
+	text-decoration:none;
+	padding:1px 2px 1px 2px;
+	line-height:26px;
+}
+	a.highlightbuttonbox,a.highlightlinkbox,.offnavlinkbox,div.highlightbuttonbox,.imgprevbutton-off {
+		border:1px solid #e9e9e6;
+	}
+	a.highlightbuttonbox-head{
+		border:1px solid #e9e9e6;
+	}
+	a.highlightbuttonbox:hover,a.highlightbuttonbox-head:hover,a.highlightlinkbox:hover,.onnavlinkbox,div.highlightbuttonbox:hover,.imgprevbutton-on{
+		background:#b6bdd2 ;
+		border:1px solid black;
+		color:#000!important;
+		text-decoration:none;
+		padding:1px 2px 1px 2px;	
+		cursor:pointer;
+		line-height:26px;
+	}
+	a.highlightbuttonbox-disabled{
+		background:#e9e9e6 ;
+		color:#969696;
+		border:1px solid #e9e9e6;
+		text-decoration:none;
+		padding:1px 2px 1px 2px;	
+		cursor:default;
+		line-height:26px;
+	}
+	div.highlightbuttonbox,div.highlightbuttonbox:hover,.imgprevbutton-on,.imgprevbutton-off{
+		height:16px;
+		line-height:16px;
+	}
+	.dividerline{
+	background: url(%COMMON_FILE%Images/Taskbar-bg.png) -2px -33px no-repeat;
+	height:26px;
+	line-height:26px;
+}
+</style>
+
+
+<!--end custom header content for this example-->
+</head>
+
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 0 auto;">
+	<tr>
+		<td style="width:21px;white-space:nowrap;text-align:center;">
+			<span ><a href="javascript:showIndex(false);"><img id="hlp-contents-img" src="%COMMON_FILE%Images/HelpContents-off.gif" border="0" align="middle" alt="$HELP_CONTENTS_TAB$" style="margin:1px 3px 0 0;border:none;cursor:default;"></a></span>
+		</td>									
+		<td style="white-space:nowrap;padding-right:5px;">
+			<span><a href="javascript:showIndex(false);" id="hlp-contents-txt" class="highlightbuttonbox-disabled">$HELP_CONTENTS_TAB$</a></span>						
+		</td>
+		<td style="white-space:nowrap;width:12px;">
+			<span class="dividerline">&nbsp;</span>
+		</td>
+		<td style="width:21px;white-space:nowrap;text-align:center;">
+			<span ><a href="javascript:showIndex(true);"><img id="hlp-index-img" src="%COMMON_FILE%Images/HelpIndex.gif" border="0" align="middle" alt="$HELP_INDEX_TAB$" style="margin:1px 3px 0 0;border:none;"></a></span>
+		</td>									
+		<td style="white-space:nowrap;">
+			<span><a href="javascript:showIndex(true);" id="hlp-index-txt" class="highlightbuttonbox">$HELP_INDEX_TAB$</a></span>						
+		</td>
+	</tr>
+</table>
+
+<div id="TOCpanebox" style="text-align:left;overflow:auto;width:100%;background-color:#fff;border: inset 2px #fff;">
+	<div id="treewrapper">
+		<div id="treediv"> </div>
+	</div>	
+	<div id="HelpIndex" style="display:none;">
+		<select id="HelpIndexSel" multiple="multiple" style="width:100%;height:99%;" ondblclick="javascript:GotoKeyword();" onkeyup="javascript:OnKeywordPress(event);">
+		</select>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript" language="javascript">
+	// Wrap our initialization code in an anonymous function to keep out of the global namespace:
+	(function() {
+		var init = function() {
+
+			// create the TreeView instance:
+			var tree = new YAHOO.widget.TreeView("treediv");
+
+			// get a reusable reference to the root node:
+			var root = tree.getRoot();
+
+			// + FTP Voyager JV
+			var RootItem_1 = TreeTextNode("$TOC_FVJV_CLIENT$", root, true, false);
+
+				// - Overview
+				var Item_1_1 = TreeTextNode("$TOC_OVERVIEW$", RootItem_1, false, true,"Help-Overview.htm");
+
+			// + Layout
+			var RootItem_2 = TreeTextNode("$TOC_LAYOUT$", root, true, false);
+
+				// - Overview
+				var Item_2_1 = TreeTextNode("$TOC_LAYOUT_APP_OVERVIEW_1$", RootItem_2, false, true, "Help-Layout-Main-Overview.htm");
+
+				// + Local/Remote Panes
+				var RootItem_2_2 = TreeTextNode("$TOC_LAYOUT_BROWSERS_1$", RootItem_2, true, false);
+
+					// - Overview
+					var Item_2_2_1 = TreeTextNode("$TOC_LAYOUT_BROWSERS_OVERVIEW_1$", RootItem_2_2, false, true, "Help-Layout-Browser-Overview.htm");
+
+					// - Tree Pane Overview
+					var Item_2_2_1 = TreeTextNode("$TOC_LAYOUT_BROWSERS_TREE_OVERVIEW_1$", RootItem_2_2, false, true, "Help-Layout-Browser-Tree-Overview.htm");
+
+					// - Preview Pane Overview
+					var Item_2_2_2 = TreeTextNode("$TOC_LAYOUT_BROWSERS_PREVIEW_OVERVIEW_1$", RootItem_2_2, false, true, "Help-Layout-Browser-Preview-Overview.htm");
+
+					// - List Pane Overview
+					var Item_2_2_3 = TreeTextNode("$TOC_LAYOUT_BROWSERS_LIST_OVERVIEW_1$", RootItem_2_2, false, true, "Help-Layout-Browser-List-Overview.htm");
+
+				// - Transfer Pane Overview
+				var Item_2_3 = TreeTextNode("$TOC_LAYOUT_TRANSFER_OVERVIEW_1$", RootItem_2, false, true, "Help-Layout-Transfer-Overview.htm");
+
+				// - Status Bar Overview
+				var Item_2_4 = TreeTextNode("$TOC_LAYOUT_STATUS_BAR_OVERVIEW_1$", RootItem_2, false, true, "Help-Layout-StatusBar-Overview.htm");
+
+			// + Main Menu
+			var RootItem_3 = TreeTextNode("$TOC_MENU_MAIN$", root, true, false);
+
+				// - Overview
+				var Item_3_1 = TreeTextNode("$TOC_MENU_MAIN_OVERVIEW$", RootItem_3, false, true, "Help-Menus-Main-Overview.htm");
+
+				// + Items
+				var RootItem_3_2 = TreeTextNode("$TOC_MENU_MAIN_ITEMS$", RootItem_3, true, false);
+
+					// - File Menu
+					var Item_3_2_1 = TreeTextNode("$TOC_MENU_MAIN_ACTIONS_FILE$", RootItem_3_2, false, true, "Help-Menus-Main-Items-File.htm");
+
+					// - Edit Menu
+					var Item_3_2_2 = TreeTextNode("$TOC_MENU_MAIN_ACTIONS_EDIT$", RootItem_3_2, false, true, "Help-Menus-Main-Items-Edit.htm");
+
+					// - View Menu
+					var Item_3_2_3 = TreeTextNode("$TOC_MENU_MAIN_ACTIONS_VIEW$", RootItem_3_2, false, true, "Help-Menus-Main-Items-View.htm");
+
+					// - Windows Menu
+					var Item_3_2_4 = TreeTextNode("$TOC_MENU_MAIN_ACTIONS_WINDOWS$", RootItem_3_2, false, true, "Help-Menus-Main-Items-Windows.htm");
+
+					// - Help Menu
+					var Item_3_2_5 = TreeTextNode("$TOC_MENU_MAIN_ACTIONS_HELP$", RootItem_3_2, false, true, "Help-Menus-Main-Items-Help.htm");
+
+			// + Toolbars
+			var RootItem_4 = TreeTextNode("$TOC_TOOLBARS$", root, false, false);
+
+				// + Main Toolbar
+				var RootItem_4_1 = TreeTextNode("$TOC_TOOLBAR_MAIN$", RootItem_4, false, false);
+
+					// - Overview
+					var RootItem_4_1_1 = TreeTextNode("$TOC_TOOLBAR_MAIN_OVERVIEW$", RootItem_4_1, false, true, "Help-Tbar-Main-Overview.htm");
+
+					// - Actions
+					var RootItem_4_1_1 = TreeTextNode("$TOC_TOOLBAR_MAIN_ACTIONS$", RootItem_4_1, false, true, "Help-Tbar-Main-Actions.htm");
+
+				// + Local/Remote Toolbars
+				var RootItem_4_2 = TreeTextNode("$TOC_TOOLBAR_BROWSER$", RootItem_4, false, false);
+
+					// + Local/Remote Crumbbar
+					var RootItem_4_2_1 = TreeTextNode("$TOC_TOOLBAR_BROWSER_CRUMBBAR$", RootItem_4_2, false, false);
+
+						// - Overview
+						var RootItem_4_2_1_1 = TreeTextNode("$TOC_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$", RootItem_4_2_1, false, true, "Help-Tbar-Browser-Crumbbar-Overview.htm");
+
+						// - Actions
+						var RootItem_4_2_1_2 = TreeTextNode("$TOC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$", RootItem_4_2_1, false, true, "Help-Tbar-Browser-Crumbbar-Actions.htm");
+
+					// + Local/Remote Toolbar
+					var RootItem_4_2_2 = TreeTextNode("$TOC_TOOLBAR_BROWSER_TOOLBAR$", RootItem_4_2, false, false);
+
+						// - Overview
+						var RootItem_4_2_2_1 = TreeTextNode("$TOC_TOOLBAR_BROWSER_OVERVIEW$", RootItem_4_2_2, false, true, "Help-Tbar-Browser-Overview.htm");
+
+						// - Actions
+						var RootItem_4_2_2_2 = TreeTextNode("$TOC_TOOLBAR_BROWSER_ACTIONS$", RootItem_4_2_2, false, true, "Help-Tbar-Browser-Actions.htm");
+
+					// + Local/Remote Search Bar
+					var RootItem_4_2_3 = TreeTextNode("$TOC_TOOLBAR_BROWSER_SEARCH_BAR$", RootItem_4_2, false, false);
+
+						// - Overview
+						var RootItem_4_2_3_1 = TreeTextNode("$TOC_TOOLBAR_BROWSER_SEARCH_OVERVIEW$", RootItem_4_2_3, false, true, "Help-Tbar-Browser-Search-Overview.htm");
+
+						// - Actions
+						var RootItem_4_2_3_2 = TreeTextNode("$TOC_TOOLBAR_BROWSER_SEARCH_ACTIONS$", RootItem_4_2_3, false, true, "Help-Tbar-Browser-Search-Actions.htm");
+
+				// + Transfer Toolbar
+				var RootItem_4_3 = TreeTextNode("$TOC_TOOLBAR_TRANSFER$", RootItem_4, false, false);
+
+					// - Overview
+					var RootItem_4_3_1 = TreeTextNode("$TOC_TOOLBAR_TRANSFER_OVERVIEW$", RootItem_4_3, false, true, "Help-Tbar-Transfer-Overview.htm");
+
+					// - Actions
+					var RootItem_4_3_2 = TreeTextNode("$TOC_TOOLBAR_TRANSFER_ACTIONS$", RootItem_4_3, false, true, "Help-Tbar-Transfer-Actions.htm");
+
+			// + Dialogs
+			var RootItem_5 = TreeTextNode("$TOC_DIALOGS$", root, false, false);
+
+				// + About Dialog
+				var RootItem_5_1 = TreeTextNode("$TOC_DLG_ABOUT$", RootItem_5, false, false);
+
+					// - General
+					var Item_5_1_1 = TreeTextNode("$TOC_DLG_ABOUT_PROGINFO$", RootItem_5_1, false, true, "Help-Dlg-About-ProgramInfo.htm");
+
+					// - User Interface
+					var Item_5_1_2 = TreeTextNode("$TOC_DLG_ABOUT_COMPINFO$", RootItem_5_1, false, true, "Help-Dlg-About-ComputerInfo.htm");
+
+				// + Preferences Dialog
+				var RootItem_5_2 = TreeTextNode("$TOC_DLG_PREFS$", RootItem_5, false, false);
+
+					// - General
+					var Item_5_2_1 = TreeTextNode("$TOC_DLG_PREFS_GENERAL$", RootItem_5_2, false, true, "Help-Dlg-Prefs-General.htm");
+
+					// - Toolbars
+					var Item_5_2_2 = TreeTextNode("$TOC_DLG_PREFS_TBARS$", RootItem_5_2, false, true, "Help-Dlg-Prefs-Toolbars.htm");
+
+
+				// - Synchronize Folders Dialog
+				var RootItem_5_3 = TreeTextNode("$TOC_DLG_SYNC_FOLDERS$", RootItem_5, false, false);
+
+					// Overview
+					var Item_5_3_1 = TreeTextNode("$TOC_DLG_SYNC_FOLDERS_OVERVIEW$", RootItem_5_3, false, true, "Help-Dlg-SyncFolders.htm");
+
+					// Comparison Frames
+					var RootItem_5_3_2 = TreeTextNode("$TOC_DLG_SYNC_FOLDERS_RESULTS_FRAMES$", RootItem_5_3, false, false);
+
+						// Layout
+						var Item_5_3_2_1 = TreeTextNode("$TOC_DLG_SYNC_FOLDERS_RESULTS$", RootItem_5_3_2, false, true, "Help-Dlg-SyncFolders-Results.htm");
+
+						// Toolbar
+						var Item_5_3_2_2 = TreeTextNode("$TOC_DLG_SYNC_FOLDERS_RESULTS_TBAR$", RootItem_5_3_2, false, true, "Help-Dlg-SyncFolders-Results-Tbar.htm");
+
+						// Grid
+						var Item_5_3_2_3 = TreeTextNode("$TOC_DLG_SYNC_FOLDERS_RESULTS_LIST$", RootItem_5_3_2, false, true, "Help-Dlg-SyncFolders-Results-List.htm");
+
+					// Options Frame
+					var Item_5_3_3 = TreeTextNode("$TOC_DLG_SYNC_FOLDERS_OPTIONS$", RootItem_5_3, false, true, "Help-Dlg-SyncFolders-Options.htm");
+
+				// - Save Login Dialog
+				var Item_5_4 = TreeTextNode("$TOC_DLG_SAVE_LOGIN$", RootItem_5, false, true, "Help-Dlg-SaveLogin.htm");
+
+				// - Change Password Dialog
+				var Item_5_5 = TreeTextNode("$TOC_DLG_CHG_PWORD$", RootItem_5, false, true, "Help-Dlg-ChangePassword.htm");
+
+				// - Activate Windows Dialog
+				var Item_5_6 = TreeTextNode("$TOC_DLG_ACTIVATE_WINDOW$", RootItem_5, false, true, "Help-Dlg-ActivateWindow.htm");
+
+			// + Other Information
+			var RootItem_6 = TreeTextNode("$TOC_OTHER_INFO$", root, false, false);
+
+				// - Active Pane
+				var Item_6_1 = TreeTextNode("$TOC_OI_ACTIVE_PANE_OVERVIEW$", RootItem_6, false, true, "Help-OtherInfo-ActivePane-Overview.htm");
+
+				// - Docking Framework
+				var Item_6_2 = TreeTextNode("$TOC_OI_DOCKING_FRAMEWORK_OVERVIEW$", RootItem_6, false, true, "Help-OtherInfo-DockingFramework-Overview.htm");
+
+				// - Navigating directories
+				var Item_6_3 = TreeTextNode("$TOC_OI_NAVIGATING_DIRS$", RootItem_6, false, true, "Help-OtherInfo-NavigatingDirs.htm");
+
+				// - Managing Directories and Files
+				var Item_6_4 = TreeTextNode("$TOC_OI_MANAGING_DIRS_AND_FILES$", RootItem_6, false, true, "Help-OtherInfo-ManagingDirsFiles.htm");
+
+				// - Transferring Files
+				var Item_6_5 = TreeTextNode("$TOC_OI_TRANSFERRING_DIRS_AND_FILES$", RootItem_6, false, true, "Help-OtherInfo-TransferringFiles.htm");
+
+				// - Managing Transfers
+				var Item_6_6 = TreeTextNode("$TOC_OI_MANAGING_TRANSFERS$", RootItem_6, false, true, "Help-OtherInfo-ManagingTransfers.htm");
+
+				// - Searching
+				var Item_6_7 = TreeTextNode("$TOC_OI_SEARCHING$", RootItem_6, false, true, "Help-OtherInfo-Searching.htm");
+
+				// - Frequently Asked Questions
+				var Item_6_8 = TreeTextNode("$TOC_OI_FAQS$", RootItem_6, false, true, "Help-OtherInfo-FAQs.htm");
+
+			// add a listener for the tree node(s)
+			tree.subscribe("labelClick", function(node) {
+				//alert(node.data.href + " label was clicked");
+				sHelpPageURL = node.data.helppage;
+				if (sHelpPageURL != "" && sHelpPageURL != null && sHelpPageURL != undefined)
+					parent.frames[2].location.href = "%FVJV_FILE%Help/" + sHelpPageURL;
+			}); 
+
+			// redraw the tree control
+			tree.draw();
+		} // function
+
+		//Add an onDOMReady handler to build the tree when the document is ready
+		YAHOO.util.Event.onDOMReady(init);
+	})();
+
+
+	function TreeTextNode(sLabel, sParentObj, bIsOpen, bHasImage, sHref)
+	{
+		var NodeObj = {label: sLabel, helppage: sHref};
+		
+		TextTreeItem = new YAHOO.widget.TextNode(NodeObj, sParentObj, bIsOpen);
+
+		if (bHasImage)
+			TextTreeItem.labelStyle = "icon-item";
+		 
+		return (TextTreeItem);
+	} // TreeTextNode
+
+
+	function ResizeTOC() 
+	{
+		// define some vars for width/height
+		var w_maxWidth = 1600, w_maxHeight = 1200;
+
+		// if the browser is from here
+		if (navigator.appName.indexOf("Microsoft") != -1) {
+
+			// set the new width/height
+			//w_newWidth = document.body.clientWidth;			
+			w_newHeight = document.body.clientHeight - 4;
+		} // if
+		else {
+			// estimate the size of the scroll bar
+			var netscapeScrollWidth = 15;
+
+			// set the new width/height
+			//w_newWidth = window.innerWidth - netscapeScrollWidth;
+			w_newHeight = window.innerHeight - netscapeScrollWidth;
+		} // else
+
+		// if the new width is greater than the max width, set the new width to the max
+		//if (w_newWidth > w_maxWidth)	
+		//	w_newWidth = w_maxWidth;
+
+		// if the new height is greater than the max height, set the new height to the max
+		if (w_newHeight > w_maxHeight)
+			w_newHeight = w_maxHeight;
+			
+		//TOC container resize
+		document.getElementById("TOCpanebox").style.height = (w_newHeight - 15);
+	} // ResizeTOC
+
+
+	// gets the value of a query string parameter
+	function GetURLParameter(sParameterName)
+	{
+	  var sParameterValue = "";
+	  
+	  // the URL of the current page
+	  var sCurrentURL = window.location.href;
+	  
+		if ( sCurrentURL.indexOf("?") > -1 ){
+			var sParemeterString = sCurrentURL.substr(sCurrentURL.indexOf("?") + 1);    
+			var aParameterArray = sParemeterString.split("&");
+			
+			for ( var iParam = 0; iParam < aParameterArray.length; iParam++ ){
+				// find the position of the "="
+				nPos = aParameterArray[iParam].indexOf("=");
+
+				if (aParameterArray[iParam].substring(0,nPos + 1) == (sParameterName + "=")) {
+					var aParamPosition = aParameterArray[iParam].split("=");
+					sParameterValue = aParamPosition[1];
+					break;
+				} // if
+			} // for
+		} // if
+
+		return (sParameterValue);
+	} // GetURLParameter
+
+
+	function showIndex(bShow)
+	{
+		// show / hide the appropriate help stuff
+		document.getElementById("HelpIndex").style.display = (bShow) ? "block" : "none";
+		document.getElementById("treewrapper").style.display = (bShow) ? "none" : "block";
+		
+		// set up the buttons
+		document.getElementById("hlp-index-txt").className = (bShow) ? "highlightbuttonbox-disabled" : "highlightbuttonbox";
+		document.getElementById("hlp-index-img").src = (bShow) ? "%COMMON_FILE%Images/HelpIndex-off.gif" : "%COMMON_FILE%Images/HelpIndex.gif";
+		document.getElementById("hlp-index-img").style.cursor = (bShow) ? "default" : "pointer";
+		document.getElementById("hlp-contents-txt").className = (bShow) ? "highlightbuttonbox" : "highlightbuttonbox-disabled";
+		document.getElementById("hlp-contents-img").src = (bShow) ? "%COMMON_FILE%Images/HelpContents.gif" : "%COMMON_FILE%Images/HelpContents-off.gif";
+		document.getElementById("hlp-contents-img").style.cursor = (bShow) ? "pointer" : "default";
+	} // showIndex
+
+
+	function GotoKeyword()
+	{
+		// find the currently selected item
+		var sValue = document.getElementById("HelpIndexSel").value;
+
+		// send the content frame to this page
+		parent.frames[2].location.href = "%FVJV_FILE%Help/" + sValue;
+	} // GotoKeyword
+
+
+	function OnKeywordPress(e)
+	{
+		// only go to the selected keyword if it's enter
+		// http://www.quirksmode.org/js/keys.html
+		if (e.keyCode == 13)
+			GotoKeyword();
+	} // OnKeywordPress
+
+
+	function KeywordSort(asVar1, asVar2)
+	{
+		// return < 0 if asVar1 should be first, 0 if they're equal, > 0 if asVar2 should be first
+		return (asVar1[1].localeCompare(asVar2[1]));
+	} // KeywordSort
+
+
+	// setup the resize handlers
+	window.onresize = ResizeTOC;
+	window.onload = ResizeTOC;
+
+	// I am the really, really big array of arrays that makes the keyword index work.  I am bigger than you.  Yes, even you.
+	var g_aasIndexKeywords = [
+		["Help-Overview.htm", "$FVJV_OVERVIEW$"],
+		["Help-Layout-Main-Overview.htm", "$APP_OVERVIEW$"],
+		["Help-Layout-Browser-Overview.htm", "$LOCAL_REMOTE_PANE$"],
+		["Help-Layout-Browser-Tree-Overview.htm", "$TREE_PANE$"],
+		["Help-Layout-Browser-List-Overview.htm", "$LIST_PANE$"],
+		["Help-Layout-Transfer-Overview.htm", "$TRANSFER_PANE$"],
+		["Help-Menus-Main-Overview.htm", "$MAIN_MENU$"],
+		["Help-Menus-Main-Items-File.htm", "$FILE_MENU$"],
+		["Help-Menus-Main-Items-Edit.htm", "$EDIT_MENU$"],
+		["Help-Menus-Main-Items-View.htm", "$VIEW_MENU$"],
+		["Help-Menus-Main-Items-Windows.htm", "$WINDOWS_MENU$"],
+		["Help-Menus-Main-Items-Help.htm", "$HELP_MENU$"],
+		["Help-Tbar-Main-Overview.htm", "$MAIN_TBAR$"],
+		["Help-Tbar-Main-Actions.htm", "$MAIN_TBAR_ACTIONS$"],
+		["Help-Tbar-Browser-Crumbbar-Overview.htm", "$CRUMB_BAR$"],
+		["Help-Tbar-Browser-Crumbbar-Actions.htm", "$CRUMB_BAR_ACTIONS$"],
+		["Help-Tbar-Browser-Overview.htm", "$LOCAL_TBAR$"],
+		["Help-Tbar-Browser-Actions.htm", "$LOCAL_TBAR_ACTIONS$"],
+		["Help-Tbar-Browser-Overview.htm", "$REMOTE_TBAR$"],
+		["Help-Tbar-Browser-Actions.htm", "$REMOTE_TBAR_ACTIONS$"],
+		["Help-Tbar-Transfer-Overview.htm", "$TRANSFER_TBAR$"],
+		["Help-Tbar-Transfer-Actions.htm", "$TRANSFER_TBAR_ACTIONS$"],
+		["Help-Dlg-About-ProgramInfo.htm", "$ABOUT_DLG_PROG_INFO$"],
+		["Help-Dlg-About-ProgramInfo.htm", "$ABOUT_DLG_COMP_INFO$"],
+		["Help-Dlg-Prefs-General.htm", "$PREFS_DLG_GENERAL$"],
+		["Help-Dlg-Prefs-Toolbars.htm", "$PREFS_DLG_TBARS$"],
+		["Help-Dlg-ChangePassword.htm", "$CHANGE_PWORD_DLG$"],
+		["Help-Dlg-ActivateWindow.htm", "$ACTIVATE_WINDOWS_DLG$"],
+		["Help-OtherInfo-ActivePane-Overview.htm", "$ACTIVE_PANE$"],
+		["Help-OtherInfo-DockingFramework-Overview.htm", "$DOCKING_FRAMEWORK$"],
+		["Help-OtherInfo-NavigatingDirs.htm", "$HOW_TO_NAVIGATE_DIRS$"],
+		["Help-OtherInfo-ManagingDirsFiles.htm", "$HOW_TO_MANAGE_DIRS$"],
+		["Help-OtherInfo-ManagingDirsFiles.htm", "$DRAG_AND_DROP_COPY_MOVE$"],
+		["Help-OtherInfo-ManagingTransfers.htm", "$HOW_TO_MANAGE_TRANSFERS$"],
+		["Help-OtherInfo-TransferringFiles.htm", "$HOW_TO_TRANSFER_DIRS$"],
+		["Help-OtherInfo-TransferringFiles.htm", "$TRANSFERRING_FILES$"],
+		["Help-OtherInfo-TransferringFiles.htm", "$DRAG_AND_DROP_XFER$"],
+		["Help-OtherInfo-TransferringFiles.htm", "$UPLOADING_FILES$"],
+		["Help-Layout-Browser-Preview-Overview.htm", "$PREVIEW_PANE$"],
+        ["Help-Menus-Main-Items-View.htm", "$STYLES$"],
+        ["Help-Menus-Main-Items-Windows.htm", "$AUTO_HIDE$"],
+        ["Help-Menus-Main-Items-Windows.htm", "$FLOAT_PANES$"],
+        ["Help-Menus-Main-Items-File.htm", "$INVERT_SELECTION$"],
+        ["Help-Menus-Main-Items-File.htm", "$DOWNLOADING_FILES$"],
+        ["Help-Tbar-Browser-Crumbbar-Actions.htm", "$CRUMB_BAR$"],
+        ["Help-Tbar-Browser-Crumbbar-Overview.htm", "$LOCAL_BROWSER$"],
+        ["Help-Tbar-Browser-Crumbbar-Overview.htm", "$REMOTE_BROWSER$"],
+        ["Help-Menus-Main-Items-File.htm", "$STOP_LISTING$"],
+        ["Help-Dlg-SaveLogin.htm", "$SAVE_LOGIN$"],
+        ["Help-OtherInfo-Searching.htm", "$SEARCH$"],
+        ["Help-Dlg-SyncFolders.htm", "$SYNC_FOLDERS$"],
+		["Help-OtherInfo-FAQs.htm", "$FAQS$"]];
+
+	// sort the array
+	g_aasIndexKeywords.sort(KeywordSort);
+
+	// add the keywords to our select
+	var IndexSelOptions = document.getElementById("HelpIndexSel").options;
+	var nNumKeywords = 0;
+	for (var nIndex = 0; nIndex < g_aasIndexKeywords.length; nIndex++) {
+
+		// each keyword is a new option for the select control
+		nNumKeywords = IndexSelOptions.length++;
+		IndexSelOptions[nNumKeywords].value = g_aasIndexKeywords[nIndex][0];
+		IndexSelOptions[nNumKeywords].text = g_aasIndexKeywords[nIndex][1];
+	} // for
+</script>
+</html>

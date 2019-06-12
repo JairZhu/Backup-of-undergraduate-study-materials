@@ -1,0 +1,11 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<virpath>
+<var name="ObjectID" val="%ID%" />
+<var name="PhysicalPath" val="%CVirtualPath.%ID%.PhysicalPath%" />
+<var name="VirtualPath" val="%CVirtualPath.%ID%.VirtualPath%" />
+<var name="IncludeInMaxSize" val="%CVirtualPath.%ID%.IncludeInMaxSize%" />
+<var name="Result" val="%RESULT%"/>
+<var name="ResultText" val="%RESULT_TEXT%"/>
+</virpath>

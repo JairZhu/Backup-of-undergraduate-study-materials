@@ -1,0 +1,1531 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- Server -->
+$WEB_ADMIN$=Веб Админ
+
+<!-- Time Format: This string is used to define how the time of day is displayed in your locale.  The following are possible values: -->
+<!-- %H: Hour in 24-hour format (00-23), %I: Hour in 12-hour format (1-12), %M: Minute as a decimal number (00-59), %p: Current locale’s A.M./P.M. indicator for 12-hour clock (optional) -->
+<!-- US time is the default, which is displayed as "12:34 PM" -->
+$LOCALE_TIME_FORMAT$=%H:%M
+$TIME_AM$=AM
+$TIME_PM$=PM
+
+<!-- The following values indicate the width to be used for certain HTML elements since some languages require more space to display the same text and -->
+<!-- unilaterally increasing the available space for all languages based upon this creates a lot of white space.  Translators do not need to do anything -->
+<!-- with these values. -->
+$USER_ATTRS_DIALOG_WIDTH$=675
+$GROUP_ATTRS_DIALOG_WIDTH$=725
+$VISTA_DIALOG_INCREASE$=10
+$TREE_NAV_WIDTH$=230
+$CONNECTION_GROUP_WIDTH$=610
+$CONTAINER_CONNECTION_GROUP_WIDTH$=615
+$LOG_FILE_GROUP_HEIGHT$=295
+$OPERA_LOG_FILE_GROUP_HEIGHT$=335
+$DOMAIN_INFO_GROUP_HEIGHT$=230
+$USER_INFO_LEFT_CONTAIN_WIDTH$=200
+$USER_INFO_RIGHT_CONTAIN_WIDTH$=325
+$USER_INFO_INPUT_WIDTH_ADD$=0
+$USER_INFO_RIGHT_PUBKEY_WIDTH$=395
+
+
+<!-- **************** header.htm **************** -->
+$CONSOLE_TITLE$=Консоль управления Serv-U сервером
+$FVJV$=FTP Voyager JV
+$BASIC_WEB_CLIENT$=Веб клиент
+$CURRENTLYLOGGEDIN$=Авторизован
+$CURRENTLY_EDITING_DOMAIN$=Настройка домена
+$CURRENTLY_EDITING_SERVER$=Настройка
+$LOCAL_ADMIN$=Локальный админ
+$HOME$=Главная
+
+
+<!-- **************** Console.htm **************** -->
+<!-- HTML -->
+$MANAGE_SERVER$=Настроить сервер
+$SERVER$=Сервер
+$NAVIGATION$=Навигация
+<!-- Javascript -->
+$SELECT_DOMAIN_MSG$=Нажмите пожалуйста кнопку "$MANAGE_DOMAIN_BUTTON$" для создания или редактирования домена.
+$SELECT_A_DOMAIN_TO_DELETE$=Выберите пожалуйста домен для удаления.
+$ASK_DELETE_DOMAIN$=Вы уверены что хотите удалить выбранный(ые) домен(ы)?
+$SELECT_ONLY_ONE_DOMAIN$=Выберите пожалуйста только один домен.
+$SELECT_ONLY_ONE_DOMAIN_EDIT$=Выберите только один домен для редактирования.
+$SELECT_ONE_DOMAIN_EDIT$=Выберите один из доменов для редактирования.
+$SELECT_A_DOMAIN$=Выберите домен
+<!-- Manage Domain -->
+$MANAGE_DOMAIN_BUTTON$=Настройка домена
+$DOMAINS$=Домены
+$DOMAIN$=Домен
+$DOMAINNAME$=Имя домена
+$DESCRIPTION$=Описание
+<!-- New Domain Dialog -->
+$NEW_DOMAIN$=Новый домен
+$NEW_DOMAIN_BUTTON$=Новый домен
+$CREATE_NEW_DOMAIN$=Создать новый домен
+<!-- Domain Details -->
+$DOMAIN_DETAILS$=Свойства домена
+$DOMAIN_NAME_AND_DESCRIPTION$=Задать имя и описание домена.
+$CONFIGURE_LISTENERS$=Настроить привилегии пользователей домена.
+$CONFIGURE_VIRTUAL_HOSTS$=Задать имена виртуальных хостов.
+$CONFIGURE_IPACCESS$=Настроить правила доступа для IP адресов.
+$CONFIGURE_DOMAIN_DATABASE$=Задать права доступа к базе данных домена для пользователей и групп.
+$CONFIGURE_DOMAIN_EVENTS$=Создать, настроить или удалить события домена.
+<!-- Users -->
+$USERS$=Пользователи
+$CREATE_MODIFY_DELETE_USER$=Создать, настроить или удалить пользователей.
+$CREATE_MODIFY_DELETE_DB_USER$=Создать, настроить или удалить пользователей, сохраненных в базе данных.
+$CONFIG_WIN_AUTH_SETTINGS$=Настроить Windows аутентификацию.
+<!-- Groups-->
+$GROUPS$=Группы
+$CREATE_MODIFY_DELETE_GROUP$=Создать, настроить или удалить группы пользователей.
+$CREATE_MODIFY_DELETE_DB_GROUP$=Создать, настроить или удалить группы пользователей, сохраненные в базе данных.
+$CREATE_MODIFY_DELETE_WIN_GROUP$=Создать, настроить или удалить пользователей из группы Windows.
+<!-- Directories -->
+$CONFIGURE_DIRECTORY_ACCESS$=Настроить права доступа к каталогам для всех пользователей домена.
+$CREATE_MAINTAIN_VIRTUAL_PATHS$=Создать и настроить виртуальные пути для доступа к каталогам, находящимся не в домашней папке.
+<!-- Limts & Settings -->
+$LIMITS$=Настройки домена
+$CREATE_MAINTAIN_LIMITS$=Создать и установить ограничения, применяемые ко всему домену.
+$MAINTAIN_DOMAIN_SETTINGS$=Редактировать настройки домена.
+$MAINTAIN_DOMAIN_FTPCP$=Изменить дополнительные настройки FTP команд и поведение для домена.
+$MAINTAIN_DOMAIN_ENCRYPTION$=Создать SSH и SSL сертификаты и задать параметры шифрования.
+<!-- Domain Activity -->
+$DOMAIN_ACTIVITY$=Монитор активности домена
+$VIEW_CONNECTED_USERS$=Посмотреть текущих пользователей.
+$VIEW_DOMAIN_STATS$=Посмотреть сессии домена и трафик.
+$VIEW_USER_GROUP_STATS$=Посмотреть статистику пользователей и групп. 
+$VIEW_DOMAIN_LOG$=Посмотреть журнал домена.
+$CONFIGURE_DOMAIN_LOG$=Настроить журнал домена.
+<!-- Server Details -->
+$SERVERDETAILS$=Параметры сервера
+$CONFIGURE_SERVER_IP_ACCESS$=Настроить права доступа по IP.
+$CONFIGURE_SERVER_DATABASE$=Задать права доступа к базе данных для глобальных аккаунтов и групп.
+$CONFIGURE_SERVER_LICENSE$=Посмотр информации о программе и настройка текущей лицензии.
+$VIEW_SERVER_INFO$=Информация об установке.
+$CONFIGURE_SERVER_EVENTS$=Создать, настроить или удалить события сервера.
+<!-- Global Users -->
+$GLOBALUSERS$=Глобальные пользователи
+$CREATEMODIFYGLOBALUSER$=Создать, настроить или удалить глобальных пользователей.
+$CREATE_MODIFY_DELETE_DB_GLOBAL_USER$=Создать, настроить или удалить глобальных пользователей, сохраненных в базе данных.
+<!-- Global Groups -->
+$GLOBALGROUPS$=Глобальные группы
+$CREATEMODIFYGLOBALGROUPS$=Создать, настроить или удалить глобальные группы.
+$CREATE_MODIFY_DELETE_DB_GLOBAL_GROUP$=Создать, настроить или удалить глобальные группы, сохраненные в базе данных.
+<!-- Global Directories -->
+$GLOBALDIRECTORIES$=Глобальные каталоги
+$CONFIGURESERVERDIRACCESS$=Настроить права доступа к каталогам для всех пользователей сервера.
+$CREATEMAINTAINVIRTUALPATHSSERVER$=Создать и настроить виртуальные пути для доступа к директориям, находящимся не в домашней папке.
+<!-- Server Limits & Settings -->
+$SERVERLIMITS$=Лимиты и настройки сервера.
+$CREATEMAINTAINSERVERLIMITS$=Создать и установить ограничения для всего сервера.
+$MAINTAINSERVERSETTINGS$=Задать параметры сервера.
+$MAINTAIN_SERVER_FTPCP$=Изменить дополнительные параметры FTP команд и поведение для всего сервера.
+$MAINTAINSERVERENCRYPTION$=Создать SSH и SSL сертификаты и задать параметры шифрования.
+<!-- Server Activity -->
+$SERVERACTIVITY$=Монитор активности сервера.
+$VIEW_SERVER_STATS$=Просмтореть статистику и трафик сервера.
+$VIEW_SERVER_LOG$=Просмотрерть журнал сервера
+<!-- Bubble tip dialog -->
+$HOME_LINK_BALLOON_TIP$=Кликните по логотипу Serv-u для возврата на главную старницу с любой страницы Консоли управления сервером.
+$TREE_NAV_BALLOON_TIP$=Кликните по иконке раскрытия слева для полного списка доменов с ссылками быстрого доступа к каждой странице конфигурации.
+
+<!-- **************** TreeNav.htm **************** -->
+<!-- Domain Details -->
+$DOMAIN_NAME_AND_DESCRIPTION_TREE$=Имя и описание домена
+$CONFIGURE_LISTENERS_TREE$=Слушатели
+$CONFIGURE_VIRTUAL_HOSTS_TREE$=Виртуальные хосты
+$CONFIGURE_IPACCESS_TREE$=Правила доступа по IP
+$CONFIGURE_DOMAIN_DATABASE_TREE$=Домтуп к базе данных
+$CONFIGURE_DOMAIN_EVENTS_TREE$=События домена
+<!-- Users -->
+$CREATE_MODIFY_DELETE_USER_TREE$=Аккаунты Пользователей
+$CREATE_MODIFY_DELETE_DB_USER_TREE$=Аккаунты в Базе данных
+$CONFIG_WIN_AUTH_SETTINGS_TREE$=Аутентификация Windows
+<!-- Groups-->
+$CREATE_MODIFY_DELETE_GROUP_TREE$=Группы пользователей
+$CREATE_MODIFY_DELETE_DB_GROUP_TREE$=Группы в Базе данных
+$CREATE_MODIFY_DELETE_OU_GROUP_TREE$=Группы Windows
+<!-- Directories -->
+$CONFIGURE_DIRECTORY_ACCESS_TREE$=Права доступа к Каталогам
+$CREATE_MAINTAIN_VIRTUAL_PATHS_TREE$=Виртуальные пути
+<!-- Limts & Settings -->
+$CREATE_MAINTAIN_LIMITS_TREE$=Ограничения домена
+$MAINTAIN_DOMAIN_SETTINGS_TREE$=Настройки домена
+$MAINTAIN_DOMAIN_FTPCP_TREE$=Настройки FTP комманд
+$MAINTAIN_DOMAIN_ENCRYPTION_TREE$=Настройки шифрования
+<!-- Domain Activity -->
+$VIEW_CONNECTED_USERS_TREE$=Подключенные пользователи
+$VIEW_DOMAIN_STATS_TREE$=Статистика Сессий и Передач
+$VIEW_USER_GROUP_STATS_TREE$=Статистика Юзеров и Групп
+$VIEW_DOMAIN_LOG_TREE$=Журнал домена
+$CONFIGURE_DOMAIN_LOG_TREE$=Настройка журнала
+<!-- Server Details -->
+
+$CONFIGURE_SERVER_IP_ACCESS_TREE$=Правила доступа по IP
+$CONFIGURE_SERVER_DATABASE_TREE$=Доступ к базе данных
+$CONFIGURE_SERVER_LICENSE_TREE$=Информация о лицензии
+$VIEW_SERVER_INFO_TREE$=Информация о установке
+$CONFIGURE_SERVER_EVENTS_TREE$=События сервера
+<!-- Global Users -->
+$CREATEMODIFYGLOBALUSER_TREE$=Пользователи
+$CREATE_MODIFY_DELETE_DB_GLOBAL_USER_TREE$=Пользователи в базе данных
+<!-- Global Groups -->
+$CREATEMODIFYGLOBALGROUPS_TREE$=Группы
+$CREATE_MODIFY_DELETE_DB_GLOBAL_GROUP_TREE$=Группы в базе данных
+<!-- Global Directories -->
+$CONFIGURESERVERDIRACCESS_TREE$=Права доступа к Каталогам
+$CREATEMAINTAINVIRTUALPATHSSERVER_TREE$=Виртуальные пути
+<!-- Server Limits & Settings -->
+$CREATEMAINTAINSERVERLIMITS_TREE$=Ограничения Сервера
+$MAINTAINSERVERSETTINGS_TREE$=Настройки Сервера
+$MAINTAIN_SERVER_FTPCP_TREE$=Расширенные настройки FTP комманд Settings
+$MAINTAINSERVERENCRYPTION_TREE$=Настройки шифрования
+<!-- Server Activity -->
+$VIEW_SERVER_STATS_TREE$=Статистика сессий и передач
+$VIEW_SERVER_LOG_TREE$=Журнал сервера
+
+
+<!-- **************** DomainWizardDialog.htm **************** -->
+$DOMAIN_WIZARD$=Мастер создания домена.
+$DOMAIN_WIZARD_INFO$=Добро пожаловать в Мастер создания домена. Он поможет вам создать новый домен на файловом сервере.
+$DOMAIN_NAME_WIZARD_DESCR$=Имя домена - это уникальный идентификатор, который позволяет отличить его от других доменов сервера.
+$DOMAIN_DESCR_WIZARD_DESCR$=Описание это дополнительная информация о домене. Необязательный параметер.
+$DOMAIN_TYPE_WIZARD_DESCR$=Домен может использоваться для обеспечения доступа к файлам через различные протоколы.  Некоторые протоколы могут быть недоступны из-за ограничений текущей лицензии.  Выберите протоколы и порты, которые будут использоваться этим доменом.
+$DOMAIN_IP_WIZARD_DESCR$=Данные настройки позволяют привязать домен к определенному IP адресу, по которому будут осуществляться входящие соединения. Если не задать IP, то сервер будет запущен на всех доступных IP.
+$PLEASE_ENTER_DOMAIN_NAME$=Введите пожалуйста уникальное имя домена.
+$CONFIRM_CREATE_DOMAIN$=Добро пожаловать в Serv-U.  Пока не задано ни одного домена.<br /><br />Желаете задать домен сейчас?
+$CONFIRM_CREATE_USER$=Этот домен не содержит пользователей. Желаете создать аккаунты пользователей сейчас?
+
+
+<!-- **************** UserInfoLayer.htm **************** -->
+$USERINFO$=Инфо
+$USERINFOMSG$=Здесь вы можете задать методы авторизации и привилегии для аккаунта.
+$USER_TEMPLATE_INFOMSG$=Шаблон настроек по умолчанию позволяет задать параметры создаваемых аккаунтов.  Настройте шаблон для быстрого добавления новых пользователей с использованием заранее заданных настроек и опций.
+$USERNAME$=Имя пользователя
+$FULLNAME$=Полное имя
+$PASSWORD$=Пароль
+$PASSWORDTYPE$=Тип пароля
+$ADMINPRIV$=Привилегии администратора
+$HOMEDIR$=Домашний каталог
+$ACCOUNT_TYPE$=Тип аккаунта
+$ACCOUNT_EXPIRE_DATE$=Дата окончания действия аккаунта
+$ENABLE_ACCOUNT$=Включить аккаунт
+$LOCK_HOME_DIR$=Заблокировать пользователя в домашней папке
+$WEB_CLIENT_STARTUP$=Веб-клиент по умолчанию
+$ALWAYS_ALLOW_LOGIN$=Всегда разрешать вход
+$PASSWORD_INVALIDATED$=Изменение типа пароля сделает пароль пользователя недействительным. Для изменения типа пароль пользователя необходимо сбросить.
+$SSH_PUBLIC_KEY_PATH$=Путь к публичному ключу SSH
+$CREATE_SSH_KEY_PAIR$=Создать пару ключей
+$EMAIL$=Email Адрес
+<!-- Password Types -->
+$PASSWORD_REGULAR_DESC$=Обычный пароль
+$PASSWORD_MD4_DESC$=OTP S/KEY MD4
+$PASSWORD_MD5_DESC$=OTP S/KEY MD5
+<!-- Password Encrypt Types -->
+$PASSWORD_ENCRYPT_ONEWAY_DESC$=Шифрование без восстановления (более надежно)
+$PASSWORD_ENCRYPT_TWOWAY_DESC$=Простое шифрование с восстановлением (менее надежно)
+$PASSWORD_ENCRYPT_ONEWAY_STR$=Шифрование без восстановления
+$PASSWORD_ENCRYPT_TWOWAY_STR$=Простое шифрование с восстановлением
+$NO_ENCRYPTION$=Без шифрования (не рекомендуется)
+$PASSWORD_ENCRYPT_MODE$=Режим шифрования пароля
+$USE_SERVER_SETTINGS$=Использовать настройки сервера
+$ENABLE_PASSWORD_RECOVER_DESC$=Разрешить юзерам восстанавливать пароли
+$DOMAIN_PASSWORD_ENCRYPT_WIZARD_DESCR$=Serv-U может восстанавливать пароли (с последующей отсылкой по email).  Используйте простое шифрование для возможности восстановления. Использование шифрования без восстановления приведет к созданию случайно сгенерированого пароля.
+$ENCRYPTION$=Шифрование
+$ENABLE_PASSWORD_ENCRYPTION_DESC$=Включить шифрование пароля
+$ON$=Вкл
+$OFF$=Выкл
+$CHANGE_SERVER_SETTINGS$=Изменить настройки сервера
+<!-- Administrator Privileges -->
+$PRIV_NONE_DESC$=Нет привилегий
+$PRIV_DOMAIN_DESC$=Администратор домена
+$PRIV_GROUP_DESC$=Админстарот группы
+$PRIV_SYSTEM_DESC$=Системный администратор
+$PRIV_DOMAIN_RO_DESC$=Админ домена только для чтения
+$PRIV_GROUP_RO_DESC$=Админ группы только для чтения
+$PRIV_SYSTEM_RO_DESC$=Сисадмин только для чтения
+<!-- Account Types -->
+$ACCT_TYPE_PERM_DESC$=Постоянный
+$ACCT_TYPE_DISABLE_DESC$=Автоматически отменяемый
+$ACCT_TYPE_DELETE_DESC$=Автомтически стираемый
+<!-- Default Web Client Types -->
+$WEB_CLIENT_BASIC_DESC$=Веб-клиент
+$WEB_CLIENT_FVJV_DESC$=FTP Voyager JV
+$WEB_CLIENT_ASK_DESC$=Запрос у пользователя
+
+
+<!-- **************** MembershipLayer.htm **************** -->
+$GROUPINFO$=Группы позволяют задать для пользователей общие атрибуты и привилегии.  Пользователь может быть членом сразу нескольких групп, при этом группы показываются в порядке значимости.
+$GROUPLABEL$=Пользователь является членом группы
+$SELECT_ONE_GROUP_MEMBERSHIP_DELETE$=Выберите одну группу для удаления пользователя из списка членов.
+
+
+<!-- **************** GroupsDialog **************** -->
+$SELECT_GROUP_DIALOG_TITLE$=Доступные группы
+$SELECT_ONLY_ONE_AVAILABLE_GROUP$=Выберите одну группу для добавления пользователя в члены этой группы.
+
+<!-- **************** EventEmailGroupsDialog **************** -->
+$GROUP_EMAIL_LIST_DIALOG_TITLE$=Список Email групп.
+$SELECT_ONLY_ONE_EMAIL_GROUP$=Выберите группу для добавления в email уведомление.
+$ASK_DELETE_GROUP_EMAIL$=Вы уверены что хотите удалить эту группу из email уведомления?
+$SELECT_ONE_GROUP_EMAIL_DELETE$=Выберите одну группу для удаления из списка email уведомления.
+$EMAIL_GROUPS_INFO$=Группы, добавленные в список слева, будут получать уведомления по email при возникновении определенного события.  Все члены группы с реальными email адресами будут получать уведомления по email.
+
+
+<!-- **************** MessageFileLayer.htm **************** -->
+$MSGFILE$=Файл сообщения
+$WELCOME_MSG$=Приветствие
+$MSGFILEINFO$=Приветствие посылается пользователям после удачной FTP или HTTP авторизации.  Этот файл сообщения переписывает любое заданное приветствие для членов группы.  В файле сообщения поддерживается использование символических параметров.
+$MSGFILECHKLABEL$=Включить код ответа в текст фала сообщения
+$WELCOME_MSG_CHECK_LABEL$=Включить код ответа в текст файла сообщения для FTP соединений
+$MSGFILELABEL$=Путь к файлу
+$WELCOME_MSG_TEXT_INFO$=Вместо определения пути к файлу сообщения можно ввести текст в окно ниже.  В этом случае вместо сообщения в файле будет посылаться введенный здесь текст.
+$SIGNON_MESSAGE_OVERRIDE$=Заменить наследуемое группами приветствие на заданное выше
+
+
+<!-- **************** IPAccessLayer.htm **************** -->
+$IPACCESS$=Доступ по IP
+$USER_IP_ACCESS_INFO$=Правила доступа по IP проверяются во время попытки авторизации пользователя.  Данные правила применяются только к определенному пользователю.  Правила могут быть унаследованы через членство в группах.
+$GROUP_IP_ACCESS_INFO$=Правила доступа по IP для групп наследуется всеми членами группы.  Однако эти правила не изменяют правил заданных на уровне пользователя.
+$RULE_ADDRESS$=Адрес
+$RULE_ALLOW$=Разрешить
+$RULE_DENY$=Запретить
+$EXPIRES_IN$=Истекает
+$RULE_EXPIRED$=Недействительно
+$SELECT_ONLY_ONE_IPACCESS_EDIT$=Выберите пожалуйста только одно правило доступа для редактирования.
+$SELECT_ONE_IPACCESS_EDIT$=Выберите пожалуйста одно правило доступа для редактирования.
+$SELECT_ONE_IPACCESS_DELETE$=Выберите пожалуйста правило доступа для удаления.
+$ASK_DELETE_IPACCESS$=Вы уверены что хотите удалить выделенное(ые) правило(а) доступа?
+$ENABLE_SORT_VIEW$=Включить режим сортировки
+$CONFIRM_SORT_IP$=Вы выбрали просмотр данного списка в режиме сортировки.  В это режиме сортировка не изменяет порядок, в котором эти правила обрабатываются.<br /><br />Вы точно хотите войти в режим сортировки?
+
+<!-- **************** IPAccessDialog.htm **************** -->
+$IP_ACCESS_DIALOG_TITLE$=Правило доступа по IP
+$RULE$=Правило
+$RULE_ALLOW_LABEL$=Разрешить доступ
+$RULE_DENY_LABEL$=Запретить доступ
+$IP_ACCESS_TIPS$=Подсказки
+$IP_RULE_MATCH$=Точн.соотв.
+$IP_RULE_RANGE$=диапазон (только для IP)
+$IP_RULE_ANY$=любое соот-ие
+$IP_RULE_ANY_CHAR$=совпадение любого символа
+$DNS4ME_SERVICE$=DNS4Me сервер динамического DNS
+$DNS4ME_SERVICE_NOTE$=Хотите создать правило доступа для динамических IP? Разрешите доступ вашему DNS4Me доменному имени.
+$PLEASE_ENTER_RULE$=Введите пожалуйста правило доступа по IP.
+$IP_ACCESS_RULE_LABEL$=IP Адрес/Имя/Маска
+$IP_RULE_CIDR$=CIDR оповещение
+
+
+<!-- **************** DirAccessLayer.htm **************** -->
+$DIRACCESS$=Доступ к каталогам
+$USER_DIR_ACCESS_INFO$=Правила доступа к каталогам и файлам для пользователя применяются к конкретному пользователю.  На уровне пользователя эти правила могут быть унаследованы от группы к которой принадлежит пользователь, также как правила для домена или сервера.
+$GROUP_DIR_ACCESS_INFO$=Правила доступа к каталогам и файлам для групп наследуются всеми членами данной группы.  Групповые правила могут идти до или после пользовательских, однако пользовательские правила имеют больший приоритет.
+$PATH$=Путь
+$ACCESS$=Доступ
+$MAX_SIZE$=Макс. размер
+$SELECT_ONLY_ONE_DIRACCESS_EDIT$=Выберите пожалуйста только одно правило доступа для редактирования.
+$SELECT_ONE_DIRACCESS_EDIT$=Выберите пожалуйста правило доступа для редактирования.
+$SELECT_ONE_DIRACCESS_DELETE$=Выберите пожалуйста правило доступа для удаления
+$ASK_DELETE_DIRACCESS$=Вы уверены что хотите удалить правило доступа?
+
+<!-- **************** DirAccessDialog.htm **************** -->
+$DIR_ACCESS_DIALOG_TITLE$=Правило доступа для каталога
+$DIR_ACCESS_FILES$=Файлы
+$DIR_ACCESS_DIRS$=Каталоги
+$DIR_ACCESS_SUBDIRS$=Вл.Каталоги
+$MAX_SIZE_DISP$=Максимальный размер содержимого каталога
+$MAX_SIZE_LABEL$=Мб
+$MAX_SIZE_COMMENT$=(Оставьте пустым для отмены ограничения)
+$EXECUTE_CAUTION$=Внимание: Разрешение на запуск позволяет удаленно запускать другие программы и файлы.
+$DIR_ACCESS_FULL_ACCESS$=Полный доступ
+$DIR_ACCESS_RO_ACCESS$=Только чтение
+$DIR_ACCESS_AS_WIN_USER$=Доступ как у пользователя Windows
+$USER_NAME$=Имя пользователя
+
+
+<!-- Dir Access Mask Labels -->
+$ACCESS_READ$=Чтение
+$ACCESS_WRITE$=Запись
+$ACCESS_APPEND$=Добавление
+$ACCESS_DELETE$=Удаление
+$ACCESS_RENAME$=Нов.Имя
+$ACCESS_EXECUTE$=Запуск
+$ACCESS_LIST$=Просмотр
+$ACCESS_CREATE$=Создать
+$ACCESS_REMOVE$=Удалить
+$ACCESS_INHERIT$=Наследовать
+$PLEASE_ENTER_PATH$=Введите путь к каталогу.
+
+
+<!-- **************** VirtualPathLayer.htm **************** -->
+$VIRPATHS$=Виртуальные пути
+$VIRTUALPATHINFO$=Виртуальные пути используются для открытия доступа к каталогам, находящимся вне домашнего каталога пользователя.  Виртуальные пути заменяют стандартный метод (ярлыки).
+$VIRPATH_PHYSICAL$=Физический путь
+$VIRPATH_MAPPED_TO$=Виртуальный путь
+$SELECT_ONLY_ONE_VIRPATH_EDIT$=Выберите пожалуйста только один путь для редактирования.
+$SELECT_ONE_VIRPATH_EDIT$=Выберите пожалуйста виртуальный путь для редактирования.
+$SELECT_ONE_VIRPATH_DELETE$=Выберите путь для удаления.
+$ASK_DELETE_VIRPATH$=Вы уверены что хотите удалить выбранный(ые) путь(и)?
+$VIRPATH_INCLUDE_IN_MAX_SIZE$=Включается в расчеты \"Максимального Размера Директории\"
+
+
+<!-- **************** VirtualPathDialog.htm **************** -->
+$VIRPATH_DIALOG_TITLE$=Виртуальный путь
+$VIRPATH_DIALOG_INFO$="Физический путь" - это каталог на жестком диске, которую вы хотите добавить в структуру каталогов пользователя.  "Виртуальный путь" - это место и отображаемое имя виртуального каталога, из которой будет осуществляться доступ к каталогу, определенной в параметре "физический путь".
+$VIRPATH_VIRTUAL$=Виртуальный путь.
+$PLEASE_ENTER_VIRPATH$=Введите пожалуйста физический и виртуальный путь.
+
+
+<!-- **************** EventsLayer.htm **************** -->
+$EVENTS$=События
+$EVENT$=Событие
+$EVENTS_INFO$=События служат для отправки сообщений администраторам когда на сервере происходят определенные действия.
+$EVENT_TYPE$=Тип События
+$ASK_DELETE_EVENT$=Вы действительно хотите удалить выбранное(ые) событие(я)?
+$SELECT_ONLY_ONE_EVENT_EDIT$=Выберите одно событие для редактирования.
+$SELECT_ONE_EVENT_EDIT$=Выберите событие для редактирования.
+$SELECT_ONE_EVENT_DELETE$=Выберите событие для удаления.
+$CREATE_COMMON_EVENTS_BUTTON$=Создать Основное Событие
+$TEST_EVENTS_BUTTON$=Тест События
+$SELECT_ONLY_ONE_EVENT_TEST$=Выберите одно событие для тестирования.
+$SELECT_ONE_EVENT_TEST$=Выберите событие для тестирования.
+$CONFIG_SMTP_BUTTON$=Настройка SMTP
+$SMTP_CONFIG_WARN$=Настройка SMTP должна осуществляться на доменном или серверном уровне.
+$EVENT_DISPATCHED_SUCCESS$=Тест события успешно отправлен на сервер.
+
+
+<!-- **************** EventsDialog.htm **************** -->
+$EVENTS_NAME_LABEL$=Имя События
+$EVENTS_ACTION_LABEL$=Действие
+$EVENTS_EMAIL_TO_LABEL$=Адрес получателя
+$EVENTS_EMAIL_BCC_LABEL$=Копия
+$EVENTS_EMAIL_TO_NOTE$=Разделите несколько email адресов запятыми, пробелами или точкой с запятой.
+$GROUP_EMAIL_TO_NOTE$=Добавьте группы для оповещения по Email
+$GROUP_EMAIL_BCC_NOTE$=Добавьте группы для отправки копии Email
+$EVENTS_EMAIL_SUBJECT_LABEL$=Тема
+$EVENTS_EMAIL_BODY_LABEL$=Текст сообщения
+$EVENTS_BALLOON_TITLE_LABEL$=Заголовок Подсказки
+$EVENTS_BALLOON_INFO_LABEL$=Текст Подсказки
+$EVENTS_COMMAND_LINE_LABEL$=Параметры Командной Строки
+$EVENT_ACTION_GROUP$=Действия События
+$EVENT_INFO_GROUP$=Информация о Событии
+$PLEASE_ENTER_EVENT_NAME$=Введите Имя События.
+$WARN_DOMAIN_ADMIN_EVENTS$=Администраторы домена не имеют привилегий для выполнения этого действия.
+$DATA$=Данные
+$EVENTS_EXEC_PATH_LABEL$=Путь к исполняемому файлу
+$ENABLE_EVENT$=Включить событие  
+$CONFIRM_EMAIL_INFO_DELETE$=Отключение этой возможности сбросит субъекты и сообщения на значения по умолчанию.<BR /><BR />Вы действительно хотите отключить эту возможность?
+$EVENTS_EXEC_WAIT_LABEL$=Время ожидания завершения
+$EVENTS_EXEC_WAIT_SEC$=0-30 секунд, 0 для отмены
+$CONFIRM_WAIT_DELAY_EXEC$=Время ожидания останавливает все процессы Serv-U на введенное количество секунд.  Используйте эту опцию очень осторожно.<BR /><BR />Вы действительно хотите установить время ожидания?
+<!-- *************** Server Events ******************** -->
+$SUEVENT_ID_SERVER_START_TEXT$=Запуск Сервера
+$SUEVENT_ID_SERVER_STOP_TEXT$=Остановка Сервера
+<!-- *************** Domain and Server Events ********* -->
+$SUEVENT_ID_DOMAIN_START_TEXT$=Запуск Домена
+$SUEVENT_ID_DOMAIN_STOP_TEXT$=Остановка Домена
+$SUEVENT_ID_SESSION_CONNECT_TEXT$=Подключение Сессии
+$SUEVENT_ID_SESSION_DISCONNECT_TEXT$=Отключение Сессии
+$SUEVENT_ID_SESSION_CONNECT_FAILURE_TEXT$=Ошибка Подкючения Сессии
+$SUEVENT_ID_LOG_DELETED_TEXT$=Файл журнала удален
+<!-- *************** User, Group, Domain and Server Events ********* -->
+$SUEVENT_ID_USER_LOGIN_TEXT$=Вход Пользователя
+$SUEVENT_ID_USER_LOGOUT_TEXT$=Выход Пользователя
+$SUEVENT_ID_USER_LOGIN_FAILURE_TEXT$=Ошибка Входа Пользователя
+$SUEVENT_ID_USER_PASSWORD_CHANGE_TEXT$=Смена Пароля Пользователя
+$SUEVENT_ID_USER_PASSWORD_CHANGE_FAILURE_TEXT$=Ошибка Смены Пароля Пользователя
+$SUEVENT_ID_USER_ENABLED_TEXT$=Пользователь Включен
+$SUEVENT_ID_USER_DISABLED_TEXT$=Пользователь Выключен
+$SUEVENT_ID_USER_DELETED_TEXT$=Пользователь Удален
+$SUEVENT_ID_USER_ADDED_TEXT$=Пользователь Добавлен
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_SENT_TEXT$=Восстановление Пароля Послано
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_FAILED_TEXT$=Ошибка Восстановления Пароля
+$SUEVENT_ID_IP_BLOCKED_TEXT$=IP Заблокирован
+$SUEVENT_ID_IP_BLOCKED_TIME_TEXT$=Время Блокировки IP
+$SUEVENT_ID_TOO_MANY_SESSIONS_TEXT$=Слишком Много Сессий
+$SUEVENT_ID_TOO_MANY_SESSIONS_ON_IP_TEXT$=Слишком Много Сессий Для IP
+$SUEVENT_ID_FILE_UPLOAD_TEXT$=Файл Выгружен
+$SUEVENT_ID_FILE_UPLOAD_FAIL_TEXT$=Ошибка Выгрузки Файла
+$SUEVENT_ID_FILE_DOWNLOAD_TEXT$=Файл Загружен
+$SUEVENT_ID_FILE_DOWNLOAD_FAIL_TEXT$=Ошибка Выгрузки Файла
+$SUEVENT_ID_FILE_DELETE_TEXT$=Файл Удален
+$SUEVENT_ID_FILE_MOVE_TEXT$=Файл Перемещен
+$SUEVENT_ID_DIR_CREATE_TEXT$=Создан Каталог
+$SUEVENT_ID_DIR_DELETE_TEXT$=Каталог Удален
+$SUEVENT_ID_DIR_CHANGE_TEXT$=Каталог Изменен
+$SUEVENT_ID_DIR_MOVE_TEXT$=Каталог Перемещен
+$SUEVENT_ID_QUOTA_OVERAGE_TEXT$=Первышение Квоты
+$SUEVENT_ID_DISK_SPACE_OVERAGE_TEXT$=Нехватка Места на Диске
+$SUEVENT_ID_IP_ADDR_AUTO_BLOCKED_TIME_TEXT$=IP Автоматически добавлено к Правилам Доступа
+<!-- *************** Event Actions ********* -->
+$SUEVENT_ACTION_EMAIL_TEXT$=Послать Email
+$SUEVENT_ACTION_BALLOON_TIP_TEXT$=Показать Подсказку
+$SUEVENT_ACTION_EXEC_TEXT$=Запустить Команду
+
+<!-- **************** CommonEventsDialog.htm **************** -->
+$COMMON_EVENTS$=Основное Событие
+$COMMON_EVENT_ACTION_GROUP$=Действия Основного События
+$COMMON_EVENT_INFO$=Автоматическое создание часто используемого события.
+
+<!-- **************** SMTPConfigDialog.htm **************** -->
+$SMTP_CONFIG_INFO_DOMAIN$=Настройте SMTP сервер для отсылки email для событий, которые используют отсылку писем.  Эти параметры задаются один раз для всего домена.
+$SMTP_CONFIG_INFO_SERVER$=Настройте SMTP сервер для отсылки email для событий, которые используют отсылку писем.  Эти параметры задаются один раз для всего сервера или домена.
+$SMTP_SERVER_LABEL$=SMTP Сервер
+$SMTP_PORT_LABEL$=Порт SMTP Сервера
+$SMTP_ACCOUNT_NAME_LABEL$=Имя Пользователя
+$SMTP_ACCOUNT_PASSWORD_LABEL$=Пароль
+$SMTP_FROM_ADDRESS_LABEL$=Email Отправителя
+$SMTP_CONFIG_TITLE$=Параметры SMTP
+$SMTP_SERVER_GROUP$=Информация Сервера
+$SMTP_AUTH_GROUP$=Информация об Аутентификации
+$SMTP_USE_SPA$=Включить Защищенную Аутентификацию
+$SMTP_REQUIRE_LOGIN$=Мой сервер Требует Аутентификацию
+$SMTP_FROM_NAME_LABEL$=Имя в поле от кого
+$SMTP_REQUIRE_SSL$=Данный сервер требует защищенное соединение (SSL)
+$SMTP_USE_SSL_CERT$=Использовать SSL сертификат при подключении к данному серверу
+
+<!-- **************** LimitsLayer.htm **************** -->
+$LIMITS_INFO$=Ограничения используются для определения различных параметров вашего FTP сервера.  Ограничения можно настроить таким образом, что они будут действовать только в определенное время или в определенные дни недели.
+$LIMIT_TYPE$=Тип ограничения
+$CONNECTION_LIMIT$=Соединение
+$PASSWORD_LIMIT$=Пароль
+$DIR_LIST_LIMIT$=Отображение директорий
+$TRANSFER_LIMIT$=Передача данных
+$ADVANCED_LIMIT$=Дополнительно
+$LIMIT_APPLIED_TOD$=Дни и время действия
+$MONDAY_ABBREV$=Пнд
+$TUESDAY_ABBREV$=Втр
+$WEDNESDAY_ABBREV$=Срд
+$THURSDAY_ABBREV$=Чтв
+$FRIDAY_ABBREV$=Птн
+$SATURDAY_ABBREV$=Сбт
+$SUNDAY_ABBREV$=Вскр
+$LIMIT_NOT_LIMITED$=В любое время
+$LIMIT_CHARACTERS$=символы
+$LIMIT_CHARACTER$=символ
+$LIMIT_SESSIONS$=сессии
+$LIMIT_SESSION$=сессия
+$LIMIT_MINUTES$=минуты
+$LIMIT_MINUTE$=минута
+$LIMIT_UNLIMITED$=неограниченно
+$LIMIT_NO_TIMEOUT$=Без тайм-аута
+$LIMIT_NEVER_EXPIRES$=неограниченный срок действия
+$LIMIT_NO_MINIMUM$=Нет минимума
+$LIMIT_SFTP_VERSION$=Версия (3-6)
+$LIMIT_VERSION$=Версия
+$LIMIT_CANT_DELETE_INHERITED$=Ограничения по умолчанию невозможно удалить.  Для переопределения этого ограничения, создайте другое ограничения с желаемыми параметрами.
+$ASK_DELETE_LIMIT$=Вы уверены что хотите удалить выбранное ограничение?
+$SELECT_A_LIMIT_TO_DELETE$=Выберите пожалуйста ограничение для удаления.
+$LIMIT_CANT_EDIT_INHERITED$=Ограничения по умолчанию невозможно отредактировать.  Для переопределения этого ограничения, создайте другое ограничение с желаемыми параметрами.
+$SELECT_A_LIMIT_TO_EDIT$=Выберите ограничение для редактирования.
+$RATIOS_QUOTAS_BUTTON$=Рейтинги &amp; Квоты
+$LIMIT_CREATE_NEW$=Хотите создать лимит?
+$SSH_AUTH_TYPE_PWD_AND_PUB$=Пароль и Публичный ключ 
+$SSH_AUTH_TYPE_PWD_OR_PUB$=Пароль или Публичный ключ 
+$SSH_AUTH_TYPE_PUB$=Только Публичный ключ
+$SSH_AUTH_TYPE_PWD$=Только Пароль
+
+
+<!-- **************** LimitsDialog.htm **************** -->
+$LIMIT_EDIT_INFO$=Дополнительные настройки ограничения позволят вам задать время и дни, когда это ограничение будет действовать.
+$LIMIT_LABEL$=Ограничение
+$LIMIT_START_TIME$=Время включения
+$LIMIT_END_TIME$=Время отключения
+$LIMITS_DIALOG_TITLE$=Ограничение
+$LIMIT_TIME_OF_DAY$=Время суток
+$LIMIT_APPLY_TOD$=Применять ограничение только в выбранное время суток
+$LIMIT_DAYS_OF_WEEK$=Дни недели
+$DAY_MONDAY$=Понедельник
+$DAY_TUESDAY$=Вторник
+$DAY_WEDNESDAY$=Среда
+$DAY_THURSDAY$=Четверг
+$DAY_FRIDAY$=Пятница
+$DAY_SATURDAY$=Суббота
+$DAY_SUNDAY$=Воскресенье
+$ADVANCED_BUTTON$=Дополнительно
+$LIMIT_INVALID_TOD$=Введите пожалуйста правильное время суток в следующем формате - ЧЧ:MM.
+
+<!-- **************** LoginLimitDialog.htm **************** -->
+$LOGIN_LIMIT_EDIT_INFO$=Опции ограничения входа позволяют задать время и дни недели когда пользователям или группам будет разрешен вход.
+$AVAILABILITY$=Доступность
+$LOGIN_LIMIT_DIALOG_TITLE$=Настройки доступости
+
+<!-- **************** GroupInfoLayer.htm **************** -->
+$GROUPINFOMSG$=Все групповые настройки применяются к аккаунтам пользователей, которые являются членами данной группы.  Для переопределения этих настроек, отредактируйте настройки для конкретного пользователя.
+$GROUP_TEMPLATE_INFOMSG$=Шаблон настроек по умолчанию используется для быстрого создания новой группы.  Настройте шаблон для быстрого добавления новой группы с желаемыми настройками и опциями.
+$GROUP_INFO_TAB$=Информация
+$GROUPNAME$=Название группы
+$GROUP_APPLY_DIR_ACCESS$=Применять правила доступа к каталогам для групп первыми.
+
+
+<!-- **************** MembersLayer.htm **************** -->
+$GROUP_MEMBERS$=Члены группы
+$GROUP_MEMBERS_INFO$=Следующий список отображает пользователей, входящих в состав данной группы.  Члены группы наследуют групповые настройки, если только они не заданы на уровне пользователя.  Для добавления или удаления пользователей из этой группы необходимо редактировать аккакунты пользователей.
+$GROUP_MEMBERS_WINDOWS_GROUP$=Все учетные записи Windows добавляются в эту группу.
+$MEMBER_OF_GROUPS$=Член групп
+$AVAILABLE_GROUPS$=Доступные группы
+
+
+<!-- **************** BrowseDialog.htm **************** -->
+$DIRECTORY_PATH$=Путь к каталогу
+$APPLY_BUTTON$=Применить
+$DRIVES$=Диски
+$SELECT_DRIVE$=Выберите диск
+
+
+<!-- **************** CURRENTLY UNCLASSIFIED STRINGS (HOMELESS) **************** -->
+$SSLOPTIONS$=Параметры SSL
+$SSHOPTIONS$=Параметры SSH
+$LOGGING$=Журналирование
+$GLOBALGROUPSLABEL$=Список всех групп, зарегистрированных на FTP сервере.
+$GLOBALIPACCESSINFO$=Правила доступа по IP для сервера являются общими для всего FTP сервера. Они применяются после установления физического соединения с клиентским компьютером перед посылкой приветствия сервером.
+$MEMBERS$=Члены
+$NO_SCRIPT_TEXT$=Похоже в вашем браузере отключена поддержка JavaScript.  Для корректного отображения этой страницы необходимо включить JavaScript.
+$NO_LOG_EXISTS$=Для этого домена не задан файл журнала.<br /><br />Хотите задать его сейчас?
+$FEATURE_NOT_AVAILABLE$=Текущая лицензия запрещает данную возможность.  Обновите лицензию для включения данной возможности.
+
+
+
+<!-- **************** GENERAL STRINGS **************** -->
+<!-- General -->
+$VALUE$=Значение
+$GLOBAL$=Глобальный
+$RULES$=Правила
+$NORULES$=Правила не существуют
+$USE_INHERITED$=Унаследовать значение по умолчанию
+$DAY$=день
+$DAYS$=дней
+$CAUTION$=ВНИМАНЕ
+$PROPERTIES$=Свойства
+$NEW$=Новый
+$SELECT_ALL$=Выбрать все
+$CLEAR_LOG$=Очистить журнал
+$NONE$=нет
+$BITS$=бит
+
+
+<!-- **************** License Strings **************** -->
+$LICENSE_DISABLED_FEATURE$=Эта возможность отключена из-за ограничений текущей лицензии.
+$UPGRADE_LICENSE_NOTE$=Для включения данной возможности необходимо приобрести или обновить текущую лицензию на следующей странице:
+
+
+<!-- **************** ActivityMonitor.htm **************** -->
+<!-- Grid strings -->
+$NOT_APPLICABLE$=Н/A
+$ID$=ID
+$CONN_TYPE$=Тип
+$IP_ADDR_OR_HOST$=IP Адрес / Имя хоста
+$SERVER_ADDRESS$=Адрес сервера
+$LOCATION$=Местоположение
+$LAST_COMMAND$=Последняя команда
+$CLIENT_SOFTWARE$=Клиент
+<!-- Session info -->
+$ACTIVITY_SESS_INFO$=Информация о текущей сессии
+$IP_ADDRESS$=IP Адрес
+$ACTIVITY_DL$=Загружено
+$ACTIVITY_UL$=Выгружено
+$ACTIVITY_SINCE$=С
+$ACTIVITY_SPEED$=Скорость
+$ACTIVITY_TIME_ON$=Подключен
+$ACTIVITY_AVG_DL_SPEED$=Ср. скорость загр.
+$ACTIVITY_IDLE$=Неактивен
+$ACTIVITY_AVG_UL_SPEED$=Ср. скорость выгр.
+$ACTIVITY_SEC_ABBREV$=сек
+$ACTIVITY_KBSEC_ABBREV$=Кб/сек
+$ACTIVITY_FILES$=файлы
+$ACTIVTY_ACCESS$=Привилегии
+$NOT_LOGGED_IN$=Пока не авторизован
+$ACCESS_NONE$=Нет
+$ACCESS_SYSADMIN$=Системный администратор
+$ACCESS_DOMADMIN$=Администратор домена
+$SELECTED_PUBLIC_KEY_PROTOCOL$=Протокол публичного ключа
+$SERVER_TO_CLIENT$=С--&gt;К
+$CLIENT_TO_SERVER$=К--&gt;С
+<!-- Buttons -->
+$KILL_USER_BUTTON$=Отключить
+$SPY_CHAT_BUTTON$=Монитор &amp; Чат
+$BROADCAST_MESSAGE_BUTTON$=Броадкаст
+$ABORT_BUTTON$=Прервать
+<!-- Alerts -->
+$DISCONNECT_SELECT$=Выберите пожалуйста сессию для отключения.
+$SPY_CHAT_SELECT$=Выберите пожалуйста сессию для просмотра доп. информации.
+$SEND_MESSAGE_ONLY_FTP$=Сообщения можно послать только в FTP сессии.
+$SPY_CHAT_NO_HTTP$=HTTP сессии невозможно посмотреть в Окне Монитора.  Выберите FTP или SFTP сессию.
+$ABORT_SELECT_ITEM$=Выберите сессию для отмены последней команды.
+$ABORT_CONFIRM_SESSION$=Вы уверены что хотите отменить последнюю команду для выбранной(ых) сессии(й)?
+$BROADCAST_NO_FTP_SESSIONS$=Нет активных FTP сессий для посылки широковещательного(broadcast) сообщения.
+$COMMAND_DENIED$=невозможно запустить команду:  Привилегии выбранного аккаунта выше.
+
+
+<!-- **************** DisconnectDialog.htm **************** -->
+<!-- Java Script -->
+$DISCONNECT_DIALOG_TITLE$=Прервать сессию
+$DISCONNECT_ACTION$=Действие
+$DISCONNECT_KICK$=Прервать
+$DISCONNECT_BAN$=Прервать и забанить по IP
+$DISCONNECT_BAN_LABEL$=минут
+$DISCONNECT_BLOCK$=Прервать и заблокировать IP
+$DISCONNECT_LEVEL_LABEL$=Применить IP правило для
+$DISCONNECT_LEVEL_SERVER$=всего сервера
+$DISCONNECT_LEVEL_DOMAIN$=текущего домена
+$DISCONNECT_DISABLE_ACCT$=Отключить аккакунт пользователя
+$DISCONNECT_MESSAGE$=Сообщение пользователю
+$DISCONNECT_NO_DURATION$=Определите на сколько минут забанить IP.
+
+
+<!-- **************** SendMessageDialog.htm **************** -->
+<!-- Java Script -->
+$SEND_MESSAGE_DIALOG_TITLE$=Послать сообщение
+$SEND_MESSAGE_LABEL$=Содержание сообщения
+$SEND_MESSAGE_NO_TEXT$=Введите текст сообщения для выбранных сессий.
+<!-- Session message strings -->
+$SESSION_MESSAGE_DIALOG_TITLE$=Послать сообщение
+$SESSION_MESSAGE_LABEL$=Содержание сообщения
+$SESSION_MESSAGE_NOTE$=ПРИМ: Не все FTP клиенты имеют поддержку получения незапрашиваемых данных от FTP сервера.
+$SESSION_MESSAGE_NO_TEXT$=Введите текст сообщения для выбранных FTP сессий.
+<!-- Broadcast message strings -->
+$BROADCAST_MESSAGE_DIALOG_TITLE$=Широковещательное сообщение
+$BROADCAST_MESSAGE_LABEL$=Содержание сообщения
+$BROADCAST_MESSAGE_NOTE$=ПРИМ: Данное сообщение будет послано только через FTP сессии.  Не все FTP клиенты имеют поддержку получения незапрашиваемых данных от FTP сервера.
+$BROADCAST_MESSAGE_NO_TEXT$=Введите текст сообщения для всех активных FTP сессий.
+
+
+<!-- **************** SpyChatDialog.htm **************** -->
+<!-- Java Script -->
+$SPY_CHAT_DIALOG_TITLE$=Подробная информация о сессии
+$SESSION_LOG$=Лог сессии
+$SPY_STATS$=Информация о сессии
+$SPY_CHAT$=Чат
+$UNKNOWN_USER$=неизвестный пользователь
+$SESSION_DISCONNECT$=Эта сессия была прервана.
+
+
+<!-- **************** Server.htm **************** -->
+<!-- Main Page -->
+$SERVER_PAGE_INFO$=Отображает информацию, относящуюся ко всему серверу, включая серверные правила доступа, информацию о лицензии и регистрации.
+<!-- IP Access Tab -->
+$SERVER_IP_ACCESS_INFO$=Серверные правила доступа по IP проверяются когда установлено физическое соединение клиента с сервером, но до отправки приветствия.
+<!-- License Information Tab -->
+$LICENSE$=Информация о лицензии
+$LICENSE_INFO$=Ниже приводится информация о текущей лицензии, включая ограничения, лимиты и информацию оп апгрейде.  Для приобретения или обновления текущей лицензии кликните по кнопке Регистрация.
+$REGGIE_INFO_GROUP$=Регистрационная информация
+$REGGIE_NAME$=Имя
+$REGGIE_EMAIL$=Email
+$REGGIE_EDITION$=Версия Serv-U
+$REGGIE_COPIES$=Копий
+$REGGIE_DATE$=Дата приобретения
+$REGGIE_UPDATES$=Обновления
+$REGGIE_UNREGISTERED$=Незарегистрированная
+$REGGIE_TRIAL$=Пробная
+$REGGIE_PERSONAL$=Персональная
+$REGGIE_STANDARD$=Стандартная
+$REGGIE_HOME$=Домашняя
+$REGGIE_PRO$=Профессиональная
+$REGGIE_CORP$=Корпоративная
+$REGGIE_BRONZE$=Бронзовая
+$REGGIE_SILVER$=Серебрянная
+$REGGIE_GOLD$=Золотая
+$REGGIE_TEMP$=Временная
+$REGGIE_SITE$=Место
+$REGGIE_DEPT$=Отдел
+$REGGIE_ENT$=Предприятие
+$REGGIE_EXPIRE$=Истекает
+$REGGIE_DAYS_REMAIN$=дней осталось
+$REGGIE_TRIAL_EXPIRED$=Пробный период ИСТЕК
+$REGGIE_FREE_FOR_LIFE$=Постоянная защита апгрейда
+$EDITION_INFO_GROUP$=Информация о версии
+$EDITION_ENABLED$=Включено
+$EDITION_DISABLED$=Отключено
+$EDITION_UNLIMITED$=Неограниченно
+$EDITION_MAX_DOMAINS$=Макс. кол-во доменов
+$EDITION_MAX_USER$=Макс. кол-во пользователей
+$EDITION_MAX_SESSIONS$=Макс. кол-во сессий
+$EDITION_REMOTE_ADMIN$=Удаленное администрирование
+$EDITION_ODBC$=ODBC Аутентификация
+$EDITION_WEB_CLIENT$=Веб Клиент
+$EDITION_WINDOWS_AUTH$=Аутентификация Windows
+$EDITION_EVENTS$=События / Email Уведомления
+$EDITION_USER_PASSWORD_RECOVER$=Восстановления Паролей Пользователей
+$EDITION_VIRTUAL_PATHS$=Виртуальные пути
+$EDITION_VIRTUAL_HOSTS$=Виртуальные хосты
+$EDITION_QUOTAS$=Квоты
+$EDITION_RATIOS$=Соотношения передачи данных
+$EDITION_ENCRYPTION$=FTPS (FTP через SSL)
+$EDITION_FIPS$=FIPS 140-2
+$ENABLE_FIPS$=Включить режим FIPS 140-2
+$CONFIRM_FIPS_MODE_TEXT$=Сертификаты и закрытые ключи, созданные не в режиме FIPS, могут больше не функционировать.  Вам придется заново создать ваши сертификаты и ключи для сервера и доменов.
+$CONFIRM_FIPS_MODE$=Хотите проверить ваш сертификат и закрытый ключ сервера?
+$EDITION_CA_CERTIFICATE$=CA Сертификат
+$EDITION_CUSTOM_LOGO$=Пользовательский HTTP Логотип
+$EDITION_CUSTOM_LOGO_TITLE$=Пользовательский HTTP логотип, текст и заголовок страницы входа 
+$EDITION_USER_GROUP_STATS$=Статистика Пользователей и Групп
+$EDITION_ENCRYPTION_SSH$=SFTP через SSH2
+$EDITION_ENCRYPTION_HTTPS$=HTTPS
+$EDITION_FVJV$=FTP Voyager JV
+$EDITION_INTEGRATION_DLL$=Интеграция DLL
+$ADDITIONAL_PROD_INFO_GROUP$=Дополнительные продукты
+$REGISTER_BUTTON$=Регистрация
+$UPDATE_BUTTON$=Обновление
+$LOST_ID_BUTTON$=Потеря ID
+$PURCHASE_BUTTON$=Купить
+$PURCHASE_UPDATE$=Купить обновления
+$ENTER_LICENCE_ID_BUTTON$=Ввести ID лицензии
+$UPDATE_NOTICE_BALLOON_TITLE$=Предупреждение об истечении действия Serv-U
+$UPDATE_NOTICE_BALLOON_TIP$=Защита апгрейда закончится менее чем через 90 дней.  <p>Для обновления защиты кликните по кнопке ниже.</p>
+$UPGRADE_UNLIMITED$=Апгрейдите чтобы снять лимит!
+$UPGRADE_TO_ENABLE$=Апгрейдите чтобы включить!
+$ENABLE_FVJV$=Включить FTP Voyager JV
+$UPGRADE_TO_FVJV$=Добавить FTP Voyager JV к Serv-U посредством апгрейда лицензии.
+<!-- Program Information Tab -->
+$PROGRAM_INFO$=Информация о программе
+$FILE_SERVER$=Файловый сервер
+$VERSION$=Версия
+$DATE_INFO_GROUP$=Информация об установке
+$BUILD_DATE$=Дата сборки
+$INSTALL_DATE$=Дата установки
+$CONTACT_INFO_GROUP$=Контактная информация
+$DEV_INFO_GROUP$=Разработка
+$DEVELOPED_BY$=Разработчик
+$TRANSLATION_BY$=Переводчик
+$COPYRIGHT$=Копирайт
+$LEGAL_INFO_GROUP$=Официоз
+$LEGAL_INFORMATION$=Предупреждение: данная программа защищена международной лицензией об авторских правах. Незаконное копирование и распространение данной программы или любых ее частей будет наказано по всей строгости закона и может привести к административной или уголовной ответственности.
+$FVJV_PRODUCT_INFO$=FTP Voyager JV это полноценный клиент для передачи данных, специально разработанный для работы с файловым сервером Serv-U. <br /><br /><a href="%FVJV_HOME%" target="_blank">Посетите</a> FTP Voyager JV сайт для дополнительной информации.
+
+
+<!-- **************** RegistrationDialog.htm **************** -->
+$REGISTRATION_DIALOG_TITLE$=Регистрационный ID
+$REGISTRATION_CLEAR_CONFIRM$=Очистка регистрационного ID сделает Serv-U незарегистрированным.  Вы уверены, что хотите стереть регистрационную информацию?
+$REGISTRATION_FAIL$=Ваш регистрационный ID правильный, но не сохранен на диск.  Следуйте пожалуйста инструкциям, приложенным в регистрационном письме, для регистрации сервера.
+$PASTE_REGGIE_BUTTON$=Вставить регистрационный ID
+
+
+<!-- **************** Domain.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_SAVED_RESULT$=Параметры домена сохранены.
+$SELECT_ONLY_ONE_LISTENER_EDIT$=Выберите пожалуйста только одного слушателя для редактирования.
+$SELECT_ONE_LISTENER_EDIT$=Выберите пожалуйста слушателя для редактирования.
+$SELECT_ONE_LISTENER_DELETE$=Выберите пожалуйста слушателя для удаления.
+$ASK_DELETE_LISTENER$=Вы уверены что хотите удалить выбранного(ых) слушателя(ей)?
+$SELECT_ONLY_ONE_VIRTUAL_HOST_EDIT$=Выберите только один виртуальный хост для редактирования.
+$SELECT_ONE_VIRTUAL_HOST_EDIT$=Выберите виртуальный хост для редактирования.
+<!-- Main Page -->
+$DOMAIN_PAGE_INFO$=Определение основных параметров домена, порты и протоколы, по которым домен будет ожидать входящих соединений и правила доступа по IP, которые будут определять, кто именно будет иметь доступ к домену.
+<!-- Domain Tab -->
+$SETTINGS_TAB$=Настройки
+$DOMAIN_INFO_TAB$=Измените имя и описание домена и нажмите кнопку Сохранить для сохранения изменений.
+$ENABLE_DOMAIN$=Включить домен
+$DOMAIN_INFO_GROUP$=Информация о Домене
+$DOMAIN_HOME_DIR$=Домашняя директория домена
+$MAXIMUM_SIZE$=Макс. Размер
+$MAXIMUM_SIZE_MB_NOTE$=ВАЖНО: Установка максимального размера домашнего каталога вынудит SERV-U проверять существующие файлы и вложенные каталоги перед выгрузками.  Эта операция может занять очень много времени, в зависимости от струтктуры каталога.
+$BLANK_FOR_NO_LIMIT$=пусто для снятия ограничения
+$PLEASE_ENTER_DOMAIN_HOME_DIR$=Введите путь к домашнему каталогу домена.  Если путь не определен, максимальный размер каталога должен быть пустым.
+<!-- Listeners Tab -->
+$LISTENERS_TAB$=Слушатели
+$LISTENERS_INFO_TAB$=Слушатели определяют, каким образом домен будет принимать входящие соединения.  Используйте кнопки внизу страницы для редактирования слушателей.  Если не определить ни одного Слушателя, домен будет работать как виртуальный хост и использовать слушателей другого домена.
+$LISTENER_DIALOG_TITLE$=Слушатель
+$LISTENER_IP$=IP адрес
+$LISTENER_IP_LABEL$=(Пусто - все)
+$LISTENER_PORT$=Порт
+$LISTENER_TYPE$=Тип
+$LISTENER_IP_ALL$=<< Все доступные IP адреса >>
+$LISTENER_TYPE_FTP_DESC$=FTP and explicit SSL/TLS
+$LISTENER_TYPE_IMPLICIT_SSL_DESC$=Implicit FTPS (SSL/TLS)
+$LISTENER_TYPE_SSH_DESC$=SFTP с исп. SSH
+$LISTENER_TYPE_HTTP_DESC$=HTTP
+$LISTENER_TYPE_HTTPS_DESC$=HTTPS (HTTP с SSL шифрованием)
+$ENABLE_LISTENER$=Включить Слушателя
+$LISTENER_PASV_DOMAIN$=PASV IP адрес или доменное имя
+$LISTENER_SFTP_UNAVAILABLE$=SFTP доступно только с Корпоративной лицензией.  Пожалуйста обновите вашу лицензию для включения этой функции.
+$LISTENER_SSL_UNAVAILABLE$=SSL недоступно с текущей лицензией.  Обновите лицензию для включения данной функции.
+$PASV_IP_ADDRESS$=PASV IP Адрес
+$USE_PASV_IP_SSL_ONLY$=Использовать только для SSL соединений
+$USE_PASV_IP_LAN_ONLY$=Использовать для LAN соединений
+$LISTENER_IPV4_ALL$=<< Все доступные IPv4 Адреса >>
+$LISTENER_IPV6_ALL$=<< Все доступные IPv6 Адреса >>
+$LISTENER_IPV4$=IPv4 Адрес
+$LISTENER_IPV6$=IPv6 Адрес
+$CREATE_IPV4$=Создать IPv4 интерфейс
+$CREATE_IPV6$=Создать IPv6 интерфейс
+$PLEASE_CREATE_IP_LISTENER$=Создайте IPv4 и/или IPv6 адрес. Для этого отметьте галочкой соответсвующий тип(ы) IP.
+
+<!-- Virtual Hosts Tab-->
+$VIRTUAL_HOSTS_TAB$=Виртуальные хосты
+$VIRTUAL_HOSTS_INFO_TAB$=Виртуальные хосты используются для доступа к конкретным хостам, которые используют слушателя этого домена.  Для FTP соединений используется команда HOST.  для HTTP соединений используется заголовки, посланные сервером, для определения подходящего имени хоста.
+$VIRTUAL_HOST_NAME$=Имя виртуального хоста
+$ASK_DELETE_VIRTUAL_HOST$=Вы уверены что хотите удалить выбранный(ые) виртуальный(ые) хост(ы)?
+$SELECT_ONE_VIRTUAL_HOST_DELETE$=Выберите виртуальный хост для удаления.
+<!-- IP Access Tab -->
+$DOMAIN_IP_ACCESS_INFO$=Правила доступа по IP для домена применяются когда клиент пытается зайти на домен, причем как напрямую, так и через виртуальный хост.  Эти правила применяются только для этого домена.
+<!-- Database Tab -->
+$DATABASE$=База данных
+$DATABASE_INFO$=Serv-U может использовать внешнюю базу данных для загрузки дополнительных групп и пользователей.  Для базы данных необходимо установить ODBC драйвер и она должна существовать как ODBC источник в системе.  Если пользователь или группа, загружаемые из базы данных, уже существуют, они не будут загружаться из базы данных.
+
+
+<!-- **************** DatabaseTab.htm **************** -->
+$DATA_SOURCE_GROUP$=Информация о базе данных
+$ODBC_SOURCE$=Имя источника данных
+$ODBC_ACCOUNT$=Имя пользователя базы данных
+$ODBC_PASSWORD$=Пароль базы данных
+$ODBC_AUTO_CREATE_TABLES$=Автоматически создавать требуемые таблицы
+$ODBC_AUTO_CREATE_COLUMNS$=Автоматически создавать требуемые столбцы
+$ODBC_EDIT_SQL_TEMPLATES$=Шаблоны SQL
+$ODBC_COLUMN_MAPPING_INFO$=По умолчанию Serv-U автоматически создает все необходимые таблицы и столбцы для записи данных.  Однако вы можете вручную задать имена таблиц и столбцов.
+$ODBC_MAP_USER_COLUMNS$=Разметка таблицы пользователей
+$ODBC_MAP_GROUP_COLUMNS$=Разметка таблицы групп
+
+
+<!-- **************** DatabaseDialog.htm **************** -->
+$DATABASE_DIALOG_TITLE$=Размещение данных в базе
+$DATABASE_MAPPING_INFO$=Выберите тип объекта для разметки.  Для разметки имен столбцов дважды щелкните по редактируемому столбцу или нажмите кнопку Правка.
+$TABLE_MAPPING_OBJ$=Таблица-объект
+$DATABASE_RENAME_DIALOG_TITLE$=Правка значения, размещенного в базе данных
+$DATABASE_RENAME_DIALOG_DESC$=Введите новое значение для разметки базы данных
+$DB_ATTRIBUTE$=Атрибут
+$DB_COLUMN_NAME$=Соответсвующее значение в базе данных
+$DB_USER_INFO$=Таблица Инфа о пользователе
+$DB_USER_GROUP$=Таблица Группы пользователей
+$DB_USER_DIRACCESS$=Таблица Доступ к папкам для юзера
+$DB_USER_VIRPATH$=Таблица Виртуальные пути для юзера
+$DB_USER_IPACCESS$=Таблица Доступ по IP для юзера
+$DB_USER_EVENTS$=Таблица событий пользователя
+$DB_USER_FREEFILES$=Таблица Файлы без соотношений для юзера
+$DB_USER_USERFILES$=Таблица Соотношение Файлы-Юзер
+$DB_USER_USERBYTES$=Таблица Соотношение Байты-Юзер
+$DB_USER_SESSFILES$=Таблица Соотношение Сессия-Файлы
+$DB_USER_SESSBYTES$=Таблица Соотношение Сессия-Байт
+$DB_GROUP_INFO$=Таблица Информация о группе
+$DB_GROUP_DIRACCESS$=Таблица Доступ к папкам для групп
+$DB_GROUP_VIRPATH$=Таблица Виртуальные пути для групп
+$DB_GROUP_IPACCESS$=Таблица Доступ по IP для групп
+$DB_GROUP_EVENTS$=Таблица Событий Групп
+$DB_GROUP_FREEFILES$=Таблица Файлы без соотношения для групп
+$SELECT_DB_COLUMN_EDIT$=Выберите значение для редактирования.
+$DB_NO_EMPTY_COLUMN$=Строка значения не может быть пустой.
+$DB_USER_AVAILABILITY$=Таблица Доступность Свойств Пользователя
+$DB_GROUP_AVAILABILITY$=Таблица Доступность Свойств Группы
+$ENABLE_TABLE$=Таблица включена
+
+
+<!-- **************** SQLTemplateDialog.htm **************** -->
+$SQL_TEMPLATE_DIALOG_TITLE$=Шаблоны SQL
+$SQL_TEMPLATE_INFO$=Эти шаблоны используются для редактирования SQL запросов, используемых сервером для создания базы данных.  Изменение этих шаблонов может привести к прекращению работы ODBC.  Редактируйте на свой страх и риск.
+$SQLT_TEMPLATE$=Шаблоны
+$SQLT_SELECT_ALL$=Отображать все ряды
+$SQLT_SELECT_ROW$=Отображать только определенные ряды
+$SQLT_SELECT_ROW_SORT$=Отображать и сортировать определенные ряды
+$SQLT_DELETE_ROW$=Удалить ряд
+$SQLT_INSERT_ROW$=Вставить ряд
+$SQLT_UPDATE_ROW$=Обновить ряд
+$SELECT_SQL_TEMPLATE_EDIT$=Выберите шаблон SQL запроса для редактирования.
+
+
+<!-- **************** DomainUsers.htm **************** -->
+<!-- Java Script -->
+$VIRTUAL_HOST_DIALOG_TITLE$=Новое имя виртуального хоста
+$VIRTUAL_HOST_NAME_EMPTY$=Введите пожалуйста имя виртуального хоста.
+
+
+<!-- **************** DomainUsers.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_USERS_TAB$=Пользователи домена
+$CONFIRM_USE_USER_WIZARD$=Хотите использовать Мастера для создания пользователя?
+<!-- Main Page -->
+$DOMAIN_USERS_INFO$=Создание, редактирование или удаление пользователей этого домена.
+<!-- Users Tab -->
+$DOMAIN_USERS_TAB_DESCRIPTION$=Этот список отображает пользователей, которым разрешено подключение только к активному домену.  Используйте этот список или кнопки под списком для операций с аккакунтами пользователей.
+
+
+<!-- **************** ServerUsers.htm **************** -->
+<!-- Java Script -->
+$SERVER_USERS_TAB$=Глобальные пользователи
+<!-- Main Page -->
+$SERVER_USERS_INFO$=Создание, редактирование или удаление пользователей всех доменов на этом сервере.
+<!-- Users Tab -->
+$SERVER_USERS_TAB_DESCRIPTION$=Этот список отображает пользователей, которым разрешено подключение к любому домену на сервере.  Глобальные аккаунты можно переопределить созданием аккаунтов для отдельного домена.
+
+
+<!-- **************** UsersInclude.htm **************** -->
+<!-- Java Script -->
+$SELECT_ONLY_ONE_USER_EDIT$=Выберите только одного пользователя для редактирования.
+$SELECT_ONE_USER_EDIT$=Выберите пользователя для редактирования.
+$SELECT_ONLY_ONE_USER_COPY$=Выберите только одного пользователя для копирования.
+$SELECT_ONE_USER_COPY$=Выберите пользователя для копирования.
+$SELECT_A_USER_TO_DELETE$=Выберите пользователя для удаления.
+$ASK_DELETE_USER$=Вы уверены что хотите удалить выбранного(ых) пользователя(ей)?
+$NOUSERS$=Не задано ни одного аккаунта.
+$GENERAL_USERS_NAME$=Основная
+$GENERAL_ODBC_USERS$=Основная база данных
+$USER_TEMPLATE_INFO$=Шаблон пользователя позволяет добавлять новых пользователей быстрее.  Когда создается новый пользователь, все настройки будут взяты из шаблона.
+$DEFAULT_USER_TEMPLATE$=Стандартный шаблон пользователя
+$USER_LIMITS_TAB_INFO$=Ограничения разбиты по группам, соответствующим их специфичемким параметрам.  Ограничения могут иметь несколько значений, котрые будут действовать в определенное время суток или в определенный день недели.  Ограничения на уровне пользователя переопределяют все значения, заданные на других уровнях.
+$ODBC_USERS_NOT_CONFIGURED$=В настоящее время не определено ни одной базы данных.  Прежде чем редактировать пользователей в базе данных, необходимо правильно настроить содединение с базой данных.
+$USER_CANT_LIST_HOMEDIR$=Доступ к данному каталогу для этого аккаунта запрещен.  Проверьте пожалуйста правила доступа к каталогам для этого аккаунта.
+$USER_PRIV_CANT_EDIT$=Этот аккаунт нельзя редактировать администраторам домена, так как админстраторы домена не могут изменять аккаунты с равными или большими привилегиями.
+$SELECT_USERS_TO_MOVE$=Выберите пользователя(ей), которого(ых) вы хотите переместить в другую коллекцию.
+$SELECT_USERS_TO_MOVE_ODBC$=Выберите пользователя(ей), которого(ых) вы хотите переместить в базу данных ODBC.
+$CHECK_SYSADMIN_CONFIG$=Аккаунты Системных администраторов будут более эффективны, если их домашний каталог будет \"\\\" и они не заблокированы в своем домашнем каталоге.  Иначе доступ этих аккаунтов будет ограничен их домашним каталогом, что может создать неудобства при администрировании сервера.<br /><br />Хотите сделать дополнительные изменения для этих аккаунтов?
+$NO_COLLECTION_TO_MOVE_TO$=Других коллекций не существует. Хотите создать новую?
+$SELECT_USERS_TO_RECOVER_PASSWORD$=Выберите пользователя(ей) для которых вы хотите восстановить пароль.
+$CANNOT_DECRYPT_CONFIRM_MSG_1$=Serv-U не может разшифровать пароль для одного или более из выбранных пользователей. Продолжение восстановления пароля изменит пароль для следующих пользователей:
+$CANNOT_DECRYPT_CONFIRM_MSG_2$=Вы уверены что хотите восстановить пароль для выбранного(ых) пользователя(ей)?
+$NO_SMTP_CONFIG$=В настоящее время не определен SMTP для отправки email. Конфигурация SMTP находится в \"Ограничениях &amp; настройках\" на вкладке \"Навтройки\". 
+$COLL_GROUP_WIDTH_1$=500
+$COLL_GROUP_WIDTH_2$=630
+<!-- Users Tab -->
+$SELECT_USER_COLLECTION$=Выберите коллекцию пользователей
+$USER_ORG_PROPERTIES$=Коллекции пользователей
+$ORG_NAME$=Название коллекции
+$EMPTY_ORG_NAME$=Введите название для этой коллекции пользователей.
+$NO_RENAME_GENERAL_ORG$=Основную коллекцию по умолчанию нельзя переименовать.
+$NO_DELETE_GENERAL_ORG$=Основную коллекцию по умолчанию нельзя удалить.
+$ORG_DELETE_CONFIRM$=Вы уверены что хотите удалить выбранную коллекцию пользователей?  Удаление коллекции также удалит все аккаунты пользователей, находящиеся в ней.
+$USER_NAME_LOGIN_ID_COLUMN$=Логин
+$FULL_NAME_COLUMN$=полное имя
+$LAST_LOGIN_TIME$=Время последнего входа
+$USER_PROPERTIES$=Свойства пользователя
+$DEFAULT_USER_BUTTON$=Шаблон
+$ENABLE_DEFAULT_USER$=Исп. шаблон юзера
+$USER_WIZARD_BALLOON_TITLE$=Создание пользователя
+$USER_WIZARD_BALLOON_TIP$=Мастер создания пользователя поможет вам быстро создать новых пользователей.<p>Кликните по кнопке ниже для запуска Мастера.</p>
+$MOVE_BUTTON$=Пер-ть
+$MOVE_USERS_BALLOON_TITLE$=Переместить пользователей
+$MOVE_USER_BALLOON_TIP$=Улучшите производительность сервера переместив пользователей в новые или другие организации.  Выберите пользователей, которых вы хотите переместить, и нажмите кнопку Пер-ть.
+$MOVE_USERS_TO_ODBC_CONFIRM$=Вы действительно хотите переместить выбранных пользователей в базу данных ODBC?
+$MOVE_ODBC_BUTTON$=Переместить в Базу Данных
+$COPY_BUTTON$=Копировать
+$FILTER_USERS$=Фильтр Юзеров
+$FILTER_GROUPS$=Фильтр Групп
+$ENTER_FILTER_INPUT$=Введите значение фильтра.
+$WILL_DISABLE_ON$=истекает
+$EXPIRED$=истекло
+$WILL_DELETE_ON$=будет удален
+
+<!-- ODBC Users Tab -->
+$ODBC_USERS_TAB_NAME$=Пользователи в базе данных
+$ODBC_USERS_TAB_INFO$=Пользователи из базы данных загружаются с определенного ODBC источника.  Они дополняют локальную базу пользователей.  Параметры аккаунтов пользователей, сохраненные в базе данных, могут быть изменены через этот интерфейс или через любой другой, поддерживаемый базой данных.
+<!-- Windows Auththentication Tab -->
+$WINDOWS_AUTH_TAB_NAME$=Аутентификация Windows
+$WINDOWS_AUTH_TAB_INFO$=Когда аутентификация Windows включена, пользователи могут подключаться к серверу используя свой аккаунт Windows вместо локально сохраненных аккаунтов.  Если аккаунт с таким именем уже существует в базе данных сервера, то он будет иметь преимущество перед аккаунтом Windows.
+$WINDOWS_DOMAIN_NAME$=Доменное имя Windows
+$ENABLE_WINDOWS_AUTH$=Включить аутентификацию Windows
+$WINDOWS_AUTH_USE_GROUP_HOMEDIR$=Использовать домашний каталог аккаунта Windows вместо домашнего каталога сервера.
+$OPTIONAL$=Опционально
+
+
+<!-- **************** UserWizardDialog.htm **************** -->
+<!-- Main Page -->
+$USER_WIZARD$=Мастер пользователей
+$ACCESS_RIGHTS$=Права доступа
+$USER_WIZARD_INFO$=Добро пожаловать в Мастер создания пользователей Serv-U.  Этот Мастер поможет вам быстро создать новых пользователей для доступа к серверу.
+$READ_WRITE_DESC$=Полный доступ
+$READ_ONLY_DESC$=Только для чтения
+$USER_NAME_WIZARD_DESCR$=Имя пользователя посылается клиентом для идентификации пользователя, когда он хочет подключиться к серверу.
+$USER_PASSWORD_WIZARD_DESCR$=Пароль можно оставить пустым, но в этом случае любой, кто знает имя пользователя, может получить доступ к аккаунту.
+$USER_HOME_DIR_WIZARD_DESCR$=Домашний каталог - это папка на жестком диске, в которую направляется пользователь после успешной авторизации на сервере.  Если пользователь заблокирован в своем домашнем каталоге, то полный путь к каталогу будет скрыт и показываться как '/'.
+$USER_ACCESS_RIGHTS_WIZARD_DESCR$=Выберите права доступа, которые будут распостраняться на пользователя в его домашнем каталоге.  Доступ только для чтения разрешает просматривать и скачивать файлы и папки.  Полный доступ разрешает пользователю любые операции с файлами и папками в его домашнем каталоге.
+$FULL_ACCESS$=Полный доступ
+$PLEASE_ENTER_USER_NAME$=Введите имя пользователя.
+$PLEASE_ENTER_HOME_DIR$=Определите домашний каталог.
+$USER_EMAIL_WIZARD_DESCR$=email адрес можно оставить пустым, но может использоваться для отсылки писем клиенту.
+
+
+<!-- **************** DomainGroups.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_GROUPS_TAB$=Группы домена
+<!-- Main Page -->
+$DOMAIN_GROUPS_INFO$=Создание, изменение и удаление групп пользователей активного домена.
+<!-- Groups Tab -->
+$DOMAIN_GROUPS_TAB_DESCRIPTION$=Этот список показывает группы, которые доступны для пользователей домена.  Группы позволяют вам применить общие настройки и параметры для членов группы.  Аккаунты можно добавить в несколько групп.  Групповые настройки могут быть переопределены изменением таких же настроек на пользовательском уровне.
+
+
+<!-- **************** ServerGroups.htm **************** -->
+<!-- Java Script -->
+$SERVER_GROUPS_TAB$=Глобальные группы
+<!-- Main Page -->
+$SERVER_GROUPS_INFO$=Создание, изменение и удаление групп, которые используются глобальными пользователями сервера.
+<!-- Groups Tab -->
+$SERVER_GROUPS_TAB_DESCRIPTION$=Этот список отображает группы, доступные для глобальных пользователей сервера.  В такие группы можно добавить только глобальных пользователей.  Группы позволяют вам применить общие настройки и параметры для членов группы.  Аккаунты можно добавить в несколько групп.  Групповые настройки могут быть переопределены изменением таких же настроек на пользовательском уровне.
+
+
+<!-- **************** GroupsInclude.htm **************** -->
+<!-- Java Script -->
+$SELECT_ONLY_ONE_GROUP_EDIT$=Выберите только одну группу для редактирования.
+$SELECT_ONE_GROUP_EDIT$=Выберите группу для редактирования.
+$SELECT_A_GROUP_TO_DELETE$=Выберите группу для удаления.
+$ASK_DELETE_GROUP$=Вы уверены что хотите удалить выбранную(ые) группу(ы)?
+$GROUP_TEMPLATE_INFO$=Можно настроить шаблон группы для более быстрого ее создания.  Когда создана новая группа, все настройки по умолчанию берутся из шаблона.
+$DEFAULT_GROUP_TEMPLATE$=Стандартный шаблон группы
+$GROUP_LIMITS_TAB_INFO$=Ограничения разбиты по группам, соответствующим их специфичемким параметрам.  Ограничения могут иметь несколько значений, котрые будут действовать в определенное время суток или в определенный день недели.  Ограничения на уровне группы переопределяют ограничения на уровне сервера или домена, но не на пользовательском уровне.
+$ODBC_GROUPS_NOT_CONFIGURED$=В настоящее время не определено ни одной базы данных.  Прежде чем редактировать группы в базе данных, необходимо правильно настроить соединение с базой данных.
+$SELECT_GROUPS_TO_MOVE$=Выберите группы для перемещения.
+$CONFIRM_MOVE_GROUP_START$=Вы действительно хотите переместить
+$CONFIRM_MOVE_ODBC_GROUP_END$=группу(ы) из коллекции в базу данных?
+$CONFIRM_MOVE_GROUP_END$=группу(ы) из базы данных на сервер?
+<!-- Groups Tab -->
+$GROUP_PROPERTIES$=Свойства группы
+$DEFAULT_GROUP_BUTTON$=Шаблон
+$ENABLE_DEFAULT_GROUP$=Использовать шаблон
+$WINDOWS_AUTH_GROUP_CONFIG$=Настройка групп Windows
+$WINDOWS_AUTH_GROUP_NAME$=Стандартная группа пользователей Windows
+$MOVE_GROUP_BUTTON$=Переместить группы
+$OU_GROUP_CONFIG$=Настроить OU группы
+$REQUIRE_FULL_QUAL_GRP_MEMB$=требовать полноценное членство в группе для входа
+<!-- ODBC Groups Tab -->
+$ODBC_GROUPS_TAB_NAME$=Группы из базы данных
+$ODBC_GROUPS_TAB_INFO$=Группы пользователей из базы данных загружаются с определенного ODBC источника.  Они дополняют локальную базу групп пользователей.  Изменение групп пользователей, сохраненных в базе данных, могут быть осуществлены через этот интерфейс или через любой другой, поддерживаемый базой данных.
+
+<!-- Windows Groups Tab -->
+$WINDOWS_GROUPS_TAB_NAME$=Группы Windows
+$WINDOWS_GROUPS_TAB_INFO$=Создание и установка групп, отображающих настройки Организационных единиц Windows (OU).  Создавайте группы, совпадающие с вашими Windows OU, назначая имена, которые используются в конфигурации Службы Каталогов.  Пользователи Службы Каталогов Windows, являющиеся членами вашей OU, будут использовать настройки данной группы.  Эти пользователи могут быть членами любой ветки, определенной в данном списке.  Все авторизованные пользователи Windows также являются членами "Группы пользователей Windows".
+$WIN_AUTH_TURNED_OFF$=Группы Windows отключены.  Для включения откройте вкладку \"Пользователи | Аутентификация Windows\" и поставьте галочку для включения Аутентификации Windows.<br \/><br \/>
+$ADD_CHILD_BUTTON$=Добавить подгруппу
+$SELECT_ONLY_ONE_GROUP_PARENT_EDIT$=Выберите только одну группу для добавления в подгруппу.
+$SELECT_ONE_GROUP_PARENT_EDIT$=Выберите группу для добавления в подгруппу.
+
+<!-- **************** ServerDir.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$SERVER_DIRECTORIES_PAGE_INFO$=Настройка основной структуры каталогов сервера, которые будут доступны для любого пользователя сервера, включая права доступа по умолчанию и виртуальные пути.
+<!-- Directory Access Tab -->
+$SERVER_DIR_ACCESS$=Правила доступа к каталогам сервера определяют права доступа для всех пользователей сервера.  Эти правил могут быть переопределены на доменном, групповом или пользовательском уровне.
+
+
+<!-- **************** DomainDir.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$DOMAIN_DIRECTORIES_PAGE_INFO$=Настройка основной структуры каталогов сервера, которые будут доступны для любого пользователя домена, включая права доступа по умолчанию и виртуальные пути.
+<!-- Directory Access Tab -->
+$DOMAIN_DIR_ACCESS$=Правила доступа к каталогам домена определяют права доступа для всех пользователей домена.  Эти правил могут быть переопределены на групповом или пользовательском уровне.
+
+
+<!-- **************** ServerLimits.htm **************** -->
+<!-- Main Page -->
+$SERVER_LIMITS$=Ограничения и настройки сервера
+$SERVER_LIMITS_PAGE_TITLE$=Ограничения и настройки сервера
+$SERVER_LIMITS_INFO$=Ограничения и настройки сервера определяют параметры и спецификации, применяемые ко всему серверу, включая настройку командного процессора FTP и опции шифрования и сертификатов SSL/SSH.  Ограничения и настройки на этом уровне наследуются доменным, групповым и пользовательским уровнями.
+$SERVER_LIMITS_TAB_INFO$=Ограничения разбиты по группам, соответствующим их специфическим параметрам.  Ограничения могут иметь несколько значений, которые будут действовать в определенное время суток или в определенный день недели.  Ограничения на серверном уровне могут быть переопределены на доменном, групповом и пользовательском уровне.
+$SERVER_SETTINGS_TAB_INFO$=Настройки на уровне сервера определяют общее поведение всего файлового сервера.  Некоторые настройки наследуются доменами, группами и пользователями как значения по умолчанию, если только они не переопределены.  Смотрите справку для подробной информации по каждому параметру.
+$SERVER_ENCRYPTION_TAB_INFO$=Настройка параметров шифрования сервера.  Настройки шифрования на уровне сервера наследуются доменами как настройки по умолчанию, если только они не заданы отдельно.  Дополнительные параметры SSL и SSH шифрования задаются только на серверном уровне.
+
+
+<!-- **************** DomainLimits.htm **************** -->
+<!-- Main Page -->
+$DOMAIN_LIMITS$=Ограничения и настройки домена
+$DOMAIN_LIMITS_PAGE_TITLE$=Ограничения и настройки домена
+$DOMAIN_LIMITS_INFO$=Ограничения и настройки домена определяют параметры и спецификации, применяемые к домену, включая настройку командного процессора FTP и опции шифрования и сертификатов SSL/SSH.
+$DOMAIN_LIMITS_TAB_INFO$= Ограничения разбиты по группам, соответствующим их специфическим параметрам.  Ограничения могут иметь несколько значений, которые будут действовать в определенное время суток или в определенный день недели.  Ограничения на доменном уровне переопределяют такие же настройки на уровне сервера. 
+$DOMAIN_SETTINGS_TAB_INFO$=Настройки на доменном уровне переопределяют такие же настройки на уровне сервера.  Они также наследуются группами и пользователями как значения по умолчанию, если только он не заданы отдельно.  Смотрите справку для подробной информации по каждому параметру.
+$DOMAIN_ENCRYPTION_TAB_INFO$=Настройте параметры шифрования для переопределения таких же параметров на серверном уровне.  Параметры шифрования доступны для всех SSL и SSH соединений.  Для использования настроек на уровне сервера, оставьте пути к сертификатам и закрытым ключам пустыми.
+$CERTIFICATE_SHARE_NOTE$=<strong>ПРИМЕЧАНИЕ:</strong> Домены, у которых слушатели используются несколькими доменами, могут использовать только один сертификат для каждого способа соединения.
+
+
+<!-- **************** LimitsInclude.htm **************** -->
+<!-- Limits Tab -->
+$LIMITS_TAB$=Ограничения
+<!-- Settings Tab -->
+$LOCAL_ADMIN_CHANGE_PASSWORD_TITLE$=Сменить пароль Локального Администратора
+$CONNECTION_GROUP$=Параметры соединения
+$AH_CHECK_LABEL$=Блокировать пользователей, подключающихся более чем
+$AH_TIMES_WITHIN$=раз в течении
+$AH_SECONDS_FOR$=секунд
+$SSH_HIDE_SERVER_ID$=Скрыть информацию сервера при SSH соединении
+$EDIT_RATIO_FREE_FILES$=Файлы со свободным соотношением
+$CLIENT_SUPPORT_LINK$=Поддержка пользователей
+$CUSTOM_LOGO$=Свой Логотип
+$CUSTOM_LOGO_TITLE$=Свой HTTP логотип, текст и заголовок страницы входа
+$CUSTOM_LOGO_PATH$=Путь к Логотипу
+$CUSTOM_LOGO_NOTE$=<strong>Примечание:</strong> Ширина пользовательского логотипа должна быть 400 пикселей, а высота - 100 пикселей.
+$PASSWORD_RECOVERY_EMAIL_GROUP$=Сообщение о восстановлении пароля
+$PR_CHECK_LABEL$=Использовать встроенное сообщение
+$INTEGRATION_DLL_PATH$=Путь к DLL Интеграции
+$INTEGRATION_DLL_GROUP$=DLL Интеграции
+$INTEGRATION_DLL_TEXT$=Для использования DLL Интеграции необходимо уметь создавать приложения для Windows. Выбирайте DLL здесь если только вы сами написали DLL или получили ее из достоверного источника. Использование внешней DLL может ослабить безопасность. Для дополнительной информации о написании DLL читайте файл справки.
+$FOR_PERMANENTLY$=постоянно
+$CUSTOM_LOGIN_TEXT$=Текст на странице HTTP входа
+$HTTP_LOGIN_TEXT_GROUP$=Пользовательское сообщение HTTP входа
+$CUSTOM_TITLE_TEXT$=Заголовок HTTP входа (не HTML)
+
+<!-- FTP Command Processor Tab -->
+$FTP_COMMANDS_TAB$=Настройки FTP
+$SERVER_FTPCP_TAB$=Параметры командного процессора FTP используются всем доменами по умолчанию.  Они определяют дополнительные настройки, такие как текстовые ответы на FTP команды, параметры FTP команд и даже отключение FTP команд клиентами.  Эти настройки можно переопределить на доменном уровне.
+$DOMAIN_FTPCP_TAB$=Параметры командного процессора FTP на доменном уровне переопределяют такие же настройки на серверном уровне.  Они определяют дополнительные настройки, такие как текстовые ответы на FTP команды, параметры FTP команд и даже отключение FTP команд клиентами.
+$FTPCP_USE_DEFAULT$=По умолчанию
+$FTPCP_USE_OVERRIDE$=Особые настройки
+$FTP_COMMAND$=Команда
+$FTPCP_DEFAULT$=Этот домен использует настройки по умолчанию, заданные на уровне сервера.  Для переопределения этих настроек щелкните кнопку \"$FTPCP_USE_OVERRIDE$\".
+$FTPCP_OVERRIDE$=Этот домен использует особые настройки, заданные на доменном уровне.  Для использования стандартных настроек, заданных на серверном уровне, кликните кнопку \"$FTPCP_USE_DEFAULT$\" .
+$CONFIRM_FTPCP_DELETE$=Откат к настройкам по умолчанию удалит все ваши особые параметры.  Домен будет использовать настройки по умолчанию для сервера.  Вы уверены, что хотите использовать стандартные настройки?
+$SELECT_ONE_COMMAND_EDIT$=Выберите FTP команду для редактирования.
+$GLOBAL_PROPERTIES$=Глобальные свойства
+$DISABLE_COMMAND$=Выключить команду
+$ENABLE_COMMAND$=Включить команду
+$FIPS_NOTE$=<strong>ПРИМЕЧАНИЕ:</strong>  Некоторые клиенты перестанут функционировать в режиме FIPS 140-2. (Применяется к SSH и SSL)
+$SSL_OPTION_NOT_AVAILABLE$=<strong>ПРИМЕЧАНИЕ:</strong> Включение режима FIPS 140-2 перепишет эти опции.
+$FIPS_OPTIONS$=Опции FIPS
+<!-- Encryption Tab -->
+$ENCRYPTION_TAB$=Шифрование
+$SSL_CERTIFICATE_OPTIONS$=SSL Сертификат (для FTPS и HTTPS)
+$SSH_PRIVATE_KEY_OPTIONS$=Закрытый ключ SSH (for SFTP)
+$CERTIFICATE$=Путь к сертификату
+$PRIVATE_KEY$=Путь к ключу
+$CACERTIFICATE$=Путь к CA (Издателю) Сертификата
+$VIEW_CERTIFICATE$=Просмотр
+$CREATE_CERTIFICATE$=Создать сертификат
+$CREATE_PRIVATE_KEY$=Создать ключ
+$SSL_OPTIONS$=Дополнительные опции SSL
+$SSL_WEAK_CIPHERS$=Разрешить низкий уровень защиты SSL
+$SSL_DISABLE_V2$=Отключить поддержку SSLv2
+$SSH_CIPHERS$=Шифровальщики SSH
+$SSH_MACs$=SSH MACs
+$SSH_AES128$=AES-128
+$SSH_3DES$=Triple DES
+$SSH_Blowfish$=Blowfish
+$SSH_AES192$=AES-192
+$SSH_AES256$=AES-256
+$SSH_CAST128$=CAST-128
+$SSH_CBC$=CBC
+$SSH_MACMD5$=MD5
+$SSH_MACSHA1$=SHA1
+$SSH_MACSHA1_96$=SHA1 96
+
+
+<!-- **************** ServerSettingsTab.htm **************** -->
+$NETWORK_SETTINGS$=Настройки сети
+$ENABLE_UPNP$=Автоконфигурация фаервола UPnP
+$PACKET_TIMEOUT$=Тайм-аут пакетов
+$SECONDS$=секунд
+$PASV_PORT_RANGE$=Порты PASV
+$ADVANCED_SETTINGS$=Дополнительные настройки
+$DIR_LISTING_MASK$=Маска листинга директорий
+$MAX_SIMUL_THUMBS$=Максимум одновременных эскизов
+$UPLOAD_FILE_MODE$=Доступ для выгрузки файлов
+$DOWNLOAD_FILE_MODE$=Доступ для загрузки файлов
+$FILE_MODE_READ$=Разрешить доступ для чтения
+$FILE_MODE_DENY$=Запретить доступ
+$FILE_MODE_FULL$=Разрешить полный доступ
+$ADMIN_PASSWORD_BUTTON$=Сменить пароль администратора
+
+
+<!-- **************** RatioQuotaDialog.htm **************** -->
+$RATIO_QUOTA_DIALOG_TITLE$=Управление соотношением трафика и квотами
+$RATIO_GROUP$=Соотншение трафика
+$RATIO_ENABLE$=Включить соотношение трафика
+$RATIO_FPS$=Считать файоы за сессию
+$RATIO_BPS$=Считать байты за сессию
+$RATIO_FAS$=Считать файлы за все сессии
+$RATIO_BAS$=Считать байты за все сессии
+$RATIO_LABEL$=Соотношение
+$RATIO_UPLOADS$=Выгрузки
+$RATIO_DOWNLOADS$=Загрузки
+$RATIO_CREDIT$=Кредит
+$QUOTA_GROUP$=Квота
+$QUOTA_MAXIMUM$=Максимум
+$QUOTA_CURRENT$=Текущий
+
+
+<!-- **************** RatioFreeFilesDialog.htm **************** -->
+$RATIO_FREE_FILE_DIALOG_TITLE$=Файлы без соотношения
+$RATIO_FREE_FILE_INFO$=Для файлов без соотношения не считается соотношение загрузок-выгрузок.  Можно определить как определенный файлы, так и соответствующие маске ("*" и "?").  Если указать имя файлов без пути, то соотношение не будет учитываться для всех файлов с таким же именем.
+$RATIO_FREE_FILE_EDIT_DIALOG_TITLE$=Информация о файлах без соотношения
+$FREE_FILE_PATH$=путь к файлам
+$FREE_FILE_MASK_EMPTY$=Задайте путь или маску к файлам без соотношения.
+$SELECT_ONLY_ONE_RATIO_FREE_FILE_EDIT$=Выберите только один файл для редактирования.
+$SELECT_ONE_RATIO_FREE_FILE_EDIT$=Выберите файл для редактирования.
+$SELECT_RATIO_FREE_FILE_DELETE$=Выберите файл для удаления.
+$ASK_DELETE_RATIO_FREE_FILE$=Вы уверены что хотите удалить выбранный(ые) файл(ы)?
+
+
+<!-- **************** NewCertificateDialog.htm **************** -->
+$NEW_CERTIFICATE_DIALOG_TITLE$=Создание нового сертификата
+$NEW_CERTIFICATE_INFO$=Эта утилита создаст новый самоподписанный Сертификат (.crt) также как и Сертификат-Запрос (.csr) и Закрытый Ключ (.key) file from the provided information.
+$CERT_OUTPUT_GROUP$=Вывод
+$CERT_SET_NAME$=Имя набора сертификатов
+$CERT_OUTPUT_PATH$=Путь для сохранения
+$CERT_INFORMATION$=Информация о сертификате
+$CERT_CITY_TOWN$=Город
+$CERT_STATE_PROVINCE$=Штат/Область
+$CERT_COUNTRY$=Страна (Двухбуквенное сокращение)
+$CERT_PASSWORD$=Пароль
+$CERT_ORGANIZATION$=Организация
+$CERT_COMMON_NAME$=Основное название
+$CERT_DOMAIN_NAME$=Имя домена
+$CERT_UNIT$=Должность
+$NEW_CERT_EMPTY_FIELD$=Для создания сертификата необходимо заполнить все поля.
+$NEW_CERT_TWO_DIGIT_COUNTRY$=Введите двухцифровой код страны.
+$NEW_CERT_USE_NOW$=Создание сертификата закончено.  3 файла сертификатов сохранены по указанному пути.  Желаете использовать новый сертификат сейчас?
+
+
+<!-- **************** ViewCertificateDialog.htm **************** -->
+$VIEW_CERTIFICATE_DIALOG_TITLE$=Просмотр сертификата
+$CERT_ISSUER_GROUP$=Истечение полномочий
+$CERT_SUBJECT_GROUP$=Субъект
+$CERT_VALID_GROUP$=Сроки действия
+$CERT_COUNTRY_VIEW$=Страна
+$CERT_FROM$=Из
+$CERT_THROUGH$=Через
+
+
+<!-- **************** NewCertificateDialog.htm **************** -->
+$NEW_PRIVATE_KEY_DIALOG_TITLE$=Создание нового частного ключа
+$NEW_PRIVATE_KEY_INFO$=Эта утилита создаст новый закрытый ключ для защищенных SSH сессий.  Чем больше длина ключа, тем защищенней будет сессия, но это может негативно сказаться на производительности.
+$PRIVATE_KEY_OUTPUT_GROUP$=Вывод
+$PRIVATE_KEY_NAME$=Имя ключа
+$PRIVATE_KEY_OUTPUT_PATH$=путь для сохранения
+$PRIVATE_KEY_INFORMATION$=Информация о ключе
+$PRIVATE_KEY_TYPE$=Тип ключа
+$PRIVATE_KEY_TYPE_DSA$=DSA (поддержка большинства серверов)
+$PRIVATE_KEY_TYPE_RSA$=RSA
+$PRIVATE_KEY_LENGTH$=Длина ключа (В битах)
+$PRIVATE_KEY_LEN_1024$=1024 (лучше производительность)
+$PRIVATE_KEY_LEN_4096$=4096 (лучшая защита)
+$PRIVATE_KEY_PASSWORD$=Пароль
+$NEW_PRIVATE_KEY_EMPTY_FIELD$=Введите имя ключа и путь для сохранения.
+$NEW_PRIVATE_KEY_USE_NOW$=Создание закрытого ключа закончено.  Желаете использовать новый ключ сейчас?
+<!-- **************** NewSSHKeyPairDialog.htm **************** -->
+$SSH_KEY_PAIR_OUTPUT_GROUP$=Вывод пары ключей
+$SSH_KEY_PAIR_NAME$=Имя пары ключей
+$SSH_PUBLIC_KEY_INFORMATION$=Сведения о ключе
+$NEW_SSH_KEY_PAIR_INFO$=Эта утилита создает новую пару SSH ключей, используемых для защищенных SSH сессий.  Чем длиньше ключ, тем больше защита.  Однако, более длинный ключ может негативно сказаться на производительности системы.
+$NEW_SSH_KEY_PAIR_DIALOG_TITLE$=Создание новой пары SSH  ключей
+$NEW_PUBLIC_KEY_USE_NOW$=Создание пары ключей завершено.  Хотите использовать новый публичный ключ сейчас?
+
+<!-- **************** FTPCommandDialog.htm **************** -->
+$FTP_COMMAND_DIALOG_TITLE$=Свойства команд FTP
+$FTP_RESPONSES$=FTP Ответы
+$COMMAND_RESPONSE_INFO$=В списке ниже отображаются возможные ответы сервера на команды клиентов.  Вы можете изменить текст ответа на каждую команду.
+$RESPONSE_CODE$=Код
+$RESPONSE_TEXT$=Текст ответа
+$ADVANCED_OPTIONS$=Дополнительные опции
+<!-- FTP Response Dialog -->
+$FTP_RESPONSE_DIALOG_TITLE$=Правка текста FTP ответа
+$EDIT_RESPONSE_INFO$=Текстовый комментарий каждого FTP ответа можно изменить.  Также можно вставлять в текст ответа специальные переменные.  Смотрите справку для доп. информации.
+$SELECT_ONE_RESPONSE_EDIT$=Выберите FTP ответ для редактирования.
+<!-- Information Tab -->
+$INFORMATION$=Информация
+$COMMAND_GENERAL_INFO$=Ниже отображается список команд и их использование.  Дополнительная информация доступна после перехода по ссылке.  Вы можете отключить отдельные команды, но тогда они не будут распознаваться сервером при приеме такой команды от клиента.
+$ADDTL_INFO$=Дополнительная Информация
+$CLICK_ADDTL_INFO$=Щелкните здесь для получения доп. информации
+<!-- Message File Tab -->
+$SECOND_MSG_FILE_INFO$=Если файл сообщения не будет найден по основному пути, будет использоваться дополнительный путь.  Это может оказаться полезным если основной путь находится в рабочей директории текущего пользователя.
+$SECOND_MSG_FILE$=Дополнительный путь к фалу сообщения
+$MSG_FILE_FTPCP$=Данный файл будет посылаться как подпись к FTP пользователям.  Когда клиент подключается к серверу через FTP, текст этого сообщения будет послан вместе со стандартным FTP приветствием.
+$MSG_FILE_CDUP$=Когда пользователь меняет текущую рабочую директорию, это сообщение посылается вместе со стандартным ответом сервера.  Поддерживается использование символических переменных.  Смотрите справку для доп. информации.
+$MSG_FILE_CWD$=$MSG_FILE_CDUP$
+$MSG_FILE_QUIT$=Когда пользователь отключается от FTP сервера, это сообщение посылается вместе со стандартным ответом сервера.  Поддерживается использование символических переменных.  Смотрите справку для доп. информации.
+<!-- LIST Advanced Tab -->
+$DIR_LIST_STYLE$=Стиль листинга каталогов
+$LIST_ADVANCED_INFO$=Формат ответа на команду LIST задается ниже.  Настроки по умолчанию должны работать с большинством FTP клиентов и практически при любых обстоятельствах.
+$LIST_STYLE_UNIX$=Стиль UNIX (по умолчанию)
+$LIST_STYLE_IIS$=Стиль IIS
+$LIST_STYLE_DOS$=Стиль DOS
+$ALLOW_LIST_STYLE_CHANGE$=Разрешить FTP клиентам изменять стиль листинга
+$ALLOW_LIST_FULL_PATH$=Отображать полный путь в свойствах заданного файла.
+<!-- MKD Advanced Tab -->
+$MKD_ADVANCED_INFO$=Еси заданный родительский каталог не существует, он будет создан автоматически.
+$ALLOW_CREATE_PARENT_DIR$=Разрешить команде MKD создавать несуществующие родительские каталоги.
+<!-- MDTM Advanced Tab -->
+$MDTM_ADVANCED_INFO$=Можно расширить возможности команды MDTM, разрешив клиентам модифицировать удаленное время и дату создания файла.  Используйте галочки ниже для настройки этого параметра.
+$MDTM_CHANGE_TIME$=Разрешить команде MDTM менять дату и время создания файла
+$MDTM_BLOCK_FUTURE$=Блокировать будущие даты и время.
+<!-- NLST Advanced Tab -->
+$NLST_ADVANCED_INFO$=Обычно команда NLST отображает только файлы.  Поставьте галочку ниже для добавления папок в листинг.
+$NLST_LIST_DIRS$=Команда NLST также отображает директории
+$NLST_LIST_EMPTY$=Отображать пустые папки вместо возвращения ошибки 550
+<!-- FTPCP Advanced Tab -->
+$FTPCP_ADVANCED_INFO$=Следующие опции задают параметры самого FTP протокола.  Смотрите справку для информации по каждой опции.
+$FTPCP_BLOCK_FXP$=Блокировать \"FTP_bounce\" атаки и FXP (передачи типа сервер-сервер)
+$FTPCP_INC_RESP_CODE$=Включать код ответа в каждую строку многострочных ответов
+$FTPCP_UTF8_DEFAULT$=Использовать кодировку UTF-8 для отображения каждого принятого или полученного имени файла или папки.
+
+
+<!-- **************** ImportExportUsersDialog.htm **************** -->
+$EXPORT_USER_PATH$=Путь к экспортируемому файлу
+$IMPORT_USER_PATH$=Путь к ипортируемому файлу
+$IMPORT_USER_DIALOG_TITLE$=Импорт Пользователей
+$EXPORT_USER_DIALOG_TITLE$=Экспорт Пользователей
+$IMPORT_MSG$=пользователей импортировано из файла:
+$IMPORT_MSG_EXIST1$=пользователей импортировано.
+$IMPORT_MSG_EXIST2$=пользователей уже существует и не было импортировано из файла:
+$EXPORT_MSG$=пользователей экспортировано в файл:
+$EXPORT_USERS_CONFIRM$=Хотите экспортировать всех пользователей?
+$EXPORT_USERS_YES_CONFIRM$=Ответьте \"Да\" для экспорта всех пользователей данного домена/сервера.
+$EXPORT_USERS_NO_CONFIRM$=Ответьте \"Нет\" для экспорта пользователей только в этой категории.
+<!-- Java Script -->
+$PLEASE_ENTER_IMPORT_PATH$=Введите путь к импортируемому файлу.
+$PLEASE_ENTER_EXPORT_PATH$=Введите путь и имя файла, куда будут экспортированы пользователи.
+
+<!-- **************** DomainActivity.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$DOMAIN_ACTIVITY_INFO$=Отображение информации о текущих событиях на активном домене.  Эти настройки позволяют изменить параметры журналирования событий как в режиме реального времени, так и в лог-файлы.
+<!-- Sessions Tab -->
+$SESSIONS_TAB$=Сессии
+$SESSIONS_INFO$=Ниже отображается информация о текущих сессиях.  Здесь вы можете просмотреть информацию о текущих сессиях, общаться или забанить пользователей.
+<!-- User and Group Stats Tab -->
+$USER_GROUP_STATS_SELECTION$=Выбор статистики Пользователя и Группы
+$USER_GROUP_STATS_TAB$=Статистика Пользователя &amp; Группы
+$USER_STATS$=Статистика Пользователя
+$SELECT_USER_STATS$=Пользователь
+$USER_GROUP_STATS_INFO$=Просмотр статистики Пользователей и Групп, включая инфу о сессиях, трансфере и общей активности.
+$GROUP_STATS$=Статистика Группы
+$SELECT_GROUP_STATS$=Группа
+$SELECT_COLLECTION$=Коллекция
+$SAVE_STATS_BUTTON$=Сохранить статистику
+<!-- Stats Tab -->
+$STATS_TAB$=Статистика
+$DOMAIN_STATS_INFO$=Просмотр статистики текущего домена, включая кол-во текущих сессий, переданных данных и общее кол-во сессий.
+<!-- Log Tab -->
+$LOG_DISPLAY_INFO$=Ниже отображается журнал текущего домена с обновлением в режиме реального времени.  Для паузы обновления журнала, поставьте галочку "Заморозить журнал".
+$LOG_TAB$=Журнал
+$FREEZE_LOG$=Заморозить журнал
+$LEGEND_BUTTON$=Цвета
+$LOG_LEGEND$=Цвета сообщений
+$FILTER_BUTTON$=Фильтр
+$FILTER_LOG_BUTTON$=Фильтр журнала
+$FILTER_DIALOG_TITLE$=Фильтровать журнал по строкам
+$LOG_FILTER_INFO$=В журнал будут записываться только строки, содержащие введенный ниже текст.
+$RESET_BUTTON$=Сброс
+$COPY_CLIPBOARD$=Скопировать в Буфер обмена
+<!-- Settings Tab -->
+$LOG_SETTINGS_INFO$=Отметьте галочками события, которые будут записываться или отображаться в журнале.  настройки справа определяют, каким образом информация будет записываться в файл.
+$LOG_FILE_LABEL$=Файл
+$LOG_SCREEN_LABEL$=Дисплей
+$LOG_FILE_PATH$=Имя пути к файлу журнала
+$ENABLE_LOG_TO_FILE$=Включить запись в файл
+$SYSTEM_MESSAGES_LABEL$=Системные сообщения
+$SECURITY_MESSAGES_LABEL$=Сообщения защиты
+$IP_NAMES_LABEL$=IP Имена
+$DOWNLOADS_LABEL$=Загрузки
+$UPLOADS_LABEL$=Выгрузки
+$FILE_DELETIONS_LABEL$=Удаления файлов
+$FILE_AND_DIRECTORY_RENAMES_LABEL$=Переименования файлов и папок
+$DIRECTORY_CREATIONS_LABEL$=Создание папок
+$DIRECTORY_DELETIONS_LABEL$=Удаление папок
+$ODBC_CALLS_LABEL$=ODBC запросы
+$ODBC_ERRORS_LABEL$=ODBC ошибки
+$TRIGGERED_EVENT_LABEL$=Событие управления
+$FTP_COMMANDS_LABEL$=FTP команды
+$FTP_REPLIES_LABEL$=FTP ошибки
+$SSH_COMMANDS_LABEL$=SSH команды
+$SSH_REPLIES_LABEL$=SSH ответы
+$HTTP_COMMANDS_LABEL$=HTTP команды
+$HTTP_REPLIES_LABEL$=HTTP ошибки
+$LOG_FILE_SETTINGS$=Настройки записи в файл
+$LOG_FILE_PARAMETERS_LABEL$=Тэги путей журнала
+$DAY_OF_MONTH_LABEL$=день месяца
+$MONTH_TEXT_LABEL$=месяц (текст)
+$MONTH_NUMBER_LABEL$=месяц (цифры 1-12)
+$4_DIGIT_YEAR_LABEL$=год 4 цифры 
+$2_DIGIT_YEAR_LABEL$=год 2 цифры
+$DOMAIN_NAME_LABEL$=Имя домена
+$LOG_ROTATE_SETTING$=Автоматически переписывать журнал
+$LOG_ROTATE_NEVER_DESC$=Никогда
+$LOG_ROTATE_DAILY_DESC$=Ежедневно
+$LOG_ROTATE_WEEKLY_DESC$=Еженеделно
+$LOG_ROTATE_MONTHLY_DESC$=Ежемесячно
+$LOG_ROTATE_YEARLY_DESC$=Ежегодно
+$LOG_IP_ACCESS_BUTTON$=IP искл.
+$PLEASE_ENTER_LOG_FILE_NAME$=Убедитесь что задано имя файла журнала.
+$LOG_FILE_NAMING_EXAMPLES$=Примеры:<br>/Serv-U-Log.txt<br>/Serv-U-Log%M.txt<br>/Serv-U-Log%N-%Y.txt<br>/Serv-U-Log%N-%D-%Y.txt<br>/Serv-U-Log-%S.txt
+$KEEP_UP_TO$=Хранить до
+$LOG_EXCEED_FILES$=файлов журнала.
+$LOG_EXCEED_BYTES$=Мб файла журнала.
+$ZERO_NO_DELETE$=0 для сохранения всех файлов журанла
+
+
+<!-- **************** LogIPAccessListDialog.htm **************** -->
+$LOG_IP_ACCESS_LIST_DIALOG_TITLE$=IP исключения.
+$LOG_IP_ACCESS_LIST_INFO$=Данное правило позволяет отключить журналирование заданных IP.  Данное правило применяется к дисплею  или(и) к файлу.
+$APPLIES_TO$=Применить к
+$LOG_FILE$=Файлу
+$LOG_SCREEN$=Дисплею
+$LOG_BOTH$=Всему
+$LOG_NONE$=Отключить
+
+
+<!-- **************** LogIPAccessDialog.htm **************** -->
+$LOG_IP_ACCESS_DIALOG_TITLE$=IP исключения из журнала
+$LOG_APPLY_SCREEN$=Применить к дисплею
+$LOG_APPLY_FILE$=Применить к файлу
+
+
+<!-- **************** ServerActivity.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$SERVER_ACTIVITY_INFO$=Отображает информацию и позволяет изменять настройки текущих сессий для всего сервера.  Вкладка Журнал отображает серверные сообщения и журналы.
+<!-- Stats Tab -->
+$SERVER_STATS_INFO$=Просмотр статистики файлового сервера через все домены, включая информацию о сессиях, статистику передачи данных и общую статистику активности.
+<!-- Log Tab -->
+$SERVER_LOG_DISPLAY_INFO$=Ниже отображаются журналы сервера, обновляющиеся в режиме реального времени.  Журнал сервера отображает информацию о запуске, всех сообщениях и ошибках.
+
+
+<!-- **************** DomainAttrStats.htm **************** -->
+<!-- HTML -->
+$UP_TIME$=Время в сети
+$SESSIONS_CURRENT$=Текущие сессии
+$SESSIONS_LAST_DAY$=Сессий за 24ч.
+$SESSIONS_TOTAL$=Всего сессий
+$SESSIONS_PASSWORD_CHANGED_ON$=Последний измененный Пароль
+$SESSIONS_MAX$=Наибольшее кол-во сессий
+$SESSIONS_AVG_TIME$=Ср. продолжительность сессий
+$SESSIONS_LONGEST$=Длиннейшая сессия
+$TRANSFER_DL_SPEED$=Скорость загрузки
+$TRANSFER_AVG_DL_SPEED$=Ср. скорость загр.
+$TRANSFER_DOWNLOADED$=Загружено
+$TRANSFER_UL_SPEED$=Скорость выгрузки
+$TRANSFER_AVG_UL_SPEED$=Ср. скорость выгрузки
+$TRANSFER_UPLOADED$=Выгружено
+$LOGIN_STATS_LOGINS$=Входов
+$LOGIN_STATS_LOGOUTS$=Выходов
+$LOGIN_STATS_CURRENT_LOGINS$=Пользователей сейчас
+$LOGIN_STATS_MOST_CURRENT_LOGINS$=Наибольшее кол-во пользователей
+$LOGIN_STATS_LAST_LOGIN$=Время последнего входа
+$LOGIN_STATS_LAST_LOGOUT$=Время последнего выхода
+$LOGIN_STATS_AVERAGE_LOGIN_SEC$=Ср.продолжительность входов
+$LOGIN_STATS_LONG_LOGIN_SEC$=Длиннейший вход
+$LOGIN_STATS_SHORT_LOGIN_SEC$=Самый короткий вход
+$STATS_DURATION$=Продолжительность статистики
+<!-- Java Script -->
+$SESSION_STATS$=Статистика сессий
+$TRANSFER_STATS$=Статистика трафика
+$LOGIN_STATS$=Статистика входов
+
+
+<!-- **************** ChangeDomainDialog.htm **************** -->
+<!-- Java Script -->
+$CHANGE_DOMAIN_BUTTON$=Сменить домен
+<!-- Main Page -->
+
+
+<!-- **************** Common Wizard Nav Dialog **************** -->
+<!-- Java Script -->
+$NEXT_BUTTON$=Далее
+$BACK_BUTTON$=Назад
+$FINISH_BUTTON$=Готово
+<!-- Main Page -->
+$STEP$=Шаг
+$OF$=из
+
+<!-- **************** Save Stats Dialog **************** -->
+$SAVE_STATS_DIALOG_TITLE$=Сохранение статистики в файл
+$PLEASE_ENTER_STATS_SAVE_PATH$=Введите путь и имя файла для сохранения.
+$SAVE_STATS_PATH$=Путь к файлу статистики
+$SAVE_GROUP_STATS_MSG$=статистика групп(ы) сохранена в файл:
+$SAVE_USER_STATS_MSG$=статистика пользователя(ей) сохранена в файл::
+
+<!-- **************** Move Users Dialog **************** -->
+$MOVE_USERS_TITLE$=Переместить пользователей
+$MOVE_USER_DESCR$=Выберите коллекцию, в которую вы хотите переместить пользователя.
+$MOVE_TO_ODBC$=Переместить в базу данных
+$MOVE_TO_SERVU$=Переместить в Serv-U
+
+
+<!-- **************** Bubble Tip Dialogs **************** -->
+$DONT_SHOW_AGAIN$=Больше не показывать это сообщение.
+
+
+

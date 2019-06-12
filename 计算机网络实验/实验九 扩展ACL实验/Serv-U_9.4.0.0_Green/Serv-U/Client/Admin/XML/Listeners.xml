@@ -1,0 +1,21 @@
+%PRIV_SYSTEM_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<listeners>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<listener listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% 	<IP>%CListenSocketConf.%LIST_ID%.IP%</IP>
+%ADD_LIST_STRING% 	<Port>%CListenSocketConf.%LIST_ID%.Port%</Port>
+%ADD_LIST_STRING% 	<Type>%CListenSocketConf.%LIST_ID%.Type%</Type>
+%ADD_LIST_STRING% <ResolvedIP>%CListenSocketConf.%LIST_ID%.ResolvedIP%</ResolvedIP>
+%ADD_LIST_STRING% <ResolvedName>%CListenSocketConf.%LIST_ID%.ResolvedName%</ResolvedName>
+%ADD_LIST_STRING% <Listening>%CListenSocketConf.%LIST_ID%.Listening%</Listening>
+%ADD_LIST_STRING% <Enabled>%CListenSocketConf.%LIST_ID%.Enabled%</Enabled>
+%ADD_LIST_STRING% <PasvIPSSLOnly>%CListenSocketConf.%LIST_ID%.PasvIPSSLOnly%</PasvIPSSLOnly>
+%ADD_LIST_STRING% <PasvIPOnPrivateIP>%CListenSocketConf.%LIST_ID%.PasvIPOnPrivateIP%</PasvIPOnPrivateIP>
+%ADD_LIST_STRING%	<ID>%LIST_ID%</ID>
+%ADD_LIST_STRING%	</listener>
+%CDomain.%ID%.ListenSocketConf.List%
+</listeners>
+<listresult>%LIST_RESULT%</listresult>
+</response>

@@ -1,0 +1,14 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_SYSTEM_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<listener>
+<var name="IP" val="%CListenSocketConf.%ID%.IP%" type="0"/>
+<var name="Port" val="%CListenSocketConf.%ID%.Port%" type="0"/>
+<var name="Type" val="%CListenSocketConf.%ID%.Type%" type="0"/>
+<var name="Enabled" val="%CListenSocketConf.%ID%.Enabled%" type="1"/>
+<var name="PASVIP" val="%CListenSocketConf.%ID%.PASVIP%" type="0"/>
+<var name="PasvIPSSLOnly" val="%CListenSocketConf.%ID%.PasvIPSSLOnly%" type="1"/>
+<var name="PasvIPOnPrivateIP" val="%CListenSocketConf.%ID%.PasvIPOnPrivateIP%" type="1"/>
+<var name="Result" val="%RESULT%"/>
+<var name="ResultText" val="%RESULT_TEXT%"/>
+</listener>

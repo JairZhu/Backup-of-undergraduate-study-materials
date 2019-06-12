@@ -1,0 +1,59 @@
+/* Copyright (c) 2006 Yahoo! Inc. All rights reserved. */
+
+/* first or middle sibling, no children */
+.ygtvtn { background: url(/Common/Scripts/Help/assets/img/tn.gif) 0 0 no-repeat; width:17px; height:22px; }
+
+/* first or middle sibling, collapsable */
+.ygtvtm { background: url(/Common/Scripts/Help/assets/img/tm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, collapsable, hover */
+.ygtvtmh { background: url(/Common/Scripts/Help/assets/img/tmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, expandable */
+.ygtvtp { background: url(/Common/Scripts/Help/assets/img/tp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, expandable, hover */
+.ygtvtph { background: url(/Common/Scripts/Help/assets/img/tph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* last sibling, no children */
+.ygtvln { background: url(/Common/Scripts/Help/assets/img/ln.gif) 0 0 no-repeat; width:17px; height:22px; }
+
+/* Last sibling, collapsable */
+.ygtvlm { background: url(/Common/Scripts/Help/assets/img/lm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, collapsable, hover */
+.ygtvlmh { background: url(/Common/Scripts/Help/assets/img/lmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable */
+.ygtvlp { background: url(/Common/Scripts/Help/assets/img/lp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable, hover */
+.ygtvlph { background: url(/Common/Scripts/Help/assets/img/lph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Loading icon */
+.ygtvloading { background: url(/Common/Scripts/Help/assets/img/loading.gif) 0 0 no-repeat; width:16px; height:22px; }
+
+/* the style for the empty cells that are used for rendering the depth 
+ * of the node */
+.ygtvdepthcell { background: url(/Common/Scripts/Help/assets/img/vline.gif) 0 0 no-repeat; width:17px; height:22px; }
+
+.ygtvblankdepthcell { width:17px; height:22px; }
+
+/* the style of the div around each node */
+.ygtvitem { }  
+
+/* the style of the div around each node's collection of children */
+.ygtvchildren { }  
+* html .ygtvchildren { height:1%; }  
+
+/* the style of the text label in ygTextNode */
+.ygtvlabel, .ygtvlabel:link, .ygtvlabel:visited, .ygtvlabel:hover { 
+	margin-left:2px;
+	text-decoration: none;
+}
+a
+{
+	text-decoration:none;
+	color:#000;
+}
+

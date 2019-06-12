@@ -1,0 +1,9 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_DOMAIN_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<host>
+<var name="ObjectID" val="%ID%" />
+<var name="HostName" val="%CHostName.%ID%.HostName%" />
+<var name="Result" val="%RESULT%"/>
+<var name="ResultText" val="%RESULT_TEXT%"/>
+</host>

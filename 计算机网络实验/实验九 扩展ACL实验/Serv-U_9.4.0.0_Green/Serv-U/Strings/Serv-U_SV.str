@@ -1,0 +1,267 @@
+﻿// Serv-U_SV.str - contains Swedish string definitions for the Serv-U RES resource files
+//
+// Strings entered in this file must be one per line and in the format of:
+// $RSIDS_SOME_STRING_NAME$=Some string value
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup dialog
+
+// upgrade notice strings
+$RSIDS_UPGRADENOTICE_TITLE$=Installation - Serv-U
+$RSIDS_UPGRADENOTICE_BACKUP$=Den föregående installationen av Serv-U har säkerhetskopierats till följande mapp:
+$RSIDS_UPGRADENOTICE_IMPORTED$=Följande information har importerats:
+$RSIDS_UPGRADENOTICE_IMPORT_INFO$=%d domän(er), %d användarkonto(n), %d grupp(er)
+
+// old reggie strings
+$RSIDS_OLDREGGIE_TITLE$=Installation - Serv-U
+$RSIDS_OLDREGGIE_INVALID$=Din nuvarande Serv-U nyckel är inte giltig för den här versionen. Mest sannolikt beror det på att uppgraderingsskyddet har utgått.\n\nFör att förnya uppgraderingsskyddet, klicka på länken nedanför:
+$RSIDS_OLDREGGIE_CUSTOMER_SUPPORT$=http://www.RhinoSoft.com/customer/
+$RSIDS_OLDREGGIE_WARNING$=Om du fortsätter med installationen kommer Serv-U att avregistreras och kan sluta fungera korrekt. Det är rekommenderat att du avbryter installationen.
+$RSIDS_OLDREGGIE_INSTRUCTIONS$=För att avbryta installationen, klicka på Avbryt. För att fortsätta, klicka på Nästa.
+
+// beta warning strings
+$RSIDS_BETAWARNING_TITLE$=Installation - Serv-U
+$RSIDS_BETAWARNING_WARNING$=Du installerar en beta version av Serv-U. Beta versioner ses som under utveckling och ska bara användas med vetskapen om att det kan finnas allvarliga fel.
+$RSIDS_BETAWARNING_CEASE$=Den här programvaran kommer sluta fungera %d dagar efter att den skapades. Se serverloggen för detaljer.
+$RSIDS_BETAWARNING_CONTINUE$=Genom att fortsätta med installationen godkänner du riskerna med att installera beta-programvara.
+$RSIDS_BETAWARNING_INSTRUCTIONS$=För att avbryta installationen, klicka på Avbryt. För att fortsätta, klicka på Nästa.
+$RSIDS_BETAWARNING_BUILT$=Skapades den:
+$RSIDS_BETAWARNING_EXPIRES$=Utgår den:
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup string table
+
+IDS_OLDREGGIE_COMMENT=Var god läs följande information om ditt registrerings-ID innan du fortsätter.
+IDS_OLDREGGIE_HEADER=Ogiltigt registrerings-ID...
+IDS_SERVER_SECURITY_REQD=Serv-U 6 tillät servern att köra utan några säkerhetsinställningar aktiverade. Det här alternativet har blivit borttaget.
+IDS_DIR_CACHE_OBSOLETE=Mapp-inläsnings funktionen i Serv-U 6 har blivit föråldrad. Serv-U 8 kör detta i en separat tråd.
+IDS_SEND_RECV_BUFFERS=Skicka och ta emot buffer storlekar är nu automatiskt uträknade av Serv-U för att åstakomma högsta möjliga överföringshastighet.
+IDS_LINKS_DEPRECATED=Att skapa inbyggda UNIX-liknande länkar i Serv-U är inte längre möjligt. Använd virtuella sökvägar istället.
+IDS_NO_GROUP_ADMIN=Gruppadministratörs-rättigheterna har tagits bort från Serv-U 8. Dessa konton har nu inga administratörsrättigheter.
+IDS_SHUTTING_DOWN=Stänger ner Serv-U...
+IDS_UPDATING_DATA=Uppgraderar datafiler...
+IDS_BACKING_UP=Säkerhetskopierar inställningar...
+
+IDS_CHECKING_REGGIE=Kontrollerar registrerings-ID...
+IDS_UPNP_DISCOVER=Söker efter UPnP...
+IDS_UN_HEADER=Uppgraderingsmeddelanden.
+IDS_UN_COMMENT=Läs igenom följande meddelanden som loggades medans Serv-U datan importerades.
+IDS_TRAY_PASSWORD_SET=Serv-U kontrollpanelen kommer kräva samma lösenord som du använde i tidigare versioner av Serv-U.
+IDS_LOCK_IN_HOME_CHANGE=Föregående versioner visade användarens hem-mapp som "/" när användaren inte var låst till sin hem-mapp. Den här inställningen (RootIsDrives) kan ändras för servern, domänen, användaren eller gruppen.
+IDS_ODBC_DOMAIN_UPGRADED=Dina ODBC domänanvändare och grupper har kopierats till nya rader och kolumner i Serv-U 8 format. SQL-mallarna har återställts till Serv-U 8 standard. Din ursprungliga data har inte tagits bort från databasen!
+
+IDS_BETA_HEADING=Serv-U Beta installation
+IDS_BETA_COMMENT=Var god läs följande viktiga information om den här Serv-U versionen.
+IDS_MSG_TAGS_CHANGED=Variabler i meddelanden från Serv-U har ändrats. Namn på variabler måste nu börja med "$" istället för "%". Om du använder meddelandefiler så måste du ändra variablerna manuellt.
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES dialog
+
+// theme editor strings
+$RSIDS_THEMEEDITOR_TITLE$=Temaredigerare
+$RSIDS_THEMEEDITOR_DESC$=Serv-U temaredigeraren låter dig definera hur Serv-U Tray ska fungera i systemlisten. Använd filmenyn för att Öppna och Spara teman.
+$RSIDS_THEMEEDITOR_NAME$=&Namn:
+$RSIDS_THEMEEDITOR_ICON_LISTS$=&Ikonlista:
+$RSIDS_THEMEEDITOR_EDIT$=&Redigera...
+
+// icon list strings
+$RSIDS_ICONLIST_TITLE$=Ikonlista
+$RSIDS_ICONLIST_DESC$=Ikonerna nedan används för att animera det angivna Serv-U tillståndet.  Ange en ikons sökväg och hur länge den ska visas, för att skapa en egen animation.
+$RSIDS_ICONLIST_ICONS$=&Ikoner:
+$RSIDS_ICONLIST_ADD$=&Lägg till...
+$RSIDS_ICONLIST_EDIT$=&Redigera...
+$RSIDS_ICONLIST_DELETE$=&Ta bort
+$RSIDS_ICONLIST_MOVE_UP$=F&lytta upp
+$RSIDS_ICONLIST_MOVE_DOWN$=Fl&ytta ner
+$RSIDS_ICONLIST_CLOSE$=&Stäng
+$RSIDS_ICONLIST_INFO$=Ikoner ska vara 16x16 pixlar. De flesta filtyper stöds.
+
+// icon dialog strings
+$RSIDS_ICON_TITLE$=Ikon
+$RSIDS_ICON_OK$=Ok
+$RSIDS_ICON_CANCEL$=Avbryt
+$RSIDS_ICON_FILE_PATH$=&Bildens sökväg:
+$RSIDS_ICON_DURATION$=&Varaktighet:
+$RSIDS_ICON_TIME_INFO$=(millisekunder; 1000 millisekunder = 1 sekund)
+$RSIDS_ICON_BROWSE$=&Bläddra...
+$RSIDS_ICON_INFO$=Bildfilen kan vara av alla typer kända i windows. Den rekommenderade storleken är 16x16 pixlar. Alla bilder skalas till 16x16 pixlar när dem visas i systemlisten.
+
+// managment console strings
+$RSIDS_MANAGMENTCONSOLE_TITLE$=Serv-U kontrollpanelen
+
+// warn esc strings
+$RSIDS_WARNESC_TITLE$=Windows Internet Enhanced Security Configuration Enabled
+$RSIDS_WARNESC_OK$=Ok
+$RSIDS_WARNESC_CANCEL$=Avbryt
+$RSIDS_WARNESC_DONT_WARN$=&Visa inte det här meddelandet igen.
+$RSIDS_WARNESC_ENABLED$=Den här datorn har Microsofts "Internet Enhanced Security Configuration (ESC)" aktiverat.
+$RSIDS_WARNESC_TROUBLESHOOT$=För att Serv-U Kontrollpanel skall fungera korrekt kan du behöva justera systemet. Om kontrollpanelen låser sig, försök med ett av dem följande:
+$RSIDS_WARNESC_ADD$=* Lägg till "http://localhost" och/eller "http://127.0.0.1" till dina Tillförlitliga platser i "Internet Alternativ | Säkerhet" i kontrollpanelen.
+$RSIDS_WARNESC_DISABLE$=* Avaktivera "Internet Explorer Enhanced Security Configuration" som du hittar under "Lägg till & Ta bort program | Lägg till eller Ta bort Windowskomponenter".
+$RSIDS_WARNESC_REBOOT$=Båda lösningarna kan kräva att du startar om din dator. Microsoft rekommenderar att du stänger alla öppna fönster av Internet Explorer innan du gör dem här ändringarna. Vi har bedömt att en omstart är den mest effektiva lösningen.
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES menu
+
+// file strings
+$RSIDS_FILE_FILE$=&Fil
+$RSIDS_FILE_OPEN$=&Öppna...
+$RSIDS_FILE_SAVE$=&Spara
+$RSIDS_FILE_SAVE_AS$=S&para som...
+$RSIDS_FILE_EXPORT$=&Exportera...
+$RSIDS_FILE_IMPORT$=Importera...
+$RSIDS_FILE_CLOSE$=&Stäng
+
+// help strings
+$RSIDS_HELP_HELP$=&Hjälp
+$RSIDS_HELP_MORE_THEMES$=&Fler teman...
+$RSIDS_HELP_SHARE_THEME$=&Dela teman...
+$RSIDS_HELP_ABOUT$=&Om Serv-U Tray...
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES string table
+
+IDS_SERVICE_DESC=Tillhandahåller filtjänster och tillåter att fjärranvändare ansluter till datorn med FTP, SSH och HTTP.
+IDS_SUEXE_SERVICE_DESC=Tillhandahåller ftp-tjänster och tillåter att fjärranvändare ansluter till den här datorn med ftp.
+IDS_ON=på
+IDS_OFF=av
+IDS_BLANK= 
+IDS_SSH_CHANGE_PASSWORD_PROMPT=Skriv in ett nytt lösenord
+
+IDS_EVENT=Event
+IDS_DATA1_SUEVENT_ID_USER_LOGIN=Användaren "$Name" har loggat in ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGIN=Ansluter från $IP ($IPName)\n$UThisName active sessions\n$UserSessions24H inloggningar de senaste 24 timmarna
+IDS_DATA1_SUEVENT_ID_USER_LOGOUT=Användaren "$Name" har loggat ut ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGOUT=IP: $IP ($IPName)\n$UThisName remaining active sessions\n$UserSessions24H inloggningar de senaste 24 timmarna
+IDS_DATA1_SUEVENT_ID_USER_LOGIN_FAILURE=Ogiltigt $Protocol inloggningsförsök för "$Name"
+IDS_DATA2_SUEVENT_ID_USER_LOGIN_FAILURE=IP: $IP ($IPName)
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED=$IP har blockerats
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED=$IP ($IPName) permanent blockerat
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED_TIME=$IP har tillfälligt blockerats
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED_TIME=$IP ($IPName) blockeras i $TimeRemaining
+IDS_DATA1_SUEVENT_ID_FILE_UPLOAD="$Name" har laddat upp en fil
+IDS_DATA2_SUEVENT_ID_FILE_UPLOAD=$LocalPathName\nSize: $FileSizeFmt bytes ($FileSizeKB KB)\n$TransferBytes bytes överfört. $TransferKBPerSecond KB/sec.\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DOWNLOAD="$Name" har laddat ner en fil
+IDS_DATA2_SUEVENT_ID_FILE_DOWNLOAD=$LocalPathName\nSize: $FileSizeFmt bytes ($FileSizeKB KB)\n$TransferBytes bytes överfört. $TransferKBPerSecond KB/sec.\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DELETE="$Name" har tagit bort en fil
+IDS_DATA2_SUEVENT_ID_FILE_DELETE=$LocalPathName\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_MOVE="$Name" har bytt namn eller flyttat på en fil
+IDS_DATA2_SUEVENT_ID_FILE_MOVE=$OldLocalPathName\n\n-- ändrat till --\n\n$LocalPathName
+IDS_DATA1_SUEVENT_ID_DIR_CREATE="$Name" har skapat en mapp
+IDS_DATA2_SUEVENT_ID_DIR_CREATE=$LocalPathName\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_DELETE="$Name" har tagit bort en mapp
+IDS_DATA2_SUEVENT_ID_DIR_DELETE=$LocalPathName\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_MOVE="$Name" har tagit bort eller flyttat på en mapp
+IDS_DATA2_SUEVENT_ID_DIR_MOVE=$OldLocalPathName\n\n-- ändrat till --\n\n$LocalPathName
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-FTP-Responses string table
+// this section is intentionally not translated, translation is optional
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-SSH string table
+// this section is intentionally not translated, translation is optional
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Tray string table
+
+// tray pop-up menu
+IDS_SU_TRAY_MENU_START_ADMIN=Starta &Kontrollpanelen
+IDS_SU_TRAY_MENU_START_SU=&Starta Serv-U
+IDS_SU_TRAY_MENU_STOP_SU=&Stoppa Serv-U
+IDS_SU_TRAY_MENU_THEMES=&Teman
+IDS_SU_TRAY_MENU_SHOW_NOTIFICATIONS=&Visa meddelanden
+IDS_SU_TRAY_MENU_START_AUTOMATICALLY=Starta Tray A&utomatiskt
+IDS_SU_TRAY_MENU_START_SERV_U_SERVICE=Starta Serv-U som en tjänst
+IDS_SU_TRAY_MENU_KB=&Kunskapsbas...
+IDS_SU_TRAY_MENU_SUPPORT=T&eknisk support...
+IDS_SU_TRAY_MENU_ABOUT=&Om Serv-U Tray...
+IDS_SU_TRAY_MENU_REGISTER=&Registrera...
+IDS_SU_TRAY_MENU_EXIT_TRAY=&Avsluta Tray
+
+// sub-menus
+IDS_SU_TRAY_MENU_DEFAULT_THEME=&Standard
+IDS_SU_TRAY_MENU_DEFAULT_NO_ANI_THEME=S&tandard utan animation
+IDS_SU_TRAY_MENU_CLASSIC_THEME=&Klassisk grönt U
+IDS_SU_TRAY_MENU_CUSTOM_THEME=P&ersonlig
+IDS_SU_TRAY_MENU_THEME_EDITOR=&Temaredigeraren
+
+// server states
+IDS_SERVER_STATE_NOT_RUNNING=Inte igång
+IDS_SERVER_STATE_RUNNING=Igång
+IDS_SERVER_STATE_RUNNING_LISTEN_ERROR=Igång; Kommunikationsfel
+IDS_SERVER_STATE_SESSION_CONNECTED=Uppkopplad session
+IDS_SERVER_STATE_TRANSFERRING=Överför
+IDS_SERVER_STATE_PAST_TRIAL=Serv-U trial har utgått
+
+// management console strings
+IDS_SERVER_UP_TIME_FMT=Serverns upp-tid: %s dagar, %02d:%02d:%02d
+IDS_SERVER_SESSIONS_FMT=Sessioner: %s nuvarande; %s senaste dygnet; %s totalt
+IDS_SERVER_TRANSFER_STATS_FMT=Upp: %s; Ner: %s
+IDS_SU_TRAY_BYTES_FMT=%s Bytes
+IDS_SU_TRAY_KB_FMT=%s KB
+IDS_SU_TRAY_MB_FMT=%s MB
+IDS_SU_TRAY_GB_FMT=%s GB
+IDS_SU_TRAY_DOMAINS_FMT=Domäner: %s av %s online
+
+// tray tooltip strings
+IDS_SU_TRAY_TT_STATUS_FMT=Status: %s Upp; %s Ner; %s Session(er)
+IDS_SU_TRAY_TT_RECVD_FMT=Inkommande: %s; %s file(r)
+IDS_SU_TRAY_TT_SENT_FMT=Utgående: %s; %s file(r)
+IDS_SU_TRAY_TT_BPS_FMT=%s Bytes/s
+IDS_SU_TRAY_TT_KBS_FMT=%s KB/s
+IDS_SU_TRAY_TT_MBS_FMT=%s MB/s
+IDS_SU_TRAY_TT_GBS_FMT=%s GB/s
+IDS_SU_TRAY_TT_64_CHARS_FMT=%s; %d Session(er); %s Utgående; %s Inkommande
+IDS_SU_TRAY_TT_STOPPED=Serv-U fil-servern är stoppad.
+IDS_SU_TRAY_STATUS_CHANGED=Serv-U filserver status
+IDS_SU_TRAY_STATUS_ONLINE=Serv-U fil-servern är online.
+IDS_SU_TRAY_STATUS_OFFLINE=Serv-U fil-servern är offline.
+IDS_SU_TRAY_UPDATE=Ny version tillgänglig
+IDS_SU_TRAY_UPDATE_AVAILABLE=En uppdatering finns tillgänglig för Serv-U. Klicka här för mer information
+IDS_SU_TRAY_STATUS_BETA_EXPIRED=Serv-U Beta har utgått.
+IDS_SU_TRAY_LICENSE_VIOLATION=Serv-U licens-överträdelse
+IDS_SU_TRAY_LICENSE_VIOLATION_NO_CONNS=En licensöverträdelse har inträffat. Serv-U kommer inte att ta emot inkommande anslutningar tills det är åtgärdat.
+
+// trial / reggie baloon tip strings
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_TITLE=Serv-U trial har utgått
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_BODY=Din 30 dagars trial har utgått. Serv-U tar inte längre emot anslutningar.\r\n\r\nKlicka här för att köpa Serv-U.
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_TITLE=Serv-U trial håller på att gå ut
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_BODY_FMT=Din 30 dagars trial går ut om %s dagar. Efter trialperioden kommer Serv-U inte längre att ta emot anslutningar.\r\n\r\nKlicka här för att köpa Serv-U.
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_TITLE=Uppdateringstiden för Serv-U håller på att gå ut
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_BODY_FMT=Uppdateringstiden utgår om %s dagar. Efter att uppgraderingstiden utgår kommer du inte kunna använda nya versioner av Serv-U.\r\n\r\nKlicka här för att uppdatera din licens.
+
+// misc. strings
+IDS_SU_TRAY_STATE=Tillstånd
+IDS_SU_TRAY_IMAGES=Bilder
+IDS_TRAY_THEME_FILE_OPEN_FILTERS=Serv-U Tray tema-filer (*.SU-Tema)|*.SU-Tema|Alla filer (*.*)|*.*||
+IDS_TRAY_THEME_FILEARCH_OPEN_FILTERS=Serv-U teman (*.SU-Tema; *.SU-Tema-arkiv)|*.SU-Tema; *.SU-Tema-arkiv|Serv-U Tray temafiler (*.SU-Tema)|*.SU-Tema|Serv-U Tray tema-arkivfiler (*.SU-Tema-arkiv)*.SU-Tema-arkiv|Alla filer (*.*)|*.*||
+IDS_SERVU_THEMES_DIR=Serv-U Tray teman
+IDS_TRAY_USER_THEME_DIR_TIP=Innehåller användsrdefinerad Serv-U Tray teman
+// CAUTION: do not exceed 255 characters for this (or any) string
+IDS_DELETE_CREATED_DIRS_FMT=Serv-U har skapat mappar som kan innehålla data skapat av användare på den här datorn.\r\n\r\nTill exempel:\r\n%s\r\n\r\nVill du ta bort mapparna och filerna dem innehåller?
+IDS_UNABLE_TO_LOAD_SELECTED_THEME=Kunde inte ladda den angivna temafilen.
+IDS_UNABLE_TO_STORE_THEME=Kunde inte spara temat till den angivna filen.
+IDS_THEME_CHANGED_SAVE=Du har gjort ändringar i temat.\r\n\r\nVill du spara ändringarna?
+IDS_SU_TRAY_FILE_NAME=Filnamn
+IDS_SU_TRAY_DURATION=Varaktighet
+IDS_SU_TRAY_INVALID_ICON=Filen kändes inte igen av windows och det\r\när möjligt att det inte är en giltig image-fil. Välj en giltig image-fil.
+IDS_TRAY_ALL_IMAGE_FILES=Alla bildfiler
+IDS_TRAY_ALL_FILES=Alla filer
+IDS_TRAY_THEME_ARCHIVEFILE_OPEN_FILTERS=Serv-U Tray tema-arkivfiler (*.SU-Tema-arkiv)|*.SU-Tema-arkiv|Alla filer (*.*)|*.*||
+IDS_UNABLE_TO_LOAD_ZLIB=Kunde inte ladda zlib1.dll. Ominstallera Serv-U.
+IDS_UNABLE_TO_CREATE_THEME_ARCHIVE_FILE=Kunde inte skapa den angivna temafilen
+IDS_UNABLE_TO_OPEN_THEME_ARCHIVE_FILE=Kunde inte öppna den angivna tema-arkivfilen.
+IDS_THEME_ARCHIVED=Tema lagrat till den valda arkivfilen.
+IDS_THEME_IMPORTED=Tema importerat från den valda arkivfilen.
+IDS_THEME_FILE_DESC=Serv-U temafil
+IDS_THEME_ARCHIVE_FILE_DESC=Serv-U tema-arkivsfilen
+IDS_IMPORT_ARCHIVE_FILE=Den fil du har markerat verkar vara en Serv-U tema-arkivfil.\r\n\r\nVill du importera filen först?
+IDS_MANAGEMENT_CONSOLE=Serv-U kontrollpanelen
+IDS_TRAY_SERVER_NOT_LISTENING_HTTP_HTTPS=Serv-U lyssnar inte på HTTP eller HTTPs anrop.
+IDS_MANAGEMENT_CONSOLE_ALREADY_RUNNING=Kontrollpanelen körs redan på den här datorn.\r\n\r\nDu kan logga in genom att använda en webbläsare eller genom att stänga den andra sessionen.\r\nDet här felet inträffar vanligtvis när man kör RDP mot en annan session än console.
+IDS_USERS_ARE_CONNECTED_SERVICE_CHANGE=Det finns användare som är anslutna till din server.  För att ändra hur Serv-U körs måste dessa användare kopplas från och Serv-U startas om.\r\n\r\nÄr du säker på att du vill göra ändringen nu?
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Log string table
+// this section has NOT yet been translated, but it can be if desired

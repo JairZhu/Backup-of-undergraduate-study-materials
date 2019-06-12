@@ -1,0 +1,1627 @@
+﻿<!--#include "Help-Strings-Images.strings"-->
+<!-- File:		Help-Strings-Local_JP.strings																				-->
+<!-- Language:	Japanese																									-->
+<!-- Encoding:	UTF-8																										-->
+<!-- Purpose:	Provides translated strings for FTP Voyager JV's Help documentation.										-->
+<!-- Notes:		- Comment blocks are useful.  To place a comment, use the HTML tags at the beginning and end of this line	-->
+<!--			- Any text following a "$=" should be translated															-->
+<!--			- Any text between a "$::" through "::END" should be translated												-->
+<!--			- HTML tags should not be translated (Example:  "<strong>")													-->
+
+<!-- Reused HTML links throughout the help docs.  The text within these links may need to be translated. -->
+$LINK_FTP_VOYAGER$=<a href="http://www.ftpvoyager.com/" target="_blank">FTP Voyager&reg;</a>
+$LINK_SERVU$=<a href="http://www.Serv-U.com/" target="_blank">Serv-U ファイル・サーバ</a>
+$LINK_RHINOSOFT$=<a href="http://www.rhinosoft.com/" target="_blank">RhinoSoft.com</a>
+$LINK_JAVA_RUNTIME$=<a href="http://www.java.com/download/java/" target="_blank">Java Runtime</a>
+
+<!-- Reused HTML links for other help documentation pages.  The text within these links must be translated. -->
+
+$LINK_LOCAL_REMOTE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">リモート／ローカルペイン</a>
+$LINK_LOCAL_REMOTE_PANES$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">ローカル／リモートペイン</a>
+$LINK_LOCAL_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">ローカルペイン</a>
+$LINK_REMOTE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">リモートペイン</a>
+$LINK_TREE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Tree-Overview.htm">ツリーペイン</a>
+$LINK_PREVIEW_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Preview-Overview.htm">プレビューペイン</a>
+$LINK_LIST_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-List-Overview.htm">リストペイン</a>
+$LINK_TRANSFER_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Transfer-Overview.htm">転送ペイン</a>
+
+$LINK_MAIN_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Overview.htm">メインメニュー</a>
+$LINK_FILE_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm">ファイルメニュー</a>
+$LINK_EDIT_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Edit.htm">編集メニュー</a>
+$LINK_VIEW_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-View.htm">表示メニュー</a>
+$LINK_WINDOWS_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm">ウインドウメニュー</a>
+$LINK_HELP_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Help.htm">ヘルプメニュー</a>
+
+
+$LINK_LOCAL_REMOTE_TOOLBAR$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Overview.htm">ローカル／リモート・ツールバー</a>
+$LINK_CRUMB_BAR$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Overview.htm">ナビゲーション・バー</a>
+
+$LINK_CRUMB$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">クラム</a>
+$LINK_CRUMB_HISTORY$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">ヒストリ</a>
+$LINK_ABSOLUTE_PATH_MODE$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">絶対的パスモード</a>
+
+$LINK_STOP_AFTER_FILE_COMPLETES$=<a href="%FVJV_FILE%Help/Help-Tbar-Transfer-Actions.htm#StopAfterFileCompletes">ファイル完了後に停止</a>
+$LINK_PAUSE$=<a href="%FVJV_FILE%Help/Help-Tbar-Transfer-Actions.htm#Pause">一時停止</a>
+
+
+$LINK_FRAME_LIST$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm#FrameList">フレームリスト</a>
+$LINK_AUTO_HIDE$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm#AutoHide" style="color:Black">自動的に隠す</a>
+$LINK_ACTIVATE_WINDOW$=<a href="%FVJV_FILE%Help/Help-Dlg-ActivateWindow.htm">アクティブなウインドウ</a>
+
+$LINK_PREFERENCES$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-General.htm">オプション</a>
+$LINK_PREF_PAGE_GENERAL$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-General.htm">全般</a>
+$LINK_PREF_PAGE_TOOLBARS$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-Toolbars.htm">ツールバー</a>
+
+$LINK_THUMB_SIZES_HERE$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-View.htm#ThumbSize">こちら</a>
+
+$LINK_CHANGE_PASSWORD$=<a href="%FVJV_FILE%Help/Help-Dlg-ChangePassword.htm">パスワード変更</a>
+
+$LINK_ACTIVE_PANE$=<a href="%FVJV_FILE%Help/Help-OtherInfo-ActivePane-Overview.htm">アクティブペイン</a>
+$LINK_LOCAL_LIST_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm#ListPane">ローカルリストペイン</a>
+$LINK_DOCKING_FRAMEWORK$=<a href="%FVJV_FILE%Help/Help-OtherInfo-DockingFramework-Overview.htm">フレームワークの結合</a>
+
+$LINK_DOWNLOAD_BTN$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm#Download">ダウンロードボタン</a>
+$LINK_UPLOAD_BTN$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm#Upload">アップロードボタン</a>
+
+$BOLD_NOTE$=<strong>注意</strong>
+
+<!-- Help-Dlg-SyncFolders... -->
+$LINK_SYNC_FOLDERS_LOCAL_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results.htm">ローカル・リザルト・ペイン</a>
+$LINK_SYNC_FOLDERS_REMOTE_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results.htm">リモート・リザルト・ペイン</a>
+$LINK_SYNC_FOLDERS_OPTIONS_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Options.htm">オプション・ペイン</a>
+
+$LINK_SYNC_FOLDERS_RESULTS_TBAR$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results-Tbar.htm">ツールバー</a>
+$LINK_SYNC_FOLDERS_RESULTS_LIST$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results-List.htm">リスト</a>
+
+
+<!-- Help-Overview.htm -->
+$OVERVIEW_MAIN_HEADER$=FTP Voyager JV の概要
+
+$OVERVIEW_BODY$::
+FTP Voyager JV へようこそ!
+
+FTP Voyager JVは$LINK_RHINOSOFT$の$LINK_FTP_VOYAGER$に基礎とする完全な機能を持つJavaベースの転送クライアントです。ライセンスを持つ$LINK_SERVU$ 
+により、親しみやすく強力な起用を持つファイル転送をの機能がすべてのファイルサーバのユーザへ提供されます。
+
+FTP Voyager JVは以下の幾つかの重要な機能を含みます:
+::END
+
+$OVERVIEW_FEATURES$::
+インストールを必要としません - FTP Voyager JVはJava Runtime Environmentを必要とするだけです。
+HTTPプロトコルのみを使用しますのでファイアウォールの構成などが容易です。
+HTTPSを使用したSSL暗号化通信をサポートします。
+最小限の帯域幅使用にするリモート画像のサムネイル表示
+転送されたファイルのタイムスタンプを保持します。
+ローカルとリモートペイン間のドラッグ・アンド・ドロップにより転送をおこなうことができます。
+ファイルの高速転送のための複数同時転送が行えます。
+外観の変更
+転送キューを通じた転送管理
+RESUME（再開）転送
+「フレームワークの結合」を利用した同時に同じファイルシステムの異なった部分を表示
+ユーザワークスぺースの変更
+画像ファイルのプレビュー (JPG, PNG, GIF, その他)
+::END
+
+
+<!-- Help-Layout-Main-Overview.htm -->
+$HEAD_LAYOUT_MAIN$=アプリケーションの概要
+
+$DESC_LAYOUT_MAIN$::
+FTP Voyager JVのユーザーインタフェースは、容易なファイルシステムの取り扱いを可能とします。レイアウトでの重要な追加機能は"$LINK_DOCKING_FRAMEWORK$"の
+採用です。「フレームワークの結合」は、ユーザに同じファイルシステムの異なる２カ所をみることができます。また、カスタマイズ可能なワークスペースを
+作成するために「結合可能なフレームとツールバー」の位置を変更することができます。
+::END
+
+$HEAD_LAYOUT_INITIAL$=初期のレイアウト
+
+$DESC_LAYOUT_INITIAL_1$::
+以下のレイアウトでFTP Voyager JVは、起動されます。:
+::END
+$LI_LAYOUT_INTIIAL_1$=:  アプリケーションウィンドウの最上位にあり、FTP Voyager JVで実行可能な全ての動作を含みます。
+$LI_LAYOUT_INTIIAL_2$=:  アプリケーションウィンドウの左上部にあり、クライアントのローカルシステムファイルを表示しています。
+$LI_LAYOUT_INTIIAL_3$=:  アプリケーションウィンドウの右上にあり、サーバのリモートファイルシステムを表示しています。
+$LI_LAYOUT_INTIIAL_4$=:  アプリケーションウィンドウの下部にあり、クライアントとサーバ間の転送を表示しています。
+
+$NOTE_CONTENT_REMOVED$=$BOLD_NOTE$:  それぞれのコンポーネントの位置を決定しやすいよう内容を取り除いてあります。
+
+
+<!-- Help-Layout-Browser-Overview.htm -->
+$HEAD_PANE_LOCAL_REMOTE$=ローカルペインとリモートペインの概要
+
+$DESC_PANE_LOCAL_REMOTE$::
+ローカルとリモートペインは、ファイルシステムをナビゲートします。各ペインは2つのファイルシステム間でユーザを快適にする同様の
+レイアウトを持っています。また、ペインのレイアウトをカスタマイズする"$LINK_DOCKING_FRAMEWORK$"機能性を持ちます。
+各ローカルペインは、クライアントのローカルファイルシステムとそれぞれのリモートパネルのコンテンツがサーバのリモート
+ファイルシステムのコンテンツを示すのを示します。
+::END
+
+$LOCAL_PANE$=ローカルペイン
+$LOCAL_PANE_TXT$::
+ローカルペインはメインウインドウの左側上部に位置しています。その情報ペインには、クライアント・コンピュータのローカル・ファイル・システムの内容が
+表示されます。
+::END
+
+$REMOTE_PANE$=リモートペイン
+$REMOTE_PANE_TXT$::
+リモートペインはローカルペインの右側にあります。その情報ペインにはリモートサーバのファイル・システムの内容が表示されます。
+::END
+
+$DESC_FUNCTIONALITY$=これらのパネルから開始されます:
+$LI_FUNCTIONALITY_1$=ディレクトリを通じてそれらの内容を表示します。
+$LI_FUNCTIONALITY_2$=新しいディレクトリを作成します
+$LI_FUNCTIONALITY_3$=ディレクトリとファイルを削除します
+$LI_FUNCTIONALITY_4$=ディレクトリとファイルの名前を変更します
+$LI_FUNCTIONALITY_5$=ディレクトリとファイルの詳細なプロパティを表示します
+$LI_FUNCTIONALITY_6$=他のディレクトリへファイルをコピー、または移動します
+$LI_FUNCTIONALITY_7$=ローカルとリモートファイルシステム間でファイル転送します
+$LI_FUNCTIONALITY_8$=サポートされるファイルの縮小画像を表示します
+$LI_FUNCTIONALITY_9$=サポートされるファイルタイプの内容を表示します
+
+$HEAD_BROWSER_PANE_LAYOUT$=初期のレイアウト
+$DESC_BROWSER_PANE_LAYOUT$::
+ペインは最初に以下の内容を含んでいます:
+::END
+$LI_BROWSER_PANE_LAYOUT_1$=: パスの各ディレクトリを表すために「クラム」を使用することで現在のワーキングディレクトリを表示します。また、このツールバーからナビゲートする絶対パスを入力することができます。
+$LI_BROWSER_PANE_LAYOUT_2$=: ディレクトリ、又はファイルで行なうことができる動作を示します。それぞれのボタン上で右クリックして、切り換えることによって、ツールバーをカスタム設計することができます。
+$LI_BROWSER_PANE_LAYOUT_3$=: ツリー構造で対応するファイルシステムのフォルダを表示します。
+$LI_BROWSER_PANE_LAYOUT_4$=: リストから選択されたファイルのプレビューを表示します。
+$LI_BROWSER_PANE_LAYOUT_5$=: 現在のワーキングディレクトリのファイル一覧を表示します。
+
+
+<!-- Help-Layout-Browser-Tree-Overview.htm -->
+$HEAD_TREE_PANE$=ツリーペインの概要
+$DESC_TREE_PANE$::
+ツリーペインは初期状態では、$LINK_PREVIEW_PANE$のすぐ上、$LINK_LOCAL_REMOTE_PANE$の左上に位置します。
+それは階層構造により対応するファイルシステムのフォルダを表示します。
+
+ツリーペインには、容易に基本的なファイルシステムを管理するために使用できす多くの機能を持ちます。:
+::END
+$LI_TREE_PANE_FEATURE_1$=新しいディレクトリを作成します
+$LI_TREE_PANE_FEATURE_2$=ディレクトリを削除します
+$LI_TREE_PANE_FEATURE_3$=ディレクトリ名を変更します
+$LI_TREE_PANE_FEATURE_4$=内容を参照するためにディレクトリを開きます
+$LI_TREE_PANE_FEATURE_5$=ディレクトリのプロパティを表示します
+$LI_TREE_PANE_FEATURE_6$=他の場所にディレクトリをコピー、または移動します
+$LI_TREE_PANE_FEATURE_7$=他のファイルシステムにディレクトリを転送します
+
+$HEAD_EXAMPLE_PATH$=上のスクリーンショットは"C:\Downloads\RhinoSoft.com"というパスがツリー表示でどのように展開するかを表示しています。
+$DESC_EXAMPLE_PATH_1$=デスクトップ
+$DESC_EXAMPLE_PATH_2$=コンピュータ
+$DESC_EXAMPLE_PATH_3$=C:
+$DESC_EXAMPLE_PATH_4$=ダウンロード
+$DESC_EXAMPLE_PATH_5$=RhinoSoft.com
+
+
+<!-- Help-Layout-Browser-Preview-Overview.htm -->
+$HEAD_PREVIEW_PANE$=プレビューペインの概要
+$DESC_PREVIEW_PANE$::
+プレビューペインは、初期状態では、$LINK_TREE_PANE$の下、$LINK_LOCAL_REMOTE_PANE$の左下にあります。それは$LINK_LIST_PANE$の中で選択された
+ファイルのプレビューを表示します。オリジナルをダウンロードしないでイメージ・ファイル内容を確認したい場合に便利です。プレビューペイン
+がインタフェースから分離される場合、サイズ調整を行なうことができます。また、プレビューペインをリサイズすると、イメージのサイズは調整されます。
+
+プレビューペインは以下のファイルタイプをサポートします:
+::END
+$LI_PREVIEW_TYPES_SUPPORTED$::
+JPG/JPEG
+GIF
+PNG
+::END
+
+
+<!-- Help-Layout-Browser-List-Overview.htm -->
+$HEAD_LIST_PANE_OVERVIEW$=リストペインの概要
+$DESC_LIST_PANE_OVERVIEW$::
+リストペインは初期状態では、$LINK_LOCAL_REMOTE_PANE$の右側にあります。それは現在のワーキングディレクトリの、すべてのファイルとディレクトリを表示します。
+リストペインには、容易に基本的なファイルシステムを管理するための多くの機能を持っています。
+
+それらの機能は以下の通りです:
+::END
+$LI_LIST_PANE_FEATURE_1$=新規ディレクトリを作成します
+$LI_LIST_PANE_FEATURE_2$=ディレクトリとファイルを削除します
+$LI_LIST_PANE_FEATURE_3$=ディレクトリ、またはファイル名を変更します
+$LI_LIST_PANE_FEATURE_4$=内容を表示するためにディレクトリを開きます
+$LI_LIST_PANE_FEATURE_5$=ファイルを開きます
+$LI_LIST_PANE_FEATURE_6$=ディレクトリとファイルプロパティを表示します
+$LI_LIST_PANE_FEATURE_7$=他の場所へディレクトリとファイルをコピー、または移動します
+$LI_LIST_PANE_FEATURE_8$=他のファイルシステムへディレクトリとファイルを転送します
+
+$DESC_LIST_PANE_VIEW_MODES$=リストペインは、以下の中よりディレクトリ内容を表示方法を選択することができます。:
+$LI_LIST_PANE_VIEW_1$=<strong>大きなアイコン</strong> - 大きいアイコンとファイル名により表示されます。
+$LI_LIST_PANE_VIEW_2$=<strong>小さなアイコン</strong> - 小さいアイコンとファイル名により表示されます。
+$LI_LIST_PANE_VIEW_3$=<strong>リスト</strong> - ファイルを表示するために水平にスクロールするのを除いて、小さなアイコンと同じ情報を表示します。
+$LI_LIST_PANE_VIEW_4$=<strong>詳細</strong> - 各ファイルに関する追加情報を表示する、Windowsエクスプローラーによって使用されている伝統的な表示方法です。
+$LI_LIST_PANE_VIEW_5$=<strong>サムネイル</strong> - サポートされる画像の縮小版を表示します。
+
+$DESC_LIST_PANE_DETAILS$::
+詳細表示には、各ファイルに関する情報を表示する4つのコラムがあります。:
+::END
+$LI_LIST_PANE_DETAILS_1$=名前
+$LI_LIST_PANE_DETAILS_2$=サイズ
+$LI_LIST_PANE_DETAILS_3$=種類
+$LI_LIST_PANE_DETAILS_4$=更新日時
+$LI_LIST_PANE_DETAILS_1_1$=:  ファイル、またはディレクトリ名を表示します
+$LI_LIST_PANE_DETAILS_2_1$=:  ファイル、またはディレクトリのサイズを表示します
+$LI_LIST_PANE_DETAILS_3_1$=:  クライアントの尾プレーションシステムで登録されているファイルの種類を表示します
+$LI_LIST_PANE_DETAILS_4_1$=:  ファイルが最後に更新された日時を表示します
+$DESC_LIST_PANE_THUMBS$::
+サムネイル表示は、それ自体の縮小表示として各ファイルを表示することができます。ファイルがそれ自体のイメージを
+作り出さないなら、「大きいアイコン」が代わりに使用されます。サムネイルで選択できるサイズに関する情報に関しては、
+$LINK_THUMB_SIZES_HERE$をクリックしてください。
+::END
+
+
+<!-- Help-Layout-Transfer-Overview.htm -->
+$HEAD_TRANSFER_PANE_OVERVIEW$=転送ペインの概要
+$DESC_TRANSFER_PANE_OVERVIEW$::
+転送ペインは初期状態では、アプリケーションウィンドウの下にあります。転送ペインは、すべてのファイル転送の状態についての情報を表示します。
+デフォルトでは、転送が完了するか、キャンセルされるか、または中断され他場合、転送はこのペインから削除されます。
+しかしながら、FTP Voyager JVで転送が手動で削除されるまで、エントリーを転送ペインに残すことを設定することができます。
+転送ペインには容易に各転送を管理するのに使用することができるいくつかの機能があります。
+
+それらの機能は以下の通りです:
+::END
+$LI_TRANSFER_PANE_FEATURE_1$=現在のファイルが完了下後で選択した転送を停止します。
+$LI_TRANSFER_PANE_FEATURE_2$=選択した転送のために次のファイルへ移行します。
+$LI_TRANSFER_PANE_FEATURE_3$=選択した転送を一時停止します。
+$LI_TRANSFER_PANE_FEATURE_4$=選択した転送を再開します。
+$LI_TRANSFER_PANE_FEATURE_5$=転送をキャンセルします。
+$LI_TRANSFER_PANE_FEATURE_6$=リストから転送を削除します。
+$LI_TRANSFER_PANE_FEATURE_7$=リストの全ての転送をキャンセルします。
+$LI_TRANSFER_PANE_FEATURE_8$=リストから全ての転送削除します。
+
+$DESC_TRANSFER_COLUMNS$::
+転送ペインは、転送に関する情報を示すコラムを含みます。:
+::END
+
+$HEAD_COL_OPERATING_STATUS$=オペレーション
+$DESC_COL_OPERATING_STATUS$::
+以下の内容を含む転送状態を表示します。:
+::END
+$LI_COL_OPERATING_STATUS_1$=<strong>実行中</strong>:  転送は進行中です。
+$LI_COL_OPERATING_STATUS_2$=<strong>停止</strong>:  転送は停止されました。これは$LINK_STOP_AFTER_FILE_COMPLETES$オプションを選択したことによるかもしれません。
+$LI_COL_OPERATING_STATUS_3$=<strong>一時停止</strong>: 転送は一時的に停止されました。これは$LINK_PAUSE$オプションを選択したことによるかもしれません。
+$LI_COL_OPERATING_STATUS_4$=<strong>キャンセル</strong>: 転送はキャンセルされました。
+$LI_COL_OPERATING_STATUS_5$=<strong>エラー</strong>: 転送でエラーが発生しました。エラーがユーザによって同意されると転送は継続することができます。
+
+$HEAD_COL_NAME$=名前
+$DESC_COL_NAME$::
+現在、転送されているファイル名が、このコラムに表示されます。ディレクトリか複数のファイルが転送されている場合、ファイルが完了すると、このコラムに表示される名前は変化します。
+::END
+
+$HEAD_COL_STATUS$=状態
+$DESC_COL_STATUS$::
+このコラムは転送されているファイルのために進歩状況を表示します。どのくらい転送が進んだかを示すインディケータとすでに転送された実際のバイト数とファイルの総サイズを表示します。
+::END
+
+$HEAD_COL_COMPLETION$=完了
+$DESC_COL_COMPLETION$::
+完了コラムは転送完了まで転送レートと時間の概算を表示します。時間は"HH"、"MM"は分を、そして"SS"が秒を表すHH:MM:SSの形式で表示されます。また、転送は、
+転送がアップロードであるか、またはダウンロードであるかを示すアイコンを表示します。:
+::END
+$LI_COL_COMPLETION_1$=アップロード
+$LI_COL_COMPLETION_2$=ダウンロード
+
+$HEAD_COL_OVERALL$=割合
+$DESC_COL_OVERALL$::
+バイト数によるファイル全体のサイズと転送されたサイズが表示されます。これは転送されたバイト数の大体の割合を示すインジゲータを持ちます。
+::END
+
+$HEAD_COL_PATH_FROM$=ソースのパス
+$DESC_COL_PATH_FROM$::
+このコラムは現在転送されている「ソース」ファイルの完全なパスを表示します。
+::END
+
+$HEAD_COL_PATH_TO$=ディストネーション・パス
+$DESC_COL_PATH_TO$::
+このコラムは現在転送されている「目的地」（ディストネーション）ファイルの完全なパスを表示します。
+::END
+
+<!-- Help-Menus-Main-Overview.htm -->
+$HEAD_MENU_MAIN_OVERVIEW$=メインメニューの概要
+$DESC_MENU_MAIN_OVERVIEW$::
+メインメニューは、アプリケーションウィンドウの上部にあります。それは全ての操作とFTP Voyager JVの機能への迅速なアクセスを許可します。
+また、キーボード・ショートカットを使用することで、いくつかの操作を実行することもできます。操作がキーボード・ショートカットを支持する場合、
+それは対応するメニューエントリーの端に表示されます。
+::END
+$DESC_MENU_MAIN_FEATURES$=メインメニューは以下に記載されたカテゴリに分割されます。:
+
+
+<!-- Help-Menus-Main-Items-File.htm -->
+$HEAD_MENU_FILE$=ファイルメニュー
+
+$HEAD_ACTION_NEW_LOCAL_BROWSER$=新規ローカル参照
+$DESC_ACTION_NEW_LOCAL_BROWSER$::
+ローカルファイルシステムに関連した新しい収納可能フレームを作成します。
+::END
+
+$HEAD_ACTION_NEW_REMOTE_BROWSER$=新規リモート参照
+$DESC_ACTION_NEW_REMOTE_BROWSER$::
+リモートファイルシステムに関連した新しい収納可能フレームを作成します。
+::END
+
+$HEAD_ACTION_NEW_DIR$=新規フォルダ
+$DESC_ACTION_NEW_DIR$::
+$LINK_ACTIVE_PANE$の現在のワーキングディレクトリに新しいディレクトリを作成します。
+::END
+
+$HEAD_ACTION_OPEN$=開く
+$DESC_ACTION_OPEN$::
+$LINK_ACTIVE_PANE$でディレクトリを開く、またはファイル拡張子に関連したシステムのデフォルトプログラムでファイルを開くことを試みます。
+::END
+
+$NOTE_ACTION_DELETE$::
+$BOLD_NOTE$:  FTP Voyager JV設定によって、削除される前に動作を確認するようにうながされるかもしれません。
+::END
+
+$HEAD_ACTION_RENAME$=名前の変更
+$DESC_ACTION_RENAME$::
+$LINK_ACTIVE_PANE$の選択されたファイル、またはフォルダで名前を変更することができます。
+::END
+
+$HEAD_ACTION_PROPERTIES$=プロパティ
+$DESC_ACTION_PROPERTIES$::
+$LINK_ACTIVE_PANE$の選択した項目のプロパティダイアログを開きます。
+::END
+
+$HEAD_ACTION_FILE_UPLOAD$=ファイルのアップロード...
+$DESC_ACTION_FILE_UPLOAD$::
+アップロードコマンドはファイルサーバにアクティブなローカルペインで選択した項目をコピーするファイル転送を開始します。
+1つ以上のリモート参照ウインドウ開く場合、適切な目的地が選択するためのダイアログが表示されます。
+::END
+$NOTE_ACTION_UPLOAD$::
+$BOLD_NOTE$:  サーバはディレクトリであるかもしれない、クライアントファイルのディレクトリ構造を保持します。
+::END
+
+$HEAD_ACTION_FILE_DOWNLOAD$=ファイルのダウンロード...
+$DESC_ACTION_FILE_DOWNLOAD$::
+ダウンロードコマンドはローカルファイルシステムにアクティブなリモートペインで選択した項目をコピーするファイル転送を開始します。
+1つ以上のリモート参照ウインドウ開く場合、適切な目的地が選択するためのダイアログが表示されます。
+::END
+$NOTE_ACTION_DOWNLOAD$::
+$BOLD_NOTE$:  クライアントはディレクトリであるかもしれない、サーバファイルのディレクトリ構造を保持します。
+::END
+
+$HEAD_ACTION_STOP_REMOTE_DIR_LISTING$=リモートディレクトリ・リストの停止
+$DESC_ACTION_STOP_REMOTE_DIR_LISTING$::
+ディレクトリ・リストがサーバで未解決である場合、このオプションは、それが完了するの待たずに終了します。
+::END
+$NOTE_ACTION_STOP_REMOTE_DIR_LISTING$::
+$BOLD_NOTE$:  リモートディレクトリ・リストが処理中である場合だけ、この操作は利用できます。リモートディレクトリ・リストは
+完了する場合があるかもしれません。(特にファイルサーバがネットワーク上のリソースにアクセス場合など)FTP Voyager JVが
+リモートディレクトリ・リストを受け取るまで、他のコマンドを実行することができません。
+::END
+
+$HEAD_ACTION_CHANGE_PASSWORD$=パスワードの変更
+$DESC_ACTION_CHANGE_PASSWORD$::
+ユーザアカウントのパスワード変更を行なうための$LINK_CHANGE_PASSWORD$ダイアログを表示します。
+::END
+$NOTE_ACTION_CHANGE_PASSWORD$::
+$BOLD_NOTE$:  このオプションは管理者によってパスワード変更が許可されている場合にだけ利用できます。
+::END
+
+$HEAD_ACTION_EXIT$=終了
+$DESC_ACTION_EXIT$::
+FTP Voyager JVを終了します。そしてServ-Uから現在のユーザアカウントをログオフします（オプション）。
+::END
+$NOTE_ACTION_EXIT$::
+$BOLD_NOTE$:  管理者アカウントを使用することでFTP Voyager JVにログインしている場合、
+Serv-Uのログアウトを望まないかもしれません。ログアウトした場合は、ブラウザで再びログイン
+しなければなりません。
+::END
+
+
+<!-- Help-Menus-Main-Items-Edit.htm -->
+$HEAD_MENU_EDIT$=編集メニュー
+
+$HEAD_ACTION_PREFERENCES$=オプション
+$DESC_ACTION_PREFERENCES$::
+FTP Voyager JVの様々なオプション設定を行なう$LINK_PREFERENCES$ダイアログを表示します。
+$LINK_PREFERENCES$ダイアログには、必要性に応じて変更可能ないくつかのオプションがあります。
+
+表示ダイアログは以下のページを含みます:
+::END
+$LI_PREF_PAGE_TBAR_MAIN$=メインツールバー
+$LI_PREF_PAGE_TBAR_LOCAL$=ローカルツールバー
+$LI_PREF_PAGE_TBAR_REMOTE$=リモートツールバー
+$LI_PREF_PAGE_TBAR_TRANSFER$=転送ツールバー
+
+$HEAD_ACTION_SELECT_ALL$=全てを選択
+$DESC_ACTION_SELECT_ALL$::
+アクティブな$LINK_LIST_PANE$のすべての列を選択します。
+::END
+
+$HEAD_ACTION_INVERT_SELECTION$=選択の切り替え
+$DESC_ACTION_INVERT_SELECTION$::
+各列のアクティブな$LINK_LIST_PANE$の選択状態を逆にします。
+::END
+
+
+<!-- Help-Menus-Main-Items-View.htm -->
+$HEAD_MENU_VIEW$=表示メニュー
+
+$MENU_STYLE$=スタイル
+$DESC_STYLE$::
+FTP Voyager JVに適用することができるスキンを提供します。FTP Voyager JVを使用しているオペレーティングシステムを
+反映するスタイルと同様に幾つかのスタイルがあります。
+::END
+
+$MENU_TBARS$=ツールバー
+$DESC_TBARS$::
+幾つかのツールバー小目を切り替えることができます。
+::END
+
+$MENU_VIEW_LARGE_ICONS$=大きいアイコン
+$DESC_VIEW_LARGE_ICONS$::
+この項目を選択すると、アクティブペインにファイルとフォルダーの大きいアイコンを表示します。
+::END
+
+$MENU_VIEW_SMALL_ICONS$=小さいアイコン
+$DESC_VIEW_SMALL_ICONS$::
+この項目を選択すると、アクティブペインにファイルとフォルダーの小さいアイコンを表示します。
+::END
+
+$MENU_VIEW_LIST$=リスト
+$DESC_VIEW_LIST$::
+この項目を選択すると、アクティブペインのすべてのファイルとフォルダをリスト表示すします。
+::END
+
+$MENU_VIEW_DETAILS$=詳細
+$DESC_VIEW_DETAILS$::
+この項目を選択すると、アクティブペインのすべてのファイルとフォルダの詳細な情報を表示します。また、ファイル名の表示に加えて、
+詳細リストはファイルサイズ、ファイルの種類、更新日時を表示します。
+::END
+
+$MENU_VIEW_THUMBS$=サムネイル
+$DESC_VIEW_THUMBS$::
+サムネイルは$LINK_LIST_PANE$に表示されます。ここに記載されている事前に定義されたサイズを選択することによって、
+サムネイルのサイズを変更することができます。サムネイルは、認識された画像タイプのために検索、表示されるだけです。
+サムネイルが表示できない場合は、大きいアイコンはが表示されます。
+
+事前に定義されたサイズは以下の通りです。:
+::END
+$LI_VIEW_THUMBS_075$=75x75
+$LI_VIEW_THUMBS_100$=100x100 (デフォルト)
+$LI_VIEW_THUMBS_150$=150x150
+$LI_VIEW_THUMBS_200$=200x200
+$LI_VIEW_THUMBS_250$=250x250
+
+$MENU_BACK$=戻る
+$DESC_BACK$::
+戻るコマンドはアクティブなペインの操作履歴から１つ前の操作へもとります。
+::END
+
+$MENU_FORWARD$=進む
+$DESC_FORWARD$::
+進むコマンドはアクティブなペインの操作履歴から１つ先の操作へ進みます。
+::END
+
+$MENU_UP_DIR$=１つ上へ
+$DESC_UP_DIR$::
+このコマンドはアクティブなペインで現在のディレクトリの親ディレクトリへナビゲートします。
+::END
+
+$MENU_REFRESH$=更新
+$DESC_REFRESH$::
+更新コマンドは、FTP Voyager JVはアクティブなペインのリストアップされている内容を最新の状態とします。
+::END
+
+
+<!-- Help-Menus-Main-Items-Windows.htm -->
+$HEAD_MENU_WINDOWS$=ウインドウメニュー
+
+$HEAD_MENU_WINDOWS_CLOSE$=閉じる
+$DESC_MENU_WINDOWS_CLOSE$::
+$LINK_ACTIVE_PANE$. $BOLD_NOTE$を閉じます。:$LINK_ACTIVE_PANE$を閉じると、$LINK_FRAME_LIST$はアップデートされます。
+::END
+
+$HEAD_MENU_WINDOWS_AUTO_HIDE$=自動的に隠す
+$DESC_MENU_WINDOWS_AUTO_HIDE$::
+アプリケーションウィンドウにパネルを隠されたパネルになるように$LINK_ACTIVE_PANE$の状態を変更します。
+マウス上に移動することで、隠されたパネルを示すことができます。
+::END
+
+$HEAD_MENU_WINDOWS_DOCKABLE$=格納可能
+$DESC_MENU_WINDOWS_DOCKABLE$::
+$LINK_ACTIVE_PANE$の状態をアプリケーションウィンドウに津属する格納可能フレームに変更します。
+これはFTP Voyager JVのウィンドウペインのデフォルト状態です。
+::END
+
+$HEAD_MENU_WINDOWS_FLOATING$=フローティング
+$DESC_MENU_WINDOWS_FLOATING$::
+$LINK_ACTIVE_PANE$の状態をアプリケーションウィンドウから外されたフレームに変更します。
+::END
+
+$HEAD_MENU_WINDOWS_AUTO_HIDE_ALL$=全てを自動的に隠す
+$DESC_MENU_WINDOWS_AUTO_HIDE_ALL$::
+全てのフレームを$LINK_AUTO_HIDE$状態へ変更します。
+::END
+
+$HEAD_MENU_WINDOWS_CLOSE_ALL$=全てのフレームを閉じる
+$DESC_MENU_WINDOWS_CLOSE_ALL$::
+アプリケーションのために全てのフレームを閉じます。
+::END
+
+$HEAD_MENU_WINDOWS_TREE_PANE$=ツリーペイン
+$DESC_MENU_WINDOWS_TREE_PANE$::
+$LINK_TREE_PANE$の外観を切り換えます。
+::END
+
+$HEAD_MENU_WINDOWS_PREVIEW_PANE$=プレビューペイン
+$DESC_MENU_WINDOWS_PREVIEW_PANE$::
+$LINK_PREVIEW_PANE$の外観を切り替えます。
+::END
+
+$HEAD_MENU_WINDOWS_FRAME_LIST$=フレーム・リスト
+$DESC_MENU_WINDOWS_FRAME_LIST$::
+このセクションはすべてのこのセッションのアクティブなフレームを含みます。フレームに従って、メニューはダイナミックに作成、
+無効化されるそれをアップデートします。このリストからフレームを選択すると、それはアプリケーションでアクティブにします。
+::END
+
+$HEAD_MENU_WINDOWS_ACTIVATE_DLG$=ウインドウ...
+$DESC_MENU_WINDOWS_ACTIVATE_DLG$::
+アプリケーションないでフレームを動かさせる$LINK_ACTIVATE_WINDOW$ダイアログを開始します。
+::END
+
+
+<!-- Help-Menus-Main-Items-Help.htm -->
+$HEAD_MENU_HELP$=ヘルプ・メニュー
+
+$MENU_HELP_TOPICS$=ヘルプ・トピックス
+$DESC_HELP_TOPICS$::
+この項目を選択すると、ヘルプドキュメンテーションが適切なページで開かれます。
+::END
+
+$HEAD_ACTION_HELP_OVERVIEW$=概要
+$DESC_ACTION_HELP_OVERVIEW$::
+デフォルトのWebブラウザを使用してFTP Voyager JVの「概要」ヘルプを開始します。
+::END
+
+$HEAD_ACTION_HELP_TECH_SUPPORT$=技術サポート
+$DESC_ACTION_HELP_TECH_SUPPORT$::
+デフォルトのWebブラウザを使用して関連するサーバ技術サポートに関する情報を提供するページを表示します。
+
+$BOLD_NOTE$:  このオプションはサポートリンクがServ-Uの管理者により提供されている場合にだけ利用できます。
+::END
+
+$HEAD_ACTION_HELP_ABOUT$=FTP Voyager JVに関して
+$DESC_ACTION_HELP_ABOUT$::
+FTP Voyager JVに関する情報を表示するダイアログを表示します。このダイアログは重要な製品情報を含んでいます。
+
+それは以下の２つのページを持ちます:
+::END
+$LI_ABOUT_PAGE_1$=プログラム情報
+$LI_ABOUT_PAGE_1_1$=:  このページはFTP Voyager JVのバージョン、作成年月日、問い合わせ情報を含んでいます。
+$LI_ABOUT_PAGE_2$=コンピュータ情報
+$LI_ABOUT_PAGE_2_1$::
+:  このダイアログははコンピュータのオペレーティングシステムとJavaインストレーションに関する情報を含んでいます。
+(<strong>クリップボードへコピー</strong>・ボタンをクリックすることによって、技術サポートへの送信するための情報を
+クリップボードにコピーすることができます)。
+::END
+
+
+<!-- Help-Tbar-Main-Overview.htm -->
+$HEAD_TOOLBAR_MAIN_OVERVIEW$=メインツールバーの概要
+$DESC_TOOLBAR_MAIN_OVERVIEW$::
+メインツールバーはアプリケーションの共通の動作を実行する方法を提供します。メインツールバーは初期状態では、
+メインメニューの下にあります。それはデフォルトで隠されています。ツールバーを表示するには、「表示 ツールバー」から
+「メイン」オプションをメインメニューから選択してください。
+::END
+
+
+<!-- Help-Tbar-Main-Actions.htm -->
+$HEAD_TOOLBAR_MAIN_ACTIONS$=メインツールバー・アクション
+$DESC_TOOLBAR_MAIN_ACTIONS$::
+以下はメインツールバーで実行できる動作です。
+::END
+
+
+<!-- Help-Tbar-Browser-Crumbbar-Overview.htm -->
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$=ローカル／リモート・ナビゲーションバーの概要
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$::
+ローカル／リモート・ナビゲーションバーは初期状態では、それぞれのローカル／リモートペインの上部にあります。ナビゲーションバーには、現在のワーキング・ディレクトリを
+変更する様々な方法を持ちます。現在のワーキング・ディレクトリを変更するには、以下のステップを行なってください。:
+::END
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_1$=クラムボタン、またはクラムボタンのドロップダウンを使用する。
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_2$=ファイルシステムの絶対パスを指定してください。
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_3$=ドロップダウン履歴リストから以前の経路を選択してください。
+
+
+<!-- Help-Tbar-Browser-Crumbbar-Actions.htm -->
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$=ローカル／リモート・ナビゲーションバーのアクション
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$::
+ナビゲーションバーは、対応するファイルシステム上のディレクトリへナビゲートするために様々な動作を実行することができます。ナビゲーションバーの機能は以下に
+リストアップされています。:
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_1$=クラム・ボタン
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_1$::
+各クラムはディレクトリを表します。ワーキングディレクトリを対応するクラムに変更するには、クラムをクリックしてください。クラムの
+ドロップダウンメニューをクリックすると、そのクラムの位置に関するサブディレクトリのリストが表示されます。また、これらの
+サブディレクトリの1つをクリックすると、ワーキング・ディレクトリは変化します。
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_6$=絶対的なパスモード
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_6$::
+このエリア内をクリックして、ナビゲーションバーを編集フィールドに変更してください。編集フィールドは初期状態では、絶対パスとして現在のワーキング・
+ディレクトリを表示します。この文字列をファイルシステムで有効なディレクトリを示す自身の絶対パスに置き換えることができます。ENTERキーを
+押して、指定されたパスにワーキングディレクトリを設定します。
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_7$=履歴
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_7$::
+このボタンをクリックして、以前のワーキング・ディレクトリに関するドロップダウンリストを表示してください。このリストからパスを選択すると、現在のワーキング・ディレクトリは変化します。
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_8$=$MENU_REFRESH$
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_8$=$DESC_REFRESH$
+
+$LIST_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$::
+<strong>クラム</strong>: 各クラムはディレクトリを表します。また、ユーザはこのツールバーからナビゲートする絶対パスを指定することができます。
+<strong>(2) $LINK_HELP_TOOLBAR_BROWSER_TOOLBAR$</strong>: ディレクトリ、又はファイルに実行することができる動作を示します。それぞれのボタンの表示された状態で右クリックツールバーをカスタム設計することができます。
+::END
+
+
+<!-- Help-Tlbar-Browser-Overview.htm -->
+$HEAD_TOOLBAR_BROWSER_OVERVIEW$=ローカル／リモート・ツールバーの概要
+$DESC_TOOLBAR_BROWSER_OVERVIEW$::
+ローカル／リモート・ツールバーは、ユーザに選択されたディレクトリ、またはファイルで共通する動作を実行できます。
+::END
+
+
+<!-- Help-Tbar-Browser-Actions.htm -->
+$HEAD_TOOLBAR_BROWSER_ACTIONS$=ローカル／リモート・ツールバー・アクション
+$DESC_TOOLBAR_BROWSER_ACTIONS$::
+以下は、ローカル／リモート・ツールバーで実行できる動作です。
+::END
+
+$HEAD_ACTION_BACK$=戻る
+$DESC_ACTION_BACK$::
+戻るコマンドは、アクティブペインのナビゲーション履歴での1つ前のエントリーにナビゲートをします。
+::END
+
+$HEAD_ACTION_FORWARD$=進む
+$DESC_ACTION_FORWARD$::
+進むコマンドはアクティブペインのナビゲーション履歴での1つ先のエントリーにナビゲートします。
+::END
+$NOTE_ACTION_FORWARD_TOOLBAR$::
+<strong>注意 (2*):</strong>  ドロップダウンボタンは、ディレクトリ参照履歴が戻ると進むメカニズムを使用したのを示します。
+::END
+
+$HEAD_ACTION_UPDIR$=上のディレクトリ
+$DESC_ACTION_UPDIR$::
+このコマンドはアクティブペインで現在のディレクトリの親ディレクトリへナビゲートします。
+::END
+
+$HEAD_ACTION_UPLOAD$=アップロード
+$DESC_ACTION_UPLOAD$::
+アップロードコマンドはファイルサーバに選択した項目をコピーするファイル転送を開始します。
+1つ以上のリモート参照ウインドウが開かれている場合、適切な目的地を選択するためのダイアログが表示されます。
+::END
+$NOTE_ACTION_UPLOAD_TOOLBAR$::
+<strong>注意 (4*):</strong>  ローカルペインのツールバーだけがアップロードボタンを表示します。
+::END
+
+$HEAD_ACTION_DOWNLOAD$=ダウンロード
+$DESC_ACTION_DOWNLOAD$::
+ダウンロードコマンドはローカルファイルシステムに選択した項目をコピーするファイル転送を開始します。
+1つ以上のローカル参照ウインドウが開かれる場合、適切な目的地を選択するためのダイアログが表示されます。
+::END
+$NOTE_ACTION_DOWNLOAD_TOOLBAR$::
+<strong>注意 (5*):</strong>  リモートペインのツールバーだけがダウンロードボタンを表示します。
+::END
+
+$HEAD_ACTION_NEW_FOLDER$=新規フォルダ
+$DESC_ACTION_NEW_FOLDER$::
+現在のワーキングディレクトリの下に新しいディレクトリを作成します。
+::END
+
+$HEAD_ACTION_DELETE$=削除
+$DESC_ACTION_DELETE$::
+削除コマンドは、$LINK_ACTIVE_PANE$で選択した項目を削除します。
+::END
+
+$HEAD_ACTION_VIEW$=表示
+$DESC_ACTION_VIEW$::
+ユーザがリストペインに利用可能な様々なビューを通して循環するのを許容します。
+::END
+$NOTE_ACTION_VIEW_TOOLBAR$::
+<strong>注意 (8*):</strong>  リストペインのためにドロップダウン・ボタンから適切なビューを選択することができます。リストペインで利用可能なビューは以下の通りです。：
+::END
+
+
+<!-- Help-Tbar-Transfer-Overview.htm -->
+$HEAD_TOOLBAR_TRANSFER_OVERVIEW$=転送ツールバーの概要
+$DESC_TOOLBAR_TRANSFER_OVERVIEW$::
+転送ツールバーはクライアントとサーバの間での転送の共通の動作を実行する方法を提供します。転送ツールバーは初期状態では、転送ペインの上にあります。
+::END
+
+
+<!-- Help-Tbar-Transfer-Actions.htm -->
+$HEAD_TOOLBAR_TRANSFER_ACTIONS$=転送ツールバーアクション
+$DESC_TOOLBAR_TRANSFER_ACTIONS$::
+以下は、転送ツールバーで実行できる動作です。
+::END
+
+$HEAD_ACTION_TRANSFER_STOP_AFTER_FILE$=ファイル完了後に停止
+$DESC_ACTION_TRANSFER_STOP_AFTER_FILE$::
+このオプションを選択すると、現在転送されているファイルが完了したのち転送キューにある追加ファイルを
+転送を停止するようFTP Voyager JVに命令します。
+::END
+$NOTE_ACTION_TRANSFER_STOP_AFTER_FILE$::
+$BOLD_NOTE$:  複数の転送項目がある場合だけ、このオプションは利用可能です。
+::END
+
+$HEAD_ACTION_TRANSFER_SKIP_FILE$=ファイルをスキップ
+$DESC_ACTION_TRANSFER_SKIP_FILE$::
+ファイルのスキップは、現在のファイルの転送を中止するようにFTP Voyager JVに命令します。
+::END
+
+$HEAD_ACTION_TRANSFER_PAUSE$=一時停止
+$DESC_ACTION_TRANSFER_PAUSE$::
+転送の一時停止を許可します。これは、転送が再開されるまで、FTP Voyager JVがこの特定の転送のためのどんなデータも送るか、
+または受け取るのを停止します。
+::END
+
+$HEAD_ACTION_TRANSFER_RESUME$=再開
+$DESC_ACTION_TRANSFER_RESUME$::
+転送を「再開すること」を許可します。転送の再開は、多くの利点を持ちます。ユーザが転送を「一時停止」、
+または接続を失ってしまった際に、ユーザは転送を「再開」することができます。これはFTP Voyager JVと
+Serv-Uが転送が停止されたところから再開します。
+::END
+
+$HEAD_ACTION_TRANSFER_CANCEL$=キャンセル
+$DESC_ACTION_TRANSFER_CANCEL$::
+キャンセルはすぐに、転送を中止します。転送が行なわれている場合だけ、この操作は利用可能です。
+::END
+
+$HEAD_ACTION_TRANSFER_REMOVE$=削除
+$DESC_ACTION_TRANSFER_REMOVE$::
+このオプションを選択すると、エントリーは転送ペインから削除されます。転送が終了しているか、
+またはキャンセルされたときだけ、この動作は利用可能です。
+::END
+$NOTE_ACTION_TRANSFER_REMOVE_TOOLBAR$::
+$BOLD_NOTE$:  デフォルトで、完了、またはキャンセルされた転送は転送ペインから自動的に削除されます。
+このオプションを転送項目の手動削除に変更するには$LINK_PREF_PAGE_GENERAL$のヘルプを参照してください。
+::END
+
+$HEAD_ACTION_TRANSFER_CANCEL_ALL$=全てキャンセル
+$DESC_ACTION_TRANSFER_CANCEL_ALL$::
+現在のすべての転送をキャンセルします。
+::END
+
+$HEAD_ACTION_TRANSFER_REMOVE_ALL$=全て削除
+$DESC_ACTION_TRANSFER_REMOVE_ALL$::
+転送ペインからすべての完了、またはキャンセルされた転送を削除します。
+::END
+
+
+<!-- Help-Dlg-About-ProgramInfo.htm -->
+$HEAD_DLG_ABOUT_PROGRAM_INFO$=プログラムに関して - プログラム情報
+$DESC_DLG_ABOUT_PROGRAM_INFO$::
+プログラム情報ページはFTP Voyager JVに関する情報を含みます。
+ページは以下セクションに分けられます。:
+::END
+$LI_DLG_ABOUT_PROG_INFO_1$=製品情報
+$LI_DLG_ABOUT_PROG_INFO_2$=お問い合わせ情報
+$LI_DLG_ABOUT_PROG_INFO_3$=開発情報
+$LI_DLG_ABOUT_PROG_INFO_4$=法律に関して
+$LI_DLG_ABOUT_PROG_INFO_1_1$=:  FTP Voyager JVのバージョン番号と作成日を含みます。
+$LI_DLG_ABOUT_PROG_INFO_2_1$=:  製品のお問い合わせ策に関する情報
+$LI_DLG_ABOUT_PROG_INFO_3_1$=:  製品の開発に関する情報
+$LI_DLG_ABOUT_PROG_INFO_4_1$=:  製品の著作権や法律に関する情報
+
+
+<!-- Help-Dlg-About-ComputerInfo.htm -->
+$HEAD_DLG_ABOUT_COMPUTER_INFO$=製品に関して - コンピュータ情報
+$DESC_DLG_ABOUT_COMPUTER_INFO$::
+コンピュータ情報ページはクライアントマシンの構成に関する役に立つ情報を含んでいます。
+ページは以下のセクションに分けられます:
+::END
+$LI_DLG_ABOUT_COMP_INFO_1$=オペレーションシステム情報
+$LI_DLG_ABOUT_COMP_INFO_2$=Java Runtime情報
+$LI_DLG_ABOUT_COMP_INFO_1_1$=:  クライアントマシンのオペレーティングシステムに関する情報を表示します。
+$LI_DLG_ABOUT_COMP_INFO_2_1$=:  クライアントマシンにインストールされているJava Runtime Environmentに関する情報を表示します。
+
+$DESC_COPY_TO_CLIPBOARD$::
+また、コンピュータ情報ページには、クライアントのオペレーティングシステムとJava Runtime Environmentに関する、
+より詳細をコピーする「クリップボードへのコピー」ボタンがあります。
+この情報はFTP Voyager JVに関連する技術サポートに有用な情報となります。
+::END
+
+<!-- Help-Dlg-Prefs-General.htm -->
+$HEAD_DLG_PREFS_GENERAL$=オプション - 全般
+$DESC_DLG_PREFS_GENERAL$::
+全般ページは、FTP Voyager JVのいくつかの機能に関連した項目があります。
+これらの項目は以下の通りです:
+::END
+
+$HEAD_REMOVE_TRANSFER_FILES$=完了後に転送ペインからファイルを削除
+$DESC_REMOVE_TRANSFER_FILES$::
+このオプションが選択されるとき、転送がが完了、またはキャンセルされたとき、転送は転送ペインから自動的に削除されます。
+このオプションが有効でない場合、転送は手動で削除されるまで転送ペインに残されます。
+::END
+
+$HEAD_ADJUST_DST$=自動的にサマータイムのタイムスタンプを調整
+$DESC_ADJUST_DST$::
+このオプションを可有効にするとFTP Voyager JVはファイル日付と時刻をサマータイムが有効である1時間を自動的に調整します。
+::END
+
+$HEAD_DATE_FMT$=カスタム日付フォーマットを使用
+$DESC_DATE_FMT$::
+選択され他場合、すべてのタイムスタンプが編集ボックス内の構文で表示されます。構文は変更することができます。
+構文と形式オプションは以下の通りです。
+::END
+
+<!-- ROW_COL -->
+$OPTIONS_UI_TABLE_TEXT$=テキスト
+$OPTIONS_UI_TABLE_YEAR$=年
+$OPTIONS_UI_TABLE_MONTH$=月
+$OPTIONS_UI_TABLE_NUMBER$=番号
+$OPTIONS_UI_TABLE_0_0$=文字
+$OPTIONS_UI_TABLE_0_1$=日付、または時間要素
+$OPTIONS_UI_TABLE_0_2$=プレゼンテーション
+$OPTIONS_UI_TABLE_0_3$=例
+$OPTIONS_UI_TABLE_1_1$=年号識別子
+$OPTIONS_UI_TABLE_1_3$=AD
+$OPTIONS_UI_TABLE_2_3$=1996; 96
+$OPTIONS_UI_TABLE_3_1$=年の月
+$OPTIONS_UI_TABLE_3_3$=uly; Jul; 07
+$OPTIONS_UI_TABLE_4_1$=年の週
+$OPTIONS_UI_TABLE_5_1$=月の週
+$OPTIONS_UI_TABLE_6_1$=年の日
+$OPTIONS_UI_TABLE_7_1$=月の日
+$OPTIONS_UI_TABLE_8_1$=月の週の日
+$OPTIONS_UI_TABLE_9_1$=週の日
+$OPTIONS_UI_TABLE_9_3$=Tuesday; Tue
+$OPTIONS_UI_TABLE_10_1$=Am/pm マーカー
+$OPTIONS_UI_TABLE_10_3$=PM
+$OPTIONS_UI_TABLE_11_1$=日の時間
+$OPTIONS_UI_TABLE_12_1$=$OPTIONS_UI_TABLE_11_1$
+$OPTIONS_UI_TABLE_13_1$=am/pmの時間
+$OPTIONS_UI_TABLE_14_1$=$OPTIONS_UI_TABLE_13_1$
+$OPTIONS_UI_TABLE_15_1$=時間の分
+$OPTIONS_UI_TABLE_16_1$=分の秒
+$OPTIONS_UI_TABLE_17_1$=ミリ秒
+$OPTIONS_UI_TABLE_18_1$=タイムゾーン
+$OPTIONS_UI_TABLE_18_3$=太平洋標準時刻; PST; GMT-08:00
+$OPTIONS_UI_TABLE_19_1$=$OPTIONS_UI_TABLE_18_1$
+
+$OPTIONS_UI_NUMBER$=数字
+$OPTIONS_UI_TEXT$=テキスト
+$OPTIONS_UI_DIGIT$=桁
+
+$OPTIONS_UI_BODY_4_1$=それらの数字が正確な提示を決定するとき、通常、原型となる文字は繰り返されます。:
+
+$OPTIONS_UI_BODY_5_1$=テキスト:
+$OPTIONS_UI_BODY_5_2$::
+形式において、原型となる文字数が4以上であるなら、完全形は使用されています;そうでなければ、短い、または簡略化
+されたフォームの使用を利用することができます。構文解析において、両方のフォームは原型となる文字数と関係なく
+受け入れられます。
+::END
+
+$OPTIONS_UI_BODY_6_1$=数字:
+$OPTIONS_UI_BODY_6_2$::
+形式のために模範となる原型の文字数はケタの最小数です。そして、より短い数はこの量へのゼロパッドです。
+構文解析のために2つの隣接するフィールドを分離する必要がない場合、原型をなる文字数はは無視されます。
+::END
+
+$OPTIONS_UI_BODY_7_1$=年:
+$OPTIONS_UI_BODY_7_2$::
+形式において、年は原型となる文字数が2であるなら、先頭の二桁が省略されます;そうでなければそれは解釈れれます。＝
+::END
+
+$OPTIONS_UI_BODY_8$::
+構文解析のために原型となる文字数が2以上であるなら、桁の数に関わらず年は文字通り解釈されます。原型「mm/dd/yyyy」を
+使用して、「01/11/12」は西暦12年1月11日と構文解析されます。
+::END
+
+$OPTIONS_UI_BODY_9_1$=月:
+$OPTIONS_UI_BODY_9_2$=原型となる文字数が3以上であるなら、月は解釈されます。＝
+$OPTIONS_UI_BODY_9_3$=; さもなければ、それは解釈されます。＝
+
+$OPTIONS_UI_BODY_10_1$=現在のタイムゾーン:
+$OPTIONS_UI_BODY_10_2$=タイムゾーンは解釈されます。=
+$OPTIONS_UI_BODY_10_3$::
+名前を持つなら。グリニッジ標準時の1時のオフセットの値を表す時間帯において、以下の構文は使用されています。:
+::END
+
+$OPTIONS_UI_BODY_11_1$=GMTOffsetTimeZone:
+
+$OPTIONS_UI_BODY_12_1$=GMT
+$OPTIONS_UI_BODY_12_2$=記号
+$OPTIONS_UI_BODY_12_3$=時
+$OPTIONS_UI_BODY_12_4$=ふん
+
+$OPTIONS_UI_BODY_13_1$=記号:
+$OPTIONS_UI_BODY_13_2$=1つの
+
+$OPTIONS_UI_BODY_14_1$=時:
+
+$OPTIONS_UI_BODY_15_1$=分:
+
+$OPTIONS_UI_BODY_16_1$=桁:
+
+$OPTIONS_UI_BODY_17_1$=は0から23の間である必要があります。そして
+$OPTIONS_UI_BODY_17_2$::
+絶対に必要なものは00と59の間のそうです。形式はロケールインディペンデントです。そして、
+桁はユニコード規格の基本ラテン・ブロックから抜粋されなければなりません。
+::END
+$OPTIONS_UI_BODY_18_1$=構文解析のために
+$OPTIONS_UI_BODY_18_2$=RFC 822 タイムゾーン
+$OPTIONS_UI_BODY_18_3$=は同じく受け入れられます。
+
+$OPTIONS_UI_BODY_19_1$=RFC 822 タイムゾーン:
+$OPTIONS_UI_BODY_19_2$=形式において、RFC 822の4ケタの時間帯の形式が使用されます。:
+
+$OPTIONS_UI_RFC_1$=RFC822TimeZone:
+$OPTIONS_UI_RFC_2$=Sign
+$OPTIONS_UI_RFC_3$=TwoDigitHours
+$OPTIONS_UI_RFC_4$=Minutes
+$OPTIONS_UI_RFC_5$=TwoDigitHours:
+$OPTIONS_UI_RFC_6$=Digit Digit
+
+$OPTIONS_UI_RFC_7$=TwoDigitHours
+$OPTIONS_UI_RFC_8$=は00と23の間である必要があります。そうでなければ定義は
+$OPTIONS_UI_RFC_9$=現在のタイムゾーン
+$OPTIONS_UI_RFC_10$=構文解析のために、
+$OPTIONS_UI_RFC_11$=現在のタイムゾーン
+$OPTIONS_UI_RFC_12$=は同じく受け入れられます。
+
+$OPTIONS_UI_EXAMPLES_1_1$=例
+$OPTIONS_UI_EXAMPLES_1_2$::
+
+以下の例は日付と時間のパターンが米国ロケールでどう解釈されるかを示します。日付と時間が与えられる場合、
+2001年7月4日は太平洋標準時の米国の現地時間の12:08:56です。
+::END
+
+$OPTIONS_UI_EXAMPLE_TBL_0_0$=日付と時刻の原型
+$OPTIONS_UI_EXAMPLE_TBL_0_1$=結果
+$OPTIONS_UI_EXAMPLE_TBL_2_1$=Wed, Jul 4, '01
+$OPTIONS_UI_EXAMPLE_TBL_3_1$=12:08 PM
+$OPTIONS_UI_EXAMPLE_TBL_4_1$=PM, Pacific Daylight Time
+$OPTIONS_UI_EXAMPLE_TBL_5_1$=PM, PDT
+$OPTIONS_UI_EXAMPLE_TBL_6_1$=02001.July.04 AD 12:08 PM
+$OPTIONS_UI_EXAMPLE_TBL_7_1$=Wed, 4 Jul 2001 12:08:56 -0700
+
+$HEAD_FILE_DELETE$=ファイル削除の確認
+$DESC_FILE_DELETE$::
+このオプションが選択されると、FTP Voyager JVはファイルを削除する前に確認を求めます。
+::END
+
+$HEAD_DOWNLOAD_OVERWRITE$=上書きダウンロードと「再開」の確認
+$DESC_DOWNLOAD_OVERWRITE$::
+このオプションが選択されると、FTP Voyager JVはダウンロードする際にファイルを上書きされる前に確認を求めます。
+::END
+
+$HEAD_FILE_DELETE$=ファイル削除の確認
+$DESC_FILE_DELETE$::
+このオプションが選択されると、FTP Voyager JVはファイルを削除する前に確認を求めます。
+::END
+
+$HEAD_FOLDER_DELETE$=フォルダ削除の確認
+$DESC_FOLDER_DELETE$::
+このオプションが選択されると、FTP Voyager JVはフォルダ/ディレクトリを削除する前に確認を求めます。
+::END
+
+$HEAD_CONFIRM_LOGOUT$=アプリケーションを終了する際にログアウトを確認
+$DESC_CONFIRM_LOGOUT$::
+このオプションを選択した場合、FTP Voyager JVは、終了する際に、Serv-Uをログアウトするかを確認します。FTP Voyager JVを
+終了する際に、Serv-Uをログアウトした場合は、再びServ-Uにログインしないと管理コンソールに戻ることができません。
+またFTP Voyager JVを再開することもできません。このオプションが無効とされた場合は、FTP Voyager JVが自動的に
+確認ダイアログで行なわれた最後の動作を実行します。
+::END
+
+
+<!-- Help-Dlg-Prefs-Toolbars.htm -->
+$HEAD_DLG_PREFS_TBARS$=オプション - ツールバー
+$DESC_DLG_PREFS_TBARS$::
+オプションダイアログのツールバー・ページは、ツールバーに表示することができる利用可能なボタンを表示します。
+リスト脇のボタンを使用してツールバーのレイアウトを変えることができます。:
+::END
+$LI_DLG_PREFS_TBARS_MOVE_TO_TOP$=一番上へ移動
+$LI_DLG_PREFS_TBARS_MOVE_UP$=上へ移動
+$LI_DLG_PREFS_TBARS_MOVE_DOWN$=下へ移動
+$LI_DLG_PREFS_TBARS_MOVE_TO_BTM$=一番下へ移動
+$LI_DLG_PREFS_TBARS_MOVE_TO_TOP_1$=:  このボタンはリストの一番上へ移動します。
+$LI_DLG_PREFS_TBARS_MOVE_UP_1$=:  リストの1つ上へ移動します。
+$LI_DLG_PREFS_TBARS_MOVE_DOWN_1$=:  リストの1つ下へ移動します。
+$LI_DLG_PREFS_TBARS_MOVE_TO_BTM_1$=:  リストの一番下へ移動します。
+$DESC_DLG_PREFS_TBARS_ENABLED$=「有効」チェックボックスを使用して、表示するか、しないかを決定することができます。
+
+<!-- Help-Dlg-SyncFolders.htm -->
+$HEAD_SYNC_FOLDERS$=フォルダの同期 - 概要
+$DESC_SYNC_FOLDERS$::
+フォルダの同期は、ディレクトリとファイルの同期、またはクライアントとサーバ、サーバとクライアント間のミラーを行います。
+
+この機能は特にウェブサイトの更新に便利です。これは1つのボタンで、ファイルの追加、削除更新を迅速に行います。
+::END
+
+$DESC_SYNC_FOLDERS_LAYOUT$::
+フォルダの同期は以下の順番でレイアウトされています。:
+::END
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_1$=:  ローカルフレームは、リモートフレームが何をミラーするかのために、何が置き換えられるかについての情報を表示します。
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_2$=:  リモートフレームは、ローカルフレームが何をミラーするかのために、何が置き換えられるかについての情報を表示します。
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_3$=:  同期処理の操作、比較の実行と特定の構成オプションを含んでいます。
+
+
+<!-- Help-Dlg-SyncFolders-Results.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS$=フォルダの同期 - リザルト・ペイン（結果）
+$DESC_SYNC_FOLDERS_RESULTS$::
+リザルト・ペインは、一つのファイルシステムを他と一致させるために更新を必要とするファイルと（または）ディレクトリを表示します。
+したがって、ローカル・リザルト・ペインは、ロカールファイル・システムを一致させるために更新される必要があるファイルと（または）、
+フォルダを表示します。そして、リモート・リザルト・ペインは、ローカル・ファイル・システムを一致させるために更新される必要がある
+ファイルと（または）、フォルダを表示します。
+
+これらのペインの初期レイアウトは以下の通りです:
+::END
+
+$LI_SYNC_FOLDERS_RESULTS_1$=:  ツールバーには、実行可能な共通の動作のためのボタンがあります。
+$LI_SYNC_FOLDERS_RESULTS_2$=:  リストは反対のファイルシステムを一致させるために更新される必要があるファイルと（または）、フォルダを表示します。
+
+
+<!-- Help-Dlg-SyncFolders-Tbar.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS_TBAR$=フォルダの同期 - リザルト・ペイン - ツールバー
+$DESC_SYNC_FOLDERS_RESULTS_TBAR$::
+リザルト・ツールバーには、個々のリザルト・ペインのために実行可能な特定の動作を持ちます。
+::END
+
+$DESC_SYNC_FOLDERS_RESULTS_TBAR_1$::
+これらの動作は以下の通りです。:
+::END
+
+$HEAD_ACTION_SYNC_FOLDERS_REMOVE$=削除
+$DESC_ACTION_SYNC_FOLDERS_REMOVE$::
+リストから選択されたファイルとディレクトリを削除します。
+同期処理にこれらのファイルと（または）、ディレクトリを含めたくない場合に便利です。
+::END
+
+$HEAD_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS_DOWNLOAD$=これらの動作を実行（ダウンロード）
+$HEAD_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS_UPLOAD$=これらの動作を実行（アップロード）
+$DESC_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS$::
+同期処理を開始します。処理は、対応するリストの各ファイルとディレクトリを取って、その項目のために関連づけられる動作を実行します。
+::END
+
+
+<!-- Help-Dlg-SyncFolders-List.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS_LIST$=フォルダの同期 - リザルト・ペイン - リスト
+$DESC_SYNC_FOLDERS_RESULTS_LIST$::
+リザルト・リストは比較されているルートディレクトリのマスターコピーを一致させるために更新される必要があるファイルとディレクトリを
+表示します。
+::END
+
+$DESC_SYNC_FOLDERS_RESULTS_LIST_COLUMNS$::
+コラムは以下の通りです。:
+::END
+
+$HEAD_SYNC_COL_FILE_NAME$=ファイル、またはフォルダ
+$DESC_SYNC_COL_FILE_NAME$::
+更新されるされるファイル、またはフォルダの「相対的なファイル名」を表示します。相対的なファイル名は指定されたルート比較ディレクトリに
+基づきます。
+::END
+$DESC_SYNC_COL_FILE_NAME_2$::
+$BOLD_NOTE$:  以下のリストはは、ディレクトリを比較した際に、存在するかもしれません。:
+::END
+
+$LI_SYNC_COL_FILE_NAME_DONE_1$::
+比較ルートディレクトリは既に同期されています。これは、比較ルーティンが、比較オプションで指定された内容による異なるファイル、または
+フォルダを見つけられなかったことを意味します。
+::END
+
+$LI_SYNC_COL_FILE_NAME_ERROR_2$::
+比較ルーティンの間にエラーが発生しました。この操作に失敗する理由は幾つかあります。エラーコードの詳しい情報を必要とする場合、システム
+管理者に連絡してください。
+::END
+
+$HEAD_SYNC_COL_RESULTS$=リザルト
+$DESC_SYNC_COL_RESULTS$::
+比較の結果（リザルト）を表示します。結果は特定の基準基づきます。
+::END
+
+$LI_SYNC_COL_RESULTS_1$=ローカルになし
+$LI_SYNC_COL_RESULTS_2$=リモートになし
+$LI_SYNC_COL_RESULTS_3$=古い
+$LI_SYNC_COL_RESULTS_4$=新しい
+$LI_SYNC_COL_RESULTS_5$=同期済み
+$LI_SYNC_COL_RESULTS_6$=エラー
+
+$HEAD_SYNC_COL_ACTION$=アクション
+$DESC_SYNC_COL_ACTION$::
+ファイルがどのようなアクションを持つかを表示します。一度、同期処理は実行されます。
+::END
+
+$LI_SYNC_COL_ACTION_1$=削除
+$LI_SYNC_COL_ACTION_2$=アップロード
+$LI_SYNC_COL_ACTION_3$=ダウンロード
+
+$HEAD_SYNC_COL_LOCAL_SIZE$=ローカルサイズ
+$DESC_SYNC_COL_LOCAL_SIZE$::
+ローカルファイル、またはフォルダのサイズを表示します。
+::END
+
+$HEAD_SYNC_COL_REMOTE_SIZE$=リモートサイズ
+$DESC_SYNC_COL_REMOTE_SIZE$::
+リモートファイル、またはフォルダのサイズを表示します。
+::END
+
+$HEAD_SYNC_COL_LOCAL_DATE_MODIFIED$=ローカル日付更新日
+$DESC_SYNC_COL_LOCAL_DATE_MODIFIED$::
+ローカルファイル、またはフォルダが更新されたタイムスタンプを表示します。
+::END
+
+$HEAD_SYNC_COL_REMOTE_DATE_MODIFIED$=リモート日付更新日
+$DESC_SYNC_COL_REMOTE_DATE_MODIFIED$::
+リモートファイル、またはフォルダが更新されたタイムスタンプを表示します。
+::END
+
+$DESC_SYNC_NOTE_COL_POS$::
+$BOLD_NOTE$:  どのリザルト・ペインを参照しているかによって、最初にコラム
+(4)、(5)、(6)、および(7)を入れ替えることができます。例えば、リモート・リザルト・ペインで
+最初コラム(4)は、最初はリモートサイズ、コラム(5)はローカルサイズ、コラム(6)はローカル
+日付更新日、コラム(7)はローカル日付更新日です。
+::END
+
+
+<!-- Help-Dlg-SyncFolders-Options.htm -->
+$HEAD_SYNC_FOLDERS_OPTIONS$=フォルダの同期 - オプション・ペイン
+$DESC_SYNC_FOLDERS_OPTIONS$::
+オプション・ペインには、異なる比較結果をもたらす、特定の同期操作を調整するための設定を持ちます。
+::END
+
+$DESC_SYNC_FOLDERS_OPTIONS_2$=オプションは以下の通りです。:
+
+$HEAD_SYNC_OPTION_COMPARE_SIZE$=サイズを比較:  
+$DESC_SYNC_OPTION_COMPARE_SIZE$::
+このフラグを設定すると、比較リストにサイズの異なるファイルかフォルダを追加します。
+::END
+
+$HEAD_SYNC_OPTION_COMPARE_DATE_MODIFIED$=時刻を比較:  
+$DESC_SYNC_OPTION_COMPARE_DATE_MODIFIED$::
+このフラグを設定すると、比較リストに日付更新タイムスタンプの異なるファイルかフォルダを追加します。
+::END
+
+$HEAD_SYNC_OPTION_INCLUDE_SUBFOLDERS$=サブフォルダを含む:  
+$DESC_SYNC_OPTION_INCLUDE_SUBFOLDERS$::
+このフラグを設定すると、上記の基準に一致するフォルダに含まれるファイルとフォルダを比較リストに追加します。
+::END
+
+$HEAD_SYNC_OPTION_DELETE$=削除:  
+$DESC_SYNC_OPTION_DELETE$::
+このフラグを設定すると、相手のルートディレクトリと一致させるために削除を必要とするファイルかフォルダを追加します。
+::END
+
+$HEAD_SYNC_OPTION_PROMPT_FOR_OVERWRITE$=上書き確認プロンプト:  
+$DESC_SYNC_OPTION_PROMPT_FOR_OVERWRITE$::
+このフラグを設定すると、同期処理の間に発生する上書き確認のプロンプトを表示します。
+::END
+
+$HEAD_SYNC_OPTION_PROMPT_FOR_DELETE$=削除確認プロンプト:  
+$DESC_SYNC_OPTION_PROMPT_FOR_DELETE$::
+このフラグを設定すると、同期処理の間に発生する削除確認のプロンプトを表示します。
+::END
+
+$HEAD_SYNC_OPTION_COMPARE_BTN$=比較ボタン:  
+$DESC_SYNC_OPTION_COMPARE_BTN$::
+手動で比較リストを更新します。
+::END
+$DESC_SYNC_OPTION_COMPARE_BTN_2$::
+$BOLD_NOTE$:  上記のオプションが変更されると比較リストは自動的に更新されます。
+::END
+
+
+<!-- Help-Dlg-SaveLogin.htm -->
+$HEAD_SAVE_LOGIN$=ログオン情報を保存ダイアログ
+$DESC_SAVE_LOGIN$::
+ログオン情報の保存機能は、サーバに接続するクライアントマシン上にファイルを開くと直接サーバへ
+接続するためのファイルを保存することを許可します。これはユーザがFTP Voyager JVを開始するためにWeb
+ブラウザを通してサーバにログインする必要性を排除します。
+::END
+
+$DESC_SAVE_LOGIN_LAYOUT$::
+ダイアログレイアウトは以下の通りです。:
+::END
+
+$LI_SAVE_LOGIN_ITEM_1_1$=サーバ:  
+$LI_SAVE_LOGIN_ITEM_1_2$=接続を望むサーバを指定します。
+
+$LI_SAVE_LOGIN_ITEM_2_1$=ポート:  
+$LI_SAVE_LOGIN_ITEM_2_2$=サーバが開いている聴「パブリック」のポートを指定します。 
+$LI_SAVE_LOGIN_ITEM_2_3$::
+$BOLD_NOTE$:  「パブリック」のポートは実際のサーバが開いているポートと異なるかもしれません。
+例えば、ルータは8080のパブリックポートをサーバが開いている80のプライベートポートにマップすることができます。
+::END
+
+$LI_SAVE_LOGIN_ITEM_3_1$=言語:  
+$LI_SAVE_LOGIN_ITEM_3_2$=サーバにログインする時に使用する言語を指定します。
+
+$LI_SAVE_LOGIN_ITEM_4_1$=セキュア:  
+$LI_SAVE_LOGIN_ITEM_4_2$=使用する接続がセキュアであるかどうか指定します;HTTPに対してHTTPSプロトコル
+$LI_SAVE_LOGIN_ITEM_4_3$::
+$BOLD_NOTE$:  このフラグ切り換える際に、ポートが正しいことを確認してください。ログインを試みる際に、
+接続誤エラーに遭遇するかもしれません。
+::END
+
+$LI_SAVE_LOGIN_ITEM_5_1$=ユーザ:  
+$LI_SAVE_LOGIN_ITEM_5_2$=サーバにログインために使用するユーザ IDを指定します。
+
+$LI_SAVE_LOGIN_ITEM_6_1$=パスワード（オプション）:  
+$LI_SAVE_LOGIN_ITEM_6_2$=上で指定されるユーザIDに使用するパスワードを指定します。
+$LI_SAVE_LOGIN_ITEM_6_3$::
+$BOLD_NOTE$:  このフィールドが空白である場合、FTP Voyager JVへ入る前にパスワードの入力を促されるでしょう。
+::END
+
+$LI_SAVE_LOGIN_ITEM_7_1$=パスワードの確認:  
+$LI_SAVE_LOGIN_ITEM_7_2$=このフィールドはパスワードが正しいか確認します。
+
+$LI_SAVE_LOGIN_ITEM_8_1$=目的地パス:  
+$LI_SAVE_LOGIN_ITEM_8_2$=この起動ファイルのための「絶対」のファイル名を指定します。  
+$LI_SAVE_LOGIN_ITEM_8_3$::
+$BOLD_NOTE$: ファイル名には、"jnlp"がファイル拡張子としてなければなりません。さもなければ、Java Runtimeは、
+これがJava Webstart Fileであると認識しないでしょう。
+::END
+
+$LI_SAVE_LOGIN_ITEM_9_1$=参照:  
+$LI_SAVE_LOGIN_ITEM_9_2$::
+このボタンをクリックすると起動ファイルが作成されるローカルのフォルダを指定するためのダイアログが表示されます。
+::END
+
+$LI_SAVE_LOGIN_ITEM_10_1$=作成:  
+$LI_SAVE_LOGIN_ITEM_10_2$=クリックすると"JNLP"ファイルは「目的地パス」で指定されたファイル名で作成されます。
+$LI_SAVE_LOGIN_ITEM_10_3$::
+$BOLD_NOTE$:  ファイル拡張子は"jnlp"でなければなりません。これはJava Runtimeが適切にファイルを開くための要件です。
+::END
+
+$LI_SAVE_LOGIN_ITEM_11_1$=キャンセル:  
+$LI_SAVE_LOGIN_ITEM_11_2$=キャンセルしてダイアログを終了します。
+
+<!-- Help-Dlg-ChangePassword.htm -->
+$HEAD_CHANGE_PASSWORD$=パスワードの変更ダイアログ
+$DESC_CHANGE_PASSWORD$::
+ファイルサーバの管理者が、ユーザ自身がパスワードを変更で起用に構成するかもしれません。管理者が、ユーザ自身によるパスワード変更を許可
+している場合、FTP Voyager JVからパスワードを変更することができます。セキュリティ上の観点からパスワードを定期的に変更することはよい
+方法です。また、管理者は特定の条件をパスワードの指定に必要とさせるかもしれません。パスワードの変更がうまくいかない場合、Serv-Uの管理者へ
+確認してください。
+::END
+
+$LIST_CHANGE_PWORD$=以下の方法に従って、パスワードを変更してください。:
+$LIST_CHANGE_PWRORD_TXT$::
+<strong>ファイル</strong>メニューの下にある$IMG_BTN_CHANGE_PASSWORD$ <strong>パスワード変更</strong>をクリックしてください。これが表示できない場合、管理者はパスワード変更を許可していません。
+古いパスワードを入力してください。
+新しいパスワードを入力してください。
+確認のため新しいパスワードをもう一度入力してください。
+<strong>OK</strong> ボタンを押してパスワード変更を完了してください。
+::END
+
+$DESC_CHANGE_PASSWORD_ERRORS$::
+パスワード変更が成功しない場合、詳細なエラーメッセージにより新しいパスワードが、どのように管理者のセキュリティ要件を満たしていないかの情報を表示します。
+::END
+
+
+<!-- Help-Dlg-ActivateWindow.htm -->
+$HEAD_DLG_ACTIVATE_WINDOW$=アクティブ・ウインドウ・ダイアログ
+$DESC_DLG_ACTIVATE_WINDOW$::
+アクティブ・ウインドウ・ダイアログは、FTP Voyager JVで利用可能なペインのリストを持っています。それはすべての
+$LINK_LOCAL_REMOTE_PANES$と$LINK_TRANSFER_PANE$を含んでいます。アクティブにしたいフレームを選択して、「OK」のボタンを押してください。
+このフレームは、FTP Voyager JVのメインウィンドウの前部に移動し、$LINK_ACTIVE_PANE$になります。
+::END
+
+
+<!-- Help-OtherInfo-ActivePane-Overview.htm -->
+$HEAD_ACTIVE_PANE_OVERVIEW$=アクティブペインの概要
+$DESC_ACTIVE_PANE_OVERVIEW$::
+アクティブペインは、それを囲む異なった色によって、特定されます。それはすべてのメニューとキーボード入力を受け取ります。
+
+以下の例では、$LINK_LOCAL_LIST_PANE$はアクティブペインです。
+::END
+
+
+<!-- Help-OtherInfo-DockingFramework-Overview.htm -->
+$HEAD_DOCKING_FRAMEWORK_OVERVIEW$=収納フレームワークの概要
+$DESC_DOCKING_FRAMEWORK_OVERVIEW$::
+収納フレームワークは、アプリケーションの全体の外観を変更することができます。これは、ユーザにとって、より自身の使用にあった
+レイアウトを作成することができます。また、収納フレームワークは、複数のフレームを利用することによって同じファイルシステムの
+他のパーツを参照することができます。フローティング、格納、自動隠す、タブ持つインタフェースでフレームを設計することができます。
+また、アプリケーションのスキンを変更することもできます。メインメニューの下でスタイルを選択することによって、スキンを変更
+することができます。
+::END
+
+$DESC_DOCK_DRAG_SPOTS$::
+以下のイメージは、フレームのレイアウトを示します。
+::END
+
+
+<!-- Help-OtherInfo-NavigatingDirs.htm -->
+$HEAD_NAVIGATING_DIRS$=ディレクトリのナビゲート
+$DESC_NAVIGATING_DIRS$::
+FTP Voyager JVは転送をするため必要とするファイルとディレクトリを見つけるためにローカル、そしてリモートのファイルシステムに
+ナビゲートするために幾つかの方法をサポートします。以下に記載されているのは、最も一般的なディレクトリナビゲーション方法です。
+::END
+
+$HEAD_NAV_MOUSE_KEY$=マウスとキーボードによるナビゲーション
+$DESC_NAV_MOUSE_KEY$::
+マウスかキーボードを使用することで現在のディレクトリを変更することができます。以下の方法の1つを使用してください。:
+::END
+$DESC_NAV_MOUSE_KEY_LIST_1$=$LINK_LIST_PANE$ から:
+$LI_NAV_MOUSE_KEY_LIST_1$::
+キーボードを使用して、必要なフォルダを選択してください。そして<strong>Enter キー</strong>を押してください。
+マウスの左クリックで必要なフォルダーを選択してください。そして<strong>Enter キー</strong>を押してください。
+マウスで必要なフォルダをダブルクリックしてください。
+マウスを使用して、必要なフォルダーを右クリックしてください。そして、<strong>開く</strong>オプションを選択してください。
+::END
+$DESC_NAV_MOUSE_KEY_TREE_1$=$LINK_TREE_PANE$ から:
+$LI_NAV_MOUSE_KEY_TREE_1$::
+キーボードを使用して目的のフォルダを選択してください。
+マウスを使用して左クリックして目的のフォルダを選択してください。
+マウスを使用して目的のフォルダを右クリックしてください。  $BOLD_NOTE$:  これは選択したフォルダを自動的に開きます。
+::END
+
+$HEAD_OI_CRUMB_BAR$=ナビゲーションバー
+$DESC_OI_CRUMB_BAR$::
+$LINK_CRUMB_BAR$には、ディレクトリを開く多くの方法があります。以下の方法の1つを使用してください。:
+::END
+$LI_OI_CRUMB_BAR_1$::
+"$LINK_CRUMB$" ボタンをクリックしてください。
+それぞれの"$LINK_CRUMB$"ボタンの横でドロップダウンをクリックして、その特定のディレクトリのコンテンツを表示してください。そして、ドロップダウンからフォルダを選択してください。
+"$LINK_CRUMB$"ボタンと""$LINK_CRUMB_HISTORY$""ボタンの間でクリックして、$LINK_ABSOLUTE_PATH_MODE$を始めてください。次に、編集フィールドにフルパスを入力してください。そして「Enter」キーを押してください。
+$LINK_CRUMB_HISTORY$ボタンをクリックして、以前のワーキングディレクトリのドロップダウンを表示して、リストからそれらの1つを選択してください。
+::END
+
+$HEAD_NAV_HISTORY$=ナビゲーション履歴
+$DESC_NAV_HISTORY$::
+ローカルとリモートペインはそれぞれ独立した操作履歴を持ちます。以前に参照した場所へのアクセスを提供する、操作履歴のために利用できる
+ボタンが2つツール場にあります。：
+::END
+$DESC_NAV_HISTORY_LIST$::
+$IMG_BUTTON_BACK$ <strong>戻る</strong>ボタンをクリックすると、アクティブなペインの現在のディレクトリは操作履歴にある前の場所へ変更されます。
+$IMG_BUTTON_FORWARD$ <strong>進む</strong>ボタンをクリックすると、アクティブなペインの現在のディレクトリは、操作履歴から次の場所へ変更されます。
+::END
+$DESC_NAV_HISTORY_CONTD$::
+両方のボタンは特定のディレクトリへのナビゲーションを可能にするため、右側にある矢印をクリックすることにより保存されている履歴から直接、
+以前に参照されたディレクトリのリストを利用することができます。操作履歴がない場合は、ボタンは利用することができません。
+::END
+
+$HEAD_NAV_UP_DIR$=一つ上へ
+$DESC_NAV_UP_DIR$::
+ツールバーで<strong>一つ上へ</strong>ボタンをクリックすると、アクティブなペインの現在のディレクトリは上位に位置する親ディレクトリへ変更されます。
+::END
+
+
+<!-- Help-OtherInfo-ManagingDirs.htm -->
+$HEAD_MANAGING_DIRS_AND_FILES$=ディレクトリとファイルの管理
+$DESC_MANAGING_DIRS_AND_FILES$::
+ディレクトリはファイルと他のフォルダを保存するのに使用することができるフォルダです。ディレクトリを作成すると、それはディレクトリを削除している間、
+同様のファイルを1つの場所に格納するのがそのコンテンツのすべてに伴うファイルシステムからそれを取り除くのが可能にします。また、必要であるときに、
+ディレクトリを改名することができます。FTP Voyager JVのディレクトリとファイルを管理するには、以下の指示を使用してください。:
+::END
+
+$HEAD_CREATE_DIRS$=ディレクトリの作成
+$DESC_CREATE_DIRS$::
+適切なペインのツールバーで<strong>新規ディレクトリ</strong>ボタンをクリックして、新しいディレクトリを作成してください。
+また、ディレクトリを作成するためのオプションは<strong>ファイル</strong>メニュー、または右クリックメニューからも利用可能です。
+
+すぐにローカルペインで新しいフォルダを作成すると、新しいエントリはディレクトリリストに追加されます。デフォルト名が提供されます。
+(編集ボックスで新しい名前を入力して、<strong>Enter</strong>を押すか、クリックすることによって、編集できます)
+
+リモートペインで新しいフォルダを作成すると、必要なフォルダ名を入力できる新しいダイアログが表示されます。
+名前を新しいフォルダに入力した後に、それをリモートファイルシステムに作成するように<strong>Enter</strong>、または<strong>OK</strong>をクリックしてください。
+::END
+
+$HEAD_DEL_DIRS_AND_FILES$=ディレクトリとファイルの削除
+$DESC_DEL_DIRS_AND_FILES$::
+キーボードかマウスを使用使用して必要な項目を選択することによって、複数のファイルとディレクトリを削除することができます。選択完了後に適切なツールバー、
+<strong>ファイル</strong>メニュー、または右クリックメニューで<strong>削除</strong>オプションを選択してください。
+また、キーボードで<strong>Delete</strong>キーによりこれを行なうことができます。
+
+あなたの$LINK_PREF_PAGE_GENERAL$外観で、削除を行なう際の確認動作を設定できます。この動作は元に戻すことができないので項目を削除するとき、
+警告を使用してください。
+::END
+
+$HEAD_RENAME_DIR_OR_FILE$=ディレクトリ、またはファイル名の変更
+$DESC_RENAME_DIR_OR_FILE$::
+ファイルかディレクトリの名前を変更するには、最初に、キーボードかマウスを使用して変更を望む項目を選択してください。そして右クリックメニュー、
+<strong>ファイル</strong>メニューで<strong>名前の変更</strong>オプションを選択、またはキーボード<strong>F2</strong>キー押してください。
+そして、選択された項目の名前は編集ボックスとなります。新しい名前の入力が完了したら、キーボードで<strong>Enter</strong>を押すか、
+完了したフィールドの外をクリックして名前の変更を完了してください。<strong>Escape</strong>キーを使用して名前の変更操作をキャンセルしてください。
+::END
+
+$HEAD_REFRESH_DIR$=ディレクトリリストの更新
+$DESC_REFRESH_DIR$::
+現在のローカル、またはリモートのワーキングディレクトリの内容がFTP Voyager JVの外部から変更された場合、手動で変更を適用するためにリスト
+アップされているディレクトリを更新する必要があります。これは<strong>ツールバー、<strong>表示</strong>メニュー、右クリックメニューの
+<strong>更新</strong>ボタンをクリックする、または<strong>F5</strong>キーで行なうことができます。
+::END
+
+$HEAD_PROPERTIES_DIRS_AND_FILES$=ディレクトリ、またはファイルの詳細情報の表示
+$DESC_PROPERTIES_DIRS_AND_FILES$::
+FTP Voyager JVを通してディレクトリとファイルに関する詳細な情報にアクセスすることができます。選択した項目に関する詳細な情報に関しては、
+<strong>ファイル</strong>か右クリックメニューで<strong>プロパティ</strong>オプションをクリック、または<strong>Alt+Enter</strong> を
+押すことによって表示できます。
+::END
+
+$HEAD_OI_COPY_MOVE_FILES$=ディレクトリとファイルのコピーと移動
+$DESC_OI_COPY_MOVE_FILES$::
+同じファイルシステム上で他の位置にディレクトリとファイルをコピーするか、または移動することができます。コピー、または移動したい
+ディレクトリ、またはファイルを選択してください。クリックして、選択されたファイルを同じファイルシステムの$LINK_LIST_PANE$、
+または$LINK_TREE_PANE$へドラッグしてください。目的のディレクトリの上でマウスボタンを離して、操作を完了してください。
+$BOLD_NOTE$:左クリックドラッグコピー操作を開始します。右クリックのドラッグはマウスボタンを放した後にポップアップメニューオプション
+を表示します。
+::END
+
+
+<!-- Help-OtherInfo-TransferringFiles.htm -->
+$HEAD_TRANSFERRING_FILES$=ファイルの転送
+$DESC_TRANSFERRING_FILES$::
+FTP Voyager JVは同時に、Serv-Uファイルサーバからのファイルをダウンロード、Serv-Uファイルサーバへファイルをアップロードすることができます。
+
+クライアントとサーバ間の転送を行なう以下の幾つかの方法があります。
+::END
+
+$DESC_OI_NOTE_DND_VARIATIONS$=詳しい情報に関して<strong>ドラッグ・アンド・ドロップ<strong>をご参照ください。
+
+$HEAD_OI_DOWNLOADING$=ファイルとディレクトリのダウンロード
+$DESC_OI_DOWNLOADING$::
+サーバからファイルをダウンロードするには、以下の指示に従ってください。:
+::END
+$LI_OI_DOWNLOADING_1$::
+サーバからクライアントへ転送したいファイルかディレクトリを選択してください。
+これは以下のどれかのステップにより行なうことができます。:
+::END
+$LI_OI_DOWNLOADING_1_1$::
+"リモート - $LINK_LIST_PANE$"からファイル、またはディレクトリを強調してください。
+::END
+$LI_OI_DOWNLOADING_1_2$::
+"リモート - $LINK_TREE_PANE$"からディレクトリを強調してください。
+::END
+$LI_OI_DOWNLOADING_2$::
+転送を開始してください。
+::END
+$LI_OI_DOWNLOADING_2_1$::
+ファイル、またはは、ディレクトリを"Local - $LINK_LIST_PANE$"、または"Local - $LINK_TREE_PANE$"にクリックして、
+ドラッグしてください。そして、それらを目的のディレクトリで離してください。マウスが目的の上に位置すると、
+目的のディレクトリは強調されます。
+::END
+$LI_OI_DOWNLOADING_2_2$::
+$LINK_DOWNLOAD_BTN$をクリックして、ファイルを"ローカル - $LINK_LIST_PANE$"のワーキング・ディレクトリに転送してください。
+::END
+
+$HEAD_OI_UPLOADING$=ファイルとディレクトリのアップロード
+$DESC_OI_UPLOADING$::
+クライアントからサーバまでファイルをアップロードするには、以下の指示に従ってください。:
+::END
+$LI_OI_UPLOADING_1$::
+クライアントからサーバまで転送を望むファイルかディレクトリを選択してください。以下のステップの1つにより、アップロードを
+行なうことができます。:
+::END
+$LI_OI_UPLOADING_1_1$::
+"ローカル - $LINK_LIST_PANE$"からファイル、またはディレクトリを強調させてください。
+::END
+$LI_OI_UPLOADING_1_2$::
+"Local - $LINK_TREE_PANE$"からディレクトリを強調してください。
+::END
+$LI_OI_UPLOADING_2$::
+転送を開始します。
+::END
+$LI_OI_UPLOADING_2_1$::
+ファイル、またはディレクトリを"Remote - $LINK_LIST_PANE$"か"Remote - $LINK_TREE_PANE$"にクリックして、ドラッグしてください。
+そして、それらを目的のディレクトリで離してください。マウスがディレクトリの上に位置すると、目的のディレクトリは強調されます。
+::END
+$LI_OI_UPLOADING_2_2$::
+$LINK_UPLOAD_BTN$をクリックして、ファイルを"リモート - $LINK_LIST_PANE$"のワーキング・ディレクトリに転送してください。
+::END
+
+$HEAD_DRAG_DROP_VARIATIONS$=ドラッグ・アンド・ドロップの種類
+$DESC_DRAG_DROP_VARIATIONS$::
+ドラッグアンドドロップには幾つかの種類があります。:
+::END
+$LI_DND_VARIATION_1$=左クリックとドラッグ
+$LI_DND_VARIATION_1_1$=:  目的のディレクトリにソースファイルとディレクトリをコピーします。
+$LI_DND_VARIATION_2$=右クリックとドラッグ
+$LI_DND_VARIATION_2_1$=:  ソースファイルがいったん目的のディレクトリに離されると、ポップアップメニューは2つのオプションと共に現れます。:
+$LI_DND_VARIATION_2_1_1$=ファイルの移動
+$LI_DND_VARIATION_2_1_2$=ファイルのコピー
+$LI_DND_VARIATION_2_1_1_1$::
+:  目的のディレクトリにソースファイルとディレクトリを移動します。これは目的のソースにファイルをコピーしてコピー元のファイルを削除するすることで行なわれます。
+::END
+$LI_DND_VARIATION_2_1_2_1$=:  目的のディレクトリにソースファイルとディレクトリをコピーします。
+
+
+<!-- Help-OtherInfo-ManagingTransfers.htm -->
+$HEAD_MANAGE_TRANSFERS$=転送の管理
+$DESC_MANAGE_TRANSFERS$::
+転送が発生すると、転送の状態に関する詳細な情報が転送ペインに置かれます。
+::END
+
+
+<!-- Help-OtherInfo-FAQs.htm -->
+$OTHER_INFO_FAQS_MAIN_HEADER$=よくある質問とその答え
+
+$QUESTION_WEL_MSG_DLG$=ウェブ・ブラウザでログインした後にWelcomeメッセージは表示されるのでしょうか?
+$ANSWER_WEL_MSG_DLG$::
+Serv-Uのユーザアカウントでは、Welcomeメッセージを受け取る設定を行なうことができます。ユーザアカウントで、この設定がされている場合、
+ファイルサーバにログインした後、Welcomeメッセージが表示されます。
+::END
+
+$QUESTION_NEED_JRT$::
+なぜFTP Voyager JVを使用するにはJava Runtimeをインストールする必要があるのですか?
+::END
+$ANSWER_NEED_JRT$::
+FTP Voyager JVはJavaプログラミング言語で書かれています。Javaはインタープリタ型言語であるので、Java RuntimeがFTP Voyager JVを
+実行するために必要となります。最新の$LINK_JAVA_RUNTIME$はこちらから入手することができます。
+::END
+
+$QUESTION_CERTIFICATE$::
+なぜFTP Voyager JVを実行するために証明書を受け入れなければならないのでしょうか?
+::END
+$ANSWER_CERTIFICATE$::
+FTP Voyager JVは、ファイルをServ-Uにアップロードして、ダウンロードするためにローカルファイルシステムへの完全なアクセスを必要とします。
+これらの権限を要求するJavaアプリケーションは証明書でデジタル署名されていなければなりません。Comodoによって提供されたRhino Software, Inc.の
+開発者証明書、信用された証明権限を使用することでFTP Voyager JVは署名されます。これはFTP Voyager JVがRhino Software, Inc.の本物の製品であり、
+Serv-Uと共にデータを転送するために目的のシステムにアクセスするのを許可することが安全であることを通知します。
+::END
+
+$QUESTION_PREFERRED_CLIENT_1$::
+Serv-Uへログインした後、自動的にFTP Voyager JVを開始する方法はありますか?
+::END
+$ANSWER_PREFERRED_CLIENT_1$::
+はい。Serv-Uの管理者へ連絡を取り、アカウントでFTP Voyager JVが<strong>デフォルトWebクライアント</strong>として設定されるよう管理者へ
+依頼してください。
+::END
+
+$QUESTION_PREFERRED_CLIENT_2$::
+ログインした後にウェブクライアントを選択するように戻す方法はありますか?
+::END
+$ANSWER_PREFERRED_CLIENT_2$::
+はい。Serv-Uの管理者へ連絡を取り、アカウントでWebクライアントが<strong>デフォルトWebクライアント</strong>として設定されるよう管理者へ
+依頼してください。
+::END
+
+$QUESTION_LIST_DIR_FAILED$::
+リモートディレクトリ・リストはなぜ失敗しますか?
+::END
+$ANSWER_LIST_DIR_FAILED$::
+FTP Voyager JVが、リモートディレクトリ・リストを実行することができない幾つかの理由として以下のようなことが考えられます。:
+::END
+$ANSWER_LIST_DIR_FAILED_LIST$::
+Serv-U File Serverが動作していない
+Serv-U File Serverがオンラインではない
+FTP Voyager JVとServ-U ファイル・サーバのセッションが切断された。
+ユーザアカウントは、リモートディレクトリを参照する権限がない。
+::END
+$ANSWER_LIST_DIR_FAILED_CONTD$::
+FTP Voyager JVを一旦閉じて、再度Serv-Uへのログインをお試しください。まだリモート・ディレクトリ・リストを実行できていない場合、
+Serv-U管理者に連絡し、問題となっているディレクトリの権限を確認してください。
+::END
+
+$QUESTION_PERMISSIONS$::
+なぜディレクトリの作成、ディレクトリ名の変更、ファイルのアップロード、ダウンロードができないのですか？
+::END
+$ANSWER_PERMISSIONS$::
+Serv-U管理者は、特定の権限を各ユーザに割当てることができます。どんなユーザ・アカウントの操作範囲もこれらの権限により制限されることができます。
+これらの操作の1つを実行使用とした際にエラーが発生した場合、その動作を実行する権限がないことを示すエラーダイアログが表示されるでしょう。
+これらの操作を実行する必要がある場合、Serv-U管理者に連絡してください。
+::END
+
+$QUESTION_BROWSER_FAIL_ON_LOGOUT$::
+ブラウザは、いつFTP Voyager JVをログアウトさせるかをServ-Uへ伝えないのでしょうか?
+::END
+$ANSWER_BROWSER_FAIL_ON_LOGOUT$::
+FTP Voyager JVとブラウザは開始されると、Serv-Uが対応するクライアントと交信するのに使用するのと同じセッションIDを共有します。
+したがって、FTP Voyager JVをログアウトさせるなら、それはもはや開始されなかったブラウザはServ-Uに有効な接続を持っています。
+新しい接続をServ-Uに証明するために再びブラウザを通してログインしなければならないでしょう。
+::END
+
+$QUESTION_CAN_NOT_LOGOUT$::
+なぜServ-Uをログアウトすることができませんか?
+::END
+$ANSWER_CAN_NOT_LOGOUT$::
+FTP Voyager JVはServ-Uをログアウトさせることができます。FTP Voyager JVが終了する際、Serv-Uをログアウトさせることができるオプションが
+<strong>オプション</strong> の$LINK_HELP_PREF_CONFIRM$タブにあります。
+::END
+
+$QUESTION_JRT_NETWORK_SETTINGS$::
+マシンで複数のブラウザを使用している場合、FTP Voyager JVを両方のブラウザを使用することができますか?
+::END
+$ANSWER_JRT_NETWORK_SETTINGS$::
+はい。FTP Voyager JVを開始するために、同時に両方のブラウザを使用することができます。しかし、Java Runtimeは「デフォルト」ブラウザのプロキシ設定を
+使用するだけであることに注意してください。例えば、デフォルト・ブラウザがインターネット・エクスプローラである場合、それがMozilla Firefoxで
+開始されたとしても、FTP Voyager JVはインターネット・エクスプローラのプロキシ設定を使用します。
+::END

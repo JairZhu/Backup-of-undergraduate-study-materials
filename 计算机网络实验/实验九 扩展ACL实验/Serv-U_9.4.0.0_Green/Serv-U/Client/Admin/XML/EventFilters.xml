@@ -1,0 +1,16 @@
+%PRIV_DOMAIN_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<filters>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <filter listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% <RuleName>%CVarRule.%LIST_ID%.RuleName%</RuleName>
+%ADD_LIST_STRING% <Description>%CVarRule.%LIST_ID%.Description%</Description>
+%ADD_LIST_STRING% <Logic>%CVarRule.%LIST_ID%.Logic%</Logic>
+%ADD_LIST_STRING% <Enabled>%CVarRule.%LIST_ID%.Enabled%</Enabled>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING%</filter>
+%CSUEvent.%ID%.VarRule.List%
+</filters>
+<listresult>%LIST_RESULT%</listresult>
+</response>

@@ -1,0 +1,20 @@
+%PRIV_DOMAIN_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<command>
+<var name="ObjectID" val="%ID%" />
+<var name="Enabled" val="%CFTPCommand.%ID%.Enabled%" />
+<var name="IncludeRespCodesInMsgFiles" val="%CFTPCommand.%ID%.IncludeRespCodesInMsgFiles%" />
+<var name="PrimaryMessageFilePath" val="%CFTPCommand.%ID%.PrimaryMessageFilePath%" />
+<var name="SecondaryMessageFilePath" val="%CFTPCommand.%ID%.SecondaryMessageFilePath%" />
+<var name="Style" val="%CFTPCommand.%ID%.Style%" />
+<var name="AllowStyleChange" val="%CFTPCommand.%ID%.AllowStyleChange%" />
+<var name="FullPathWithFileParam" val="%CFTPCommand.%ID%.FullPathWithFileParam%" />
+<var name="AllowMDTMChangeTime" val="%CFTPCommand.%ID%.AllowMDTMChangeTime%" />
+<var name="BlockFutureTime" val="%CFTPCommand.%ID%.BlockFutureTime%" />
+<var name="ListDirs" val="%CFTPCommand.%ID%.ListDirs%" />
+<var name="ListEmptyDir" val="%CFTPCommand.%ID%.ListEmptyDir%" />
+<var name="BlockFXP" val="%CFTPCommand.%ID%.BlockFXP%" />
+<var name="IncRespCodeAllLines" val="%CFTPCommand.%ID%.IncRespCodeAllLines%" />
+<var name="UTF8Default" val="%CFTPCommand.%ID%.UTF8Default%" />
+<var name="CreateParent" val="%CFTPCommand.%ID%.CreateParent%" />
+</command>

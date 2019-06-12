@@ -1,0 +1,516 @@
+﻿// Serv-U_RU.str - contains Russian string definitions for the Serv-U RES resource files
+//
+// Strings entered in this file must be one per line and in the format of:
+// $RSIDS_SOME_STRING_NAME$=Some string value
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup dialog
+
+// upgrade notice strings
+$RSIDS_UPGRADENOTICE_TITLE$=Setup - Serv-U
+$RSIDS_UPGRADENOTICE_BACKUP$=Предыдущая установка Srev-U успешно сохранена в следующей папке:
+$RSIDS_UPGRADENOTICE_IMPORTED$=Импортирована следующая информация:
+$RSIDS_UPGRADENOTICE_IMPORT_INFO$=%d домен(ов), %d аккаунт(ов), %d групп(ы)
+
+// old reggie strings
+$RSIDS_OLDREGGIE_TITLE$=Serv-U - Установка
+$RSIDS_OLDREGGIE_INVALID$=Текущий регистрационный ключ недействителен для этой версии, возможно из-за того что истек период защиты обновлений.\n\nДля продления периода защиты обновлений щелкните здесь:
+$RSIDS_OLDREGGIE_CUSTOMER_SUPPORT$=http://www.RhinoSoft.com/customer/
+$RSIDS_OLDREGGIE_WARNING$=Если вы продолжите установку, Serv-U станет незарегистрированным и многие возможности станут недоступны.  Настоятельно рекомендуется прекратить установку.
+$RSIDS_OLDREGGIE_INSTRUCTIONS$=Для отмены установки щелкните кнопку Отмена.  Для продоления щелкните Далее.
+
+// beta warning strings
+$RSIDS_BETAWARNING_TITLE$=Serv-U - Установка
+$RSIDS_BETAWARNING_WARNING$=Вы устанавливаете бета-версию Serv-U.  Бета-версии Serv-U необходимо рассматривать как развивающиеся и с пониманием того, что они могут содержать серьезные ошибки.
+$RSIDS_BETAWARNING_CEASE$=Эта программа прекратит работать %d после даты сборки.  Смотрите журнал сервера для подробностей.
+$RSIDS_BETAWARNING_CONTINUE$=Продолжением установки вы подтверждаете, что осознаете риск, который возникает при использовании Бета-версии.
+$RSIDS_BETAWARNING_INSTRUCTIONS$=Для отмены установки щелкните кнопку Отмена.  Для продоления щелкните Далее.
+$RSIDS_BETAWARNING_BUILT$=Собрана:
+$RSIDS_BETAWARNING_EXPIRES$=Истекает:
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup string table
+
+IDS_OLDREGGIE_COMMENT=Ознакомьтесь со следующей информацией о вашем регистрационном ID.
+IDS_OLDREGGIE_HEADER=Неверный регистрационный ID
+IDS_SERVER_SECURITY_REQD=Serv-U 6 можно запустить без каких-либо нестроек безопасности.  Эта опция была упразднена.
+IDS_DIR_CACHE_OBSOLETE=Функция кэширования директорий в Serv-U 6 является устаревшей.  Serv-U 8 осуществляет листинг директорий в отдельном потоке.
+IDS_SEND_RECV_BUFFERS=В настоящее время буфер приема и передачи в Serv-U рассчитывается автоматически для достижения максимальной эффективности передачи данных.
+IDS_LINKS_DEPRECATED=Создание ярлыков в стиле UNIX больше не поддерживается в Serv-U .  Вместо этого используются Виртуальные Пути.
+IDS_NO_GROUP_ADMIN=Привилегия администрирования групп удалена из Serv-U 8.  Аккаунты с такой привилегией больше не имеют административных прав.
+IDS_SHUTTING_DOWN=Остановка Serv-U...
+IDS_UPDATING_DATA=Обновление файлов данных...
+IDS_BACKING_UP=Сохранение настроек...
+
+IDS_CHECKING_REGGIE=Проверка регистрационного ID...
+IDS_UPNP_DISCOVER=Ожидание обнаружения UPnP...
+IDS_UN_HEADER=Замечания по обновлению
+IDS_UN_COMMENT=Ознакомьтесь со следующими замечаниями, которые былы записаны во время импортирования данных в Serv-U.
+IDS_TRAY_PASSWORD_SET=Консоль управления Serv-U запросит тот же пароль, который использовался в предыдущей версии Serv-U.
+IDS_LOCK_IN_HOME_CHANGE=Предыдущие версии отображали домашнюю директорию пользователя как "/" если пользователь не блокировался в домашней директории.  Эти настройки (RootIsDrives) можно изменить на серверном, доменном, групповом или пользовательском уровне.
+IDS_ODBC_DOMAIN_UPGRADED=Пользователи и группы домена в ODBC были скопированы в новые таблицы и колонки в формате сохранения Serv-U 8.  Параметры шаблонов SQL строк установлены по умолчанию.  Оригинальные данные НЕ удалены из базы данных!
+
+IDS_BETA_HEADING=Установка Бета-версии Serv-U
+IDS_BETA_COMMENT=Ознакомьтесь с важной информацией о данной сборке Serv-U.
+IDS_MSG_TAGS_CHANGED=Изменены переменные сообщений из Serv-U .   Переменные должны начинаться с символа "$" вместо "%".  Если вы используете файлы сообщений, необходимо вручную отредактировать переменные.
+
+/////////////////////////////////////////////////////////////////////////////
+// password recovery message strings
+IDS_PWDREC_SUBJECT=Информация о вашем новом аккаунте
+IDS_PWDREC_MESSAGE=Привет$SpaceFullName,\n\nКто-то затребовал ваши данные для входа:\n\nЛогин:\t$Name\nПароль:\t$Password\n\nЕсли у вас имеются какие-либо вопросы, обратитесь к вашему сисадмину.\nСохраняйте данную информацию в тайне, так как\nона содержит ваши личные данные на этом сервере.\n\nСпасибо!
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES dialog
+
+// theme editor strings
+$RSIDS_THEMEEDITOR_TITLE$=Редактор Тем
+$RSIDS_THEMEEDITOR_DESC$=Редактор тем Serv-U позволяет вам определить, как Трей-Агент Serv-U действует в системном трее.  Используйте меню Файл для Открытия и сохранения тем.
+$RSIDS_THEMEEDITOR_NAME$=&Название:
+$RSIDS_THEMEEDITOR_ICON_LISTS$=&Список иконок:
+$RSIDS_THEMEEDITOR_EDIT$=&Правка...
+
+// icon list strings
+$RSIDS_ICONLIST_TITLE$=Список Иконок
+$RSIDS_ICONLIST_DESC$=Отображаемые ниже иконки служат для анимирования выбранного состояния Serv-U.  Задайте путь к файлу иконки и длительность отображения для создания свое собственной анимации.
+$RSIDS_ICONLIST_ICONS$=&Иконки:
+$RSIDS_ICONLIST_ADD$=&Добавить...
+$RSIDS_ICONLIST_EDIT$=&Правка...
+$RSIDS_ICONLIST_DELETE$=&Удалить
+$RSIDS_ICONLIST_MOVE_UP$=Поднять вверх
+$RSIDS_ICONLIST_MOVE_DOWN$=Опустить вниз
+$RSIDS_ICONLIST_CLOSE$=&Закрыть
+$RSIDS_ICONLIST_INFO$=Размер иконок должен быть 16x16 пикселей, поддерживается большинство основных форматов.
+
+// icon dialog strings
+$RSIDS_ICON_TITLE$=Иконки
+$RSIDS_ICON_OK$=OK
+$RSIDS_ICON_CANCEL$=Отмена
+$RSIDS_ICON_FILE_PATH$=&Путь к файлу картинки:
+$RSIDS_ICON_DURATION$=&Продолжительность:
+$RSIDS_ICON_TIME_INFO$=(миллисекунд; 1000 миллисекунд = 1 секунда)
+$RSIDS_ICON_BROWSE$=&Поиск...
+$RSIDS_ICON_INFO$=Файл картинки может быть любого распознаваемого Windows формата.  Рекомендованный размер 16x16 пикселей.  Все картинки уменьшаются до 16х16 когда отображаются в системном трее.
+
+// managment console strings
+$RSIDS_MANAGMENTCONSOLE_TITLE$=Консоль Управления Serv-U
+
+// warn esc strings
+$RSIDS_WARNESC_TITLE$=Включена Расширенная Конфигурация Безопасности Интернета для Windows
+$RSIDS_WARNESC_OK$=OK
+$RSIDS_WARNESC_CANCEL$=Отмена
+$RSIDS_WARNESC_DONT_WARN$=&Не показывать это сообщение снова.
+$RSIDS_WARNESC_ENABLED$=На этом компьютере включена "Расширенная Конфигурация Безопасности Интернета (ESC)" от Майкрософт.
+$RSIDS_WARNESC_TROUBLESHOOT$=Для нормального функционирования Консоли Управления Serv-U вам может понадобится доп. настройка системы.  Если Консоль управления "зависает", попробуйте выполнить следующие действия:
+$RSIDS_WARNESC_ADD$=* Добавьте "http://localhost" и/или "http://127.0.0.1" в Надежные Узлы через Панель Управления в "Свойства Интернета | Безопасность" .
+$RSIDS_WARNESC_DISABLE$=* Отключите"Расширенную Конфигурацию безопасности MSIE" через Панель Управления в "Установка и Удаление программ | Установка компонентов Windows".
+$RSIDS_WARNESC_REBOOT$=Каждое из этих решений может потребовать перезагрузку вашего компьютера.  Майкрософт предлагает просто закрыть все запущенные копии MSIE перед изменениями,  однако мы считаем, что перезагрузка будет более эффективна.
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES menu
+
+// file strings
+$RSIDS_FILE_FILE$=&Файл
+$RSIDS_FILE_OPEN$=&Открыть...
+$RSIDS_FILE_SAVE$=&Сохранить
+$RSIDS_FILE_SAVE_AS$=С&охранить как...
+$RSIDS_FILE_EXPORT$=&Экспорт...
+$RSIDS_FILE_IMPORT$=Импорт...
+$RSIDS_FILE_CLOSE$=&Закрыть
+
+// help strings
+$RSIDS_HELP_HELP$=&Помощь
+$RSIDS_HELP_MORE_THEMES$=&Больше тем...
+$RSIDS_HELP_SHARE_THEME$=&Расшартить тему...
+$RSIDS_HELP_ABOUT$=&О Serv-U Tray...
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES string table
+
+IDS_SERVICE_DESC=Предоставляет файловые сервисы и позволяет удаленным FTP, SSH, и веб(HTTP) клиентам подключаться к этом компьютеру.
+IDS_SUEXE_SERVICE_DESC=Предоставляет FTP сервисы и позволяет удаленным FTP клиентам подключаться к этому компьютеру
+IDS_ON=вкл
+IDS_OFF=выкл
+IDS_BLANK= 
+IDS_SSH_CHANGE_PASSWORD_PROMPT=Введите новый пароль
+
+IDS_EVENT=Событие
+IDS_USER_WELCOME_MESSAGE=Пользовательское приветствие
+IDS_DATA1_SUEVENT_ID_USER_LOGIN=Пользователь "$Name" подключился ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGIN=Поключение к $IP ($IPName)\n$UThisName активных сессий\n$UserSessions24H входов за последние 24 часа
+IDS_DATA1_SUEVENT_ID_USER_LOGOUT=Пользователь "$Name" отключился ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGOUT=IP: $IP ($IPName)\n$UThisName активных сессий осталось\n$UserSessions24H входов за последние 24 часа
+IDS_DATA1_SUEVENT_ID_USER_LOGIN_FAILURE=Неверная $Protocol попытка входа пользователя "$Name"
+IDS_DATA2_SUEVENT_ID_USER_LOGIN_FAILURE=IP: $IP ($IPName)
+IDS_DATA1_SUEVENT_ID_USER_ADDED=Информация о вашем новом аккаунте
+IDS_DATA2_SUEVENT_ID_USER_ADDED=Добро пожаловать! Ваш аккаунт успешно создан. Ваши данные для входа:\n\nЛогин:\t$Name\nПароль:\t$Password\n\nЕсли у вас имеются какие-либо вопросы, обратитесь к вашему сисадмину.\nСохраняйте данную информацию в тайне, так как\nона содержит ваши личные данные на этом сервере.\n\nСпасибо!
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED=$IP был заблокирован
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED=$IP ($IPName) заблокирован навсегда
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED_TIME=$IP Временно Заблокирован
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED_TIME=$IP ($IPName) заблокирован на $TimeRemaining
+IDS_DATA1_SUEVENT_ID_FILE_UPLOAD="$Name" Выгрузил Файл
+IDS_DATA2_SUEVENT_ID_FILE_UPLOAD=$LocalPathName\nРазмер: $FileSizeFmt байт ($FileSizeKB KB)\n$TransferBytes байт передано. $TransferKBPerSecond КБ/сек.\nПротокол: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DOWNLOAD="$Name" Загрузил Файл
+IDS_DATA2_SUEVENT_ID_FILE_DOWNLOAD=$LocalPathName\nРазмер: $FileSizeFmt байт ($FileSizeKB KB)\n$TransferBytes байт передано. $TransferKBPerSecond KБ/сек.\nПротокол: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DELETE="$Name" Удалил Файл
+IDS_DATA2_SUEVENT_ID_FILE_DELETE=$LocalPathName\nПротокол: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_MOVE="$Name" Переименовал или Переместил Файл
+IDS_DATA2_SUEVENT_ID_FILE_MOVE=$OldLocalPathName\n\n-- изменен на --\n\n$LocalPathName
+IDS_DATA1_SUEVENT_ID_DIR_CREATE="$Name" Создал Каталог
+IDS_DATA2_SUEVENT_ID_DIR_CREATE=$LocalPathName\nПротокол: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_DELETE="$Name" Удалил Каталог
+IDS_DATA2_SUEVENT_ID_DIR_DELETE=$LocalPathName\nПротокол: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_MOVE="$Name" Переименовал или Переместил Каталог
+IDS_DATA2_SUEVENT_ID_DIR_MOVE=$OldLocalPathName\n\n-- изменен на --\n\n$LocalPathName
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-FTP-Responses string table
+// this section is intentionally not translated, translation is optional
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-SSH string table
+// this section is intentionally not translated, translation is optional
+
+// misc. strings
+IDS_SU_HTTP_ENCRYPTED=<< Зашифрован >>
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Tray string table
+
+// tray pop-up menu
+IDS_SU_TRAY_MENU_START_ADMIN=Открыть &Консоль управления...
+IDS_SU_TRAY_MENU_START_SU=&Запустить Serv-U
+IDS_SU_TRAY_MENU_STOP_SU=&Остановить Serv-U
+IDS_SU_TRAY_MENU_THEMES=&Темы
+IDS_SU_TRAY_MENU_SHOW_NOTIFICATIONS=&Показывать оповещения
+IDS_SU_TRAY_MENU_START_AUTOMATICALLY=&Автоматический запуск
+IDS_SU_TRAY_MENU_START_SERV_U_SERVICE=Запускать Serv-U как &Сервис
+IDS_SU_TRAY_MENU_USE_BROWSER=Исп. &Браузер по умолчанию
+IDS_SU_TRAY_MENU_KB=&База знаний...
+IDS_SU_TRAY_MENU_SUPPORT=Техподдержка...
+IDS_SU_TRAY_MENU_ABOUT=&Об Serv-U Tray...
+IDS_SU_TRAY_MENU_REGISTER=&Зарегистрировать...
+IDS_SU_TRAY_MENU_EXIT_TRAY=&Закрыть
+
+// sub-menus
+IDS_SU_TRAY_MENU_DEFAULT_THEME=&По умолчанию
+IDS_SU_TRAY_MENU_DEFAULT_NO_ANI_THEME=По умолчанию без анимации
+IDS_SU_TRAY_MENU_CLASSIC_THEME=&Классическая Green U
+IDS_SU_TRAY_MENU_CUSTOM_THEME=Особая
+IDS_SU_TRAY_MENU_THEME_EDITOR=&Редактор тем...
+
+// server states
+IDS_SERVER_STATE_NOT_RUNNING=Не запущен
+IDS_SERVER_STATE_RUNNING=Запущен
+IDS_SERVER_STATE_RUNNING_LISTEN_ERROR=Запущен, ошибка прослушки
+IDS_SERVER_STATE_SESSION_CONNECTED=Подключенных сессий
+IDS_SERVER_STATE_TRANSFERRING=Передача
+IDS_SERVER_STATE_PAST_TRIAL=Истек пробный период Serv-U
+
+// management console strings
+IDS_SERVER_UP_TIME_FMT=Время в сети: %s дней, %02d:%02d:%02d
+IDS_SERVER_SESSIONS_FMT=Сессии: %s текущих; %s за 24 ч; %s всего
+IDS_SERVER_TRANSFER_STATS_FMT=Выгр: %s; Загр: %s
+IDS_SU_TRAY_BYTES_FMT=%s Байт
+IDS_SU_TRAY_KB_FMT=%s Кб
+IDS_SU_TRAY_MB_FMT=%s Мб
+IDS_SU_TRAY_GB_FMT=%s Гб
+IDS_SU_TRAY_DOMAINS_FMT=Домены: %s из %s онлайн
+
+// tray tooltip strings
+IDS_SU_TRAY_TT_STATUS_FMT=Статус: %s Выгр; %s Загр; %s сессия(й)
+IDS_SU_TRAY_TT_RECVD_FMT=Принято: %s; %s файл(ов)
+IDS_SU_TRAY_TT_SENT_FMT=Отдано: %s; %s файл(ов)
+IDS_SU_TRAY_TT_BPS_FMT=%s Байт/с
+IDS_SU_TRAY_TT_KBS_FMT=%s KБ/с
+IDS_SU_TRAY_TT_MBS_FMT=%s Мб/с
+IDS_SU_TRAY_TT_GBS_FMT=%s Гб/с
+IDS_SU_TRAY_TT_64_CHARS_FMT=%s; %d Сессия(и); %s Послано; %s Получено
+IDS_SU_TRAY_TT_STOPPED=Файловый сервер остановлен.
+IDS_SU_TRAY_STATUS_CHANGED=Статус файлового сервера Serv-U
+IDS_SU_TRAY_STATUS_ONLINE=Файловый сервер Serv-U онлайн.
+IDS_SU_TRAY_STATUS_OFFLINE=Файловый сервер Serv-U оффлайн.
+IDS_SU_TRAY_UPDATE=Доступна новая версия
+IDS_SU_TRAY_UPDATE_AVAILABLE=Доступны обновления для Serv-U.  Щелкните здесь для доп. информации.
+IDS_SU_TRAY_STATUS_BETA_EXPIRED=Истек срок действия бета-сборки.
+IDS_SU_TRAY_LICENSE_VIOLATION=Нарушение лицензии Serv-U
+IDS_SU_TRAY_LICENSE_VIOLATION_NO_CONNS=Произошло нарушение лицензии.  Serv-U не будет принимать соединения пока проблема не решится.
+
+// trial / reggie baloon tip strings
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_TITLE=Истек пробный период Serv-U
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_BODY=Истек 30-дневный пробный период.  Serv-U больше не принимает соединения.\r\n\r\nЩелкните здесь для покупки Serv-U.
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_TITLE=Пробный период подходит к концу
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_BODY_FMT=Ваш 30-дневный период закончится через %s дней.  После окончания пробного периода Serv-U не будет принимать соединения.\r\n\r\nЩелкните здесь для покупки Serv-U.
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_TITLE=Период обновлений Serv-U заканчивается
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_BODY_FMT=Ваш период обновлений закончится через %s дней.   После окончания периода обновлений вы не сможете использовать новые версии Serv-U.\r\n\r\nЩелкните здесь для обновления лицензии.
+
+// misc. strings
+IDS_SU_TRAY_STATE=Состояние
+IDS_SU_TRAY_IMAGES=Картинки
+IDS_TRAY_THEME_FILE_OPEN_FILTERS=Файлы тем Serv-U (*.SU-Theme)|*.SU-Theme|Все файлы (*.*)|*.*||
+IDS_TRAY_THEME_FILEARCH_OPEN_FILTERS=Serv-U Темы (*.SU-Темы; *.SU-Theme-Archive)|*.SU-Theme; *.SU-Theme-Archive|Файлы тем Serv-U  (*.SU-Theme)|*.SU-Theme|Архивы файлов тем Serv-u (*.SU-Theme-Archive)|*.SU-Theme-Archive|Все файлы (*.*)|*.*||
+IDS_SERVU_THEMES_DIR=Темы Serv-U
+IDS_TRAY_USER_THEME_DIR_TIP=Содержит заданные пользователем темы Serv-U
+// CAUTION: do not exceed 255 characters for this (or any) string
+IDS_DELETE_CREATED_DIRS_FMT=Созданные Serv-U папки, которые могут содержать данные, созданные пользователями компьютера.\r\n\r\nПример:\r\n%s\r\n\r\nХотите удалить папки и находящиеся в них файлы?
+IDS_UNABLE_TO_LOAD_SELECTED_THEME=Невозможно загрузить выбранный файл темы.
+IDS_UNABLE_TO_STORE_THEME=Невозможно сохранить тему в файл.
+IDS_THEME_CHANGED_SAVE=Вы изменили тему.\r\n\r\nХотите сохранить изменения?
+IDS_SU_TRAY_FILE_NAME=Имя файла
+IDS_SU_TRAY_DURATION=Продолжительность
+IDS_SU_TRAY_INVALID_ICON=Заданный файл не распознается Windows и\r\nне является картинкой.  Выберите файл нужного формата.
+IDS_TRAY_ALL_IMAGE_FILES=Все файлы картинок
+IDS_TRAY_ALL_FILES=Все файлы
+IDS_TRAY_THEME_ARCHIVEFILE_OPEN_FILTERS=Архивы фалов тем Serv-U (*.SU-Theme-Archive)|*.SU-Theme-Archive|Все файлы (*.*)|*.*||
+IDS_UNABLE_TO_LOAD_ZLIB=Невозможно загрузить zlib1.dll.  Переустановите Serv-U
+IDS_UNABLE_TO_CREATE_THEME_ARCHIVE_FILE=Невозможно сохранить архив тем в заданный файл.
+IDS_UNABLE_TO_OPEN_THEME_ARCHIVE_FILE=Невозможно открыть выбранный архив файлов тем.
+IDS_THEME_ARCHIVED=Тема сохранена в архивный файл.
+IDS_THEME_IMPORTED=Тема импортирована из архивного файла.
+IDS_THEME_FILE_DESC=Файл темы Serv-U
+IDS_THEME_ARCHIVE_FILE_DESC=Архив файла тем Serv-U
+IDS_IMPORT_ARCHIVE_FILE=Выбранный файл - это архив фала тем Serv-U.\r\n\r\nХотите сначала импортировать тему?
+IDS_MANAGEMENT_CONSOLE=Консоль управления Serv-U
+IDS_TRAY_SERVER_NOT_LISTENING_HTTP_HTTPS=Движок Serv-U не прослушивает входящие HTTP или HTTPs запросы.
+IDS_MANAGEMENT_CONSOLE_ALREADY_RUNNING=Консоль управления уже запущена на этом компьютере.\r\n\r\nЛибо входите через браузер либо закройте другие сессии.\r\nОбычно такая ошибка возникает при включенном RDP (Протокол удаленного раб.стола).
+IDS_USERS_ARE_CONNECTED_SERVICE_CHANGE=В данный момент есть подкюченные пользователи.  Изменение режима службы приведет к перезапуску Serv-U и отключению активных пользователей.\r\n\r\nВы уверены что хотите изменить режим сейчас?
+IDS_CANNOT_EXEC_SERVICE_SETTING_NOT_CHANGED=Невозможно запустить Serv-U.exe для изменения статуса службы.\r\n\r\nIf Служба Контроля учетных записей (UAC) запрещает изменение служб для вашего аккаунта\r\nотключите или измените настройки UAC.
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Log string table
+
+// system log strings
+IDS_LOG_SERVER_START_WELCOME_FMT=%s версии %s (%s) - %s, Все Права защищены
+IDS_LOG_SERVER_START_BUILD_DATE_FMT=Дата сборки: %s
+IDS_LOG_SERVER_OPENSSL_INIT_OKAY=SSL/TLS библиотеки загружены
+IDS_LOG_SERVER_OPENSSL_INIT_FAIL=Невозможно загрузить SSL/TLS библиотеки
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_ON=Режим FIPS 140-2 включен.  Serv-U использует встроеный криптографический модуль FIPS 140-2 (Сертификат #1051), запущенный на платформе Microsoft Windows согласно FIPS 140-2 Инструкциям, секция G.5.
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_OFF=Режим FIPS 140-2 выключен.
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_NOT_SUPPORTED=FIPS 140-2 не поддерживается на данном компьютере.  FIPS 140-2 не запускается на всех платформах, хотя тестировался на большинстве современных платформ.  Этот режим может не запустится на Pentium III или более старых процессорах.
+IDS_LOG_SERVER_STOPPING=Сервер останавливается...
+IDS_LOG_SERVER_STOP=Сервер остановлен
+IDS_LOG_CMD_LISTENING_FMT=%s сервер прослушивает порт %u, IP %s
+IDS_LOG_CMD_NOT_LISTENING_IN_USE_FMT=%s СЕРВЕР НЕЛЬЗЯ ЗАПУСТИТЬ НА IP %s: Порт номер %u уже занят
+IDS_LOG_CMD_NOT_LISTENING_FMT=%s СЕРВЕР НЕЛЬЗЯ ЗАПУСТИТЬ НА IP %s: Порт номер %u
+IDS_LOG_CMD_NOT_LISTENING_ADDR_NOT_AVAIL_FMT=%s СЕРВЕР НЕЛЬЗЯ ЗАПУСТИТЬ НА IP %s: Попытка использовать несуществующий IP адрес?
+IDS_LOG_CMD_CLOSED_FMT=%s сервер прекратил прослушивание порта %u, IP %s
+IDS_LOG_PERM_DATA_LISTENING_FMT=Ожидание PASV FTP соединений по порте %u
+IDS_LOG_PERM_DATA_NOT_LISTENING_FMT=Сервер не ожидает PASV FTP соединений на порте номер %u
+IDS_LOG_PERM_DATA_NOT_LISTENING_IN_USE_FMT=Сервер не ожидает PASV FTP соединений, порт номер %u уже занят
+IDS_LOG_PERM_DATA_NOT_LISTENING_ADDR_NOT_AVAIL_FMT=Сервер не ожидает PASV FTP соединений на порте номер %u, попытка использовать несуществующей IP адрес?
+IDS_LOG_PERM_DATA_CLOSED_FMT=Прекращение ожидания PASV FTP соединений на порте %u
+IDS_LOG_DOMAIN_STARTED=Домен запущен
+IDS_LOG_DOMAIN_STOPPED=Домен остановлен
+IDS_LOG_SERVER_START_BETA_EXPIRED_FMT=СРОК ДЕЙСТВИЯ БЕТА-СБОРКИ ИСТЕК.  Эта сборка будет работать %d дней после даты сборки.
+IDS_LOG_SERVER_START_BETA_NOTICE_FMT=ЭТО БЕТА-СБОРКА.  Эта сборка будет работать %d дней после даты сборки.
+IDS_LOG_EVENT_COULD_NOT_EXEC_FMT=ОШИБКА СБОРКИ: невозможно запустить "%s".
+IDS_LOG_EVENT_COULD_NOT_EMAIL_FMT=EVENT ERROR: Невозможно посать сообщение на %s: %s
+IDS_LOG_SOCKET_TIME_OUT_FMT=Тайм-аут.  %s секунд простоя.
+IDS_LOG_EMAIL_RETRY_FMT=ПЕРЕСЫЛКА EMAIL: попытка повторно послать email для %s через сервер %s на порту %d.
+IDS_LOG_EMAIL_CANT_CONNECT_FMT=Невозможно подключиться к SMTP серверу %s на порту %d.
+IDS_LOG_EMAIL_SSL_CONNECT_FAIL_FMT=Неудачная попытка SSL соединения с SMTP сервером "%s" на порту %d (ошибка SSL: "%s").
+IDS_LOG_WINSOCK_INIT_FMT=WinSock версии %d.%d инициализирован.
+IDS_LOG_WINSOCK_INIT_FAILED_FMT=ОШИБКА: невозможно инициализировать WinSock (ошибка: %d)
+
+// UPnP log strings
+IDS_LOG_UPNP_FOUND_DEVICE_FMT=UPnP: Найдено устройство: %s: %s (в подсети %s)
+IDS_LOG_UPNP_DEVICE_DISCOVERY_COMPLETE_FMT=UPnP: Обнаружение устройства завершено: %s: %s [%s] (в подсети %s)
+IDS_LOG_UPNP_MAP_SUCCESSFUL_FMT=UPnP: Успешное перенаправление порта %d на IP %s
+IDS_LOG_UPNP_MAP_ERROR_FMT=UPnP: Ошибка перенаправления порта %d на IP %s (HTTP: %d - UPnP: %s - Подр: %s)
+IDS_LOG_UPNP_DELETE_MAP_SUCCESSFUL_FMT=UPnP: Успешная отмена перенаправления порта %d на IP %s
+IDS_LOG_UPNP_DELETE_MAP_ERROR_FMT=UPnP: Не удалось отменить перенаправление порта %d на IP %s (HTTP: %d - UPnP: %s - Подр: %s)
+IDS_LOG_UPNP_DELETE_MAPS_SUCCESSFUL_FMT=UPnP: Успешная отмена перенаправления портов %d-%d на IP %s
+IDS_LOG_UPNP_MAPS_SUCCESSFUL_FMT=UPnP: Успешное перенаправление портов %d-%d на IP %s
+IDS_LOG_UPNP_DELETE_MAPS_ERROR_FMT=UPnP: Не удалось отменить перенаправление портов %d-%d на IP %s
+IDS_LOG_UPNP_MAPS_ERROR_FMT=UPnP: Ошибка перенаправления портов %d-%d на IP %s
+IDS_LOG_UPNP_TIMEOUT=Таймаут
+IDS_LOG_UPNP_NA=Н/Д
+IDS_LOG_UPNP_DEAD_DEVICE_FMT=UPnP: Устройство недоступно: %s: %s [%s] (в подсети %s)
+IDS_LOG_UPNP_NO_DEVICES_REMAIN=UPnP: Устройства UPnP недоступны, перезагрузка с нужными параметрами.
+IDS_LOG_UPNP_DEVICE_REDISCOVERY_FMT=UPnP: Устройств не отвечает, новая попытка %d: %s: %s [%s] (в подсети %s)
+IDS_LOG_UPNP_DEVICE_INSPECTION=UPnP: Изучение устройства:  %s: %s [%s] (в подсети %s)
+
+// socket types
+// ^^^^^ intentionally not translated ^^^^^
+
+// session log strings
+IDS_LOG_RECEIVING_FILE_FMT=Получение файла "%s"
+IDS_LOG_RECEIVED_FILE_FMT=Файл "%s" принят успешно (%s Кб/сек - %s Байт)
+IDS_LOG_SENDING_FILE_FMT=Отправка файла "%s"
+IDS_LOG_SENDING_THUMBNAIL_FMT=Отправка эскиза (%s x %s) "%s"
+IDS_LOG_SENT_FILE_FMT=Файл "%s" отправлен успешно (%s Кб/сек - %s Байт)
+IDS_LOG_SENT_THUMBNAIL_FMT=Эскиз (%s x %s) "%s" отправлен успешно (%s Кб/сек - %s Байт)
+IDS_LOG_FILE_DELETED_FMT=Файл удален: "%s"
+IDS_LOG_FILE_DIR_RENAME_FMT=Переименован из "%s" в "%s"
+IDS_LOG_DIR_CREATE_FMT=Папка создана: "%s"
+IDS_LOG_DIR_DELETE_FMT=Папка удалена: "%s"
+IDS_LOG_IP_ADDRESS_REVERSE_DNS_FMT=IP-Имя: %s (%s)
+
+// SSH log command strings
+IDS_SSH_UNEXPECTED_MESSAGE_FMT=Неизвестная SSH2 команда (0x%08x - %d)
+IDS_SSH2_MSG_USERAUTH_REQUEST_FMT=SSH2_MSG_USERAUTH_REQUEST: пользователь: %s; сервис: %s; тип: %s
+IDS_SSH_STATUS_COMMAND_FMT={0x%08x} %s
+IDS_SSH_FXP_INIT_FMT=SSH_FXP_INIT: версия клиента %d (%s)
+IDS_SSH_FXP_OPEN_FMT={0x%08x} SSH_FXP_OPEN: путь: "%s"
+IDS_SSH_FXP_CLOSE_FMT={0x%08x} SSH_FXP_CLOSE: обработчик: 0x%08x
+IDS_SSH_FXP_READ_FMT={0x%08x} SSH_FXP_READ: обработчик: 0x%08x; %u байт
+IDS_SSH_FXP_WRITE_FMT={0x%08x} SSH_FXP_WRITE: обработчик: 0x%08x; %u байт
+IDS_SSH_FXP_STAT_FMT={0x%08x} %s: путь: "%s"
+IDS_SSH_FXP_FSTAT_FMT={0x%08x} SSH_FXP_FSTAT: обработчик: 0x%08x
+IDS_SSH_FXP_SETSTAT_FMT={0x%08x} SSH_FXP_SETSTAT: путь: "%s"
+IDS_SSH_FXP_FSETSTAT_FMT={0x%08x} SSH_FXP_FSETSTAT: путь: 0x%08x
+IDS_SSH_FXP_OPENDIR_FMT={0x%08x} SSH_FXP_OPENDIR: путь: "%s"
+IDS_SSH_FXP_READDIR_FMT={0x%08x} SSH_FXP_READDIR: обработчик: 0x%08x
+IDS_SSH_FXP_REMOVE_FMT={0x%08x} SSH_FXP_REMOVE: путь: "%s"
+IDS_SSH_FXP_MKDIR_FMT={0x%08x} SSH_FXP_MKDIR: путь: "%s"
+IDS_SSH_FXP_RMDIR_FMT={0x%08x} SSH_FXP_RMDIR: путь: "%s"
+IDS_SSH_FXP_REALPATH_FMT={0x%08x} SSH_FXP_REALPATH: путь: "%s"
+IDS_SSH_FXP_RENAME_FMT={0x%08x} SSH_FXP_RENAME: старое: "%s"; новое: "%s"
+IDS_SSH_FXP_READLINK_FMT={0x%08x} SSH_FXP_READLINK: путь: "%s"
+IDS_SSH2_MSG_GLOBAL_REQUEST_FMT=SSH2_MSG_GLOBAL_REQUEST: пользователь: %s; хочет ответить: %d
+
+// SSH login reply strings
+IDS_SSH2_MSG_USERAUTH_SUCCESS=SSH2_MSG_USERAUTH_SUCCESS: успешная авторизация
+IDS_SSH2_MSG_USERAUTH_FAILURE=SSH2_MSG_USERAUTH_FAILURE: авторизация не удалась
+IDS_SSH2_MSG_USERAUTH_PASSWD_CHANGEREQ=SSH2_MSG_USERAUTH_PASSWD_CHANGEREQ: срок действия пароля закончился
+
+// SSH log reply strings
+IDS_SSH_STATUS_REPLY_FMT={0x%08x} %s: %s
+IDS_SSH_FXP_INIT_REPLY_FMT=SSH_FXP_VERSION: версия сервера %d
+IDS_SSH_FXP_OPEN_REPLY_FMT={0x%08x} SSH_FXP_HANDLE: обработчик файла: 0x%08x
+IDS_SSH_FXP_OPENDIR_REPLY_FMT={0x%08x} SSH_FXP_HANDLE: обработчик папки: 0x%08x
+IDS_SSH_FXP_READDIR_REPLY_FMT={0x%08x} SSH_FXP_NAME: найдено %u объектов
+IDS_SSH_FXP_REALPATH_REPLY_FMT={0x%08x} SSH_FXP_NAME: путь: "%s"
+IDS_SSH_FXP_ATTRS_REPLY_FMT={0x%08x} SSH_FXP_ATTRS
+IDS_SSH_FXP_DATA_REPLY_FMT={0x%08x} SSH_FXP_DATA: %u байт
+IDS_SSH2_MSG_REQUEST_FAILURE_REPLY_FMT=SSH2_MSG_REQUEST_FAILURE: "%s" является непоерживаемым глобальным запросом 
+
+// SSH_FXP_STAT error strings
+// ^^^^^ intentionally not translated ^^^^^
+
+// HTTP log command strings
+IDS_HTTP_LOGIN_FMT=HTTP_LOGIN: пользователь: %s
+IDS_HTTP_LOGIN_DOMAIN_FMT=HTTP_LOGIN: пользователь: %s; домен: %s
+IDS_HTTP_LOGOUT=HTTP_LOGOUT
+IDS_HTTP_LIST_FMT=HTTP_LIST: путь: "%s"
+IDS_HTTP_DOWNLOAD_FMT=HTTP_DOWNLOAD: путь: "%s"
+IDS_HTTP_DOWNLOAD_THUMBNAIL_FMT=HTTP_DOWNLOAD: путь: "%s"; эскиз: 1; ширина: %d; высота: %d
+IDS_HTTP_UPLOAD_FMT=HTTP_UPLOAD: путь: "%s"
+IDS_HTTP_DELETE_FMT=HTTP_DELETE: path: "%s"
+IDS_HTTP_DELETE_DIR_FMT=HTTP_DELETE_DIR: путь: "%s"
+IDS_HTTP_CREATE_DIR_FMT=HTTP_CREATE_DIR: путь: "%s"
+IDS_HTTP_RENAME_FMT=HTTP_RENAME: old: "%s"; new: "%s"
+IDS_HTTP_START_FVJV=HTTP_START_FVJV
+IDS_HTTP_START_ADMIN=HTTP_START_ADMIN
+IDS_HTTP_NOOP=HTTP_NOOP
+IDS_HTTP_ADMIN_COMMAND_FMT=HTTP_ADMIN_COMMAND: %s
+IDS_HTTP_BUILD_PLAYLIST_FMT=HTTP_BUILD_PLAYLIST: %s добавлено в плейлист
+IDS_HTTP_GET_PLAYLIST_FMT=HTTP_GET_PLAYLIST: %s файлов в плейлисте
+IDS_HTTP_SPACE_AVAILABLE_FMT=HTTP_SPACE_AVAILABLE: путь: "%s"
+IDS_HTTP_DIRECTORY_SIZE_FMT=HTTP_DIRECTORY_SIZE: путь: "%s"
+
+// other HTTP replies
+IDS_HTTP_RETR_ERROR_REPLY_FMT=HTTP_ERROR: невозможно получить "%s"
+IDS_HTTP_STOR_ERROR_REPLY_FMT=HTTP_ERROR: невозможно сохранить "%s"
+
+// HTTP log reply strings
+IDS_HTTP_OKAY_REPLY=HTTP_OKAY (%d): окей
+IDS_HTTP_CREATED_REPLY=HTTP_CREATED (%d): создан
+IDS_HTTP_ACCEPTED_REPLY=HTTP_ACCEPTED (%d): принят
+IDS_HTTP_NO_CONTENT_REPLY=HTTP_NO_CONTENT (%d): нет содержания
+IDS_HTTP_OKAY_REPLY_FMT=HTTP_OKAY (%d): %s
+IDS_HTTP_MOVED_PERMANENTLY_REPLY=HTTP_MOVED_PERMANENTLY (%d): перемещен постоянно
+IDS_HTTP_MOVED_TEMPORARILY_REPLY=HTTP_MOVED_TEMPORARILY (%d): перемещен временно
+IDS_HTTP_NOT_MODIFIED_REPLY=HTTP_NOT_MODIFIED (%d): не изменен
+IDS_HTTP_BAD_REQUEST_REPLY=HTTP_BAD_REQUEST (%d): неправильный запрос
+IDS_HTTP_UNAUTHORIZED_REPLY=HTTP_UNAUTHORIZED (%d): неавторизован
+IDS_HTTP_FORBIDDEN_REPLY=HTTP_FORBIDDEN (%d): запрещен
+IDS_HTTP_NOT_FOUND_REPLY=HTTP_NOT_FOUND (%d): не найден
+IDS_HTTP_INTERNAL_SERVER_ERROR_REPLY=HTTP_INTERNAL_SERVER_ERROR (%d): внутренняя ошибка сервера
+IDS_HTTP_NOT_IMPLEMENTED_REPLY=HTTP_NOT_IMPLEMENTED (%d): не обработан
+IDS_HTTP_BAD_GATEWAY_REPLY=HTTP_BAD_GATEWAY (%d): неправильная точка входа
+IDS_HTTP_SERVICE_UNAVAILABLE_REPLY=HTTP_SERVICE_UNAVAILABLE (%d): сервис недоступен
+
+// system log strings
+IDS_SYSLOG_OPENED_INTEGRATION_DLL_FMT=Открытых DLL доступа пользователя: "%s"
+IDS_SYSLOG_CLOSED_INTEGRATION_DLL_FMT=Закрытых DLL доступа пользователя: "%s"
+IDS_SYSLOG_CANT_LOAD_INTEGRATION_DLL_FMT=Невозможно открыть DLL доступа пользователя: "%s"
+IDS_SYSLOG_CANT_LOAD_INTEGRATION_DLL__NO_LIC_FMT=Ваша лицензия не позволяет открывать DLL доступа пользователя:  "%s
+
+// security log strings
+IDS_SECLOG_CONNECTED_FMT=Подключен к %s (локальный адрес %s, порт %d)
+IDS_SECLOG_IP_BANNED_FMT=Соединение запрещено с IP адреса %s (локальный адрес %s, порт %d)
+IDS_SECLOG_CLOSED_SESSION=сессия закрыта
+IDS_SECLOG_IDLE_TIMEOUT=Таймаут сессии из-за неактивности
+IDS_SECLOG_SESSION_TIMEOUT=Превышено максимально допустимое время сессии
+IDS_SECLOG_SSL_ACCEPT_FAILED_FMT=Невозможно установить SSL соединение (%s)
+IDS_SECLOG_USER_ADMIN_DENIED_FMT=Пользователю "%s" не удалось получить права Администратора.
+IDS_SECLOG_USER_SERVER_ADMIN_FMT=Включение режима системного АДМИНИСТРАТОРА для пользователя "%s"
+IDS_SECLOG_USER_DOMAIN_ADMIN_FMT=Включение режима АДМИНИСТРАТОРА домена для пользователя "%s"
+IDS_SECLOG_USER_GROUP_ADMIN_FMT=Включение режима АДМИНСТРАТОРА группы для пользователя "%s"
+IDS_SECLOG_USER_PASSWORD_CHANGE_FMT=Измененный пароль пользователя "%s"
+IDS_SECLOG_PASSWORD_WRONG_TOO_MANY_TIMES_FMT=Пользователь "%s" ввел неправильный пароль слишком много раз - отсоединение
+IDS_SECLOG_USER_IP_BANNED_FMT=Соединение запрещено для пользователя "%s" с IP адреса %s (локальный адрес %s, порт %d)
+IDS_SECLOG_USER_NO_HOME_FMT=Ошибка при авторизации пользователя "%s", домашняя директория "%s" не существует
+IDS_SECLOG_USER_LOGGED_IN_FMT=Пользователь "%s" вошел
+IDS_SECLOG_USER_LOGGED_OUT_FMT=Пользователь "%s" вышел
+IDS_SECLOG_ANONYMOUS_USER_LOGGED_IN_FMT=Вошел АНОНИМНЫЙ пользователь, пароль: %s
+IDS_SECLOG_BLOCKING_IP_FMT=Блокировка IP %s
+IDS_SECLOG_BLOCKING_IP_FOR_FMT=Блокировка IP %s для %d:%02d
+IDS_SECLOG_ADMIN_OPERATION_DENIED_FMT=ОПЕРАЦИЯ: %s
+IDS_SECLOG_LIC_NO_REMOTE_ADMIN_FMT=ЛИЦЕНЗИЯ: Удаленное администрирование запрещено, IP адрес %s, пользователь %s.
+IDS_SECLOG_LIC_TOO_MANY_SESSIONS_FMT=ЛИЦЕНЗИЯ: Превышено макс. допустимое количество сессий, IP адрес %s, пользователь %s.
+IDS_SECLOG_LIC_NET_REGGIE_VIOLATION_FMT=ЛИЦЕНЗИЯ: Обнаружено нарушение лицензии.  Текущая лицензия предназначена для %d компьютера(ов).  В настоящее время %d компьютер(ов) использует(ют) данную лицензию.  Serv-U не будет принимать соединения пока это не будет исправлено.
+IDS_SECLOG_LIC_NET_REGGIE_VIOLATION2_FMT=ЛИЦЕНЗИЯ: Пожалуйста свяжитесь с нами на %s
+IDS_SECLOG_LIC_VALID_ID_PRESENT=Найден правильный регистрационный ключ
+IDS_SECLOG_LIC_PAST_TRIAL=LICENSE: Running beyond trial period.  Serv-U will no longer accept connections.
+IDS_SECLOG_SSL_CANT_OPEN_CERT_FILE_FMT=Невозможно открыть файл сертификата: %s
+IDS_SECLOG_SSL_CANT_OPEN_PRIVATE_KEY_FILE_FMT=Невозможно открыть файл закрытого ключа: %s
+IDS_SECLOG_SSL_CANT_LOAD_TRUSTED_CA_FILE_FMT=Unable to open trusted certificate authority file: %s
+IDS_SECLOG_FAILED_LOGIN_FMT=Неверные условия подключения; пользователь: "%s"; пароль: "%s"
+IDS_SECLOG_CONNECTION_ACCEPTED_FMT=Подключение к %s (локальный адрес %s, порт %d) РАЗРЕШЕНО
+IDS_SECLOG_CONNECTION_DENIED_FMT=Подключение к %s (локальный адрес %s, порт %d) ЗАПРЕЩЕНО
+IDS_SECLOG_SSL_CLIENT_ERROR=ОШИБКА КЛИЕНТА: Клиент может не принять SSL сертификат.  Убедитесь, что SSL сертификат выпущен доверенным издателем.
+IDS_SECLOG_USER_REQUESTED_PASSWORD_RECOVERY_FMT=Пользователь "%s" осуществил запрос для восстановления пароля.
+IDS_SECLOG_INTEGRATION_CONNECTION_DENIED_FMT=DLL Доступа Пользователя: соединение запрещено для IP %s (локальный адрес %s, порт %d)
+
+// ODBC
+IDS_ODBC_ERROR=ОШИБКА ODBC:
+
+// triggered event log strings
+IDS_TELOG_EVENT_FMT=Событие: %s (%s); Тип: %s
+IDS_TELOG_EMAIL_FMT=EMAIL; Кому: %s
+IDS_TELOG_BALLOON_TIP_FMT=Всплывающая подсказка; "%s"
+IDS_TELOG_EXEC_FMT=ЗАПУСК; Путь "%s"
+IDS_TELOG_EMAIL_ADDRESS_FMT=%s; BCC: %s
+
+/////////////////////////////////////////////////////////////////////////////
+// statistic strings used for saving stats to .CSV file, translation is okay
+$IDS_NAME$=Имя
+$IDS_CURRENT_SESSIONS$=Текущих Сессий
+$IDS_HIGHEST_NUMBER_OF_SESSIONS$=Наибольшее кол-во сессий
+$IDS_24_HOUR_SESSIONS$=Сессий за Сутки
+$IDS_TOTAL_SESSIONS$=Сессий Всего
+$IDS_AVERAGE_SESSION_LENGTH$=Средняя Продолжительнось Сессии
+$IDS_LONGEST_SESSION_LENGTH$=Самая Длинная Сессия
+
+$IDS_LOGINS$=Входов
+$IDS_LOGOUTS$=Выходов
+$IDS_CURRENT_LOGGED_IN$=Вошедших сейчас
+$IDS_MOST_LOGGED_IN$=Макс. кол-во Вошедших
+$IDS_AVERAGE_LOGIN_DURATION$=Средняя Длина Входа
+$IDS_LONGEST_LOGIN_DURATION$=Наибольшая Длина Входа
+$IDS_SHORTEST_LOGIN_DURATION$=Наименьшая Длина Входа
+$IDS_LAST_LOGIN_TIME$=Время Последнего Входа
+$IDS_LAST_LOGOUT_TIME$=Время Последнего Выхода
+
+$IDS_DOWNLOAD_RATE_KB_SEC$=Скорость Загрузки KB/Sec
+$IDS_UPLOAD_RATE_KB_SEC$=Скорость Выгрузки KB/Sec
+$IDS_AVERAGE_DOWNLOAD_RATE_KB_SEC$=Средняя Скорость Загрузки KB/Sec
+$IDS_AVERAGE_UPLOAD_RATE_KB_SEC$=Средняя Скорость Выгрузки  KB/Sec
+$IDS_DOWNLOAD_RATE_BYTES_SEC$=Скорость Загрузки Bytes/Sec
+$IDS_UPLOAD_RATE_BYTES_SEC$=Скорость Выгрузки Bytes/Sec
+$IDS_BYTES_DOWNLOADED$=Байт Загружено
+$IDS_FILES_DOWNLOADED$=Файлов Загружено
+$IDS_BYTES_UPLOADED$=Байт Выгружено
+$IDS_FILES_UPLOADED$=Файлов Выгружено

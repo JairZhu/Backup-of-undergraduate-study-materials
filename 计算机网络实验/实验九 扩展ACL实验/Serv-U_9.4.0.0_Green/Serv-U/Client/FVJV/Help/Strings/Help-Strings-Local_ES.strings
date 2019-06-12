@@ -1,0 +1,1778 @@
+﻿<!--#include "Help-Strings-Images.strings"-->
+<!-- File:		Help-Strings-Local.strings																					-->
+<!-- Language:	English																										-->
+<!-- Purpose:	Provides translated strings for FTP Voyager JV's Help documentation.										-->
+<!-- Notes:		- Comment blocks are useful.  To place a comment, use the HTML tags at the beginning and end of this line	-->
+<!--			- Any text following a "$=" should be translated															-->
+<!--			- Any text between a "$::" through "::END" should be translated												-->
+<!--			- HTML tags should not be translated (Example:  "<strong>")													-->
+
+<!-- Reused HTML links throughout the help docs.  The text within these links may need to be translated. -->
+$LINK_FTP_VOYAGER$=<a href="http://www.ftpvoyager.com/" target="_blank">FTP Voyager&reg;</a>
+$LINK_SERVU$=<a href="http://www.Serv-U.com/" target="_blank">Serv-U File Server</a>
+$LINK_RHINOSOFT$=<a href="http://www.rhinosoft.com/" target="_blank">RhinoSoft.com</a>
+$LINK_JAVA_RUNTIME$=<a href="http://www.java.com/download/java/" target="_blank">Java Runtime</a>
+
+<!-- Reused HTML links for other help documentation pages.  The text within these links must be translated. -->
+
+$LINK_LOCAL_REMOTE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">Local/Remote Pane</a>
+$LINK_LOCAL_REMOTE_PANES$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">Local/Remote Panes</a>
+$LINK_LOCAL_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">Local Pane</a>
+$LINK_REMOTE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">Remote Pane</a>
+$LINK_TREE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Tree-Overview.htm">Tree Pane</a>
+$LINK_PREVIEW_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Preview-Overview.htm">Preview Pane</a>
+$LINK_LIST_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-List-Overview.htm">List Pane</a>
+$LINK_TRANSFER_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Transfer-Overview.htm">Transfer Pane</a>
+$LINK_STATUS_BAR$=<a href="%FVJV_FILE%Help/Help-Layout-StatusBar-Overview.htm">Status Bar</a>
+$LINK_SEARCH_BAR$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Search-Overview.htm">Search Bar</a>
+
+$LINK_MAIN_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Overview.htm">Main Menu</a>
+$LINK_FILE_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm">File Menu</a>
+$LINK_EDIT_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Edit.htm">Edit Menu</a>
+$LINK_VIEW_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-View.htm">View Menu</a>
+$LINK_WINDOWS_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm">Windows Menu</a>
+$LINK_HELP_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Help.htm">Help Menu</a>
+
+
+$LINK_LOCAL_REMOTE_TOOLBAR$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Overview.htm">Local/Remote Toolbar</a>
+$LINK_CRUMB_BAR$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Overview.htm">Navigation Bar</a>
+
+$LINK_CRUMB$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">Crumb</a>
+$LINK_CRUMB_HISTORY$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">History</a>
+$LINK_ABSOLUTE_PATH_MODE$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">Absolute Path Mode</a>
+
+$LINK_STOP_AFTER_FILE_COMPLETES$=<a href="%FVJV_FILE%Help/Help-Tbar-Transfer-Actions.htm#StopAfterFileCompletes">Stop After File Completes</a>
+$LINK_PAUSE$=<a href="%FVJV_FILE%Help/Help-Tbar-Transfer-Actions.htm#Pause">Pause</a>
+
+
+$LINK_FRAME_LIST$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm#FrameList">Frame List</a>
+$LINK_AUTO_HIDE$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm#AutoHide" style="color:Black">Auto Hide</a>
+$LINK_ACTIVATE_WINDOW$=<a href="%FVJV_FILE%Help/Help-Dlg-ActivateWindow.htm">Activate Window</a>
+
+$LINK_PREFERENCES$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-General.htm">Preferences</a>
+$LINK_PREF_PAGE_GENERAL$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-General.htm">General</a>
+$LINK_PREF_PAGE_TOOLBARS$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-Toolbars.htm">Toolbars</a>
+
+$LINK_THUMB_SIZES_HERE$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-View.htm#ThumbSize">here</a>
+
+$LINK_SYNC_FOLDERS$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders.htm">Synchronize Folders</a>
+$LINK_SAVE_LOGIN$=<a href="%FVJV_FILE%Help/Help-Dlg-SaveLogin.htm">Save Login</a>
+$LINK_CHANGE_PASSWORD$=<a href="%FVJV_FILE%Help/Help-Dlg-ChangePassword.htm">Change Password</a>
+
+$LINK_ACTIVE_PANE$=<a href="%FVJV_FILE%Help/Help-OtherInfo-ActivePane-Overview.htm">Active Pane</a>
+$LINK_LOCAL_LIST_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm#ListPane">Local-List Pane</a>
+$LINK_DOCKING_FRAMEWORK$=<a href="%FVJV_FILE%Help/Help-OtherInfo-DockingFramework-Overview.htm">Docking Framework</a>
+
+$LINK_DOWNLOAD_BTN$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm#Download">Download button</a>
+$LINK_UPLOAD_BTN$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm#Upload">Upload button</a>
+
+$BOLD_NOTE$=<strong>Note</strong>
+
+<!-- Help-Dlg-SyncFolders... -->
+$LINK_SYNC_FOLDERS_LOCAL_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results.htm">Local-Results Pane</a>
+$LINK_SYNC_FOLDERS_REMOTE_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results.htm">Remote-Results Pane</a>
+$LINK_SYNC_FOLDERS_OPTIONS_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Options.htm">Options Pane</a>
+
+$LINK_SYNC_FOLDERS_RESULTS_TBAR$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results-Tbar.htm">Toolbar</a>
+$LINK_SYNC_FOLDERS_RESULTS_LIST$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results-List.htm">List</a>
+
+
+<!-- Help-Overview.htm -->
+$OVERVIEW_MAIN_HEADER$=Visión general de FTP Voyager JV     
+
+$OVERVIEW_BODY$::
+bienvenidos a FTP Voyager JV!
+
+FTP Voyager JV es una completa, y basado en Java transferencia de cliente basado en el premio $LINK_FTP_VOYAGER$ product from $LINK_RHINOSOFT$.
+Es distribuido por una licencia $LINK_SERVU$ para proporcionar un modo familiar y poderoso para transferir archivos para todos los
+usuarios de el servidor de archivos.
+
+
+Algunos rasgos impotantes de FTP Voyager JV incluyen:
+::END
+
+$OVERVIEW_FEATURES$::
+No se requiere instalación - FTP Voyager JV sólo requiere el Java Runtime Environment.
+Se opera usando el  protocolo HTTP para una fácil configuración del Corta-fuegos.
+Apoya las comunicaciones encriptadas SSL usando HTTPS.
+La vista en miniatura de imagenes remotas que minimiza el uso de la amplitud de banda.
+Mantiene la fecha de los archivos transferidos.
+Fácil búsqueda de archivos caidos transferidos entre los cristales remotos y locales.
+Multiple transferencia de archivos actuales para la rápida entrega de archivos.
+Apariencia personalizada, dando a los usuarios un sentido de familiaridad entre aplicaciones.
+Fácil dirección de transferencias a través de una cola de transferencia.
+Abilidad para resumir transferencias.
+Vista de diferentes partes de el mismo archivos de sistema simultaneamente utilizando el "docking framework"
+Espacios de trabajo personalizados por el usuario.
+Vista previa de archivos de imagenes. (JPG, PNG, GIF, y muchos más).
+::END
+
+$OVERVIEW_FEATURES_NEW$::
+No se requiere instalación - FTP Voyager JV sólo requiere el Java Runtime Environment.
+Se opera usando el  protocolo HTTP para una fácil configuración del Corta-fuegos.
+Apoya las comunicaciones encriptadas SSL usando HTTPS.
+La vista en miniatura de imagenes remotas que minimiza el uso de la amplitud de banda.
+Mantiene la fecha de los archivos transferidos.
+Fácil búsqueda de archivos caidos transferidos entre los cristales remotos y locales.
+Multiple transferencia de archivos actuales para la rápida entrega de archivos.
+Apariencia personalizada, dando a los usuarios un sentido de familiaridad entre aplicaciones.
+Fácil dirección de transferencias a través de una cola de transferencia.
+Abilidad para resumir transferencias.
+Vista de diferentes partes de el mismo archivos de sistema simultaneamente utilizando el "docking framework"
+Espacios de trabajo personalizados por el usuario.
+Vista previa de archivos de imagenes. (JPG, PNG, GIF, y muchos más).
+Almacenado de archivos cargados en el disco para un lanzado más fácil.
+Busqueda de archivos y directorios.
+::END
+
+
+<!-- Help-Layout-Main-Overview.htm -->
+$HEAD_LAYOUT_MAIN$=Vista general de la aplicación.
+
+$DESC_LAYOUT_MAIN$::
+El interfaz del usuario de FTP Voyager JV lo hace más fácil que nunca el navegar por un sistema de archivos.
+Usando una simple y familiar disposición los usuarios pueden rápidamente comenzar a navegar a través de su sistema de archivos. una audición es la introducción de el 
+"$LINK_DOCKING_FRAMEWORK$".  El "docking framework" Permite a los usuarios el mirar a dos partes diferentes de el mismo sistema de archivos.
+ Los usuarios pueden también cambiar la licalización de "dockable frames y/o toolbars" para crear un espacio de trabajo personalizable.
+Esto crea una muy simple e intuitiva tranferencia de archivos de un cliente adaptado a cada usuario del Serv-U.
+::END
+
+$HEAD_LAYOUT_INITIAL$=Disposicion inicial.
+
+$DESC_LAYOUT_INITIAL_1$::
+FTP Voyager JV comienza inicialmente con una disposición similar a la mostrada debajo.
+::END
+$LI_LAYOUT_INTIIAL_1$=:  Inicialmente localizado en el principio de la ventana de la aplicación. Contiene todas las acciones que FTP Voyager JV puede llevar a cabo.
+$LI_LAYOUT_INTIIAL_2$=:  Inicialmente localizado en el lado superior izquierdo de la ventana de la aplicacion. Muestra el sistema de archivos de el cliente.
+$LI_LAYOUT_INTIIAL_3$=:  Inicialmente localizado en el lado superior derecho de la ventana de la aplicación. Muestra el sistema de archivos remostos del servidor.
+$LI_LAYOUT_INTIIAL_4$=:  Inicialmente localizado al final de la ventana de la aplicación. Muestra la transferencia entre el cliente y el servidor.
+$LI_LAYOUT_INTIIAL_5$=:  Localizado en el final de la ventana de la aplicación. Muestra descripciones dinámicas de botones y acciones de FTP Voyager JV, así como listado de 
+informacion remota y local como en número de archivos y carpetas de los archivos y carpetas seleccionadas.
+
+$NOTE_CONTENT_REMOVED$=$BOLD_NOTE$:  El contenido ha sido removido para ayudar con la visualización de la localización de cada componente.
+
+
+<!-- Help-Layout-Browser-Overview.htm -->
+$HEAD_PANE_LOCAL_REMOTE$=Local Pane & Remote Pane Overview
+
+$DESC_PANE_LOCAL_REMOTE$::
+Los Cristales locales y remostos permiten al usuario nevegar rapidamente a través del sistema. Cada cristal
+tiene una disposición similar la cual facilita al usuario en una transición confortable entre dos sistemas de archivos. los cristales también 
+heredan la funcionalidad de el "$LINK_DOCKING_FRAMEWORK$", el cual permite al usuario personalizar la disposicion de cada panel. Cada panel local muestra el
+el contenido de el archivo del sistema local del cliente y cada panel remotro muestra los contenidos del sistema de archivo del servidor remoto.
+::END
+
+$HEAD_LOCAL_PANE$=Panel local
+$DESC_LOCAL_PANE$::
+El panel local esta inicialmente localizado en la parte de arriba a la izquierda de la principal ventana de la aplicación.
+su viewpotz muestra los contenidos del archivolocal del sistema del cliente.
+::END
+
+$HEAD_REMOTE_PANE$=Panel remoto.
+$DESC_REMOTE_PANE$::
+El panel remoto esta inicialmente localizado en el panel de arriba a la derecha de la ventana de aplicación principal. Su viewport muestra los contenidos de el archivo remoto del sistema
+del servidor.
+::END
+
+$DESC_FUNCTIONALITY$=Desde estos paneles es posible:
+$LI_FUNCTIONALITY_1$=Navegar a través de directorios, viendo sus contenidos.
+$LI_FUNCTIONALITY_2$=Crear nuevos directorios.
+$LI_FUNCTIONALITY_3$=Borrar directorios y archivos.
+$LI_FUNCTIONALITY_4$=Renombrar directorios y archivos.
+$LI_FUNCTIONALITY_5$=Ver propiedades detalladas de los directorios y archivos.
+$LI_FUNCTIONALITY_6$=Copiar y mover archivos desde un directorio a otro.
+$LI_FUNCTIONALITY_7$=Transferir archivos entre los sistemas de archivos locales y remotos.
+$LI_FUNCTIONALITY_8$=Mostrar vistas en miniatura de imagenes archivos.
+$LI_FUNCTIONALITY_9$=Ver previamente los contenidos de archivos.
+$LI_FUNCTIONALITY_10$=Buscar archivos y carpetas.
+
+$HEAD_BROWSER_PANE_LAYOUT$=Disposición inicial.
+$DESC_BROWSER_PANE_LAYOUT$::
+los paneles inicialmente consisten en los componentes listados más abajo.
+::END
+$LI_BROWSER_PANE_LAYOUT_1$=: Muestra el directorio que está trabajando actualmente usando un "crumb" para representar cada directorio en el camino. para navegar en la barra de herramientas.
+el usuario también puede teclear acciones que pueden ser llevadas a cabo en directorio y/o archivos.
+$LI_BROWSER_PANE_LAYOUT_2$=: Muestra acciones que pueden ser llevadas a cabo en directorios y/o archivos. La barra de herramientas puede ser personalizada
+ haciendo clic en el botón derecho del ratón basculando el estado visible de cada botón.
+$LI_BROWSER_PANE_LAYOUT_3$=: Muestra las carpetas de el corresponidente archivo del sistema como una estructura de árbol.
+$LI_BROWSER_PANE_LAYOUT_4$=: Muestra una vista previa del archivo seleccionado de una lista.
+$LI_BROWSER_PANE_LAYOUT_5$=: Muestra un lista de archivos de el directorio actual en proceso.
+$LI_BROWSER_PANE_LAYOUT_6$=: Muestra los controles necesitados para llevar a cabo una búsqueda a través de el dirctorio actual en proceso.
+
+
+<!-- Help-Layout-Browser-Tree-Overview.htm -->
+$HEAD_TREE_PANE$=Vista general de un panel árbol.
+$DESC_TREE_PANE$::
+El panel de árbol esta inicialmente localizado en la esquina superior izquierda de el $LINK_LOCAL_REMOTE_PANE$ justo encima de el $LINK_PREVIEW_PANE$.
+Muestra las carpetas de los archivos correspondientes como en herarquia. Esto lo hace muy fácil para entender como el sistema de archivos es trazado.
+
+El panel de árbol tiene muchos aspectos que pueden ser usados como un fácil manejo del sitema de archivos subyacente. Estos estan listados abajo:
+ :END
+$LI_TREE_PANE_FEATURE_1$=Creando un nuevo directorio.
+$LI_TREE_PANE_FEATURE_2$=Borrando un directorio.
+$LI_TREE_PANE_FEATURE_3$=Renombrando un directorio.
+$LI_TREE_PANE_FEATURE_4$=Abriendo un directorio para ver su contenido.
+$LI_TREE_PANE_FEATURE_5$=Viendo las propiedades de un directorio.
+$LI_TREE_PANE_FEATURE_6$=Copiando o moviendo un directorio a otra localización.
+$LI_TREE_PANE_FEATURE_7$=Transfiriendo un directorio a otro sistema de archivos.
+
+$HEAD_EXAMPLE_PATH$=el "screenshot" superior usa el ejemplo "C:\Downloads\RhinoSoft.com" para mostrar como el árbol rompe la estructura de la carpeta:
+$DESC_EXAMPLE_PATH_1$=Escritorio
+$DESC_EXAMPLE_PATH_2$=mi pc
+$DESC_EXAMPLE_PATH_3$=C:
+$DESC_EXAMPLE_PATH_4$=Descarga
+$DESC_EXAMPLE_PATH_5$=RhinoSoft.com
+
+
+<!-- Help-Layout-Browser-Preview-Overview.htm -->
+$HEAD_PREVIEW_PANE$=vista general de la vista previa de un panel.
+$DESC_PREVIEW_PANE$::
+ La vista previa del panel está inicialmente localizada en la esquina inferior izquierda de el $LINK_LOCAL_REMOTE_PANE$ just below the $LINK_TREE_PANE$.
+Muestra una vista previa del archivo que es seleccionado desde $LINK_LIST_PANE$. Esto es muy útil cuando es más eficiente ver previamente un archivo de imagen sin descargar el original.
+Cuando la vista previa del panel está desacoplado del interfaz, su tamaño puede ser ajustado.
+dando tamaño de nuevo a la vista previa del panel también ajusta el tamaño de la imagen siendo vista previamente.
+
+El panel de vista previa apoya los tipos de archivos listados abajo:
+::END
+$LI_PREVIEW_TYPES_SUPPORTED$::
+JPG/JPEG
+GIF
+PNG
+::END
+
+
+<!-- Help-Layout-Browser-List-Overview.htm -->
+$HEAD_LIST_PANE_OVERVIEW$=vista general de un panel lista.
+$DESC_LIST_PANE_OVERVIEW$::
+La lista de panel esta inicialmente localizada en el lado derecho de $LINK_LOCAL_REMOTE_PANE$. Muestra todos los archivos y directorios de el directorio actual en proceso. 
+El panel de lista tiene muchos aspectos que pueden ser usados facilmente para dirigir el sitema de archivo subyacente.
+
+Estos aspectos están listados abajo:
+::END
+$LI_LIST_PANE_FEATURE_1$=Creando un nuevo directorio.
+$LI_LIST_PANE_FEATURE_2$=Borrando directorios y archivos.
+$LI_LIST_PANE_FEATURE_3$=Renombrando un directorio o archivo.
+$LI_LIST_PANE_FEATURE_4$=Abriendo un directorio para ver su contenido.
+$LI_LIST_PANE_FEATURE_5$=Abriendo un archivo.
+$LI_LIST_PANE_FEATURE_6$=Viendo las propiedades de directorios y archivos.
+$LI_LIST_PANE_FEATURE_7$=Copiando o moviendo directorios y archivos a otra localización.
+$LI_LIST_PANE_FEATURE_8$=Tranfiriendo directorios y arhivos a otro sistema de archivos.
+
+$DESC_LIST_PANE_VIEW_MODES$=El panel lista puede mostrar el contenido del directorio usando uno de las cinco vistas admitidas:
+$LI_LIST_PANE_VIEW_1$=<strong>Large Icons</strong> - Muestra el nombre del archivo a lo largo con un gran icono apropiado 
+determinado por el tipo de archivo.
+$LI_LIST_PANE_VIEW_2$=<strong>Small Icons</strong> - Muestra la misma información que los iconos grandes, excepto que usa un icono más pequeño.
+$LI_LIST_PANE_VIEW_3$=<strong>List</strong> - Muestra la misma información que un icono pequeño, pero avanzando horizontalmente  para mostrar 
+archivos adicionales.
+$LI_LIST_PANE_VIEW_4$=<strong>Details</strong> - La vista tradicional usada por windows explorer para mostrar información adicional
+sobre cada archivo.
+$LI_LIST_PANE_VIEW_5$=<strong>Thumbnails</strong> - Muestra los nombres de los archivos con un vista previa de tipos de imagenes permitidas.
+
+$DESC_LIST_PANE_DETAILS$::
+La vista detallada tiene cuatro columnas que muestran información importante sobre cada archivo. Estas columnas están descritas más abajo.
+::END
+$LI_LIST_PANE_DETAILS_1$=Nombre
+$LI_LIST_PANE_DETAILS_2$=tamaño
+$LI_LIST_PANE_DETAILS_3$=Tipo
+$LI_LIST_PANE_DETAILS_4$=Modificado
+$LI_LIST_PANE_DETAILS_1_1$=:  Muestra el nombre visualizado de el archivo o directorio.
+$LI_LIST_PANE_DETAILS_2_1$=:  Muestra el tamaño de el archivo o directorio.
+$LI_LIST_PANE_DETAILS_3_1$=:  Identifica el tipo de archivo como registrado con el sitema operativo del cliente
+$LI_LIST_PANE_DETAILS_4_1$=:  Muestra la última fecha en que el archivo fue modificado.
+$DESC_LIST_PANE_THUMBS$::
+La vista en miniatura puede mostrar cada archivo como una representación en miniatura por si misma.
+Si el archivo no produce una imagen de si mismo, entonces el icono grande es usado en su lugar. para más información de las diferentes tamaños disponibles
+para miniaturas, por favor haga clic en $LINK_THUMB_SIZES_HERE$.
+::END
+
+
+<!-- Help-Layout-Transfer-Overview.htm -->
+$HEAD_TRANSFER_PANE_OVERVIEW$=Vista general de la transferencia de paneles.
+$DESC_TRANSFER_PANE_OVERVIEW$::
+El panel transferencia esta inicialmente localizado en el final de la ventana de la aplicación. Los paneles de transferencia muestran información de estatus
+para todas las transferencias de archivos. por omisión, las transferencias son removidas desde este panel si son completadas, canceladas, o interrumpidas.
+Sin embargo, FTP Voyager JV puede ser configurado para dejar entradas en el panel de transferencia hasta que ellos son movidos manualmente.
+El panel de transferencia tiene muchos aspectos que pueden ser usados para fácilmente manejar cada transferencia.
+
+Estos aspectos son mostrados abajo:
+::END
+$LI_TRANSFER_PANE_FEATURE_1$=Para la transferencia seleccionada despues de que el archivo actual esta completo.
+$LI_TRANSFER_PANE_FEATURE_2$=Mueve al siguiente archivo para la transferencia seleccionada.
+$LI_TRANSFER_PANE_FEATURE_3$=Pausa la transferencia seleccionada.
+$LI_TRANSFER_PANE_FEATURE_4$=Reanuda la transferencia seleccionada.
+$LI_TRANSFER_PANE_FEATURE_5$=Cancela la transferencia.
+$LI_TRANSFER_PANE_FEATURE_6$=Elimina la transferencia de la lista.
+$LI_TRANSFER_PANE_FEATURE_7$=Cancela todas las transferencias que están en la lista.
+$LI_TRANSFER_PANE_FEATURE_8$=Elimina todas las transferencias de la lista. 
+
+$DESC_TRANSFER_COLUMNS$::
+El penel Transferencia contiene columnas mostrando información importante sobre la transferencia. Estas columnas
+están listadas más abajo.
+::END
+
+$HEAD_COL_OPERATING_STATUS$=Operación
+$DESC_COL_OPERATING_STATUS$::
+Muestra el estado actual de la transferencia. en cualquier momento, el estado de la transferencia puede ser cambiado. 
+Los estados son mostrados abajo:
+::END
+$LI_COL_OPERATING_STATUS_1$=<strong>Running</strong>:  La transferencia está en progreso.
+$LI_COL_OPERATING_STATUS_2$=<strong>Stopped</strong>:  La transferencia ha sido parada. Esto puede ser un resultado de la selección de la opción $LINK_STOP_AFTER_FILE_COMPLETES$
+$LI_COL_OPERATING_STATUS_3$=<strong>Paused</strong>: La transferencia ha sido pausada. Esto puede ser un resutlado de la selección de la opción $LINK_PAUSE$
+$LI_COL_OPERATING_STATUS_4$=<strong>Cancelled</strong>: La Transferencia ha sido cancelada.
+$LI_COL_OPERATING_STATUS_5$=<strong>Error</strong>: La transferencia ha encontrado un error. La transferencia puede continuar despues de que el error haya sido reconocido por el 
+usuario.
+
+$HEAD_COL_NAME$=Nombre
+$DESC_COL_NAME$::
+El nombre de el archivo actualmente siendo transferido es mostrado en esta columna. si un directorio entero o multiples archivos están siendo
+transferidos, el nombre mostrado en esta columna cambia como archivos completados.
+::END
+
+$HEAD_COL_STATUS$=estatus
+$DESC_COL_STATUS$::
+Esta columna muestra el progreso para el archivo que esta siendo tranferido actualmente. Muestra el tamaño total de el archivo así como cuanto de el archivo
+ya ha sido transferido en bytes actuales asi como en porcentaje con un indicador de progreso visual.
+::END
+
+$HEAD_COL_COMPLETION$=Finalización.
+$DESC_COL_COMPLETION$::
+La columna de terminación muestra el ratio de transferencia y la estimada cantidad de tiempo hasta que la transferencia
+sea completada. El tiempo estimado es mostrado en el formato HH:MM:SS donde "HH" representa horas, "MM" representa minutos, y "SS" representa segundos.
+La transferencia también muestra uno de los dos iconos para indicar si la transferencia es una descarga o una carga:
+::END
+$LI_COL_COMPLETION_1$=carga.
+$LI_COL_COMPLETION_2$=descarga.
+
+$HEAD_COL_OVERALL$=total
+$DESC_COL_OVERALL$::
+Muestra el número total de bytes transferidos para todos los archivos que son parte de esta tranferencia particular.
+Esto tiene un indicador de progreso que actualiza unos ciertos intervalos para mostrar el porcentaje aproximado de número de bytes transferidos.
+::END
+
+$HEAD_COL_PATH_FROM$=camino recurso
+$DESC_COL_PATH_FROM$::
+Esta columna muestra el camino completo para el archivo "source" que está actualmente siendo transferido.
+::END
+
+$HEAD_COL_PATH_TO$=camino destino
+$DESC_COL_PATH_TO$::
+Esta columna muestra el completo camino para el archivo de destino que esta actualmente siendo transferido.
+::END
+
+
+<!-- Help-Layout-StatusBar-Overview.htm -->
+$HEAD_LAYOUT_STATUS_BAR$=Status Bar Overview
+
+$DESC_LAYOUT_STATUS_BAR$::
+La barra de estado esta localizada en el final de la principal ventana de la aplicación. Puede mostrar descripciones para varias acciones de FTP Voyager JV,
+El nombre de la cuenta de usuario actualmente conectada, identificador de conexión segura, y el tiempo trancurrido
+de la sesión.
+::END
+
+$LI_STATUS_BAR_AREA_1_1$=Area estatus: 
+$LI_STATUS_BAR_USER_2_1$=Usuario: 
+$LI_STATUS_BAR_CONNECTION_3_1$=conexión seguro: 
+$LI_STATUS_BAR_USER_4_1$=Duración: 
+
+$LI_STATUS_BAR_AREA_1_2$::
+Actualizaciones dinámicas para mostrar amplia información sobre botones y acciones. Tambien muestra el número de archivos
+y el número de archivos seleccionados en el archivo local y panel remoto.
+::END
+$LI_STATUS_BAR_USER_2_2$=Muestra que cuenta de usuario está activa en FTP Voyager JV.
+$LI_STATUS_BAR_CONNECTION_3_2$=Muestra un icono y texto si FTP Voyager JV está usando una conexión segura a Serv-U.
+$LI_STATUS_BAR_USER_4_2$=Muestra el tiempo transcurrido de esta sesión en FTP Voyager JV.
+
+
+<!-- Help-Menus-Main-Overview.htm -->
+$HEAD_MENU_MAIN_OVERVIEW$=Vista general del menú principal.
+$DESC_MENU_MAIN_OVERVIEW$::
+El menú principal está localizado en la parte de arriba de la ventana de la aplicación. Permite un rápido acceso de todas las operaciones y aspectos de FTP Voyager JV.
+Algunas operaciones pueden también ser llevadas a cabo usando el teclado. Si una operacion apoya un atajo del teclado, entonces es mostrado al final
+del correspondiente menú de entrada.
+::END
+$DESC_MENU_MAIN_FEATURES$=El Menú principal está dividido en las categorias mostradas abajo:
+
+<!-- Help-Menus-Main-Items-File.htm -->
+$HEAD_MENU_FILE$=File Menu
+
+$HEAD_ACTION_NEW_LOCAL_BROWSER$=Nuevo buscador local
+$DESC_ACTION_NEW_LOCAL_BROWSER$::
+Crea un nuevo marco acoplable que es asociado con el sistema local de archivos.
+::END
+
+$HEAD_ACTION_NEW_REMOTE_BROWSER$=Nuevo buscador remoto.
+$DESC_ACTION_NEW_REMOTE_BROWSER$::
+Crea un nuevo marco acoplable que es asociado con el sistema remoto de archivos.
+::END
+
+$HEAD_ACTION_NEW_DIR$=Nueva carpeta
+$DESC_ACTION_NEW_DIR$::
+Crea un nuevo directorio debajo del directorio en proceso actual de $LINK_ACTIVE_PANE$.
+::END
+
+$HEAD_ACTION_OPEN$=Abrir
+$DESC_ACTION_OPEN$::
+Abre el directorio en $LINK_ACTIVE_PANE$ o intenta abrir el archivo con un programa del sistema para la extension de el archivo.
+::END
+
+$NOTE_ACTION_DELETE$::
+$BOLD_NOTE$:  Dependiendo de tus ajustes FTP Voyager JV, puede requerir confirmar la accion antes de que el borrado ocurra.
+::END
+
+$HEAD_ACTION_RENAME$=Renombrar
+$DESC_ACTION_RENAME$::
+Permite que los nombres de archivos  y carpetas ser editados en $LINK_ACTIVE_PANE$.
+::END
+
+$HEAD_ACTION_PROPERTIES$=Propiedades
+$DESC_ACTION_PROPERTIES$::
+Se lanza un dialogo que muestra las propiedades de los items seleccionados de $LINK_ACTIVE_PANE$.
+::END
+
+$HEAD_ACTION_FILE_UPLOAD$=cargar archivos...
+$DESC_ACTION_FILE_UPLOAD$::
+Los comandos de Carga inician una transferencia de archivos que copia los items seleccionados en un panel local activo a un servidor de archivos.
+Si hay mas de una ventana de buscador remoto abierta, un dialogo es mostrado que permite elegir el propio destino.
+::END
+$NOTE_ACTION_UPLOAD$::
+$BOLD_NOTE$:  El servidor conserva la estructura de arbol del directorio de cualquier archivo cliente que puedan ser directorios.
+::END
+
+$HEAD_ACTION_FILE_DOWNLOAD$=Descargar archivos...
+$DESC_ACTION_FILE_DOWNLOAD$::
+Los comandos de descarga inician una transferencia de archivos que copian los items seleccionados en un panel remoto activo a el archivo
+local del sitema. si hay mas de una ventana de buscador local abierta, un dialogo es mostrado que permite elegir el destino apropiado.
+::END
+$NOTE_ACTION_DOWNLOAD$::
+$BOLD_NOTE$:  El cliente conserva la estructura de árbol del directorio de cualquier archivo servidor que pueden ser directorios.
+::END
+
+$HEAD_ACTION_STOP_REMOTE_DIR_LISTING$=Parar el listado de directorios remotos.
+$DESC_ACTION_STOP_REMOTE_DIR_LISTING$::
+Si una lista de directorios está pendiente en el servidor, esta opción termina la lista si tener que esperar para que finalize.
+::END
+$NOTE_ACTION_STOP_REMOTE_DIR_LISTING$::
+$BOLD_NOTE$:  Esta acción está solo disponible mientras una lista remota de directorios es en progreso. 
+las listas remotas del directorio pueden llevar mucho tiempo para ser completadas (especialmente si el archivo servidor esta accediendo a recursos 
+a traves de la network). ciertos comandos no pueden ser ejecutados hasta que Voyager JV reciva una lista de directorios remotos ha sido cancelada.
+::END
+
+$HEAD_ACTION_SYNC_FOLDERS$=Sincroniza carpetas
+$DESC_ACTION_SYNC_FOLDERS$::
+lanza el dialogo $LINK_SYNC_FOLDERS$, permitiendo al usuario ver inconsistencias entre dos directorios cuyos archivos deben unirse.
+::END
+
+$HEAD_ACTION_SAVE_LOGIN$=Guarda el login.
+$DESC_ACTION_SAVE_LOGIN$::
+Lanza el dialogo $LINK_SAVE_LOGIN$, permitiendo al usuario guardar el archivo con su credencial de carga a la maquina del cliente.
+una vez guardado, el usuario puede cargar este servidor abriendo ese archivo.
+::END
+$NOTE_ACTION_SAVE_LOGIN$::
+$BOLD_NOTE$:  guardar contraseña en archivos plantear un riesgo de seguridad. 
+::END
+
+$HEAD_ACTION_CHANGE_PASSWORD$=Cambia la contraseña
+$DESC_ACTION_CHANGE_PASSWORD$::
+lanzado de el dialogo $LINK_CHANGE_PASSWORD$, permitiendo al usuario cambiar la contraseña para su cuenta de usuario.
+::END
+$NOTE_ACTION_CHANGE_PASSWORD$::
+$BOLD_NOTE$:  Esta opción está sólo está disponible si el administrador permite a los usuarios cambiar su contraseña.
+::END
+
+$HEAD_ACTION_EXIT$=Salida.
+$DESC_ACTION_EXIT$::
+Cierra FTP Voyager JV y (opcionalmente) sale de la cuenta actual del serv-U.
+::END
+$NOTE_ACTION_EXIT$::
+$BOLD_NOTE$:  Si cargas en FTP Voyager JV usando una cuenta de administrador, cuando sales de Serv-U no puede ser recomendado.
+Cuando sales también sales de la consola de dirección, requeriendo entrar otra vez antes de volver a la consola de dirección desde 
+el buscador.
+::END
+
+
+<!-- Help-Menus-Main-Items-Edit.htm -->
+$HEAD_MENU_EDIT$=Edita el menú
+
+$HEAD_ACTION_PREFERENCES$=Preferencias.
+$DESC_ACTION_PREFERENCES$::
+Lanza el diálogo $LINK_PREFERENCES$ permitiendo configurar varias opciones en FTP Voyager JV para ser configuradas.
+El diálogo $LINK_PREFERENCES$ tiene muchas opciones que pueden ser cambiadas para 
+satisfacer necesidades individuales.
+
+Los diálogos de preferencias están hechos de estas páginas:
+::END
+$LI_PREF_PAGE_TBAR_MAIN$=Barra de herramientas principal.
+$LI_PREF_PAGE_TBAR_LOCAL$=Barra de herramientas local.
+$LI_PREF_PAGE_TBAR_REMOTE$=barra de herramientas local.
+$LI_PREF_PAGE_TBAR_TRANSFER$=transfiere barra de herramientas.
+
+$HEAD_ACTION_SELECT_ALL$=Seleccionar todo.
+$DESC_ACTION_SELECT_ALL$::
+Selecciona todas las filas de activo $LINK_LIST_PANE$.
+::END
+
+$HEAD_ACTION_INVERT_SELECTION$=Invertir selección.
+$DESC_ACTION_INVERT_SELECTION$::
+El reverso de cada estado de selección de lineas del activo $LINK_LIST_PANE$. Además, cualguier fila no seleccionada
+se convierte en seleccionada y cualquier fila seleccionada se convierte en no-seleccionada.
+::END
+
+
+<!-- Help-Menus-Main-Items-View.htm -->
+$HEAD_MENU_VIEW$=Vista del Menú
+
+$MENU_STYLE$=Estilo
+$DESC_STYLE$::
+Proporciona un modo alternativo que puede ser solicitado a FTP Voyager JV. hay muchos estilos personalizables disponibles, así como un estilo que refleja 
+el sistema operativo que FTP Voyager JV está llevando a cabo.
+::END
+
+$MENU_TBARS$=Barra de herramientas.
+$DESC_TBARS$::
+la visibilidad de varias barras de herramientas que son localizadas a través de la aplicación.
+::END
+
+$MENU_PANES$=Paneles.
+$DESC_PANES$::
+La visibilidad de los paneles acoplables que son localizados en el $LINK_LOCAL_REMOTE_PANES$.
+::END
+
+$MENU_VIEW_LARGE_ICONS$=Iconos Grandes
+$DESC_VIEW_LARGE_ICONS$::
+Seleccionando estos cambios de items la vista para mostrar iconos grandes de archivos y carpetas en un panel activo.
+::END
+
+$MENU_VIEW_SMALL_ICONS$=iconos pequeños
+$DESC_VIEW_SMALL_ICONS$::
+Seleccionando estos cambios de items la vista para mostrar pequeños iconos de archivos y carpetas en el panel activo.
+::END
+
+$MENU_VIEW_LIST$=Lista
+$DESC_VIEW_LIST$::
+Seleccionando estos cambios de item la vista para mostrar una simple lista de todos los archivos y carpetas en el panel activo.
+::END
+
+$MENU_VIEW_DETAILS$=Detalles
+$DESC_VIEW_DETAILS$::
+Seleccionando estos cambios de items la vista para mostrar información detallada de todos los archivos y carpetas
+en el panel activo. Además de mostrar el nombre completo, un listado detallado también muestra el tamaño de el archivo, y la fecha y hora de modificación.
+::END
+
+$MENU_VIEW_THUMBS$=Vista en miniatura
+$DESC_VIEW_THUMBS$::
+La vista en miniatura está mostrada en $LINK_LIST_PANE$. el tamaño de la minitura puede ser cambiado seleccionando una tamaño 
+pre-definido que está listado aqui. las miniaturas son solo recuperdas y mostradas para reconocer tipos de imagenes. Sin embargo, un icono grande es mostrado por el item.
+
+Los Tamaños pre definidos están listados debado:
+::END
+$LI_VIEW_THUMBS_075$=75x75
+$LI_VIEW_THUMBS_100$=100x100 (Default)
+$LI_VIEW_THUMBS_150$=150x150
+$LI_VIEW_THUMBS_200$=200x200
+$LI_VIEW_THUMBS_250$=250x250
+
+$MENU_BACK$=atrás
+$DESC_BACK$::
+Los comandos de navegación traseros entran en el historial de naviegación de el panel activo.
+::END
+
+$MENU_FORWARD$=adelante
+$DESC_FORWARD$::
+Los comandos de navegación delanteros entran en el historial de navegación de un panel activo.
+::END
+
+$MENU_UP_DIR$=un nivel arriba
+$DESC_UP_DIR$::
+Estos comandos de navegación al directorio matriz de el directorio actual en un panel activo.
+::END
+
+$MENU_REFRESH$=actualizar
+$DESC_REFRESH$::
+El comando actualizado fuerza FTP Voyager JV recuperar y actualizar la lista de directorios de un panel activo.
+::END
+
+
+<!-- Help-Menus-Main-Items-Windows.htm -->
+$HEAD_MENU_WINDOWS$=Windows Menu
+
+$HEAD_MENU_WINDOWS_CLOSE$=cerrar
+$DESC_MENU_WINDOWS_CLOSE$::
+cierra el $LINK_ACTIVE_PANE$.  $BOLD_NOTE$: Cerrando el $LINK_ACTIVE_PANE$ Actualiza el $LINK_FRAME_LIST$.
+::END
+
+$HEAD_MENU_WINDOWS_AUTO_HIDE$=Esconder automaticamente.
+$DESC_MENU_WINDOWS_AUTO_HIDE$::
+Cambia el estado de $LINK_ACTIVE_PANE$ para convertirse en un panel escondido adjunto a la ventana de la aplicación. El panel escondido puede ser mostrado 
+pasando el ratón sobre la tabulación asignada al marco.
+::END
+
+$HEAD_MENU_WINDOWS_DOCKABLE$=Acoplado
+$DESC_MENU_WINDOWS_DOCKABLE$::
+Cambia el estado de $LINK_ACTIVE_PANE$ a un marco acoplable que es adjuntado a la ventana de la aplicación. Esta falta de estado de los paneles ventana en
+ FTP Voyager JV.
+::END
+
+$HEAD_MENU_WINDOWS_FLOATING$=Flotando.
+$DESC_MENU_WINDOWS_FLOATING$::
+Cambia el estado de $LINK_ACTIVE_PANE$ a un marco flotante que es distante de la ventana de la aplicación.
+::END
+
+$HEAD_MENU_WINDOWS_AUTO_HIDE_ALL$=Auto esconderse todo.
+$DESC_MENU_WINDOWS_AUTO_HIDE_ALL$::
+Cambia todos los marcos a un estado $LINK_AUTO_HIDE$ 
+::END
+
+$HEAD_MENU_WINDOWS_CLOSE_ALL$=Elige todos los marcos.
+$DESC_MENU_WINDOWS_CLOSE_ALL$::
+Cierra todos los marcos de la aplicación.
+::END
+
+$HEAD_MENU_WINDOWS_TREE_PANE$=Panel árbol
+$DESC_MENU_WINDOWS_TREE_PANE$::
+Cambia La visibilidad de $LINK_TREE_PANE$.
+::END
+
+$HEAD_MENU_WINDOWS_PREVIEW_PANE$=Vista previa del panel.
+$DESC_MENU_WINDOWS_PREVIEW_PANE$::
+Cambia la visibilidad de $LINK_PREVIEW_PANE$.
+::END
+
+$HEAD_MENU_WINDOWS_FRAME_LIST$=Lista de marcos.
+$DESC_MENU_WINDOWS_FRAME_LIST$::
+Esta Sección contiene todos los marcos que son activos para esta sección. Los menús se actualizan dinamicamente de acuerdo con los marcos que han sido 
+creados y destruidos. Seleccionando el marco de la lista lo hace activo en la aplicación.
+::END
+
+$HEAD_MENU_WINDOWS_ACTIVATE_DLG$=Windows...
+$DESC_MENU_WINDOWS_ACTIVATE_DLG$::
+Lanza el dialogo $LINK_ACTIVATE_WINDOW$ que permite a los marcos ser activados con la aplicación.
+::END
+
+
+<!-- Help-Menus-Main-Items-Help.htm -->
+$HEAD_MENU_HELP$=Help Menu
+
+$HEAD_ACTION_HELP_TOPICS$=Temas de ayuda.
+$DESC_ACTION_HELP_TOPICS$::
+Lanza la falta del buscador web directamente el documento de ayuda de FTP Voyager JV
+::END
+
+$HEAD_ACTION_HELP_OVERVIEW$=vista general.
+$DESC_ACTION_HELP_OVERVIEW$::
+Lanza la falta del buscador web  directamente al documento de ayuda "overview" de FTP Voyager JV
+::END
+
+$HEAD_ACTION_HELP_TECH_SUPPORT$=Soporte Técnico.
+$DESC_ACTION_HELP_TECH_SUPPORT$::
+Lanza la falta de un buscador web directamente a una página que proporciona información de como contactar con soporte técnico
+para el servidor activo.
+
+$BOLD_NOTE$: Esta opción está sólo disponible si un link de apoyo es proporcionado por el administrador Serv-U. 
+::END
+
+$HEAD_ACTION_HELP_ABOUT$=Sobre Diálogo
+$DESC_ACTION_HELP_ABOUT$::
+Te lleva al diálogo sobre FTP Voyager JV. Este diálogo contiene información importante del producto.
+
+Tiene dos páginas las cuales son mostradas debajo:
+::END
+$LI_ABOUT_PAGE_1$=Información del programa.
+$LI_ABOUT_PAGE_1_1$=:  Esta Página contiene información sobre la versión FTP Voyager JV, fecha de construcción, e información de contacto.
+$LI_ABOUT_PAGE_2$=Información del ordenador.
+$LI_ABOUT_PAGE_2_1$::
+:  Este diálogo contiene información sobre el sistema operativo del ordenador y la instalación Java, 
+la cual puede ser copiada al sujeta papeles para la propuesta de un apoyo técnico haciendo clic en el botón <strong>Copy to clipboard</strong> 
+::END
+
+
+<!-- Help-Tbar-Main-Overview.htm -->
+$HEAD_TOOLBAR_MAIN_OVERVIEW$=vista general del menú principal de barra de herramientas.
+$DESC_TOOLBAR_MAIN_OVERVIEW$::
+La barra de herramientas principal proporciona al usuario un modo rápido para ejecutar acciones comunes para la aplicación.
+La barra de herramientas principal está inicialmente localizada directamente debajo del menú principal. Está escondida por defecto.
+Para mostrar la barra de herramientas, ir a "View | Toolbars" y seleccionar la "principal" opción del menú principal.
+::END
+
+
+<!-- Help-Tbar-Main-Actions.htm -->
+$HEAD_TOOLBAR_MAIN_ACTIONS$=Principales acciones de la barra de herramientas.
+$DESC_TOOLBAR_MAIN_ACTIONS$::
+Listadas más abajo están todas las acciones que le barra de herramientas principal puede llevar a cabo.
+::END
+
+
+<!-- Help-Tbar-Browser-Crumbbar-Overview.htm -->
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$=Vista general de la barra de navegación local/remota.
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$::
+Las barras de navegación remotas y locales pueden inicialmente estar localizadas en la parte superior de cada panel remoto o local. La barra de navegación tiene varios modos
+para cambiar el directorio actual en proceso. Para cambiar el directorio actual en proceso. siga uno de los pasos que se muestran debajo:
+::END
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_1$=Usa un  botón "crumb" o un despliegue de un botón "crumb"
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_2$=Especifica un camino absoluto para el sitema de archivos.
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_3$=Selecciona un camino previo desde una lista de historial desplegada.
+
+
+<!-- Help-Tbar-Browser-Crumbbar-Actions.htm -->
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$=Acciones de la barra de navegación local/remota.
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$::
+La barra de navegación lleva a cabo varias acciones para navegar a un directorio en la correspondiente sistema de archivos. 
+Las funcionalidades de la barra de navegación son listadas debajo:
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_1$=botones "crumb"
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_1$::
+Cada "crumb" representa un directorio. Para cambiar un directorio al "crumb correspondiente", clic en el "crumb".  haciendo 
+clic en la flecha para desplejar el "crumb" trae una lista de sub-directorios de esa localización del "crumb".
+Haciendo Clic en uno de esos sub-directorios también cambia el directorio en proceso.
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_6$=modo de camino absoluto.
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_6$::
+Haga clic en este area para cambiar la barra de navegación a un campo para editar. el campo editado inicialmente muestra el directorio actual en proceso
+como un camino absoluto. Esta serie puede ser reemplazada con un camino absoluto diferente que apunta a un directorio valido en el sistema de archivos.
+presionando la letra [ENTER] pone el directorio en proceso en el camino especificado.
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_7$=Historial
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_7$::
+Clica en este botón para mostrar una lista desplegable de los directorios en proceso anteriores. Seleccionando un camino de esta lista cambia el directorio actual 
+en proceso.
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_8$=$MENU_REFRESH$
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_8$=$DESC_REFRESH$
+
+$LIST_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$::
+<strong>Crumbs</strong>: Cada "crumb" representa un directorio. El usuario también puede especificar un camino absoluto para navegar desde esta barra de 
+herramientas. <strong>(2) $LINK_HELP_TOOLBAR_BROWSER_TOOLBAR$</strong>: Muestra las acciones que pueden ser llevadas a cabo 
+en directorios o archivos. la barra de herramientas puede ser personalizada haciendo clic en el botón derecho del ratón y cambiando el estado visible
+de cada botón.
+::END
+
+
+<!-- Help-Tbar-Browser-Overview.htm -->
+$HEAD_TOOLBAR_BROWSER_OVERVIEW$=Vista general de una barra de herraminentas local/Remota.
+$DESC_TOOLBAR_BROWSER_OVERVIEW$::
+Las barras de herramientas remotas y locales permiten al usuario una rapida ejecución de las acciones para los directorios seleccionados
+y/o archivos.
+::END
+
+
+<!-- Help-Tbar-Browser-Search-Overview.htm -->
+$HEAD_TOOLBAR_BROWSER_SEARCH_OVERVIEW$=Vista general de la barra de búsqueda local/Remota.
+$DESC_TOOLBAR_BROWSER_SEARCH_OVERVIEW$::
+La barra de búsqueda Local/remota permite al usuario buscar rápidamente archivos y carpetas usando letras clave comunes '*', '?', etc.
+::END
+
+
+<!-- Help-Tbar-Browser-Search-Actions.htm -->
+$HEAD_TOOLBAR_BROWSER_SEARCH_ACTIONS$=Acciones de la barra de búsqueda local/Remota.
+$DESC_TOOLBAR_BROWSER_SEARCH_ACTIONS$::
+Listados más abajo están todas las opciones que una barra de búsqueda puede llevar a cabo.
+::END
+
+$HEAD_TOOLBAR_SEARCH_FIELD$=Campo de Búsqueda.
+$DESC_TOOLBAR_SEARCH_FIELD$::
+El Campo de búsqueda permite entrar en el criterio de búsqueda, incluyendo nombres de archivos y carpetas. Comodines estándar pueden tambien ser usados para buscar 
+archivos, poblando la lista con todos los nombres de archivos que concuerdan con los criterios de búsqueda. Los comodines estan listados más abajo:
+::END
+$LI_SEARCH_WILDCARD_1_1$='*'
+$LI_SEARCH_WILDCARD_1_2$::
+El caracter '*' significa cualquier caracter que producira una unión. Por ejemplo:  "*" o "*.*" resultará con todos los archivos y carpetas
+siendo devueltos a la lista.
+::END
+$LI_SEARCH_WILDCARD_2_1$='?'
+$LI_SEARCH_WILDCARD_2_2$::
+El Caracter '?' es mostrado como un caracter máscara, y unirá a cualquier caracter individual en la posición especificada. Por ejemplo:
+"Betty.???" Se mostrarán todos los archivos que empiezan con "Betty." y termina con una extensión de tres caracteres. como ejemplo adicional,
+ "LogFile??2009.txt" Mostraría todos los archivos que empiezan con "LogFile" contiene dos caracteres en el medio, y termina en "2009.txt",
+como podría ser el caso con los archivos registrados mensualmente. 
+::END
+
+$HEAD_TOOLBAR_SEARCH_BTN$=Botón de Búsqueda.
+$DESC_TOOLBAR_SEARCH_BTN$::
+El botón de búsqueda empieza el proceso de búsqueda. El proceso es hecho en otro hilo que permite la interacción con el GUI.
+::END
+
+$HEAD_TOOLBAR_SEARCH_DROP_BTN$=Botón de búsqueda.
+$DESC_TOOLBAR_SEARCH_DROP_BTN$::
+La Busqueda del botón "drop" proporciona más opciones para configurar el criterio de búsqueda. Aquí rangos de datos especificos y tamaños de archivos pueden 
+ser incluidos en el algoritmo de búsqueda.
+::END
+
+
+<!-- Help-Tbar-Browser-Actions.htm -->
+$HEAD_TOOLBAR_BROWSER_ACTIONS$=Acciones de la barra de herramientas local/Remota.
+$DESC_TOOLBAR_BROWSER_ACTIONS$::
+Listados más abajo están todas las acciones que las barra de herramientas local/remota pueden llevar a cabo.
+::END
+
+$HEAD_ACTION_BACK$=Atrás.
+$DESC_ACTION_BACK$::
+El comando hacia delante navega para entrar en el historial de navegación en un panel activo.
+::END
+
+$HEAD_ACTION_FORWARD$=Adelante.
+$DESC_ACTION_FORWARD$::
+El comando hacia delante navega hacia la entrada el historial de navegación de un panel activo.
+::END
+$NOTE_ACTION_FORWARD_TOOLBAR$::
+<strong>Note (2*):</strong>  El botón de despliegue muestra un historial de los directorios buscados usando el mecanismo de atrás y delante.
+::END
+
+$HEAD_ACTION_UPDIR$=Directorio arriba.
+$DESC_ACTION_UPDIR$::
+Este comando navega hacia el directorio matriz en el directorio actual en el panel activo.
+::END
+
+$HEAD_ACTION_UPLOAD$=Carga.
+$DESC_ACTION_UPLOAD$::
+Los comandos de carga inician la transferencia que copia los items seleccionados a un servidor de archivos.
+Si más de una ventana de buscador remoto está abierta al mismo tiempo, un diálogo se muestra que permite
+que se elija el destino apropiado.
+::END
+$NOTE_ACTION_UPLOAD_TOOLBAR$::
+<strong>Note (4*):</strong>  Solo una barra de herramientas local puede mostra el botón de carga.
+::END
+
+$HEAD_ACTION_DOWNLOAD$=Descarga
+$DESC_ACTION_DOWNLOAD$::
+El comando de descarga inicia una transferencia de archivos que copian los items seleccionados al sistema de archivos local. Si hay más de una ventana de buscador abierta a la vez, 
+un diálogo se muestra que permite elegir el destino adecuado.
+::END
+$NOTE_ACTION_DOWNLOAD_TOOLBAR$::
+<strong>Note (5*):</strong>  Sólo una barra de herramientas de un panel remoto puede mostrar el botón de descarga.
+::END
+
+$HEAD_ACTION_NEW_FOLDER$=Nueva carpeta.
+$DESC_ACTION_NEW_FOLDER$::
+Crea un nuevo directorio debajo de el directorio actual en proceso.
+::END
+
+$HEAD_ACTION_DELETE$=Borrar
+$DESC_ACTION_DELETE$::
+El comando borrado borra permanentemente los items seleccionados en el $LINK_ACTIVE_PANE$.
+::END
+
+$HEAD_ACTION_VIEW$=Vistas
+$DESC_ACTION_VIEW$::
+Permite al usuario ir a través de varios vistas desponibles a la lista de paneles.
+::END
+$NOTE_ACTION_VIEW_TOOLBAR$::
+<strong>Note (8*):</strong>  Desde aqui, rapidamente selecione la vista apropiada para una lista de panel hacia un botón de despliegue. 
+Las vistas disponibles del panel de lista son:
+::END
+
+
+<!-- Help-Tbar-Transfer-Overview.htm -->
+$HEAD_TOOLBAR_TRANSFER_OVERVIEW$=Vista general de la barra de herramientas de transferencia.
+$DESC_TOOLBAR_TRANSFER_OVERVIEW$::
+La barra de herramientas de transferencia proporciona al usuario una manerar rápida de ejecutar acciones comunes
+para transferencias que ocurren entre el cliente y el servidor. la barra de transferencia está inicialmente localizada en la parte superior
+de el panel de transferencia.
+::END
+
+
+<!-- Help-Tbar-Transfer-Actions.htm -->
+$HEAD_TOOLBAR_TRANSFER_ACTIONS$=Acciones de la barra de herramientas de transferencia.
+$DESC_TOOLBAR_TRANSFER_ACTIONS$::
+Listado abajo están todas las acciones que la barra de herramientas pueden llevar a cabo.
+::END
+
+$HEAD_ACTION_TRANSFER_STOP_AFTER_FILE$=Para después de que un archivo es completado.
+$DESC_ACTION_TRANSFER_STOP_AFTER_FILE$::
+Seleccionando esta opcion ordena FTP Voyager JV parar de tranferir archivos adicionales en la cola de transferencia de itemts
+una vez el archivo actual siendo tranferido es completado. 
+::END
+
+$NOTE_ACTION_TRANSFER_STOP_AFTER_FILE$::
+$BOLD_NOTE$:  Esta opción sólo está disponible cuando la transferencia tiene más de un item en proceso.
+::END
+
+$HEAD_ACTION_TRANSFER_SKIP_FILE$=Saltar archivo.
+$DESC_ACTION_TRANSFER_SKIP_FILE$::
+Los comando de saltar un archivo ordenan al Voyager JV abortar la transferencia de el archivo acutal pero continua transfiriendo cualquier
+archivo restante en la lista de archivos en transferencia.
+::END
+
+$HEAD_ACTION_TRANSFER_PAUSE$=Pausa.
+$DESC_ACTION_TRANSFER_PAUSE$::
+Permite al usuario pausar la transferencia. Esto hace que FTP Voyager JV pare de enviar o recibir cualquier dato de esta transferencia particular
+hasta que sea reanudado.
+::END
+
+$HEAD_ACTION_TRANSFER_RESUME$=Reanudar.
+$DESC_ACTION_TRANSFER_RESUME$::
+Permite al usuario reanudar la transferencia. reanudar la transferencia tiene muchas ventajas. Si el usuario pausa la transferencia,
+o la conexión se perdió momentaneamente, el usuario puede reanudar la transferencia. Esto permite al FTP Voyager JV y Serv-U reanudarse
+desde donde paró la tranferencia. Esto ahorra tiempo y recursos por que al usuario no se le fuerza a transferir todos los contenidos del 
+archivo otra vez.
+::END
+
+$HEAD_ACTION_TRANSFER_CANCEL$=Cancelar
+$DESC_ACTION_TRANSFER_CANCEL$::
+El cancelar la acción inmediatamente aborta la transferencia. Esta acción sólo está disponible cuando una transferencia está en proceso.
+::END
+
+$HEAD_ACTION_TRANSFER_REMOVE$=Eliminar
+$DESC_ACTION_TRANSFER_REMOVE$::
+Seleccionando esta opción elimina la entrada de el panel de transferencia. Esta opción sólo está disponible cuando la transferencia esta completa
+o ha sido cancelada.
+::END
+$NOTE_ACTION_TRANSFER_REMOVE_TOOLBAR$::
+$BOLD_NOTE$:  Por defecto, las tranferencias completadas o canceladas son automaticamente eliminadas de el panel de transferencia.
+Para hacer esta opción disponible  para el eliminado manual de la transferencia de archivos, ver el documento de ayuda las preferencias de $LINK_PREF_PAGE_GENERAL$
+::END
+
+
+<!-- Help-Dlg-About-ProgramInfo.htm -->
+$HEAD_DLG_ABOUT_PROGRAM_INFO$=Caja sobre la información del programa.
+$DESC_DLG_ABOUT_PROGRAM_INFO$::
+La página del programa de información contiene información útil sobre FTP Voyager JV.
+La página está dividida en secciones las cuales están divididas más abajo.
+::END
+$LI_DLG_ABOUT_PROG_INFO_1$=Información del producto.
+$LI_DLG_ABOUT_PROG_INFO_2$=Información de contacto.
+$LI_DLG_ABOUT_PROG_INFO_3$=Información de desarrollo.
+$LI_DLG_ABOUT_PROG_INFO_4$=Información legal.
+$LI_DLG_ABOUT_PROG_INFO_1_1$=:  Contiene el número de versión y la fecha de construcción de FTP Voyager JV.
+$LI_DLG_ABOUT_PROG_INFO_2_1$=:  lista todas las partes envueltas en la distribución del producto.
+$LI_DLG_ABOUT_PROG_INFO_3_1$=:  Lista todas las partes envueltas en el desarrollo del producto.
+$LI_DLG_ABOUT_PROG_INFO_4_1$=:  Contiene información sobre las leyes de copyright aplicables al producto.
+
+
+<!-- Help-Dlg-About-ComputerInfo.htm -->
+$HEAD_DLG_ABOUT_COMPUTER_INFO$=Caja sobre la información del ordenador.
+$DESC_DLG_ABOUT_COMPUTER_INFO$::
+La página de información del ordenador contiene información útil sobre la configuración de la máquina del cliente.
+La página está dividida en secciones las cuales son descritas más abajo:
+::END
+$LI_DLG_ABOUT_COMP_INFO_1$=Información del sistema operativo.
+$LI_DLG_ABOUT_COMP_INFO_2$=Información del Java Runtime.
+$LI_DLG_ABOUT_COMP_INFO_1_1$=: Muestra información sobre el sistema operativo de la máquina del cliente.
+$LI_DLG_ABOUT_COMP_INFO_2_1$=:  Muestra información sobre el ambiente Java Runtime que está instalado en la máquina del cliente.
+
+$DESC_COPY_TO_CLIPBOARD$::
+La página de información del ordenador también tiene un botón de copia al sujetapapeles que copia más detalles en profundidad
+sobre el sistema operativo de el cliente y el ambiente Java Runtime. Esta información es útil para asuntos de soporte técnico 
+relacionados a FTP Voyager JV.
+::END
+
+<!-- Help-Dlg-Prefs-General.htm -->
+$HEAD_DLG_PREFS_GENERAL$=Preferencias - Genaral.
+$DESC_DLG_PREFS_GENERAL$::
+La Página general tiene items que pertenecen a muchos rasgos del FTP Voyager JV.
+Estos items están descritos más abajo.
+::END
+
+$HEAD_REMOVE_TRANSFER_FILES$=Elimina archivos del panel de transferencia despues de ser completados.
+$DESC_REMOVE_TRANSFER_FILES$::
+Cuando esta opción es seleccionada, las transferencias son automaticamente eliminadas del panel de transferencias cuando
+estas son completadas o canceladas. de lo contrario, la transferencia permanece en el panel de transferencias hasta que halla sido eliminada manualmente.
+::END
+
+$HEAD_ADJUST_DST$=Ajusta automaticamente timestamps para el horario de ahorro de energía.
+$DESC_ADJUST_DST$::
+Activar esta opción hace que FTP Voyager JV ajuste automaticamente las fechas de los archivos y tiempos de una hora cuando el horario de ahorro de energía 
+entra en vigor.
+::END
+
+$HEAD_DATE_FMT$=Usa un formato de fecha personalizado.
+$DESC_DATE_FMT$::
+Si se selecciona, todos los "timestamps" son mostrados con la sintaxis que está en el cuadro de edición. La sintaxis puede ser cambiada. Las opciones
+de sintaxis y formato estas listadas abajo.
+::END
+
+<!-- ROW_COL -->
+$OPTIONS_UI_TABLE_TEXT$=Texto
+$OPTIONS_UI_TABLE_YEAR$=Año
+$OPTIONS_UI_TABLE_MONTH$=Mes
+$OPTIONS_UI_TABLE_NUMBER$=Numero
+$OPTIONS_UI_TABLE_0_0$=Letra
+$OPTIONS_UI_TABLE_0_1$=Fecha o componente de la hora
+$OPTIONS_UI_TABLE_0_2$=Presentación
+$OPTIONS_UI_TABLE_0_3$=Ejemplos
+$OPTIONS_UI_TABLE_1_1$=Designador de la era.
+$OPTIONS_UI_TABLE_1_3$=AD
+$OPTIONS_UI_TABLE_2_3$=1996; 96
+$OPTIONS_UI_TABLE_3_1$=Mes del año.
+$OPTIONS_UI_TABLE_3_3$=Julio; Jul; 07
+$OPTIONS_UI_TABLE_4_1$=Semana del año.
+$OPTIONS_UI_TABLE_5_1$=Semana del mes.
+$OPTIONS_UI_TABLE_6_1$=Día del año.
+$OPTIONS_UI_TABLE_7_1$=Día del mes.
+$OPTIONS_UI_TABLE_8_1$=Día de la semana en el mes.
+$OPTIONS_UI_TABLE_9_1$=Día de la semana.
+$OPTIONS_UI_TABLE_9_3$=Martes; mar
+$OPTIONS_UI_TABLE_10_1$=Marcador AM/PM
+$OPTIONS_UI_TABLE_10_3$=PM
+$OPTIONS_UI_TABLE_11_1$=Hora del día
+$OPTIONS_UI_TABLE_12_1$=$OPTIONS_UI_TABLE_11_1$
+$OPTIONS_UI_TABLE_13_1$=Hora en am/pm
+$OPTIONS_UI_TABLE_14_1$=$OPTIONS_UI_TABLE_13_1$
+$OPTIONS_UI_TABLE_15_1$=Minuto de la hora.
+$OPTIONS_UI_TABLE_16_1$=Segundo en el minuto.
+$OPTIONS_UI_TABLE_17_1$=Milisegundo.
+$OPTIONS_UI_TABLE_18_1$=Zona horaria.
+$OPTIONS_UI_TABLE_18_3$=Hora estándar en el pacifico. PST; GMT-08:00
+$OPTIONS_UI_TABLE_19_1$=$OPTIONS_UI_TABLE_18_1$
+
+$OPTIONS_UI_NUMBER$=numbero
+$OPTIONS_UI_TEXT$=texto
+$OPTIONS_UI_DIGIT$=Digito
+
+$OPTIONS_UI_BODY_4_1$=Los patrones de letras están normalmente repetidos, como su número determina la presentación exacta:
+
+$OPTIONS_UI_BODY_5_1$=Texto:
+$OPTIONS_UI_BODY_5_2$::
+Para formar, si el numero de los patrones de letras es 4 o más, se usa la forma completa; de lo contrario
+una forma abreviada o corta es utilizada si estuviera disponible. Para analizarlo, ambas formas son aceptadas, independientemente de el número de letras patrones.
+::END
+
+$OPTIONS_UI_BODY_6_1$=Número:
+$OPTIONS_UI_BODY_6_2$::
+Para dar formato, el número de letras patrones es el mínimo número de dígitos, y un número más corto 
+es como cero en esta cantidad. Para analizar, el número de letras patrones es ignorado a no ser que sea necesitado para separar dos campos adyacentes.
+::END
+
+$OPTIONS_UI_BODY_7_1$=Año:  
+$OPTIONS_UI_BODY_7_2$::
+Para dar formato, si el número de letras patrones es 2, el año es truncado en 2 dígitos; de lo contrario es interpretado como
+::END
+
+$OPTIONS_UI_BODY_8$::
+Para ser analizado, si el número de letras patrones es más de 2, el año es interpretado literalmente, a pesar de el número de dígitos. así usando el patrón
+"MM/dd/yyyy", "01/11/12" Analiza a Jan 11, 12 A.D.
+::END
+
+$OPTIONS_UI_BODY_9_1$=Mes:
+$OPTIONS_UI_BODY_9_2$=Si el número de letras patrones es 3 o más, el mes es interpretado como 
+$OPTIONS_UI_BODY_9_3$=; sin embargo, es interpretado como
+
+$OPTIONS_UI_BODY_10_1$=Zona horaria general:
+$OPTIONS_UI_BODY_10_2$=Las zonas horarias son interpretadas como 
+$OPTIONS_UI_BODY_10_3$::
+Si tiene nombres. Para representar una zona horaria en un valor GMT, se usa la siguiente sintaxis
+::END
+
+$OPTIONS_UI_BODY_11_1$=Zona horaria de GMT:
+
+$OPTIONS_UI_BODY_12_1$=GMT
+$OPTIONS_UI_BODY_12_2$=Signos
+$OPTIONS_UI_BODY_12_3$=Horas
+$OPTIONS_UI_BODY_12_4$=Minutos
+
+$OPTIONS_UI_BODY_13_1$=Signos:
+$OPTIONS_UI_BODY_13_2$=uno de
+
+$OPTIONS_UI_BODY_14_1$=Horas:
+
+$OPTIONS_UI_BODY_15_1$=Minutos:
+
+$OPTIONS_UI_BODY_16_1$=Digito:
+
+$OPTIONS_UI_BODY_17_1$=Debe estar entre 0 y 23, y
+$OPTIONS_UI_BODY_17_2$::
+debe estar entre 00 y 59. El formato es localmente independiente y los dígitos deben ser llevados del bloqueo latino básico de un estandar de códico único.
+::END
+$OPTIONS_UI_BODY_18_1$=Para analizar,
+$OPTIONS_UI_BODY_18_2$=RFC 822 zonas horarias.
+$OPTIONS_UI_BODY_18_3$=están también aceptadas.
+
+$OPTIONS_UI_BODY_19_1$=RFC 822 Zonas horarias:
+$OPTIONS_UI_BODY_19_2$=Para dar formato, el formato de 4 digitos RFC 822 es usado:
+$OPTIONS_UI_RFC_1$=RFC822 Zona horaria:
+$OPTIONS_UI_RFC_2$=Signo
+$OPTIONS_UI_RFC_3$=Horas de dos dígitos.
+$OPTIONS_UI_RFC_4$=Minutos
+$OPTIONS_UI_RFC_5$=Horas de dos dígitos:
+$OPTIONS_UI_RFC_6$=Digito Digito
+
+$OPTIONS_UI_RFC_7$=Horas de dos dígitos
+$OPTIONS_UI_RFC_8$=debe estar entre 00 y 23. Otras definiciones son como para.
+$OPTIONS_UI_RFC_9$=Zonas horarias generales.
+$OPTIONS_UI_RFC_10$=para analizar.
+$OPTIONS_UI_RFC_11$=Zonas horarias generales.
+$OPTIONS_UI_RFC_12$=También son aceptadas.
+
+$OPTIONS_UI_EXAMPLES_1_1$=Ejemplos.
+$OPTIONS_UI_EXAMPLES_1_2$::
+Los siguientes ejemplos muestran como los patrones de fecha y hora son interpretados en los EE.UU. la fecha y hora dada son 
+2001-07-04 12:08:56 Hora local en los EE.UU hora local del pacifico.
+::END
+
+$OPTIONS_UI_EXAMPLE_TBL_0_0$=Patrón de Fecha y hora.
+$OPTIONS_UI_EXAMPLE_TBL_0_1$=Resultado
+$OPTIONS_UI_EXAMPLE_TBL_2_1$=Miér, Jul 4, '01
+$OPTIONS_UI_EXAMPLE_TBL_3_1$=12:08 PM
+$OPTIONS_UI_EXAMPLE_TBL_4_1$=PM, Horario de Verano del pacifico.
+$OPTIONS_UI_EXAMPLE_TBL_5_1$=PM, PDT
+$OPTIONS_UI_EXAMPLE_TBL_6_1$=02001.Julio.04 AD 12:08 PM
+$OPTIONS_UI_EXAMPLE_TBL_7_1$=Miér, 4 Jul 2001 12:08:56 -0700
+
+$HEAD_UPLOAD_OVERWRITE$=Confirma la carga sobreescrita y "continúa".
+$DESC_UPLOAD_OVERWRITE$::
+Si se selecciona, FTP Voyager JV Pregunta por confirmación antes de intentar sobre escribir un archivos cuando se carga.
+::END
+
+$HEAD_DOWNLOAD_OVERWRITE$=Confirma la descarga sobreescribe y reanuda.
+$DESC_DOWNLOAD_OVERWRITE$::
+Si se selecciona, FTP Voyager JV pregunta por confirmación antes de intentar sobre escribir un archivo cuando se descarga.
+::END
+
+$HEAD_FILE_DELETE$=Confirma el borrado de archivos.
+$DESC_FILE_DELETE$::
+Si se selecciona, FTP Voyager JV pregunta por confirmación antes de intentar borrar un archivo.
+::END
+
+$HEAD_FOLDER_DELETE$=Confirma el borrado de un archivo.
+$DESC_FOLDER_DELETE$::
+Si se selecciona, FTP Voyager JV pregunta por confirmación antes de intentar borrar un archivo/directorio.
+::END
+
+$HEAD_CONFIRM_LOGOUT$=Confirma el cerrado de la sesión cuando sales de la aplicación.
+$DESC_CONFIRM_LOGOUT$::
+Si se selecciona, FTP Voyager JV pregunta si se desea o no salir de la sesión de Serv-U Cuando está cerrado. Si se quiere salir de la sesión 
+cuando se cierra FTP Voyager JV, no será posible volver a la consola de dirección o reanudar FTP Voyager JV sin primero iniciando sesión en el
+Serv-U otra vez. Si se desea esta opción, FTP Voyager JV automáticamente llevará a cabo la última acción dada en respuesta
+al diálogo de confirmación. Si esta confirmación nunca ha sido preguntada, FTP Voyager JV no tiene que salir de la sesión del Serv-U Cuando esta es 
+cerrada.
+::END
+
+
+<!-- Help-Dlg-Prefs-Toolbars.htm -->
+$HEAD_DLG_PREFS_TBARS$=Preferencias -barra de herramientas.
+$DESC_DLG_PREFS_TBARS$::
+Las páginas de la barra de herramientas de el diálogo muestra los botones disponibles que pueden ser visualizados en la barra de herramientas correspondientes.
+La disposición de la barra de herramientas puede ser cambiada reordenando la lista.
+Usa los botones de abajo para reordenar la lista.
+::END
+$LI_DLG_PREFS_TBARS_MOVE_TO_TOP$=Mover al principio
+$LI_DLG_PREFS_TBARS_MOVE_UP$=Mover arriba
+$LI_DLG_PREFS_TBARS_MOVE_DOWN$=mover abajo
+$LI_DLG_PREFS_TBARS_MOVE_TO_BTM$=Mover al final
+$LI_DLG_PREFS_TBARS_MOVE_TO_TOP_1$=:  Mueve el botón al principio de la lista.
+$LI_DLG_PREFS_TBARS_MOVE_UP_1$=:  Mueve el botón una posición arriba en la lista.
+$LI_DLG_PREFS_TBARS_MOVE_DOWN_1$=:  Mueve el botón abajo una posición en la lista.
+$LI_DLG_PREFS_TBARS_MOVE_TO_BTM_1$=:  Mueve el botón al final de la lista.
+$DESC_DLG_PREFS_TBARS_ENABLED$=la "checkbox" permitida puede ser usada para cambiar la visibilidad de cada botón.
+
+
+<!-- Help-Dlg-SyncFolders.htm -->
+$HEAD_SYNC_FOLDERS$=Sincronizar carpetas - Vista general
+$DESC_SYNC_FOLDERS$::
+El sincronizado de carpetas permite a los directorios y archivos estar completamente sincronizados, o reflejados entre el cliente y el servidor.
+y viceversa. Esta es una función poderosa que ayuda a mantener una puesta a punto maestra de los archivos y directorios.
+
+Este rasgo es especialmente util para actualizar web sites. Te permite rápidamente añadir, eliminar y actualizar archivos; todo con presionar un botón.
+::END
+
+$DESC_SYNC_FOLDERS_LAYOUT$::
+sincronizar carpetas esta presentado abajo:
+::END
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_1$=:  El campo local muestra la información de qué necesidades tienen que ser reemplazadas,
+para reflejar lo que el marco local tiene.
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_2$=:  El Marco remoto muestra la información de qué necesidades han de ser reemplazadas, para reflejar que lo que el marco local tiene.
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_3$=:  Contiene ciertas opciones para configurar y ejecutar la comparación y operaciones de el proceso de sincronización.
+
+
+<!-- Help-Dlg-SyncFolders-Results.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS$=Carpetas sincronizadas.- panel(es) resultado.
+$DESC_SYNC_FOLDERS_RESULTS$::
+Los Paneles Resultado muestran los archivos y/o directorios que necesitan ser actualizados para que un sistema de archivos se una con otro.
+De este modo, El panel de resultado local muestra los archivos y/o carpetas que necesitan ser actualizadas para unirse con el sistema remoto de archivos y el panel de resultado
+remoto puestra los archivos y carpetas que necesitan ser actualizadas para unir el sistema de archivo local.
+
+La disposición inicial de estos paneles es descrita debajo:
+::END
+
+$LI_SYNC_FOLDERS_RESULTS_1$=:  La barra de herramientas tiene botones para acciones comunes que pueden ser llevadas acabo.
+$LI_SYNC_FOLDERS_RESULTS_2$=:  La lista muestra los archivos y/o carpetas que necesitan actualizar para unir  
+el sistema de archivos opuesto.
+
+
+<!-- Help-Dlg-SyncFolders-Tbar.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS_TBAR$=Carpetas sincronizadas - Panel Resultado - Barra de herramientas.
+$DESC_SYNC_FOLDERS_RESULTS_TBAR$::
+La barra de herramientas resultado tiene ciertas acciones que pueden ser llevadas a cabo para un panel resultado particular.
+::END
+
+$DESC_SYNC_FOLDERS_RESULTS_TBAR_1$::
+Estas acciones son descritan abajo:
+::END
+
+$HEAD_ACTION_SYNC_FOLDERS_REMOVE$=Eliminar.
+$DESC_ACTION_SYNC_FOLDERS_REMOVE$::
+Elimina los archivos seleccionados y directorios de la lista. Esto es útil si quieres excluir estos archivos y/o directorios de el proceso de sincronización.
+::END
+
+$HEAD_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS_DOWNLOAD$=Ejecuta estas acciones (Descarga)
+$HEAD_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS_UPLOAD$=Ejecuta estas acciones (Carga)
+$DESC_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS$::
+Emipieza la el proceso de sincronización. El proceso lleva a cada archivo y directorio de la lista correspondiente y ejecuta 
+la acción asociada para ese item.
+::END
+
+
+<!-- Help-Dlg-SyncFolders-List.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS_LIST$=Sincroniza carpetas. - Panel Resultado.- Lista
+$DESC_SYNC_FOLDERS_RESULTS_LIST$::
+Las Listas Resultado muestran los archivos y directorios que necesitan ser actualizados para unir una copia maestra de los directorios raiz que 
+están siendo comparados.
+::END
+
+$DESC_SYNC_FOLDERS_RESULTS_LIST_COLUMNS$::
+Las columnas son descritas más abajo.
+::END
+
+$HEAD_SYNC_COL_FILE_NAME$=Archivo o carpeta.
+$DESC_SYNC_COL_FILE_NAME$::
+Muestra el "nombre del archivo relativo" de el archivo o carpeta que será actualizada. El nombre del archivo relativo está basado en el directorio raiz de la comparación
+que fue especificada.
+::END
+$DESC_SYNC_COL_FILE_NAME_2$::
+$BOLD_NOTE$:  Abajo estan listadas ciertas condiciones que pueden presentarse por si mismas cuando se comparan directorios.
+::END
+
+$LI_SYNC_COL_FILE_NAME_DONE_1$::
+Los directorios de comparación de raices ya están sincronizados. Esto significa que las rutinas de comparación no pueden encontrar cualquier archivo 
+o carpeta que difiera de la comparación de opciones especificada.
+::END
+
+$LI_SYNC_COL_FILE_NAME_ERROR_2$::
+An Error ocurrió durante la comparación de rutinas. Hay numerosas razones por las que esta operación podría fallar, por favor contacte con su administrador del sistema
+y si buscas más información para el código de fallo.
+::END
+
+$HEAD_SYNC_COL_RESULTS$=Resultados
+$DESC_SYNC_COL_RESULTS$::
+Visualiza los resultados de la comparación. Los resultados son basados en ciertos criterios.
+::END
+
+$LI_SYNC_COL_RESULTS_1$=No en local
+$LI_SYNC_COL_RESULTS_2$=No en remoto
+$LI_SYNC_COL_RESULTS_3$=Más viejo.
+$LI_SYNC_COL_RESULTS_4$=Más nuevo.
+$LI_SYNC_COL_RESULTS_5$=Sincronizado.
+$LI_SYNC_COL_RESULTS_6$=Error
+
+$HEAD_SYNC_COL_ACTION$=Acción.
+$DESC_SYNC_COL_ACTION$::
+Muestra que opción será llevada en el archivo. una vez que el proceso de sincronización es ejecutado.
+::END
+
+$LI_SYNC_COL_ACTION_1$=Borrar.
+$LI_SYNC_COL_ACTION_2$=Cargar.
+$LI_SYNC_COL_ACTION_3$=Descargar.
+
+$HEAD_SYNC_COL_LOCAL_SIZE$=tamaño local
+$DESC_SYNC_COL_LOCAL_SIZE$::
+Muestra el tamaño de los archivos o carpetas locales.
+::END
+
+$HEAD_SYNC_COL_REMOTE_SIZE$=Tamaño remoto.
+$DESC_SYNC_COL_REMOTE_SIZE$::
+Muestra el tamaño de los archivos y carpetas remotos.
+::END
+
+$HEAD_SYNC_COL_LOCAL_DATE_MODIFIED$=Fecha local modificada.
+$DESC_SYNC_COL_LOCAL_DATE_MODIFIED$::
+Muestra el "timestamp" de cuando el archivo o carpeta local fue modificado.
+::END
+
+$HEAD_SYNC_COL_REMOTE_DATE_MODIFIED$=Fecha remota modificada
+$DESC_SYNC_COL_REMOTE_DATE_MODIFIED$::
+Muestra el "timestamp"  de cuando un archivo o carpeta fue modificada.
+::END
+
+$DESC_SYNC_NOTE_COL_POS$::
+$BOLD_NOTE$:  Columna (4), (5), (6), y (7) podría inicialmente ser intercambiadas dependiendo de que panel resultado estas viendo.
+Por ejemplo, por el panel de resultado remoto, la columna inicial (4) es tamaño remoto,  columna (5) es tamaño local, columna (6) es
+fecha remota modificada, y columna 7 es fecha local modificada.
+::END
+
+
+<!-- Help-Dlg-SyncFolders-Options.htm -->
+$HEAD_SYNC_FOLDERS_OPTIONS$=Carpetas sincronizadas - panel de opciones
+$DESC_SYNC_FOLDERS_OPTIONS$::
+El panel de opciones tiene diferentes ajustes que pueden ser ajustados para producir diferentes resultados de comparaciones y ajustar ciertas operaciones de sincronización.
+::END
+
+$DESC_SYNC_FOLDERS_OPTIONS_2$=Las opciones son descritas más abajo.
+
+$HEAD_SYNC_OPTION_COMPARE_SIZE$=Comparar tamaño:  
+$DESC_SYNC_OPTION_COMPARE_SIZE$::
+Ajustando esta bandera añade cualquier archivo o carpeta que difiera en tamaño a la lista de comparación.
+::END
+
+$HEAD_SYNC_OPTION_COMPARE_DATE_MODIFIED$=Comparar tiempo:  
+$DESC_SYNC_OPTION_COMPARE_DATE_MODIFIED$::
+Ajustando esta bandera añade cualquier archivo y carpeta donde la fecha modificada "timestamp" difieren a la lista de comparación.
+::END
+
+$HEAD_SYNC_OPTION_INCLUDE_SUBFOLDERS$=Incluir subcarpetas:  
+$DESC_SYNC_OPTION_INCLUDE_SUBFOLDERS$::
+Ajustando esta bandera añade cualquier carpeta anidada o cualquier archivo o carpeta anidada que concuerde con 
+los criterios de arriba a la lista de comparación.
+::END
+
+$HEAD_SYNC_OPTION_DELETE$=Borrado:  
+$DESC_SYNC_OPTION_DELETE$::
+Ajustando esta bandera añade cualquier archivo o carpeta que requiere una supresión para juntarse con el directorio raiz opuesto.
+::END
+
+$HEAD_SYNC_OPTION_PROMPT_FOR_OVERWRITE$=Sujerencia para sobreescribir confirmaciones:  
+$DESC_SYNC_OPTION_PROMPT_FOR_OVERWRITE$::
+Ajustando esta bandera muestra una sujerencia para cualquier sobreescripción que puede ocurrir durante el proceso de sincronización.
+::END
+
+$HEAD_SYNC_OPTION_PROMPT_FOR_DELETE$=lleva a la confirmación de borrado.  
+$DESC_SYNC_OPTION_PROMPT_FOR_DELETE$::
+Ajustando esta bandera muestra un sistema para cualquier borrado que puede ocurrir durante el proceso de sincronización.
+::END
+
+$HEAD_SYNC_OPTION_COMPARE_BTN$=Comparar botón:  
+$DESC_SYNC_OPTION_COMPARE_BTN$::
+Actualiza manualmente la lista de comparación.
+::END
+$DESC_SYNC_OPTION_COMPARE_BTN_2$::
+$BOLD_NOTE$:  Cambiando una opción de arriba activará una actualización automática de un listado de comparación.
+::END
+
+
+<!-- Help-Dlg-SaveLogin.htm -->
+$HEAD_SAVE_LOGIN$=Guarda el diálogo de entrada en el sistema.
+$DESC_SAVE_LOGIN$::
+la característica de guardar la entrada en el sistema muestra un archivo para ser guardado en la maquina del cliente que cuando se abre,
+conecta directamente al servidor. Esto elimina la necesidad del usuario de entrar al servidor a través del buscador web para abrir FTP Voyager JV.
+::END
+
+$DESC_SAVE_LOGIN_LAYOUT$::
+El diseño del diálogo es descrito debajo.
+::END
+
+$LI_SAVE_LOGIN_ITEM_1_1$=Servidor:  
+$LI_SAVE_LOGIN_ITEM_1_2$=Especifica el servidor al cual te gustaría conectar.
+
+$LI_SAVE_LOGIN_ITEM_2_1$=Puerto:  
+$LI_SAVE_LOGIN_ITEM_2_2$=Especifica el puerto público que está escuchando el servidor.  
+$LI_SAVE_LOGIN_ITEM_2_3$::
+$BOLD_NOTE$:  El puerto "Público" podría ser diferente que el puerto el cual el servidro está escuchando. Por ejemplo, un router podría trazar un mapa de el puerto público de 8080 
+al puerto privado de 80 que el servidor está escuchando.
+::END
+
+$LI_SAVE_LOGIN_ITEM_3_1$=Languaje:  
+$LI_SAVE_LOGIN_ITEM_3_2$=Especifica el lenguaje que te gustaría usar cuando entras en el servidor.
+
+$LI_SAVE_LOGIN_ITEM_4_1$=Seguro:  
+$LI_SAVE_LOGIN_ITEM_4_2$=Especifica si la conexión usada es segura.HTTP contra los protocolos HTTPS 
+$LI_SAVE_LOGIN_ITEM_4_3$::
+$BOLD_NOTE$:  Cuando cambias esta bandera, verifica que el puerto es correcto. de lo contrario, podrías encontrar un error de conexión cuando intentas entrar el sistema.
+::END
+
+$LI_SAVE_LOGIN_ITEM_5_1$=Usuario:  
+$LI_SAVE_LOGIN_ITEM_5_2$=Especifica que ID del Usuario te gustaría usar cuando intentas iniciar sesión en el servidor.
+
+$LI_SAVE_LOGIN_ITEM_6_1$=Contraseña (Opcional):  
+$LI_SAVE_LOGIN_ITEM_6_2$=Especifica la contraseña a usar para la ID del usuario que esta especificada arriba.
+$LI_SAVE_LOGIN_ITEM_6_3$::
+$BOLD_NOTE$:  Si este campo esta vacío, se te preguntará por una contraseña antes de entrar en FTP Voyager JV.
+::END
+
+$LI_SAVE_LOGIN_ITEM_7_1$=Verifica la contraseña:  
+$LI_SAVE_LOGIN_ITEM_7_2$=Este campo verifica si tu contraseña es correcta.
+
+$LI_SAVE_LOGIN_ITEM_8_1$=Camino de destino.  
+$LI_SAVE_LOGIN_ITEM_8_2$=Especifica el nombre del archivo "absoluto" para este archivo lanzado.  
+$LI_SAVE_LOGIN_ITEM_8_3$::
+$BOLD_NOTE$:  El nombre del archivo tiene que tener "jnlp" como extensión del archivo. de lo contrario, el Runtime Java no reconocerá esto como
+un archivo Webstart Java.
+::END
+
+$LI_SAVE_LOGIN_ITEM_9_1$=Buscador:  
+$LI_SAVE_LOGIN_ITEM_9_2$::
+Haciendo clic en este botón despliega un diálogo que te permite especificar una carpeta local 
+donde el archivo lanzado será creado.
+::END
+
+$LI_SAVE_LOGIN_ITEM_10_1$=Crear:  
+$LI_SAVE_LOGIN_ITEM_10_2$=Cuando haces clic, un archivo "JNLP" es creado en el camino destino con el nombre del archivo que fue especificado.
+$LI_SAVE_LOGIN_ITEM_10_3$::
+$BOLD_NOTE$:  La extensión del archivo tiene que ser "jnlp". Esto es un requerimiento para elque el Runtime Java abra apropiadamente el archivo.
+::END
+
+$LI_SAVE_LOGIN_ITEM_11_1$=Cancelar:  
+$LI_SAVE_LOGIN_ITEM_11_2$=Cancela y cierra el diálogo.
+
+
+<!-- Help-Dlg-ChangePassword.htm -->
+$HEAD_CHANGE_PASSWORD$=Cambio del dialogo de contraseña.
+$DESC_CHANGE_PASSWORD$::
+El administrador de servidor de archivos puede configurar si a los usuarios se les permite cambiar sus contraseñas o no. Si tu administrador lo permite, 
+la constraseña puede ser cambiada desde FTP Voyager JV. Es una buena idea el cambiar contraseñas frecuentemente para mantener la seguridad del servidor.
+El administrador también puede poner ciertos requerimientos en el contenido de la contrseña. en el caso de problemas cambiando tu contraseña, por favor, contacta 
+con el administrador Serv-U.
+::END
+
+$LIST_CHANGE_PWORD$=Por Favor siga los pasos que hay debajo para cambiar su contraseña:
+$LIST_CHANGE_PWRORD_TXT$::
+Clic en $IMG_BTN_CHANGE_PASSWORD$ <strong>Change password</strong> entrada encontrada debajo del menú <strong>File</strong>. Si esta no está disponible,
+entonces tu administrador no permite el cambio de contraseña por parte de los usuarios.
+Introduzca su vieja contraseña.
+Introduzca su nueva contraseña.
+Introduzca su nueva contraseña otra vez Enter para garantizar la exactitud.
+Presiona el botón <strong>OK</strong> para completar el cambio de contraseña.
+::END
+
+$DESC_CHANGE_PASSWORD_ERRORS$::
+Si el cambio de la contraseña no es exitoso, un mensaje de error detallado es mostrado para explicar por qué la nueva contraseña no se encuentra entre 
+los requisitos de seguridad del administrador.
+::END
+
+
+<!-- Help-Dlg-ActivateWindow.htm -->
+$HEAD_DLG_ACTIVATE_WINDOW$=Activar la ventana del diálogo.
+$DESC_DLG_ACTIVATE_WINDOW$::
+El activado de la ventana de diálogo tiene una lista de los paneles que están disponibles al FTP Voyager JV. incluye todos 
+$LINK_LOCAL_REMOTE_PANES$ y el $LINK_TRANSFER_PANE$. Selecciona el marco para activar y presionar el botón de "OK"
+Este marco es movido al frente de la principal ventana de JV y llega a ser el $LINK_ACTIVE_PANE$.
+::END
+
+
+<!-- Help-OtherInfo-ActivePane-Overview.htm -->
+$HEAD_ACTIVE_PANE_OVERVIEW$=Active Pane Overview
+$DESC_ACTIVE_PANE_OVERVIEW$::
+The Active Pane is identified by having a different color surrounding it.  It receives all menu and keyboard input.
+
+In the example below, the $LINK_LOCAL_LIST_PANE$ is the Active Pane.
+::END
+
+
+<!-- Help-OtherInfo-DockingFramework-Overview.htm -->
+$HEAD_DOCKING_FRAMEWORK_OVERVIEW$=Vista general del acoplamiento del marco.
+$DESC_DOCKING_FRAMEWORK_OVERVIEW$::
+El acoplamiento del marco proporciona la flexibilidad para cambiar la completa apariencia de la aplicación. con toda esta personalización
+la aplicación puede ser ajustada para satisfacer tus necesidades. Esto ayuda a crear una diseño familiar que fácil de entender e intuitiva para 
+cada usuario. El marco de acoplamiento también garantiza un acceso a la vista de otras partes de el mismo sistema de archivos utilizando multiples marcos.
+Los Marcos pueden ser 
+file system by utilizing multiple frames.  Los marcos pueden ser establecidos en una interfaz con pestañas, flotando, acoplado, o auto-oculto,
+La apariencia de la aplicación puede también ser cambiada. Esto puede ser hecho seleccionando un diferente estilo debajo del menú principal.
+::END
+
+$DESC_DOCK_DRAG_SPOTS$::
+La imagen que se muestra debajo nos muestra las areas que pueden ser arrastradas par acambiar el diseño del marco.
+::END
+
+
+<!-- Help-OtherInfo-NavigatingDirs.htm -->
+$HEAD_NAVIGATING_DIRS$=Navegando por Directorios.
+$DESC_NAVIGATING_DIRS$::
+FTP Voyager JV apoya múltiples metodos para navegar los archivos del sistema local y remoto, para encontrar los archivos
+y directorios a transferir. listados abajo están los métodos más comunes de navegación por directorios.
+::END
+
+$HEAD_NAV_MOUSE_KEY$=Navegación con el teclado y el ratón.
+$DESC_NAV_MOUSE_KEY$::
+El directorio actual puede ser cambiado usando el ratón o el teclado. Simplemente usando uno de los siguientes metodos.
+::END
+$DESC_NAV_MOUSE_KEY_LIST_1$=desde $LINK_LIST_PANE$:
+$LI_NAV_MOUSE_KEY_LIST_1$::
+Usa el teclado para selecionar la carpeta deseada. Después, presiona <strong>Enter Key</strong>.
+Haciendo clic en el botón izquierdo del ratón para seleccionar la carpeta deseada usando el ratón. Después, presiona <strong>Enter Key</strong>.
+Doble clic en la carpeta deseada usando el ratón.
+Haciendo clic en la carpeta deseada usando el ratón y selecciona la opción <strong>Open</strong>.
+::END
+$DESC_NAV_MOUSE_KEY_TREE_1$=From the $LINK_TREE_PANE$:
+$LI_NAV_MOUSE_KEY_TREE_1$::
+Usa el teclado para seleccionar la carpeta deseada.
+haz clic en el botón izquierdo para selecionar la carpeta deseada usando el ratón.
+Haciendo clic en el botón derecho en la carpeta deseada usando el ratón. $BOLD_NOTE$:  Esto abre automaticamente la carpeta seleccionada.
+::END
+
+$HEAD_OI_CRUMB_BAR$=Barra de navegación.
+$DESC_OI_CRUMB_BAR$::
+El $LINK_CRUMB_BAR$ Tiene muchos metodos para abrir un directorio. Simplemente usa uno de los siguientes metodos.
+::END
+$LI_OI_CRUMB_BAR_1$::
+Clica en el botón "$LINK_CRUMB$"
+clica en el desplegable al lado de cada botón "$LINK_CRUMB$" para mostrar el contenido de un directorio particular. Después selecciona una carpeta de el desplegable.
+Clica entre los botones "$LINK_CRUMB$" y "$LINK_CRUMB_HISTORY$" para entrar en  $LINK_ABSOLUTE_PATH_MODE$.  Después, teclea todo el camino en el campo de edición y 
+presiona la tecla "Enter" 
+Clica en el botón $LINK_CRUMB_HISTORY$ para mostrar un desplegable de los directorios previos en proceso y selecciona uno de ellos de la lista.
+::END
+
+$HEAD_NAV_HISTORY$=Historial de navegación.
+$DESC_NAV_HISTORY$::
+Ambos, los paneles Remotos y locales tienen un historial de navegación independiente que lo hace mover atrás y hacia adelante entre múltiples localizaciones
+rápido y fácil. hay dos botones de barras de herramientas disponibles para el historial de navegación que proporciona acceso secuencial a las localizaciones 
+previamente buscadas:
+::END
+$DESC_NAV_HISTORY_LIST$::
+Haciendo clic en el botón $IMG_BTN_BACK$ <strong>Back</strong> se cambia el directorio actual de el panel activo a una localización previa en el historial de navegación.
+Haciendo clic en el botón $IMG_BTN_FORWARD$ <strong>Forward</strong> se cambia el directorio actual de el panel activo a la siguiente localización en el historial de navegación.
+::END
+$DESC_NAV_HISTORY_CONTD$::
+Ambos botones tienen una flecha en el lado derecho que muestra una lista de todos los directorios previamente vistitados. Cuando haces clic para permitir
+una navegación directa a un directorio especifico. si no hay localizaciones previas o siguientes en el historial de navegación, el botón apropiado es desactivado.
+::END
+
+$HEAD_NAV_UP_DIR$=Directorio superior.
+$DESC_NAV_UP_DIR$::
+Haciendo clic en el botón <strong>Up Dir</strong> de la barra de heramientas cambias el directorio actual de el panel de actividad
+al directorio padre inmediato. Si directorio padre no es accesible, esta opción es desactivada.
+::END
+
+
+<!-- Help-OtherInfo-ManagingDirs.htm -->
+$HEAD_MANAGING_DIRS_AND_FILES$=Dirigiendo directorios y archivos.
+$DESC_MANAGING_DIRS_AND_FILES$::
+Los directorios y carpetas que pueden ser usadas para almacenar archivos y otras carpetas. La creación de un directorio hace posible almacenar archivos similares en un lugar
+mientras borrar directorios lo elimina del sistema de archivos con todos sus contenidos. Los directorios pueden también pueden ser renombrados cuando sea necesario. Para dirigir directorios
+y archivos en FTP Voyager JV, usa las siguientes instrucciones.
+::END
+
+$HEAD_CREATE_DIRS$=Creando directorios.
+$DESC_CREATE_DIRS$::
+Crear un nuevo directorio haciendo clic en el botón <strong>New Dir</strong> en el panel apropiado de la barra de herramientas. Una opción para crear directorios está también disponible 
+desde el menú o haciendo clic en el botón derecho en el menú. <strong>File</strong> 
+
+Cuando creas una carpeta nueva en el panel local, una nueva entrarda es añadida en la lista de diractorios inmediatamente. un nombre por defecto es proporcionado,
+el cual puede ser editado simplemente tecleando un nuevo nombre y presionando <strong>Enter</strong> o haciendo clic fuera de la caja de edición.
+
+cuando creas una nueva carpeta en el panel remoto, aparece un nuevo diálogo donde en nombre de la carpeta deseada puede ser introducido.
+Después de introducir el nombre para la carpeta, haga clic en <strong>OK</strong> o presiona <strong>Enter</strong> para crearlo en el sistema
+de archivos remosto.
+::END
+
+$HEAD_DEL_DIRS_AND_FILES$=Borrando directorios y/o archivos.
+$DESC_DEL_DIRS_AND_FILES$::
+Multiples archivos y directorios pueden ser borrados de una vez, seleccionando primero los items deseados usando el teclado o el ratón.
+Una vez completado, elige la opción <strong>Delete</strong> en la barra de herramientas apropiada, <strong>File</strong> menu, o en el menu
+haciendo clic en el botón derecho, elile la tecla <strong>Delete</strong> en el teclado, también puede ser utilizada.
+
+Dependiendo de sus preferencias $LINK_PREF_PAGE_GENERAL$, un aviso de confirmación puede ser mostrado. Tenga cuidado al borrar archivos
+ya que esta acción no puede ser deshecha.
+::END
+
+$HEAD_RENAME_DIR_OR_FILE$=Renombrar un Directorio o Archivo.
+$DESC_RENAME_DIR_OR_FILE$::
+Para renombrar un archivo o directorio, primero selecciona lo que desees usando el teclado o el ratón. después, selecciona la opción <strong>Rename</strong> 
+del menú haciendo clic en el botón derecho. <strong>File</strong> del menú o presionando la tecla <strong>F2</strong> en su teclado. El nombre del archivo seleccionado
+se convierte en una caja de edición. una vez que el nuevo nombre es introducido, presiona <strong>Enter</strong> en el teclado o haciendo clic en el botón izquierdo fuera
+del campo de edición para completar la operación de renombrado. Usa la tecla <strong>Escape</strong> para cancelar una operación de renombrado.
+::END
+
+$HEAD_REFRESH_DIR$=Actualizar una listar de directorios.
+$DESC_REFRESH_DIR$::
+Si los contenidos de el directorio actual en proceso local o remoto es cambiado desde fuera de FTP Voyager JV, es necesario acualizar manualmente
+la lista de directorios para ver los cambios. Esto puede ser fácilmente hecho seleccionando el botón <strong>Refresh</strong> en la barra de herramientas 
+apropiada, de el <strong>View</strong> o los menús del botón derecho o presionando la tecla <strong>F5</strong>.
+::END
+
+$HEAD_PROPERTIES_DIRS_AND_FILES$=Ver información detallada de directorios y archivos.
+$DESC_PROPERTIES_DIRS_AND_FILES$::
+puedes acceder a información detallada sobre directorios y archivos a través de FTP Voyager JV.
+Para información detallada sobre los items seleccionados. Para información detallada sobre los items seleccionados,
+haga clic en la opción <strong>Properties</strong> de el <strong>File</strong> o en el menú del botón derecho, o presionando <strong>Alt+Enter</strong>
+en el teclado.
+::END
+
+$HEAD_OI_COPY_MOVE_FILES$=Copiando y moviendo directorios y archivos.
+$DESC_OI_COPY_MOVE_FILES$::
+Los Archivos y directorios pueden ser copiados a otras localizaciones en el mismo archivos de sistemas. Selecciona el directorio y/o archivo para 
+copiarlo o moverlo. Después haga clic y arrastre el archivo seleccionado en el mismo sistema de archivos $LINK_LIST_PANE$ o $LINK_TREE_PANE$. libera 
+el botón del raton del directorio objetivo para completar la operación.  $BOLD_NOTE$:  arrastrando con el botón izquierdo inicia una operación de COPIA.
+arrastrando con el botón derecho muestra opciones en un menú de una ventana emergente después de liberar el botón del ratón.
+::END
+
+
+<!-- Help-OtherInfo-TransferringFiles.htm -->
+$HEAD_TRANSFERRING_FILES$=Transfiriendo archivos.
+$DESC_TRANSFERRING_FILES$::
+FTP Voyager JV puede simultaneamente descargar y cargar archivos a y desde un archivo servidor Serv-U. Las transferencias son llevadas a cabo en un segundo plano
+permitiendo al usuario continuar interactuando con el interfaz del usuario mientras las transferencias estan en progreso.
+
+Hay muchas maneras en las que el usuario puede iniciar una transferencia entre el cliente y el servidor. Algunos métodos son listados abajo. 
+::END
+
+$DESC_OI_NOTE_DND_VARIATIONS$=ver <strong>Drag and Drop Variations</strong> para más información.
+
+$HEAD_OI_DOWNLOADING$=Descargando archivos y directorios.
+$DESC_OI_DOWNLOADING$::
+Para descargar archivos desde el servidor, por favor sigue las instrucciones abajo:
+::END
+$LI_OI_DOWNLOADING_1$::
+Selecciona los archivos o directorios para tranferir desde el servidor hasta el cliente. Esto puede ser hecho siguiendo los siguientes pasos abajo:
+::END
+$LI_OI_DOWNLOADING_1_1$::
+Destacando los archivos y/o directorios de un "Remote - $LINK_LIST_PANE$".
+::END
+$LI_OI_DOWNLOADING_1_2$::
+Destacando un directorio desde "Remote - $LINK_TREE_PANE$".
+::END
+$LI_OI_DOWNLOADING_2$::
+Iniciar la transferencia.
+::END
+$LI_OI_DOWNLOADING_2_1$::
+haga clic y arrastre los archivos o directorios a "Local - $LINK_LIST_PANE$" o a "Local - $LINK_TREE_PANE$" y lo dejas en 
+el directorio de destino. El directorio destino es identificado con un resalto cuando el ratón pasa sobre el.
+::END
+$LI_OI_DOWNLOADING_2_2$::
+haga clic en $LINK_DOWNLOAD_BTN$ para transferir el archivo a un directorio en proceso "Local - $LINK_LIST_PANE$" 
+::END
+
+$HEAD_OI_UPLOADING$=Cargando archivos y directorios.
+$DESC_OI_UPLOADING$::
+Para cargar archivos desde un cliente al servidor, por favor sigue las instrucciones de abajo:
+::END
+$LI_OI_UPLOADING_1$::
+Selecciona los archivos o directorios para transferir de el cliente al servidor. Esto puede ser hecho siguiendo uno de los pasos abajo mostrados:
+::END
+$LI_OI_UPLOADING_1_1$::
+Destacando los archivos y/o directorios desde un "Local - $LINK_LIST_PANE$".
+::END
+$LI_OI_UPLOADING_1_2$::
+Destacando un directorio desde un "Local - $LINK_TREE_PANE$".
+::END
+$LI_OI_UPLOADING_2$::
+Iniciando la transferencia.
+::END
+$LI_OI_UPLOADING_2_1$::
+Haga clic y arrastre los archivos y/o directorios a un "Remote - $LINK_LIST_PANE$" o un "Remote - $LINK_TREE_PANE$" y sueltalos en un directorio de destino.
+El directorio destino es identificado mediante un realce cuando el ratón pasa por encima de el.
+::END
+$LI_OI_UPLOADING_2_2$::
+Haga clic en $LINK_UPLOAD_BTN$ para transferir los archivos en un directorio en proceso "Remote - $LINK_LIST_PANE$" 
+::END
+
+$HEAD_DRAG_DROP_VARIATIONS$=Arrastrar y soltar variaciones.
+$DESC_DRAG_DROP_VARIATIONS$::
+Hay diferentes variaciones de arrastre y suelta. Por favor sea consciente de las variaciones abajo mostradas:
+::END
+$LI_DND_VARIATION_1$=Haciendo clic en el botón izquierdo y arrastrando.
+$LI_DND_VARIATION_1_1$=:  Copia los archivos recurso y directorios en un directorio objetivo.
+$LI_DND_VARIATION_2$=Haciendo clic en el botón derecho y arrastrando.
+$LI_DND_VARIATION_2_1$=: Una vez los archivos fuente son soltados en un directorio destino, una ventana emergente aparece con dos opciones:
+$LI_DND_VARIATION_2_1_1$=Mover archivos.
+$LI_DND_VARIATION_2_1_2$=Copiar archivos.
+$LI_DND_VARIATION_2_1_1_1$::
+:  Mueve los archivos fuente y directorios a un directorio objetivo. Esto se hace copiando el archivo fuente a destino, y después borrandolo de
+su localización.
+::END
+$LI_DND_VARIATION_2_1_2_1$=: Copia los archivos fuente y directorios al directorio objetivo.
+
+
+<!-- Help-OtherInfo-ManagingTransfers.htm -->
+$HEAD_MANAGE_TRANSFERS$=Dirigiendo transferencias.
+$DESC_MANAGE_TRANSFERS$::
+Una vez una transferencia ha sido iniciada, es puesta en un panel de transferencia donde puede ser visualizada 
+información detallada del estatus de la transferencia. Ciertas acciones pueden ser llevadas a cabo mientras la transferencia está en progreso,
+incluyendo:
+::END
+
+
+<!-- Help-OtherInfo-Searching.htm -->
+$HEAD_SEARCHING_OVERVIEW$=Busqueda de archivos y/carpetas.
+$DESC_SEARCHING_OVERVIEW$::
+Es fácil buscar archivos y carpetas en el directorio en proceso actual. hay muchos métodos para buscar, y es intuitivo.
+::END
+
+
+<!-- Help-OtherInfo-FAQs.htm -->
+$OTHER_INFO_FAQS_MAIN_HEADER$=Preguntas frecuentes.
+
+$QUESTION_WEL_MSG_DLG$=por qué aparece un mensage de bienvenida después de iniciar sesión con mi buscador web?
+$ANSWER_WEL_MSG_DLG$::
+Las cuentas de usuario en Serv-U pueden ser configuradas para recibir mensages de bienvenida. si tu cuenta de usuario tiene uno, este es 
+mostrado después de un inicio de sesión satisfactorio en el servidor de archivos.
+::END
+
+$QUESTION_NEED_JRT$::
+Por qué necesito instalar el Java Runtime para usar FTP Voyager JV?
+::END
+$ANSWER_NEED_JRT$::
+FTP Voyager JV ha sido escrito en el lenguaje de programación de Java. por que Java es lenguaje interpretado, Java Runtime es necesario
+para empezar. La última versión de el JRE esta disponible aquí $LINK_JAVA_RUNTIME$ 
+::END
+
+$QUESTION_CERTIFICATE$::
+Por qué tengo que aceptar un certificado para abrir FTP Voyager JV?
+::END
+$ANSWER_CERTIFICATE$::
+FTP Voyager JV necesita acceso completo al sistema de archivos locales para cargar y descargar archivos al serv-U. 
+Las aplicaciones Java que requieren estos permisos tienen que ser digitalmente firmadas con un certificado.
+FTP Voyager JV es firmado usando Rhino Software, Inc.
+el certificado desarrollado proporcionado por Comodo, una autoridad de certificados de confianza. Est garantiza que FTP Voyager JV es un 
+producto genuino de Rhino Software, Inc. y es seguro permitirlo acceder a su sistema para el propósito de transferir datos
+con Serv-U.
+::END
+
+$QUESTION_PREFERRED_CLIENT_1$::
+Hay algún modo para abrir automáticamente FTP Voyager JV después de iniciar sesión?
+::END
+$ANSWER_PREFERRED_CLIENT_1$::
+si. Por favor contacte el administrador del Serv-U y pregunteles para configurar su cuenta con FTP Voyager JV como  <strong>Default Web
+Client</strong>.
+::END
+
+$QUESTION_PREFERRED_CLIENT_2$::
+Hay algún modo de que pueda volver atrás a seleccionar que cliente web me gustaría usar después de iniciar sesión?
+::END
+$ANSWER_PREFERRED_CLIENT_2$::
+Si. Por favor contacte con el administrador de Serv-U y pregunteles acerca de configurar su cuenta sugerir un cliente web en vez de 
+usar un <strong>Default Web Client</strong>.
+::END
+
+$QUESTION_LIST_DIR_FAILED$::
+Por qué falla la lista de directorios remotos?
+::END
+$ANSWER_LIST_DIR_FAILED$::
+Puede haber varias razones por las que el FTP Voyager JV no puede llevar a cabo una lista de directorios remotos. Algunas posibles razones se muestran en la lista de abajo:
+::END
+$ANSWER_LIST_DIR_FAILED_LIST$::
+El servidor de archivos Serv-U no está abierto.
+El servidor de archivos Serv-U no está en red.
+La sesión entre FTP Voyager JV y el servidor de archivos Serv-U puede haber sido desconectada.
+La cuenta de usuario puede que no tenga permiso para ver el directorio remoto.
+::END
+$ANSWER_LIST_DIR_FAILED_CONTD$::
+Intentalo cerrando FTP Voyager JV e iniciando sesión en Serv-U otra vez. si la lista de directorios remotos todavía falla, contacte su adminitrador serv-U 
+para confirmar sus permisos al directorio en cuestión.
+::END
+
+$QUESTION_PERMISSIONS$::
+Por qué no puedo crear un directorio, renombrar un directorio, borrar un directorio, cargar archivos o descargar archivos?
+::END
+$ANSWER_PERMISSIONS$::
+El administrador Serv-U tiene la capacidad para asignar privilegios específicos a cada usuario. El ámbito de operaciones de cada cuenta de usuario particular
+está limitada por estos privilegios. Si algún error es mostrado intentando llevar a cabo una de estas operaciones listadas arriba, el diálogo 
+debe indicar que la cuenta del usuario en la que has iniciado sesión no tiene los privilegios correspondientes para llevar a cabo esa acción. Si hay un error,
+por favor contacte con su administrador Serv-U.
+::END
+
+$QUESTION_BROWSER_FAIL_ON_LOGOUT$::
+por qué el buscador falla al comunicar con Serv-U cuando salgo de FTP Voyager JV?
+::END
+$ANSWER_BROWSER_FAIL_ON_LOGOUT$::
+FTP Voyager JV y el buscador ha lanzado una forma de compartir la misma sesión ID que el Serv-U usa para comunicar al cliente correspondiente.
+Además, después de cerrar sesión de FTP Voyager JV, El buscador ha lanzado una conexión válida al Serv-U. 
+Es necesiario iniciar sesión otra vez a través del buscador para establecer una nueva conexión al to Serv-U.
+::END
+
+$QUESTION_CAN_NOT_LOGOUT$::
+por qué no puedo cerrar la sesión de Serv-U?
+::END
+$ANSWER_CAN_NOT_LOGOUT$::
+FTP Voyager JV Puede cerrar la sesión del Serv-U.  Hay una opción en el diálogo <strong>Preferences</strong> debajo de $LINK_PREF_PAGE_GENERAL$
+que permite automáticamente cerrar sesión desde el Serv-U cuando FTP Voyager JV cierra.
+::END
+
+$QUESTION_JRT_NETWORK_SETTINGS$::
+Si tengo multiples buscadores en mi máquina, puedo usar ambos para abrir FTP Voyager JV?
+::END
+$ANSWER_JRT_NETWORK_SETTINGS$::
+Si. Ambos buscadores pueden ser usados simultaneamente para abrir FTP Voyager JV. sin embargo, tenga cuidado: por que el Java Runtime sólo usa los ajustes
+proxy por el buscador por"defecto", FTP Voyager JV puede usar los ajustes proxy equivocados. Por ejemplo, si su buscador por defecto es Internet Explorer,
+el cual está configurado para usar un servidor proxy, entonces FTP Voyager JV también usa estos ajustes proxy incluso si ha sido abierto por Mozilla Firefox.
+::END
+

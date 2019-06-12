@@ -1,0 +1,211 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file. This has strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- image name for the transparent distributors logo -->
+$DISTRIBUTOR_LOGO_IMAGE$=SVT-Logo.png
+
+<!-- The following 4 macros should be set to your reseller company contact information so they can be displayed in the program information page. -->
+$LOCALIZE_NAME$=SVT Proveedor de Servicios de Internet S. L.
+$LOCALIZE_STREET$=Joc de la Bola 11
+$LOCALIZE_CITY_ETC$=25003 Lleida
+$LOCALIZE_URL$=www.svt.es
+
+<!-- ******************* SESSION ERRORS ******************* -->
+<!-- **************** GetResultText.htm **************** -->
+<!-- GetResultText() -->
+$LOGIN_FAIL_STR$=ERROR: Inicio de sesión no se realizó correctamente.
+$UNKNOWN_ERROR$=ERROR: La operación no tuvo éxito, un error desconocido. Su sesión puede haber caducado. Por favor, intente acceder de nuevo.
+$AJAX_NOT_SUPPORTED$=Su navegador no soporta AJAX.
+$ERROR_TITLE$=Ha ocurrido un error
+$SESS_ORG_HAS_NO_USERS$=Esta colección no contiene los usuarios.
+$SESS_CANNOT_CREATE_DIR1_STR$=Ha fallado la creación de directorio, No se puede crear el directorio:
+$SESS_CANNOT_CREATE_DIR2_STR$=No tiene permiso para crear un directorio de aquí.
+$SESS_CANNOT_RENAMEDIR1_STR$=Ha fallado el nombre de directorio , No se puede cambiar el nombre de directorio:
+$SESS_CANNOT_RENAMEFILE1_STR$=Ha fallado cambiar el nombre del archivo, No se puede cambiar el nombre de archivo:
+$SESS_CANNOT_RENAMEDIR2_STR$=Usted no tiene permiso para cambiar el nombre de este directorio.
+$SESS_CANNOT_RENAMEFILE2_STR$=Usted no tiene permiso para cambiar el nombre de este archivo.
+$SU_VALID_OPENSSL_GENERIC_ERROR_STR$=ERROR: Ha habido un problema al cargar la biblioteca de cifrado. Por favor, intenta volver a instalar la aplicación.
+$SECURITY_ERROR_TITLE$=Advertencia de seguridad
+$SECURITY_ERROR_DESC1$=<strong>ERROR DE SEGURIDAD</strong>: La verificación de seguridad de Serv-U ha fallado. Vuelva a instalar Serv-U para corregir el error.
+$SECURITY_ERROR_DESC2$=Para obtener más información sobre cómo resolver este error, por favor, póngase en contacto con <a href="http://www.Serv-U.com/support" target="_blank">soporte RhinoSoft.com</a>.
+
+<!-- Common Strings -->
+$FILES$=Archivos
+$DIRECTORIES$=Directorios
+$SIZE$=Tamaño
+$DIRECTORY_SIZE$=Tamaño Directorio
+$AVAILABLE_SIZE$=Tamaño disponible
+$LOGGING_IN_DIALOG_TITLE$=Entrando
+$HELP$=Ayuda
+$LOGOUT$=Salir
+$NAME$=Nombre
+$USER$=Usuario
+$LOGINID$= ID de Acceso
+$MANAGEMENT_CONSOLE$=Consola de administración
+$SUPPORT$=Soporte
+$FVJV_LICENSE_INFO$=FTP Voyager JV no está disponible con su licencia actual.  Si desea usar FTP Voyager JV, usted debe comprar una licencia para permitir a sus características. <br /> <br /> ¿Desea más información sobre la compra de FTP Voyager JV?
+$WEB_CLIENT_LICENSE_INFO$=TEl cliente Web no está disponible con su licencia actual. Si desea utilizar el cliente Web, usted debe comprar una licencia para permitir a sus características. <br /><br /> ¿Desea más información sobre la compra de una licencia para permitir que el cliente Web?
+$FS_ABBREV_GIGABYTE$=GB
+$FS_ABBREV_MEGABYTE$=MB
+$FS_ABBREV_KILOBYTE$=KB
+$FS_BYTES$=bytes
+$DID_YOU_KNOW_BALLOON_TITLE$=¿Sabías que?
+<!-- Buttons -->
+$YES_BUTTON$=Sí
+$NO_BUTTON$=No
+$OK_BUTTON$=OK
+$CLOSE_BUTTON$=Cerrar
+$SEND_BUTTON$=Enviar
+$HELP_BUTTON$=Ayuda
+$SAVE_BUTTON$=Guardar
+$ADD_BUTTON$=Añadir
+$EDIT_BUTTON$=Editar
+$DELETE_BUTTON$=Borrar
+$RENAME_BUTTON$=Cambiar el nombre
+$CANCEL_BUTTON$=Cancelar
+$SELECT_BUTTON$=Seleccionar
+$CLOSE_CANCEL$=Cerrar / Cancelar
+$DEFAULT_BUTTON$=Predeterminado
+$CREATE_BUTTON$=Crear
+$BROWSE$=Buscar
+$WIZARD_BUTTON$=Asistente
+$PARENT_DIR$=Parent Directory
+$REFRESH$=Actualizar
+$UP_ONE_DIRECTORY$=Subir un directorio
+$REFRESH_ALT$=Actualizar
+$NEW_DIR_NAME_LABEL$=Nuevo Directorio
+$CREATE_DIR$=Crear directorio
+$PLEASE_ENABLE_COOKIES$=Se deben activar cookies para utilizar Serv-U.
+$GO$=Ir
+$IMPORT_BUTTON$=Importación
+$EXPORT_BUTTON$=Exportación
+$DOWNLOAD_LOG_BUTTON$=Registro de descargas
+$RECOVER_PASSWORD_BUTTON$=Recuperar Contraseña
+$PASSWORD_RECOVER_SENT$=La recuperación de la contraseña fue un éxito. La contraseña se ha enviado por correo electrónico al usuario.
+$NO_SUB_DIRS$=No hay subdirectorios
+$CLEAR_FILTER_BUTTON$=Eliminar filtro
+
+<!-- **************** BusyDialog.htm **************** -->
+$BUSY_DIALOG_TITLE$=Ocupado
+$SAVING_DIALOG_TITLE$=Guardando
+$LOADING_DIALOG_TITLE$=Cargando
+$DELETING_DIALOG_TITLE$=Borrando
+
+
+<!-- **************** ChangePasswordDialog.htm **************** -->
+$OLD_PASSWORD$=Contraseña anterior
+$NEW_PASSWORD$=Nueva Contraseña
+$USER_CHANGE_PASSWORD_TITLE$=Cambiar Contraseña
+$VERIFY_PASSWORD$=Verificar contraseña
+$PASSWORDS_DONT_MATCH$=Nueva contraseña no coincide con verificar la contraseña.
+$PASSWORD_CHANGED$=Su contraseña ha cambiado.
+
+
+<!-- **************** FVJVLoggedIn.htm **************** -->
+$FVJV_REQUIRE_JAVA_VERSION$=<strong>Java 1.6 Runtime</strong>
+$FVJV_NO_JAVA_WARNING$=El Java Runtime Environment (JRE) no puede ser instalado en este equipo.  Por favor siga los siguientes pasos para ejecutar FTP Voyager JV.
+$FVJV_NO_JRE_STEP_1$=FTP Voyager JV requiere como mínimo la $FVJV_REQUIRE_JAVA_VERSION$.  Por favor, descargue e instale la última versión de Java de Sun Microsystems.
+$FVJV_STEP_1$=Paso 1
+$FVJV_STEP_2$=Paso 2
+$FVJV_OVERRIDE_NO_JAVA_1$=<strong>ADVERTENCIA:</strong>  Si el "Java Web Start Launcher" no es el programa predeterminado para abrir "archivos JNLP", entonces por favor consulte nuestra
+$FVJV_OVERRIDE_NO_JAVA_2$= para obtener instrucciones adicionales.
+$FVJV_KB_OPEN_JNLP_FILES$=Artículo de Base de Conocimiento  #1883
+$FVJV_DL_JAVA_LINK$=Descargar Java ahora
+$FVJV_JAVA_RESTART$=Por favor, utilice el siguiente enlace para volver a cargar FTP Voyager JV:
+$FVJV_JAVA_RESTART_LINK$=Actualizar FTP Voyager JV.
+$FVJV_IE_CONSIDERATIONS$=El uso de FTP Voyager JV en Internet Explorer
+$FVJV_IE_DL_FILE$=Internet Explorer puede mostrar un mensaje similar a la de abajo indicando que ha bloqueado la descarga de un archivo para proteger su seguridad. Este archivo debe ser descargado para iniciar FTP Voyager JV. Si recibe este mensaje, haga clic en el banner se muestra en Internet Explorer y seleccione la opción "Descargar archivo".
+$FVJV_MOZILLA_CONSIDERATIONS$=El uso de FTP Voyager JV en Mozilla Firefox
+$FVJV_MOZ_RUN_FILE$=Mozilla Firefox puede mostrar un mensaje similar a la siguiente pregunta cómo el navegador debería abrir el archivo FTP Voyager JV lanzamiento. Abrirlo con el "Java Web Start Launcher" la acción (por defecto) para ejecutar FTP Voyager JV. Al marcar la casilla "Hacer esto automáticamente los archivos como este a partir de ahora", no se le pide que lo haga de nuevo.
+$FVJV_MOZ_RUN_FILE_APPLE$=Mozilla Firefox puede mostrar un mensaje similar a la siguiente pregunta cómo Firefox debería abrir el archivo FTP Voyager JV lanzamiento. Abrirlo con el "Java Web Start Launcher" la acción (por defecto) para ejecutar FTP Voyager JV.
+$FVJV_SAFARI_CONSIDERATIONS$=El uso de FTP Voyager JV en Safari
+$FVJV_SAFARI_RUN_FILE$=SSafari puede mostrar un mensaje similar a la siguiente pregunta cómo el navegador debería abrir el archivo  de inicio de FTP Voyager JV. Haga clic en "Abrir" para iniciar FTP Voyager JV.
+$FVJV_CHROME_CONSIDERATIONS$=El uso de FTP Voyager JV en Google Chrome
+$FVJV_CHROME_RUN_FILE$=Google Chrome puede mostrar un botón en la barra de descarga que significa que un archivo "jnlp" ha sido descargado. Haga clic en este botón o haga clic en el menú desplegable y seleccione "Abrir" para iniciar FTP Voyager JV.
+$FVJV_OPERA_CONSIDERATIONS$=El uso de FTP Voyager JV en Opera
+$FVJV_OPERA_RUN_FILE$=Opera puede mostrar un mensaje similar a la siguiente pregunta cómo el navegador debería abrir el archivo de inicio FTP Voyager JV.Haga clic en "Abrir" para iniciar FTP Voyager JV.
+$FVJV_CLOSING$=Cierre de FTP Voyager JV
+$FVJV_SESSION_INFO$=FTP Voyager JV se puede cerrar cuando haya terminado de utilizarlo.
+$FVJV_RELOGIN_INFO$=Para entrar al Serv-U File Server, utilice el siguiente enlace:
+$FVJV_RETURN_CONSOLE$=Para volver a la consola de administración, utilizar el siguiente enlace:
+$FVJV_RELOGIN$=Haga clic aquí cuando termine de usar FTP Voyager JV.
+$FVJV_RESTART$=Reiniciar FTP Voyager JV
+$FVJV_RESTART_LINK$=Haga clic aquí para reiniciar FTP Voyager JV.
+$FVJV_JAVA_WARNING$=Advertencia de seguridad de Java
+$FVJV_JAVA_WARNING_INFO$=Java puede mostrar una advertencia de seguridad similar al siguiente mensaje pidiéndole que confirme que desea iniciar la aplicación. Haga clic en el botón "Run" para seguir con la carga FTP Voyager JV.
+$FVJV_JAVA_WARNING_INFO_APPLE$=Java puede mostrar una advertencia de seguridad similar al siguiente mensaje pidiéndole que confirme que desea iniciar la aplicación. Haga clic en la "confianza" para seguir con la carga FTP Voyager JV.
+$FVJV_APPLE_DETECTED$=Serv-U ha detectado que está ejecutando Apple Mac OS X. Por favor, tenga en cuenta que FTP Voyager JV requiere $FVJV_REQUIRE_JAVA_VERSION$ para funcionar.
+$FVJV_TROUBLESHOOTING$=Solución de problemas
+$FVJV_OPERA_FAILED_TO_OPEN1$=<strong>Opera</strong> no pudo abrir el archivo "jnlp".
+$FVJV_OPERA_FAILED_TO_OPEN2$=Ampliar esta sección para obtener instrucciones sobre la configuración de una asociación de archivo para un programa predeterminado.
+$FVJV_OPERA_NO_FILE_ASSOCIATION_1$=En el Menú principal del Opera, "Herramientas", luego "Preferencias".
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2$=Desde el diálogo "Preferencias":
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_1$=(1) Seleccione la pestaña "Avanzadas"
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_2$=(2) Seleccione la sección "Descargas"
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_3$=(3) Desactive la opción "Ocultar archivos de tipo abierto con la ópera"
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_4$=(4) Busque el tipo MIME "application / x-java-jnlp-archivo" o la extensión de archivo "jnlp"
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_5$=(5) Si lo encuentra, selecciónelo y haga clic en el botón "Editar". De lo contrario, haga clic en el botón "Añadir".
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3$=Desde el diálogo "Tipo de Archivo":
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_1$=(1) Establezca el campo "MIME type" a "application/x-java-jnlp-file".
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_2$=(2) Establecer el campo "File Extensions" a "jnlp".
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_3$=(3) Establezca la "Acción" opción de "Abrir con aplicación predeterminada" o "Mostrar el diálogo de descarga".
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_4$=(4) Haga clic en el botón "OK" para guardar los cambios.
+$FVJV_OPERA_NO_FILE_ASSOCIATION_4$=Lanzr el FTP Voyager JV de nuevo por volver a cargar esta página.
+$FVJV_SAFARI_FAILED_TO_OPEN1$=Safari descarga el archivo "jnlp" , pero falló al "abrir".
+$FVJV_SAFARI_FAILED_TO_OPEN2$=Ampliar esta sección para obtener instrucciones sobre la configuración de una asociación de archivo para un programa predeterminado.
+$FVJV_MAC_FAILED_TO_OPEN_BUG_1$=<strong>Nota:</strong> En algunos casos, la actualización de Java 1.6_13 no restablecer la asociación de archivos. Por favor, siga los pasos que encontrará a continuación o en
+$FVJV_MAC_FAILED_TO_OPEN_BUG_KB$=Artículo de Knowledge Base #1792.
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_TITLE$=Safari usuarios:
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_1$=Del Manager de descargas de Safari, seleccione el archivo descargado "jnlp", a continuación, haga clic en el botón de Finder.
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2$=Desde el Finder:
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_1$=(1) Seleccione  el archivo "jnlp".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_2$=(2) Haga clic en el botón "Propiedades".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_3$=(3) Seleccione el articulo "Obtener información".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3$=De la página "Info":
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3_1$=(1) En "Abrir con:" seleccione "Java Web Start.app".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3_2$=(2) Haga clic en el en el botón "Cambiar todo...".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_4$=Desde la confirmación, seleccione "Continuar".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_5$=Lanzar FTP Voyager JV otra vez para recargar la página.
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_TITLE$=Usuarios FireFox:
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_1$=Abrir el diálogo de FireFox "Preferencias".
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_2$=Desde el "Aplicaciones", seleccione "JNLP".
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_3$=Cambiar la acción de "Java Web Start". <strong> Nota: </ strong> Puede que tenga que seleccionarlo por  "/ System / Library / CoreServices / Java Web Start".
+$FVJV_APPLE_WRONG_JRE1$=El entorno de ejecución Java (JRE) 1.6 es necesario para FTP Voyager JV.
+$FVJV_APPLE_WRONG_JRE2$=Ampliar esta sección para obtener instrucciones sobre cómo comprobar la versión del JRE se ha instalado.
+$FVJV_JRE_CHECK_1$=Abrir una "Nueva ventana de Finder", seleccione "Ir | Utilidades" en el menú principal.
+$FVJV_JRE_CHECK_2_1$=(1) Navegue hasta el directorio "Java" y seleccione "Java Preferences.app".
+$FVJV_JRE_CHECK_2_2$=(2) Haga clic en el botón "Propiedades".
+$FVJV_JRE_CHECK_2_3$=(3) Abrir "Java Preferences.app" seleccionando "Abrir".
+$FVJV_JRE_CHECK_3$=En "Tiempo de ejecución Java Application Settings", asegúrese de que "Java SE 6" está en la parte superior de la lista.
+$FVJV_OTHER_ALTERNATIVES$=Otras alternativas
+$FVJV_SUPPORTED_BROWSERS$=Usted puede intentar lanzar FTP Voyager JV con otro navegador. A continuación se muestra una lista de los navegadores que son compatibles con FTP Voyager JV y el cliente Web:
+$LI_FVJV_SUPPORTED_BROWSER_IE$=Internet Explorer
+$LI_FVJV_SUPPORTED_BROWSER_FF$=Mozilla Firefox
+$LI_FVJV_SUPPORTED_BROWSER_SAFARI$=Safari
+$LI_FVJV_SUPPORTED_BROWSER_CHROME$=Google Chrome
+$LI_FVJV_SUPPORTED_BROWSER_OPERA$=Opera
+$FVJV_LAUNCH_BWC$=Iniciar el cliente Web
+
+
+<!-- **************** FVJV Launch.jnlp **************** -->
+$FVJV_LAUNCH_TITLE$=FTP Voyager JV by RhinoSoft.com
+$FVJV_TITLE$=FTP Voyager JV
+$FVJV_VENDOR$=Rhino Software, Inc.
+
+
+<!-- **************** GoToDialog.htm **************** -->
+$GO_TO_DIRECTORY$=Ir al Directorio
+$GO_TO_PATH$=Ruta
+
+
+<!-- **************** ChangeThemesDialog.htm **************** -->
+$CHANGE_THEMES_DESCR$=Para cambiar el aspecto de Serv-U selecione uno de los temas de la lista a continuación.
+$CHANGE_THEME_TITLE$=Temas Serv-U
+$CLASSIC_THEME$=Windows Classic
+$XP_THEME$=Windows XP
+$VISTA_THEME$=Windows Vista
+$AQUA_THEME$=Mac Aqua
+$SYSTEM_THEME$=System
+$SU_THEME$=Serv-U Classic
+$CHANGE_THEMES_BUTTON$=Tema

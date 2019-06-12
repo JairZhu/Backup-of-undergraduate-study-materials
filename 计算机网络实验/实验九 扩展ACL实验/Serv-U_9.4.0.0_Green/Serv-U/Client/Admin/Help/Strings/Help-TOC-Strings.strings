@@ -1,0 +1,106 @@
+﻿<!-- Help-TOC-Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- String table for Help-table of contents -->
+$TITLE$=Help Table of Contents
+$HELP_CONTENTS_TAB$=Contents
+$HELP_INDEX_TAB$=Index
+
+
+$SERVU_FILE_SERVER$=Serv-U File Server
+	$OVERVIEW$=Overview
+	$SERVU_EDITIONS$=Serv-U Editions
+	$HOW_TO_PURCHASE$=How To Purchase
+
+$CONTACTING_RHINOSOFT$=Contacting RhinoSoft.com
+	$CONTACT_TECH_SUPPORT$=Technical Support
+
+$GETTING_STARTED$=Getting Started
+	$QUICK_START$=Quick Start Guide
+	$SERVU_CONCEPTS$=Server Concepts
+	$NAV_SERVU$=Management Console Navigation
+	$UIC_INFO$=User Interface Conventions
+
+$SERVER$=Server
+	$SERVER_OVERVIEW$=Server Overview
+	$CONF_SERVER_DETAILS$=Server Details
+		$SERVERCONF_IP_ACL$=IP Access Rules
+		$SERVERCONF_DATABASE_ACCESS$=Database Access
+		$SERVERCONF_LICENSE_DETAILS$=License Information
+		$SERVERCONF_PROG_INFO$=Program Information
+		$SERVERCONF_EVENTS$=Server Events
+	$CONF_SERVER_DIRECTORIES$=Global Directories
+		$DIRCONF_DIR_ACCESS$=Directory Access
+		$DIRCONF_VIR_PATHS$=Virtual Paths
+	$CONF_SERVER_LIMITS_SETTINGS$=Server Limits & Settings
+		$LIMITSETTCONF_SERVER_LIMITS$=Server Limits
+		$LIMITSETTCONF_MAINT_SERVER_SETTINGS$=Server Settings
+		$LIMITSETTCONF_CUSTOM_COMMANDS$=FTP Settings
+		$LIMITSETTCONF_ENCRYPTION$=Encryption
+	$CONF_SERV_ACTIVITY_VIEW$=Server Activity
+		$ACTVIEW_SERVER_SESS$=Server Sessions
+		$ACTVIEW_SERVER_STATS$=Server Statistics
+		$ACTVIEW_SERVER_LOG$=Server Log
+
+$DOMAIN$=Domain
+	$DOMAIN_OVERVIEW$=Domain Overview
+	$CONF_DOMAIN_DETAILS$=Domain Details
+		$DOMAINCONF_NAME_DESC$=Name & Description
+		$DOMAINCONF_LISTENERS$=Listeners
+		$DOMAINCONF_VHOST_NAMES$=Virtual Hosts
+		$DOMAINCONF_IP_ACL$=IP Access Rules
+		$DOMAINCONF_DATABASE$=Database Access
+		$DOMAINCONF_EVENTS$=Domain Events
+		$SMTP_CONFIG$=SMTP Configuration
+	$CONF_DOMAIN_DIRECTORIES$=Domain Directories
+		<!-- Child nodes defined at the Server level -->
+	$CONF_DOMAIN_LIMITS_SETTINGS$=Domain Limits & Settings
+		$LIMITSETTCONF_DOM_LIMITS$=Domain Limits
+		$LIMITSETTCONF_MAINT_DOM_SETTINGS$=Domain Settings
+		<!-- Additional child nodes defined at the Server level -->
+	$DOMAIN_ACTIVITY_VIEW$=Domain Activity
+		$ACTVIEW_USERS$=Domain Activity
+		$ACTVIEW_SESSION_STATS$=Domain Statistics
+		$ACTVIEW_VIEW_DOMAIN_LOG$=View Domain Log
+		$ACTVIEW_CONF_LOG$=Configure Domain Log
+		$ACTVIEW_USER_GROUP_STATS$=User &amp; Group Statistics
+
+$CONF_DOMAIN_USERS$=Users
+	$USERCONF_ABOUT$=About User Accounts
+	$USERCONF_USER_INFO$=User Information
+	$USERCONF_GROUPS$=Groups
+	$USERCONF_WELCOME_MSG$=Welcome Message
+	$USERCONF_IP_ACL$=IP Access Rules
+	$USERCONF_DIR_ACCESS$=Directory Access Rules
+	$USERCONF_VIR_PATHS$=Virtual Paths
+	$USERCONF_LIMITS_SETTINGS$=Limits and Settings
+	$USERCONF_EVENTS$=User Events
+	$USERCONF_QUOTAS_RATIOS$=Quotas and Ratios
+	$USERCONF_WINDOWS_AUTH$=Windows Authentication
+	$USERCONF_SSH_KEY$=SSH Key Information
+
+$CONF_DOMAIN_GROUPS$=Groups
+	$GROUPCONF_ABOUT$=About Groups
+	$GROUPCONF_GROUP_INFO$=Group Information
+	$GROUPCONF_MEMBERS$=Group Members
+	$GROUPCONF_WELCOME_MSG$=Welcome Message
+	$GROUPCONF_IP_ACL$=IP Access Rules
+	$GROUPCONF_DIR_ACCESS$=Directory Access Rules
+	$GROUPCONF_VIR_PATHS$=Virtual Paths
+	$GROUPCONF_LIMITS_SETTINGS$=Limits and Settings
+	$GROUPCONF_EVENTS$=Group Events
+	$GROUPCONF_QUOTAS_RATIOS$=Quotas and Ratios
+	$GROUPCONF_SSH_KEY$=SSH Key Information
+
+$ADDITIONAL_REFERENCE$=Additional Reference
+	$SYSTEM_VARS$=System Variables
+
+
+<!-- localized strings, keep these at the end of this file, they "overwrite" any previously defined string -->
+<!--#include de "Help-TOC-Strings_DE.strings"-->
+<!--#include fr "Help-TOC-Strings_FR.strings"-->
+<!--#include it "Help-TOC-Strings_IT.strings"-->
+<!--#include es "Help-TOC-Strings_ES.strings"-->
+<!--#include zh,TW "Help-TOC-Strings_TW.strings"-->
+<!--#include zh,CN "Help-TOC-Strings_CN.strings"-->
+<!--#include jp "Help-TOC-Strings_JP.strings"-->

@@ -1,0 +1,211 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file. This has strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- image name for the transparent distributors logo -->
+$DISTRIBUTOR_LOGO_IMAGE$=TechnoBlest.png
+
+<!-- The following 4 macros should be set to your reseller company contact information so they can be displayed in the program information page. -->
+$LOCALIZE_NAME$=テクノブレスト株式会社
+$LOCALIZE_STREET$=神奈川県相模原市相武台
+$LOCALIZE_CITY_ETC$=1-25-8-3F
+$LOCALIZE_URL$=www.technoblest.com
+
+<!-- ******************* SESSION ERRORS ******************* -->
+<!-- **************** GetResultText.htm **************** -->
+<!-- GetResultText() -->
+$LOGIN_FAIL_STR$=エラー: ログインは成功しませんでした。
+$UNKNOWN_ERROR$=エラー: 操作は成功しませんでした。不明なエラーが発生しました。
+$AJAX_NOT_SUPPORTED$=このブラウザはAJAXをサポートしていません。
+$ERROR_TITLE$=エラーが発生しました
+$SESS_ORG_HAS_NO_USERS$=このコレクションはユーザを含んでいません。
+$SESS_CANNOT_CREATE_DIR1_STR$=ディレクトリの作成に失敗しました。ディレクトリを作成することができません。:
+$SESS_CANNOT_CREATE_DIR2_STR$=ここにディレクトリを作成する権限がありません。
+$SESS_CANNOT_RENAMEDIR1_STR$=ディレクトリ名の変更に失敗しました。ディレクトリ名を変更できません。:
+$SESS_CANNOT_RENAMEFILE1_STR$=名前の変更に失敗しました。ファイル名を変更できません。:
+$SESS_CANNOT_RENAMEDIR2_STR$=このディレクトリ名を変更する権限がありません。
+$SESS_CANNOT_RENAMEFILE2_STR$=このファイル名を変更する権限がありません。
+$SU_VALID_OPENSSL_GENERIC_ERROR_STR$=エラー: 暗号化ライブラリのロードに問題がありました。アプリケーションの再インストールをお試しください。
+$SECURITY_ERROR_TITLE$=セキュリティ警告
+$SECURITY_ERROR_DESC1$=<strong>セキュリティ・エラー</strong>: Serv-Uアプリケーションセキュリティチェックは失敗しました。Serv-Uを再インストールして、エラー を修正してください。
+$SECURITY_ERROR_DESC2$=このエラーを解決する方法に関する詳細な情報は <a href="http://www.Serv-U.com/support" target="_blank">RhinoSoft.com サポートへ連絡してください。</a>.
+
+<!-- Common Strings -->
+$FILES$=ファイル
+$DIRECTORIES$=ディレクトリ
+$SIZE$=サイズ
+$DIRECTORY_SIZE$=ディレクトリ・サイズ
+$AVAILABLE_SIZE$=利用可能サイズ
+$LOGGING_IN_DIALOG_TITLE$=ログイン
+$HELP$=ヘルプ
+$LOGOUT$=ログアウト
+$NAME$=名前
+$USER$=ユーザ
+$LOGINID$=ログインID
+$MANAGEMENT_CONSOLE$=管理コンソール
+$SUPPORT$=サポート
+$FVJV_LICENSE_INFO$=FTP Voyager JVは現在のライセンスでは利用できません。FTP Voyager JVを使用したい場合、FTP Voyager JVの使用が可能となるライセンスを購入する必要があります。<br /><br />FTP Voyager JVを購入するための詳しい情報を参照しますか？
+$WEB_CLIENT_LICENSE_INFO$=Webクライアントは、現在のライセンスで利用することができません。Webクライアントを使用したい場合、Webクライアント機能を利用できるライセンスを購入する必要があります。<br /><br /> Webクライアントが使用できるライセンスの購入に関する詳しい情報を望みますか?
+$FS_ABBREV_GIGABYTE$=GB
+$FS_ABBREV_MEGABYTE$=MB
+$FS_ABBREV_KILOBYTE$=KB
+$FS_BYTES$=bytes
+$DID_YOU_KNOW_BALLOON_TITLE$=ご存知ですか？
+<!-- Buttons -->
+$YES_BUTTON$=はい
+$NO_BUTTON$=いいえ
+$OK_BUTTON$=OK
+$CLOSE_BUTTON$=閉じる
+$SEND_BUTTON$=送信
+$HELP_BUTTON$=ヘルプ
+$SAVE_BUTTON$=保存
+$ADD_BUTTON$=追加
+$EDIT_BUTTON$=編集
+$DELETE_BUTTON$=削除
+$RENAME_BUTTON$=名前の変更
+$CANCEL_BUTTON$=キャンセル
+$SELECT_BUTTON$=選択
+$CLOSE_CANCEL$=閉じる/キャンセル
+$DEFAULT_BUTTON$=デフォルト
+$CREATE_BUTTON$=作成
+$BROWSE$=参照
+$WIZARD_BUTTON$=ウィザード
+$PARENT_DIR$=親ディレクトリ
+$REFRESH$=更新
+$UP_ONE_DIRECTORY$=一つ上のディレクトリ
+$REFRESH_ALT$=更新
+$NEW_DIR_NAME_LABEL$=新規ディレクトリ
+$CREATE_DIR$=ディレクトリの作成
+$PLEASE_ENABLE_COOKIES$=Serv-Uを使用するにはクッキーが有効である必要があります。
+$GO$=移動
+$IMPORT_BUTTON$=インポート
+$EXPORT_BUTTON$=エクスポート
+$DOWNLOAD_LOG_BUTTON$=ログのダウンロード
+$RECOVER_PASSWORD_BUTTON$=パスワードの復元
+$PASSWORD_RECOVER_SENT$=パスワードの復元は成功しました。パスワードはユーザへ電子メールされました。
+$NO_SUB_DIRS$=サブディレクトリなし
+$CLEAR_FILTER_BUTTON$=フィルタを消去
+
+<!-- **************** BusyDialog.htm **************** -->
+$BUSY_DIALOG_TITLE$=ビジー
+$SAVING_DIALOG_TITLE$=保存しています
+$LOADING_DIALOG_TITLE$=ロードしています
+$DELETING_DIALOG_TITLE$=削除しています
+
+
+<!-- **************** ChangePasswordDialog.htm **************** -->
+$OLD_PASSWORD$=古いパスワード
+$NEW_PASSWORD$=新しいパスワード
+$USER_CHANGE_PASSWORD_TITLE$=パスワードの変更
+$VERIFY_PASSWORD$=パスワードの確認
+$PASSWORDS_DONT_MATCH$=新しいパスワードはパスワードの確認と一致していません。
+$PASSWORD_CHANGED$=パスワードは変更されました。
+
+
+<!-- **************** FVJVLoggedIn.htm **************** -->
+$FVJV_REQUIRE_JAVA_VERSION$=<strong>Java 1.6 Runtime</strong>
+$FVJV_NO_JAVA_WARNING$=Java Runtime Environment(JRE)が、このコンピュータにインストールされていません。FTP Voyager JVは$FVJV_REQUIRE_JAVA_VERSION$ 環境を必要とします。サン・マイクロシステムズから最新のJavaリリースを以下のリンクを使用して、ダウンロード、そしてインストールしてください。
+$FVJV_NO_JRE_STEP_1$=FTP Voyager JVは、最小構成として $FVJV_REQUIRE_JAVA_VERSION$ 環境を必要とします。Sun Microsystemsより最新のJavaリリースをダウンロードして、インストールしてください。
+$FVJV_STEP_1$=ステップ 1
+$FVJV_STEP_2$=ステップ 2
+$FVJV_OVERRIDE_NO_JAVA_1$=<strong>警告:</strong>  "Java Web Start Launcher" が "JNLP ファイル" を開くためのデフォルト・プログラムではない場合、詳しい情報のために我々のWebサイト・
+$FVJV_OVERRIDE_NO_JAVA_2$= を参照してください。
+$FVJV_KB_OPEN_JNLP_FILES$=ナレッジ・ペース #1883
+$FVJV_DL_JAVA_LINK$=すぐにJavaをダウンロード
+$FVJV_JAVA_RESTART$=以下のリンクを使用して、FTP Voyager JVをリロードしてください:
+$FVJV_JAVA_RESTART_LINK$=FTP Voyager JVのリロード
+$FVJV_IE_CONSIDERATIONS$=FTP Voyager JVをInternet Explorerで使用
+$FVJV_IE_DL_FILE$=Internet Explorer はセキュリティ保護のためにファイルのダウンロードをブロックする警告のメッセージを表示するかもしれません。このファイルは、FTP Voyager JVを起動するためにダウンロードする必要があります。このようなメッセージが表示された場合、Internet Explorerに表示されたバナーをクリックして「ファイルのダウンロード」オプションを選択してください。
+$FVJV_MOZILLA_CONSIDERATIONS$=Mozilla Firefoxで FTP Voyager JVを使用
+$FVJV_MOZ_RUN_FILE$=Mozilla FirefoxはFirefoxが、どのようにFTP Voyager JV起動ファイルを開くべきであるかを確認するメッセージを表示するかもしれません。「Java Web Start Launcher」(デフォルトの動作)で開き、FTP Voyager JVを動作させてください。「今後この種類のファイルは同様に処理する」をチェックすることにより、次回はこのようなメッセージを表示しないようにできます。
+$FVJV_MOZ_RUN_FILE_APPLE$=Mozilla　FirefoxはFirefoxがどのようにFTP Voyager JVランチファイルを開くかを確認するために以下のようなメッセージを表示するかもしれません。"Java Web Start Launcher"(デフォルトの動作)で開き、FTP Voyager JVを実行してください。
+$FVJV_SAFARI_CONSIDERATIONS$=SafariでのFTP Voyager JVの使用
+$FVJV_SAFARI_RUN_FILE$=Safariはブラウザで、どのようにFTP Voyager JV開始ファイルを開くかについて以下のようなメッセージを表示するかもしれません。「開く」をクリックして、FTP Voyager JVを開始してください。
+$FVJV_CHROME_CONSIDERATIONS$=FTP Voyager JVをGoogle Chromeで使用
+$FVJV_CHROME_RUN_FILE$=Google Chromeはダウンロードバーに"jnlp"ファイルがダウンロードすることを示すボタンを表示するかもしれません。ｌｐｍｐボタンをクリック、またはドロップダウンメニューで「開く」を選択してFTP Voyager JVを開始してください。
+$FVJV_OPERA_CONSIDERATIONS$=FTP Voyager JVをOperaで使用
+$FVJV_OPERA_RUN_FILE$=オペラはブラウザで、どのようにFTP Voyager JV開始ファイルを開かを確認するために以下のようなメッセージを表示するかもしれません。「開く」をクリックして、FTP Voyager JVを開始してください。
+$FVJV_CLOSING$=FTP Voyager JVの終了
+$FVJV_SESSION_INFO$=使用が完了してからFTP Voyagerを閉じることができます。
+$FVJV_RELOGIN_INFO$=再度Serv-U ファイル・サーバにログインするには、以下のリンクを使用してください:
+$FVJV_RETURN_CONSOLE$=管理コンソールに戻るには、以下のリンクを使用してください:
+$FVJV_RELOGIN$=FTP Voyager JVの使用を完了するにはこちらをクリックしてください。
+$FVJV_RESTART$=FTP Voyager JV再起動
+$FVJV_RESTART_LINK$=こちらをクリックしてFTP Voyager JVを再起動してください。
+$FVJV_JAVA_WARNING$=Javaセキュリティ警告
+$FVJV_JAVA_WARNING_INFO$=Javaはアプリケーションの実行を確認するセキュリティ警告を表示するかもしれません。「実行」ボタンをクリックして、FTP Voyager JVをロードしてください。
+$FVJV_JAVA_WARNING_INFO_APPLE$=Javaはアプリケーションの実行を確認するために、以下のようなセキュリティ警告メッセージを表示するかもしれません。「信用」ボタンをクリックして、FTP Voyager JVをロードしてください。
+$FVJV_APPLE_DETECTED$=Serv-Uは、お客様がアップルMac OS Xを使用していることを検出しました。FTP Voyager JVは、Java SE 6が動作する必要があることにご注意ください。
+$FVJV_TROUBLESHOOTING$=トラブル・シューティング
+$FVJV_OPERA_FAILED_TO_OPEN1$=<strong>Opera</strong> は"jnlp"ファイルを開くことに失敗しました。
+$FVJV_OPERA_FAILED_TO_OPEN2$=デフォルトプログラムのファイル関連を設定するためにこのセクションを開いてください。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_1$=Operaのメインメニューから「ツール」、「設定」を選択してください。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2$=「設定」ダイアログ:
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_1$=(1) 「詳細設定」タブを選択
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_2$=(2) 「ダウンロード」を選択
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_3$=(3) 「Operaで開くファイルタイプを表示しない」のチェックを外します。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_4$=(4) MIME タイプが"application/x-java-jnlp-file" または拡張子が"jnlp"を探します。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_5$=(5) 見つかった場合、それを選択し編集ボタンをクリックします。見つからない場合「追加」ボタンをクリックします。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3$=「ファイルタイプ」ダイアログ:
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_1$=(1) 「MIMEタイプ」欄を「application/x-java-jnlp-file」
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_2$=(2) 「ファイル拡張子」を「jnlp」
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_3$=(3) 「処理」オプションを「標準のアプリケーションで開く」、または「ダウンロードダイアログを表示する」を選択します。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_4$=(4) 「OK」ボタンをクリックし変更を保存します。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_4$=このページを更新してFTP Voyager JVを開始します。
+$FVJV_SAFARI_FAILED_TO_OPEN1$=Safariは、"jnlp"ファイルをダウンロードしましたが、ファイルの「Open」（開くことに）に失敗しました。
+$FVJV_SAFARI_FAILED_TO_OPEN2$=デフォルト・プログラムのファイル関連付けを設定するために、このセクションを展開してください。
+$FVJV_MAC_FAILED_TO_OPEN_BUG_1$=<strong>注意:</strong>  いくつかの場合では、Java Update 1.6_13はファイル関連付けをリセットしません。以下で示されている指示に従ってください。
+$FVJV_MAC_FAILED_TO_OPEN_BUG_KB$=Knowledge Base Article #1792.
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_TITLE$=Safariをご利用の場合:
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_1$=Safariのダウンロード・マネージャから、ダウンロードされた"jnlp"ファイルを選択してください。そして、次に参照ボタンをクリックしてください。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2$=参照から:
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_1$=(1) "jnlp"ファイルを選択してください。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_2$=(2) "プロパティ"ボタンをクリックしてください。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_3$=(3) "情報の取得" を選択してください。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3$="情報" ページより:
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3_1$=(1) "次から開く:" で "Java Web Start.app"を選択します。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3_2$=(2) "全て変更..." ボタンをクリックします。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_4$=確認より"続く"を選択します。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_5$=ページの更新によりFTP Voyager JVを再度起動してください。
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_TITLE$=FireFoxをご利用の場合:
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_1$=FireFoxの"オプション"ダイアログを開きます。
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_2$="プログラム"から"JNLP"を選択します。
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_3$=取り扱い方法を"Java Web Start"へ変更します。 <strong>注意:</strong> "/System/Library/CoreServices/Java Web Start"へナビゲートすることによって、それを選択する必要があるかもしれません。
+$FVJV_APPLE_WRONG_JRE1$=FTP Voyager JVはJava Runtime Environment (JRE) 1.6を必要とします。
+$FVJV_APPLE_WRONG_JRE2$=JREのどのバージョンがインストールされるかをチェックする方法に関しては、このセクションを展開してください。
+$FVJV_JRE_CHECK_1$=メインメニューより"開く | ユーティリティ"を選択し"新規参照ウインドウ"を開きます。
+$FVJV_JRE_CHECK_2_1$=(1) "Java" ディレクトリを参照し"Java Preferences.app"を選択します。
+$FVJV_JRE_CHECK_2_2$=(2) "プロパティ"ボタンをクリックします。
+$FVJV_JRE_CHECK_2_3$=(3) "開く"を選択すし"Java Preferences.app"を開きます。
+$FVJV_JRE_CHECK_3$="Java Application Runtime Settings" で "Java SE 6"がリストの最上位に表示されていることを確認してください。
+$FVJV_OTHER_ALTERNATIVES$=その他の方法
+$FVJV_SUPPORTED_BROWSERS$=他のブラウザでFTP Voyager JVの開始を試みることができます。以下は、FTP Voyager JVとWebクライアントがサポートするブラウザのリストです。:
+$LI_FVJV_SUPPORTED_BROWSER_IE$=Internet Explorer
+$LI_FVJV_SUPPORTED_BROWSER_FF$=Mozilla Firefox
+$LI_FVJV_SUPPORTED_BROWSER_SAFARI$=Safari
+$LI_FVJV_SUPPORTED_BROWSER_CHROME$=Google Chrome
+$LI_FVJV_SUPPORTED_BROWSER_OPERA$=Opera
+$FVJV_LAUNCH_BWC$=Webクライアントを開始
+
+
+<!-- **************** FVJV Launch.jnlp **************** -->
+$FVJV_LAUNCH_TITLE$=FTP Voyager JV by RhinoSoft.com
+$FVJV_TITLE$=FTP Voyager JV
+$FVJV_VENDOR$=Rhino Software, Inc.
+
+
+<!-- **************** GoToDialog.htm **************** -->
+$GO_TO_DIRECTORY$=ディレクトリへ移動
+$GO_TO_PATH$=パス
+
+
+<!-- **************** ChangeThemesDialog.htm **************** -->
+$CHANGE_THEMES_DESCR$=以下のリストからテーマを選択することにより、Serv-Uの外観を変更することができます。
+$CHANGE_THEME_TITLE$=Serv-Uテーマ
+$CLASSIC_THEME$=Windowsクラシック
+$XP_THEME$=Windows XP
+$VISTA_THEME$=Windows Vista
+$AQUA_THEME$=Mac Aqua
+$SYSTEM_THEME$=システム
+$SU_THEME$=Serv-U クラシック
+$CHANGE_THEMES_BUTTON$=テーマ

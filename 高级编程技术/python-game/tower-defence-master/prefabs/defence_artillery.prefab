@@ -1,0 +1,23 @@
+
+# UI Settings
+display_name   :  str   :  Artillery
+
+# Sprite
+images  :  rotimg  :  textures\defence_artillery.png
+
+# Physics
+block  :  bool  :  1
+
+# Defence Settings
+cost   :  int   :  450
+rotate :  bool  :  1
+flash_offset  :  float  :  32
+
+# Attack Settings
+attack        :  str   :  explosion
+attack_rate   :  float :  2
+attack_range  :  float :  600
+
+# Explosion Settings
+explosion_radius  :  float  :  70
+explosion_damage  :  float  :  150

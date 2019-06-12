@@ -1,0 +1,1 @@
+function lnkb(){pq(true);if(yhtb==1||yhtb==3)lbb=pxk+"DomainConsole.htm";else if(yhtb==2||yhtb==4)lbb=pxk+"console.htm";location.href=lbb;}

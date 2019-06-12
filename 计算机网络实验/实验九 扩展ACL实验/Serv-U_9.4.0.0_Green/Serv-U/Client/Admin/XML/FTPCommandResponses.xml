@@ -1,0 +1,14 @@
+%PRIV_DOMAIN_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<ftpresponses>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <ftpresponse listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% 	<ResponseCode></ResponseCode>
+%ADD_LIST_STRING% 	<ResponseText>%CFTPRespAttr.%LIST_ID%.Value%</ResponseText>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING% </ftpresponse>
+%CFTPCommand.%ID%.ListResponses%
+</ftpresponses>
+<listresult>%LIST_RESULT%</listresult>
+</response>

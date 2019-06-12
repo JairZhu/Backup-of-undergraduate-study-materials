@@ -1,0 +1,97 @@
+﻿<!-- Help-TOC-Strings_JP.htm - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- String table for Help-table of contents -->
+$TITLE$=ヘルプテーブルの内容
+$HELP_CONTENTS_TAB$=内容
+$HELP_INDEX_TAB$=索引
+
+
+$SERVU_FILE_SERVER$=Serv-U ファイル・サーバ
+	$OVERVIEW$=概要
+	$SERVU_EDITIONS$=Serv-Uの種類
+	$HOW_TO_PURCHASE$=ご購入に関して
+
+$CONTACTING_RHINOSOFT$=RhinoSoft.comへの連絡
+	$CONTACT_TECH_SUPPORT$=技術サポート
+
+$GETTING_STARTED$=はじめに
+	$QUICK_START$=クイック・スタート・ガイド
+	$SERVU_CONCEPTS$=サーバのコンセプト
+	$NAV_SERVU$=管理コンソール・ナビゲーション
+	$UIC_INFO$=ユーザインターフェースに関して
+
+$SERVER$=サーバ
+	$SERVER_OVERVIEW$=サーバの概要
+	$CONF_SERVER_DETAILS$=サーバの詳細
+		$SERVERCONF_IP_ACL$=IPアクセスルール
+		$SERVERCONF_DATABASE_ACCESS$=データベース・アクセス
+		$SERVERCONF_LICENSE_DETAILS$=ライセンス情報
+		$SERVERCONF_PROG_INFO$=プログラム情報
+		$SERVERCONF_EVENTS$=サーバ・イベント
+	$CONF_SERVER_DIRECTORIES$=グローバル・ディレクトリ
+		$DIRCONF_DIR_ACCESS$=ディレクトリ・アクセス
+		$DIRCONF_VIR_PATHS$=仮想パス
+	$CONF_SERVER_LIMITS_SETTINGS$=サーバ制限と設定
+		$LIMITSETTCONF_SERVER_LIMITS$=サーバでの制限
+		$LIMITSETTCONF_MAINT_SERVER_SETTINGS$=サーバ設定
+		$LIMITSETTCONF_CUSTOM_COMMANDS$=FTP設定
+		$LIMITSETTCONF_ENCRYPTION$=暗号化
+	$CONF_SERV_ACTIVITY_VIEW$=サーバ・アクティビティ
+		$ACTVIEW_SERVER_SESS$=サーバ・セッション
+		$ACTVIEW_SERVER_STATS$=サーバ統計情報
+		$ACTVIEW_SERVER_LOG$=サーバ・ログ
+
+$DOMAIN$=ドメイン
+	$DOMAIN_OVERVIEW$=ドメインの概要
+	$CONF_DOMAIN_DETAILS$=ドメインの詳細
+		$DOMAINCONF_NAME_DESC$=名前と説明
+		$DOMAINCONF_LISTENERS$=リスナー
+		$DOMAINCONF_VHOST_NAMES$=仮想ホスト
+		$DOMAINCONF_IP_ACL$=IPアクセス・ルール
+		$DOMAINCONF_DATABASE$=データベース・アクセス
+		$DOMAINCONF_EVENTS$=ドメイン・イベント
+		$SMTP_CONFIG$=SMTP構成
+	$CONF_DOMAIN_DIRECTORIES$=ドメイン・ディレクトリ
+		<!-- Child nodes defined at the Server level -->
+	$CONF_DOMAIN_LIMITS_SETTINGS$=ドメイン制限と設定
+		$LIMITSETTCONF_DOM_LIMITS$=ドメインでの制限
+		$LIMITSETTCONF_MAINT_DOM_SETTINGS$=ドメイン設定
+		<!-- Additional child nodes defined at the Server level -->
+	$DOMAIN_ACTIVITY_VIEW$=ドメイン・アクティビティ
+		$ACTVIEW_USERS$=ドメイン・アクティビティ
+		$ACTVIEW_SESSION_STATS$=ドメイン統計情報
+		$ACTVIEW_VIEW_DOMAIN_LOG$=ドメインログの表示
+		$ACTVIEW_CONF_LOG$=ドメイン・ログの構成
+		$ACTVIEW_USER_GROUP_STATS$=ユーザとグループの統計
+
+$CONF_DOMAIN_USERS$=ユーザ
+	$USERCONF_ABOUT$=ユーザ・アカウントに関して
+	$USERCONF_USER_INFO$=ユーザ情報
+	$USERCONF_GROUPS$=グループ
+	$USERCONF_WELCOME_MSG$=Welcomeメッセージ
+	$USERCONF_IP_ACL$=IPアクセス・ルール
+	$USERCONF_DIR_ACCESS$=ディレクトリ・アクセス・ルール
+	$USERCONF_VIR_PATHS$=仮想パス
+	$USERCONF_LIMITS_SETTINGS$=制限と設定
+	$USERCONF_EVENTS$=ユーザイベント
+	$USERCONF_QUOTAS_RATIOS$=クォータと転送率
+	$USERCONF_WINDOWS_AUTH$=Windows認証
+	$USERCONF_SSH_KEY$=SSH キー情報
+
+$CONF_DOMAIN_GROUPS$=グループ
+	$GROUPCONF_ABOUT$=グループに関して
+	$GROUPCONF_GROUP_INFO$=グループ情報
+	$GROUPCONF_MEMBERS$=グループ・メンバ
+	$GROUPCONF_WELCOME_MSG$=Welcomeメッセージ
+	$GROUPCONF_IP_ACL$=IPアクセス・ルール
+	$GROUPCONF_DIR_ACCESS$=ディレクトリ・アクセス・ルール
+	$GROUPCONF_VIR_PATHS$=仮想パス
+	$GROUPCONF_LIMITS_SETTINGS$=制限と設定
+	$GROUPCONF_EVENTS$=グループイベント
+	$GROUPCONF_QUOTAS_RATIOS$=クォータと転送率
+	$GROUPCONF_SSH_KEY$=SSH キー情報
+
+$ADDITIONAL_REFERENCE$=参考資料
+	$SYSTEM_VARS$=システム変数
+

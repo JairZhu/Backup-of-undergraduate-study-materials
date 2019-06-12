@@ -1,0 +1,78 @@
+﻿<!-- LimitsStrings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- **************** Advanced Limits **************** -->
+$LIMIT_ADV_CONVERTURLCHARS$=Конвертировать символы URL в командах в ASCII
+$LIMIT_ADV_CHECKDIRSIZE$=Автоматически проверять размер папки при выгрузке
+$LIMIT_ADV_INLINEOOB$=Включать внеполосные данные
+$LIMIT_ADV_KEEPALIVE$=Посылать пустые пакеты для определения прерванных соединений
+$LIMIT_ADV_NAGLE$=Отключить алгоритм Nagle
+$LIMIT_ADV_ADAPTIVETO$=Использовать адаптивный таймаут при быстрых выгрузках
+$LIMIT_ADV_SFTPMAXVERSION$=Максимальная поддерживаемая версия SFTP
+$LIMIT_ADV_ALLOWRENAMEOVERWRITE$=Разрешить переименование и перезапись
+$LIMIT_ADV_WARNOLDBROWSER$=Предупреждать конечных пользоваетлей если их браузер устарел
+$LIMIT_ADV_DEFAULT_LANG$=Язык по умолчанию для Веб Клиента
+
+<!-- **************** Connection Limits **************** -->
+$LIMIT_CONN_MAXSERVERSESS$=Максимальное количество сессий на сервере
+$LIMIT_CONN_MAXSERVERSESSIP$=Максимум сессий для одного IP на сервере
+$LIMIT_CONN_MAXDOMAINSESS$=Максимальное количество сессий на домене
+$LIMIT_CONN_MAXDOMAINSESSIP$=Максимум сессий для одного IP на домене
+$LIMIT_CONN_MAXGROUPSESS$=Максимальное количество сессий для группы
+$LIMIT_CONN_MAXGROUPSESSIP$=Максимум сессий для одного IP для группы
+$LIMIT_CONN_MAXSESSUSER$=Максимальное количество сессий для пользователя
+$LIMIT_CONN_MAXSESSIPUSER$=Максимум сессий для одного IP для пользователя
+$LIMIT_CONN_REQUIRESECURE$=Требовать защищенное соединение перед авторизацией
+$LIMIT_CONN_IDLETO$=Автоматическое отсоединение при таймауте
+$LIMIT_CONN_SESSTO$=Автоматический таймаут сессий
+$LIMIT_CONN_BLOCKANTITO$=Болкировать методы анти-таймаута
+$LIMIT_CONN_AUTOCREATE$=Автоматически создавать домашние директории
+$LIMIT_CONN_TIMEOUTBLOCKIP$=Блокировать IP сессии с тайм-аутом
+$LIMIT_CONN_FTP$=Разрешить FTP и FTPS соединения
+$LIMIT_CONN_SSH$=Разрешить SFTP соединения
+$LIMIT_CONN_HTTP$=Разрешить HTTP и HTTPS соединения
+$LIMIT_CONN_REQ_REV_DNS$=Требовать реверсивное DNS имя
+$LIMIT_CONN_ALLOWXFORWARD$=Разрешить метод X-Forward для изменения IP при HTTP соединении. 
+
+<!-- **************** Directory Listing Limits **************** -->
+$LIMIT_DL_HIDEHIDDEN$=Не отображать скрытые файлы в листинге
+$LIMIT_DL_LOWERCASE$=Использовать нижний регистр для имен файлов и папок
+$LIMIT_DL_SCLINKS$=Интерпретировать ярлыки Windows как ссылки
+$LIMIT_DL_SCASTARGET$=Выводить ярлыки Windows как папки
+$LIMIT_DL_LOCK$=Блокировать пользователей в домашнем каталоге
+$LIMIT_DL_ROOT$=Включить листинг дисков из корня (\"/\") для незаблокированных пользователей
+$LIMIT_DL_COMP_STATE$=Скрывать статус сжатия файлов и папок
+$LIMIT_DL_ENCRYPT_STATE$=Скрывать статус шифрования файлов и папок
+$LIMIT_DL_NATURALSORT$=Использовать натуральный языковой перебор для упорядоченного листинга
+
+<!-- **************** Password Limits **************** -->
+$LIMIT_PW_CHECKANON$=Проверять анонимный пароль
+$LIMIT_PW_REQCOMPLEX$=Требовать сложный пароль
+$LIMIT_PW_MINLENGTH$=Минимальная длина пароля
+$LIMIT_PW_EXPIRES$=Автоматически заканчивать срок действия паролей
+$LIMIT_PW_CHANGE$=Разрешить пользователям изменять пароль
+$LIMIT_PW_ENCRYPT$=Хранить пароль в зашифрованном виде
+$LIMIT_PW_HIDEINLOG$=Маскировать полученные пароли в журнале
+$LIMIT_PW_SSHAUTHTYPE$=Тип SSH Аутентификации
+$LIMIT_PW_TYPE$=Тип FTP пароля
+$LIMIT_PW_ENCRYPT_MODE$=Режим шифрования пароля
+$LIMIT_PW_ENABLE_RECOVERY$=Разрешить пользователям восстанавливать пароль
+
+<!-- **************** Transfer Limits **************** -->
+$LIMIT_TRAN_SERVERUP$=Макс. скорость выгрузки для сервера
+$LIMIT_TRAN_SERVERDN$=Макс. скорость загрузки для сервера
+$LIMIT_TRAN_DOMAINUP$=Макс. скорость выгрузки для домена
+$LIMIT_TRAN_DOMAINDN$=Макс. скорость загрузки для домена
+$LIMIT_TRAN_GROUPUP$=Макс. скорость выгрузки для всех членов группы
+$LIMIT_TRAN_GROUPDN$=Макс. скорость загрузки для всех членов группы
+$LIMIT_TRAN_USERUP$=Макс. скорость выгрузки для пользователя
+$LIMIT_TRAN_USERDN$=Макс. скорость загрузки для пользователя
+$LIMIT_TRAN_SESSUP$=Макс. скорость выгрузки для сессии
+$LIMIT_TRAN_SESSDN$=Макс. скорость загрузки для сессии
+$LIMIT_TRAN_DELETEPARTIAL$=Удалять частично выгруженные файлы
+$LIMIT_TRAN_MAX_FILE_SIZE$=Максимальный размер выгружаемого файла
+$LIMIT_TRAN_INTERPRETLFASEOL$=Интерпретировать символ перевода каретки как новую строку в режиме ASCII
+
+
+

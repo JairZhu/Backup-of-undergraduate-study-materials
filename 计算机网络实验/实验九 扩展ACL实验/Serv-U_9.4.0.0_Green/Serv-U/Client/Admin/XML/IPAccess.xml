@@ -1,0 +1,10 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<ipaccess>
+<var name="ObjectID" val="%ID%" />
+<var name="IP" val="%CIPAccess.%ID%.IP%" />
+<var name="Description" val="%CIPAccess.%ID%.Description%" />
+<var name="Result" val="%RESULT%"/>
+<var name="ResultText" val="%RESULT_TEXT%"/>
+</ipaccess>

@@ -1,0 +1,22 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<group>
+<var name="ObjectID" val="%ID%" />
+<var name="GroupName" val="%CGroup.%ID%.GroupName%" type="0"/>
+<var name="Description" val="%CGroup.%ID%.Description%" type="0"/>
+<var name="ApplyDirAccessRulesAboveUser" val="%CGroup.%ID%.ApplyDirAccessRulesAboveUser%" type="1"/>
+<var name="HomeDir" val="%CGroup.%ID%.HomeDir%" defaultval="%CGroup.%ID%.HomeDir.Default%" default="%CGroup.%ID%.HomeDir.IsDefault%" exists="%CGroup.%ID%.HomeDir.Exists%" type="0"/>
+<var name="Enabled" val="%CGroup.%ID%.Enabled%" defaultval="%CGroup.%ID%.Enabled.Default%" default="%CGroup.%ID%.Enabled.IsDefault%" exists="%CGroup.%ID%.Enabled.Exists%" type="1"/>
+<var name="LockInHomeDir" val="%CGroup.%ID%.LockInHomeDir%" defaultval="%CGroup.%ID%.LockInHomeDir.Default%" default="%CGroup.%ID%.LockInHomeDir.IsDefault%" exists="%CGroup.%ID%.LockInHomeDir.Exists%" type="1"/>
+<var name="SignOnMessageFilePath" val="%CGroup.%ID%.SignOnMessageFilePath%" defaultval="%CGroup.%ID%.SignOnMessageFilePath.Default%" default="%CGroup.%ID%.SignOnMessageFilePath.IsDefault%" exists="%CGroup.%ID%.SignOnMessageFilePath.Exists%" type="0"/>
+<var name="SignOnMessage" val="%CGroup.%ID%.SignOnMessage%" defaultval="%CGroup.%ID%.SignOnMessage.Default%" default="%CGroup.%ID%.SignOnMessage.IsDefault%" exists="%CGroup.%ID%.SignOnMessage.Exists%" type="0"/>
+<var name="IncludeRespCodesInMsgFiles" val="%CGroup.%ID%.IncludeRespCodesInMsgFiles%" defaultval="%CGroup.%ID%.IncludeRespCodesInMsgFiles.Default%" default="%CGroup.%ID%.IncludeRespCodesInMsgFiles.IsDefault%" exists="%CGroup.%ID%.IncludeRespCodesInMsgFiles.Exists%" type="1"/>
+<var name="Quota" val="%CGroup.%ID%.Quota%" defaultval="%CGroup.%ID%.Quota.Default%" default="%CGroup.%ID%.Quota.IsDefault%" exists="%CGroup.%ID%.Quota.Exists%" type="0"/>
+<var name="AdminType" val="%CGroup.%ID%.AdminType%" type="0"/>
+<var name="AlwaysAllowLogin" val="%CGroup.%ID%.AlwaysAllowLogin%" defaultval="%CGroup.%ID%.AlwaysAllowLogin.Default%" default="%CGroup.%ID%.AlwaysAllowLogin.IsDefault%" exists="%CGroup.%ID%.AlwaysAllowLogin.Exists%" type="1"/>
+<var name="WebClientStartupMode" val="%CGroup.%ID%.WebClientStartupMode%" defaultval="%CGroup.%ID%.WebClientStartupMode.Default%" default="%CGroup.%ID%.WebClientStartupMode.IsDefault%" exists="%CGroup.%ID%.WebClientStartupMode.Exists%" type="3"/>
+<var name="SSHPublicKeyFilePath" val="%CGroup.%ID%.SSHPublicKeyFilePath%" defaultval="%CGroup.%ID%.SSHPublicKeyFilePath.Default%" default="%CGroup.%ID%.SSHPublicKeyFilePath.IsDefault%" exists="%CGroup.%ID%.SSHPublicKeyFilePath.Exists%" type="0"/>
+<var name="Result" val="%RESULT%"/>
+<var name="ResultText" val="%RESULT_TEXT%"/>
+</group>

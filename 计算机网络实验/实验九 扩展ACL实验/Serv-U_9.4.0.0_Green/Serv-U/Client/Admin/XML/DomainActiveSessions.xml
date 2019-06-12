@@ -1,0 +1,26 @@
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<sessions>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <session listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% <SessionNumber>%CSession.%LIST_ID%.SessionNumber%</SessionNumber>
+%ADD_LIST_STRING% <ConnType></ConnType>
+%ADD_LIST_STRING% <User>%CSession.%LIST_ID%.LoginID%</User>
+%ADD_LIST_STRING% <ClientIPAddress>%CSession.%LIST_ID%.ClientIPAddress%</ClientIPAddress>
+%ADD_LIST_STRING% <ServerIPAddress>%CSession.%LIST_ID%.ServerIPAddress%</ServerIPAddress>
+%ADD_LIST_STRING% <LocalDir>%CSession.%LIST_ID%.CurrentLocalDirectory%</LocalDir>
+%ADD_LIST_STRING% <Command>%CSession.%LIST_ID%.LastCommand%</Command>
+%ADD_LIST_STRING% <Client>%CSession.%LIST_ID%.Client%</Client>
+%ADD_LIST_STRING% <Secure>%CSession.%LIST_ID%.SecureConnection%</Secure>
+%ADD_LIST_STRING% <FTPSSLMode>%CFTPSession.%LIST_ID%.SSLMode%</FTPSSLMode>
+%ADD_LIST_STRING% <Type>%CSession.%LIST_ID%.Type%</Type>
+%ADD_LIST_STRING% <ServerPort>%CSession.%LIST_ID%.ServerPort%</ServerPort>
+%ADD_LIST_STRING% <ResolvedName>%CSession.%LIST_ID%.ResolvedName%</ResolvedName>
+%ADD_LIST_STRING% <HasSysOpMessage>%CSession.%LIST_ID%.HasSysOpMessage%</HasSysOpMessage>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING% </session>
+%CDomain.%ID%.ListActiveSessions%
+</sessions>
+<listresult>%LIST_RESULT%</listresult>
+</response>

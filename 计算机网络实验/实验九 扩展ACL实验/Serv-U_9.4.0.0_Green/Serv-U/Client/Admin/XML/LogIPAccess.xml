@@ -1,0 +1,12 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<ipaccess>
+<var name="ObjectID" val="%ID%" />
+<var name="IP" val="%CLoggingIPAccess.%ID%.IP%" />
+<var name="Screen" val="%CLoggingIPAccess.%ID%.Screen%" />
+<var name="File" val="%CLoggingIPAccess.%ID%.File%" />
+<var name="PasvIPOnPrivateIP" val="%CListenSocketConf.%ID%.PasvIPOnPrivateIP%" type="1"/>
+<var name="Result" val="%RESULT%"/>
+<var name="ResultText" val="%RESULT_TEXT%"/>
+</ipaccess>

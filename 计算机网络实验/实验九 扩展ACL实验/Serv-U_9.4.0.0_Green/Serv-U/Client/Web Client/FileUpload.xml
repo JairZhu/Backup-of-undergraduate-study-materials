@@ -1,0 +1,14 @@
+<!--#include "..\Common\Strings\Result.strings"-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<Result>%RESULT%</Result>
+<ResultText>%RESULT_TEXT%</ResultText>
+<FileName>%FILE_NAME%</FileName>
+<FilePath>%TRANSFER_FILE_PARENT_DIR%</FilePath>
+<FileSize>%FILE_SIZE%</FileSize>
+<BytesWritten>%BYTES_WRITTEN%</BytesWritten>
+<KBPerSecond>%KB_PER_SECOND%</KBPerSecond>
+<BytesRemaining>%BYTES_REMAINING%</BytesRemaining>
+<PercentComplete>%PERCENT_COMPLETE%</PercentComplete>
+<TimeRemaining>%HH_MM_SS_REMAINING%</TimeRemaining>
+</response>

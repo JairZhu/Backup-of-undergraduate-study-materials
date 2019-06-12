@@ -1,0 +1,75 @@
+﻿<!-- LimitsStrings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- **************** Advanced Limits **************** -->
+$LIMIT_ADV_CONVERTURLCHARS$=コマンドでURLキャラクタをASCIIに変換
+$LIMIT_ADV_CHECKDIRSIZE$=アップロードの間、自動的にディレクトリサイズをチェック
+$LIMIT_ADV_INLINEOOB$=帯域外のデータをインライン
+$LIMIT_ADV_KEEPALIVE$=keep-aliveパケットを送信して、壊れた接続を検出
+$LIMIT_ADV_NAGLE$=ネーグル・アルゴリズムの使用を無効
+$LIMIT_ADV_ADAPTIVETO$=高速ファイル・アップロードで適応タイムアウトを使用
+$LIMIT_ADV_SFTPMAXVERSION$=最大のサーポートされているSFTPバージョン
+$LIMIT_ADV_ALLOWRENAMEOVERWRITE$=名前を変更上書きを許可
+$LIMIT_ADV_WARNOLDBROWSER$=古いウェブブラウザを使用している場合の、エンドユーザへの警告
+$LIMIT_ADV_DEFAULT_LANG$=Webクライアントのデフォルト言語
+
+<!-- **************** Connection Limits **************** -->
+$LIMIT_CONN_MAXSERVERSESS$=サーバでのセッションの最大数
+$LIMIT_CONN_MAXSERVERSESSIP$=サーバでの各IPアドレスの最大セッション
+$LIMIT_CONN_MAXDOMAINSESS$=ドメインでのセッションの最大数
+$LIMIT_CONN_MAXDOMAINSESSIP$=ドメインでの各IPアドレスの最大セッション
+$LIMIT_CONN_MAXGROUPSESS$=グループのセッションの最大数
+$LIMIT_CONN_MAXGROUPSESSIP$=グループの各IPアドレスの最大セッション
+$LIMIT_CONN_MAXSESSUSER$=各ユーザアカウントのセッションの最大数
+$LIMIT_CONN_MAXSESSIPUSER$=ユーザアカウントの各IPアドレスの最大セッション
+$LIMIT_CONN_REQUIRESECURE$=ログイン前にセキュア接続を要求
+$LIMIT_CONN_IDLETO$=自動的に接続タイムアウトを待機
+$LIMIT_CONN_SESSTO$=自動的にセッションをタイムアウト
+$LIMIT_CONN_BLOCKANTITO$=アンチ-タイムアウト・スキームをブロック
+$LIMIT_CONN_AUTOCREATE$=ホーム・ディレクトリを自動的に作成
+$LIMIT_CONN_TIMEOUTBLOCKIP$=タイムアウトしたセッションのIPアドレスをブロック
+$LIMIT_CONN_FTP$=FTPとFTPS接続を許可
+$LIMIT_CONN_SSH$=SFTP接続を許可
+$LIMIT_CONN_HTTP$=HTTPとHTTPS接続を許可
+$LIMIT_CONN_REQ_REV_DNS$=リバースDNS名を要求
+$LIMIT_CONN_ALLOWXFORWARD$=X-Forwarded-ForがHTTP接続IPアドレスアドレスを変更することを許可
+
+<!-- **************** Directory Listing Limits **************** -->
+$LIMIT_DL_HIDEHIDDEN$=リストで「隠す」とされているファイルを隠す
+$LIMIT_DL_LOWERCASE$=ファイル名とディレクトリで小文字を使用
+$LIMIT_DL_SCLINKS$=リンクとしてWindowsショートカットを読み取る
+$LIMIT_DL_SCASTARGET$=リストでターゲットとしてWindowsショートカットを扱う
+$LIMIT_DL_LOCK$=ユーザをホームディレクトリにロック
+$LIMIT_DL_ROOT$=ロックされていないユーザのリストされるドライブのルート(\"/\")を許可
+$LIMIT_DL_COMP_STATE$=ファイルとディレクトリの圧縮された状態を隠す
+$LIMIT_DL_ENCRYPT_STATE$=ファイルとディレクトリの暗号化された状態を隠す
+$LIMIT_DL_NATURALSORT$=分類されたリストに自然言語ソーティングを使用
+
+<!-- **************** Password Limits **************** -->
+$LIMIT_PW_CHECKANON$=匿名（anonymous）パスワードをチェック
+$LIMIT_PW_REQCOMPLEX$=複雑なパスワードを要求
+$LIMIT_PW_MINLENGTH$=最小のパスワード長
+$LIMIT_PW_EXPIRES$=パスワードを自動的に失効
+$LIMIT_PW_CHANGE$=ユーザによるパスワード変更を許可
+$LIMIT_PW_ENCRYPT$=暗号化してパスワードを保存
+$LIMIT_PW_HIDEINLOG$=ログで受信したパスワードを隠す
+$LIMIT_PW_SSHAUTHTYPE$=SSH認証の種類
+$LIMIT_PW_TYPE$=パスワードの種類
+$LIMIT_PW_ENCRYPT_MODE$=パスワード暗号化種類
+$LIMIT_PW_ENABLE_RECOVERY$=ユーザにパスワード復元を許可
+
+<!-- **************** Transfer Limits **************** -->
+$LIMIT_TRAN_SERVERUP$=サーバの最大アップロード速度
+$LIMIT_TRAN_SERVERDN$=サーバの最大ダウンロード速度
+$LIMIT_TRAN_DOMAINUP$=ドメインの最大アップロード速度
+$LIMIT_TRAN_DOMAINDN$=ドメインの最大ダウンロード速度
+$LIMIT_TRAN_GROUPUP$=全てのグループメンバの最大アップロード速度
+$LIMIT_TRAN_GROUPDN$=全てのグループメンバの最大ダウンロード速度
+$LIMIT_TRAN_USERUP$=ユーザアカウントの最大アップロード速度
+$LIMIT_TRAN_USERDN$=ユーザアカウントの最大ダウンロード速度
+$LIMIT_TRAN_SESSUP$=各セッションの最大アップロード速度
+$LIMIT_TRAN_SESSDN$=各セッションの最大ダウンロード速度
+$LIMIT_TRAN_DELETEPARTIAL$=一部だけがアップロードされたファイルを削除
+$LIMIT_TRAN_MAX_FILE_SIZE$=最大アップロード・ファイル・サイズ
+$LIMIT_TRAN_INTERPRETLFASEOL$=ASCIIモードの場合、新規行として改行バイトを読み取る。
+$LIMIT_TRAN_ALLOWMEDIAPLAY$=HTTPメディア・プレイバックを許可

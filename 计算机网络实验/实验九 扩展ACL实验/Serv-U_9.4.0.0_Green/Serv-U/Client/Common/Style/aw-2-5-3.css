@@ -1,0 +1,402 @@
+/*****************************************************************
+
+	ActiveWidgets 2.5.3
+	Copyright (C) 2003-2008 ActiveWidgets SARL. All Rights Reserved. 
+	http://www.activewidgets.com/
+
+	WARNING: This software program is protected by copyright law 
+	and international treaties. Unauthorized reproduction or
+	distribution of this program, or any portion of it, may result
+	in severe civil and criminal penalties, and will be prosecuted
+	to the maximum extent possible under the law.
+
+*****************************************************************/
+
+xml {display:none}
+ .aw-quirks .aw-system-control, .aw-quirks .aw-system-control * {box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+ .aw-strict .aw-system-control, .aw-strict .aw-system-control * {box-sizing:content-box;-ms-box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box}
+ .aw-popup-iframe {display:none}
+ .aw-system-control {display:inline-block;/* Disabled this because it broke hidden elements**********position:relative;***********/overflow:hidden;margin:0px;text-align:left;vertical-align:middle;/*font:menu*/cursor:default}
+ .aw-strict .aw-system-control {padding:0px 4px 4px 4px}
+ .aw-webkit .aw-system-control, .aw-unix .aw-system-control {font-family:Tahoma, Arial, Helvetica;font-size:11px}
+ .aw-gecko .aw-system-control {display:-moz-inline-box;overflow:visible;-moz-user-focus:normal;-moz-outline:none}
+ .aw-gecko-box {overflow:hidden;width:100%;height:100%;-moz-box-flex:1}
+ .aw-strict .aw-gecko-box {padding:0px 4px 4px 4px;margin:0px -4px -4px -4px}
+ .aw-popup-window body {/*font:menu*/}
+ .aw-system-control.aw-popup-window {display:block;position:absolute;padding:0px;background:#fff;z-index:10000}
+ html.aw-popup-window, .aw-popup-window body {overflow:hidden;margin:0px;padding:0px;border:none;background:#fff}
+ .aw-frame-template {display:block;position:relative;overflow:hidden;width:100px;height:100px;border:1px solid black}
+ .aw-strict .aw-frame-template {padding:0px 6px 2px 0px}
+ .aw-ms7 .aw-frame-template {border:none}
+ .aw-ff3 .aw-frame-box {width:-moz-available}
+ .aw-control-focus {display:block;position:absolute;overflow:hidden;top:-1px;left:0px;width:1px;height:1px;border:none;background:transparent;opacity:0;outline:none!important;-moz-outline:none}
+ .aw-opera a.aw-control-focus{position:relative;margin:-1px}
+ .aw-opera .aw-control-focus:focus {display:none}
+ 
+.aw-item-control {width:9px;height:23px}
+ .aw-strict .aw-item-control {width:1px;height:19px;padding:0px 4px 4px 4px}
+ .aw-item-template {display:inline-block;position:relative;overflow:hidden;width:100px;height:16px;margin:0px}
+ .aw-strict .aw-item-template {height:12px;width:92px;padding:0px 4px 4px 4px}
+ .aw-gecko .aw-item-template {display:-moz-inline-box;overflow:visible}
+ .aw-templates-cell, .aw-templates-text, .aw-templates-image, .aw-templates-link, .aw-item-box {padding:0px 4px;text-overflow:ellipsis;-o-text-overflow:ellipsis}
+ .aw-item-box {display:block;position:relative;overflow:hidden;width:100%;height:100%;vertical-align:top}
+ .aw-gecko .aw-item-box {width:auto;min-width:1px;-moz-box-flex:1}
+ .aw-strict .aw-item-box {margin:0px -4px -4px -4px;padding:0px 4px 4px 4px}
+ .aw-item-box * {vertical-align:middle}
+ .aw-item-marker {display:inline-block;overflow:hidden;height:14px;width:14px;margin-right:4px;vertical-align:middle;line-height:1px}
+ .aw-item-ruler {display:inline-block;overflow:hidden;height:100%;width:0px;vertical-align:middle;line-height:1px}
+ .aw-strict .aw-item-ruler {padding-bottom:4px}
+ .aw-item-image {display:inline-block;overflow:hidden;height:18px;width:18px;margin:-8px 4px -8px -2px;vertical-align:middle;line-height:1px}
+ .aw-gecko .aw-item-marker, .aw-gecko .aw-item-ruler, .aw-gecko .aw-item-image {display:-moz-inline-box;overflow:visible}
+ .aw-item-text {margin:0px;vertical-align:middle;line-height:1.2em}
+ .aw-image-none, .aw-gecko .aw-image-none {display:none}
+ .aw-disabled-control .aw-item-image {filter:progid:DXImageTransform.Microsoft.BasicImage(grayScale=1,opacity=0.5);-moz-opacity:0.5;opacity:0.5}
+ 
+.aw-text-expand {width:auto;min-width:20px}
+ .aw-ie.aw-text-expand {overflow-x:visible;width:20px}
+ .aw-strict .aw-text-expand {width:auto;min-width:12px}
+ .aw-ms6 .aw-text-expand {width:12px}
+ .aw-text-expand .aw-item-template {width:auto;min-width:20px}
+ .aw-ie .aw-text-expand .aw-item-template {overflow-x:visible;width:20px}
+ .aw-strict .aw-text-expand .aw-item-template {width:auto;min-width:12px}
+ .aw-ms6 .aw-text-expand .aw-item-template {width:12px}
+ a.aw-text-expand, .aw-text-expand .aw-templates-link, .aw-text-expand .aw-templates-text, .aw-text-expand .aw-item-box {white-space:nowrap}
+ .aw-ie a.aw-text-expand, .aw-ie .aw-text-expand .aw-templates-link, .aw-ie .aw-text-expand .aw-templates-text, .aw-ie .aw-text-expand .aw-item-box {overflow-x:visible}
+ .aw-ms7 .aw-text-expand .aw-item-box {width:auto}
+ .aw-gecko .aw-text-expand .aw-item-box {overflow:visible}
+ .aw-opera .aw-text-expand .aw-item-box {width:auto}
+ .aw-text-wrap .aw-templates-cell {line-height:1.2em}
+ .aw-text-wrap .aw-item-marker, .aw-text-wrap .aw-item-image {position:absolute;top:50%;left:4px}
+ .aw-text-wrap .aw-item-marker+.aw-item-image {left:22px}
+ .aw-ie .aw-text-wrap .aw-item-marker, .aw-ie .aw-text-wrap .aw-item-image {position:relative;float:left;left:0px;margin-left:0px;margin-right:1px}
+ .aw-ms7 .aw-text-wrap .aw-item-marker, .aw-ms7 .aw-text-wrap .aw-item-image {margin-right:3px}
+ .aw-text-wrap .aw-item-marker {margin-top:-6px}
+ .aw-text-wrap .aw-item-text {display:inline-block;white-space:normal;word-wrap:break-word}
+ .aw-gecko .aw-text-wrap .aw-item-text {display:-moz-inline-block}
+ .aw-opera .aw-text-wrap .aw-item-ruler {margin-right:-1px}
+ .aw-opera .aw-text-wrap .aw-item-text {box-sizing:border-box;width:100%}
+ .aw-webkit .aw-text-wrap .aw-templates-text, .aw-webkit .aw-text-wrap .aw-templates-link, .aw-webkit .aw-text-wrap .aw-item-box {white-space:nowrap}
+ .aw-text-wrap .aw-item-image+.aw-item-ruler+.aw-item-text {padding-left:20px}
+ .aw-text-wrap .aw-image-none+.aw-item-ruler+.aw-item-text {padding-left:0px}
+ .aw-text-wrap .aw-item-marker+.aw-item-image+.aw-item-ruler+.aw-item-text {padding-left:38px}
+ .aw-text-wrap .aw-item-marker+.aw-image-none+.aw-item-ruler+.aw-item-text {padding-left:18px}
+ .aw-ms7 .aw-text-wrap .aw-item-image+.aw-item-ruler+.aw-item-text {padding-left:0px}
+ .aw-text-normal .aw-templates-cell, .aw-text-normal .aw-templates-text, .aw-text-normal .aw-templates-link, .aw-text-normal .aw-item-box {white-space:nowrap}
+ 
+.aw-list-control {width:400px;height:150px;border-width:1px;border-style:solid;background:#fff}
+ .aw-strict .aw-list-control {width:392px;height:146px;padding:0px 6px 2px 0px}
+ .aw-list-box {display:block;position:relative;overflow:auto;overflow-x:hidden;overflow-y:auto;width:auto;height:100%;border:1px solid #fff}
+ .aw-gecko .aw-list-box {display:-moz-box;-moz-box-flex:1;-moz-box-orient:vertical;-moz-outline:none!important}
+ .aw-gecko .aw-disabled-control .aw-list-box {overflow:hidden}
+ .aw-strict .aw-list-box {margin:0px -6px -2px 0px}
+ .aw-list-template {display:block}
+ .aw-list-item {-moz-outline:none;vertical-align:top}
+ .aw-flow-vertical {width:120px}
+ .aw-strict .aw-flow-vertical {width:112px}
+ .aw-flow-vertical .aw-list-item {display:block;overflow:hidden;width:100%}
+ .aw-strict .aw-flow-vertical .aw-list-item {width:auto}
+ .aw-flow-horizontal {height:23px;border:none}
+ .aw-strict .aw-flow-horizontal {height:19px;padding:0px 8px 4px 0px}
+ .aw-flow-horizontal .aw-list-box {overflow:hidden;width:100%!important;border:none;-moz-box-orient:horizontal}
+ .aw-flow-horizontal .aw-list-template {overflow:hidden;width:9999px;height:100%}
+ .aw-strict .aw-flow-horizontal .aw-list-box, .aw-strict .aw-flow-horizontal .aw-list-template {padding:0px 8px 4px 0px;margin:0px -8px -4px 0px}
+ .aw-flow-horizontal .aw-list-item {height:100%}
+ 
+.aw-list-control {border-color:#7f9db9}
+ .aw-ui-list .aw-items-current {background:#eee}
+ .aw-ui-list .aw-items-selected {color:#fff;background:#316ac5}
+ .aw-ui-checkedlist .aw-items-current {background:#eee}
+ 
+.aw-ui-tabs {overflow:visible;height:23px;margin:0px;padding:0px;border:none;background:none;vertical-align:bottom;z-index:1000;-moz-box-orient:vertical;-moz-box-align:start}
+ .aw-strict .aw-ui-tabs {height:19px;padding:0px 8px 4px 0px}
+ .aw-ui-tabs .aw-list-box {display:block;width:100%;height:100%;margin:1px 0px -1px 0px;padding:0px;border:none;z-index:1000}
+ .aw-strict .aw-ui-tabs .aw-list-box{padding:0px 8px 4px 0px;margin:1px -8px -5px 0px}
+ .aw-ui-tabs .aw-list-template {padding:0px}
+ .aw-ie .aw-ui-tabs .aw-list-template {position:absolute}
+ .aw-strict .aw-ui-tabs .aw-list-template{position:relative;padding:0px 8px 4px 0px;margin:0px -8px -4px 0px}
+ .aw-gecko .aw-ui-tabs .aw-item-template {float:left}
+ .aw-gecko .aw-ui-tabs .aw-item-box {overflow:hidden}
+ .aw-ff3 .aw-ui-tabs .aw-item-template {margin-bottom:-6px!important}
+ 
+.aw-ui-tabs .aw-item-template, .aw-ui-tabs .aw-item-box {background-image:url(/Common/Scripts/Images/tabs.png)}
+ .aw-png1 .aw-ui-tabs .aw-item-template, .aw-png1 .aw-ui-tabs .aw-item-box {background-image:url(/Common/Scripts/Images/tabs.png)}
+ .aw-ui-tabs .aw-item-template {margin:-1px -4px 1px 0px;padding:0px 8px 0px 0px;background-position:100% 0px}
+ .aw-strict .aw-ui-tabs .aw-item-template {margin:-1px -4px -3px 0px;padding:0px 8px 4px 0px}
+ .aw-ui-tabs .aw-item-box {margin:0px;padding:0px;background-position:0px -50px;text-indent:7px}
+ .aw-strict .aw-ui-tabs .aw-item-box {margin:0px 0px -4px 0px;padding:0px 0px 4px 0px}
+ .aw-ui-tabs .aw-mouseover-item {background-position:100% -100px}
+ .aw-ui-tabs .aw-mouseover-item .aw-item-box {background-position:0px -150px}
+ .aw-ui-tabs .aw-items-selected {margin-top:0px;background-position:100% -200px;z-index:1000}
+ .aw-strict .aw-ui-tabs .aw-items-selected {margin-top:0px}
+ .aw-ui-tabs .aw-items-selected .aw-item-box {background-position:0px -250px}
+ .aw-ui-tabs .aw-item-ruler {margin-top:2px}
+ .aw-ui-tabs .aw-items-selected .aw-item-ruler {margin-top:-2px}
+ 
+.aw-tree-sign {display:inline-block;position:relative;overflow:hidden;width:14px;height:14px;margin:-6px 0px;cursor:pointer;vertical-align:middle;top:1px}
+ .aw-gecko .aw-tree-sign {display:-moz-inline-box}
+ .aw-gecko .aw-tree-view {display:block}
+ .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-sign {margin-left:10px}
+ .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-sign {margin-left:20px}
+ .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-sign {margin-left:30px}
+ .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-sign {margin-left:40px}
+ .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-sign {margin-left:50px}
+ .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-sign {margin-left:60px}
+ .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-sign {margin-left:70px}
+ .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-view .aw-tree-sign {margin-left:80px}
+ 
+.aw-expanded-true .aw-tree-sign {background:url(/Common/Scripts/Images/tree.png) -84px 50%}
+ .aw-expanded-false .aw-tree-sign {background:url(/Common/Scripts/Images/tree.png) -44px 50%}
+ .aw-tree-leaf .aw-tree-sign {background:url(/Common/Scripts/Images/tree.png) -124px 50%;cursor:default}
+ .aw-png1 .aw-tree-sign {background-image:url(/Common/Scripts/Images/tree.png)}
+ 
+.aw-scroll-bars {display:block;position:absolute;overflow:hidden;width:100%;height:100%}
+ .aw-ie .aw-scroll-bars {padding-bottom:20px}
+ .aw-strict .aw-scroll-bars {padding:0px;border:none}
+ .aw-ms6 .aw-scroll-bars {position:relative}
+ .aw-bars-box {display:block;position:absolute;overflow:auto;top:0px;left:0px;width:100%;height:100%;-moz-outline:none}
+ .aw-bars-spacer {display:block;width:9999px;height:999px}
+ .aw-bars-content {display:block;position:absolute;overflow:hidden;top:0px;left:0px;bottom:20px;right:20px}
+ .aw-ie .aw-bars-content {position:relative;width:auto;height:100%;margin-right:20px}
+ .aw-gecko .aw-bars-content {overflow:auto}
+ .aw-strict .aw-bars-content {position:absolute;width:auto;height:auto;margin-right:0px;padding-bottom:0px}
+ .aw-scrollbars-none .aw-bars-box {overflow:hidden}
+ .aw-scrollbars-vertical .aw-bars-box {overflow-x:hidden;overflow-y:scroll}
+ .aw-scrollbars-horizontal .aw-bars-box {overflow-x:scroll;overflow-y:hidden}
+ .aw-scrollbars-both .aw-bars-box {overflow:scroll}
+ .aw-scrollbars-none .aw-bars-content {width:100%!important;height:100%!important}
+ .aw-scrollbars-vertical .aw-bars-spacer {width:1px!important}
+ .aw-scrollbars-vertical .aw-bars-content {height:100%!important}
+ .aw-scrollbars-horizontal .aw-bars-spacer {height:1px!important}
+ .aw-scrollbars-horizontal .aw-bars-content {width:100%!important}
+ .aw-ie .aw-scrollbars-none, .aw-ie .aw-scrollbars-vertical {padding-bottom:0px!important}
+ .aw-ie .aw-scrollbars-none .aw-bars-content, .aw-ie .aw-scrollbars-horizontal .aw-bars-content {margin-right:0px!important}
+ .aw-gecko .aw-disabled-control .aw-bars-spacer {display:none}
+ .aw-ffx .aw-scrollbars-vertical .aw-bars-box {left:auto;width:20px;right:0px}
+ .aw-ffx .aw-scrollbars-horizontal .aw-bars-box {top:auto;height:20px;bottom:0px}
+ .aw-ms6 .aw-bars-content {width:expression(this.parentElement.clientWidth-AW.sx);height:expression(this.parentElement.clientHeight-AW.sy)}
+ 
+.aw-vpanel-template, .aw-vpanel-box, .aw-vpanel-left, .aw-vpanel-center, .aw-vpanel-right {display:block;position:relative;overflow:hidden;top:0px;left:0px;width:100%;height:100%}
+ .aw-vpanel-box {padding-left:100px;padding-right:0px}
+ .aw-strict .aw-vpanel-box {width:auto}
+ .aw-vpanel-left {position:absolute;width:100px}
+ .aw-vpanel-right {position:absolute;left:auto;right:0px;width:0px}
+ .aw-strict .aw-vpanel-left, .aw-strict .aw-vpanel-right {width:96px}
+ .aw-hpanel-template, .aw-hpanel-box, .aw-hpanel-top, .aw-hpanel-middle, .aw-hpanel-bottom {display:block;position:absolute;overflow:hidden;top:0px;left:0px;width:100%;height:100%}
+ .aw-hpanel-middle {height:auto}
+ .aw-ie .aw-hpanel-middle {position:relative;height:100%}
+ .aw-strict .aw-hpanel-middle {position:absolute;height:auto}
+ .aw-hpanel-bottom {top:auto;bottom:0px}
+ .aw-ms5 .aw-scroll-bars .aw-hpanel-template, .aw-ms6 .aw-scroll-bars .aw-hpanel-template, .aw-ms7 .aw-scroll-bars .aw-hpanel-template {zoom:2}
+ .aw-ms5 .aw-scroll-bars .aw-hpanel-box, .aw-ms6 .aw-scroll-bars .aw-hpanel-box, .aw-ms7 .aw-scroll-bars .aw-hpanel-box {zoom:0.5}
+ .aw-gpanel-template, .aw-gpanel-box, .aw-gpanel-top, .aw-gpanel-middle, .aw-gpanel-bottom, .aw-gpanel-left, .aw-gpanel-center, .aw-gpanel-right {display:block;position:absolute;overflow:hidden;top:0px;left:0px;width:100%;height:100%}
+ .aw-gpanel-middle {height:auto}
+ .aw-ie .aw-gpanel-middle {position:relative;height:100%}
+ .aw-strict .aw-gpanel-middle {position:absolute;height:auto}
+ .aw-gpanel-bottom {top:auto;bottom:0px}
+ .aw-gpanel-center {width:auto}
+ .aw-ie .aw-gpanel-center {position:relative;width:100%}
+ .aw-strict .aw-gpanel-center {position:absolute;width:auto}
+ .aw-gpanel-right {left:auto;right:0px}
+ .aw-ms5 .aw-scroll-bars .aw-gpanel-template, .aw-ms6 .aw-scroll-bars .aw-gpanel-template, .aw-ms7 .aw-scroll-bars .aw-gpanel-template {zoom:2}
+ .aw-ms5 .aw-scroll-bars .aw-gpanel-box, .aw-ms6 .aw-scroll-bars .aw-gpanel-box, .aw-ms7 .aw-scroll-bars .aw-gpanel-box {zoom:0.5}
+ 
+.aw-grid-control {overflow:hidden;width:400px;height:200px;border:1px solid;background:#fff;text-align:left!important}
+ .aw-strict .aw-grid-control {width:392px;height:196px;padding:0px 6px 2px 0px}
+ .aw-grid-box {display:block;position:relative;overflow:hidden;width:100%;height:100%;border:1px solid #fff}
+ .aw-ie .aw-grid-box {padding-bottom:50px}
+ .aw-gecko .aw-grid-box {-moz-box-flex:1;min-width:150px}
+ .aw-strict .aw-grid-box {padding:0px 4px 0px 0px;margin:0px -6px -2px 0px}
+ .aw-ms6 .aw-grid-box {padding:0px;width:auto;height:auto}
+ .aw-grid-view {display:block;position:relative;overflow:hidden;width:32000px;height:32000in}
+ .aw-view-top, .aw-view-bottom {display:block;overflow:hidden;width:32000px;font-size:0px;line-height:0px}
+ .aw-grid-headers, .aw-grid-footers, .aw-grid-row {display:block;position:relative;overflow:hidden;width:32000px;height:20px;-moz-outline:none}
+ .aw-strict .aw-grid-headers, .aw-strict .aw-grid-footers, .aw-strict .aw-grid-row {height:16px;padding:0px 0px 4px 0px;margin:0px}
+ .aw-grid-row {height:18px;line-height:18px}
+ .aw-strict .aw-grid-row {height:14px}
+ .aw-grid-cell, .aw-grid-header, .aw-grid-footer {height:100%;width:100px;margin:0;vertical-align:top;-moz-outline:none}
+ .aw-strict .aw-grid-cell, .aw-strict .aw-grid-header, .aw-strict .aw-grid-footer {width:92px;height:100%;margin:0px 0px -4px 0px}
+ .aw-grid-header {-moz-user-select:none}
+ .aw-grid-separator {visibility:hidden;position:relative;overflow:hidden;top:10%;left:-10px;width:20px;height:75%;margin:0px -20px 0px 0px;vertical-align:top;z-index:1000;cursor:e-resize}
+ .aw-strict .aw-grid-separator {height:90%}
+ .aw-grid-headers .aw-resizable-false, .aw-disabled-control .aw-resizable-true {cursor:default}
+ .aw-header-0 .aw-grid-separator {visibility:inherit}
+ .aw-row-selector {position:relative;overflow:hidden;width:18px;height:100%;vertical-align:top;text-align:center;-moz-outline:none}
+ .aw-strict .aw-row-selector {width:10px;height:100%;margin:0px 0px -4px 0px}
+ .aw-row-start {display:block;float:left;height:100%}
+ .aw-grid-control .aw-selector-space {height:3333px}
+ .aw-selectors-hidden .aw-selector-space, .aw-gpanel-center .aw-selector-space, .aw-gpanel-right .aw-selector-space {display:none!important}
+ .aw-row-sample {visibility:hidden;display:block;position:absolute;overflow:hidden;top:0px;left:0px;width:100px}
+ .aw-grid-sort {display:none;position:relative;overflow:hidden;width:10px;height:10px;margin-left:2px;vertical-align:middle}
+ .aw-webkit .aw-grid-sort {top:-3px}
+ .aw-opera .aw-grid-sort {top:-2px}
+ .aw-header-0 .aw-grid-sort {display:inline-block}
+ .aw-gecko .aw-header-0 .aw-grid-sort {display:-moz-inline-box;top:-2px}
+ .aw-grid-control .aw-sort-none .aw-grid-sort {display:none}
+ .aw-grid-init {display:block;position:absolute;overflow:hidden;visibility:visible;width:1px;height:1px}
+ .aw-grid-control .aw-edit-cell {border:1px solid}
+ .aw-strict .aw-edit-cell {padding:0px 3px 2px 3px}
+ .aw-strict.aw-gecko .aw-edit-cell {padding:0px 3px 2px 3px}
+ .aw-edit-cell .aw-item-box {padding:0px 3px}
+ .aw-strict .aw-edit-cell .aw-item-box {padding:0px 3px 2px 3px;margin:0px -3px -2px -3px}
+ .aw-strict .aw-edit-cell .aw-item-ruler {padding-bottom:2px}
+ .aw-edit-cell INPUT {/*font:menu*/}
+ .aw-edit-cell INPUT {height:1.22em;border:none;padding:0px 1px 0px 0px;font-size:100%;font-family:inherit;text-align:inherit;margin:-0.4em -1px;vertical-align:middle;outline:none}
+ #aw-edit {position:absolute;top:0px;left:0px;width:1px!important;height:1px!important;border:none;background:transparent;outline:none!important}
+ 
+.aw-grid-control {border-color:#7f9db9}
+ .aw-row-selector {border:1px solid;border-color:#f2f1e2 #e2decd #e2decd #ebeadb;background:#ebeadb}
+ .aw-strict .aw-row-selector {padding:0px 6px 2px 0px}
+ .aw-row-selector .aw-item-ruler {margin-top:-1px}
+ .aw-header-0 .aw-grid-header {border:none;border-bottom:1px solid #cbc7b8;background:#d6d2c2!important;padding:0px 0px 1px 0px}
+ .aw-strict .aw-header-0 .aw-grid-header {padding:0px 4px 3px 4px;margin:0px 0px -4px 0px;height:100%}
+ .aw-header-0 .aw-item-box {border-bottom:1px solid #e2decd;background:#ebeadb}
+ .aw-strict .aw-header-0 .aw-grid-header .aw-item-box {padding:0px 4px 1px 4px;margin:0px -4px -2px -4px}
+ .aw-strict .aw-header-0 .aw-grid-header .aw-item-ruler {padding:0px}
+ .aw-grid-separator {background:url(/Common/Scripts/Images/grid.png) -70px 0px repeat-y}
+ .aw-header-0 .aw-mouseover-header {border-bottom-color:#f9b119;background:#fcc247!important}
+ .aw-header-0 .aw-mouseover-header .aw-item-box {border-bottom-color:#f9a900;background:#faf9f4}
+ .aw-disabled-control .aw-header-0 .aw-grid-header {border-bottom-color:#ddd;background:#ebeae4!important}
+ .aw-disabled-control .aw-header-0 .aw-grid-header .aw-item-box {border-bottom-color:#eeece6;background:none!important}
+ .aw-disabled-control .aw-row-selector {background:#ebeae4}
+ .aw-rows-selected .aw-grid-cell {background:none}
+ .aw-rows-selected .aw-row-selector {color:#000}
+ .aw-grid-footers {border-top:1px solid #eee}
+ .aw-sort-ascending .aw-grid-sort {background:url(/Common/Scripts/Images/grid.png) -25px -5px}
+ .aw-sort-descending .aw-grid-sort {background:url(/Common/Scripts/Images/grid.png) -45px -5px}
+ 
+.aw-ui-group {display:block;width:400px;height:100px;}
+  /*  Added the line below to fix the border color in IE6 */
+ .aw-ie6  .aw-ui-group{border:1px solid #808080;}
+ .aw-gecko .aw-ui-group {display:block;/*  Change the border color from #ccc */border:1px solid #808080;-moz-border-radius:4px}
+ .aw-ui-group legend {height:16px;color:#316ac5}
+ .aw-strict .aw-ui-group legend {height:12px;margin-top:-1px}
+ 
+.aw-ui-link {text-decoration:underline;cursor:pointer;cursor:hand}
+
+.aw-ui-button {text-align:center}
+ .aw-ms7 .aw-ui-button .aw-item-box {min-width:12px}
+ .aw-strict.aw-gecko .aw-ui-button .aw-item-box {min-width:12px}
+ 
+.aw-ui-button {height:23px!important;background:url(/Common/Scripts/Images/button.png) 100% 0px no-repeat;padding-right:8px}
+ .aw-ie6 .aw-ui-button {background-attachment:fixed}
+ .aw-strict .aw-ui-button {height:19px!important;padding:0px 8px 4px 0px}
+ .aw-ui-button .aw-item-box {padding:0px;text-indent:8px;background:url(/Common/Scripts/Images/button.png) 0px -50px no-repeat}
+ .aw-png1 .aw-ui-button, .aw-png1 .aw-ui-button .aw-item-box {background-image:url(/Common/Scripts/Images/button.png)}
+ .aw-strict .aw-ui-button .aw-item-box {margin:0px 0px -4px 0px;padding:0px 0px 4px 0px}
+ .aw-strict.aw-webkit .aw-ui-button .aw-item-box {width:auto}
+ .aw-mouseover-button {background-position:100% -100px}
+ .aw-mouseover-button .aw-item-box {background-position:0px -150px}
+ .aw-mousedown-button {background-position:100% -200px}
+ .aw-mousedown-button .aw-item-box {background-position:0px -250px}
+ .aw-disabled-control {background-position:100% -300px}
+ .aw-disabled-control .aw-item-box {background-position:0px -350px}
+ 
+.aw-item-marker {background-position:-75px -5px;margin-top:-1px}
+ .aw-mouseover-toggle .aw-item-marker {background-position:-75px -30px}
+ .aw-mousedown-toggle .aw-item-marker {background-position:-75px -55px}
+ .aw-disabled-control .aw-item-marker {background-position:-75px -80px}
+ .aw-value-true .aw-item-marker {background-position:-25px -5px}
+ .aw-value-false .aw-item-marker {background-position:-50px -5px}
+ .aw-ie .aw-mouseover-toggle .aw-item-marker {background-position-y:-30px}
+ .aw-ie .aw-mousedown-toggle .aw-item-marker {background-position-y:-55px}
+ .aw-ie .aw-disabled-control .aw-item-marker {background-position-y:-80px}
+ .aw-value-true.aw-mouseover-toggle .aw-item-marker[id] {background-position:-25px -30px}
+ .aw-value-true.aw-mousedown-toggle .aw-item-marker[id] {background-position:-25px -55px}
+ .aw-value-false.aw-mouseover-toggle .aw-item-marker[id] {background-position:-50px -30px}
+ .aw-value-false.aw-mousedown-toggle .aw-item-marker[id] {background-position:-50px -55px}
+ .aw-value-true.aw-disabled-control .aw-item-marker[id] {background-position:-25px -80px}
+ .aw-value-false.aw-disabled-control .aw-item-marker[id] {background-position:-50px -80px}
+ .aw-disabled-control .aw-value-true .aw-item-marker[id] {background-position:-25px -80px}
+ .aw-disabled-control .aw-value-false .aw-item-marker[id] {background-position:-50px -80px}
+ 
+.aw-toggle-checkbox .aw-item-marker {background-image:url(/Common/Scripts/Images/checkbox.png)}
+ .aw-png1 .aw-toggle-checkbox .aw-item-marker {background-image:url(/Common/Scripts/Images/checkbox.png)}
+ 
+.aw-input-box {width:100px;height:20px;padding:0px;border:1px solid;background:#fff;-moz-user-select:text}
+ .aw-strict .aw-input-box {width:92px;height:16px;padding:0px 3px 2px 3px}
+ .aw-input-box .aw-item-box {margin:0px;padding:0px 2px;border:1px solid #fff;background:none;white-space:nowrap}
+ .aw-strict .aw-input-box .aw-item-box {margin:0px -3px -2px -3px;padding:0px 2px}
+ .aw-ie .aw-input-box .aw-item-image {float:left;position:relative;top:50%;left:-2px;margin:-10px -1px 0px 0px}
+ .aw-all .aw-input-box .aw-item-text {position:absolute;overflow:hidden;top:50%;left:22px;right:3px;/* Changed from Auto to 100% for input fix */width:100%;height:1.4em;margin:-0.68em -1px -3px -1px;padding:0px 1px;border:0px none;font:inherit;background:none}
+ .aw-ie .aw-input-box .aw-item-text {position:relative;top:0px;left:0px;width:100%;margin:-3px -1px;/*font:menu*/}
+ .aw-ff3 .aw-input-box .aw-item-text {width:-moz-available}
+ .aw-opera .aw-input-box .aw-item-text {width:100%}
+ .aw-input-box .aw-image-none+.aw-item-ruler+.aw-item-text {left:3px}
+ .aw-ie.aw-strict .aw-input-box .aw-item-text {display:inline-block;margin:-3px -30px -3px -1px}
+ .aw-strict .aw-input-box .aw-item-ruler {padding:0px}
+ .aw-webkit .aw-input-box .aw-item-text {display:inline-block;white-space:nowrap;cursor:text;outline:none}
+ .aw-header-0 .aw-input-box {padding:0px;border:1px solid;background:#fff!important}
+ .aw-strict .aw-header-0 .aw-input-box {padding:0px 3px 2px 3px}
+ .aw-header-0 .aw-input-box .aw-item-box {border:1px solid #fff;background:none!important}
+ .aw-strict .aw-header-0 .aw-input-box .aw-item-box {margin:0px -3px -2px -3px;padding:0px 2px 0px 2px}
+ .aw-konqueror .aw-input-box .aw-item-text {background:#fff}
+ 
+.aw-input-box {border-color:#7f9db9}
+ 
+.aw-ui-radio {height:auto;padding:2px;border:none;background:none}
+ .aw-strict .aw-ui-radio {height:auto;padding:2px 6px 2px 2px}
+ .aw-ui-radio .aw-list-box {border:none}
+ .aw-ff3 .aw-ui-radio .aw-list-box {overflow:visible}
+ .aw-toggle-radio .aw-item-marker {background-image:url(/Common/Scripts/Images/radio.png)}
+ .aw-png1 .aw-toggle-radio .aw-item-marker {background-image:url(/Common/Scripts/Images/radio.png)}
+ 
+.aw-combo-box {width:100px;height:20px;padding:0px;border:1px solid;background:#fff;-moz-user-select:text}
+ .aw-strict .aw-combo-box {width:92px;height:16px;padding:0px 3px 2px 3px}
+ .aw-combo-box .aw-item-box {margin:0px;padding:0px 2px;border:1px solid #fff;background:none;white-space:nowrap}
+ .aw-strict .aw-combo-box .aw-item-box {margin:0px -3px -2px -3px;padding:0px 2px}
+ .aw-ie .aw-combo-box .aw-item-image {float:left;position:relative;top:50%;left:-2px;margin:-10px -1px 0px 0px}
+ .aw-all .aw-combo-box .aw-item-text {position:absolute;overflow:hidden;top:50%;left:22px;right:18px;width:auto;height:1.4em;margin:-0.68em -1px -3px -1px;padding:0px 1px;border:0px none;font:inherit;line-height:1.4em;background:none}
+ .aw-ie .aw-combo-box .aw-item-text {position:relative;top:0px;left:0px;width:100%;margin:-3px -1px;/*font:menu*/}
+ .aw-ff3 .aw-combo-box .aw-item-text {width:-moz-available}
+ .aw-opera .aw-combo-box .aw-item-text {width:100%}
+ .aw-combo-box .aw-image-none+.aw-item-ruler+.aw-item-text {left:3px}
+ .aw-ie.aw-strict .aw-combo-box .aw-item-text {display:inline-block;margin:-3px -50px -3px -1px}
+ .aw-strict .aw-combo-box .aw-item-ruler {padding:0px}
+ .aw-strict.aw-gecko .aw-combo-box .aw-item-image {margin-bottom:-6px}
+ .aw-webkit .aw-combo-box .aw-item-text {display:inline-block;white-space:nowrap;cursor:text;outline:none}
+ .aw-combo-button {float:right;position:relative;overflow:hidden;table-layout:fixed;border-collapse:collapse;width:15px;height:100%;max-height:100%;border:none;z-index:1;left:2px}
+ .aw-combo-button td {border:none;font-size:1px;line-height:1px}
+ .aw-header-0 .aw-combo-box {padding:0px;border:1px solid;background:#fff!important}
+ .aw-strict .aw-header-0 .aw-combo-box {padding:0px 3px 2px 3px}
+ .aw-header-0 .aw-combo-box .aw-item-box {border:1px solid #fff;background:none!important}
+ .aw-strict .aw-header-0 .aw-combo-box .aw-item-box {margin:0px -3px -2px -3px;padding:0px 2px 0px 2px}
+ .aw-konqueror .aw-combo-box .aw-item-text {background:#fff}
+ 
+.aw-combo-box {border-color:#7f9db9}
+ .aw-combo-button td {background:url(/Common/Scripts/Images/combo.png)}
+ .aw-cb-1, .aw-cb-3 {height:20%}
+ .aw-cb-1 td {background-position:-25px 0px}
+ .aw-cb-2 td {background-position:-25px 50%}
+ .aw-cb-3 td {background-position:-25px 100%}
+ .aw-mouseover-combo .aw-cb-1 td {background-position:-50px 0px}
+ .aw-mouseover-combo .aw-cb-2 td {background-position:-50px 50%}
+ .aw-mouseover-combo .aw-cb-3 td {background-position:-50px 100%}
+ .aw-mousedown-combo .aw-cb-1 td {background-position:-75px 0px}
+ .aw-mousedown-combo .aw-cb-2 td {background-position:-75px 50%}
+ .aw-mousedown-combo .aw-cb-3 td {background-position:-75px 100%}
+ .aw-disabled-control .aw-cb-1 td {background-position:-100px 0px}
+ .aw-disabled-control .aw-cb-2 td {background-position:-100px 50%}
+ .aw-disabled-control .aw-cb-3 td {background-position:-100px 100%}
+ .aw-popup-window .aw-mouseover-item {color:#fff;background:#4d8ff7}
+
+.aw-grid-header, .aw-grid-footer, .aw-grid-cell {overflow:hidden;width:100px;height:100%}
+ .aw-strict .aw-grid-header, .aw-strict .aw-grid-footer, .aw-strict .aw-grid-cell {overflow:hidden;width:92px;height:100%}
+ .aw-all .aw-grid-header, .aw-all .aw-grid-footer, .aw-all .aw-grid-cell, .aw-all .aw-grid-separator, .aw-all .aw-row-selector {display:block;overflow:hidden;float:left}
+ .aw-row-selector {overflow:hidden;width:18px;height:100%}
+ .aw-strict .aw-row-selector {width:10px}
+ .aw-column-space {width:3333px!important}
+ .aw-all .aw-visible-false {display:none}
+ 
+.aw-grid-control .aw-input-box, .aw-grid-control .aw-combo-box {border-color:#7f9db9;color:#000;background:#fff}
+ .aw-grid-control .aw-cells-selected, .aw-grid-control .aw-rows-selected {color:#fff;background:#316ac5}
+ .aw-grid-control .aw-edit-cell {border-color:#7f9db9;color:#000;background:#fff}
+ .aw-disabled-control {color:#aca899!important;border-color:#c9c9c2!important;cursor:default!important}
+ 
+.aw-image-home {background:url(/Common/Scripts/Images/icons.png) -40px 0px}
+ .aw-image-favorites {background:url(/Common/Scripts/Images/icons.png) -80px 0px}
+ .aw-image-search {background:url(/Common/Scripts/Images/icons.png) -120px 0px}
+ .aw-image-fontsize {background:url(/Common/Scripts/Images/icons.png) -160px 0px}
+ .aw-png1 .aw-image-home, .aw-png1 .aw-image-favorites, .aw-png1 .aw-image-search, .aw-png1 .aw-image-fontsize {background-image:url(/Common/Scripts/Images/icons.png)}
+ 
+.aw-border-outset {border:1px solid #7f9db9}
+ 

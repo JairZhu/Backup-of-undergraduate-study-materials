@@ -1,0 +1,7 @@
+%PRIV_SYSTEM_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<organizations>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<organization name="%COrganization.%LIST_ID%.Description%" ID="%LIST_ID%" />
+%CServer.%SERVER_ID%.Organization.List%
+</organizations>

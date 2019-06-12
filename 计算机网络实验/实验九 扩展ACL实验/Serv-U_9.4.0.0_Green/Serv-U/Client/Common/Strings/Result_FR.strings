@@ -1,0 +1,201 @@
+﻿<!-- Result.strings - For ease of localization, strings have been separated into this file.  This has result strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- ******************** RESULT CODE TEXT ******************** -->
+<!-- NOTE: This file should contain all result codes and only	-->
+<!--	   result codes, all other strings should be placed		-->
+<!--	   in other string files.								-->
+
+<!-- shared result strings -->
+$OR_CONTACT_SYSTEM_ADMIN$=ou contactez votre administrateur système pour obtenir de l’aide.
+$CONTACT_SYSTEM_ADMIN$=Veuillez contacter votre administrateur système pour obtenir de l’aide.
+
+<!-- global results -->
+$SESS_OKAY_STR$=Opération réussie.
+$SESS_FAIL_STR$=ERREUR : l’opération ne peut pas être effectuée.
+$SESS_PENDING_STR$=Erreur : l’opération n’est pas terminée.
+$SESS_PERMISSION_DENIED_STR$=ERREUR : le fichier ou répertoire auquel vous essayez d’accéder n’est pas disponible.
+$SESS_INVALID_PARAMETER_STR$=ERREUR : l’opération a échoué à cause d’un paramètre invalide.
+$SESS_BAD_SEQUENCE_OF_COMMANDS_STR$=Erreur : mauvaise séquence de commandes.
+$SESS_NOT_FOUND_STR$=ERREUR : le fichier ou répertoire spécifié n’existe pas.
+$SESS_PATH_IS_PORT_STR$=ERREUR : le chemin indiqué est un PORT Windows, l’opération ne peut pas être effectuée.
+$SESS_LOGIN_TOO_MANY_INVALID_TRIES_STR$=Vous avez dépassé le nombre maximum de tentatives de connexion autorisées.
+$SESS_COMMAND_PENDING_STR$=Une commande est actuellement en cours.  Cette action ne peut pas être effectuée tant que l’opération en cours n’est pas terminée.
+$SESS_COMMAND_ABORTED_STR$=ERREUR : l’opération a échoué, la commande a été abandonnée.
+$SESS_INTERNAL_ERROR_STR$=ERREUR : l’opération ne peut pas être effectuée, une erreur interne s’est produite.
+$SESS_ALREADY_EXISTS_STR$=ERREUR : le fichier ou dossier existe déjà.
+$SESS_FILE_IS_DIR_STR$=ERREUR : l’opération ne peut pas être effectuée, le chemin requis est un répertoire et non un fichier.
+$SESS_DIR_IS_FILE_STR$=ERREUR : l’opération ne peut pas être effectuée, le chemin requis est un fichier et non un répertoire.
+$SESS_CANT_REST_EMPTY_FILE_STR$=Impossible de reprendre le tranfert d’un fichier vide.
+$SESS_CANT_REST_BEYOND_EOF_STR$=Impossible de reprendre le transfert après la fin du fichier.
+$SESS_CANT_SET_FILE_POS_STR$=Impossible de déterminer la position du fichier.
+<!-- $SESS_COMPRESSED_TRANSFER_COMPLETE_STR$= -- placeholder -- -->
+$SESS_UNAUTHORIZED_IP_STR$=ERREUR : adresse IP non autorisée.
+$SESS_TIME_OUT_STR$=ERREUR : délai de déconnexion de la session atteint.
+$SESS_EXCEEDED_MAX_SESSION_TIME_STR$=ERREUR : la limite de durée de session pour ce compte a été atteinte.
+$SESS_TOO_MANY_SESSIONS_IP_STR$=ERREUR : trop de sessions avec cette IP.
+$SESS_TOO_MANY_SESSIONS_STR$=ERREUR : trop de sessions.
+$SESS_BLOCKED_STR$=Vous avez été bloqué. Veuillez réessayer ultérieurement, $OR_CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_DATA_SOCKET_CONNECT_STR$= -- placeholder -- -->
+<!-- $SESS_DATA_SOCKET_CLOSED_STR$= -- placeholder -- -->
+<!-- $SESS_DECR_USER_QUOTA_STR$= -- placeholder -- -->
+$SESS_NO_FILES_FOUND_STR$=ERREUR : aucun fichier n’a été trouvé.
+<!-- $SESS_LOCK_CONFLICT_STR$= -- placeholder -- -->
+$SESS_ADMIN_ABORTED_STR$=ERREUR : l’opération a été annulée par un administrateur.
+$SESS_UNAUTHORIZED_STR$=ERREUR : vous n’êtes plus connecté ou vous avez été déconnecté par un administrateur.
+$SESS_CANT_DELETE_SESSION_DOMAIN_STR$=ERREUR : impossible de supprimer le domaine contenant l’utilisateur actuellement connecté.
+$SESS_NO_SUCH_PATH_STR$=Le chemin requis n’existe pas, cela signifie généralement que le répertoire parent n’a pas été créé. Veuillez créér le répertoire parent avant d’effectuer cette opération.
+$SESS_INVALID_PATH_STR$=Le chemin du fichier ou du répertoire indiqué n’est pas valide pour cette opération.
+$SESS_PROTOCOL_NOT_ALLOWED_FOR_USER_STR$=Vous n’êtes pas autorisé à vous connecter à ce serveur avec votre navigateur.  Veuillez contacter votre administrateur système pour en savoir plus sur l’utilisation de ce serveur.
+$SESS_PERMISSION_DENIED_READ_ONLY_ADMIN_STR$=Vous n’êtes autorisé à modifier aucun paramètre.  Veuillez contacter votre administrateur système pour en savoir plus sur votre compte.
+$SESS_CANT_DELETE_SELF_STR$=Vous ne pouvez pas supprimer le compte que vous êtes en train d’utiliser.  Veuillez vous connecter avec un autre compte administrateur ou utiliser l’application de la zone de notification pour supprimer ce compte.
+$SESS_REVERSE_DNS_NAME_REQUIRED_TO_LOGIN_STR$=Un nom DNS inverse est requis pour se connecter et s’authentifier sur ce serveur.  Veuillez contacter votre FAI et/ou votre administrateur système pour en savoir plus.
+$SESS_USER_UNAVAILABLE_STR$=Votre compte est actuellement indisponible.  Veuillez contacter votre administrateur système pour en savoir plus sur votre compte.
+$SESS_ODBC_USER_PASSWORD_TOO_LONG_STR$=Le mot de passe indiqué est trop long pour pouvoir être stocké dans la base de données une fois crypté. Veuillez choisir un mot de passe plus court.
+
+<!-- CheckUser() results -->
+$SESS_USER_OKAY_NEED_PWD_STR$=Erreur : l’utilisateur doit posséder un mot de passe.
+$SESS_USER_NOT_FOUND_STR$=Erreur : utilisateur non trouvé.
+$SESS_USER_OKAY_NEED_EMAIL_STR$=Erreur : l’utilisateur doit posséder une adresse e-mail.
+$SESS_USER_NO_ANONYMOUS_STR$=Erreur : pas d’accès anonyme.
+$SESS_USER_NEED_SECURE_CONNECTION_STR$=Vous pouvez uniquement vous connecter avec une connexion sécurisée.  $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_USER_OKAY_NEED_SKEY_PWD_STR$= -- placeholder -- -->
+
+<!-- CheckPassword() results -->
+$SESS_PASSWORD_CANT_FIND_HOME_STR$=Erreur : ce compte ne possède pas de répertoire par défaut.
+$SESS_PASSWORD_USE_REAL_EMAIL_ADDR_STR$=Veuillez utiliser votre adresse e-mail lors de la connexion.
+$SESS_PASSWORD_EXPIRED_CHANGE_STR$=Votre mot de passe est expiré, veuillez le modifier pour continuer.
+
+<!-- ChangePassword() results -->
+$SESS_CHG_PASSWORD_NO_OLD_PASSWORD_MATCH_STR$=L’ancien mot de passe est incorrect.
+$SESS_CHG_PASSWORD_TOO_SHORT_STR$=ERREUR : le mot de passe indiqué est trop court.
+$SESS_CHG_PASSWORD_NOT_COMPLEX_STR$=ERREUR : veuillez indiquer un mot de passe complexe.
+$SESS_CHG_PASSWORD_OLD_NEW_MATCH_STR$=Le nouveau mot de passe doit être différent de l’ancien.
+$SESS_CHG_PASSWORD_CANT_CHANGE_ANONYMOUS_STR$=Impossible de modifier un mot de passe anonyme.
+
+<!-- Xcrc() results -->
+$SESS_XCRC_CANNOT_READ_FROM_FILE_STR$=La valeur XCRC ne peut pas être calculée. Le fichier n’est pas disponible ou bien l’opération a été annulée.
+
+<!-- List() results -->
+<!-- $SESS_LIST_START_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_END_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_FILE_STR$= -- placeholder -- -->
+
+<!-- Retrieve() & Store() results -->
+<!-- $SESS_RETR_DATA_STR$= -- placeholder -- -->
+$SESS_CANT_LOAD_GDI_PLUS_STR$=Erreur interne : impossible de charger GDI+ pour effectuer une opération.  $CONTACT_SYSTEM_ADMIN$
+$SESS_CANT_CREATE_THUMBNAIL_STR$=Erreur interne : impossible de créer une miniature.
+$SESS_CANT_SAVE_THUMBNAIL_STR$=Erreur interne : impossible d’enregistrer la miniature temporaire. Le disque dur du lecteur est peut-être plein.
+<!-- $SESS_FILE_OPENED_STR$= -- placeholder -- -->
+$SESS_CANT_WRITE_STR$=Erreur interne : impossible d’écrire sur le disque dur du serveur. Le disque est peut-être plein.  $CONTACT_SYSTEM_ADMIN$
+$SESS_SERVER_STOP_PENDING_STR$=Opération non disponible, le serveur est en train d’être arrêté.
+$SESS_RETR_INSUFFICIENT_CREDIT_STR$=Vous devez publier des fichiers pour pouvoir en télécharger. Veuillez publier un fichier avant d’essayer d’en télécharger un.
+$SESS_STOR_INSUFFICIENT_DISK_QUOTA_STR$=Votre quota est insuffisant. Veuillez supprimer des éléments avant d’essayer d’en publier.
+$SESS_STOR_INSUFFICIENT_DISK_SPACE_STR$=Espace disque disponible insuffisant.  Veuillez supprimer des éléments avant d’essayer d’en publier, $OR_CONTACT_SYSTEM_ADMIN$
+$SESS_STOR_FILE_TOO_LARGE_STR$=Le fichier est trop volumineux. Vous devez libérer de l’espace, ou bien l’espace qui vous est attribué est insuffisant. $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_STOR_DATA_WRITTEN_STR$= -- placeholder -- -->
+$SESS_APPE_CANT_RESTART_STR$=Impossible d’ajouter des données dans un fichier lorsque la position du fichier est déjà définie.
+
+<!-- GetUniqueFileName() results -->
+$SESS_STOU_CANT_CREATE_UNIQUE_NAME_STR$=Impossible de créer un nom de fichier unique.
+
+<!-- SetLastWriteTime() results -->
+$SESS_FUTURE_TIME_STR$=Impossible de définir la date et l’heure du fichier car elle est dans le futur.
+
+<!-- HTTP attribute list results -->
+<!-- $SESS_LIST_NO_CHANGE_STR$= -- placeholder -- -->
+
+<!-- SSL certificate creation results -->
+$SESS_SSL_CANT_CREATE_KEY_FILE_STR$=Erreur SSL : impossible de créer le fichier de clé.
+$SESS_SSL_CANT_WRITE_KEY_FILE_STR$=Erreur SSL : impossible d’écrire le fichier de clé.
+$SESS_SSL_CANT_CREATE_CERT_FILE_STR$=Erreur SSL : impossible de créer le fichier de certificat.
+$SESS_SSL_CANT_WRITE_CERT_FILE_STR$=Erreur SSL : impossible d’écrire le fichier de certificat.
+$SESS_SSL_CANT_CREATE_CERT_REQUEST_FILE_STR$=Erreur SSL : impossible de créer le fichier de requête de certificat.
+
+<!-- licensing results -->
+$SESS_ID_INVALID_STR$=La clé d’enregistrement indiquée n’est pas valide. Veuillez indiquer une clé d’enregistrement valide.
+$SESS_ID_EXPIRED_STR$=La clé d’enregistrement indiquée est expirée et n’est pas valide pour cette version de Serv-U. Veuillez indiquer une clé d’enregistrement plus récente.
+$SESS_LIC_TOO_MANY_DOMAINS_STR$=Vous avez atteint le nombre maximum de domaines autorisé par votre licence. Pour créer un nouveau domaine, vous devez acquérir une licence supérieure.
+$SESS_LIC_TOO_MANY_USERS_STR$=Vous avez atteint le nombre maximum d’utilisateurs autorisé par votre licence. Pour créer un nouvel utilisateur, vous devez acquérir une licence supérieure.
+$SESS_LIC_TOO_MANY_SESSIONS_STR$=Vous avez atteint le nombre maximum de sessions simultanées autorisé par votre licence. Pour permettre davantage de sessions simultanées, vous devez acquérir une licence supérieure.
+$SESS_LIC_NO_REMOTE_ADMIN_STR$=Votre licence ne permet pas d’administrer le serveur à distance. Pour pouvoir administrer le serveur à distance, vous devez acquérir une licence supérieure.
+$SESS_LIC_NO_FVJV_STR$=FTP Voyager JV n’est pas disponible avec cette licence.
+$SESS_LIC_NO_WEB_CLIENT_STR$=L’accès web n’est pas disponible avec cette licence de Serv-U.  Veuillez contacter l’administrateur du serveur pour demander le passage à une version supérieure.
+$SESS_LIC_NO_PASSWORD_RECOVERY_STR$=La récupération du mot de passe n’est pas disponible avec cette licence.
+
+<!-- password recovery -->
+$SESS_PASSWORD_RECOVERY_DISABLED_STR$=Le renvoi du mot de passe est désactivé. Veuillez contacter votre administrateur pour en savoir plus.
+$SESS_PASSWORD_RECOVERY_CHANGE_DENIED_STR$=Renvoi du mot de passe refusé. L’utilisateur n’est pas autorisé à modifier son mot de passe.  Veuillez contacter votre administrateur pour en savoir plus.
+
+<!-- Port() results -->
+<!-- $FTPSESS_PORT_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PORT_INVALID_PORT_NUMBER$= -- placeholder -- -->
+
+<!-- Pasv() results -->
+<!-- $FTPSESS_PASV_UNABLE_TOSETUP_LISTEN_SOCK$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_TOO_MANY_PASV_REQUESTS$= -- placeholder -- -->
+
+<!-- Mlsd() results  -->
+<!-- $FTPSESS_MLSD_WILDCARDS_NOT_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_MLSD_PATHNAME_NOT_DIRECTORY$= -- placeholder -- -->
+
+<!-- data connection -->
+<!-- $FTPSESS_DATACHAN_IN_USE$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_OUT_OF_NETWORK_SOCKETS$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CANNOT_OPEN$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CLOSED_ABORTED$= -- placeholder -- -->
+
+<!-- validation results -->
+$SU_VALID_USER_EXISTS_STR$=ERREUR : il existe déjà un compte possédant cet identifiant.
+$SU_VALID_GROUP_EXISTS_STR$=ERREUR : il existe déjà un groupe portant ce nom.
+$SU_VALID_ATTR_LESS_THAN_MIN_STR$=ERREUR : la valeur indiquée est trop faible. Veuillez indiquer une valeur supérieure.
+$SU_VALID_ATTR_GREATER_THAN_MAX_STR$=ERREUR : la valeur indiquée est trop importante. Veuillez indiquer une valeur inférieure.
+$SU_VALID_INVALID_RESPONSE_CODE_FORMATTING_STR$=ERREUR : cette commande FTP requiert la présence de chaînes spécifiques. Veuillez conserver les chaînes de formatage lors de la modification du texte de réponse.
+$SU_VALID_PATH_CONTAINS_WILDCARD_CHARS_STR$=Le chemin indiqué ne doit pas contenir de caractères joker tels que * et ?.
+$SU_VALID_EMPTY_PHYSICAL_PATH_STR$=ERREUR : veuillez indiquer un chemin physique.
+$SU_VALID_EMPTY_VIRTUAL_PATH_STR$=ERREUR : veuillez indiquer un chemin virtuel.
+$SU_VALID_LOGIN_ID_EMPTY_STR$=ERREUR : veuillez indiquer un identifiant unique pour cet utilisateur.
+$SU_VALID_GROUP_NAME_EMPTY_STR$=ERREUR : veuillez indiquer un nom unique pour ce groupe.
+$SU_VALID_DOMAIN_EXISTS_STR$=ERREUR : il existe déjà un domaine portant ce nom.
+$SU_VALID_ORGANIZATION_EXISTS_STR$=ERREUR : il existe déjà une organisation portant ce nom.
+$SU_VALID_PERMISSION_DENIED_STR$=ERREUR : permission refusée.
+$SU_VALID_UNABLE_TO_CREATE_SSL_METHOD_STR$=Erreur OpenSSL : impossible de créer la méthode SSL.
+$SU_VALID_UNABLE_TO_CREATE_SSL_CONTEXT_STR$=Erreur OpenSSL : impossible de créer le contexte SSL.
+$SU_VALID_CERT_PATH_IS_EMPTY_STR$=ERREUR : veuillez indiquer un chemin valide pour un fichier de certificat.
+$SU_VALID_UNABLE_TO_LOAD_CERT_FILE_STR$=ERREUR : impossible de charger le certificat. Veuillez vous assurer que le chemin est correct.
+$SU_VALID_UNABLE_TO_LOAD_PRIVATE_KEY_FILE_STR$=ERREUR : impossible de charger le fichier de clé privée. Veuillez vous assurer que le chemin et le mot de passe de la clé privée sont corrects.
+$SU_VALID_UNABLE_TO_LOAD_OPENSSL_STR$=Impossible de charger les bibliothèques OpenSSL.
+$SU_VALID_PHYSICAL_PATH_INVALID_STR$=ERREUR : le chemin physique indiqué n’est pas valide.
+$SU_VALID_VIRTUAL_PATH_INVALID_STR$=ERREUR : le chemin virtuel indiqué n’est pas valide.
+$SU_VALID_HOST_NAME_EXISTS_STR$=ERREUR : le nom d’hôte virtuel indiqué est déjà utilisé.
+$SU_VALID_FTP_RESP_REQUIRES_COMMAND_RESULT_STR$=ERREUR : la réponse à la commande FTP doit inclure la macro $CommandResult pour fonctionner correctement.
+$SU_VALID_FTP_RESP_READ_ONLY_STR$=ERREUR : la réponse à une commande FTP sélectionnée est en lecture seule et ne peut pas être modifiée.
+$SU_VALID_USER_CANNOT_BE_ADMIN_STR$=ERREUR : l’administrateur du domaine ne peut pas créer un autre administrateur.
+$SU_VALID_GROUP_CANNOT_BE_ADMIN_STR$=ERREUR : l’administrateur du domaine ne peut pas créer un groupe d’administrateurs.
+$SU_VALID_HOME_DIR_CANNOT_CONTAIN_HOME_VAR_STR$=ERREUR : le répertoire par défaut ne peut pas contenir la macro %HOME%.
+$SU_VALID_CANNOT_LOAD_GDI_PLUS_STR$=$SESS_CANT_LOAD_GDI_PLUS_STR$
+$SU_VALID_NOT_AN_IMAGE_STR$=ERREUR : Le fichier n’est pas un fichier d’image valide.
+$SU_VALID_INVALID_IMAGE_SIZE_STR$=ERREUR : Les dimensions de l’image ne sont pas valides.  Le logo personnalisé doit avoir une largeur de 400 pixels et une hauteur de 100 pixels.
+$SU_VALID_NOT_FOUND_STR$=L’élément spécifié n’a pas été trouvé.
+$SU_VALID_EV_SUBJECT_EMPTY_STR$=Veuillez saisir l’objet du message.
+$SU_VALID_EV_BODY_EMPTY_STR$=Veuillez saisir le corps du message.
+$SU_VALID_EV_TO_ADDRESS_EMPTY_STR$=Veuillez indiquer un destinataire.
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_STR$=Cet événement doit contenir une adresse e-mail valide.
+$SU_VALID_EV_BALLON_TIP_TITLE_TOO_LARGE_STR$=Le titre de l’infobulle est trop long.
+$SU_VALID_EV_BALLON_TIP_MESSAGE_TOO_LARGE_STR$=Le texte de l’infobulle est trop long.
+$SU_VALID_EV_BALLON_TIP_EMPTY_STR$=Veuillez indiquer le titre et le texte de l’infobulle.
+$SU_VALID_EV_EXE_PATH_EMPTY_STR$=Veuillez indiquer le chemin d’accès du fichier exécutable.
+$SU_VALID_EV_EXE_PARAMETERS_CONTAIN_CR_LF_STR$=Les paramètres en ligne de commande ne doivent contenir de retour à la ligne ni comporter plusieurs lignes.
+$SU_VALID_EV_INVALID_VAR_FOR_ADMIN_STR$=Un administrateur de domaine ne peut pas utiliser les variables indiquées pour cette action.<br><br> Vous pouvez utiliser les variables suivantes :<br>$PathName<br>$FileName<br>$OldPathName<br>$OldFileName
+$SU_VALID_INVALID_SMTP_EMAIL_ADDRESS_STR$=L’adresse e-mail est invalide.
+$SU_VALID_INVALID_EMAIL_ADDRESS_STR$=L’adresse e-mail est invalide.
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_BCC_STR$=L’adresse e-mail CCi est invalide.
+$SU_VALID_NOT_A_NUMBER_STR$=Un champ numérique contient des caractères invalides.  Veuillez indiquer une valeur numérique.
+$SU_VALID_NOT_A_DOUBLE_STR$=Un champ à virgule flottante contient une valeur invalide.  Veuillez saisir un nombre à virgule flottante valide.
+$SU_VALID_INVALID_FILE_NAME_CHARACTERS_STR$=Un champ contient des caractères invalides.  Le champ ne doit contenir aucun des caractères suivants : \/:"&lt;&gt;|
+$SU_VALID_FILE_NAME_CONTAINS_WILDCARD_STR$=Un champ contient des caractères joker.  Le champ ne doit contenir aucun des caractères suivants : *?
+$SU_VALID_GROUP_ADMIN_MUST_BE_GROUP_MEMBER_STR$=Un administrateur de groupe doit appartenir à au moins un groupe.  Veuillez ajouter cet utilisateur à un groupe.
+$SU_VALID_INVALID_IP_ADDRESS_STR$=L’adresse IP indiquée est invalide.  Veuillez saisir une adresse IP valide.
+$SU_VALID_INVALID_IP_MASK_STR$=Le masque d’adresse IP indiqué semble invalide. Veuillez indiquer un masque valide.

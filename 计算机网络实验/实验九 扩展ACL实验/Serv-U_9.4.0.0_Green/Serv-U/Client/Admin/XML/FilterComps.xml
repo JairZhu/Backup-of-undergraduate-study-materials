@@ -1,0 +1,17 @@
+%PRIV_DOMAIN_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<VarComparisons>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <VarComparison listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% <IF></IF>
+%ADD_LIST_STRING% <Variable>%CVarComparison.%LIST_ID%.Variable%</Variable>
+%ADD_LIST_STRING% <Comparison>%CVarComparison.%LIST_ID%.Comparison%</Comparison>
+%ADD_LIST_STRING% <Constant>%CVarComparison.%LIST_ID%.Constant%</Constant>
+%ADD_LIST_STRING% <DataType>%CVarComparison.%LIST_ID%.DataType%</DataType>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING%</VarComparison>
+%CVarRule.%ID%.VarComparison.List%
+</VarComparisons>
+<listresult>%LIST_RESULT%</listresult>
+</response>

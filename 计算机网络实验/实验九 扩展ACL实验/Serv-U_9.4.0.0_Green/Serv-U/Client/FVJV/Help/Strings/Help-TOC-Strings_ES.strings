@@ -1,0 +1,78 @@
+﻿<!-- File:		Help-TOC-Strings.strings																					-->
+<!-- Language:	English																										-->
+<!-- Purpose:	Provides translated strings for FTP Voyager JV's Help documentation.										-->
+<!-- Notes:		- Comment blocks are useful.  To place a comment, use the HTML tags at the beginning and end of this line	-->
+<!--			- Any text following a "$=" should be translated															-->
+<!--			- Any text between a "$::" through "::END" should be translated												-->
+<!--			- HTML tags should not be translated (Example:  "<strong>")													-->
+
+<!-- String table for Help-table of contents -->
+$TOC_TITLE$=Tabla de ayuda de contenidos.
+$HELP_CONTENTS_TAB$=Contenidos.
+$HELP_INDEX_TAB$=Indice.
+
+$TOC_OVERVIEW$=vista general.
+$TOC_ACTIONS$=Acciones.
+
+$TOC_FVJV_CLIENT$=FTP Voyager JV
+	$TOC_OVERVIEW$=Vista general.
+$TOC_LAYOUT$=Disposición.
+	$TOC_LAYOUT_APP_OVERVIEW_1$=Vista general de la aplicación.
+	$TOC_LAYOUT_BROWSERS_1$=Paneles locales y remotos.
+		$TOC_LAYOUT_BROWSERS_OVERVIEW_1$=$TOC_OVERVIEW$
+		$TOC_LAYOUT_BROWSERS_TREE_OVERVIEW_1$=vista general del panel árbol.
+		$TOC_LAYOUT_BROWSERS_PREVIEW_OVERVIEW_1$=Vista general de la vista previa del panel.
+		$TOC_LAYOUT_BROWSERS_LIST_OVERVIEW_1$=vista general de un panel lista.
+	$TOC_LAYOUT_TRANSFER_OVERVIEW_1$=Vista general de un panel tranferencia.
+	$TOC_LAYOUT_STATUS_BAR_OVERVIEW_1$=Vista general de la Barra de estatus.
+$TOC_MENU_MAIN$=Menú principal.
+	$TOC_MENU_MAIN_OVERVIEW$=Vista general.
+	$TOC_MENU_MAIN_ITEMS$=items del menú
+		$TOC_MENU_MAIN_ACTIONS_FILE$=Menú de archivo.
+		$TOC_MENU_MAIN_ACTIONS_EDIT$=Editar menú.
+		$TOC_MENU_MAIN_ACTIONS_VIEW$=ver menú.
+		$TOC_MENU_MAIN_ACTIONS_WINDOWS$=Ventana de menú.
+		$TOC_MENU_MAIN_ACTIONS_HELP$=menú ayuda.
+$TOC_TOOLBARS$=Barra de herramientas.
+	$TOC_TOOLBAR_MAIN$=Barra de herramientas principal.
+		$TOC_TOOLBAR_MAIN_OVERVIEW$=$TOC_OVERVIEW$
+		$TOC_TOOLBAR_MAIN_ACTIONS$=$TOC_ACTIONS$
+	$TOC_TOOLBAR_BROWSER$=Barra de herramienta Local/Remota. 
+		$TOC_TOOLBAR_BROWSER_CRUMBBAR$=Barra de navegación.
+			$TOC_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$=$TOC_OVERVIEW$
+			$TOC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$=$TOC_ACTIONS$
+		$TOC_TOOLBAR_BROWSER_TOOLBAR$=Barra de Herramientas.
+			$TOC_TOOLBAR_BROWSER_OVERVIEW$=$TOC_OVERVIEW$
+			$TOC_TOOLBAR_BROWSER_ACTIONS$=$TOC_ACTIONS$
+		$TOC_TOOLBAR_BROWSER_SEARCH_BAR$=Barra de búsqueda.
+			$TOC_TOOLBAR_BROWSER_SEARCH_OVERVIEW$=$TOC_OVERVIEW$
+			$TOC_TOOLBAR_BROWSER_SEARCH_ACTIONS$=$TOC_ACTIONS$
+	$TOC_TOOLBAR_TRANSFER$=Barra de herramientas de transferencia.
+		$TOC_TOOLBAR_TRANSFER_OVERVIEW$=$TOC_OVERVIEW$
+		$TOC_TOOLBAR_TRANSFER_ACTIONS$=$TOC_ACTIONS$
+$TOC_DIALOGS$=Dialogo
+	$TOC_DLG_ABOUT$=sobre Dialogo
+		$TOC_DLG_ABOUT_PROGINFO$=Información del programa.
+		$TOC_DLG_ABOUT_COMPINFO$=Información del ordenador.
+	$TOC_DLG_PREFS$=Preferencias.
+		$TOC_DLG_PREFS_GENERAL$=General
+		$TOC_DLG_PREFS_TBARS$=Barra de herramientas.
+	$TOC_DLG_SYNC_FOLDERS$=Sincronizar carpetas.
+		$TOC_DLG_SYNC_FOLDERS_OVERVIEW$=Vista general.
+		$TOC_DLG_SYNC_FOLDERS_RESULTS_FRAMES$=Marco de restultados.
+			$TOC_DLG_SYNC_FOLDERS_RESULTS$=Disposición.
+			$TOC_DLG_SYNC_FOLDERS_RESULTS_TBAR$=Barra de herramientas.
+			$TOC_DLG_SYNC_FOLDERS_RESULTS_LIST$=Lista
+		$TOC_DLG_SYNC_FOLDERS_OPTIONS$=Marco de opciones.
+	$TOC_DLG_SAVE_LOGIN$=Guardar el inicio de sesión de Dialog
+	$TOC_DLG_CHG_PWORD$=Cambiar la contraseña de Dialog
+	$TOC_DLG_ACTIVATE_WINDOW$=Activar la ventana de Dialog.
+$TOC_OTHER_INFO$=Otra información.
+	$TOC_OI_ACTIVE_PANE_OVERVIEW$=Panel activo.
+	$TOC_OI_DOCKING_FRAMEWORK_OVERVIEW$=Marco Acoplado.
+	$TOC_OI_NAVIGATING_DIRS$=Navegando Directorios.
+	$TOC_OI_MANAGING_DIRS_AND_FILES$=Dirigiendo directorios y archivos. 
+	$TOC_OI_TRANSFERRING_DIRS_AND_FILES$=Transfiriendo directorios y archivos.
+	$TOC_OI_MANAGING_TRANSFERS$=Dirigiendo transferencias.
+	$TOC_OI_SEARCHING$=Buscando.
+	$TOC_OI_FAQS$=Preguntas frecuentes.

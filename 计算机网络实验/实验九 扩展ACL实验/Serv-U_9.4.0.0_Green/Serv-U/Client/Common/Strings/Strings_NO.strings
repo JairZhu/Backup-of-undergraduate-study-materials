@@ -1,0 +1,131 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file. This has strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- image name for the distributors logo -->
+$DISTRIBUTOR_LOGO_IMAGE$=Upstream-Logo.png
+
+<!-- The following 4 macros should be set to your reseller company contact information so they can be displayed in the program information page. -->
+$LOCALIZE_NAME$=RhinoSoft.com
+$LOCALIZE_STREET$=P.O. Box 53
+$LOCALIZE_CITY_ETC$=Helenville, WI 53137
+$LOCALIZE_URL$=www.upstream.se
+
+<!-- ******************* SESSION ERRORS ******************* -->
+<!-- **************** GetResultText.htm **************** -->
+<!-- GetResultText() -->
+$LOGIN_FAIL_STR$=FEIL: Du ble ikke logget inn.
+$UNKNOWN_ERROR$=FEIL: Operasjonen ble ikke gjennomført, en ukjent FEIL oppsto.
+$AJAX_NOT_SUPPORTED$=Nettleseren din støtter ikke AJAX.
+$ERROR_TITLE$=En FEIL oppsto. 
+$SESS_CANNOT_CREATE_DIR1_STR$=Create Directory Failure, klarte ikke å opprette filkatalog:
+$SESS_CANNOT_CREATE_DIR2_STR$=Du har ikke rettigheter til å opprette en katalog her.
+$SESS_CANNOT_RENAMEDIR1_STR$=Rename Directory Failure, klarte ikke å gi filkatalog nytt navn:
+$SESS_CANNOT_RENAMEFILE1_STR$=Rename File Failure, klarte ikke å gi fil nytt navn:
+$SESS_CANNOT_RENAMEDIR2_STR$=Du har ikke rettigheter til å gi denne katalogen et nytt navn.
+$SESS_CANNOT_RENAMEFILE2_STR$=Du har ikke rettigheter til å gi denne filen et nytt navn.
+$SU_VALID_OPENSSL_GENERIC_ERROR_STR$=FEIL: Det oppsto et problem under opplastningen av kryptografi-biblioteket. Vennligst forsøk å installere programmet på nytt.
+
+<!-- Common Strings -->
+$GO$=Gå
+$FILES$=Filer
+$DIRECTORIES$=Mapper
+$SIZE$=Størrelse
+$LOGGING_IN_DIALOG_TITLE$=Logger inn
+$HELP$=Hjelp
+$LOGOUT$=Logg ut
+$NAME$=Navn
+$USER$=Bruker
+$MANAGEMENT_CONSOLE$=Administreringsterminal 
+$SUPPORT$=Brukerstøtte
+$FVJV_LICENSE_INFO$=FTP Voyager JV er ikke tilgjengelig med din nåværende lisens. Hvis du vil bruke FTP Voyager JV må du kjøpe en lisens for å aktivere programmets egenskaper. <br /><br /> Vil du ha mer informasjon om kjøp av FTP Voyager JV?
+$FS_ABBREV_GIGABYTE$=GB
+$FS_ABBREV_MEGABYTE$=MB
+$FS_ABBREV_KILOBYTE$=KB
+$FS_BYTES$=bytes
+$DID_YOU_KNOW_BALLOON_TITLE$=Vet du hva?
+<!-- Buttons -->
+$YES_BUTTON$=Ja
+$NO_BUTTON$=Nei
+$OK_BUTTON$=OK
+$CLOSE_BUTTON$=Lukk
+$SEND_BUTTON$=Send
+$HELP_BUTTON$=Hjelp
+$SAVE_BUTTON$=Lagre
+$ADD_BUTTON$=Legg til
+$EDIT_BUTTON$=Rediger
+$DELETE_BUTTON$=Slett
+$RENAME_BUTTON$=Gi nytt navn
+$CANCEL_BUTTON$=Avbryt
+$SELECT_BUTTON$=Velg
+$CLOSE_CANCEL$=Lukk/Avbryt
+$DEFAULT_BUTTON$=Standard
+$CREATE_BUTTON$=Opprett
+$BROWSE$=Bla igjennom
+$WIZARD_BUTTON$=Veiviser
+$PARENT_DIR$=Overmappe
+$REFRESH$=Oppdater
+$UP_ONE_DIRECTORY$=Opp en mappe
+$REFRESH_ALT$=Oppdater
+$NEW_DIR_NAME_LABEL$=Ny mappe
+$CREATE_DIR$=Opprett mappe
+$PLEASE_ENABLE_COOKIES$=Du må skru informasjonskapsler (cookies) på for å kunne bruke Serv-U.
+
+
+<!-- **************** BusyDialog.htm **************** -->
+$BUSY_DIALOG_TITLE$=Jobber
+$SAVING_DIALOG_TITLE$=Lagrer
+$LOADING_DIALOG_TITLE$=Laster inn
+$DELETING_DIALOG_TITLE$=Sletter
+
+
+<!-- **************** ChangePasswordDialog.htm **************** -->
+$OLD_PASSWORD$=Gammelt passord
+$NEW_PASSWORD$=Nytt passord
+$USER_CHANGE_PASSWORD_TITLE$=Endre passord
+$VERIFY_PASSWORD$=Bekreft passord
+$PASSWORDS_DONT_MATCH$=Nytt passord stemmer ikke overens med bekreftet passord.
+$PASSWORD_CHANGED$=Passordet ditt er blitt endret.
+
+
+<!-- **************** FVJVLoggedIn.htm **************** -->
+$FVJV_NO_JAVA_WARNING$=Kjøreomgivelse for Java ble ikke funnet på denne datamaskinen. FTP Voyager JV krever Java-kjøreomgivelse. Bruk følgende lenke for å laste ned og installere den nyeste Java-utgaven fra Sun Microsystems.
+$FVJV_DL_JAVA_LINK$=Last ned Java nå
+$FVJV_JAVA_RESTART$=Etter at Java er blitt installert, bruk følgende lenke for å laste FTP Voyager JV på nytt:
+$FVJV_JAVA_RESTART_LINK$=Last FTP Voyager JV på nytt.
+$FVJV_IE_CONSIDERATIONS$=Bruker FTP Voyager JV i Internet Explorer
+$FVJV_IE_DL_FILE$=Internet Explorer kan vise en beskjed lik beskjeden under, som sier at den har blokkert nedlastingen av en fil av sikkerhetsgrunner. Denne filen må lastes ned for at FTP Voyager JV skal kunne starte. Hvis du mottar denne beskjeden, klikk på banneret som vises i Internet Explorer, og velg "Last ned fil...".
+$FVJV_MOZILLA_CONSIDERATIONS$=Bruker FTP Voyager JV i Mozilla Firefox
+$FVJV_MOZ_RUN_FILE$=Mozilla Firefox kan vise en beskjed lik beskjeden under, som spør hvordan Firefox skal åpne oppstartsfilen til FTP Voyager JV. Åpne filen med "Java Web Start Launcher" (standardvalget) for å starte FTP Voyager JV. Dersom du haker av boksen merket "Gjør dette automatisk for filer som denne fra nå av", vil du ikke få dette valget igjen senere.
+$FVJV_CLOSING$=Lukker FTP Voyager JV
+$FVJV_SESSION_INFO$=FTP Voyager JV kan lukkes når du er ferdig med å bruke det.
+$FVJV_RELOGIN_INFO$=For å logge inn til Serv-U File Server igjen, bruk følgende lenke:
+$FVJV_RETURN_CONSOLE$=For å gå tilbake til administreringsterminalen, bruk følgende lenke:
+$FVJV_RELOGIN$=Klikk her når du er ferdig med å bruke FTP Voyager JV.
+$FVJV_RESTART$=Start FTP Voyager JV på nytt
+$FVJV_RESTART_LINK$=Klikk her for å starte FTP Voyager JV på nytt.
+$FVJV_JAVA_WARNING$=Sikkerhetsadvarsel i Java
+$FVJV_JAVA_WARNING_INFO$=Java kan vise en sikkerhetsadvarsel lik beskjeden under, som ber deg om å bekrefte at du vil åpne programmet. Klikk på "Kjør" knappen for å fortsette å laste FTP Voyager JV.
+$FVJV_APPLE_DETECTED$=Serv-U har oppdaget at du kjører Apple Mac OS X.  Vær klar over at FTP Voyager JV krever $FVJV_REQUIRE_JAVA_VERSION$ for å fungere.
+$FVJV_JAVA_WARNING_INFO_APPLE$=Java kan vise en sikkerhetsadvarsel tilsvarende meldingen under som ber deg bekrefte at du vil starte applikasjonen. Klikk på "Trust"-knappen for å fortsette å laste FTP Voyager JV.
+$FVJV_MOZ_RUN_FILE_APPLE$=Mozilla Firefox kan vise en melding tilsvarende den under som spør om Firefox skal åpne startfilen til FTP Voyager JV. Åpne den med "Java Web Start Launcher" (standard handling) for å kjøre FTP Voyager JV.
+$FVJV_OTHER_ALTERNATIVES$=Andre alternativer
+$FVJV_REQUIRE_JAVA_VERSION$=<strong>Java 1.6 Runtime</strong>
+$FVJV_SAFARI_CONSIDERATIONS$=Bruke FTP Voyager JV i Safari
+$FVJV_SAFARI_RUN_FILE$=Safari kan vise en melding tilsvarende den under som spør hvordan nettleseren skal åpne startfilen til FTP Voyager JV.  Klikk på "Open" for å starte FTP Voyager JV.  Hvis FTP Voyager JV ikke åpnes, kan du navigere til den nedlastede "jnlp"-filen og åpne den med programmet "Java Web Start Launcher".
+$FVJV_SUPPORTED_BROWSERS$=Du kan prøve å starte FTP Voyager JV med en annen nettleser. Under er det en liste over nettlesere som støttes av FTP Voyager JV og Basic Web Client:
+$LI_FVJV_SUPPORTED_BROWSER_IE$=Internet Explorer
+$LI_FVJV_SUPPORTED_BROWSER_FF$=Mozilla Firefox
+$LI_FVJV_SUPPORTED_BROWSER_SAFARI$=Safari
+$FVJV_LAUNCH_BWC$=Start Basic Web Client
+
+
+<!-- **************** FVJV  Launch.jnlp **************** -->
+$FVJV_LAUNCH_TITLE$=FTP Voyager JV av RhinoSoft.com
+$FVJV_TITLE$=FTP Voyager JV
+$FVJV_VENDOR$=Rhino Software, Inc.
+
+
+<!-- **************** GoToDialog.htm **************** -->
+$GO_TO_DIRECTORY$=Gå til katalog
+$GO_TO_PATH$=Bane

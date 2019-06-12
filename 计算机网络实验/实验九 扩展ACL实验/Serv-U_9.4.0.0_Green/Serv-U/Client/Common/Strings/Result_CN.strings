@@ -1,0 +1,202 @@
+﻿<!-- Result.strings - For ease of localization, strings have been separated into this file.  This has result strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- ******************** RESULT CODE TEXT ******************** -->
+<!-- NOTE: This file should contain all result codes and only	-->
+<!--	   result codes, all other strings should be placed		-->
+<!--	   in other string files.								-->
+
+<!-- shared result strings -->
+$OR_CONTACT_SYSTEM_ADMIN$=或联系系统管理员以获取更多帮助。
+$CONTACT_SYSTEM_ADMIN$=请联系系统管理员以获取更多帮助。
+
+<!-- global results -->
+$SESS_OKAY_STR$=操作成功。
+$SESS_FAIL_STR$=错误：操作无法执行。
+$SESS_PENDING_STR$=错误：操作仍在执行。
+$SESS_PERMISSION_DENIED_STR$=错误：无法访问正尝试访问的文件或路径。
+$SESS_INVALID_PARAMETER_STR$=错误：操作不成功，参数无效。
+$SESS_BAD_SEQUENCE_OF_COMMANDS_STR$=错误：坏指令序列。
+$SESS_NOT_FOUND_STR$=错误：指定的文件或目录不存在。
+$SESS_PATH_IS_PORT_STR$=错误：指定的路径是 Windows 端口，无法执行操作。
+$SESS_LOGIN_TOO_MANY_INVALID_TRIES_STR$=您已超过了登录尝试的最大次数。
+$SESS_COMMAND_PENDING_STR$=一条命令当前未决。只有完成待处理的操作才能执行该操作。
+$SESS_COMMAND_ABORTED_STR$=错误：操作不成功，命令已中止。
+$SESS_INTERNAL_ERROR_STR$=错误：无法执行操作，发生内部错误。
+$SESS_ALREADY_EXISTS_STR$=错误：文件或文件夹已存在。
+$SESS_FILE_IS_DIR_STR$=错误：无法执行操作，要求的路径为目录而不是文件。
+$SESS_DIR_IS_FILE_STR$=错误：无法执行操作，要求的路径为文件而不是目录。
+$SESS_CANT_REST_EMPTY_FILE_STR$=$SESS_FAIL_STR$
+$SESS_CANT_REST_BEYOND_EOF_STR$=$SESS_FAIL_STR$
+$SESS_CANT_SET_FILE_POS_STR$=$SESS_FAIL_STR$
+<!-- $SESS_COMPRESSED_TRANSFER_COMPLETE_STR$= -- placeholder -- -->
+$SESS_UNAUTHORIZED_IP_STR$=错误：未经授权的 IP 地址
+$SESS_TIME_OUT_STR$=错误：会话超时。
+$SESS_EXCEEDED_MAX_SESSION_TIME_STR$=错误：已超过该帐户会话的最长时间。
+$SESS_TOO_MANY_SESSIONS_IP_STR$=错误：使用 IP 的会话数量太多。
+$SESS_TOO_MANY_SESSIONS_STR$=错误：会话数量太多。
+$SESS_BLOCKED_STR$=您已被阻止。请稍后重试，$OR_CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_DATA_SOCKET_CONNECT_STR$= -- placeholder -- -->
+<!-- $SESS_DATA_SOCKET_CLOSED_STR$= -- placeholder -- -->
+<!-- $SESS_DECR_USER_QUOTA_STR$= -- placeholder -- -->
+$SESS_NO_FILES_FOUND_STR$=错误：找不到文件。
+<!-- $SESS_LOCK_CONFLICT_STR$= -- placeholder -- -->
+$SESS_ADMIN_ABORTED_STR$=错误：管理员已中止该操作。
+$SESS_UNAUTHORIZED_STR$=错误：您已退出，或管理员已断开您的连接。
+$SESS_CANT_DELETE_SESSION_DOMAIN_STR$=错误：无法删除包含当前已登录用户帐号的域。
+$SESS_NO_SUCH_PATH_STR$=要求的文件路径不存在，通常表示尚未创建上级目录。请在尝试执行该操作前创建上级目录。
+$SESS_INVALID_PATH_STR$=指定文件或目录路径对该操作无效。
+$SESS_PROTOCOL_NOT_ALLOWED_FOR_USER_STR$=不允许您使用您的 web 浏览器登录该服务器。请联系您的系统管理员以获得如何使用该服务器的信息。
+$SESS_PERMISSION_DENIED_READ_ONLY_ADMIN_STR$=不允许您更改任何设置。请联系您的系统管理员以获得有关您账户的信息。
+$SESS_CANT_DELETE_SELF_STR$=您不能删除您正在使用的用户账户。使用不同的管理账户登录或使用托盘应用程序来删除此账户。
+$SESS_REVERSE_DNS_NAME_REQUIRED_TO_LOGIN_STR$=需要反向 DNS 名称以连接并登录到这台服务器。请联系您的 ISP 与/或您的系统管理员以获得更多信息。
+$SESS_USER_UNAVAILABLE_STR$=您的用户账户当前不可用。请联系您的系统管理员以获得关于您用户账户的更多信息。
+$SESS_ODBC_USER_PASSWORD_TOO_LONG_STR$=指定的密码在加密时对于数据库存储来说太长。请使用较短的密码。
+
+<!-- CheckUser() results -->
+$SESS_USER_OKAY_NEED_PWD_STR$=错误：用户需要密码。
+$SESS_USER_NOT_FOUND_STR$=错误：未找到用户。
+$SESS_USER_OKAY_NEED_EMAIL_STR$=错误：用户需要发送电子邮件。
+$SESS_USER_NO_ANONYMOUS_STR$=错误：无匿名访问。
+$SESS_USER_NEED_SECURE_CONNECTION_STR$=仅可以在使用安全连接时进行连接。$CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_USER_OKAY_NEED_SKEY_PWD_STR$= -- placeholder -- -->
+
+<!-- CheckPassword() results -->
+$SESS_PASSWORD_CANT_FIND_HOME_STR$=错误：该帐户没有根目录。
+$SESS_PASSWORD_USE_REAL_EMAIL_ADDR_STR$=登录时请使用实际的邮箱地址。
+$SESS_PASSWORD_EXPIRED_CHANGE_STR$=密码已过期。要继续使用请更改密码。
+
+<!-- ChangePassword() results -->
+$SESS_CHG_PASSWORD_NO_OLD_PASSWORD_MATCH_STR$=原密码不正确。
+$SESS_CHG_PASSWORD_TOO_SHORT_STR$=错误：指定的密码太短。
+$SESS_CHG_PASSWORD_NOT_COMPLEX_STR$=错误：指定的密码过于简单。
+$SESS_CHG_PASSWORD_OLD_NEW_MATCH_STR$=新密码必须不同于原密码。
+$SESS_CHG_PASSWORD_CANT_CHANGE_ANONYMOUS_STR$=无法更改为匿名方式。
+
+<!-- Xcrc() results -->
+$SESS_XCRC_CANNOT_READ_FROM_FILE_STR$=无法计算 XCRC 值，文件不可用或操作取消。
+
+<!-- List() results -->
+<!-- $SESS_LIST_START_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_END_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_FILE_STR$= -- placeholder -- -->
+
+<!-- Retrieve() & Store() results -->
+<!-- $SESS_RETR_DATA_STR$= -- placeholder -- -->
+$SESS_CANT_LOAD_GDI_PLUS_STR$=内部错误：无法加载 GDI+ 以执行操作。$CONTACT_SYSTEM_ADMIN$
+$SESS_CANT_CREATE_THUMBNAIL_STR$=内部错误：无法创建缩略图。
+$SESS_CANT_SAVE_THUMBNAIL_STR$=内部错误：无法保存临时缩略图。服务器磁盘空间可能已满。
+<!-- $SESS_FILE_OPENED_STR$= -- placeholder -- -->
+$SESS_CANT_WRITE_STR$=内部错误：无法写入服务器硬盘。服务器磁盘空间可能已满。$CONTACT_SYSTEM_ADMIN$
+$SESS_SERVER_STOP_PENDING_STR$=操作不可用，服务器正在断开。
+$SESS_RETR_INSUFFICIENT_CREDIT_STR$=必须在下载前上传。请在尝试下载文件前先上传文件。
+$SESS_STOR_INSUFFICIENT_DISK_QUOTA_STR$=没有足够的可用配额。请在尝试上传前先删除。
+$SESS_STOR_INSUFFICIENT_DISK_SPACE_STR$=没有足够的可用磁盘空间。请在尝试上传前删除，$OR_CONTACT_SYSTEM_ADMIN$
+$SESS_STOR_FILE_TOO_LARGE_STR$=文件太大。必须在上传前腾出空间，否则没有足够的可用空间。$CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_STOR_DATA_WRITTEN_STR$= -- placeholder -- -->
+$SESS_APPE_CANT_RESTART_STR$=已指定文件位置时无法附加到文件。
+
+<!-- GetUniqueFileName() results -->
+$SESS_STOU_CANT_CREATE_UNIQUE_NAME_STR$=无法创建独特的文件名。
+
+<!-- SetLastWriteTime() results -->
+$SESS_FUTURE_TIME_STR$=无法设置文件的日期与时间，因为这是未来的文件。
+
+<!-- HTTP attribute list results -->
+<!-- $SESS_LIST_NO_CHANGE_STR$= -- placeholder -- -->
+
+<!-- SSL certificate creation results -->
+$SESS_SSL_CANT_CREATE_KEY_FILE_STR$=SSL 错误：无法创建密钥文件。
+$SESS_SSL_CANT_WRITE_KEY_FILE_STR$=SSL 错误：无法编写密钥文件。
+$SESS_SSL_CANT_CREATE_CERT_FILE_STR$=SSL 错误：无法创建证书文件。
+$SESS_SSL_CANT_WRITE_CERT_FILE_STR$=SSL 错误：无法编写证书文件。
+$SESS_SSL_CANT_CREATE_CERT_REQUEST_FILE_STR$=SSL 错误：无法创建证书请求文件。
+
+<!-- licensing results -->
+$SESS_ID_INVALID_STR$=提供的注册 ID 无效。请输入有效的注册 ID。
+$SESS_ID_EXPIRED_STR$=提供的注册 ID 已过期，且对于该版本的 Serv-U 是无效的。请提供更新的注册 ID。
+$SESS_LIC_TOO_MANY_DOMAINS_STR$=域数目已达到许可证允许的最大值。要创建新域必须购买升级后的许可证。
+$SESS_LIC_TOO_MANY_USERS_STR$=用户帐户数已达到许可证允许的最大值。要创建新的用户帐号，必须购买升级后的许可证。
+$SESS_LIC_TOO_MANY_SESSIONS_STR$=并发会话数已达到许可证允许的最大值。要允许更多数量的并发会话，必须购买升级后的许可证。
+$SESS_LIC_NO_REMOTE_ADMIN_STR$=您的许可证不允许远程管理服务器。要启用远程服务器管理，必须购买升级后的许可证。
+$SESS_LIC_NO_FVJV_STR$=该许可证不能使用 FTP Voyager JV。
+$SESS_LIC_NO_WEB_CLIENT_STR$=该 Serv-U 许可证不能使用浏览器访问。请联系该服务器的管理员以请求 Serv-U 的升级。
+$SESS_LIC_NO_PASSWORD_RECOVERY_STR$=许可证不提供密码恢复。
+
+<!-- password recovery -->
+$SESS_PASSWORD_RECOVERY_DISABLED_STR$=禁用密码恢复。请联系您的管理员以获得帮助。
+$SESS_PASSWORD_RECOVERY_CHANGE_DENIED_STR$=拒绝密码恢复。不允许用户更改密码。请联系您的管理员以获得帮助。
+
+<!-- Port() results -->
+<!-- $FTPSESS_PORT_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PORT_INVALID_PORT_NUMBER$= -- placeholder -- -->
+
+<!-- Pasv() results -->
+<!-- $FTPSESS_PASV_UNABLE_TOSETUP_LISTEN_SOCK$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_TOO_MANY_PASV_REQUESTS$= -- placeholder -- -->
+
+<!-- Mlsd() results  -->
+<!-- $FTPSESS_MLSD_WILDCARDS_NOT_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_MLSD_PATHNAME_NOT_DIRECTORY$= -- placeholder -- -->
+
+<!-- data connection -->
+<!-- $FTPSESS_DATACHAN_IN_USE$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_OUT_OF_NETWORK_SOCKETS$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CANNOT_OPEN$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CLOSED_ABORTED$= -- placeholder -- -->
+
+<!-- validation results -->
+$SU_VALID_USER_EXISTS_STR$=错误：该用户帐号的 ID 已存在。
+$SU_VALID_GROUP_EXISTS_STR$=错误：该名称的群组已存在。
+$SU_VALID_ATTR_LESS_THAN_MIN_STR$=错误：指定的值太小。请使用较大的值。
+$SU_VALID_ATTR_GREATER_THAN_MAX_STR$=错误：指定的值太大。请使用较小的值。
+$SU_VALID_INVALID_RESPONSE_CODE_FORMATTING_STR$=错误：该 FTP 命令要求使用特殊格式的字符串。编辑响应文本时请保留格式字符串。
+$SU_VALID_PATH_CONTAINS_WILDCARD_CHARS_STR$=$SESS_FAIL_STR$
+$SU_VALID_EMPTY_PHYSICAL_PATH_STR$=错误：请指定物理路径。
+$SU_VALID_EMPTY_VIRTUAL_PATH_STR$=错误：请指定虚拟路径。
+$SU_VALID_LOGIN_ID_EMPTY_STR$=错误：请为用户指定唯一的登录 ID。
+$SU_VALID_GROUP_NAME_EMPTY_STR$=错误：请为群组指定唯一名称。
+$SU_VALID_DOMAIN_EXISTS_STR$=错误：该名称的域已存在。
+$SU_VALID_ORGANIZATION_EXISTS_STR$=错误：使用该名称的用户集已存在。
+$SU_VALID_PERMISSION_DENIED_STR$=错误：权限被拒绝。
+$SU_VALID_UNABLE_TO_CREATE_SSL_METHOD_STR$=OpenSSL 错误：无法创建 SSL 方式。
+$SU_VALID_UNABLE_TO_CREATE_SSL_CONTEXT_STR$=OpenSSL 错误：无法创建 SSL 上下文。
+$SU_VALID_CERT_PATH_IS_EMPTY_STR$=错误：请为证书文件指定有效路径。
+$SU_VALID_UNABLE_TO_LOAD_CERT_FILE_STR$=错误：无法加载证书。请确保路径正确。
+$SU_VALID_UNABLE_TO_LOAD_PRIVATE_KEY_FILE_STR$=错误：无法加载私钥文件。请确保路径和私钥密码正确。
+$SU_VALID_UNABLE_TO_LOAD_OPENSSL_STR$=无法加载 OpenSSL 库。
+$SU_VALID_PHYSICAL_PATH_INVALID_STR$=错误：提供的物理路径无效。
+$SU_VALID_VIRTUAL_PATH_INVALID_STR$=错误：提供的虚拟路径无效。
+$SU_VALID_HOST_NAME_EXISTS_STR$=错误：提供的虚拟主机名已被使用。
+$SU_VALID_FTP_RESP_REQUIRES_COMMAND_RESULT_STR$=错误：该 FTP 命令响应需要包含 $CommandResult 宏以正确操作。
+$SU_VALID_FTP_RESP_READ_ONLY_STR$=错误：选中的 FTP 命令响应为只读且无法修改。
+$SU_VALID_USER_CANNOT_BE_ADMIN_STR$=错误：域管理员无法创建另一个管理员。
+$SU_VALID_GROUP_CANNOT_BE_ADMIN_STR$=错误：域管理员无法创建管理员组。
+$SU_VALID_HOME_DIR_CANNOT_CONTAIN_HOME_VAR_STR$=错误：根目录不能包含 %HOME% 宏。
+$SU_VALID_CANNOT_LOAD_GDI_PLUS_STR$=$SESS_CANT_LOAD_GDI_PLUS_STR$
+$SU_VALID_NOT_AN_IMAGE_STR$=错误：所提供的文件不是有效的图像文件。
+$SU_VALID_INVALID_IMAGE_SIZE_STR$=错误：所提供的图像尺寸无效。定制标志图像的尺寸必须为 400 像素（宽） X 100 像素（高）。 
+$SU_VALID_NOT_FOUND_STR$=未找到指定项目。
+$SU_VALID_EV_SUBJECT_EMPTY_STR$=该事件必须包含电子邮件主题。
+$SU_VALID_EV_BODY_EMPTY_STR$=该事件必须包含电子邮件正文的文本。 
+$SU_VALID_EV_TO_ADDRESS_EMPTY_STR$=该事件必须包含电子邮件地址。
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_STR$=该事件必须包含有效的电子邮件地址。
+$SU_VALID_EV_BALLON_TIP_TITLE_TOO_LARGE_STR$=该事件的气球提示标题太长。
+$SU_VALID_EV_BALLON_TIP_MESSAGE_TOO_LARGE_STR$=该事件的气球提示消息量太大。
+$SU_VALID_EV_BALLON_TIP_EMPTY_STR$=该事件必须包含气球提示标题与消息。
+$SU_VALID_EV_EXE_PATH_EMPTY_STR$=该事件必须包含指向可执行文件的路径。
+$SU_VALID_EV_EXE_PARAMETERS_CONTAIN_CR_LF_STR$=该操作的命令行参数必须没有换行或新行。
+$SU_VALID_EV_INVALID_VAR_FOR_ADMIN_STR$=域管理员不能对该操作使用输入的变量。<br><br> 您可以使用以下变量：<br>$PathName<br>$FileName<br>$OldPathName<br>$OldFileName
+$SU_VALID_INVALID_SMTP_EMAIL_ADDRESS_STR$=SMTP 电子邮件地址无效。
+$SU_VALID_INVALID_EMAIL_ADDRESS_STR$=电子邮件地址无效。
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_BCC_STR$=BCC 电子邮件地址无效。
+$SU_VALID_NOT_A_NUMBER_STR$=数字字段未包含数字。请输入数字值。
+$SU_VALID_NOT_A_DOUBLE_STR$=浮点字段未包含浮点数。请输入有效的浮点数。
+$SU_VALID_INVALID_FILE_NAME_CHARACTERS_STR$=字段包含无效字符。该字段不能包含以下任何字符：\/:"&lt;&gt;|
+$SU_VALID_FILE_NAME_CONTAINS_WILDCARD_STR$=字段包含通配符。该字段不能包含以下任何字符：*?
+$SU_VALID_GROUP_ADMIN_MUST_BE_GROUP_MEMBER_STR$=组管理员必须为至少一个群组的成员。请将该用户变成群组成员。
+$SU_VALID_INVALID_IP_ADDRESS_STR$=指定的 IP 地址无效。请输入有效的 IP 地址。
+$SU_VALID_INVALID_IP_MASK_STR$=指定的 IP 掩码似乎无效。请输入有效的 IP 地址掩码
+$SU_VALID_GROUP_NAME_INVALID_STR$=错误：提供的群组名称无效。请输入有效的群组名称。

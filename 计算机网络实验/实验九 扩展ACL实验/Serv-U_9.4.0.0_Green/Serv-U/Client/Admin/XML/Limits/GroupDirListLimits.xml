@@ -1,0 +1,39 @@
+%PRIV_GROUP_ADMIN%
+<limits>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="HideHidden" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.HideHidden.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="HideHidden" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.HideHidden.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="LowerCaseFileNames" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.LowerCaseFileNames.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="LowerCaseFileNames" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.LowerCaseFileNames.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="WindowsShortCutsAsLinks" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.WindowsShortCutsAsLinks.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="WindowsShortCutsAsLinks" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.WindowsShortCutsAsLinks.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="TreatWindowsShortCutsAsTarget" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.TreatWindowsShortCutsAsTarget.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="TreatWindowsShortCutsAsTarget" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.TreatWindowsShortCutsAsTarget.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="RootIsDrives" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.RootIsDrives.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="RootIsDrives" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.RootIsDrives.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="NaturalSort" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.NaturalSort.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="NaturalSort" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.NaturalSort.ListDefaults%
+</limits>

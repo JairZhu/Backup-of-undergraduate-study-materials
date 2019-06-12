@@ -1,0 +1,1523 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- Server -->
+$WEB_ADMIN$=Web 管理员
+
+<!-- Time Format: This string is used to define how the time of day is displayed in your locale.  The following are possible values: -->
+<!-- %H: Hour in 24-hour format (00-23), %I: Hour in 12-hour format (1-12), %M: Minute as a decimal number (00-59), %p: Current locale’s A.M./P.M. indicator for 12-hour clock (optional) -->
+<!-- US time is the default, which is displayed as "12:34 PM" -->
+$LOCALE_TIME_FORMAT$=%I:%M %p
+$TIME_AM$=上午
+$TIME_PM$=下午
+
+<!-- The following values indicate the width to be used for certain HTML elements since some languages require more space to display the same text and -->
+<!-- unilaterally increasing the available space for all languages based upon this creates a lot of white space.  Translators do not need to do anything -->
+<!-- with these values. -->
+$USER_ATTRS_DIALOG_WIDTH$=645
+$GROUP_ATTRS_DIALOG_WIDTH$=645
+$VISTA_DIALOG_INCREASE$=0
+$TREE_NAV_WIDTH$=205
+$CONNECTION_GROUP_WIDTH$=565
+$CONTAINER_CONNECTION_GROUP_WIDTH$=570
+$LOG_FILE_GROUP_HEIGHT$=310
+$OPERA_LOG_FILE_GROUP_HEIGHT$=320
+$DOMAIN_INFO_GROUP_HEIGHT$=215
+$USER_INFO_LEFT_CONTAIN_WIDTH$=200
+$USER_INFO_RIGHT_CONTAIN_WIDTH$=325
+$USER_INFO_INPUT_WIDTH_ADD$=0
+$USER_INFO_RIGHT_PUBKEY_WIDTH$=395
+
+
+<!-- **************** header.htm **************** -->
+$CONSOLE_TITLE$=Serv-U 文件服务器管理控制台
+$FVJV$=FTP Voyager JV
+$BASIC_WEB_CLIENT$=Web 客户端
+$CURRENTLYLOGGEDIN$=登录
+$CURRENTLY_EDITING_DOMAIN$=管理域
+$CURRENTLY_EDITING_SERVER$=管理
+$LOCAL_ADMIN$=本地管理
+$HOME$=主页
+
+
+<!-- **************** Console.htm **************** -->
+<!-- HTML -->
+$MANAGE_SERVER$=管理服务器
+$SERVER$=服务器
+$NAVIGATION$=导航
+<!-- Javascript -->
+$SELECT_DOMAIN_MSG$=请通过选择 "$MANAGE_DOMAIN_BUTTON$" 按钮选择或创建域。
+$SELECT_A_DOMAIN_TO_DELETE$=请选择要删除的域。
+$ASK_DELETE_DOMAIN$=您确定要删除选中的域吗？
+$SELECT_ONLY_ONE_DOMAIN$=请只选择一个域。
+$SELECT_ONLY_ONE_DOMAIN_EDIT$=请只选择一个要编辑的域。
+$SELECT_ONE_DOMAIN_EDIT$=请选择一个要编辑的域。
+$SELECT_A_DOMAIN$=选择一个域 
+<!-- Manage Domain -->
+$MANAGE_DOMAIN_BUTTON$=管理域
+$DOMAINS$=域
+$DOMAIN$=域
+$DOMAINNAME$=域名
+$DESCRIPTION$=说明
+<!-- New Domain Dialog -->
+$NEW_DOMAIN$=新建域
+$NEW_DOMAIN_BUTTON$=新建域
+$CREATE_NEW_DOMAIN$=创建新的域
+<!-- Domain Details -->
+$DOMAIN_DETAILS$=域详细信息
+$DOMAIN_NAME_AND_DESCRIPTION$=编辑域名和说明。
+$CONFIGURE_LISTENERS$=配置域的监听器。
+$CONFIGURE_VIRTUAL_HOSTS$=维护虚拟主机名。
+$CONFIGURE_IPACCESS$=配置域 IP 访问规则。
+$CONFIGURE_DOMAIN_DATABASE$=为域中的账户和群组配置数据库访问设置。
+$CONFIGURE_DOMAIN_EVENTS$=创建，修改并删除域事件。
+<!-- Users -->
+$USERS$=用户
+$CREATE_MODIFY_DELETE_USER$=创建、修改和删除用户账户。
+$CREATE_MODIFY_DELETE_DB_USER$=创建、修改和删除存储在数据库中的用户账户。
+$CONFIG_WIN_AUTH_SETTINGS$=配置 Windows 身份验证设置。
+<!-- Groups-->
+$GROUPS$=群组
+$CREATE_MODIFY_DELETE_GROUP$=创建、修改和删除用户群组。
+$CREATE_MODIFY_DELETE_DB_GROUP$=创建、修改和删除存储在数据库中的用户群组。
+$CREATE_MODIFY_DELETE_WIN_GROUP$=创建、修改和删除 Windows 用户群组。
+<!-- Directories -->
+$CONFIGURE_DIRECTORY_ACCESS$=为域内所有用户配置目录访问权限。
+$CREATE_MAINTAIN_VIRTUAL_PATHS$=创建并维护虚拟路径以便访问根目录以外的位置。
+<!-- Limts & Settings -->
+$LIMITS$=限制和设置
+$CREATE_MAINTAIN_LIMITS$=创建并维护应用到域的限制。
+$MAINTAIN_DOMAIN_SETTINGS$=维护域设置，反攻击，密码恢复以及自定义标志。
+$MAINTAIN_DOMAIN_FTPCP$=为域配置高级 FTP 命令设置和行为。
+$MAINTAIN_DOMAIN_ENCRYPTION$=创建并指定 SSL 和 SSH 证书以及配置加密设置。
+<!-- Domain Activity -->
+$DOMAIN_ACTIVITY$=域活动
+$VIEW_CONNECTED_USERS$=查看当前已连接的用户。
+$VIEW_DOMAIN_STATS$=查看域会话和传输统计。
+$VIEW_USER_GROUP_STATS$=查看用户和群组统计。
+$VIEW_DOMAIN_LOG$=查看域日志。
+$CONFIGURE_DOMAIN_LOG$=配置域日志。
+<!-- Server Details -->
+$SERVERDETAILS$=服务器详细信息
+$CONFIGURE_SERVER_IP_ACCESS$=配置服务器 IP 访问规则。
+$CONFIGURE_SERVER_DATABASE$=为全局账户和群组配置数据库访问设置。
+$CONFIGURE_SERVER_LICENSE$=查看您许可证的相关信息并进行配置。
+$VIEW_SERVER_INFO$=查看有关安装程序的信息。
+$CONFIGURE_SERVER_EVENTS$=创建，修改并删除服务器事件。
+<!-- Global Users -->
+$GLOBALUSERS$=全局用户
+$CREATEMODIFYGLOBALUSER$=创建、修改和删除全局用户账户。
+$CREATE_MODIFY_DELETE_DB_GLOBAL_USER$=创建、修改和删除存储在数据库中的全局用户账户。
+<!-- Global Groups -->
+$GLOBALGROUPS$=全局群组
+$CREATEMODIFYGLOBALGROUPS$=创建、修改和删除全局用户群组。
+$CREATE_MODIFY_DELETE_DB_GLOBAL_GROUP$=创建、修改和删除存储在数据库中的全局用户群组。
+<!-- Global Directories -->
+$GLOBALDIRECTORIES$=全局目录
+$CONFIGURESERVERDIRACCESS$=为服务器内所有用户配置目录访问权限。
+$CREATEMAINTAINVIRTUALPATHSSERVER$=创建并维护虚拟路径以便访问根目录以外的位置。
+<!-- Server Limits & Settings -->
+$SERVERLIMITS$=服务器限制和设置
+$CREATEMAINTAINSERVERLIMITS$=创建并维护应用到服务器的限制。
+$MAINTAINSERVERSETTINGS$=维护服务器设置，反攻击，密码恢复与定制标志。
+$MAINTAIN_SERVER_FTPCP$=为整个服务器配置高级 FTP 命令设置和行为。
+$MAINTAINSERVERENCRYPTION$=创建并指定 SSL 和 SSH 证书以及配置加密设置。
+<!-- Server Activity -->
+$SERVERACTIVITY$=服务器活动
+$VIEW_SERVER_STATS$=查看服务器会话和传输统计。
+$VIEW_SERVER_LOG$=查看服务器日志
+<!-- Bubble tip dialog -->
+$HOME_LINK_BALLOON_TIP$=在 Serv-U 管理控制台中的任何页面只需单击上面的 Serv-U 标志便能返回主页。
+$TREE_NAV_BALLOON_TIP$=您可以将下拉图标点至左侧以获得域的完整列表，并带有转至每个配置页面的快速启动链接。
+
+<!-- **************** TreeNav.htm **************** -->
+<!-- Domain Details -->
+$DOMAIN_NAME_AND_DESCRIPTION_TREE$=域名和描述
+$CONFIGURE_LISTENERS_TREE$=监听器
+$CONFIGURE_VIRTUAL_HOSTS_TREE$=虚拟主机
+$CONFIGURE_IPACCESS_TREE$=IP 访问规则
+$CONFIGURE_DOMAIN_DATABASE_TREE$=数据库访问
+$CONFIGURE_DOMAIN_EVENTS_TREE$=域事件
+<!-- Users -->
+$CREATE_MODIFY_DELETE_USER_TREE$=用户账户
+$CREATE_MODIFY_DELETE_DB_USER_TREE$=数据库用户账户
+$CONFIG_WIN_AUTH_SETTINGS_TREE$=Windows 验证
+<!-- Groups-->
+$CREATE_MODIFY_DELETE_GROUP_TREE$=用户组
+$CREATE_MODIFY_DELETE_DB_GROUP_TREE$=群组数据库账户 
+$CREATE_MODIFY_DELETE_OU_GROUP_TREE$=Windows 群组
+<!-- Directories -->
+$CONFIGURE_DIRECTORY_ACCESS_TREE$=目录访问权限
+$CREATE_MAINTAIN_VIRTUAL_PATHS_TREE$=虚拟路径
+<!-- Limts & Settings -->
+$CREATE_MAINTAIN_LIMITS_TREE$=域限制
+$MAINTAIN_DOMAIN_SETTINGS_TREE$=域设置
+$MAINTAIN_DOMAIN_FTPCP_TREE$=FTP 命令设置
+$MAINTAIN_DOMAIN_ENCRYPTION_TREE$=加密设置
+<!-- Domain Activity -->
+$VIEW_CONNECTED_USERS_TREE$=已连接的用户
+$VIEW_DOMAIN_STATS_TREE$=会话与传输状态
+$VIEW_USER_GROUP_STATS_TREE$=用户与群组状态
+$VIEW_DOMAIN_LOG_TREE$=域日志
+$CONFIGURE_DOMAIN_LOG_TREE$=配置日志
+<!-- Server Details -->
+
+$CONFIGURE_SERVER_IP_ACCESS_TREE$=IP 访问规则
+$CONFIGURE_SERVER_DATABASE_TREE$=数据库访问
+$CONFIGURE_SERVER_LICENSE_TREE$=监听信息
+$VIEW_SERVER_INFO_TREE$=安装信息
+$CONFIGURE_SERVER_EVENTS_TREE$=服务器事件
+<!-- Global Users -->
+$CREATEMODIFYGLOBALUSER_TREE$=用户账户
+$CREATE_MODIFY_DELETE_DB_GLOBAL_USER_TREE$=数据库用户账户
+<!-- Global Groups -->
+$CREATEMODIFYGLOBALGROUPS_TREE$=用户组
+$CREATE_MODIFY_DELETE_DB_GLOBAL_GROUP_TREE$=数据库群组账户
+<!-- Global Directories -->
+$CONFIGURESERVERDIRACCESS_TREE$=目录访问权限
+$CREATEMAINTAINVIRTUALPATHSSERVER_TREE$=虚拟路径
+<!-- Server Limits & Settings -->
+$CREATEMAINTAINSERVERLIMITS_TREE$=服务器限制
+$MAINTAINSERVERSETTINGS_TREE$=服务器设置
+$MAINTAIN_SERVER_FTPCP_TREE$=FTP 设置
+$MAINTAINSERVERENCRYPTION_TREE$=加密设置
+<!-- Server Activity -->
+$VIEW_SERVER_STATS_TREE$=会话和传输状态
+$VIEW_SERVER_LOG_TREE$=服务器日志
+
+
+
+<!-- **************** DomainWizardDialog.htm **************** -->
+$DOMAIN_WIZARD$=域向导
+$DOMAIN_WIZARD_INFO$=欢迎使用 Serv-U 域向导。本向导将帮助您在文件服务器上创建域。
+$DOMAIN_NAME_WIZARD_DESCR$=每个域名都是唯一的标识符，用于区分文件服务器上的其他域。
+$DOMAIN_DESCR_WIZARD_DESCR$=域的说明中可以包含更多信息。说明为可选内容。
+$DOMAIN_TYPE_WIZARD_DESCR$=可以使用域通过各种协议提供对文件服务器的访问。如果当前许可证不支持某些协议，则这些协议可能无法使用。请选择域应该使用的协议及其相应的端口。
+$DOMAIN_IP_WIZARD_DESCR$=IP 地址指定了一个地址，域应对该地址的请求连接进行监听。留空则表示应该使用所有可用的 IP 地址。
+$PLEASE_ENTER_DOMAIN_NAME$=请为域输入唯一的域名。
+$CONFIRM_CREATE_DOMAIN$=欢迎使用 Serv-U。当前没有已定义的域。<br />您现在要定义新域吗？
+$CONFIRM_CREATE_USER$=域中暂无用户，您现在要为该域创建用户账户吗？
+
+
+<!-- **************** UserInfoLayer.htm **************** -->
+$USERINFO$=用户信息
+$USERINFOMSG$=用户账户信息指定授予该账户的登录凭证和权限。
+$USER_TEMPLATE_INFOMSG$=默认用户模板用于在创建新用户时配置默认的设置。配置模板，以便使用所需的一组默认设置和选项快速添加新用户。
+$USERNAME$=登录 ID
+$FULLNAME$=全名
+$PASSWORD$=密码
+$PASSWORDTYPE$=密码类型
+$ADMINPRIV$=管理权限
+$HOMEDIR$=根目录
+$ACCOUNT_TYPE$=账户类型
+$ACCOUNT_EXPIRE_DATE$=账户有效期
+$ENABLE_ACCOUNT$=启用账户
+$LOCK_HOME_DIR$=锁定用户至根目录
+$WEB_CLIENT_STARTUP$=默认 Web 客户端
+$ALWAYS_ALLOW_LOGIN$=总是允许登录
+$PASSWORD_INVALIDATED$=更改密码类型，则该账户已存储的密码失效。要更改密码类型，必须重置用户账户的密码。
+$SSH_PUBLIC_KEY_PATH$=SSH 公共密钥路径
+$CREATE_SSH_KEY_PAIR$=创建密钥对
+$EMAIL$=电子邮件地址
+<!-- Password Types -->
+$PASSWORD_REGULAR_DESC$=常规密码
+$PASSWORD_MD4_DESC$=OTP S/KEY MD4
+$PASSWORD_MD5_DESC$=OTP S/KEY MD5
+<!-- Password Encrypt Types -->
+$PASSWORD_ENCRYPT_ONEWAY_DESC$=单向加密（更安全）
+$PASSWORD_ENCRYPT_TWOWAY_DESC$=简单的双向加密（不太安全）
+$PASSWORD_ENCRYPT_ONEWAY_STR$=单向加密
+$PASSWORD_ENCRYPT_TWOWAY_STR$=简单的双向加密
+$NO_ENCRYPTION$=无加密（不推荐）
+$PASSWORD_ENCRYPT_MODE$=密码加密模式
+$USE_SERVER_SETTINGS$=使用服务器设置
+$ENABLE_PASSWORD_RECOVER_DESC$=允许用户恢复密码
+$DOMAIN_PASSWORD_ENCRYPT_WIZARD_DESCR$=Serv-U 能够恢复密码（使用电子邮件发送用户登录信息）。使用双向加密来保护用户密码。使用单向加密创建任意生成的新密码。
+$ENCRYPTION$=加密
+$ENABLE_PASSWORD_ENCRYPTION_DESC$=启用密码加密
+$ON$=开
+$OFF$=关
+$CHANGE_SERVER_SETTINGS$=更改服务器设置
+<!-- Administrator Privileges -->
+$PRIV_NONE_DESC$=无权限
+$PRIV_DOMAIN_DESC$=域管理员
+$PRIV_GROUP_DESC$=组管理员
+$PRIV_SYSTEM_DESC$=系统管理员
+$PRIV_DOMAIN_RO_DESC$=只读域管理
+$PRIV_GROUP_RO_DESC$=只读组管理
+$PRIV_SYSTEM_RO_DESC$=只读系统管理
+<!-- Account Types -->
+$ACCT_TYPE_PERM_DESC$=永久账户
+$ACCT_TYPE_DISABLE_DESC$=自动禁用
+$ACCT_TYPE_DELETE_DESC$=自动删除
+<!-- Default Web Client Types -->
+$WEB_CLIENT_BASIC_DESC$=Web 客户端
+$WEB_CLIENT_FVJV_DESC$=FTP Voyager JV
+$WEB_CLIENT_ASK_DESC$=提示用户使用何种客户端
+
+
+<!-- **************** MembershipLayer.htm **************** -->
+$GROUPINFO$=群组成员资格使您可以为群组成员指定各种基本属性。一个用户可以是多个群组的成员。群组成员资格的顺序非常重要。
+$GROUPLABEL$=用户属于群组
+$SELECT_ONE_GROUP_MEMBERSHIP_DELETE$=选择一个群组，以便从其成员列表中删除用户。
+
+
+<!-- **************** GroupsDialog **************** -->
+$SELECT_GROUP_DIALOG_TITLE$=可用的群组
+$SELECT_ONLY_ONE_AVAILABLE_GROUP$=选择一个群组，以便向其成员中添加用户。
+
+<!-- **************** EventEmailGroupsDialog **************** -->
+$GROUP_EMAIL_LIST_DIALOG_TITLE$=群组邮件列表
+$SELECT_ONLY_ONE_EMAIL_GROUP$=选择要加入邮件事件的群组。
+$ASK_DELETE_GROUP_EMAIL$=您确定您要从该邮件事件删除群组吗？
+$SELECT_ONE_GROUP_EMAIL_DELETE$=选择要从邮件事件列表删除的群组。
+$EMAIL_GROUPS_INFO$=在事件触发时，将通知加入左侧列表的群组。这些群组中拥有有效电子邮件地址的所有成员将收到邮件通知。
+<!-- **************** MessageFileLayer.htm **************** -->
+$MSGFILE$=消息文件
+$WELCOME_MSG$=欢迎消息
+$MSGFILEINFO$=通过 FTP 或 HTTP 成功登录后将向用户发送欢迎消息。该消息文件可以覆盖任何群组中指定的消息。消息文件支持使用符号参数。
+$MSGFILECHKLABEL$=在消息文件的文本中包含响应代码
+$WELCOME_MSG_CHECK_LABEL$=在 FTP 连接的欢迎消息文本中包含响应代码
+$MSGFILELABEL$=消息文件路径
+$WELCOME_MSG_TEXT_INFO$=如果不指定消息文件路径，则可以在以下文本框中输入文本。将使用指定的文本取代以上指定的消息文件作为欢迎消息发送给用户。
+$SIGNON_MESSAGE_OVERRIDE$=使用定制的欢迎消息覆盖继承的群组欢迎消息
+
+
+<!-- **************** IPAccessLayer.htm **************** -->
+$IPACCESS$=IP 访问
+$USER_IP_ACCESS_INFO$=在上一次用户尝试登录时执行用户 IP 访问规则的检查。这些访问规则仅用于指定的用户。规则可以从群组成员中继承。
+$GROUP_IP_ACCESS_INFO$=群组 IP 访问规则由该群组成员的所有用户账户继承。该规则如果与在用户级别指定的规则冲突则被覆盖。
+$RULE_ADDRESS$=地址
+$RULE_ALLOW$=允许
+$RULE_DENY$=拒绝
+$EXPIRES_IN$=有效期
+$RULE_EXPIRED$=已过期
+$SELECT_ONLY_ONE_IPACCESS_EDIT$=请仅选择一项要编辑的 IP 访问规则。
+$SELECT_ONE_IPACCESS_EDIT$=请选择一项要编辑的 IP 访问规则。
+$SELECT_ONE_IPACCESS_DELETE$=请选择一项要删除的 IP 访问规则。
+$ASK_DELETE_IPACCESS$=您确定要删除选中的 IP 访问规则吗？
+$ENABLE_SORT_VIEW$=启用排序模式
+$CONFIRM_SORT_IP$=您已选择以排序模式查看该列表。在这种模式中，排序列表不会影响处理这些规则的顺序。<br /><br />您确定您要进入排序模式吗？
+
+
+<!-- **************** IPAccessDialog.htm **************** -->
+$IP_ACCESS_DIALOG_TITLE$=IP 访问规则
+$RULE$=规则
+$RULE_ALLOW_LABEL$=允许访问
+$RULE_DENY_LABEL$=拒绝访问
+$IP_ACCESS_TIPS$=IP 访问提示
+$IP_RULE_MATCH$=精确匹配
+$IP_RULE_RANGE$=范围（仅 IP 地址）
+$IP_RULE_ANY$=部分匹配
+$IP_RULE_ANY_CHAR$=匹配任何字符
+$DNS4ME_SERVICE$=DNS4Me 动态 DNS 服务
+$DNS4ME_SERVICE_NOTE$=您希望为动态 IP 地址的客户端提供基于 IP 的访问吗？为您的 DNS4Me 域名创建允许访问规则。
+$PLEASE_ENTER_RULE$=请输入 IP 访问规则。
+$IP_ACCESS_RULE_LABEL$=IP 地址/名称/掩码
+$IP_RULE_CIDR$=CIDR 记数法
+
+
+<!-- **************** DirAccessLayer.htm **************** -->
+$DIRACCESS$=目录访问
+$USER_DIR_ACCESS_INFO$=用户目录访问规则定义用户可以访问的文件和目录。在用户级别，这些规则继承自任何用户所属的群组以及在域和服务器级别定义的规则。
+$GROUP_DIR_ACCESS_INFO$=群组目录访问规则由该群组成员的所有用户账户继承。可以在用户账户目录访问规则之前或之后应用，也可以被用户账户目录访问规则覆盖。
+$PATH$=路径
+$ACCESS$=访问
+$MAX_SIZE$=最大尺寸
+$SELECT_ONLY_ONE_DIRACCESS_EDIT$=请仅选择一项要编辑的路径访问规则。
+$SELECT_ONE_DIRACCESS_EDIT$=请选择一项要编辑的目录访问规则。
+$SELECT_ONE_DIRACCESS_DELETE$=请选择一项要删除的目录访问规则。
+$ASK_DELETE_DIRACCESS$=您确定要删除选中的目录访问规则吗？
+
+
+<!-- **************** DirAccessDialog.htm **************** -->
+$DIR_ACCESS_DIALOG_TITLE$=目录访问规则
+$DIR_ACCESS_FILES$=文件
+$DIR_ACCESS_DIRS$=目录
+$DIR_ACCESS_SUBDIRS$=子目录
+$MAX_SIZE_DISP$=目录内容的最大尺寸
+$MAX_SIZE_LABEL$=MB
+$MAX_SIZE_COMMENT$=（留空则无限制）
+$EXECUTE_CAUTION$=警告：执行访问允许用户远程执行其他程序和文件。
+$DIR_ACCESS_FULL_ACCESS$=完全访问
+$DIR_ACCESS_RO_ACCESS$=只读
+$DIR_ACCESS_AS_WIN_USER$=作为 Windows 用户访问
+$USER_NAME$=用户名
+
+<!-- Dir Access Mask Labels -->
+$ACCESS_READ$=读
+$ACCESS_WRITE$=写
+$ACCESS_APPEND$=追加
+$ACCESS_DELETE$=删除
+$ACCESS_RENAME$=重命名
+$ACCESS_EXECUTE$=执行
+$ACCESS_LIST$=列表
+$ACCESS_CREATE$=创建
+$ACCESS_REMOVE$=删除
+$ACCESS_INHERIT$=继承
+$PLEASE_ENTER_PATH$=请输入目录路径。
+
+
+<!-- **************** VirtualPathLayer.htm **************** -->
+$VIRPATHS$=虚拟路径
+$VIRTUALPATHINFO$=虚拟路径用于将用户根目录结构以外的物理路径链接到该用户接受到的目录列表中。虚拟路径取代了传统的快捷方式连接方法。
+$VIRPATH_PHYSICAL$=物理路径
+$VIRPATH_MAPPED_TO$=虚拟路径
+$SELECT_ONLY_ONE_VIRPATH_EDIT$=请仅选择一项要编辑的虚拟路径。
+$SELECT_ONE_VIRPATH_EDIT$=请选择一项要编辑的虚拟路径。
+$SELECT_ONE_VIRPATH_DELETE$=请选择一项要删除的虚拟路径。
+$ASK_DELETE_VIRPATH$=您确定要删除选中的虚拟路径吗？
+$VIRPATH_INCLUDE_IN_MAX_SIZE$=包括在\"最大目录尺寸\"计算范围内
+
+
+<!-- **************** VirtualPathDialog.htm **************** -->
+$VIRPATH_DIALOG_TITLE$=虚拟路径
+$VIRPATH_DIALOG_INFO$="物理路径" 是您要映射到虚拟位置的路径。"虚拟路径" 定义您要将该位置映射到的地方，包括它显示的名称。
+$VIRPATH_VIRTUAL$=虚拟路径
+$PLEASE_ENTER_VIRPATH$=请输入物理路径和虚拟路径。
+
+
+<!-- **************** EventsLayer.htm **************** -->
+$EVENTS$=事件
+$EVENT$=事件
+$EVENTS_INFO$=在服务器上触发指定的事件时，用于向管理员传达信息的事件。
+$EVENT_TYPE$=事件类型
+$ASK_DELETE_EVENT$=您确定要删除选定的事件吗？
+$SELECT_ONLY_ONE_EVENT_EDIT$=请选择一个要编辑的事件。
+$SELECT_ONE_EVENT_EDIT$=请选择一个要编辑的事件。
+$SELECT_ONE_EVENT_DELETE$=请选择要删除的事件。
+$CREATE_COMMON_EVENTS_BUTTON$=创建常规事件
+$TEST_EVENTS_BUTTON$=测试事件
+$SELECT_ONLY_ONE_EVENT_TEST$=仅选择一个要测试的事件
+$SELECT_ONE_EVENT_TEST$=请选择一个要测试的事件
+$CONFIG_SMTP_BUTTON$=配置 SMTP
+$SMTP_CONFIG_WARN$=必须在域或服务器级别上进行 SMTP 配置。
+$EVENT_DISPATCHED_SUCCESS$=测试事件已成功分发到服务器。
+
+<!-- **************** EventsDialog.htm **************** -->
+$EVENTS_NAME_LABEL$=事件名称
+$EVENTS_ACTION_LABEL$=操作
+$EVENTS_EMAIL_TO_LABEL$=收件人
+$EVENTS_EMAIL_BCC_LABEL$=BCC
+$EVENTS_EMAIL_TO_NOTE$=使用逗号、空格或分号分隔多个邮件地址。
+$GROUP_EMAIL_TO_NOTE$=通过电子邮件添加群组到通知
+$GROUP_EMAIL_BCC_NOTE$=通过 BCC 电子邮件添加群组到通知
+$EVENTS_EMAIL_SUBJECT_LABEL$=主题
+$EVENTS_EMAIL_BODY_LABEL$=正文
+$EVENTS_BALLOON_TITLE_LABEL$=气球标题
+$EVENTS_BALLOON_INFO_LABEL$=气球信息
+$EVENTS_COMMAND_LINE_LABEL$=命令行参数
+$EVENT_ACTION_GROUP$=事件操作
+$EVENT_INFO_GROUP$=事件信息
+$PLEASE_ENTER_EVENT_NAME$=请为事件输入名称
+$WARN_DOMAIN_ADMIN_EVENTS$=域管理员对该操作没有访问权限。
+$DATA$=数据
+$EVENTS_EXEC_PATH_LABEL$=可执行程序路径
+$ENABLE_EVENT$=启用事件
+$CONFIRM_EMAIL_INFO_DELETE$=禁用该功能会将主题与正文重置为默认值。<BR /><BR />您确定您要禁用该功能吗？
+$EVENTS_EXEC_WAIT_LABEL$=完成等待时间
+$EVENTS_EXEC_WAIT_SEC$=0-30 秒，0 为不等待
+$CONFIRM_WAIT_DELAY_EXEC$=等待时间按照输入的秒数延迟所有的 Serv-U 处理。<BR /><BR />您确定您要设置该等待时间吗？
+<!-- *************** Server Events ******************** -->
+$SUEVENT_ID_SERVER_START_TEXT$=服务器启动
+$SUEVENT_ID_SERVER_STOP_TEXT$=服务器停止
+<!-- *************** Domain and Server Events ********* -->
+$SUEVENT_ID_DOMAIN_START_TEXT$=域启动
+$SUEVENT_ID_DOMAIN_STOP_TEXT$=域停止
+$SUEVENT_ID_SESSION_CONNECT_TEXT$=会话连接
+$SUEVENT_ID_SESSION_DISCONNECT_TEXT$=会话断开
+$SUEVENT_ID_SESSION_CONNECT_FAILURE_TEXT$=会话连接失败
+$SUEVENT_ID_LOG_DELETED_TEXT$=日志文件已删除
+<!-- *************** User, Group, Domain and Server Events ********* -->
+$SUEVENT_ID_USER_LOGIN_TEXT$=用户登录
+$SUEVENT_ID_USER_LOGOUT_TEXT$=用户注销
+$SUEVENT_ID_USER_LOGIN_FAILURE_TEXT$=用户登录失败
+$SUEVENT_ID_USER_PASSWORD_CHANGE_TEXT$=用户密码更改
+$SUEVENT_ID_USER_PASSWORD_CHANGE_FAILURE_TEXT$=密码更改失败
+$SUEVENT_ID_USER_ENABLED_TEXT$=已启用用户
+$SUEVENT_ID_USER_DISABLED_TEXT$=已禁用用户
+$SUEVENT_ID_USER_DELETED_TEXT$=已删除用户
+$SUEVENT_ID_USER_ADDED_TEXT$=已添加用户
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_SENT_TEXT$=已发送密码恢复
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_FAILED_TEXT$=密码恢复失败
+$SUEVENT_ID_IP_BLOCKED_TEXT$=已阻止 IP 
+$SUEVENT_ID_IP_BLOCKED_TIME_TEXT$=阻止 IP 的时间
+$SUEVENT_ID_TOO_MANY_SESSIONS_TEXT$=会话过多
+$SUEVENT_ID_TOO_MANY_SESSIONS_ON_IP_TEXT$=IP 上的会话过多
+$SUEVENT_ID_FILE_UPLOAD_TEXT$=已上传文件
+$SUEVENT_ID_FILE_UPLOAD_FAIL_TEXT$=文件上传失败
+$SUEVENT_ID_FILE_DOWNLOAD_TEXT$=已下载文件
+$SUEVENT_ID_FILE_DOWNLOAD_FAIL_TEXT$=文件下载失败
+$SUEVENT_ID_FILE_DELETE_TEXT$=已删除文件
+$SUEVENT_ID_FILE_MOVE_TEXT$=已转移文件
+$SUEVENT_ID_DIR_CREATE_TEXT$=已创建目录
+$SUEVENT_ID_DIR_DELETE_TEXT$=已删除目录
+$SUEVENT_ID_DIR_CHANGE_TEXT$=已更改目录
+$SUEVENT_ID_DIR_MOVE_TEXT$=已转移目录
+$SUEVENT_ID_QUOTA_OVERAGE_TEXT$=超过配额
+$SUEVENT_ID_DISK_SPACE_OVERAGE_TEXT$=超过磁盘空间
+$SUEVENT_ID_IP_ADDR_AUTO_BLOCKED_TIME_TEXT$=自动将 IP 添加到访问规则
+<!-- *************** Event Actions ********* -->
+$SUEVENT_ACTION_EMAIL_TEXT$=发送电子邮件
+$SUEVENT_ACTION_BALLOON_TIP_TEXT$=显示气球提示
+$SUEVENT_ACTION_EXEC_TEXT$=执行命令
+
+<!-- **************** CommonEventsDialog.htm **************** -->
+$COMMON_EVENTS$=常规事件
+$COMMON_EVENT_ACTION_GROUP$=常规事件操作
+$COMMON_EVENT_INFO$=自动创建常用事件。
+
+<!-- **************** SMTPConfigDialog.htm **************** -->
+$SMTP_CONFIG_INFO_DOMAIN$=配置 Serv-U 使用 SMTP 服务器来为使用电子邮件操作的邮件通知和事件发送邮件。该配置只需为整个域设置一次。
+$SMTP_CONFIG_INFO_SERVER$=配置 Serv-U 使用 SMTP 服务器来为使用电子邮件操作的邮件通知和事件发送邮件。该配置只需为整个服务器或域设置一次。
+$SMTP_SERVER_LABEL$=SMTP 服务器
+$SMTP_PORT_LABEL$=SMTP 服务器端口
+$SMTP_ACCOUNT_NAME_LABEL$=账户名称
+$SMTP_ACCOUNT_PASSWORD_LABEL$=密码
+$SMTP_FROM_ADDRESS_LABEL$=从电子邮件地址
+$SMTP_CONFIG_TITLE$=SMTP 配置
+$SMTP_SERVER_GROUP$=服务器信息
+$SMTP_AUTH_GROUP$=验证信息
+$SMTP_USE_SPA$=使用安全密码验证
+$SMTP_REQUIRE_LOGIN$=我的服务器要求验证
+$SMTP_FROM_NAME_LABEL$=从名称
+$SMTP_REQUIRE_SSL$=此服务器需要安全连接（SSL）
+$SMTP_USE_SSL_CERT$=连接到此服务器时使用 SSL 证书
+
+<!-- **************** LimitsLayer.htm **************** -->
+$LIMITS_INFO$=限制用于定义 FTP 服务器的各种设置。可以在一天中的不同时间或一周中的不同星期应用不同的限制值。
+$LIMIT_TYPE$=限制类型
+$CONNECTION_LIMIT$=连接
+$PASSWORD_LIMIT$=密码
+$DIR_LIST_LIMIT$=目录列表
+$TRANSFER_LIMIT$=数据传输
+$ADVANCED_LIMIT$=高级
+$LIMIT_APPLIED_TOD$=应用的日期和时间
+$MONDAY_ABBREV$=星期一
+$TUESDAY_ABBREV$=星期二
+$WEDNESDAY_ABBREV$=星期三
+$THURSDAY_ABBREV$=星期四
+$FRIDAY_ABBREV$=星期五
+$SATURDAY_ABBREV$=星期六
+$SUNDAY_ABBREV$=星期日
+$LIMIT_NOT_LIMITED$=任何时间
+$LIMIT_CHARACTERS$=字符
+$LIMIT_CHARACTER$=字符
+$LIMIT_SESSIONS$=会话
+$LIMIT_SESSION$=会话
+$LIMIT_MINUTES$=分
+$LIMIT_MINUTE$=分
+$LIMIT_UNLIMITED$=不限
+$LIMIT_NO_TIMEOUT$=永不超时
+$LIMIT_NEVER_EXPIRES$=永不过期
+$LIMIT_NO_MINIMUM$=无最小值
+$LIMIT_SFTP_VERSION$=版本（3-6）
+$LIMIT_VERSION$=版本
+$LIMIT_CANT_DELETE_INHERITED$=无法删除默认限制值。要覆盖此限制值，则需创建具有期望值的限制条件。
+$ASK_DELETE_LIMIT$=您确定要删除选中的限制吗？
+$SELECT_A_LIMIT_TO_DELETE$=请选择一项要删除的限制。
+$LIMIT_CANT_EDIT_INHERITED$=无法编辑默认限制值。要覆盖此限制值，则需创建具有期望值的限制条件。
+$SELECT_A_LIMIT_TO_EDIT$=请选择一项要编辑的限制。
+$RATIOS_QUOTAS_BUTTON$=比例和配额
+$LIMIT_CREATE_NEW$=您想创建限制吗？
+$SSH_AUTH_TYPE_PWD_AND_PUB$=密码和公共密钥
+$SSH_AUTH_TYPE_PWD_OR_PUB$=密码或公共密钥 
+$SSH_AUTH_TYPE_PUB$=仅公共密钥
+$SSH_AUTH_TYPE_PWD$=仅密码
+
+<!-- **************** LimitsDialog.htm **************** -->
+$LIMIT_EDIT_INFO$=高级限制选项允许您配置限制值应用的时间和星期。
+$LIMIT_LABEL$=限制
+$LIMIT_START_TIME$=开始时间
+$LIMIT_END_TIME$=结束时间
+$LIMITS_DIALOG_TITLE$=限制
+$LIMIT_TIME_OF_DAY$=时间
+$LIMIT_APPLY_TOD$=仅在该时间内应用限制
+$LIMIT_DAYS_OF_WEEK$=星期
+$DAY_MONDAY$=星期一
+$DAY_TUESDAY$=星期二
+$DAY_WEDNESDAY$=星期三
+$DAY_THURSDAY$=星期四
+$DAY_FRIDAY$=星期五
+$DAY_SATURDAY$=星期六
+$DAY_SUNDAY$=星期日
+$ADVANCED_BUTTON$=高级
+$LIMIT_INVALID_TOD$=请按以下格式输入有效的时间 - HH:MM。
+
+<!-- **************** LoginLimitDialog.htm **************** -->
+$LOGIN_LIMIT_EDIT_INFO$=登录限制选项允许您配置时间和星期几以允许用户或群组登录。
+$AVAILABILITY$=可用性
+$LOGIN_LIMIT_DIALOG_TITLE$=可用性设置
+
+<!-- **************** GroupInfoLayer.htm **************** -->
+$GROUPINFOMSG$=所有群组设置应用于身份为该组成员的用户账户。要覆盖群组设置，请编辑指定用户账户的设置。
+$GROUP_TEMPLATE_INFOMSG$=默认群组模板用于新建群组时为该组配置默认的设置。配置模板，以便使用所需的一组默认设置和信息快速添加新群组。
+$GROUP_INFO_TAB$=群组信息
+$GROUPNAME$=群组名称
+$GROUP_APPLY_DIR_ACCESS$=首先应用群组目录访问规则
+
+
+<!-- **************** MembersLayer.htm **************** -->
+$GROUP_MEMBERS$=群组成员
+$GROUP_MEMBERS_INFO$=以下列表中的用户是该组当前的成员。群组成员继承群组的设置，除非该设置被用户级别的设置覆盖。要向该群组中添加或删除用户，则需编辑用户账户。
+$GROUP_MEMBERS_WINDOWS_GROUP$=所有 Windows 用户账户都是该群组成员。
+$MEMBER_OF_GROUPS$=群组成员
+$AVAILABLE_GROUPS$=可用群组
+
+
+<!-- **************** BrowseDialog.htm **************** -->
+$DIRECTORY_PATH$=目录路径
+$APPLY_BUTTON$=应用
+$DRIVES$=驱动器
+$SELECT_DRIVE$=选择驱动器
+
+
+
+<!-- **************** CURRENTLY UNCLASSIFIED STRINGS (HOMELESS) **************** -->
+$SSLOPTIONS$=SSL 选项
+$SSHOPTIONS$=SSH 选项
+$LOGGING$=正在登录
+$GLOBALGROUPSLABEL$=FTP 域中显示的所有群组列表。
+$GLOBALIPACCESSINFO$=服务器 IP 访问规则是整个 FTP 服务器的全局规则。一旦服务器与客户端机器建立物理连接（在服务器发出欢迎消息之前）便立即应用该规则。
+$MEMBERS$=成员
+$NO_SCRIPT_TEXT$=您的浏览器似乎未启用运行 JavaScript 的功能。该页要求启用 JavaScript。
+$NO_LOG_EXISTS$=该域没有当前定义的日志文件。<br /><br />您要立即定义一个吗？
+$FEATURE_NOT_AVAILABLE$=当前许可证不允许使用该功能。请考虑升级您的许可证以启用该功能。
+
+
+<!-- **************** GENERAL STRINGS **************** -->
+<!-- General -->
+$VALUE$=值
+$GLOBAL$=全局
+$RULES$=规则
+$NORULES$=没有已存在的规则
+$USE_INHERITED$=继承默认值
+$DAY$=日
+$DAYS$=日
+$CAUTION$=警告
+$PROPERTIES$=属性
+$NEW$=新建
+$SELECT_ALL$=全选
+$CLEAR_LOG$=清除日志
+$NONE$=无
+$BITS$=位
+
+
+<!-- **************** License Strings **************** -->
+$LICENSE_DISABLED_FEATURE$=该功能已被禁用，因为您当前的许可证无法使用这一功能。
+$UPGRADE_LICENSE_NOTE$=要启用该功能必须购买升级许可证，请访问以下 URL：
+
+
+<!-- **************** ActivityMonitor.htm **************** -->
+<!-- Grid strings -->
+$NOT_APPLICABLE$=N/A
+$ID$=ID
+$CONN_TYPE$=类型
+$IP_ADDR_OR_HOST$=IP 地址 / 主机名
+$SERVER_ADDRESS$=服务器地址
+$LOCATION$=位置
+$LAST_COMMAND$=上一命令
+$CLIENT_SOFTWARE$=客户端
+<!-- Session info -->
+$ACTIVITY_SESS_INFO$=活动会话信息
+$IP_ADDRESS$=IP 地址
+$ACTIVITY_DL$=已下载
+$ACTIVITY_UL$=已上传
+$ACTIVITY_SINCE$=开始时间
+$ACTIVITY_SPEED$=速度
+$ACTIVITY_TIME_ON$=持续时间
+$ACTIVITY_AVG_DL_SPEED$=平均下载速度
+$ACTIVITY_IDLE$=空闲
+$ACTIVITY_AVG_UL_SPEED$=平均上传速度
+$ACTIVITY_SEC_ABBREV$=秒
+$ACTIVITY_KBSEC_ABBREV$=千字节/秒
+$ACTIVITY_FILES$=文件
+$ACTIVTY_ACCESS$=用户权限
+$NOT_LOGGED_IN$=尚未登录
+$ACCESS_NONE$=无
+$ACCESS_SYSADMIN$=系统管理员
+$ACCESS_DOMADMIN$=域管理员
+$SELECTED_PUBLIC_KEY_PROTOCOL$=公共密钥协议
+$SERVER_TO_CLIENT$=S--&gt;C
+$CLIENT_TO_SERVER$=C--&gt;S
+
+<!-- Buttons -->
+$KILL_USER_BUTTON$=断开
+$SPY_CHAT_BUTTON$=探查和聊天
+$BROADCAST_MESSAGE_BUTTON$=广播
+$ABORT_BUTTON$=中断
+<!-- Alerts -->
+$DISCONNECT_SELECT$=请选择要断开的会话。
+$SPY_CHAT_SELECT$=请选择一个会话以查看更多信息。
+$SEND_MESSAGE_ONLY_FTP$=消息只能发送给 FTP 会话。
+$SPY_CHAT_NO_HTTP$=探查对话框中无法查看 HTTP 会话。请选择 FTP 或 SFTP 会话。
+$ABORT_SELECT_ITEM$=请选择会话以中断其最新的命令。
+$ABORT_CONFIRM_SESSION$=您确定要中断选中会话的最新命令吗？
+$BROADCAST_NO_FTP_SESSIONS$=没有活动的 FTP 会话以接收广播消息。
+$COMMAND_DENIED$=无法执行命令：目标用户的账户权限较高。
+
+
+<!-- **************** DisconnectDialog.htm **************** -->
+<!-- Java Script -->
+$DISCONNECT_DIALOG_TITLE$=断开会话
+$DISCONNECT_ACTION$=操作
+$DISCONNECT_KICK$=断开
+$DISCONNECT_BAN$=断开并禁止 IP
+$DISCONNECT_BAN_LABEL$=分钟
+$DISCONNECT_BLOCK$=断开并永远阻止 IP
+$DISCONNECT_LEVEL_LABEL$=将 IP 规则应用到
+$DISCONNECT_LEVEL_SERVER$=整个服务器
+$DISCONNECT_LEVEL_DOMAIN$=当前域
+$DISCONNECT_DISABLE_ACCT$=禁用用户账户
+$DISCONNECT_MESSAGE$=向用户发送消息
+$DISCONNECT_NO_DURATION$=请输入禁止该 IP 地址的分钟数。
+
+
+<!-- **************** SendMessageDialog.htm **************** -->
+<!-- Java Script -->
+$SEND_MESSAGE_DIALOG_TITLE$=发送消息
+$SEND_MESSAGE_LABEL$=消息内容
+$SEND_MESSAGE_NO_TEXT$=请输入要发送给指定会话的消息。
+<!-- Session message strings -->
+$SESSION_MESSAGE_DIALOG_TITLE$=发送消息
+$SESSION_MESSAGE_LABEL$=消息内容
+$SESSION_MESSAGE_NOTE$=注意：并非所有 FTP 客户端都支持从服务器接收主动提供的数据。
+$SESSION_MESSAGE_NO_TEXT$=请输入要发送给指定 FTP 会话的消息。
+<!-- Broadcast message strings -->
+$BROADCAST_MESSAGE_DIALOG_TITLE$=广播消息
+$BROADCAST_MESSAGE_LABEL$=消息内容
+$BROADCAST_MESSAGE_NOTE$=注意：消息只能发送给 FTP 会话。并非所有 FTP 客户端都支持从服务器接收主动提供的数据。
+$BROADCAST_MESSAGE_NO_TEXT$=请输入要广播给所有已连接 FTP 会话的消息。
+
+
+<!-- **************** SpyChatDialog.htm **************** -->
+<!-- Java Script -->
+$SPY_CHAT_DIALOG_TITLE$=详细会话信息
+$SESSION_LOG$=会话日志
+$SPY_STATS$=会话信息
+$SPY_CHAT$=聊天
+$UNKNOWN_USER$=未知用户
+$SESSION_DISCONNECT$=会话已断开。
+
+
+<!-- **************** Server.htm **************** -->
+<!-- Main Page -->
+$SERVER_PAGE_INFO$=显示关于整个文件服务器的信息，包括全局访问规则、许可证和注册信息。
+<!-- IP Access Tab -->
+$SERVER_IP_ACCESS_INFO$=服务器 IP 访问规则在与文件服务器建立物理连接时进行检查，且在发送欢迎消息之前。
+<!-- License Information Tab -->
+$LICENSE$=许可证信息
+$LICENSE_INFO$=当前 Serv-U 许可证的相关信息显示如下，包括约束、限制和升级信息。要授权您的 Serv-U 安装或更改当前许可证，请单击 "注册" 按钮。
+$REGGIE_INFO_GROUP$=注册信息
+$REGGIE_NAME$=名称
+$REGGIE_EMAIL$=Email 地址
+$REGGIE_EDITION$=Serv-U 版本
+$REGGIE_COPIES$=份数
+$REGGIE_DATE$=购买日期
+$REGGIE_UPDATES$=更新
+$REGGIE_UNREGISTERED$=未注册
+$REGGIE_TRIAL$=试用版
+$REGGIE_PERSONAL$=个人版
+$REGGIE_STANDARD$=标准版
+$REGGIE_HOME$=家庭版
+$REGGIE_PRO$=专业版
+$REGGIE_CORP$=公司版
+$REGGIE_BRONZE$=铜版
+$REGGIE_SILVER$=银版
+$REGGIE_GOLD$=金版
+$REGGIE_TEMP$=临时版
+$REGGIE_SITE$=站点版
+$REGGIE_DEPT$=部门版
+$REGGIE_ENT$=企业版
+$REGGIE_EXPIRE$=过期
+$REGGIE_DAYS_REMAIN$=日剩余
+$REGGIE_TRIAL_EXPIRED$=试用版已过期
+$REGGIE_FREE_FOR_LIFE$=升级使程序永不过期
+$EDITION_INFO_GROUP$=版本信息
+$EDITION_ENABLED$=启用
+$EDITION_DISABLED$=禁用
+$EDITION_UNLIMITED$=不限
+$EDITION_MAX_DOMAINS$=最大域数
+$EDITION_MAX_USER$=最大用户账户数
+$EDITION_MAX_SESSIONS$=最大会话数
+$EDITION_REMOTE_ADMIN$=远程管理
+$EDITION_ODBC$=ODBC 验证
+$EDITION_WEB_CLIENT$=Web 客户端
+$EDITION_WINDOWS_AUTH$=Windows 验证
+$EDITION_EVENTS$=事件 / 电子邮件通知
+$EDITION_USER_PASSWORD_RECOVER$=用户密码恢复
+$EDITION_VIRTUAL_PATHS$=虚拟路径
+$EDITION_VIRTUAL_HOSTS$=虚拟主机
+$EDITION_QUOTAS$=配额
+$EDITION_RATIOS$=传输率
+$EDITION_ENCRYPTION$=FTPS（通过 SSL 的 FTP）
+$EDITION_FIPS$=FIPS 140-2
+$ENABLE_FIPS$=启用 FIPS 140-2 模式
+$CONFIRM_FIPS_MODE_TEXT$=不使用 FIPS 模式创建的证书与私人密钥不再有效。您必须为服务器与个别域重新创建您的证书和私人密钥。
+$CONFIRM_FIPS_MODE$=您要验证您的服务器证书和私人密钥吗？
+$EDITION_CA_CERTIFICATE$=CA 证书
+$EDITION_CUSTOM_LOGO$=自定义 HTTP 标志
+$EDITION_CUSTOM_LOGO_TITLE$=自定义 HTTP 标志、登录页面文本与标题
+$EDITION_USER_GROUP_STATS$=用户和群组统计
+$EDITION_ENCRYPTION_SSH$=通过 SSH2 的 SFTP
+$EDITION_ENCRYPTION_HTTPS$=HTTPS
+$EDITION_FVJV$=FTP Voyager JV
+$EDITION_INTEGRATION_DLL$=集成 DLL 插件
+$ADDITIONAL_PROD_INFO_GROUP$=更多产品
+$REGISTER_BUTTON$=注册
+$UPDATE_BUTTON$=更新
+$LOST_ID_BUTTON$=丢失 ID
+$PURCHASE_BUTTON$=购买
+$PURCHASE_UPDATE$=购买更新
+$ENTER_LICENCE_ID_BUTTON$=输入授权 ID
+$UPDATE_NOTICE_BALLOON_TITLE$=Serv-U 过期通知
+$UPDATE_NOTICE_BALLOON_TIP$=更新保护在 90 天内过期。<p>要续订更新保护，请点击以下按钮。</p>
+$UPGRADE_UNLIMITED$=升级到无限！
+$UPGRADE_TO_ENABLE$=升级到启用！
+$ENABLE_FVJV$=启用 FTP Voyager JV
+$UPGRADE_TO_FVJV$=通过升级 serv-u许可证添加 FTP Voyager JV 到 Serv-U。
+<!-- Program Information Tab -->
+$PROGRAM_INFO$=程序信息
+$FILE_SERVER$=文件服务器
+$VERSION$=版本
+$DATE_INFO_GROUP$=安装信息
+$BUILD_DATE$=发布日期
+$INSTALL_DATE$=安装日期
+$CONTACT_INFO_GROUP$=联系方式
+$DEV_INFO_GROUP$=开发
+$DEVELOPED_BY$=开发者
+$TRANSLATION_BY$=本地化
+$COPYRIGHT$=版权所有
+$LEGAL_INFO_GROUP$=法律
+$LEGAL_INFORMATION$=警告：本计算机程序受版权法和国际公约的保护。未经授权而复制或分发本软件，或其任何部分，都可能受到严厉的刑事和民事处罚，并将依法追究最大程度的责任。
+$FVJV_PRODUCT_INFO$=FTP Voyager JV 是与 Serv-U 文件服务器配合使用的功能全面的文件传输客户端程序。<br /><br />更多信息，请<a href="%FVJV_HOME%" target="_blank">访问</a> FTP Voyager JV 网站。
+
+
+<!-- **************** RegistrationDialog.htm **************** -->
+$REGISTRATION_DIALOG_TITLE$=注册 ID
+$REGISTRATION_CLEAR_CONFIRM$=清除注册 ID 将使 Serv-U 成为未注册的版本。您确定要清除注册信息吗？
+$REGISTRATION_FAIL$=您的注册 ID 有效，但无法保存到磁盘。请按注册消息中的说明注册您的 Serv-U 文件服务器。
+$PASTE_REGGIE_BUTTON$=粘贴注册 ID
+
+<!-- **************** Domain.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_SAVED_RESULT$=域的值已保存。
+$SELECT_ONLY_ONE_LISTENER_EDIT$=请只选择一个要编辑的监听器。
+$SELECT_ONE_LISTENER_EDIT$=请选择一个要编辑的监听器。
+$SELECT_ONE_LISTENER_DELETE$=请选择一个要删除的监听器。
+$ASK_DELETE_LISTENER$=您确定要删除选中的监听器吗？
+$SELECT_ONLY_ONE_VIRTUAL_HOST_EDIT$=请只选择一个要编辑的虚拟主机名。
+$SELECT_ONE_VIRTUAL_HOST_EDIT$=请选择一个要编辑的虚拟主机名。
+<!-- Main Page -->
+$DOMAIN_PAGE_INFO$=定义关于选中域的基本信息，该域如何监听请求的连接，以及 IP 访问规则以管理哪些地址可以连接到该域。
+<!-- Domain Tab -->
+$SETTINGS_TAB$=设置
+$DOMAIN_INFO_TAB$=更改域名和域的说明，按保存按钮保存更改。
+$ENABLE_DOMAIN$=启用域
+$DOMAIN_INFO_GROUP$=域信息
+$DOMAIN_HOME_DIR$=域根目录
+$MAXIMUM_SIZE$=最大尺寸
+$MAXIMUM_SIZE_MB_NOTE$=请注意：设置域根目录的最大尺寸会迫使 Serv-U 在上传前和上传中检查现有文件和子文件夹。 根据现有的目录结构，这项操作可能非常耗时。 
+$BLANK_FOR_NO_LIMIT$=留空表示无限制
+$PLEASE_ENTER_DOMAIN_HOME_DIR$=请输入域根目录路径。若未输入路径，域根目录的最大尺寸必须留空。
+<!-- Listeners Tab -->
+$LISTENERS_TAB$=监听器
+$LISTENERS_INFO_TAB$=监听器定义该域如何接受请求的连接。使用列表下方的按钮管理该域的监听器。如果没有指定监听器，则该域仅作为虚拟域运行，并使用其他域的监听器。
+$LISTENER_DIALOG_TITLE$=监听器
+$LISTENER_IP$=IP 地址
+$LISTENER_IP_LABEL$=（留空则表示全部）
+$LISTENER_PORT$=端口
+$LISTENER_TYPE$=类型
+$LISTENER_IP_ALL$=<< 所有可用的 IP 地址 >>
+$LISTENER_TYPE_FTP_DESC$=FTP 和 Explicit SSL/TLS
+$LISTENER_TYPE_IMPLICIT_SSL_DESC$=Implicit FTPS（SSL/TLS）
+$LISTENER_TYPE_SSH_DESC$=使用 SSH 的 SFTP
+$LISTENER_TYPE_HTTP_DESC$=HTTP
+$LISTENER_TYPE_HTTPS_DESC$=HTTPS（SSL 加密的 HTTP）
+$ENABLE_LISTENER$=启用监听器
+$LISTENER_PASV_DOMAIN$=PASV IP 地址或域名
+$LISTENER_SFTP_UNAVAILABLE$=SFTP 仅在 Serv-U 企业版中可用。请升级您的许可证以启用该项功能。
+$LISTENER_SSL_UNAVAILABLE$=当前的 Serv-U 许可证不支持 SSL。请升级许可证以启用该功能。
+$PASV_IP_ADDRESS$=PASV IP 地址
+$USE_PASV_IP_SSL_ONLY$=仅使用 SSL 连接
+$USE_PASV_IP_LAN_ONLY$=使用 LAN 连接
+$LISTENER_IPV4_ALL$=<< 所有可用的 IPv4 地址 >>
+$LISTENER_IPV6_ALL$=<< 所有可用的 IPv6 地址 >>
+$LISTENER_IPV4$=IPv4 地址
+$LISTENER_IPV6$=IPv6 地址
+$CREATE_IPV4$=创建 IPv4 监听器
+$CREATE_IPV6$=创建 IPv6 监听器
+$PLEASE_CREATE_IP_LISTENER$=请勾选与此 IP 类型相关联的任一或两个选择框，来创建 IPv4 和/或 IPv6 地址。
+<!-- Virtual Hosts Tab-->
+$VIRTUAL_HOSTS_TAB$=虚拟主机
+$VIRTUAL_HOSTS_INFO_TAB$=虚拟主机用于在多个域共享监听器时访问指定的域。对于 FTP 连接，则使用 HOST 命令。对于 HTTP 连接，通过检查由客户端发送的主机报头（Host Header）以确定正确的域。
+$VIRTUAL_HOST_NAME$=虚拟主机名
+$ASK_DELETE_VIRTUAL_HOST$=您确定要删除选中的虚拟主机名吗？
+$SELECT_ONE_VIRTUAL_HOST_DELETE$=请选择一项要删除的虚拟主机名。
+<!-- IP Access Tab -->
+$DOMAIN_IP_ACCESS_INFO$=当客户端计算机尝试通过直接连接或虚拟域方式连接该域时，检查域 IP 访问规则。这些访问规则仅应用于该域。
+<!-- Database Tab -->
+$DATABASE$=数据库
+$DATABASE_INFO$=Serv-U 可以使用外部数据库以加载额外的用户和群组。数据库必须安装 ODBC 驱动程序且必须作为系统的 ODBC 数据源。以该方式加载的用户和群组如果与本地创建的冲突，则被本地用户和群组覆盖。
+
+
+<!-- **************** DatabaseTab.htm **************** -->
+$DATA_SOURCE_GROUP$=数据库源信息
+$ODBC_SOURCE$=数据源名称
+$ODBC_ACCOUNT$=数据库登录 ID
+$ODBC_PASSWORD$=数据库密码
+$ODBC_AUTO_CREATE_TABLES$=自动创建需要的表
+$ODBC_AUTO_CREATE_COLUMNS$=自动创建需要的列
+$ODBC_EDIT_SQL_TEMPLATES$=SQL 模板
+$ODBC_COLUMN_MAPPING_INFO$=默认情况下，Serv-U 使用相应的名称创建数据存储所需的表和列。但您可以手动配置 Serv-U，以使用您想要的表和列的名称。
+$ODBC_MAP_USER_COLUMNS$=用户表映射
+$ODBC_MAP_GROUP_COLUMNS$=群组表映射
+
+
+<!-- **************** DatabaseDialog.htm **************** -->
+$DATABASE_DIALOG_TITLE$=数据库映射
+$DATABASE_MAPPING_INFO$=选择以下对象类型，以配置其数据库的列映射。要编辑列映射的值，可以双击鼠标或使用编辑按钮。
+$TABLE_MAPPING_OBJ$=对象表
+$DATABASE_RENAME_DIALOG_TITLE$=编辑映射的数据库值
+$DATABASE_RENAME_DIALOG_DESC$=输入新映射的数据库值
+$DB_ATTRIBUTE$=属性
+$DB_COLUMN_NAME$=映射的数据库值
+$DB_USER_INFO$=用户信息表
+$DB_USER_GROUP$=用户群组表
+$DB_USER_DIRACCESS$=用户目录访问表
+$DB_USER_VIRPATH$=用户虚拟路径表
+$DB_USER_IPACCESS$=用户 IP 访问表
+$DB_USER_EVENTS$=用户事件表
+$DB_USER_FREEFILES$=用户上传/下载率不限的文件表
+$DB_USER_USERFILES$=每个用户的文件上传/下载率表
+$DB_USER_USERBYTES$=每个用户的字节上传/下载率表
+$DB_USER_SESSFILES$=每个会话的文件上传/下载率表
+$DB_USER_SESSBYTES$=每个会话的字节上传/下载率表
+$DB_GROUP_INFO$=群组信息表
+$DB_GROUP_DIRACCESS$=群组目录访问表
+$DB_GROUP_VIRPATH$=群组虚拟路径表
+$DB_GROUP_IPACCESS$=群组 IP 访问表
+$DB_GROUP_EVENTS$=群组事件表
+$DB_GROUP_FREEFILES$=群组上传/下载率不限的文件表
+$SELECT_DB_COLUMN_EDIT$=请选择要编辑的数据库映射值。
+$DB_NO_EMPTY_COLUMN$=该数据库映射值不能为空值。
+$DB_USER_AVAILABILITY$=用户属性可用性表格
+$DB_GROUP_AVAILABILITY$=群组属性可用性表格
+$ENABLE_TABLE$=表格已启用
+
+<!-- **************** SQLTemplateDialog.htm **************** -->
+$SQL_TEMPLATE_DIALOG_TITLE$=SQL 模板
+$SQL_TEMPLATE_INFO$=以下模板用于构建 SQL 模板，Serv-U 使用这些模板维护外部数据库。更改模板可能造成 ODBC 无法工作。如果要编辑模板，则风险自负。
+$SQLT_TEMPLATE$=模板
+$SQLT_SELECT_ALL$=列出所有行
+$SQLT_SELECT_ROW$=列出指定的行
+$SQLT_SELECT_ROW_SORT$=列出指定的行并排序
+$SQLT_DELETE_ROW$=删除行
+$SQLT_INSERT_ROW$=插入行
+$SQLT_UPDATE_ROW$=更新行
+$SELECT_SQL_TEMPLATE_EDIT$=请选择要编辑的 SQL 模板值。
+
+
+<!-- **************** DomainUsers.htm **************** -->
+<!-- Java Script -->
+$VIRTUAL_HOST_DIALOG_TITLE$=新建虚拟主机名
+$VIRTUAL_HOST_NAME_EMPTY$=请为该域指定虚拟主机名。
+
+
+<!-- **************** DomainUsers.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_USERS_TAB$=域用户
+$CONFIRM_USE_USER_WIZARD$=您要使用向导创建用户吗？
+<!-- Main Page -->
+$DOMAIN_USERS_INFO$=创建、修改和删除该域的用户账户。
+<!-- Users Tab -->
+$DOMAIN_USERS_TAB_DESCRIPTION$=该列表显示了允许连接到活动域的用户账户。使用此列表和列出的按钮对域用户进行维护。
+
+
+<!-- **************** ServerUsers.htm **************** -->
+<!-- Java Script -->
+$SERVER_USERS_TAB$=全局用户
+<!-- Main Page -->
+$SERVER_USERS_INFO$=创建、修改和删除该文件服务器上所有域的全局用户账户。
+<!-- Users Tab -->
+$SERVER_USERS_TAB_DESCRIPTION$=该列表显示了允许连接到文件服务器上任何域的全局用户账户。通过在个别域中创建与全局账户相同的账户，可以覆盖全局账户。
+
+
+<!-- **************** UsersInclude.htm **************** -->
+<!-- Java Script -->
+$SELECT_ONLY_ONE_USER_EDIT$=请只选择一个要编辑的用户。
+$SELECT_ONE_USER_EDIT$=请选择一个要编辑的用户。
+$SELECT_ONLY_ONE_USER_COPY$=请选择唯一一个要复制的用户。
+$SELECT_ONE_USER_COPY$=请选择一个要复制的用户。
+$SELECT_A_USER_TO_DELETE$=请选择要删除的用户。
+$ASK_DELETE_USER$=您确定要删除选中的用户吗？
+$NOUSERS$=没有已存在的用户账户。
+$GENERAL_USERS_NAME$=常规
+$GENERAL_ODBC_USERS$=常规数据库
+$USER_TEMPLATE_INFO$=配置用户模板有助于更快地创建新用户。创建新用户时，从模板用户中获取其默认设置。
+$DEFAULT_USER_TEMPLATE$=默认用户模板
+$USER_LIMITS_TAB_INFO$=限制按其所负责配置的服务器的区域进行分组。限制允许对相同的选项根据时间和星期几指定多个限制值。用户级别的限制优先级高于在其他级别指定的所有限制值。
+$ODBC_USERS_NOT_CONFIGURED$=当前尚未配置数据库。在管理数据库用户前必须先配置数据库连接。
+$USER_CANT_LIST_HOMEDIR$=该用户账户无法访问其根目录。请核对该账户的目录访问规则。
+$USER_PRIV_CANT_EDIT$=无法编辑该账户，因为域管理员无法编辑权限与其相同或更高的用户账户。
+$SELECT_USERS_TO_MOVE$=请选择要移动到其他集合的用户。
+$SELECT_USERS_TO_MOVE_ODBC$=请选择您要移动到 ODBC 数据库的用户。
+$CHECK_SYSADMIN_CONFIG$=当系统管理员账户的根目录为 \"\\\" 且未被锁定在根目录时最有效。否则这些账户在管理文件服务器时会受到限制而无法使用根目录以外的路径。<br /><br />您要对该账户进行其他更改吗？
+$NO_COLLECTION_TO_MOVE_TO$=不存在其它集合。您要创建一个吗？
+$SELECT_USERS_TO_RECOVER_PASSWORD$=请选择您要恢复密码的用户。
+$CANNOT_DECRYPT_CONFIRM_MSG_1$=Serv-U 无法解密至少一个选定用户的密码。继续恢复密码将更改以下用户的密码：
+$CANNOT_DECRYPT_CONFIRM_MSG_2$=您确定要为选定的用户恢复密码吗？
+$NO_SMTP_CONFIG$=当前没有配置为要发送电子邮件的 SMTP 。SMTP 配置可以在\"设置\" 选项卡下的\"限制和设置\"中找到。
+$COLL_GROUP_WIDTH_1$=460
+$COLL_GROUP_WIDTH_2$=610
+<!-- Users Tab -->
+$SELECT_USER_COLLECTION$=选择用户集合
+$USER_ORG_PROPERTIES$=用户集合
+$ORG_NAME$=集合名称
+$EMPTY_ORG_NAME$=请为该用户集合输入名称。
+$NO_RENAME_GENERAL_ORG$=无法重命名默认的常规集合。
+$NO_DELETE_GENERAL_ORG$=无法删除默认的常规集合。
+$ORG_DELETE_CONFIRM$=您确定要删除选中的用户集合吗？删除集合也会删除其包含的所有用户账户。
+$USER_NAME_LOGIN_ID_COLUMN$=登录 ID
+$FULL_NAME_COLUMN$=全名
+$LAST_LOGIN_TIME$=最后登录时间
+$USER_PROPERTIES$=用户属性
+$DEFAULT_USER_BUTTON$=模板
+$ENABLE_DEFAULT_USER$=使用用户模板
+$USER_WIZARD_BALLOON_TITLE$=Serv-U 用户创建
+$USER_WIZARD_BALLOON_TIP$=Serv-U 用户向导能够帮助您轻松快速地创建新用户账户。<p>单击以下按钮开始创建新的用户账户。</p>
+$MOVE_BUTTON$=移动
+$MOVE_USERS_BALLOON_TITLE$=移动用户
+$MOVE_USER_BALLOON_TIP$=通过将用户移动到新的或其他集合以提高 Serv-U 的性能。从列表中选择要移动的用户，然后单击 '移动...' 按钮。
+$MOVE_USERS_TO_ODBC_CONFIRM$=您确定要将选定的用户移动到 ODBC 数据库吗？
+$MOVE_ODBC_BUTTON$=移动到数据库
+$COPY_BUTTON$=复制
+$FILTER_USERS$=过滤用户
+$FILTER_GROUPS$=过滤群组
+$ENTER_FILTER_INPUT$=请键入过滤器输入。
+$WILL_DISABLE_ON$=过期
+$EXPIRED$=已过期
+$WILL_DELETE_ON$=将被删除
+
+<!-- ODBC Users Tab -->
+$ODBC_USERS_TAB_NAME$=数据库用户
+$ODBC_USERS_TAB_INFO$=数据库用户从指定的 ODBC 数据源加载。它们用来补充本地的用户账户数据库。要更改以该方式存储的用户账户，可以使用此接口或数据库支持的接口。
+<!-- Windows Auththentication Tab -->
+$WINDOWS_AUTH_TAB_NAME$=Windows 验证
+$WINDOWS_AUTH_TAB_INFO$=如果启用 Windows 验证，则客户可以使用有效的 Windows 账户代替 Serv-U 用户数据库中的本地账户进行登录。如果该账户已存在于 Serv-U 用户数据库中，则数据库中的账户的优先级要高于 Windows 账户。
+$WINDOWS_DOMAIN_NAME$=Windows 域名
+$ENABLE_WINDOWS_AUTH$=启用 Windows 验证
+$WINDOWS_AUTH_USE_GROUP_HOMEDIR$=使用 Windows 用户组（User Group）根目录而不使用账户根目录
+$OPTIONAL$=可选
+
+
+<!-- **************** UserWizardDialog.htm **************** -->
+<!-- Main Page -->
+$USER_WIZARD$=用户向导
+$ACCESS_RIGHTS$=访问权限
+$USER_WIZARD_INFO$=欢迎使用 Serv-U 用户账户向导。该向导帮助您快速创建新用户，以访问您的文件服务器。
+$READ_WRITE_DESC$=读写访问
+$READ_ONLY_DESC$=只读访问
+$USER_NAME_WIZARD_DESCR$=客户端尝试登录文件服务器时通过登录 ID标识其账户。
+$USER_PASSWORD_WIZARD_DESCR$=密码可以留空，但会造成任何知道登录 ID的人都可以访问该账户。
+$USER_HOME_DIR_WIZARD_DESCR$=根目录是用户成功登录文件服务器后所处的物理位置。如果将用户锁定于根目录，则其根目录的地址将被隐藏而只显示为 '/'。
+$USER_ACCESS_RIGHTS_WIZARD_DESCR$=选择要授予用户在其根目录的访问权限。只读访问允许用户浏览并下载文件。完全访问使用户能够完全掌控在其根目录内的文件和目录。
+$FULL_ACCESS$=完全访问
+$PLEASE_ENTER_USER_NAME$=请输入登录 ID。
+$PLEASE_ENTER_HOME_DIR$=请输入根目录。
+$USER_EMAIL_WIZARD_DESCR$=电子邮件地址可以留空，也可用于向客户端发送电子邮件。
+
+
+<!-- **************** DomainGroups.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_GROUPS_TAB$=域群组
+<!-- Main Page -->
+$DOMAIN_GROUPS_INFO$=创建、修改和删除活动域内的群组。
+<!-- Groups Tab -->
+$DOMAIN_GROUPS_TAB_DESCRIPTION$=该列表显示此域中用户账户可用的群组。使用群组，您可以向身份为群组成员的每个用户账户指定账户设置。账户可以是多个群组的成员。群组设置可以被用户账户级别的相应设置覆盖。
+
+
+<!-- **************** ServerGroups.htm **************** -->
+<!-- Java Script -->
+$SERVER_GROUPS_TAB$=全局群组
+<!-- Main Page -->
+$SERVER_GROUPS_INFO$=创建、修改和删除文件服务器上全局账户使用的全局群组。
+<!-- Groups Tab -->
+$SERVER_GROUPS_TAB_DESCRIPTION$=该列表显示了文件服务器上全局用户账户可用的全局群组。该群组只能由全局用户账户组成。使用群组，您可以向身份为群组成员的每个用户账户指定账户设置。账户可以是多个群组的成员。群组设置可以被用户账户级别的相应设置覆盖。
+
+
+<!-- **************** GroupsInclude.htm **************** -->
+<!-- Java Script -->
+$SELECT_ONLY_ONE_GROUP_EDIT$=请只选择一个要编辑的群组。
+$SELECT_ONE_GROUP_EDIT$=请选择一个要编辑的群组。
+$SELECT_A_GROUP_TO_DELETE$=请选择要删除的群组。
+$ASK_DELETE_GROUP$=您确定要删除选中的群组吗？
+$GROUP_TEMPLATE_INFO$=配置群组模板有助于更快地创建新群组。创建新群组时，从模板群组中获取其默认设置。
+$DEFAULT_GROUP_TEMPLATE$=默认群组模板
+$GROUP_LIMITS_TAB_INFO$=限制按其所负责配置的服务器的区域进行分组。限制允许对相同的选项根据时间和星期几指定多个限制值。群组级别的限制可以覆盖域和服务器级别的限制，但无法覆盖用户级别的限制。
+$ODBC_GROUPS_NOT_CONFIGURED$=当前尚未配置数据库。在管理数据库群组前必须先配置数据库连接。
+$SELECT_GROUPS_TO_MOVE$=请选择要移动的群组。
+$CONFIRM_MOVE_GROUP_START$=您确定要移动
+$CONFIRM_MOVE_ODBC_GROUP_END$=群组至数据库群组集合吗？
+$CONFIRM_MOVE_GROUP_END$=数据库群组至群组集合吗？
+
+<!-- Groups Tab -->
+$GROUP_PROPERTIES$=群组属性
+$DEFAULT_GROUP_BUTTON$=模板
+$ENABLE_DEFAULT_GROUP$=用户群组模板
+$WINDOWS_AUTH_GROUP_CONFIG$=配置 Windows 用户群组
+$WINDOWS_AUTH_GROUP_NAME$=默认 Windows 用户群组
+$MOVE_GROUP_BUTTON$=移动群组
+$OU_GROUP_CONFIG$=配置 OU 群组
+$REQUIRE_FULL_QUAL_GRP_MEMB$=需要完全资格的群组成员进行登录
+
+<!-- ODBC Groups Tab -->
+$ODBC_GROUPS_TAB_NAME$=数据库群组
+$ODBC_GROUPS_TAB_INFO$=数据库群组从指定的 ODBC 数据源加载。它们用来作为本地群组数据库的补充。要更改以该方式存储的群组，可以使用此接口或数据库支持的接口。
+
+<!-- Windows Groups Tab -->
+$WINDOWS_GROUPS_TAB_NAME$=Windows 群组
+$WINDOWS_GROUPS_TAB_INFO$=创建与维护表示您 Windows 部门（OU）设置的群组。规划您的群组以匹配所用名称与您域的活动目录配置中所用名称相同的 Windows 部门。作为部门成员的 Windows 活动目录用户使用这些群组设置。这些用户可以是此列表中定义的任何分部的成员。所有的 Windows 验证用户也是“Windows 用户群组”的成员。
+$WIN_AUTH_TURNED_OFF$=当前已禁用 Windows 群组。要启用该群组，请前往 \“用户 | Windows 验证\”选项卡并启用选择框以使用 Windows 验证。<br \/><br \/>
+$ADD_CHILD_BUTTON$=添加子项
+$SELECT_ONLY_ONE_GROUP_PARENT_EDIT$=请选择要添加子项的唯一群组。
+$SELECT_ONE_GROUP_PARENT_EDIT$=请选择一个要添加子项的群组。
+
+<!-- **************** ServerDir.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$SERVER_DIRECTORIES_PAGE_INFO$=配置文件服务器上所有用户都可以使用的基本目录结构，包括默认目录的访问规则和虚拟路径。
+<!-- Directory Access Tab -->
+$SERVER_DIR_ACCESS$=服务器目录访问规则是全局规则，定义了该文件服务器上所有用户都可以访问的文件和目录。这些规则可以被域、群组和用户级别上制定的规则覆盖。
+
+
+<!-- **************** DomainDir.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$DOMAIN_DIRECTORIES_PAGE_INFO$=配置域内所有用户都可以使用的基本目录结构，包括默认目录的访问规则和虚拟路径。
+<!-- Directory Access Tab -->
+$DOMAIN_DIR_ACCESS$=域目录访问规则是全局规则，定义了该域内所有用户都可以访问的文件和目录。这些规则可以被群组和用户级别上制定的规则覆盖。
+
+
+<!-- **************** ServerLimits.htm **************** -->
+<!-- Main Page -->
+$SERVER_LIMITS$=服务器限制和设置
+$SERVER_LIMITS_PAGE_TITLE$=服务器限制和设置
+$SERVER_LIMITS_INFO$=限制和设置用于配置整个文件服务器的基本设置和行为，包括 FTP 命令处理器定制和 SSL/SSH 加密证书选项。在此级别配置的限制和设置被所有域、群组和用户继承。
+$SERVER_LIMITS_TAB_INFO$=限制按其所负责配置的服务器的区域进行分组。限制允许对相同的选项根据时间和星期几指定多个限制值。服务器级别的限制可以被域、群组和用户级别设置的限制覆盖。
+$SERVER_SETTINGS_TAB_INFO$=服务器级别的设置可以配置文件服务器的全局行为。一些设置如果未被覆盖，则作为域、用户账户和群组的默认值。有关每项设置的详细信息，请参见帮助文档。
+$SERVER_ENCRYPTION_TAB_INFO$=配置文件服务器的加密选项。在服务器级别指定的加密选项除非被其他信息覆盖，否则将作为域级别的默认设置。高级 SSL 和 SSH 加密选项仅可以在服务器级别进行配置。
+
+
+<!-- **************** DomainLimits.htm **************** -->
+<!-- Main Page -->
+$DOMAIN_LIMITS$=域限制和设置
+$DOMAIN_LIMITS_PAGE_TITLE$=域限制和设置
+$DOMAIN_LIMITS_INFO$=限制和设置用于配置该域的基本设置和行为，包括 FTP 命令处理器定制和 SSL/SSH 证书规范。
+$DOMAIN_LIMITS_TAB_INFO$=限制按其所负责配置的域的区域进行分组。限制允许对相同的选项根据时间和星期几指定多个限制值。域级别的限制可以覆盖在服务器级别指定的限制。
+$DOMAIN_SETTINGS_TAB_INFO$=域级别的设置可以覆盖在服务器级别指定的设置。一些设置如果未被覆盖，则也作为该域的用户账户和群组的默认值。有关每项设置的详细信息，请参见帮助文档。
+$DOMAIN_ENCRYPTION_TAB_INFO$=配置该域的加密选项，这些选项将覆盖服务器级别的设置。加密选项可用于基于 SSL 和 SSH 的连接。要使用在服务器级别指定的默认选项，请将证书和私钥路径留空。
+$CERTIFICATE_SHARE_NOTE$=<strong>注意：</strong>共享监听器的域对于每种加密方式只能使用一个证书。
+
+
+<!-- **************** LimitsInclude.htm **************** -->
+<!-- Limits Tab -->
+$LIMITS_TAB$=限制
+<!-- Settings Tab -->
+$LOCAL_ADMIN_CHANGE_PASSWORD_TITLE$=更改本地管理员密码
+$CONNECTION_GROUP$=连接设置
+$AH_CHECK_LABEL$=阻止用户，其连接次数超过
+$AH_TIMES_WITHIN$=次，每次不超过
+$AH_SECONDS_FOR$=秒，持续时间
+$SSH_HIDE_SERVER_ID$=从 SSH 标识里隐藏服务器信息
+$EDIT_RATIO_FREE_FILES$=上传/下载率不限的文件
+$CLIENT_SUPPORT_LINK$=客户端支持链接
+$CUSTOM_LOGO$=自定义标志
+$CUSTOM_LOGO_TITLE$=自定义 HTTP 标志、登录页面文本与标题
+$CUSTOM_LOGO_PATH$=自定义标志路径
+$CUSTOM_LOGO_NOTE$=<strong>请注意：</strong> 自定义标志图像的尺寸必须为宽 400 像素 X 高 100 像素
+$PASSWORD_RECOVERY_EMAIL_GROUP$=密码恢复消息
+$PR_CHECK_LABEL$=使用继承默认消息
+$INTEGRATION_DLL_PATH$=集成 DLL 路径
+$INTEGRATION_DLL_GROUP$=集成 DLL
+$INTEGRATION_DLL_TEXT$=使用 Serv-U 中的集成 DLL 功能需要您拥有编写 Windows 软件的能力。切勿在此处指定 DLL 除非您亲自编写过 DLL，或知晓其来自可信源。若决定使用外部 DLL 则需慎重考虑使用自编软件的安全性。要了解有关编写集成 DLL 的更多信息，请阅读帮助文件。
+$FOR_PERMANENTLY$=永久性
+$CUSTOM_LOGIN_TEXT$=HTTP 登录页面文本
+$HTTP_LOGIN_TEXT_GROUP$=自定义 HTTP 登录消息
+$CUSTOM_TITLE_TEXT$=HTTP 登录标题文本（无 HTML）
+
+<!-- FTP Command Processor Tab -->
+$FTP_COMMANDS_TAB$=FTP 设置
+$SERVER_FTPCP_TAB$=FTP 命令处理器默认情况下用于所有域。它可以配置高级行为，如对 FTP 命令的文本响应、FTP 命令设置，或甚至禁止客户端使用 FTP 命令。这些设置可以被域级别的设置覆盖。
+$DOMAIN_FTPCP_TAB$=域 FTP 命令处理器可以覆盖在服务器级别指定的相应设置。它可以配置高级行为，如对 FTP 命令的文本响应、个别 FTP 命令的设置，或甚至禁止客户端使用 FTP 命令。
+$FTPCP_USE_DEFAULT$=用户默认设置
+$FTPCP_USE_OVERRIDE$=用户定制设置
+$FTP_COMMAND$=命令
+$FTPCP_DEFAULT$=该域当前使用文件服务器定义的默认 FTP 命令设置和响应。要覆盖这些设置，请单击 \"$FTPCP_USE_OVERRIDE$\" 按钮。
+$FTPCP_OVERRIDE$=该域当前使用定制的 FTP 命令和响应。要还原为由文件服务器定义的默认设置，请单击 \"$FTPCP_USE_DEFAULT$\" 按钮。
+$CONFIRM_FTPCP_DELETE$=还原为默认设置将删除您定制的 FTP 命令设置和响应。域随后将使用服务器的 FTP 命令设置和响应。您确定要使用默认设置吗？
+$SELECT_ONE_COMMAND_EDIT$=请选择要编辑的 FTP 命令。
+$GLOBAL_PROPERTIES$=全局属性
+$DISABLE_COMMAND$=禁用命令
+$ENABLE_COMMAND$=启用命令
+$FIPS_NOTE$=<strong>注意：</strong>在使用 FIPS 140-2 模式时，某些客户端将不再运行。（适用于 SSH 与 SSL）
+$SSL_OPTION_NOT_AVAILABLE$=<strong>注意：</strong>启用 FIPS 140-2 模式会覆盖这些选项。
+$FIPS_OPTIONS$=FIPS 选项
+<!-- Encryption Tab -->
+$ENCRYPTION_TAB$=加密
+$SSL_CERTIFICATE_OPTIONS$=SSL 证书（用于 FTPS 和 HTTPS）
+$SSH_PRIVATE_KEY_OPTIONS$=SSH 私钥（用于 SFTP）
+$CERTIFICATE$=证书路径
+$PRIVATE_KEY$=私钥路径
+$CACERTIFICATE$=CA（证书颁发机构）证书路径
+$VIEW_CERTIFICATE$=查看证书
+$CREATE_CERTIFICATE$=创建证书
+$CREATE_PRIVATE_KEY$=创建私钥
+$SSL_OPTIONS$=高级 SSL 选项
+$SSL_WEAK_CIPHERS$=启用安全性低的 SSL 密码
+$SSL_DISABLE_V2$=禁用 SSLv2 支持
+$SSH_CIPHERS$=SSH 密码
+$SSH_MACs$=SSH MAC
+$SSH_AES128$=AES-128
+$SSH_3DES$=三重 DES
+$SSH_Blowfish$=Blowfish
+$SSH_AES192$=AES-192
+$SSH_AES256$=AES-256
+$SSH_CAST128$=CAST-128
+$SSH_CBC$=CBC
+$SSH_MACMD5$=MD5
+$SSH_MACSHA1$=SHA1
+$SSH_MACSHA1_96$=SHA1 96
+
+
+<!-- **************** ServerSettingsTab.htm **************** -->
+$NETWORK_SETTINGS$=网络设置
+$ENABLE_UPNP$=通过 UPnP 自动配置防火墙
+$PACKET_TIMEOUT$=数据包超时
+$SECONDS$=秒
+$PASV_PORT_RANGE$=PASV 端口范围
+$ADVANCED_SETTINGS$=高级设置
+$DIR_LISTING_MASK$=目录列表掩码
+$MAX_SIMUL_THUMBS$=最大同步缩略图
+$UPLOAD_FILE_MODE$=文件上传访问
+$DOWNLOAD_FILE_MODE$=文件下载访问
+$FILE_MODE_READ$=允许读取访问
+$FILE_MODE_DENY$=不允许访问
+$FILE_MODE_FULL$=允许完全访问
+$ADMIN_PASSWORD_BUTTON$=更改管理密码
+
+
+<!-- **************** RatioQuotaDialog.htm **************** -->
+$RATIO_QUOTA_DIALOG_TITLE$=传输率和配额管理
+$RATIO_GROUP$=传输率
+$RATIO_ENABLE$=启用传输率
+$RATIO_FPS$=计算每个会话的文件数
+$RATIO_BPS$=计算每个会话的字节数
+$RATIO_FAS$=计算所有会话的文件数
+$RATIO_BAS$=计算所有会话的字节数
+$RATIO_LABEL$=上传/下载率
+$RATIO_UPLOADS$=上传
+$RATIO_DOWNLOADS$=下载
+$RATIO_CREDIT$=信用额度
+$QUOTA_GROUP$=配额
+$QUOTA_MAXIMUM$=最大
+$QUOTA_CURRENT$=当前
+
+
+<!-- **************** RatioFreeFilesDialog.htm **************** -->
+$RATIO_FREE_FILE_DIALOG_TITLE$=上传/下载率不限的文件
+$RATIO_FREE_FILE_INFO$=上传/下载率不限的文件在传输时可以不受任何指定的上传或下载率影响。可以指定个别文件，或使用通配符（"*" 和 "?"）作为文件名掩码。不带路径的文件名将应用于所有目录中文件名与之匹配的文件。
+$RATIO_FREE_FILE_EDIT_DIALOG_TITLE$=上传/下载率不限的文件信息
+$FREE_FILE_PATH$=上传/下载率不限的文件路径
+$FREE_FILE_MASK_EMPTY$=请指定上传/下载率不限的文件使用的文件路径或掩码。
+$SELECT_ONLY_ONE_RATIO_FREE_FILE_EDIT$=请只选择一个要编辑的上传/下载率不限的文件。
+$SELECT_ONE_RATIO_FREE_FILE_EDIT$=请选择一个要编辑的上传/下载率不限的文件。
+$SELECT_RATIO_FREE_FILE_DELETE$=请选择要删除的上传/下载率不限的文件。
+$ASK_DELETE_RATIO_FREE_FILE$=您确定要删除选中的上传/下载率不限的文件吗？
+
+
+<!-- **************** NewCertificateDialog.htm **************** -->
+$NEW_CERTIFICATE_DIALOG_TITLE$=新建证书
+$NEW_CERTIFICATE_INFO$=该实用程序将根据提供的信息创建自签署的证书 (.crt)，以及证书请求文件 (.csr) 和私钥文件 (.key)。
+$CERT_OUTPUT_GROUP$=输出
+$CERT_SET_NAME$=证书设置名称
+$CERT_OUTPUT_PATH$=输出路径
+$CERT_INFORMATION$=证书信息
+$CERT_CITY_TOWN$=市/县
+$CERT_STATE_PROVINCE$=省/自治区/直辖市
+$CERT_COUNTRY$=国家（2 个字母缩写）
+$CERT_PASSWORD$=密码
+$CERT_ORGANIZATION$=组织
+$CERT_COMMON_NAME$=公用名称
+$CERT_DOMAIN_NAME$=域名
+$CERT_UNIT$=单位
+$NEW_CERT_EMPTY_FIELD$=必须填写所有字段以创建证书文件。
+$NEW_CERT_TWO_DIGIT_COUNTRY$=请输入证书的两位数字国家代码。
+$NEW_CERT_USE_NOW$=证书创建完成。三个证书文件已位于指定的输出路径中。您要立即使用新证书吗？
+
+
+<!-- **************** ViewCertificateDialog.htm **************** -->
+$VIEW_CERTIFICATE_DIALOG_TITLE$=查看证书
+$CERT_ISSUER_GROUP$=发行机构
+$CERT_SUBJECT_GROUP$=主题
+$CERT_VALID_GROUP$=有效日期
+$CERT_COUNTRY_VIEW$=国家
+$CERT_FROM$=发布者
+$CERT_THROUGH$=方式
+
+
+<!-- **************** NewCertificateDialog.htm **************** -->
+$NEW_PRIVATE_KEY_DIALOG_TITLE$=新建私钥
+$NEW_PRIVATE_KEY_INFO$=该实用程序将新建用于 SSH 安全会话的私钥。密钥长度越长，则会话越安全，但也会对性能有一定的负面影响。
+$PRIVATE_KEY_OUTPUT_GROUP$=输出
+$PRIVATE_KEY_NAME$=私钥名称
+$PRIVATE_KEY_OUTPUT_PATH$=输出路径
+$PRIVATE_KEY_INFORMATION$=私钥信息
+$PRIVATE_KEY_TYPE$=密钥类型
+$PRIVATE_KEY_TYPE_DSA$=DSA（大多数服务器支持）
+$PRIVATE_KEY_TYPE_RSA$=RSA
+$PRIVATE_KEY_LENGTH$=密钥长度（以比特为单位）
+$PRIVATE_KEY_LEN_1024$=1024（性能最佳）
+$PRIVATE_KEY_LEN_4096$=4096（安全性最强）
+$PRIVATE_KEY_PASSWORD$=密码
+$NEW_PRIVATE_KEY_EMPTY_FIELD$=请输入私钥名称和输出路径。
+$NEW_PRIVATE_KEY_USE_NOW$=私钥创建完成。您要立即使用新私钥吗？
+<!-- **************** NewSSHKeyPairDialog.htm **************** -->
+$SSH_KEY_PAIR_OUTPUT_GROUP$=密钥对输出
+$SSH_KEY_PAIR_NAME$=密钥对名称
+$SSH_PUBLIC_KEY_INFORMATION$=密钥信息
+$NEW_SSH_KEY_PAIR_INFO$=该工具创建新的 SSH 密钥对文件，以供 SSH 安全会话使用。密钥长度越长，它所提供的安全性越强。不过，较长的密钥长度可能会对性能产生消极影响。
+$NEW_SSH_KEY_PAIR_DIALOG_TITLE$=新建 SSH 密钥对
+$NEW_PUBLIC_KEY_USE_NOW$=密钥对创建完成。您要立即使用新的公共密钥吗？
+<!-- **************** FTPCommandDialog.htm **************** -->
+$FTP_COMMAND_DIALOG_TITLE$=FTP 命令属性
+$FTP_RESPONSES$=FTP 响应
+$COMMAND_RESPONSE_INFO$=以下列出了为了回应命令而可能发送的响应。每个代码的响应文本可以进行定制。
+$RESPONSE_CODE$=代码
+$RESPONSE_TEXT$=响应文本
+$ADVANCED_OPTIONS$=高级选项
+<!-- FTP Response Dialog -->
+$FTP_RESPONSE_DIALOG_TITLE$=编辑 FTP 响应文本
+$EDIT_RESPONSE_INFO$=每个 FTP 响应的文本部分都能进行编辑。响应中还可以插入特殊的变量。更多信息，请参见帮助文档。
+$SELECT_ONE_RESPONSE_EDIT$=请选择要编辑的 FTP 响应。
+<!-- Information Tab -->
+$INFORMATION$=信息
+$COMMAND_GENERAL_INFO$=以下显示了 FTP 命令及其使用的摘要。有关命令的更多详细信息，请查看以下链接。可以将个别命令禁用，因此客户端发送该命令时便无法被服务器识别。
+$ADDTL_INFO$=更多信息
+$CLICK_ADDTL_INFO$=单击此处获取关于命令的更多信息
+<!-- Message File Tab -->
+$SECOND_MSG_FILE_INFO$=如果找不到以上指定的文件，则使用消息文件次要路径。这在消息文件主要路径与用户的当前工作目录有关时非常有用。
+$SECOND_MSG_FILE$=消息文件次要路径
+$MSG_FILE_FTPCP$=该消息文件用于向 FTP 用户指定登录消息。当客户端连接到 FTP 服务器时，该消息文件的内容将与常规 FTP 问候一起发送给客户端。
+$MSG_FILE_CDUP$=当用户更改其当前的工作目录时，消息文件的内容将与对该命令的常规响应一起发送给客户端。消息文件支持使用符号参数的用户。更多信息，请参见帮助文档。
+$MSG_FILE_CWD$=$MSG_FILE_CDUP$
+$MSG_FILE_QUIT$=当用户终止其 FTP 会话时，消息文件的内容将与对该命令的常规响应一起发送给客户端。消息文件支持使用符号参数的用户。更多信息，请参见帮助文档。
+<!-- LIST Advanced Tab -->
+$DIR_LIST_STYLE$=目录列表样式
+$LIST_ADVANCED_INFO$=对 LIST 命令的响应格式可以配置如下。大多数情况下，默认设置可以用于多数 FTP 客户端。
+$LIST_STYLE_UNIX$=UNIX 样式列表（默认）
+$LIST_STYLE_IIS$=IIS 样式列表
+$LIST_STYLE_DOS$=DOS 样式列表
+$ALLOW_LIST_STYLE_CHANGE$=允许客户端使用命令指令的方式更改 LIST 样式
+$ALLOW_LIST_FULL_PATH$=在列出特定文件时列出文件\的完整路径。
+<!-- MKD Advanced Tab -->
+$MKD_ADVANCED_INFO$=如果指定的父目录不存在，它们会自动创建。
+$ALLOW_CREATE_PARENT_DIR$=允许 MKD 命令创建不存在的父目录。
+<!-- MDTM Advanced Tab -->
+$MDTM_ADVANCED_INFO$=MDTM 命令可以扩展为允许客户机修改远程文件的日期和时间。使用以下复选框以配置该行为。
+$MDTM_CHANGE_TIME$=允许 MDTM 命令更改文件日期 / 时间
+$MDTM_BLOCK_FUTURE$=阻止将来的日期和时间
+<!-- NLST Advanced Tab -->
+$NLST_ADVANCED_INFO$=通常使用 NLST 命令只能列出文件。选中以下复选框则该命令还可以列出目录。
+$NLST_LIST_DIRS$=NLST 命令也列出目录
+$NLST_LIST_EMPTY$=列出空目录而非返回 550 错误
+<!-- FTPCP Advanced Tab -->
+$FTPCP_ADVANCED_INFO$=通常情况下可以将以下选项应用于 FTP 协议。关于每个选项的更多信息，请参见帮助文档。
+$FTPCP_BLOCK_FXP$=阻止 \"FTP_bounce\" 攻击和 FXP（服务器间传输）
+$FTPCP_INC_RESP_CODE$=包含多行响应中所有行的响应代码
+$FTPCP_UTF8_DEFAULT$=对所有已收发的路径和文件名使用 UTF-8 编码
+
+
+<!-- **************** ImportExportUsersDialog.htm **************** -->
+$EXPORT_USER_PATH$=导出文件路径
+$IMPORT_USER_PATH$=导入文件路径
+$IMPORT_USER_DIALOG_TITLE$=导入用户
+$EXPORT_USER_DIALOG_TITLE$=导出用户
+$IMPORT_MSG$=已从文件导入用户：
+$IMPORT_MSG_EXIST1$=已导入用户。
+$IMPORT_MSG_EXIST2$=用户已存在，并非从文件导入：
+$EXPORT_MSG$=已导出用户到文件：
+$EXPORT_USERS_CONFIRM$=您要导出所有用户吗？
+$EXPORT_USERS_YES_CONFIRM$=回答 \"是\" 则导出此域/服务器中的所有用户。
+$EXPORT_USERS_NO_CONFIRM$=回答 \"否\" 则仅导出此用户类别中的用户。
+<!-- Java Script -->
+$PLEASE_ENTER_IMPORT_PATH$=请输入您希望导入的文件路径。
+$PLEASE_ENTER_EXPORT_PATH$=请输入您要将用户导出的路径与文件名。
+<!-- **************** DomainActivity.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$DOMAIN_ACTIVITY_INFO$=显示关于当前域的活动和日志的信息。使用设置选项卡可以配置文件和实时日志信息。
+<!-- Sessions Tab -->
+$SESSIONS_TAB$=会话
+$SESSIONS_INFO$=有关当前活动会话的信息显示如下。在此您可以查看会话信息，与用户交谈或阻止用户。
+<!-- User and Group Stats Tab -->
+$USER_GROUP_STATS_SELECTION$=用户或群组统计选择
+$USER_GROUP_STATS_TAB$=用户和群组统计
+$USER_STATS$=用户统计
+$SELECT_USER_STATS$=用户
+$USER_GROUP_STATS_INFO$=查看用户与群组的统计，包括会话信息，传输统计以及活动总计。
+$GROUP_STATS$=群组统计
+$SELECT_GROUP_STATS$=群组
+$SELECT_COLLECTION$=集合
+$SAVE_STATS_BUTTON$=保存统计
+<!-- Stats Tab -->
+$STATS_TAB$=统计
+$DOMAIN_STATS_INFO$=查看关于当前域的统计信息，包括会话信息、传输统计和当前活动的总计。
+<!-- Log Tab -->
+$LOG_DISPLAY_INFO$=当前域的日志显示如下并实时更新。要暂停实时更新，请选中 "冻结日志" 复选框。
+$LOG_TAB$=日志
+$FREEZE_LOG$=冻结日志
+$LEGEND_BUTTON$=图例
+$LOG_LEGEND$=日志图例
+$FILTER_BUTTON$=筛选
+$FILTER_LOG_BUTTON$=筛选日志
+$FILTER_DIALOG_TITLE$=按字符串显示的筛选日志
+$LOG_FILTER_INFO$=日志将仅包含输入的字符串内容。
+$RESET_BUTTON$=重置
+$COPY_CLIPBOARD$=复制到剪贴板
+<!-- Settings Tab -->
+$LOG_SETTINGS_INFO$=使用左边的复选框来配置活动日志的记录方式。使用右边的设置管理信息记录到文件的方式。
+$LOG_FILE_LABEL$=文件
+$LOG_SCREEN_LABEL$=屏幕
+$LOG_FILE_PATH$=日志文件路径名称
+$ENABLE_LOG_TO_FILE$=启用记录到文件
+$SYSTEM_MESSAGES_LABEL$=系统消息
+$SECURITY_MESSAGES_LABEL$=安全消息
+$IP_NAMES_LABEL$=IP 名称
+$DOWNLOADS_LABEL$=下载
+$UPLOADS_LABEL$=上传
+$FILE_DELETIONS_LABEL$=文件删除
+$FILE_AND_DIRECTORY_RENAMES_LABEL$=文件和目录重命名
+$DIRECTORY_CREATIONS_LABEL$=目录创建
+$DIRECTORY_DELETIONS_LABEL$=目录删除
+$ODBC_CALLS_LABEL$=ODBC 调用
+$ODBC_ERRORS_LABEL$=ODBC 错误
+$TRIGGERED_EVENT_LABEL$=触发事件
+$FTP_COMMANDS_LABEL$=FTP 命令
+$FTP_REPLIES_LABEL$=FTP 应答
+$SSH_COMMANDS_LABEL$=SSH 命令
+$SSH_REPLIES_LABEL$=SSH 应答
+$HTTP_COMMANDS_LABEL$=HTTP 命令
+$HTTP_REPLIES_LABEL$=HTTP 应答
+$LOG_FILE_SETTINGS$=记录到文件设置
+$LOG_FILE_PARAMETERS_LABEL$=日志文件路径标记
+$DAY_OF_MONTH_LABEL$=日
+$MONTH_TEXT_LABEL$=月（文本）
+$MONTH_NUMBER_LABEL$=数字表示的月份 (1-12)
+$4_DIGIT_YEAR_LABEL$=四位数字表示的年份
+$2_DIGIT_YEAR_LABEL$=两位数字表示的年份
+$DOMAIN_NAME_LABEL$=域名
+$LOG_ROTATE_SETTING$=自动循环更新日志文件
+$LOG_ROTATE_NEVER_DESC$=从不
+$LOG_ROTATE_DAILY_DESC$=每日
+$LOG_ROTATE_WEEKLY_DESC$=每周
+$LOG_ROTATE_MONTHLY_DESC$=每月
+$LOG_ROTATE_YEARLY_DESC$=每年
+$LOG_IP_ACCESS_BUTTON$=不记入日志的 IP
+$PLEASE_ENTER_LOG_FILE_NAME$=请确定包含日志文件的文件名
+$LOG_FILE_NAMING_EXAMPLES$=示例：<br>/Serv-U-Log.txt<br>/Serv-U-Log%M.txt<br>/Serv-U-Log%N-%Y.txt<br>/Serv-U-Log%N-%D-%Y.txt<br>/Serv-U-Log-%S.txt
+$KEEP_UP_TO$=保持到
+$LOG_EXCEED_FILES$=日志文件。
+$LOG_EXCEED_BYTES$=MB 日志文件。
+$ZERO_NO_DELETE$=0 为保存所有日志文件
+
+<!-- **************** LogIPAccessListDialog.htm **************** -->
+$LOG_IP_ACCESS_LIST_DIALOG_TITLE$=不记入日志的 IP 规则
+$LOG_IP_ACCESS_LIST_INFO$=以下 IP 规则表示不用记录到日志的 IP 地址。该规则可应用于屏幕日志和/或文件日志。
+$APPLIES_TO$=应用于
+$LOG_FILE$=文件
+$LOG_SCREEN$=屏幕
+$LOG_BOTH$=二者
+$LOG_NONE$=禁用
+
+
+<!-- **************** LogIPAccessDialog.htm **************** -->
+$LOG_IP_ACCESS_DIALOG_TITLE$=不记入日志的 IP 规则
+$LOG_APPLY_SCREEN$=应用到屏幕
+$LOG_APPLY_FILE$=应用到文件
+
+
+<!-- **************** ServerActivity.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$SERVER_ACTIVITY_INFO$=显示关于文件服务器上所有域的用户会话信息并对其进行管理。日志表显示整个服务器范围内的消息和信息。
+<!-- Stats Tab -->
+$SERVER_STATS_INFO$=查看整个文件服务器中所有域的统计信息，包括会话信息、传输统计和当前活动的总数。
+<!-- Log Tab -->
+$SERVER_LOG_DISPLAY_INFO$=服务器日志显示如下并实时更新。服务器日志包含启动信息、全局消息和错误。
+
+
+<!-- **************** DomainAttrStats.htm **************** -->
+<!-- HTML -->
+$UP_TIME$=连续运行时间
+$SESSIONS_CURRENT$=当前会话
+$SESSIONS_LAST_DAY$=24 小时会话
+$SESSIONS_TOTAL$=会话总计
+$SESSIONS_PASSWORD_CHANGED_ON$=上一次更改的密码
+$SESSIONS_MAX$=最大会话数量
+$SESSIONS_AVG_TIME$=平均会话长度
+$SESSIONS_LONGEST$=最长会话
+$TRANSFER_DL_SPEED$=下载速度
+$TRANSFER_AVG_DL_SPEED$=平均下载速度
+$TRANSFER_DOWNLOADED$=已下载
+$TRANSFER_UL_SPEED$=上传速度
+$TRANSFER_AVG_UL_SPEED$=平均上传速度
+$TRANSFER_UPLOADED$=已上传
+$LOGIN_STATS_LOGINS$=登录
+$LOGIN_STATS_LOGOUTS$=注销
+$LOGIN_STATS_CURRENT_LOGINS$=当前已登录
+$LOGIN_STATS_MOST_CURRENT_LOGINS$=最多登录
+$LOGIN_STATS_LAST_LOGIN$=最后登录时间
+$LOGIN_STATS_LAST_LOGOUT$=最后注销时间
+$LOGIN_STATS_AVERAGE_LOGIN_SEC$=平均登录时间
+$LOGIN_STATS_LONG_LOGIN_SEC$=最长登录时间
+$LOGIN_STATS_SHORT_LOGIN_SEC$=最短登录时间
+$STATS_DURATION$=统计持续时间
+<!-- Java Script -->
+$SESSION_STATS$=会话统计
+$TRANSFER_STATS$=传输统计
+$LOGIN_STATS$=登录统计
+
+
+<!-- **************** ChangeDomainDialog.htm **************** -->
+<!-- Java Script -->
+$CHANGE_DOMAIN_BUTTON$=更改域
+<!-- Main Page -->
+
+
+<!-- **************** Common Wizard Nav Dialog **************** -->
+<!-- Java Script -->
+$NEXT_BUTTON$=下一步
+$BACK_BUTTON$=上一步
+$FINISH_BUTTON$=完成
+<!-- Main Page -->
+$STEP$=步骤
+$OF$=总步骤
+
+<!-- **************** Save Stats Dialog **************** -->
+$SAVE_STATS_DIALOG_TITLE$=保存统计到文件
+$PLEASE_ENTER_STATS_SAVE_PATH$=请输入统计文件的路径和文件名。
+$SAVE_STATS_PATH$=统计文件路径
+$SAVE_GROUP_STATS_MSG$=已将群组统计保存到文件:
+$SAVE_USER_STATS_MSG$=已将用户统计保存到文件:
+
+<!-- **************** Move Users Dialog **************** -->
+$MOVE_USERS_TITLE$=移动用户
+$MOVE_USER_DESCR$=选择您要将用户移动到的目标集合。
+$MOVE_TO_ODBC$=移至数据库
+$MOVE_TO_SERVU$=移至 Serv-U
+
+
+<!-- **************** Bubble Tip Dialogs **************** -->
+$DONT_SHOW_AGAIN$=不再显示该消息。

@@ -1,0 +1,14 @@
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<virtualpaths>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <virpath listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% <PhysicalPath>%CVirtualPath.%LIST_ID%.PhysicalPath%</PhysicalPath>
+%ADD_LIST_STRING% <VirtualPath>%CVirtualPath.%LIST_ID%.VirtualPath%</VirtualPath>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING% </virpath>
+%CGroup.%ID%.VirtualPath.List%
+</virtualpaths>
+<listresult>%LIST_RESULT%</listresult>
+</response>

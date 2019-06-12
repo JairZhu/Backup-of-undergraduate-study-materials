@@ -1,0 +1,191 @@
+﻿<!-- Result.strings - For ease of localization, strings have been separated into this file.  This has result strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- ******************** RESULT CODE TEXT ******************** -->
+<!-- NOTE: This file should contain all result codes and only	-->
+<!--	   result codes, all other strings should be placed		-->
+<!--	   in other string files.								-->
+
+<!-- shared result strings -->
+$OR_CONTACT_SYSTEM_ADMIN$=eller ta kontakt med systemadministratoren for videre assistanse.
+$CONTACT_SYSTEM_ADMIN$=Vennligst ta kontakt med systemadministratoren for videre assistanse.
+
+<!-- global results -->
+$SESS_OKAY_STR$=Operasjonen ble utført.
+$SESS_FAIL_STR$=FEIL: Operasjonen kan ikke utføres.
+$SESS_PENDING_STR$=FEIL: Operasjonen er fortsatt i ferd med bli utført.
+$SESS_PERMISSION_DENIED_STR$=FEIL: Filen eller mappen du forsøker å få tilgang til er ikke tilgjengelig for deg.
+$SESS_INVALID_PARAMETER_STR$=FEIL: Operasjonen ble ikke utført. Et parameter var ugyldig.
+$SESS_BAD_SEQUENCE_OF_COMMANDS_STR$=FEIL: Feil rekkefølge av kommandoer. 
+$SESS_NOT_FOUND_STR$=FEIL: Den valgte filen eller mappen finnes ikke.
+$SESS_PATH_IS_PORT_STR$=FEIL: Den valgte stien er en Windows PORT, og operasjonen kan ikke utføres.
+$SESS_LOGIN_TOO_MANY_INVALID_TRIES_STR$=Du har forsøkt å logge inn for mange ganger.
+<!-- !!!!! $SESS_COMMAND_PENDING_STR$= -- PLEASE TRANSLATE -- -->
+$SESS_COMMAND_ABORTED_STR$=FEIL: Operasjonen fungerte ikke. Kommandoen ble avbrutt.
+$SESS_INTERNAL_ERROR_STR$=FEIL: Operasjonen kan ikke utføres, da en internfeil har oppstått.
+$SESS_ALREADY_EXISTS_STR$=FEIL: Filen eller mappen eksisterer allerede.
+$SESS_FILE_IS_DIR_STR$=FEIL: Operasjonen kan ikke utføres. Den valgte stien er en mapppe, ikke en fil.
+$SESS_DIR_IS_FILE_STR$=FEIL: Operasjonen kan ikke utføres. Den valgte stien er en fil, ikke en mappe.
+$SESS_CANT_REST_EMPTY_FILE_STR$=$SESS_FAIL_STR$
+$SESS_CANT_REST_BEYOND_EOF_STR$=$SESS_FAIL_STR$
+$SESS_CANT_SET_FILE_POS_STR$=$SESS_FAIL_STR$
+<!-- $SESS_COMPRESSED_TRANSFER_COMPLETE_STR$= -- placeholder -- -->
+$SESS_UNAUTHORIZED_IP_STR$=FEIL: Uautorisert IP-adresse.
+$SESS_TIME_OUT_STR$=FEIL: Økten ble tidsavbrutt.
+$SESS_EXCEEDED_MAX_SESSION_TIME_STR$=FEIL: Du har overgått makslengde for en økt for denne kontoen. 
+$SESS_TOO_MANY_SESSIONS_IP_STR$=FEIL: For mange økter med denne IPen.
+$SESS_TOO_MANY_SESSIONS_STR$=FEIL: For mange økter.
+$SESS_BLOCKED_STR$=Du er blitt blokkert. Vennligst forsøk igjen senere, $OR_CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_DATA_SOCKET_CONNECT_STR$= -- placeholder -- -->
+<!-- $SESS_DATA_SOCKET_CLOSED_STR$= -- placeholder -- -->
+<!-- $SESS_DECR_USER_QUOTA_STR$= -- placeholder -- -->
+$SESS_NO_FILES_FOUND_STR$=FEIL: Fant ingen filer.
+<!-- $SESS_LOCK_CONFLICT_STR$= -- placeholder -- -->
+$SESS_ADMIN_ABORTED_STR$=FEIL: Operasjonen ble avbrutt av en administrator.
+$SESS_UNAUTHORIZED_STR$=FEIL: Du er ikke logget inn, eller har blitt logget ut av en administrator.
+$SESS_CANT_DELETE_SESSION_DOMAIN_STR$=FEIL: Kan ikke slette domenet som inneholder nåværende pålogget brukerkonto.
+$SESS_NO_SUCH_PATH_STR$=Den anmodete filbanen finnes ikke. Det betyr vanligvis at morkatalogen ikke er blitt opprettet. Opprett morkatalogen før du prøver å gjøre denne operasjonen.
+<!-- !!!!! $SESS_INVALID_PATH_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SESS_PROTOCOL_NOT_ALLOWED_FOR_USER_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SESS_PERMISSION_DENIED_READ_ONLY_ADMIN_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SESS_CANT_DELETE_SELF_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- CheckUser() results -->
+$SESS_USER_OKAY_NEED_PWD_STR$=FEIL: Bruker trenger passord.
+$SESS_USER_NOT_FOUND_STR$=FEIL: Fant ikke bruker.
+$SESS_USER_OKAY_NEED_EMAIL_STR$=FEIL: Bruker trenger e-post.
+$SESS_USER_NO_ANONYMOUS_STR$=FEIL: Ingen anonym tilgang.
+$SESS_USER_NEED_SECURE_CONNECTION_STR$=Du kan bare få tilgang når du bruker en sikker nettforbindelse. $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_USER_OKAY_NEED_SKEY_PWD_STR$= -- placeholder -- -->
+
+<!-- CheckPassword() results -->
+$SESS_PASSWORD_CANT_FIND_HOME_STR$=FEIL: Det finnes ikke noe hjemmemappe for denne kontoen.
+$SESS_PASSWORD_USE_REAL_EMAIL_ADDR_STR$=Når du logger inn, vennligst bruk din faktiske e-postadresse.
+$SESS_PASSWORD_EXPIRED_CHANGE_STR$=Passordet har gått ut på dato. Vennligst velg et nytt passord for å fortsette.
+
+<!-- ChangePassword() results -->
+$SESS_CHG_PASSWORD_NO_OLD_PASSWORD_MATCH_STR$=Ditt gamle passord stemmer ikke.
+$SESS_CHG_PASSWORD_TOO_SHORT_STR$=FEIL: Det valgte passordet er for kort.
+$SESS_CHG_PASSWORD_NOT_COMPLEX_STR$=FEIL: Det valgte passordet er ikke komplekst.
+$SESS_CHG_PASSWORD_OLD_NEW_MATCH_STR$=Ditt nye passord må være noe annet enn ditt gamle passord.
+$SESS_CHG_PASSWORD_CANT_CHANGE_ANONYMOUS_STR$=Kan ikke endre til anonym.
+
+<!-- Xcrc() results -->
+<!-- !!!!! $SESS_XCRC_CANNOT_READ_FROM_FILE_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- List() results -->
+<!-- $SESS_LIST_START_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_END_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_FILE_STR$= -- placeholder -- -->
+
+<!-- Retrieve() & Store() results -->
+<!-- $SESS_RETR_DATA_STR$= -- placeholder -- -->
+$SESS_CANT_LOAD_GDI_PLUS_STR$=Internal FEIL: GDI+ kan ikke lastes inn for å utføre en operasjon.  $CONTACT_SYSTEM_ADMIN$
+$SESS_CANT_CREATE_THUMBNAIL_STR$=INTERNFEIL: Kan ikke opprette forhåndsvisning av bilde.
+$SESS_CANT_SAVE_THUMBNAIL_STR$=Internal FEIL: Kan ikke lagre den midlertidige forhåndsvisningen av bildet. Harddisken til serveren kan være full.
+<!-- $SESS_FILE_OPENED_STR$= -- placeholder -- -->
+$SESS_CANT_WRITE_STR$=INTERNFEIL: Kan ikke skrive til serverens harddisk. Serverens harddisk kan være full. $CONTACT_SYSTEM_ADMIN$
+$SESS_SERVER_STOP_PENDING_STR$=Operasjonen er ikke tilgjengelig, serveren går ned.
+$SESS_RETR_INSUFFICIENT_CREDIT_STR$=Du må laste opp før du kan laste ned. Vennligst last opp en fil før du forsøker å laste ned en fil. 
+$SESS_STOR_INSUFFICIENT_DISK_QUOTA_STR$=Du har ikke nok igjen av kvoten din. Vennligst slett noe før du forsøker å laste opp. 
+$SESS_STOR_INSUFFICIENT_DISK_SPACE_STR$=Du har ikke nok lagringsplass tilgjengelig. Vennligst slett noe før du forsøker å laste opp, $OR_CONTACT_SYSTEM_ADMIN$
+$SESS_STOR_FILE_TOO_LARGE_STR$=Filen er for stor. Du må enten slette noe for å få mer plass, eller det kan være at filen er større enn din totale tilgjengelige lagringsplass. $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_STOR_DATA_WRITTEN_STR$= -- placeholder -- -->
+<!-- !!!!! $SESS_APPE_CANT_RESTART_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- GetUniqueFileName() results -->
+<!-- !!!!! $SESS_STOU_CANT_CREATE_UNIQUE_NAME_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- SetLastWriteTime() results -->
+$SESS_FUTURE_TIME_STR$=$SESS_FAIL_STR$
+
+<!-- HTTP attribute list results -->
+<!-- $SESS_LIST_NO_CHANGE_STR$= -- placeholder -- -->
+
+<!-- SSL certificate creation results -->
+$SESS_SSL_CANT_CREATE_KEY_FILE_STR$=SSL FEIL: Kan ikke opprette nøkkelfil.
+$SESS_SSL_CANT_WRITE_KEY_FILE_STR$=SSL FEIL: Kan ikke skrive nøkkelfil.
+$SESS_SSL_CANT_CREATE_CERT_FILE_STR$=SSL FEIL: Kan ikke opprette sertifikatfil.
+$SESS_SSL_CANT_WRITE_CERT_FILE_STR$=SSL FEIL: Kan ikke skrive sertifikatfil.
+$SESS_SSL_CANT_CREATE_CERT_REQUEST_FILE_STR$=SSL FEIL: Kan ikke opprette sertifikatforespørselfil.
+
+<!-- licensing results -->
+$SESS_ID_INVALID_STR$=Den oppgitte registrerings-IDen er ikke gyldig. Vennligst skriv inn en gyldig registrerings-ID. 
+$SESS_ID_EXPIRED_STR$=Den oppgitte registrerings-IDen har gått ut på dato, og er ikke gyldig for denne versjonen av Serv-U.  Vennligst oppgi en nyere registrerings-ID.
+$SESS_LIC_TOO_MANY_DOMAINS_STR$=Du har nådd grensen for maksium antall domener som din lisens tillater. For å opprette et nytt domene må du kjøpe en oppgradert lisens. 
+$SESS_LIC_TOO_MANY_USERS_STR$=Du har nådd grensen for maksimum antall brukerkontoer som din lisens tillater. For å opprette en ny brukerkonto må du kjøpe en oppgradert lisens.
+$SESS_LIC_TOO_MANY_SESSIONS_STR$=Du har nådd grensen for maksum antall samtidige økter som din lisens tillater. For å få tilgang til flere concurrent sessions må du kjøpe en oppgradert lisens.
+$SESS_LIC_NO_REMOTE_ADMIN_STR$=Din lisens tillater ikke fjernadministrasjon av servere. For å få tilgang til fjernadministrasjon av servere må du kjøpe en oppgradert lisens.
+$SESS_LIC_NO_FVJV_STR$=FTP Voyager JV er ikke tilgjengelig med denne lisensen.
+<!-- !!!!! $SESS_LIC_NO_WEB_CLIENT_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SESS_LIC_NO_WEB_CLIENT_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- password recovery -->
+<!-- !!!!! $SESS_PASSWORD_RECOVERY_DISABLED_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SESS_PASSWORD_RECOVERY_CHANGE_DENIED_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- Port() results -->
+<!-- $FTPSESS_PORT_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PORT_INVALID_PORT_NUMBER$= -- placeholder -- -->
+
+<!-- Pasv() results -->
+<!-- $FTPSESS_PASV_UNABLE_TOSETUP_LISTEN_SOCK$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_TOO_MANY_PASV_REQUESTS$= -- placeholder -- -->
+
+<!-- Mlsd() results  -->
+<!-- $FTPSESS_MLSD_WILDCARDS_NOT_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_MLSD_PATHNAME_NOT_DIRECTORY$= -- placeholder -- -->
+
+<!-- data connection -->
+<!-- $FTPSESS_DATACHAN_IN_USE$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_OUT_OF_NETWORK_SOCKETS$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CANNOT_OPEN$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CLOSED_ABORTED$= -- placeholder -- -->
+
+<!-- validation results -->
+$SU_VALID_USER_EXISTS_STR$=FEIL: En brukerkonto med den IDen finnes allerede.
+$SU_VALID_GROUP_EXISTS_STR$=FEIL: En gruppe med det navnet finnes allerede.
+$SU_VALID_ATTR_LESS_THAN_MIN_STR$=FEIL: Den valgte verdien er for liten.  Vennligst velg en større verdi.
+$SU_VALID_ATTR_GREATER_THAN_MAX_STR$=FEIL: Den valgte verdien er for stor. Vennligst velg en mindre verdi.
+$SU_VALID_INVALID_RESPONSE_CODE_FORMATTING_STR$=FEIL: Denne FTP-kommandoen krever spesifike format-strenger for å vises. Vennligst bevar format-strengene når du redigerer svarteksten.
+$SU_VALID_PATH_CONTAINS_WILDCARD_CHARS_STR$=$SESS_FAIL_STR$
+$SU_VALID_EMPTY_PHYSICAL_PATH_STR$=FEIL: Vennligst velg en fysisk sti.
+$SU_VALID_EMPTY_VIRTUAL_PATH_STR$=FEIL: Vennligst velg en virtuell sti.
+$SU_VALID_LOGIN_ID_EMPTY_STR$=FEIL: Vennligst velg en unik logg-inn ID for brukeren.
+$SU_VALID_GROUP_NAME_EMPTY_STR$=FEIL: Vennligst velg et unikt navn for gruppen.
+$SU_VALID_DOMAIN_EXISTS_STR$=FEIL: Et domene med det navnet finnes allerede.
+$SU_VALID_ORGANIZATION_EXISTS_STR$=FEIL: En brukerorganisasjon med det navnet finnes allerede.
+$SU_VALID_PERMISSION_DENIED_STR$=FEIL: Adgang nektes.
+<!-- !!!!! $SU_VALID_UNABLE_TO_CREATE_SSL_METHOD_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_UNABLE_TO_CREATE_SSL_CONTEXT_STR$= -- PLEASE TRANSLATE -- -->
+$SU_VALID_CERT_PATH_IS_EMPTY_STR$=FEIL: Vennligst velg en gyldig stil til en sertifikatfil.
+$SU_VALID_UNABLE_TO_LOAD_CERT_FILE_STR$=FEIL: Kan ikke laste sertifikat. Vennligst sjekk at stien er riktig.
+$SU_VALID_UNABLE_TO_LOAD_PRIVATE_KEY_FILE_STR$=FEIL: Kan ikke laste den private nøkkelfilen. Vennligst sjekk at stien og det private nøkkel-passordet stemmer.
+<!-- !!!!! $SU_VALID_UNABLE_TO_LOAD_OPENSSL_STR$= -- PLEASE TRANSLATE -- -->
+$SU_VALID_PHYSICAL_PATH_INVALID_STR$=FEIL: Den oppgitte fysiske stien er ugyldig. 
+$SU_VALID_VIRTUAL_PATH_INVALID_STR$=FEIL: Den oppgitte virtuelle stien er ugyldig. 
+$SU_VALID_HOST_NAME_EXISTS_STR$=FEIL: Det oppgitte virtuelle domenenavnet er allerede i bruk.
+$SU_VALID_FTP_RESP_REQUIRES_COMMAND_RESULT_STR$=FEIL: FTP-kommando responsen må inneholde $CommandResult makroen for å fungere som den skal. 
+$SU_VALID_FTP_RESP_READ_ONLY_STR$=FEIL: Den valgte FTP-kommando responsen er read-only, og kan ikke endres.
+$SU_VALID_USER_CANNOT_BE_ADMIN_STR$=FEIL: Domene-admin kan ikke opprette en ny admin.
+$SU_VALID_GROUP_CANNOT_BE_ADMIN_STR$=FEIL: Domene-admin kan ikke opprette en ny admingruppe.
+$SU_VALID_HOME_DIR_CANNOT_CONTAIN_HOME_VAR_STR$=FEIL: Hjemmemappen kan ikke inneholde %HOME% makroen.
+<!-- !!!!! $SU_VALID_CANNOT_LOAD_GDI_PLUS_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_NOT_AN_IMAGE_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_INVALID_IMAGE_SIZE_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_NOT_FOUND_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_SUBJECT_EMPTY_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_BODY_EMPTY_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_TO_ADDRESS_EMPTY_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_INVALID_EMAIL_ADDRESS_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_BALLON_TIP_TITLE_TOO_LARGE_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_BALLON_TIP_MESSAGE_TOO_LARGE_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_BALLON_TIP_EMPTY_STR$== -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_EXE_PATH_EMPTY_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_EXE_PARAMETERS_CONTAIN_CR_LF_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_INVALID_VAR_FOR_ADMIN_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_INVALID_SMTP_EMAIL_ADDRESS_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_INVALID_EMAIL_ADDRESS_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_INVALID_EMAIL_ADDRESS_BCC_STR$= -- PLEASE TRANSLATE -- -->

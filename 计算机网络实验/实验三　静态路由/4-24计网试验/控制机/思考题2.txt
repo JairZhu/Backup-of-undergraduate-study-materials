@@ -1,0 +1,27 @@
+18-RSR20-1(config)#show int gi 0/1
+Index(dec):5 (hex):5
+GigabitEthernet 0/1 is UP  , line protocol is UP    
+Hardware is OCTEN GE CONTROLLER GigabitEthernet, address is 5869.6c27.beae (bia 5869.6c27.beae)
+Interface address is: 192.168.2.1/24
+ARP type: ARPA, ARP Timeout: 3600 seconds
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Rxload is 1/255, Txload is 1/255
+  Queueing strategy: FIFO
+    Output queue 0/40, 0 drops;
+    Input queue 0/75, 0 drops
+  Link Mode: 1000M/Full-Duplex, media-type is twisted-pair.
+  Output flowcontrol is off;Input flowcontrol is off.
+  5 minutes input rate 1657 bits/sec, 0 packets/sec
+  5 minutes output rate 191 bits/sec, 0 packets/sec
+    3053 packets input, 1006836 bytes, 0 no buffer, 0 dropped
+    Received 1815 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    1292 packets output, 95414 bytes, 0 underruns , 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+
+
+
+

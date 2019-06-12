@@ -1,0 +1,24 @@
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<events>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <event listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% <EventName>%CSUEvent.%LIST_ID%.EventName%</EventName>
+%ADD_LIST_STRING% <EventID>%CSUEvent.%LIST_ID%.EventID%</EventID>
+%ADD_LIST_STRING% <Action>%CSUEvent.%LIST_ID%.Action%</Action>
+%ADD_LIST_STRING% <Description>%CSUEvent.%LIST_ID%.Description%</Description>
+%ADD_LIST_STRING% <Data1>%CSUEvent.%LIST_ID%.Data1%</Data1>
+%ADD_LIST_STRING% <Data2>%CSUEvent.%LIST_ID%.Data2%</Data2>
+%ADD_LIST_STRING% <ShouldFire>%CSUEvent.%LIST_ID%.ShouldFire%</ShouldFire>
+%ADD_LIST_STRING% <EmailToAddress>%CSUEvent.%LIST_ID%.EmailToAddress%</EmailToAddress>
+%ADD_LIST_STRING% <ExeFilePath>%CSUEvent.%LIST_ID%.ExeFilePath%</ExeFilePath>
+%ADD_LIST_STRING% <Enabled>%CSUEvent.%LIST_ID%.Enabled%</Enabled>
+%ADD_LIST_STRING% <EmailToAddressBCC>%CSUEvent.%LIST_ID%.EmailToAddressBCC%</EmailToAddressBCC>
+%ADD_LIST_STRING% <ExecWaitSecs>%CSUEvent.%LIST_ID%.ExecWaitSecs%</ExecWaitSecs>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING% </event>
+%CUser.%ID%.SUEvent.List%
+</events>
+<listresult>%LIST_RESULT%</listresult>
+</response>

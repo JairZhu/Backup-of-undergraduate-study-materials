@@ -1,0 +1,71 @@
+﻿<!-- LimitsStrings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- **************** Advanced Limits **************** -->
+$LIMIT_ADV_CONVERTURLCHARS$=Konvertera URL bokstäver i kommandon till ASCII
+$LIMIT_ADV_CHECKDIRSIZE$=Kontrollera automatiskt storlek på mappar under uppladdning av filer
+$LIMIT_ADV_INLINEOOB$=Inkommande out-of-band data
+$LIMIT_ADV_KEEPALIVE$=Skicka keep-alive paket för att upptäcka avbrutna anslutningar
+$LIMIT_ADV_NAGLE$=Inaktivera Nagle-algoritmen
+$LIMIT_ADV_ADAPTIVETO$=Använd anpassad time-out för snabba filuppladdningar
+$LIMIT_ADV_SFTPMAXVERSION$=Senaste SFTP-versionen som det finns stöd för
+$LIMIT_ADV_ALLOWRENAMEOVERWRITE$=Allow namnbytesöverskrivning
+$LIMIT_ADV_WARNOLDBROWSER$=Varna användare som använder en äldre webbläsare
+
+<!-- **************** Connection Limits **************** -->
+$LIMIT_CONN_MAXSERVERSESS$=Högsta antal sessioner på servern
+$LIMIT_CONN_MAXSERVERSESSIP$=Högsta antal sessioner per ip-adress på servern
+$LIMIT_CONN_MAXDOMAINSESS$=Högsta antal sessioner på domänen
+$LIMIT_CONN_MAXDOMAINSESSIP$=Högsta antal sessioner per ip-adress på domänen
+$LIMIT_CONN_MAXGROUPSESS$=Högsta antal sessioner per grupp
+$LIMIT_CONN_MAXGROUPSESSIP$=Högsta antal sessioner per ip-adress och grupp
+$LIMIT_CONN_MAXSESSUSER$=Högsta antal sessioner per användarkonto
+$LIMIT_CONN_MAXSESSIPUSER$=Högsta antal sessioner per ip-adress och användarkonto
+$LIMIT_CONN_REQUIRESECURE$=Kräv säker anslutning innan inloggning
+$LIMIT_CONN_IDLETO$=Koppla automatiskt ifrån inaktiva anslutningar
+$LIMIT_CONN_SESSTO$=Koppla automatiskt ifrån inaktiva sessioner
+$LIMIT_CONN_BLOCKANTITO$=Blockera användande av program som förhindrar inaktivitet
+$LIMIT_CONN_AUTOCREATE$=Skapa automatiskt hem-mappar
+$LIMIT_CONN_TIMEOUTBLOCKIP$=Blockera ip-adress från sessioner som passerat time-out värdet
+$LIMIT_CONN_FTP$=Tillåt FTP och FTPS anslutningar
+$LIMIT_CONN_SSH$=Tillåt SFTP anslutningar
+$LIMIT_CONN_HTTP$=Tillåt HTTP och HTTPS anslutningar
+$LIMIT_CONN_REQ_REV_DNS$=Kräv reverse DNS
+$LIMIT_CONN_ALLOWXFORWARD$=Tillåt X-Forwarded-For att byta HTTP-anslutningens ip-adress
+
+<!-- **************** Directory Listing Limits **************** -->
+$LIMIT_DL_HIDEHIDDEN$=Dölj filer markerade som dolda
+$LIMIT_DL_LOWERCASE$=Använd gemener för filnamn och mappar
+$LIMIT_DL_SCLINKS$=Tolka windowsgenvägar som länkar
+$LIMIT_DL_SCASTARGET$=Behandla windowsgenvägar som mål
+$LIMIT_DL_LOCK$=Lås användare i respektive hem-mapp
+$LIMIT_DL_ROOT$=Tillåt root (\"/\") att lista enheter för upplåsta användare
+
+<!-- **************** Password Limits **************** -->
+$LIMIT_PW_CHECKANON$=Kontrollera lösenord för anonyma anslutningar
+$LIMIT_PW_REQCOMPLEX$=Kräva starka lösenord
+$LIMIT_PW_MINLENGTH$=Minsta längd på lösenord
+$LIMIT_PW_EXPIRES$=Lösenord går automatiskt ut
+$LIMIT_PW_CHANGE$=Allow users to change password
+$LIMIT_PW_ENCRYPT$=Lagra lösenord krypterade
+$LIMIT_PW_HIDEINLOG$=Maskera mottagna lösenord i logfiler
+$LIMIT_PW_SSHAUTHTYPE$=SSH autentiseringstyp
+$LIMIT_PW_TYPE$=Lösenordstyp
+$LIMIT_PW_ENCRYPT_MODE$=Typ av lösenordskryptering
+$LIMIT_PW_ENABLE_RECOVERY$=Tillåt användare att återställa lösenord
+
+<!-- **************** Transfer Limits **************** -->
+$LIMIT_TRAN_SERVERUP$=Högsta uppladdningshastighet för servern
+$LIMIT_TRAN_SERVERDN$=Högsta nedladdningshastighet för servern
+$LIMIT_TRAN_DOMAINUP$=Högsta uppladdningshastighet för domänen
+$LIMIT_TRAN_DOMAINDN$=Högsta nedladdningshastighet för domänen
+$LIMIT_TRAN_GROUPUP$=Högsta uppladdningshastighet för alla gruppmedlemmar
+$LIMIT_TRAN_GROUPDN$=Högsta nedladdningshastighet för alla gruppmedlemmar
+$LIMIT_TRAN_USERUP$=Högsta uppladdningshastighet för användarkonton
+$LIMIT_TRAN_USERDN$=Högsta nedladdningshastighet för användarkonton
+$LIMIT_TRAN_SESSUP$=Högsta uppladdninghastighet per session
+$LIMIT_TRAN_SESSDN$=Högsta nedladdningshastighet per session
+$LIMIT_TRAN_DELETEPARTIAL$=Ta bort uppladdade filer som inte är kompletta
+$LIMIT_TRAN_MAX_FILE_SIZE$=Största stolrke på fil som laddas upp
+$LIMIT_TRAN_INTERPRETLFASEOL$=Tolka line feed byte som en ny rad i ASCII-läge

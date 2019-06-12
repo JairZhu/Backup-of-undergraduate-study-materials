@@ -1,0 +1,74 @@
+﻿<!-- LimitsStrings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- **************** Advanced Limits **************** -->
+$LIMIT_ADV_CONVERTURLCHARS$=将命令中的 URL 字符转换为 ASCII
+$LIMIT_ADV_CHECKDIRSIZE$=上传时自动检查目录大小
+$LIMIT_ADV_INLINEOOB$=内嵌带外 (out-of-band) 数据
+$LIMIT_ADV_KEEPALIVE$=发送保持活动数据包以检测断开的连接
+$LIMIT_ADV_NAGLE$=禁用 Nagle 算法
+$LIMIT_ADV_ADAPTIVETO$=快速上传文件时使用适应性超时
+$LIMIT_ADV_SFTPMAXVERSION$=所支持的 SFTP 最高版本
+$LIMIT_ADV_ALLOWRENAMEOVERWRITE$=允许重命名覆盖
+$LIMIT_ADV_WARNOLDBROWSER$=使用旧的 web 浏览器时警告最终用户
+
+<!-- **************** Connection Limits **************** -->
+$LIMIT_CONN_MAXSERVERSESS$=服务器连接的最大会话数
+$LIMIT_CONN_MAXSERVERSESSIP$=服务器上每个 IP 地址连接的最大会话数
+$LIMIT_CONN_MAXDOMAINSESS$=域连接的最大会话数
+$LIMIT_CONN_MAXDOMAINSESSIP$=域中每个 IP 地址连接的最大会话数
+$LIMIT_CONN_MAXGROUPSESS$=群组连接的最大会话数
+$LIMIT_CONN_MAXGROUPSESSIP$=群组中每个 IP 地址连接的最大会话数
+$LIMIT_CONN_MAXSESSUSER$=每个用户帐户连接的最大会话数
+$LIMIT_CONN_MAXSESSIPUSER$=用户帐户的每个 IP 连接的最大会话数
+$LIMIT_CONN_REQUIRESECURE$=登录前要求安全连接
+$LIMIT_CONN_IDLETO$=超时后连接自动空闲
+$LIMIT_CONN_SESSTO$=会话自动超时
+$LIMIT_CONN_BLOCKANTITO$=阻止反超时的配置方案
+$LIMIT_CONN_AUTOCREATE$=自动创建根目录
+$LIMIT_CONN_TIMEOUTBLOCKIP$=阻止超时会话的 IP 地址
+$LIMIT_CONN_FTP$=允许 FTP 与 FTPS 连接
+$LIMIT_CONN_SSH$=允许 SFTP 连接
+$LIMIT_CONN_HTTP$=允许 HTTP 与 HTTPS 连接
+$LIMIT_CONN_REQ_REV_DNS$=需要反向 DNS 名称
+$LIMIT_CONN_ALLOWXFORWARD$=允许 X-Forwarded-For 更改 HTTP 连接 IP 地址
+
+<!-- **************** Directory Listing Limits **************** -->
+$LIMIT_DL_HIDEHIDDEN$=不列出标记为隐藏的文件
+$LIMIT_DL_LOWERCASE$=文件名和目录使用小写
+$LIMIT_DL_SCLINKS$=将 Windows 快捷方式转译为链接
+$LIMIT_DL_SCASTARGET$=列表时显示 Windows 快捷方式
+$LIMIT_DL_LOCK$=锁定用户于根目录
+$LIMIT_DL_ROOT$=允许未锁定的用户使用根符号 (\"/\") 列出驱动器
+$LIMIT_DL_COMP_STATE$=隐藏文件与目录的压缩状态
+$LIMIT_DL_ENCRYPT_STATE$=隐藏文件与目录的加密状态
+
+<!-- **************** Password Limits **************** -->
+$LIMIT_PW_CHECKANON$=检查匿名密码
+$LIMIT_PW_REQCOMPLEX$=需要复杂密码
+$LIMIT_PW_MINLENGTH$=最短密码长度
+$LIMIT_PW_EXPIRES$=密码自动过期
+$LIMIT_PW_CHANGE$=允许用户更改密码
+$LIMIT_PW_ENCRYPT$=以加密形式保存密码
+$LIMIT_PW_HIDEINLOG$=在日志中显示接收的密码为掩码
+$LIMIT_PW_SSHAUTHTYPE$=SSH 验证类型
+$LIMIT_PW_TYPE$=FTP 密码类型
+$LIMIT_PW_ENCRYPT_MODE$=密码加密模式
+$LIMIT_PW_ENABLE_RECOVERY$=允许用户恢复密码
+
+<!-- **************** Transfer Limits **************** -->
+$LIMIT_TRAN_SERVERUP$=服务器最大上传速度
+$LIMIT_TRAN_SERVERDN$=服务器最大下载速度
+$LIMIT_TRAN_DOMAINUP$=域最大上传速度
+$LIMIT_TRAN_DOMAINDN$=域最大下载速度
+$LIMIT_TRAN_GROUPUP$=所有群组成员的最大上传速度
+$LIMIT_TRAN_GROUPDN$=所有群组成员的最大下载速度
+$LIMIT_TRAN_USERUP$=用户帐户的最大上传速度
+$LIMIT_TRAN_USERDN$=用户帐户的最大下载速度
+$LIMIT_TRAN_SESSUP$=每个会话的最大上传速度
+$LIMIT_TRAN_SESSDN$=每个会话的最大下载速度
+$LIMIT_TRAN_DELETEPARTIAL$=删除上传不完整的文件
+$LIMIT_TRAN_MAX_FILE_SIZE$=最大上传文件大小
+$LIMIT_TRAN_INTERPRETLFASEOL$=在 ASCII 模式中将换行字节解释为新行
+

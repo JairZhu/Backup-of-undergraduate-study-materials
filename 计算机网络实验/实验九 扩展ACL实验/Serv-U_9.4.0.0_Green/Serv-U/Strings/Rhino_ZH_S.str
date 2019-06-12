@@ -1,0 +1,235 @@
+﻿// Rhino_ZH_S.str - contains Simplified Chinese string definitions for the RhinoRES resource files
+//
+// Strings entered in this file must be one per line and in the format of:
+// $RSIDS_SOME_STRING_NAME$=Some string value
+
+/////////////////////////////////////////////////////////////////////////////
+// dialog
+
+// about strings
+$RSIDS_ABOUT_TITLE$=关于 %s
+$RSIDS_ABOUT_CATEGORY$=类别：
+$RSIDS_ABOUT_OK$=确定
+$RSIDS_ABOUT_CANCEL$=取消
+$RSIDS_ABOUT_HELP$=帮助(&H)
+
+// program info strings
+$RSIDS_PROGRAMINFO_TITLE$=程序信息
+$RSIDS_PROGRAMINFO_VERSION$=版本
+$RSIDS_PROGRAMINFO_WRITTEN_BY$=RhinoSoft.com
+$RSIDS_PROGRAMINFO_TRANSLATION_BY$=本地化：
+$RSIDS_PROGRAMINFO_COPYRIGHT$=版权所有 (c) 1995-%d, Rhino Software, Inc.
+$RSIDS_PROGRAMINFO_DEVELOPED_BY$=开发者：
+// NOTE: leading and trailing spaces intentional
+$RSIDS_PROGRAMINFO_DEVELOPMENT$= 开发 
+// NOTE: leading and trailing spaces intentional
+$RSIDS_PROGRAMINFO_CONTACT_INFO$= 联系方式 
+$RSIDS_PROGRAMINFO_RHINO_ADDRESS$=RhinoSoft.com\nP.O. Box 53\nHelenville, WI  53137
+$RSIDS_PROGRAMINFO_RHINO_HOME$=www.RhinoSoft.com
+// NOTE: leading and trailing spaces intentional
+$RSIDS_PROGRAMINFO_LEGAL$= 法律 
+$RSIDS_PROGRAMINFO_BUILD_DATE$=版本日期：
+$RSIDS_PROGRAMINFO_INSTALLED_ON$=安装时间：
+// NOTE: fill in the following strings with your distributor and translator information
+//		 if you do not wish to display one of these, leave them blank
+// EX:	 "$RSIDS_PROGRAMINFO_DISTRIBUTOR_ADDRESS$=ExampleSoftWerkz.com\n123 Example St.\nExampleville 012345"
+$RSIDS_PROGRAMINFO_DISTRIBUTOR_ADDRESS$=中国独家总代理\nQAST China\n电话：021-52400198
+// EX:	 "$RSIDS_PROGRAMINFO_DISTRIBUTOR_HOME$=www.ExampleSoftWerkz.com"
+$RSIDS_PROGRAMINFO_DISTRIBUTOR_HOME$=www.RhinoSoft.com.cn
+// EX:	 "$RSIDS_PROGRAMINFO_TRANSLATOR$=ExampleSoftWerkz.com" or "$RSIDS_PROGRAMINFO_TRANSLATOR$=John Example"
+$RSIDS_PROGRAMINFO_TRANSLATOR$=www.RhinoSoft.com.cn
+
+// eula strings
+$RSIDS_EULA_TITLE$=许可协议
+
+// reggie strings
+$RSIDS_REGGIE_TITLE$=注册 ID
+// NOTE: leading and trailing spaces intentional
+$RSIDS_REGGIE_REGISTRATION_ID$= 注册 ID(&R) 
+$RSIDS_REGGIE_LOST_ID$=寻找丢失的 ID(&L)...
+$RSIDS_REGGIE_HELP_REGISTERING$=注册帮助(&E)...
+$RSIDS_REGGIE_PURCHASE$=购买(&P)...
+$RSIDS_REGGIE_NAME$=名称：
+$RSIDS_REGGIE_EMAIL$=E-mail：
+$RSIDS_REGGIE_COPIES$=份数：
+$RSIDS_REGGIE_LICENSE_TYPE$=许可证类型：
+$RSIDS_REGGIE_USERS$=用户：
+$RSIDS_REGGIE_PURCHASE_DATE$=购买日期：
+$RSIDS_REGGIE_UPDATES$=更新：
+// NOTE: leading and trailing spaces intentional
+$RSIDS_REGGIE_REGISTERED_TO$= 注册给
+$RSIDS_REGGIE_DESC$=注册后您便可以在任意长的时间内使用 %s，并在一段时间内获得更新。以下信息将反映出您注册 ID 中的信息。
+
+// thanks for purchase strings
+$RSIDS_THANKS_TITLE$=感谢您购买 %s
+$RSIDS_THANKS_CLOSE$=关闭
+$RSIDS_THANKS_PRIMARY$=在线购买地址(&P)...
+$RSIDS_THANKS_SECONDARY$=企业购买地址(&S)...
+$RSIDS_THANKS_FAX$=传真(&F)...
+$RSIDS_THANKS_PURCHASE_INSTRUCTIONS$=您可以通过 Internet 购买 %s。\n打开 Web 浏览器并访问：\nhttp://%s/purchase.htm
+$RSIDS_THANKS_PURCHASE_PRIMARY_ERROR$=如果您仍然无法连接到企业购买服务器，\n请传真您的购买信息到 +86(021)52400179\n或致电 +86(021)52400198。
+$RSIDS_THANKS_PURCHASE_SECONDARY_ERROR$=如果您无法连接到在线购买服务器，请尝试打开：\nhttp://www.rhinosoft.com.cn
+$RSIDS_THANKS_PURCHASE_COMPLETE$=如果您已经完成购买，感谢您的惠顾。\r\n如果无法连接到主要购买服务器，请阅读以下内容。
+
+// reggie violation strings
+$RSIDS_VIOLATION_TITLE$=%s 许可证侵权
+$RSIDS_VIOLATION_CLOSE$=关闭
+$RSIDS_VIOLATION_VIEW_LICENSE$=查看许可协议(&V)
+$RSIDS_VIOLATION_UNINSTALL$=卸载(&U)
+$RSIDS_VIOLATION_DETECTED$=已检测到许可证侵权。此计算机使用的 ID 允许一次在 %d 台计算机上安装。要在更多的计算机上安装，必须购买更多的许可证。
+$RSIDS_VIOLATION_PURCHASE_MORE$=购买更多许可(&P)
+$RSIDS_VIOLATION_LICENSE_ERROR$=如果您误收到此消息，请立即联系Qast China，电话：021-52400198。
+$RSIDS_VIOLATION_COMPUTER_LIST$=以下列表显示了当前网络中所有与本机使用相同注册 ID 的计算机。将软件从这些计算机中卸载以便在本机中运行或购买更多许可证。
+// NOTE: leading and trailing spaces intentional
+$RSIDS_VIOLATION_COMPUTERS$= 使用本许可证的计算机和用户(&C) 
+
+// nag for money strings
+$RSIDS_NAG_TITLE$=请注册 %s
+$RSIDS_NAG_PURCHASE$=购买(&P)...
+$RSIDS_NAG_PRICING$=价格(&C)...
+$RSIDS_NAG_REGISTER$=注册(&R)...
+$RSIDS_NAG_CLOSE$=关闭
+$RSIDS_NAG_USING_FOR$=此计算机安装 %s 已有 %ld 天。请考虑购买本软件。
+$RSIDS_NAG_ORDER_HELP$=要查找价格信息以及如何购买，请单击"价格"按钮。要在线购买，请单击"购买"。
+$RSIDS_NAG_BENEFITS$=注册本软件，即可避免这些提示对话框，并在有新的升级时收到通知。此外，我们将继续为您提供价廉物美的精品软件。
+$RSIDS_NAG_DISABLED$=您将在 %d 天后再看到此消息。\n\n某些功能将在试用期结束后无法使用。注册将可以重新使用这些功能。
+
+// initial nag strings
+$RSIDS_INITIALNAG_TITLE$=%s 试用版
+$RSIDS_INITIALNAG_PURCHASE$=购买(&P)...
+$RSIDS_INITIALNAG_PRICING$=价格(&C)...
+$RSIDS_INITIALNAG_KNOWLEDGE_BASE$=知识库(&K)...
+$RSIDS_INITIALNAG_SUPPORT$=技术支持(&S)...
+$RSIDS_INITIALNAG_TUTORIAL$=在线指南(&O)...
+$RSIDS_INITIALNAG_CLOSE$=关闭
+$RSIDS_INITIALNAG_THANK_YOU$=承蒙阁下使用履获殊荣的 %s。
+$RSIDS_INITIALNAG_PURCHASE_NOW$=立即购买，您将获得一年的免费更新。
+$RSIDS_INITIALNAG_TRIAL_STATUS$=这是您 30 天试用期的第 %s 天。\r\n\n%s 将在 %s 天后失效。
+$RSIDS_INITIALNAG_CONSIDER_PURCHASE$=请考虑立即购买 %s 以确保使用不会间断。在您购买 %s 后这则消息将不再出现。
+
+// tip of the day strings
+$RSIDS_TOD_TITLE$=每日提示
+$RSIDS_TOD_CLOSE$=关闭(&C)
+$RSIDS_TOD_PREVTIP$=上一提示(&P)
+$RSIDS_TOD_NEXTTIP$=下一提示(&N)
+$RSIDS_TOD_STARTUP_TIPS$=启动时显示提示(&S)
+
+// inno setup strings
+$RSIDS_INNO_TITLE$=对话
+$RSIDS_INNO_NEXT$=下一步(&N) >
+$RSIDS_INNO_CANCEL$=取消
+
+// other products strings
+$RSIDS_OTHERPRODUCTS_TITLE$=其他 RhinoSoft.com 产品
+$RSIDS_OTHERPRODUCTS_MORE_PRODUCTS$=承蒙阁下安装 %s。我们诚挚希望本产品对您有所助益。敬请查看下列产品，以便您充分利用 Internet 的力量。要获取更多信息和免费下载，请点击以下任意图标。
+
+// network info strings
+$RSIDS_NETINFO_TITLE$=网络信息
+$RSIDS_NETINFO_NETDESC$=以下信息表明该计算机的网络设置。当排除有关连接问题的故障时，RhinoSoft.com 的技术支持将使用该信息。
+// NOTE: leading and trailing spaces intentional
+$RSIDS_NETINFO_NETINFO$= 网络信息 
+$RSIDS_NETINFO_ADAPTER$=适配器(&A)：
+$RSIDS_NETINFO_IPCONFIG$=Windows IP 配置(&W)：
+$RSIDS_NETINFO_SUPPORT$=支持(&S)...
+
+// splash strings
+$RSIDS_SPLASH_COPYRIGHT$=版权所有(C) 1995-%d, Rhino Software, Inc.
+$RSIDS_SPLASH_VERSION$=版本
+$RSIDS_SPLASH_RHINOADDRESS1$=http://www.RhinoSoft.com.cn
+$RSIDS_SPLASH_RHINOADDRESS2$=
+$RSIDS_SPLASH_RHINOADDRESS3$=电话：021-52400198
+$RSIDS_SPLASH_RHINOADDRESS4$=传真：021-52400179
+$RSIDS_SPLASH_WARN1$=%s 不得进行任何形式的再分发，
+$RSIDS_SPLASH_WARN2$=在未经发行商 RhinoSoft.com
+$RSIDS_SPLASH_WARN3$=明确许可的情况下。
+$RSIDS_SPLASH_STATUS$=状态区域
+
+// new version strings
+$RSIDS_NEWVERSION_TITLE$=更新检查
+$RSIDS_NEWVERSION_DESC$=RhinoSoft.com 将定期发布含有增强功能及新添功能的最新版软件。请阅读以下摘要，查看您使用的 %s 是否为最新版本。
+// NOTE: leading and trailing spaces intentional
+$RSIDS_NEWVERSION_SUMMARY$= 摘要 
+$RSIDS_NEWVERSION_CURRENTLY_INSTALLED$=当前安装版本：
+$RSIDS_NEWVERSION_AUTO_CHECK$=自动检查软件升级(&A)
+$RSIDS_NEWVERSION_BUTTON$=Button
+$RSIDS_NEWVERSION_DOWNLOAD$=下载(&D)...
+// NOTE: leading and trailing spaces intentional
+$RSIDS_NEWVERSION_WHATS_NEW$= 更新信息(&W) 
+$RSIDS_NEWVERSION_CURRENTLY_RELEASED$=当前发布版本：
+$RSIDS_NEWVERSION_WEB_UPDATE$=访问 www.RhinoSoft.com 检查更新
+
+
+/////////////////////////////////////////////////////////////////////////////
+// string table
+
+RSIDS_FILE_MISSING_FMT=找不到"%s"。
+RSIDS_WARNING=警告：本计算机软件受著作权法和国际公约保护。未经授权擅自复制或分发本程序的全部或任何部分，均可遭致严厉的民事和刑事处罚，并将在法律允许的最大限度内受到起诉。
+RSIDS_VERSION_FMT=版本 %s
+RSIDS_REGGIE_FROM_CLIPBOARD=已从 Windows 剪贴板中读取\n阁下的注册信息。现在阁下已成为注册用户。\n\n感谢使用 %s！
+RSIDS_STANDARD=标准
+RSIDS_TEMPORARY=临时（30 天后过期）
+RSIDS_ENTERPRISE=企业
+RSIDS_SITE_LICENSE=站点
+
+RSIDS_FIXES=补丁
+RSIDS_RETRIEVING_RELEASE_NOTES=正在检索最新的发行说明...
+RSIDS_CONTACTING_UPDATE_SERVER=正在连接更新服务器...
+RSIDS_UNLIMITED=未受限
+
+RSIDS_DEPARTMENT=部门
+RSIDS_SECURE=安全
+RSIDS_PROFESSIONAL=专业
+RSIDS_CORPORATE=公司
+RSIDS_BRONZE=铜版
+RSIDS_SILVER=银版
+RSIDS_GOLD=金版
+RSIDS_UPDATE=更新(&U)...
+RSIDS_UPDATE_PERIOD_FMT=%s 天过期，剩余 %s 天
+RSIDS_TRIAL=试用
+RSIDS_TRIAL_DAYS_REMAINING_FMT=试用将在 %s 天过期，剩余 %s 天
+RSIDS_TRIAL_EXPIRED=试用已过期
+RSIDS_CUSTOMER_NAME_EMPTY_FMT=清除注册 ID 会导致 %s 成为未注册版本。\n\n您是否确定要清除注册信息？
+RSIDS_INVALID_CUSTOMER_ID=无效的注册 ID。\n\n如果您输入的信息来自 RhinoSoft.com 的注册 e-mail 邮件，\n请确保使用的的信息与该 e-mail 中完全一样。\n\n要获取有效的注册 ID，请访问 http://www.rhinosoft.com.cn 或发送邮件至：info@qast.com
+RSIDS_USERID=用户 ID
+RSIDS_COMPUTER=计算机
+RSIDS_USER_NAME=用户名称
+RSIDS_DIDYOUKNOW=您是否了解...
+RSIDS_TIP_FILE_MISSING=丢失提示文件：\r\n\r\n%s
+
+RSIDS_WELCOME=欢迎
+// NOTE: replace this text with the english word for the translated language
+RSIDS_LANGUAGE=SimplifiedChinese
+// NOTE: replace this text with your distributor home page or leave it as is
+RSIDS_DISTRIBUTOR_HOME=www.RhinoSoft.com.cn
+RSIDS_FV_DESC=FTP Voyager - 让专家和新手都能轻松地传输文件。使用拖放界面，传输文件变得前所未有的轻松。增强的功能包括从服务器到服务器的传输、调度和续传。
+RSIDS_D4_DESC=DNS4Me - 通过动态 DNS 服务，释放计算机的 Internet 潜能。使用现有的 IP 地址开始托管自己的 FTP 服务器、Web 站点，并利用您选择的域名托管其他 Internet 服务。
+RSIDS_AS_DESC=AllegroSurf - 在家或工作时使用 Internet 非常重要。Internet 可以提供您需要的信息和内容。AllegroSurf 可以让您在共享 Internet 连接的同时记录有效信息。
+RSIDS_SU_DESC=Serv-U FTP Server - 业内最流行的 FTP 服务器，以市面上最优惠的价格为您提供无可比拟的安全行和易用性。Serv-U 确保您对 FTP 服务器的完全掌控，避免故障。
+RSIDS_INNOSETUP_CLOSE=关闭(&C)
+RSIDS_INNOSETUP_EXIT_CAPTION=退出安装
+RSIDS_INNOSETUP_EXIT_TEXT=安装尚未完成。如果现在退出，则不会安装程序。\n\n您可以在其他时间再次运行 Setup 来完成安装。\n\n是否退出 Setup？
+RSIDS_OTHER_PRODUCTS_HEADER=试用其它 RhinoSoft.com 产品
+RSIDS_OTHER_PRODUCTS_COMMENT=请试用我们的其他产品，可以辅助您的 %s 软件
+RSIDS_NETWORK_INFO=网络参数
+RSIDS_NETWORK_INFO_DATA=值
+
+RSIDS_IP4_ADDRESS_FMT=IPv4 地址 %d
+RSIDS_IP6_ADDRESS_FMT=IPv6 地址 %d
+RSIDS_SUBNET_MASK_FMT=子网掩码 %d
+RSIDS_NO_ADAPTERS_FOUND=*** 未找到适配器 ***
+RSIDS_MAC_ADDRESS=物理地址
+RSIDS_YES=是
+RSIDS_NO=否
+RSIDS_IP4_DEFAULT_GATEWAY_FMT=默认 IPv4 网关 %d
+RSIDS_IP6_DEFAULT_GATEWAY_FMT=默认 IPv6 网关 %d
+RSIDS_HOST_NAME=主机名
+RSIDS_DNS_SUFFIX=主机 DNS 后缀
+RSIDS_IP_ROUTING_ENABLED=启用 IP 路由
+RSIDS_DNS_SERVER_FMT=DNS 服务器 %d
+RSIDS_DHCP_ENABLED=启用 DHCP
+RSIDS_NETWORK_INFO_CLIPBOARD=您的网络信息已复制到剪贴板。
+RSIDS_NEW_VERSION=有可用的新版本。
+RSIDS_CURRENT_VERSION=您安装的已经是最新版本。
+RSIDS_RELEASE_NOTES=单击"下载"按钮下载最新的版本并查看发布说明。
+RSIDS_IP4_DHCP_SERVER_FMT=IPv4 DHCP 服务器
+RSIDS_IP6_DHCP_SERVER_FMT=IPv6 DHCP 服务器

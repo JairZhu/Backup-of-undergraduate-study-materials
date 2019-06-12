@@ -1,0 +1,12 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<comp>
+<var name="ObjectID" val="%ID%" />
+<var name="Variable" val="%CVarComparison.%ID%.Variable%"/>
+<var name="Constant" val="%CVarComparison.%ID%.Constant%"/>
+<var name="Comparison" val="%CVarComparison.%ID%.Comparison%"/>
+<var name="DataType" val="%CVarComparison.%ID%.DataType%" />
+<var name="Result" val="%RESULT%"/>
+<var name="ResultText" val="%RESULT_TEXT%"/>
+</comp>

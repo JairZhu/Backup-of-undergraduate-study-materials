@@ -1,0 +1,19 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+<var name="ObjectID" val="%ID%" />
+<var name="EventID" val="%CSUEvent.%ID%.EventID%"/>
+<var name="EventName" val="%CSUEvent.%ID%.EventName%" />
+<var name="Description" val="%CSUEvent.%ID%.Description%" />
+<var name="Action" val="%CSUEvent.%ID%.Action%"/>
+<var name="Data2" val="%CSUEvent.%ID%.Data2%" />
+<var name="EmailToAddress" val="%CSUEvent.%ID%.EmailToAddress%" />
+<var name="Data1" val="%CSUEvent.%ID%.Data1%" />
+<var name="ExeFilePath" val="%CSUEvent.%ID%.ExeFilePath%" />
+<var name="Enabled" val="%CSUEvent.%ID%.Enabled%" />
+<var name="EmailToAddressBCC" val="%CSUEvent.%ID%.EmailToAddressBCC%" />
+<var name="ExecWaitSecs" val="%CSUEvent.%ID%.ExecWaitSecs%" />
+<var name="Result" val="%RESULT%"/>
+<var name="ResultText" val="%RESULT_TEXT%"/>
+</event>

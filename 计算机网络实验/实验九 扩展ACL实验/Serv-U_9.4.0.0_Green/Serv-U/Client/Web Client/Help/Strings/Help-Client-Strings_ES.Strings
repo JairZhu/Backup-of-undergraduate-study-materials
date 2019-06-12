@@ -1,0 +1,367 @@
+﻿<!-- Help-Client-Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- External links reused throughout the help documentation -->
+$LINK_FVJV_HOMEPAGE$=<a href="http://FVJV.Serv-U.com/" target="_blank">FTP Voyager JV homepage</a>
+$LINK_FV_HOMEPAGE$=<a href="http://www.ftpvoyager.com/" target="_blank">FTP Voyager</a>
+
+
+<!-- Macros for inserting links to other Help doc pages.  The text within these anchor tags needs to be translated. -->
+$LINK_HELP_FILE_MANAGEMENT$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-File-Transfers.htm">File Management</a>
+$LINK_HELP_DIR_MANAGEMENT$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-Directory-Management.htm">Directory Management</a>
+$LINK_HELP_IMAGE_FEATURES$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-Image-Features.htm">Thumbnails & Slideshows</a>
+
+
+<!-- String table for Help-Overview -->
+$OVERVIEW_HEADER$=Vista general del cliente web Serv-u
+
+$OVERVIEW_INTRO$::
+El cliente web serv-U es un archivo de transferencia de clientes basado en HTTP disponible para el uso de todos
+los u‬suarios en el apropiado archivo servidor con licencia  serv-U.
+El Cliente Web es una perfecta solución para los usuarios principiantes de ordenadores y organizaciones con una necesidad de proporcionar una metodologia simple de transferencia de unos pocos archivos
+entre usuarios. debido a que se usa el protocolo HTTP para comunicar con el Serv-U, el cliente Web evita algunos dolores de cabeza asociados con el uso de el protocolo FTP en un ambiente seguro o 
+a través del apoyo limitado de FTP en el uso común y diario de navegadores web
+
+El cliente web es capaz de permitir a los usuarios lograr una amplia variedad de tareas, incluyendo:
+
+$OVERVIEW_TASKS$::
+Aceder a tus archivos desde cualquier lado usando un Interfaz de Usuario Grafico (GUI) desde dentro de su navegador.
+Transferir archivos a y desde tu servidor de archivos, incluyendo creando y borrando directorios.
+Ver imagenes remotas como uña del pulgar generado en marcha para conservar amplitud de banda e incrementar la velocidad de transferencia.
+Compartir albumes fotográficos facilmente usando la opcion mostrador de diapositivas.
+Reproducir archivos Audio y Video con el reproductor Media.
+Proporcionar Acceso a el archivo servidor en <strong>eleven</strong> en diferentes lenguas de apoyo.
+ 
+::END
+$OVERVIEW_LOGIN_PARAMS$=URL abriendo sesión y cargando parámetros.
+
+$OVERVIEW_LOGIN_PARAMS_TXT$::
+El Cliente Web ofrece la abilidad para enviar credenciales de acceso y parametros especiales de carga en 
+el URL apuntando al archivo Serv-u. Debajo esta la lista de parametros que pueden ser añadido al URL. 
+::END
+
+$OVERVIEW_LOGIN_PARAMS_LIST$::
+Usa el parametro "thumbnail=1" para empezar el cliente web en el modo Thumbnails después de cargar.
+Usa el parametro "slideshow=1" para empezar el mostrador de diapositivas del cliente web inmediatamente después de cargar.
+Usa el parametro "playlist=1" para reproducir archivos de audio inmediatamente después de cargar el cliente web.
+Usa el parámetro "playmedia=1" para reproducir archivos de vídeo inmediatamente después de la conexión al Cliente de Web.
+Usa el parametro "dir="  para navegar directamente a cualquier directorio inmediatamente después de la conexión al Cliente de Web.
+Usa el parametro "file=" el parámetro para descargar un archivo localizado en el directorio especificado en el parametro "dir="  inmediatamente después de la conexión al Cliente de Web.
+<strong>Example URL:</strong> http://www.domainname.com?user=temp&password=temppw&thumbnail=1&dir=/D:/temp/&file=textfile.txt
+::END
+
+$OVERVIEW_SEARCH_PARAMS$=Búsqueda del nombre de archivos y comodines de apoyo.
+
+$OVERVIEW_SEARCH_PARAMS_TXT$::
+El Cliente Web ofrece la abilidad de buscar archivos basados en la entrada de los usuarios usando el boton "file Search" localizado debajo de el panel de la lista de archivos. 
+debajo hay una lista de comdines que están también apoyados.
+::END
+
+$OVERVIEW_SEARCH_PARAMS_LIST$::
+Usa el parametro "*" para buscar archivos cuando el nombre entero del archivo es desconocido  (ie..*.txt, *SearchPhrase*, *FileName*).
+Usa el parametro "?"  cuando un caracter especifico es desconocido en el nombre del archivo (ie..????Name.txt, FileName.???).
+Usa el parametro "[]" cuando un caracter especifico es desconocido pero debe contener una de los caracteres especificados entre corchetes (ie..[fmn]ileName.txt, File[fmn]ame.txt).
+::END
+
+
+$OVERVIEW_REQUIREMENTS$::
+El cliente Web puede empezar en el buscador web mas popular de hoy que estan disponibles virtualmente en cada ordenador "out of the box."  
+El sistema debe de tener unos requerisitos mínimos para empezar el servidor web:
+::END
+
+$OVERVIEW_REQ_LIST$::
+Debe estar usando Firefox 2.0 o Internet Explorer 6.0 o mejor.
+Cookies deben estar permitidos en el navegador.
+JavaScript debe estar permitido en el navegador.
+::END
+
+$OVERVIEW_LIMITATIONS$::
+El cliente web esta propuesto para facilmete permitir la transferencia de archivos básicos funcionales 
+en la plataforma más ancha disponible - el buscador web estándar. sin embargo, no está propuesto para ser un remplazo total para un cliente con todos los dispositivos FTP.
+si Usted busca un solución a nivel empresarial que ofrezca un cliente de transferencia de archivos completo hacia sus usuarios, entonces <strong>FTP Voyager JV</strong> 
+está disponible para satisfacer sus necesidades. Con FTP Voyager JV, consigues un fácil despliegue y acceso a la configuración del cliente a través de HTTP, pero sus bases en la plataforma Java
+permite los siguientes rasgos que no están disponibles en el Cliente Web:
+::END
+
+$OVERVIEW_LIMIT_LIST$::
+Cargar diferentes archivos en el momento.
+Descargar archivos mientras una Carga está en proceso.
+Descargar un directorio y todo su contenido.
+un interfaz de usuario tracicional gráfico (GUI) basado en nuestro premio $LINK_FV_HOMEPAGE$.
+Vista de archivos del sistema locales y remotos lado a lado.
+Multiples y diferentes vistas de archivos del sistema (e.g., listas, iconos, detalles, thumbnails).
+Mantenimientos de archivos originales de fechas y tiempos después de la transferencia de archivos.
+"Mover" archivos y carpetas entre los archivos locales y remotos del sistema.
+Plataforma temas de demostración específicos para asegurar un aspecto uniforme sobre la plataforma de opción.
+::END
+
+$OVERVIEW_FVJV_INFO$::
+para permitir<strong>FTP Voyager JV</strong>, una licencia de apozo debe ser comprada para el servidor del archivo.  una vez permitido, FTP Voyager JV está disponible para todos los usuarios
+de el servidor de archivos que han instalado el Java Runtime Environment en su sistema. para más información en <strong>FTP Voyager JV</strong> visita el $LINK_FVJV_HOMEPAGE$.
+::END
+
+
+<!-- String table for Help-Layout -->
+$BWC_LAYOUT_HEADER$=Disposición del cliente web
+
+$BWC_LAYOUT_INTRO$::
+El Cliente Web está presentado como una página web standard que contiene una lista de archivos y directorios disponibles desde el camino remoto actual y conexiones clicables que hacen varias
+acciones relacionadas a la trasferencia de archivos. Todas las funcionalidades disponibles de el Cliente Web están disponibles desde su 
+única página para mantener interacciones rápidas y fáciles de preparar.
+::END
+
+$BWC_LAYOUT_UTILITY$=Barra de Utilidades
+$BWC_LAYOUT_UTILITY_TXT$::
+En la parte de arriba de la página está la barra de utilidades que contiene botones para realizar varias tareas útiles.
+algunas de esas taresas están solo disponibles si un administrador a permitido su actuación para tu cuenta de usuario. Estas tareas estan denominadas como <strong>(*)</strong>. 
+Más información de cada tarea disponible puede ser encontrada abajo. 
+::END
+
+$BWC_LAYOUT_CURRENT_DIR$=Directorio Actual.
+$BWC_LAYOUT_CURRENT_DIR_TXT$::
+La primera cosa mostrada en la barra de utilidades es el nombre del servidor a que Usted esta conectado y su posición actual en el servidor. Cuando Usted navega en los diferentes directorios en el sevidor,
+esta localización actualiza así que siempre sabes donde estás. 
+::END
+
+$BWC_LAYOUT_BREAD_CRUMB_BAR_TXT$::
+Cada uno de los segmentos del directorio, listado en el directorio actual, es clicable, permitiendote navegar rapidamente hacia un directorio especifico. sin ratón cualquiera de estos segmentos también
+muestra un sub-menú de sub-directorios que estan disponibles en el segmento en tu camino actual. después este menú aparece, simplemente selecciona el sub-directory deseado para hacerlo como tu 
+directorio actual
+::END
+
+$BWC_LAYOUT_CONSOLE$=Consola de dirección (*)
+$BWC_LAYOUT_CONSOLE_TXT$::
+si has cargado usando una cuenta con privilegios administrativos. el botón, the <strong>Management Console</strong>  puede ser apretado para volver a la página principal del mando de dirección Serv-U
+::END
+
+$BWC_LAYOUT_PASSWORD$=Cambio de contraseña (*)
+$BWC_LAYOUT_PASSWORD_TXT$::
+si el administrador permite a los usuarios cambiar su contraseña de la cuenta, esta opción está disponible. 
+Haciendo clic en el botón <strong>Change Password</strong> se muestra un nuevo dialogo que pregunta por tu contraseña actual y una nueva contraseña deseada. después de introducir la información apropiada,
+haz clic en el botón  <strong>OK</strong> para cambiar la contraseña de la cuenta. si la nueva contraseña no va con los ajustes de seguridad del administrador, un mensaje aparece que 
+explica como la nueva contraseña no concuerda con los requisitos de seguridad
+::END
+
+$BWC_LAYOUT_SUPPORT$=Apoyo (*)
+$BWC_LAYOUT_SUPPORT_TXT$::
+Este link está disponible si el administrador ha configurado un link de apoyo opcional para la asistencia usando su archivo servidor Serv-U. haciendo clic en este link te lleva al metodo
+de asitencia de apoyo preferido por el adminitrador, el cual incluye el abri otra página web, enviando un correo electrónico a la dirección del administrador o incluso empezando una sesión de 
+messenger instantanea.
+::END
+
+$BWC_LAYOUT_HELP$=Ayuda
+$BWC_LAYOUT_HELP_TXT$::
+Este Link te envía al documento de ayuda del cliente web Serv-U , el cual Usted esta Leyendo ahora mismo.
+::END
+
+$BWC_LAYOUT_LOGOUT$=Salir de sesión
+$BWC_LAYOUT_LOGOUT_TXT$::
+Una vez haya acabado con el Cliente Web, haga clic en el botón <strong>Logout</strong> para finalizar tu sesión 
+::END
+
+$BWC_LAYOUT_LISTING$=Listado de Directorios & Acciones.
+$BWC_LAYOUT_LISTING_TXT$::
+Debajo de la barra de utilidades está la lista de directorios devueltos por el servidor para el directorio actual.
+Encima y debajo de la lista del directorio existen varias acciones que pueden ser llevadas a cabo para navegar por el servidor, transferencia de archivos, 
+o cambio de disposiciones de las listas. Para más información de estas acciones, ver el documento de ayuda apropiado en 
+$LINK_HELP_DIR_MANAGEMENT$, $LINK_HELP_FILE_MANAGEMENT$, o $LINK_HELP_IMAGE_FEATURES$.
+En el botón de la esquina derecha de la lista de directorios hay un resumen de los contenidos del directorio actual.
+El número de directorios está listado aquí, el número de archivos, el tamano total de los archivos contenidos en el directorio actual.
+::END
+
+
+<!-- String table for Help-Directory-Management -->
+$DIRS_HEADER$=Directorio de control.
+$DIRS_HEADER_TXT$::
+La mayoría de las vistas de los Clientes Web está dedicada hacia la muestra de los contenidos del directorio actual siendo buscados en el servidor.
+Esta lista de directorios muestra todos los archivos y carpetas contenidos en el directorio actual. Dependiendo de los derechos de acceso concedidos a tu cuenta de usuario por el administrador,
+varias acciones pueden ser realizadas en archivos y carpetas en esta lista.  
+::END
+
+$DIRS_NAVIGATING$=Directorios de Navegación.
+$DIRS_NAVIGATING_TXT$::
+Hay varios modos por los cuales el directorio actual puede ser modificado. Cambiando las actualizaciones del directorio actual de la lista de directorios. El método más fácil para cambiar el 
+directorio actual es usar el ratón y hacer doble clic en un directorio de la lista. Adicionalmente, un directorio puede ser hecho clic con el botón derecho del ratón y la opción seleccionada.
+Un método final para cambiar el directorio actual es seleccionando un directorio en la lista y haciendo clic en
+el botón <strong>Open</strong> encontrado debajo de la lista.
+::END
+
+$DIRS_PARENT_DIR$=Directorio patrón.
+$DIRS_PARENT_DIR_TXT$::
+Si su cuenta de usuario es cerrada en tu directorio casa y el directorio actual es tu directorio casa, entonces este botón no está disponible. 
+haciendo clic en el botón cambia el directorio actual hacia un directorio paternal. por ejemplo, si Su directorio actual es 
+<strong>/public/files</strong>, haciendo clic en el botón cambia el directorio actual a <strong>/public</strong>.
+::END
+
+$DIRS_REFRESH$=Actualizar.
+$DIRS_REFRESH_TXT$::
+actualizando la lista de directorios actuales hace que el cliente web recupere la lista de directorios otra vez y actualize los archivos y carpetas mostrados
+::END
+
+$DIRS_THUMBNAILS$=Vistas en miniatura.
+$DIRS_THUMBNAILS_TXT$::
+haciendo clic en el botón <strong>Thumbnails</strong> cambia la vista de una vista detallada a una vista en miniatura. Mientras en la vista miniatura, el cliente web recupera y muestra pequeñas versiones
+de cualquier imagen de archivo en el directorio actual. Más opciones están disponibles cuando estas el modo de vista en miniatura. para más informacion de las miniaturas, ver los documentos de ayuda. 
+$LINK_HELP_IMAGE_FEATURES$.
+::END
+
+$DIRS_DETAILS$=Detalles
+$DIRS_DETAILS_TXT$::
+Cuando la vista actual es en modo miniatura el, botón <strong>Details</strong> está disponible. haciendo clic en el botón te devuelve de la vista actual
+a una lista detallada de contenidos de el directorio acutal sin ninguna imagen en miniatura. 
+::END
+
+$DIRS_CREATE$=Crear Directorio.
+$DIRS_CREATE_TXT$::
+Nuevos directorios pueden ser creados en el servidor haciendo clic en este botón. una vey clicado, un nuevo dialogo
+aparece que pregunta por el nombre de el nuevo directorio que debe ser creado. si tu cuenta de usuario no tiene la habilidad para crear directorios o hay un conflicto con el nuevo nombre del directorio,
+un mensaje de error aparecerá.
+is displayed.
+::END
+
+$DIRS_RENAME$=Renombrar.
+$DIRS_RENAME_TXT$::
+Para renombrar un directorio, selecciona el directorio que tu quieres renombrar en la lista de directorios y haz clic en este botón. esta opción está también disponible haciendo clic en el botón derecho
+en el directorio deseado. el nombre actual es mostrado en un nuevo dialogo. cambia este nombre al nuevo nombre deseado y haz clic en 
+<strong>OK</strong>.  si tu cuenta de usuario no tiene la habilidad para renombrar directorios o hay un conflicto con el nuevo nombre del directorio, un mensaje de error aparecerá.
+::END
+
+$DIRS_DELETE$=Borrar.
+$DIRS_DELETE_TXT$::
+Un directorio puede ser borrado seleccionando el directorio deseado de la lista y haciendo clic en <strong>Delete</strong> button. Esta opción está también disponible haciendo clic en el directorio deseado.
+si tu cuenta de usuario no tiene la habilidad de borrar directorios, un mensaje de error es mostrado. <strong>NOTE:</strong> El borrado de un directorio elimina todos los archivos y carpetas
+que contiene el directorio. Esta acción no puede ser deshecha en el servidor.
+::END
+
+
+<!-- String table for Help-File-Transfers -->
+$FILES_HEADER$=File Management
+<!-- The following string does not need to be translated.  It's copying a string from elsewhere. -->
+$FILES_HEADER_TXT$=$DIRS_HEADER_TXT$
+
+$FILES_UPLOAD$=Cargar
+$FILES_UPLOAD_TXT$::
+Si Su cuenta de usuario tiene el permiso para cargar nuevos archivos, puedes cargar un solo archivo al tiempo al servidor usando este botón <strong>Upload</strong>
+se abre una nueva ventana desde la cual tu puedes <strong>Browse</strong> tu sistema para el archivo que tu quieres cargar. una vez hayas seleccionado el archivo 
+apropiado haz clic en <strong>Upload</strong> para comenzar la transferencia.
+
+Cuando la carga haya empezado, un dialogo de progreso es mostrado que es regularmente actualizado con informacion en directo, incluyendo el ratio de transferencia actual,
+cuantos datos han sido enviados, cuantos datos quedan por ser enviados, y tiempo estimado hasta que la transferencia sea completada. Mientras un archivo está siendo cargado, no se puede realizar 
+otra acción incluyendo cambio del directorio actual o transferencia de otros archivos. la carga puede ser terminada a cualquier tiempo heicendo clic en el botón <strong>Cancel</strong>
+Transferencias canceladas de archivos no pueden ser puestas en funcionamiento de nuevo y deben empezarse de nuevo.
+Después de que la carga ha sido completada, el dialogo de progreso desaparece y la lista de directorios es actualizada para mostrar un nuevo archivo.
+::END
+
+$FILES_DOWNLOAD$=Descargar.
+$FILES_DOWNLOAD_TXT$::
+Para comenzar la descarga de un archivo, simplemente selecciona el archivo deseado y haz clic en el botón <strong>Download</strong>. Esta opcion está también disponible 
+haciendo clic en el botón derecho del ratón en el archivo deseado. El navegador te apunta a una localización en tu sistema para guardar el archivo. 
+Algunos buscadores pueden también ofrecer la opción de abrir el archivo en lugar de guardarlo en una localizacion permanente. Mientras un archivo está siendo descargado, 
+el cliente web es libre para actuar con otros archivos.
+::END
+
+$FILES_RENAME$=Renombrar.
+$FILES_RENAME_TXT$::
+Para renombrar un archivo, selecciona el archivo que quieres renombrar en la lista de directorios y haz clic en este botón. 
+Esta opción está también disponible haciendo clic en el botón derecho del ratón en el archivo deseado. El nombre actual es mostrado en el nuevo dialogo.
+Cambia este nombre a un nuevo nombre seseado y haz clic en <strong>OK</strong>. Si tu cuenta de usuario con tiene la habilidad de renombrar archivos o hay un conflicto con el nuevo nombre de archivo,
+un mensaje de error aparecerá.
+::END
+
+$FILES_DELETE$=Borrar.
+$FILES_DELETE_TXT$::
+Un Archivo puede ser borrado seleccionando el archivo deseado de una lista y haciendo clic en el botón <strong>Delete</strong>. Esta opción está también disponible haciendo clic en el botón derecho del ratón
+en el archivo deseado. si tu cuenta de usuario no tiene la habilidad de borrar archivos, un error de mensaje se mostrará <strong>NOTE:</strong>
+los archivos son permanentemente borrados en el servidor. Esta acción no puede ser deshecha.
+::END
+
+
+<!-- String table for Help-Image-Features -->
+$IMAGES_HEADER$=Miniaturas, Muestra de diapositivas & Media Player
+$IMAGES_HEADER_TXT$::
+El Cliente Web, combinado con rasgos avanzados en Serv-U, es una perfecta plataforma para compartir fotoscon amigos, familia o clientes. 
+Usando avanzadas técnicas de comprensión en marcha. El cliente web puede pedir una imagen en miniatura de un tamaño requerido  para virtualmente cualquier tipo de imagen de archivo.
+Esta imagen en miniatura es generada por el servidor sobre el recibimiento del pedido y envidado de vuelta al cliente. de este modo, pudes ver una versión más pequena de un archivo de imagen
+en una fraccion de el tiempo, llevaría a descargar el archivo entero y abrirlo localmente. Esto también minimiza la cantidad de amplitud de banda usada por el servidor para enviar
+estas imagenes de archivo.
+
+El cliente Web apoya dos modos de ver imagenes: miniatura y muestra de diapositivas. Muestra de diapositivas puede ser visto en cualquiera, ya sea modo de vista detallado o miniatura.
+::END
+
+$IMAGES_THUMBNAILS$=Miniaturas
+$IMAGES_THUMBNAILS_TXT$::
+La vista en miniatura reemplaza la lista detallada de directorios con uno que permite  que la imagen en miniatura sea mostrada por cada archivo.
+si el archivo no es de un tipo de imagen apoyado, entonces el icono apropiado para el tipo de archivo es mostrado en lugar. Durante el modo de vista en miniatura,
+una serie de botones aparece debajo de cada miniatura que reemplaza cada los botones estandar de acción que son normalmente encontrados debajo de la lista de directorios.
+Estos botones te permiten <strong>Open</strong>,
+<strong>Download</strong>, <strong>Rename</strong>, y <strong>Delete</strong> archivos y carpetas como normal. para imanges arhivo, hay una opción adicional
+disponible para ver previamente la imagen.
+::END
+
+$IMAGES_THUMB_SIZE$=Tamaño de la miniatura.
+$IMAGES_THUMB_SIZE_TXT$::
+El tamaño de cada imagen miniatura puede ser personalizada desde la caja <strong>Thumbnail Size</strong>. Cinco tamaño son ofrecidos para ayudarte a encontrar un balance
+Five sizes are offered to help you find a balance entre el tamaño de la miniatura y el tiempo que lleva recuperarlo. Mientras los tamanos disponibles son mostrados
+como valores cuadrados. el ratio de aspecto actual de la imagen es preservado cuando se crea la miniatura para evitar destorsionar la imagen original.
+::END
+
+$IMAGES_THUMB_PREVIEW$=Vista previa de la imagen.
+$IMAGES_THUMB_PREVIEW_TXT$::
+Las imagenes pueden ser vistas previamente en ambos modos, miniatura y vista detallada. una imagen que es vista previamente
+es mostrada en un nuevo dialogo como si fuera una muestra de diapositivas. sin embarbo es pausada en la imagen con vista previa. las imagenes son mostradas con un maximo de 600 pixeles. 
+si la imagen prevista es más pequeña que el tamaño, entonces la imagen es mostrada usando dimensiones actuales. Mientras ves una imagen como vista previa, una muestra de diapositivas puede
+empezar haciendo clic en los botones apropiados localizados encima de la imagen. para más información de la muestra de diapositivas, continue leyendo.
+::END
+
+$IMAGES_SLIDESHOWS$=Muestra de diapositivas.
+$IMAGES_SLIDESHOWS_TXT$::
+La muestra de imagenes es un modo para automaticamente ver previamente las imagenes contenidas en el directorio actual.
+Mientras ves las imagenes en el modo muestra de diapositivas, acciones estándar pueden ser llevadas a cabo en el archivo incluyendo. <strong>Download</strong>, 
+<strong>Rename</strong>, y <strong>Delete</strong> haciendo clic en el apropiado botón debajo de la imagen.
+::END
+
+$IMAGES_SLIDE_CONTROL$=Controlando una muestra de diapositivas.
+$IMAGES_SLIDE_CONTROL_TXT$::
+La Muestra de imagenes puede ser controlada manualmente usando los botones en la parte de arriba del dialogo muestra de diapositivas.
+De derecha a izquierda, los controles van a la imagen previa, pausa, empezar, e ir a la siguiente imagen en la muestra de diapositivas, respectivamente.
+El siguiente de esos controles es un contador mostrando la posición de la imagen actual a lo largo de todo el número de imagenes en la muestra de imagenes.
+
+La velocidad con la que las imagenes son mostradas en la muestra puede ser controlada usando el deslizador situado en el final de
+el dialogo. ajustando el deslizador hacia la izquierda hacia <strong>Slow</strong> provoca que las imagenes avancen a un ritmo más lento.
+Ajustando el deslizador hacia <strong>Fast</strong> incrementa el ritmo. en algunos servidores, cargar una imagen puede ser mostrada cuando se avance a la siguiente imagen
+si el ritmo actual es más rápido que lo que el servidor es capaz de generar la muestra de imagenes.
+
+Cuando tu hayas finalizado viendo la muestra de imagenes, usa el botón <strong<lose</strong> para despedir el dialogo de la muestra de imagenes.
+::END
+
+$IMAGES_SLIDESHOWS$=Muestra de diapositivas.
+$IMAGES_SLIDESHOWS_TXT$::
+La muestra de imagenes es un modo automatico de ver previamente las imagenes contenidad en un directorio actual.
+mientras se ven las imagenes en un modo muestra de imagenes. Acciones estandar pueden ser llevadas a cabo en ese archivo incluyendo <strong>Download</strong>, 
+<strong>Rename</strong>, y <strong>Delete</strong> haciendo clic en el botón apropiado debajo de la imagen.
+::END
+
+$MEDIA_PLAYER$=Reproductor media.
+$MEDIA_PLAYER_TXT$::
+El reproductor Media permite a los usuarios reproducir la mayoria de los más comunes formatos media isntantaneamente usando el dialogo de reproductor Media
+en el cliente web. Estos rasgos permiten al usuario a ver previamente archivos de audio y video convenientemente antes de descargarlos así como crear
+listas de reproducción para llevar el audio al cliente web.
+::END
+
+$MEDIA_PLAY_LIST$=Listas de reproducción.
+$MEDIA_PLAY_LIST_TXT$::
+Las listas de reproducción son dinamicamente generadas por el serv-U para reproducir todos los archivos de audio localizados en
+el directorio actual del usuario. si los archivos de audio son detectados en el directorio actual, una opción "play list" aparecerá disponible. simplemente haz clic en el botón para para
+comenzar sucesivamente llevando todas los archivos de audio en directorio actual del usuario al creador media player.
+::END
+
+$MEDIA_PLAYER_CONTROLS$=Controles del reproductor Media.
+$MEDIA_PLAYER_CONTROLS_TXT$::
+El Media Player puede ser controlado manualmente usando los botones previos y siguientes localizados encima del reproductor.
+al lado de estos controles es un contador que muestra la posición de el archivo media actual con el número total de archivos media en el directorio acutal.
+ <strong>Note:</strong> Estos controles manualmente cambian al previo o siguiente archivo de media en el directorio actual. una vez los archivos media han sido reproducidos,
+el reproductor media no mueve automaticamente hacia el siguiente archivo media.
+
+Para reproducir multiples archivos de audio en serie, debes usar la  opción "play list". Cuando utilices esta opción, los controles en el reproductor media
+apropiado pueden ser usados para cambiar la pista actual. mientras llevas una lista de reproducción del serv-U, las acciones de descarga, borrado, y renombrado permanecen escondidas.
+::END

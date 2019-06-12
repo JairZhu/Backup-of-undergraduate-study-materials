@@ -1,0 +1,28 @@
+%PRIV_SYSTEM_ADMIN%
+%PAGE_CHANGE%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<columnmaps>
+<tableinfo>
+<AttrName>TableName</AttrName>
+<ColumnName>%CODBCTableMap.%ID%.TableName%</ColumnName>
+<ColumnNameDefault>%CODBCTableMap.%ID%.TableName.Default%</ColumnNameDefault>
+<ID>%CODBCTableMap.%ID%.TableName.ID%</ID>
+</tableinfo>
+<columnmap>
+<AttrName>SortColumn</AttrName>
+<ColumnName>%CODBCColumnMap.%CODBCTableMap.%ID%.SortColumn.ID%.ColumnName%</ColumnName>
+<ColumnNameDefault>%CODBCColumnMap.%CODBCTableMap.%ID%.SortColumn.ID%.ColumnName.Default%</ColumnNameDefault>
+<ID>%CODBCTableMap.%ID%.SortColumn.ID%</ID>
+</columnmap>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <columnmap>
+%ADD_LIST_STRING% <AttrName>%CODBCColumnMap.%LIST_ID%.AttrName%</AttrName>
+%ADD_LIST_STRING% <ColumnName>%CODBCColumnMap.%LIST_ID%.ColumnName%</ColumnName>
+%ADD_LIST_STRING% <ColumnNameDefault>%CODBCColumnMap.%LIST_ID%.ColumnName.Default%</ColumnNameDefault>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING% </columnmap>
+%CODBCTableMap.%ID%.ODBCColumnMap.List%
+</columnmaps>
+<listresult>%LIST_RESULT%</listresult>
+</response>

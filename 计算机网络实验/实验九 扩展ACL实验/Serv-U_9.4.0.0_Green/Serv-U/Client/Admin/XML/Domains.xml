@@ -1,0 +1,17 @@
+%PRIV_SYSTEM_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<Domains>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<Domain listitem="%LIST_ITEM%">
+%ADD_LIST_STRING%		<DomainName>%CDomain.%LIST_ID%.DomainName%</DomainName>
+%ADD_LIST_STRING%		<Description>%CDomain.%LIST_ID%.Description%</Description>
+%ADD_LIST_STRING%		<Enabled>%CDomain.%LIST_ID%.Enabled%</Enabled>
+%ADD_LIST_STRING%		<ODBCAvailable>%CDomain.%LIST_ID%.ODBCAvailable%</ODBCAvailable>
+%ADD_LIST_STRING%		<Licensed>%CDomain.%LIST_ID%.Licensed%</Licensed>
+%ADD_LIST_STRING%		<ID>%LIST_ID%</ID>
+%ADD_LIST_STRING%	</Domain>
+%CServer.%SERVER_ID%.Domain.List%
+</Domains>
+<listresult>%LIST_RESULT%</listresult>
+</response>

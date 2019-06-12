@@ -1,0 +1,307 @@
+
+18-RSR20-1>
+18-RSR20-1>en 14
+
+Password:
+18-RSR20-1#config
+Enter configuration commands, one per line.  End with CNTL/Z.
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     up       
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.16.10/24     no address           up                     up       
+GigabitEthernet 0/1              192.168.2.1/24       no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#show ipv6\ int br
+                            ^
+% Invalid input detected at '^' marker.
+
+18-RSR20-1(config)#show ipv6 int br 
+
+Serial 2/0                    [up/up]
+        5::1
+        FE80::5A69:6CFF:FE27:BEAD
+GigabitEthernet 0/1           [up/up]
+        1::1
+        FE80::5A69:6CFF:FE27:BEAE
+18-RSR20-1(config)#int gi 0/0
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ipv6 address 3::1/64
+
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ipv6 enable
+18-RSR20-1(config-if-GigabitEthernet 0/0)#no shutdown
+18-RSR20-1(config-if-GigabitEthernet 0/0)#exit
+
+18-RSR20-1(config)#show ipv6 int br      
+
+Serial 2/0                    [up/up]
+        5::1
+        FE80::5A69:6CFF:FE27:BEAD
+GigabitEthernet 0/0           [up/up]
+        3::1
+        FE80::5A69:6CFF:FE27:BEAD
+GigabitEthernet 0/1           [up/up]
+        1::1
+        FE80::5A69:6CFF:FE27:BEAE
+18-RSR20-1(config)#ipv6 route 4::/64 serial2/0 5::2
+18-RSR20-1(config)#show ipv6 int 
+
+interface Serial 2/0 is Up, ifindex: 2, vrf_id 0
+  address(es):
+    Mac Address: N/A
+    INET6: 5::1 , subnet is 5::/64
+    INET6: FE80::5A69:6CFF:FE27:BEAD , subnet is FE80::/64
+  Joined group address(es):
+    FF01::1
+    FF02::1
+    FF02::2
+    FF02::1:FF00:1
+    FF02::1:FF27:BEAD
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds
+  ND advertised reachable time is 0 milliseconds
+  ND retransmit interval is 1000 milliseconds
+  ND advertised retransmit interval is 0 milliseconds
+  ND router advertisements are sent every 200 seconds<160--240>
+  ND router advertisements live for 600 seconds
+
+interface GigabitEthernet 0/0 is Up, ifindex: 4, vrf_id 0
+          
+18-RSR20-1(config)#show ipv6 route
+IPv6 routing table name is - Default - 16 entries
+Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP
+       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary 
+       O - OSPF intra area, OI - OSPF inter area,  OE1 - OSPF external type 1, OE2 - OSPF external type 2
+       ON1 - OSPF NSSA external type 1, ON2 - OSPF NSSA external type 2
+L      ::1/128 via Loopback, local host
+C      1::/64 via GigabitEthernet 0/1, directly connected
+L      1::1/128 via GigabitEthernet 0/1, local host
+S      2::/64 [1/0] via 5::2, Serial 2/0
+C      3::/64 via GigabitEthernet 0/0, directly connected
+L      3::1/128 via GigabitEthernet 0/0, local host
+S      4::/64 [1/0] via 5::2, Serial 2/0
+C      5::/64 via Serial 2/0, directly connected
+L      5::1/128 via Serial 2/0, local host
+L      FE80::/10 via ::1, Null0
+C      FE80::/64 via Serial 2/0, directly connected
+L      FE80::5A69:6CFF:FE27:BEAD/128 via Serial 2/0, local host
+C      FE80::/64 via GigabitEthernet 0/0, directly connected
+L      FE80::5A69:6CFF:FE27:BEAD/128 via GigabitEthernet 0/0, local host
+C      FE80::/64 via GigabitEthernet 0/1, directly connected
+L      FE80::5A69:6CFF:FE27:BEAE/128 via GigabitEthernet 0/1, local host
+18-RSR20-1(config)#show ipv6 int br 
+
+Serial 2/0                    [up/up]
+        5::1
+        FE80::5A69:6CFF:FE27:BEAD
+GigabitEthernet 0/0           [up/up]
+        3::1
+        FE80::5A69:6CFF:FE27:BEAD
+GigabitEthernet 0/1           [up/up]
+        1::1
+        FE80::5A69:6CFF:FE27:BEAE
+18-RSR20-1(config)#show ipv6 route br
+                                    ^
+% Invalid input detected at '^' marker.
+
+18-RSR20-1(config)#show ipv6 route   
+IPv6 routing table name is - Default - 16 entries
+Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP
+       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary 
+       O - OSPF intra area, OI - OSPF inter area,  OE1 - OSPF external type 1, OE2 - OSPF external type 2
+       ON1 - OSPF NSSA external type 1, ON2 - OSPF NSSA external type 2
+L      ::1/128 via Loopback, local host
+C      1::/64 via GigabitEthernet 0/1, directly connected
+L      1::1/128 via GigabitEthernet 0/1, local host
+S      2::/64 [1/0] via 5::2, Serial 2/0
+C      3::/64 via GigabitEthernet 0/0, directly connected
+L      3::1/128 via GigabitEthernet 0/0, local host
+S      4::/64 [1/0] via 5::2, Serial 2/0
+C      5::/64 via Serial 2/0, directly connected
+L      5::1/128 via Serial 2/0, local host
+L      FE80::/10 via ::1, Null0
+C      FE80::/64 via Serial 2/0, directly connected
+L      FE80::5A69:6CFF:FE27:BEAD/128 via Serial 2/0, local host
+C      FE80::/64 via GigabitEthernet 0/0, directly connected
+L      FE80::5A69:6CFF:FE27:BEAD/128 via GigabitEthernet 0/0, local host
+C      FE80::/64 via GigabitEthernet 0/1, directly connected
+L      FE80::5A69:6CFF:FE27:BEAE/128 via GigabitEthernet 0/1, local host
+18-RSR20-1(config)#end
+18-RSR20-1#*Apr 26 15:09:57: %SYS-5-CONFIG_I: Configured from console by console
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18-RSR20-1>
+18-RSR20-1>en 14
+
+Password:
+18-RSR20-1#config
+Enter configuration commands, one per line.  End with CNTL/Z.
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     up       
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.16.10/24     no address           up                     up       
+GigabitEthernet 0/1              192.168.2.1/24       no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#show ipv6\ int br
+                            ^
+% Invalid input detected at '^' marker.
+
+18-RSR20-1(config)#show ipv6 int br 
+
+Serial 2/0                    [up/up]
+        5::1
+        FE80::5A69:6CFF:FE27:BEAD
+GigabitEthernet 0/1           [up/up]
+        1::1
+        FE80::5A69:6CFF:FE27:BEAE
+18-RSR20-1(config)#int gi 0/0
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ipv6 address 3::1/64
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ipv6 enable && no shutdown &&exit
+                                                      ^
+% Invalid input detected at '^' marker.
+
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ipv6 enable
+18-RSR20-1(config-if-GigabitEthernet 0/0)#no shutdown
+18-RSR20-1(config-if-GigabitEthernet 0/0)#exit
+18-RSR20-1(config)#no ipv6 nd suppress-ra
+                               ^
+% Invalid input detected at '^' marker.
+
+18-RSR20-1(config)#show ipv6 int br      
+
+Serial 2/0                    [up/up]
+        5::1
+        FE80::5A69:6CFF:FE27:BEAD
+GigabitEthernet 0/0           [up/up]
+        3::1
+        FE80::5A69:6CFF:FE27:BEAD
+GigabitEthernet 0/1           [up/up]
+        1::1
+        FE80::5A69:6CFF:FE27:BEAE
+18-RSR20-1(config)#ipv6 route 4::/64 serial2/0 5::2
+18-RSR20-1(config)#show ipv6 int 
+
+interface Serial 2/0 is Up, ifindex: 2, vrf_id 0
+  address(es):
+    Mac Address: N/A
+    INET6: 5::1 , subnet is 5::/64
+    INET6: FE80::5A69:6CFF:FE27:BEAD , subnet is FE80::/64
+  Joined group address(es):
+    FF01::1
+    FF02::1
+    FF02::2
+    FF02::1:FF00:1
+    FF02::1:FF27:BEAD
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds
+  ND advertised reachable time is 0 milliseconds
+  ND retransmit interval is 1000 milliseconds
+  ND advertised retransmit interval is 0 milliseconds
+  ND router advertisements are sent every 200 seconds<160--240>
+  ND router advertisements live for 600 seconds
+
+interface GigabitEthernet 0/0 is Up, ifindex: 4, vrf_id 0
+          
+18-RSR20-1(config)#show ipv6 route
+IPv6 routing table name is - Default - 16 entries
+Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP
+       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary 
+       O - OSPF intra area, OI - OSPF inter area,  OE1 - OSPF external type 1, OE2 - OSPF external type 2
+       ON1 - OSPF NSSA external type 1, ON2 - OSPF NSSA external type 2
+L      ::1/128 via Loopback, local host
+C      1::/64 via GigabitEthernet 0/1, directly connected
+L      1::1/128 via GigabitEthernet 0/1, local host
+S      2::/64 [1/0] via 5::2, Serial 2/0
+C      3::/64 via GigabitEthernet 0/0, directly connected
+L      3::1/128 via GigabitEthernet 0/0, local host
+S      4::/64 [1/0] via 5::2, Serial 2/0
+C      5::/64 via Serial 2/0, directly connected
+L      5::1/128 via Serial 2/0, local host
+L      FE80::/10 via ::1, Null0
+C      FE80::/64 via Serial 2/0, directly connected
+L      FE80::5A69:6CFF:FE27:BEAD/128 via Serial 2/0, local host
+C      FE80::/64 via GigabitEthernet 0/0, directly connected
+L      FE80::5A69:6CFF:FE27:BEAD/128 via GigabitEthernet 0/0, local host
+C      FE80::/64 via GigabitEthernet 0/1, directly connected
+L      FE80::5A69:6CFF:FE27:BEAE/128 via GigabitEthernet 0/1, local host
+18-RSR20-1(config)#show ipv6 int br 
+
+Serial 2/0                    [up/up]
+        5::1
+        FE80::5A69:6CFF:FE27:BEAD
+GigabitEthernet 0/0           [up/up]
+        3::1
+        FE80::5A69:6CFF:FE27:BEAD
+GigabitEthernet 0/1           [up/up]
+        1::1
+        FE80::5A69:6CFF:FE27:BEAE
+18-RSR20-1(config)#show ipv6 route br
+                                    ^
+% Invalid input detected at '^' marker.
+
+18-RSR20-1(config)#show ipv6 route   
+IPv6 routing table name is - Default - 16 entries
+Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP
+       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary 
+       O - OSPF intra area, OI - OSPF inter area,  OE1 - OSPF external type 1, OE2 - OSPF external type 2
+       ON1 - OSPF NSSA external type 1, ON2 - OSPF NSSA external type 2
+L      ::1/128 via Loopback, local host
+C      1::/64 via GigabitEthernet 0/1, directly connected
+L      1::1/128 via GigabitEthernet 0/1, local host
+S      2::/64 [1/0] via 5::2, Serial 2/0
+C      3::/64 via GigabitEthernet 0/0, directly connected
+L      3::1/128 via GigabitEthernet 0/0, local host
+S      4::/64 [1/0] via 5::2, Serial 2/0
+C      5::/64 via Serial 2/0, directly connected
+L      5::1/128 via Serial 2/0, local host
+L      FE80::/10 via ::1, Null0
+C      FE80::/64 via Serial 2/0, directly connected
+L      FE80::5A69:6CFF:FE27:BEAD/128 via Serial 2/0, local host
+C      FE80::/64 via GigabitEthernet 0/0, directly connected
+L      FE80::5A69:6CFF:FE27:BEAD/128 via GigabitEthernet 0/0, local host
+C      FE80::/64 via GigabitEthernet 0/1, directly connected
+L      FE80::5A69:6CFF:FE27:BEAE/128 via GigabitEthernet 0/1, local host
+18-RSR20-1(config)#end
+18-RSR20-1#*Apr 26 15:09:57: %SYS-5-CONFIG_I: Configured from console by console

@@ -1,0 +1,1491 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- Server -->
+$WEB_ADMIN$=Webadministratör
+
+<!-- Time Format: This string is used to define how the time of day is displayed in your locale.  The following are possible values: -->
+<!-- %H: Hour in 24-hour format (00-23), %I: Hour in 12-hour format (1-12), %M: Minute as a decimal number (00-59), %p: Current locales A.M./P.M. indicator for 12-hour clock (optional) -->
+<!-- US time is the default, which is displayed as "12:34 PM" -->
+$LOCALE_TIME_FORMAT$=%I:%M %p
+$TIME_AM$=AM
+$TIME_PM$=PM
+
+<!-- The following values indicate the width to be used for certain HTML elements since some languages require more space to display the same text and -->
+<!-- unilaterally increasing the available space for all languages based upon this creates a lot of white space.  Translators do not need to do anything -->
+<!-- with these values. -->
+$USER_ATTRS_DIALOG_WIDTH$=740
+$GROUP_ATTRS_DIALOG_WIDTH$=740
+$VISTA_DIALOG_INCREASE$=50
+$TREE_NAV_WIDTH$=225
+$CONNECTION_GROUP_WIDTH$=565
+$CONTAINER_CONNECTION_GROUP_WIDTH$=570
+$LOG_FILE_GROUP_HEIGHT$=295
+$OPERA_LOG_FILE_GROUP_HEIGHT$=320
+$DOMAIN_INFO_GROUP_HEIGHT$=215
+$USER_INFO_LEFT_CONTAIN_WIDTH$=200
+$USER_INFO_RIGHT_CONTAIN_WIDTH$=325
+$USER_INFO_INPUT_WIDTH_ADD$=0
+$USER_INFO_RIGHT_PUBKEY_WIDTH$=395
+
+<!-- **************** header.htm **************** -->
+$CONSOLE_TITLE$=Serv-U File Server Kontrollpanel
+$FVJV$=FTP Voyager JV
+$BASIC_WEB_CLIENT$=Webbklienten
+$CURRENTLYLOGGEDIN$=Inloggad
+$CURRENTLY_EDITING_DOMAIN$=Hanterar domän
+$CURRENTLY_EDITING_SERVER$=Hanterar
+$LOCAL_ADMIN$=Lokal Admin
+$HOME$=Hem
+
+
+<!-- **************** Console.htm **************** -->
+<!-- HTML -->
+$MANAGE_SERVER$=Hantera Server
+$SERVER$=Server
+$NAVIGATION$=Navigation
+<!-- Javascript -->
+$SELECT_DOMAIN_MSG$=Markera eller skapa en domän genom att trycka på knappen "$MANAGE_DOMAIN_BUTTON$".
+$SELECT_A_DOMAIN_TO_DELETE$=Markera en domän att ta bort.
+$ASK_DELETE_DOMAIN$=Är du säker på att du vill ta bort den markerade domänen/domänerna?
+$SELECT_ONLY_ONE_DOMAIN$=Begränsa urvalet till en domän.
+$SELECT_ONLY_ONE_DOMAIN_EDIT$=Du kan endast välja en domän att redigera.
+$SELECT_ONE_DOMAIN_EDIT$=Markera en enskild domän att redigera.
+$SELECT_A_DOMAIN$=Markera en domän
+<!-- Manage Domain -->
+$MANAGE_DOMAIN_BUTTON$=Hantera domän
+$DOMAINS$=Domäner
+$DOMAIN$=Domän
+$DOMAINNAME$=Domän-namn
+$DESCRIPTION$=Beskrivning
+<!-- New Domain Dialog -->
+$NEW_DOMAIN$=Ny domän
+$NEW_DOMAIN_BUTTON$=Ny domän
+$CREATE_NEW_DOMAIN$=Skapa ny domän
+<!-- Domain Details -->
+$DOMAIN_DETAILS$=Domänens detaljer
+$DOMAIN_NAME_AND_DESCRIPTION$=Redigera domänens namn och beskrivning.
+$CONFIGURE_LISTENERS$=Konfigurera domänens listeners.
+$CONFIGURE_VIRTUAL_HOSTS$=Behåll de virtuella host-namnen.
+$CONFIGURE_IPACCESS$=Konfigurera domänens IP-access regler.
+$CONFIGURE_DOMAIN_DATABASE$=Konfigurera databasens åtkomst för domänkonton och grupper.
+$CONFIGURE_DOMAIN_EVENTS$=Skapa, ändra och ta bort domän-events.
+<!-- Users -->
+$USERS$=Användare
+$CREATE_MODIFY_DELETE_USER$=Skapa, ändra och ta bort användarkonton.
+$CREATE_MODIFY_DELETE_DB_USER$=Skapa, ändra och ta bort användarkonton lagrade i en databas.
+$CONFIG_WIN_AUTH_SETTINGS$=Konfigurera windowsautentiserings-inställningar.
+<!-- Groups-->
+$GROUPS$=Grupper
+$CREATE_MODIFY_DELETE_GROUP$=Skapa, ändra och ta bort användargrupper.
+$CREATE_MODIFY_DELETE_DB_GROUP$=Skapa, ändra och ta bort användargrupper lagrade i en databas.
+<!-- Directories -->
+$CONFIGURE_DIRECTORY_ACCESS$=Konfigurera mappåtkomst-regler för alla användare i domänen.
+$CREATE_MAINTAIN_VIRTUAL_PATHS$=Skapa och behåll virtuella sökvägar för att ge åtkomst till sökvägar utanför hem-mappen.
+<!-- Limts & Settings -->
+$LIMITS$=Begränsningar &amp; Inställningar
+$CREATE_MAINTAIN_LIMITS$=Skapa och behåll begränsningar som gäller för domänen.
+$MAINTAIN_DOMAIN_SETTINGS$=Behåll inställningar för domänen.
+$MAINTAIN_DOMAIN_FTPCP$=Konfigurera avancerade inställningar för FTP-kommandon och betenden för domänen.
+$MAINTAIN_DOMAIN_ENCRYPTION$=Skapa och välj SSL och SSH certifikat och konfigurera inställningar för kryptering.
+<!-- Domain Activity -->
+$DOMAIN_ACTIVITY$=Domänaktivitet
+$VIEW_CONNECTED_USERS$=Visa anslutna användare.
+$VIEW_DOMAIN_STATS$=Visa domän-sessioner och trafikstatistik.
+$VIEW_USER_GROUP_STATS$=Visa användar- och gruppstatistik.
+$VIEW_DOMAIN_LOG$=Visa domänlogg.
+$CONFIGURE_DOMAIN_LOG$=Konfigurera domänloggen.
+<!-- Server Details -->
+$SERVERDETAILS$=Serverdetaljer
+$CONFIGURE_SERVER_IP_ACCESS$=Konfigurera IP-access regler för servern.
+$CONFIGURE_SERVER_DATABASE$=Konfigurera databasåtkomst fr globala konton och grupper.
+$CONFIGURE_SERVER_LICENSE$=Visa information om, och konfigurera licensen.
+$VIEW_SERVER_INFO$=Visa information om installationen.
+$CONFIGURE_SERVER_EVENTS$=Skapa, ändra och ta bort server-events.
+<!-- Global Users -->
+$GLOBALUSERS$=Globala användare
+$CREATEMODIFYGLOBALUSER$=Skapa, ändra och ta bort globala användarkonton.
+$CREATE_MODIFY_DELETE_DB_GLOBAL_USER$=Skapa, ändra och ta bort globala anvndarkonton lagrade i en databas.
+<!-- Global Groups -->
+$GLOBALGROUPS$=Globala grupper
+$CREATEMODIFYGLOBALGROUPS$=Skapa, ändra och ta bort globala anvndargrupper.
+$CREATE_MODIFY_DELETE_DB_GLOBAL_GROUP$=Skapa, ändra och ta bort globala anvndargrupper lagrade i en databas.
+<!-- Global Directories -->
+$GLOBALDIRECTORIES$=Globala mappar
+$CONFIGURESERVERDIRACCESS$=Konfigurera mappåtkomst för alla användare i servern.
+$CREATEMAINTAINVIRTUALPATHSSERVER$=Skapa och behåll virtuella sökvägar för att ge åtkomst utanför hem-mappen.
+<!-- Server Limits & Settings -->
+$SERVERLIMITS$=Begränsningar &amp; inställningar
+$CREATEMAINTAINSERVERLIMITS$=Skapa och behåll begränsningar som gäller för servern.
+$MAINTAINSERVERSETTINGS$=Behåll server-inställningar.
+$MAINTAIN_SERVER_FTPCP$=Konfigurera avancerade inställningar för FTP-kommandon och betenden för hela servern.
+$MAINTAINSERVERENCRYPTION$=Skapa och välj SSL och SSH certifikat och konfigurera inställningar för kryptering.
+<!-- Server Activity -->
+$SERVERACTIVITY$=Serveraktivitet
+$VIEW_SERVER_STATS$=Visa server-sessioner och trafik-statistik.
+$VIEW_SERVER_LOG$=Visa serverloggen
+<!-- Bubble tip dialog -->
+$HOME_LINK_BALLOON_TIP$=Du kan klicka på Serv-U loggan ovanför för att komma till startsidan från vilken sida som helst i Serv-U kontrollpanelen.
+$TREE_NAV_BALLOON_TIP$=Du kan klicka på ikonen till vänster för en fullständig lista över domäner med snabblänkar till konfigurationen för respektive domän.
+
+<!-- **************** TreeNav.htm **************** -->
+<!-- Domain Details -->
+$DOMAIN_NAME_AND_DESCRIPTION_TREE$=Domännamn &amp; Beskrivning
+$CONFIGURE_LISTENERS_TREE$=Listeners
+$CONFIGURE_VIRTUAL_HOSTS_TREE$=Virtuella värdar
+$CONFIGURE_IPACCESS_TREE$=Regler för ip-åtkomst
+$CONFIGURE_DOMAIN_DATABASE_TREE$=Databas-åtkomst
+$CONFIGURE_DOMAIN_EVENTS_TREE$=Domänhändelser
+<!-- Users -->
+$CREATE_MODIFY_DELETE_USER_TREE$=Användarkonton
+$CREATE_MODIFY_DELETE_DB_USER_TREE$=Databasanvändarkonton
+$CONFIG_WIN_AUTH_SETTINGS_TREE$=Windows-autentisering
+<!-- Groups-->
+$CREATE_MODIFY_DELETE_GROUP_TREE$=Användargrupper
+$CREATE_MODIFY_DELETE_DB_GROUP_TREE$=Databasgruppkonton
+<!-- Directories -->
+$CONFIGURE_DIRECTORY_ACCESS_TREE$=Rättigheter för mappåtkomst
+$CREATE_MAINTAIN_VIRTUAL_PATHS_TREE$=Virtuella sökvägar
+<!-- Limts & Settings -->
+$CREATE_MAINTAIN_LIMITS_TREE$=Domänbegränsningar
+$MAINTAIN_DOMAIN_SETTINGS_TREE$=Domäninställningar
+$MAINTAIN_DOMAIN_FTPCP_TREE$=Inställningar för FTP-kommandon
+$MAINTAIN_DOMAIN_ENCRYPTION_TREE$=Krypteringsinställningar
+<!-- Domain Activity -->
+$VIEW_CONNECTED_USERS_TREE$=Anslutna användare
+$VIEW_DOMAIN_STATS_TREE$=Sessionens &amp; överföringsstatistik
+$VIEW_USER_GROUP_STATS_TREE$=Statistik för &amp; användargrupper
+$VIEW_DOMAIN_LOG_TREE$=Domänlogg
+$CONFIGURE_DOMAIN_LOG_TREE$=Konfigurationslogg
+<!-- Server Details -->
+
+$CONFIGURE_SERVER_IP_ACCESS_TREE$=Regler för it-åtkomst
+$CONFIGURE_SERVER_DATABASE_TREE$=Databasåtkomst
+$CONFIGURE_SERVER_LICENSE_TREE$=Licens-information
+$VIEW_SERVER_INFO_TREE$=Installations-information
+$CONFIGURE_SERVER_EVENTS_TREE$=Serverhändelser
+<!-- Global Users -->
+$CREATEMODIFYGLOBALUSER_TREE$=Användarkonto
+$CREATE_MODIFY_DELETE_DB_GLOBAL_USER_TREE$=Databasanvändarkonton
+<!-- Global Groups -->
+$CREATEMODIFYGLOBALGROUPS_TREE$=Användargrupper
+$CREATE_MODIFY_DELETE_DB_GLOBAL_GROUP_TREE$=Databasgrupper
+<!-- Global Directories -->
+$CONFIGURESERVERDIRACCESS_TREE$=Rättigheter för mapptåkomst
+$CREATEMAINTAINVIRTUALPATHSSERVER_TREE$=Virtuella sökvägar
+<!-- Server Limits & Settings -->
+$CREATEMAINTAINSERVERLIMITS_TREE$=Serverbegränsningar
+$MAINTAINSERVERSETTINGS_TREE$=Serverinställningar
+$MAINTAIN_SERVER_FTPCP_TREE$=Inställningar för FTP
+$MAINTAINSERVERENCRYPTION_TREE$=Krypteringsinställningar
+<!-- Server Activity -->
+$VIEW_SERVER_STATS_TREE$=Sessionens &amp; överföringsstatistik
+$VIEW_SERVER_LOG_TREE$=Serverlogg
+
+<!-- **************** DomainWizardDialog.htm **************** -->
+$DOMAIN_WIZARD$=Domänkonfiguration
+$DOMAIN_WIZARD_INFO$=Välkommen till domänkonfigurationen för Serv-U.  Den här guiden hjälper dig skapa en domän på din filserver.
+$DOMAIN_NAME_WIZARD_DESCR$=Namnet på varje domän är den unika nämnaren som åtskiljer den från övriga domäner.
+$DOMAIN_DESCR_WIZARD_DESCR$=Ytterligare information kan anges under domändetaljer.
+$DOMAIN_TYPE_WIZARD_DESCR$=En domän kan användas för att ge åtkomst till filservern genom olika protokoll. Vissa protokoll kräver en Secure, Professional eller Corporate licens för att kunna användas.  Markera de protokoll och portar som domänen ska använda.
+$DOMAIN_IP_WIZARD_DESCR$=Ip-adressen eller domännamnet anger adressen som domänen lyssnar på för inkommande anslutningar. Du kan lämna det blankt för att använda alla tillgängliga ip-adresser. Om du anger ett domännamn kommer det även användas för data-anslutningar.
+$PLEASE_ENTER_DOMAIN_NAME$=Ange ett unikt namn för domänen.
+$CONFIRM_CREATE_DOMAIN$=Välkommen till Serv-U. Inga domäner är konfigurerade.<br /><br />Vill du konfigurera en domän nu?
+$CONFIRM_CREATE_USER$=Den här domänen har inga användare. Vill du skapa en användare nu?
+
+
+<!-- **************** UserInfoLayer.htm **************** -->
+$USERINFO$=Användarinformation
+$USERINFOMSG$=Inställningar för ett användarkonto innehåller inloggningsuppgifter och rättigheter för kontot.
+$USER_TEMPLATE_INFOMSG$=Standardformen används för att konfigurera standardinställningarna när en ny användare skapas. Konfigurera formen för att snabbt kunna lägga till en användare med fördefinerade inställningar.
+$USERNAME$=Användarnamn
+$FULLNAME$=För- och efternamn
+$PASSWORD$=Lösenord
+$PASSWORDTYPE$=Lösenordstyp
+$ADMINPRIV$=Administrationsrättigheter
+$HOMEDIR$=Hem-mapp
+$ACCOUNT_TYPE$=Kontotyp
+$ACCOUNT_EXPIRE_DATE$=Kontots utgångs-datum
+$ENABLE_ACCOUNT$=Aktivera kontot
+$LOCK_HOME_DIR$=Lås användaren i deras hem-mapp
+$WEB_CLIENT_STARTUP$=Webbklient
+$ALWAYS_ALLOW_LOGIN$=Tillåt alltid inloggning
+$PASSWORD_INVALIDATED$=Om du byter lösenordstyp kommer det nuvarande lösenordet att sluta gälla. För att byta typ måste du även byta lösenord.
+$SSH_PUBLIC_KEY_PATH$=Sökväg för den publika nyckeln för SSH
+$CREATE_SSH_KEY_PAIR$=Skapa nyckelpar
+$EMAIL$=E-postadress
+
+<!-- Password Types -->
+$PASSWORD_REGULAR_DESC$=Vanligt lösenord
+$PASSWORD_MD4_DESC$=OTP S/KEY MD4
+$PASSWORD_MD5_DESC$=OTP S/KEY MD5
+
+<!-- Password Encrypt Types -->
+$PASSWORD_ENCRYPT_ONEWAY_DESC$=Envägs-kryptering (säkrare)
+$PASSWORD_ENCRYPT_TWOWAY_DESC$=Enkel tvåvägs-kryptering (mindre säkert)
+$PASSWORD_ENCRYPT_ONEWAY_STR$=Envägs-kryptering
+$PASSWORD_ENCRYPT_TWOWAY_STR$=Enkel tvåvägs-kryptering
+$NO_ENCRYPTION$=Ingen kryptering (inte rekommenderat)
+$PASSWORD_ENCRYPT_MODE$=Typ av lösenords-kryptering
+$USE_SERVER_SETTINGS$=Använd serverinställningarna
+$ENABLE_PASSWORD_RECOVER_DESC$=Tillåt användare att återställa lösenord
+$DOMAIN_PASSWORD_ENCRYPT_WIZARD_DESCR$=Serv-U kan återställa lösenord genom att skicka ut inloggningsinformation per e-post.  Använd tvåvägs-kryptering för att skydda lösenord. Genom att använda envägs-kryptering genereras ett nytt lösenord.
+$ENCRYPTION$=Kryptering
+$ENABLE_PASSWORD_ENCRYPTION_DESC$=Aktivera lösenordskryptering
+$ON$=På
+$OFF$=Av
+$CHANGE_SERVER_SETTINGS$=Ändra serverinställningar
+
+<!-- Administrator Privileges -->
+$PRIV_NONE_DESC$=Inga rättigheter
+$PRIV_DOMAIN_DESC$=Domänadministratör
+$PRIV_SYSTEM_DESC$=Systemadministratör
+$PRIV_DOMAIN_RO_DESC$=Domänadministratör med enbart läsrättigheter
+$PRIV_SYSTEM_RO_DESC$=Systemadministratör med enbart läsrättigheter
+<!-- Account Types -->
+$ACCT_TYPE_PERM_DESC$=Permanent
+$ACCT_TYPE_DISABLE_DESC$=Automatiskt inaktiverad
+$ACCT_TYPE_DELETE_DESC$=Automatiskt borttagen
+<!-- Default Web Client Types -->
+$WEB_CLIENT_BASIC_DESC$=Webbklienten
+$WEB_CLIENT_FVJV_DESC$=FTP Voyager JV
+$WEB_CLIENT_ASK_DESC$=Fråga användaren om vilken klient som skall användas
+
+
+<!-- **************** MembershipLayer.htm **************** -->
+$GROUPINFO$=Att lägga till en användare till en grupp ger användaren samma inställningar som gruppen. En användare kan vara med i flera grupper samtidigt. Följden som användaren läggs till i olika grupper har betydelse för hur inställningarna på verkar användarken.
+$GROUPLABEL$=Användaren är medlem i gruppen 
+$SELECT_ONE_GROUP_MEMBERSHIP_DELETE$=Markera endast en grupp att ta bort användaren från.
+
+
+<!-- **************** GroupsDialog **************** -->
+$SELECT_GROUP_DIALOG_TITLE$=Tillgängliga grupper
+$SELECT_ONLY_ONE_AVAILABLE_GROUP$=Markera endast en grupp att lägga till användaren till.
+
+
+<!-- **************** EventEmailGroupsDialog **************** -->
+$GROUP_EMAIL_LIST_DIALOG_TITLE$=Mailinglista
+$SELECT_ONLY_ONE_EMAIL_GROUP$=Markera en grupp som ska läggas till e-posteventet.
+$ASK_DELETE_GROUP_EMAIL$=Är du säker på att du vill ta bort en grupp från det här e-posteventet?
+$SELECT_ONE_GROUP_EMAIL_DELETE$=Markera en enskild grupp att ta bort från e-posteventlistan.
+$EMAIL_GROUPS_INFO$=Grupper som lagts till listan till vänster får en notis när ett event har matchats.  Alla medlemmar som har en giltig e-postadress får en e-postnotis.
+
+
+<!-- **************** MessageFileLayer.htm **************** -->
+$MSGFILE$=Meddelandefil
+$WELCOME_MSG$=Välkomstmeddelande
+$MSGFILEINFO$=Ett meddelande skickas till användaren efter ett lyckat inloggningsförsök via FTP eller HTTP. Om du konfigurerar detta meddelande kommer det att visas istället för meddelanden som är konfigurerade i grupper. Du kan använda symboler i meddelandet.
+$MSGFILECHKLABEL$=Inkludera svarskoden i meddelandetexten
+$WELCOME_MSG_CHECK_LABEL$=Inkludera svarskoden i meddelandetexten för FTP-anslutningar
+$MSGFILELABEL$=Meddelandets sökväg
+$WELCOME_MSG_TEXT_INFO$=Du kan skriva in ett meddelande direkt i rutan nedanför istället för att skriva in en sökväg. Texten kommer då användas som välkomstmeddelande istället för det i sökvägen.
+$SIGNON_MESSAGE_OVERRIDE$=Använd detta meddelande istället för eventuella grupp-meddelanden
+
+
+<!-- **************** IPAccessLayer.htm **************** -->
+$IPACCESS$=Ip-åtkomst
+$USER_IP_ACCESS_INFO$=Användarens Ip-åtkomst regler kontrolleras sist i ett inloggningsförsök. De här reglerna påverkar endast en användare. Regler kan ärvas från gruppmedlemskap.
+$GROUP_IP_ACCESS_INFO$=Gruppens ip-åtkomst regler påverkar alla användarkonton i gruppen. De kan överskridas på användarnivå.
+$RULE_ADDRESS$=Adress
+$RULE_ALLOW$=Tillåt
+$RULE_DENY$=Neka
+$EXPIRES_IN$=Utgår om
+$RULE_EXPIRED$=Har utgått
+$SELECT_ONLY_ONE_IPACCESS_EDIT$=Du kan endast ändra en regel åt gången.
+$SELECT_ONE_IPACCESS_EDIT$=Markera en ip-åtkomst regel att ändra.
+$SELECT_ONE_IPACCESS_DELETE$=Markera en ip-åtkomst regel att ta bort.
+$ASK_DELETE_IPACCESS$=Är du säker på att du vill ta bort den valda regeln?
+$CONFIRM_SORT_IP$=Du har valt att visa den här listan i sorteringsläge. I det här läget påverkas inte sorteringen av listan av manuella val.<br /><br />Är du säker på att du vill visa listan i sorteringsläge?
+$ENABLE_SORT_VIEW$=Aktivera sorteringsläge
+
+
+<!-- **************** IPAccessDialog.htm **************** -->
+$IP_ACCESS_DIALOG_TITLE$=Ip-åtkomst regel
+$RULE$=Regel
+$RULE_ALLOW_LABEL$=Tillåt åtkomst
+$RULE_DENY_LABEL$=Neka åtkomst
+$IP_ACCESS_TIPS$=Ip-åtkomst tips
+$IP_RULE_MATCH$=Exakt matchning
+$IP_RULE_RANGE$=Räckvidd (Endast ip-nummer)
+$IP_RULE_ANY$=Matcha någon
+$IP_RULE_ANY_CHAR$=Matcha någon bokstav
+$DNS4ME_SERVICE$=DNS4Me dynamisk dns tjänst
+$DNS4ME_SERVICE_NOTE$=Vill du ange ip-baserad åtkomst för klienter med dynamiska ip-adresser? Skapa en åtkomstregel för din DNS4Me domän.
+$PLEASE_ENTER_RULE$=Skriva in en ip-åtkomst regel.
+$IP_ACCESS_RULE_LABEL$=IP Adress/Namn/Mask
+$IP_RULE_CIDR$=CIDR notering
+
+
+<!-- **************** DirAccessLayer.htm **************** -->
+$DIRACCESS$=Mappåtkomst
+$USER_DIR_ACCESS_INFO$=Användarens mappåtkomst anger vilka filer och mappar som användaren har tillgång till. På användarnivå ärvs regler från grupmedlemskap, domänen och servern.
+$GROUP_DIR_ACCESS_INFO$=Gruppens mappåtkomst gäller för alla användare som är med i gruppen. De kan gälla före eller efter användarens regler, eller överskridas av dem.
+$PATH$=Sökväg
+$ACCESS$=Åtkomst
+$MAX_SIZE$=Största storlek
+$SELECT_ONLY_ONE_DIRACCESS_EDIT$=Du kan endast ändra en regel åt gången.
+$SELECT_ONE_DIRACCESS_EDIT$=Markera en regel att ändra.
+$SELECT_ONE_DIRACCESS_DELETE$=Markera en regel att ta bort.
+$ASK_DELETE_DIRACCESS$=Är du säker på att du vill ta bort den markerade regeln?
+
+
+<!-- **************** DirAccessDialog.htm **************** -->
+$DIR_ACCESS_DIALOG_TITLE$=Mappåtkomstregel
+$DIR_ACCESS_FILES$=Filer
+$DIR_ACCESS_DIRS$=Mappar
+$DIR_ACCESS_SUBDIRS$=Undermappar
+$MAX_SIZE_DISP$=Största storlek på mappinnehåll
+$MAX_SIZE_LABEL$=MB
+$MAX_SIZE_COMMENT$=(lämna blank för obegränsat)
+$EXECUTE_CAUTION$=VARNING: Kör-rättigheter tillåter användaren att köra program och filer
+$DIR_ACCESS_FULL_ACCESS$=Full åtkomst
+$DIR_ACCESS_RO_ACCESS$=Endast läsrättigheter
+$DIR_ACCESS_AS_WIN_USER$=Logga in som windowsanvändare
+$USER_NAME$=Användarnamn
+
+<!-- Dir Access Mask Labels -->
+$ACCESS_READ$=Läsa
+$ACCESS_WRITE$=Skriva
+$ACCESS_APPEND$=Lägga till
+$ACCESS_DELETE$=Ta bort
+$ACCESS_RENAME$=Byta namn
+$ACCESS_EXECUTE$=Köra
+$ACCESS_LIST$=Lista
+$ACCESS_CREATE$=Skapa
+$ACCESS_REMOVE$=Ta bort
+$ACCESS_INHERIT$=Ärva
+$PLEASE_ENTER_PATH$=Skriva in en sökväg.
+
+
+<!-- **************** VirtualPathLayer.htm **************** -->
+$VIRPATHS$=Virtuell sökväg
+$VIRTUALPATHINFO$=Virtuella sökvägar länkar fysiska sökvägar utanför användarens hem-mapp till användarens mapplista. Virtuella sökvägar ersätter traditionella genvägar.
+$VIRPATH_PHYSICAL$=Fysisk sökväg
+$VIRPATH_MAPPED_TO$=Virtuell sökväg
+$SELECT_ONLY_ONE_VIRPATH_EDIT$=Markera endast en virtuell sökväg.
+$SELECT_ONE_VIRPATH_EDIT$=Markera endast en virtuell sökväg att ändra.
+$SELECT_ONE_VIRPATH_DELETE$=Markera en virtuell sökväg att ta bort.
+$ASK_DELETE_VIRPATH$=Är du säker på att du vill ta bort den virtuella sökvägen?
+$VIRPATH_INCLUDE_IN_MAX_SIZE$=Inkludera i \"Största storlek på mapp\" beräkningen
+
+
+<!-- **************** VirtualPathDialog.htm **************** -->
+$VIRPATH_DIALOG_TITLE$=Virtuell sökväg
+$VIRPATH_DIALOG_INFO$=Den fysiska sökvägen är den du vill binda den virtuella sökvägen till. Den virtuella sökvägen definerar vart du vill länka sökvägen till.
+$VIRPATH_VIRTUAL$=Virtuell sökväg
+$PLEASE_ENTER_VIRPATH$=Du måste ange både en virtuell och en fysisk sökväg.
+
+
+<!-- **************** EventsLayer.htm **************** -->
+$EVENTS$=Events
+$EVENT$=Event
+$EVENTS_INFO$=Events används för att skicka information till administratörer när eventet inträffar på servern.
+$EVENT_TYPE$=Event typ
+$ASK_DELETE_EVENT$=Är du säker på att du vill ta bort det markerade eventet/eventsen?
+$SELECT_ONLY_ONE_EVENT_EDIT$=Markera endast ett event att redigera.
+$SELECT_ONE_EVENT_EDIT$=Markera ett event att redigera.
+$SELECT_ONE_EVENT_DELETE$=Markera ett event för att ta bort.
+$CREATE_COMMON_EVENTS_BUTTON$=Skapa vanliga events
+$TEST_EVENTS_BUTTON$=Testa event
+$SELECT_ONLY_ONE_EVENT_TEST$=Markera endast ett event för test.
+$SELECT_ONE_EVENT_TEST$=Markera ett event för test.
+$CONFIG_SMTP_BUTTON$=Konfigurera SMTP
+$SMTP_CONFIG_WARN$=SMTP konfiguration måste göras på domän- eller servernivå.
+$EVENT_DISPATCHED_SUCCESS$=Testeventet har skickats till servern utan anmärkningar.
+
+<!-- **************** EventsDialog.htm **************** -->
+$EVENTS_NAME_LABEL$=Event-namn
+$EVENTS_ACTION_LABEL$=Åtgärd
+$EVENTS_EMAIL_TO_LABEL$=Till
+$EVENTS_EMAIL_BCC_LABEL$=BCC
+$EVENTS_EMAIL_TO_NOTE$=Separera e-postadresser med komma, mellanslag eller semikolon.
+$GROUP_EMAIL_TO_NOTE$=Lägg till grupper att meddela via email
+$GROUP_EMAIL_BCC_NOTE$=Lägg till grupper att meddela genom BCC E-post
+$EVENTS_EMAIL_SUBJECT_LABEL$=Ämne
+$EVENTS_EMAIL_BODY_LABEL$=Meddelande
+$EVENTS_BALLOON_TITLE_LABEL$=Ballong-titel
+$EVENTS_BALLOON_INFO_LABEL$=Ballong-information
+$EVENTS_COMMAND_LINE_LABEL$=Kommandoprompts-parametrar
+$EVENT_ACTION_GROUP$=Event-åtgärder
+$EVENT_INFO_GROUP$=Event-information
+$PLEASE_ENTER_EVENT_NAME$=Skriv in ett namn för eventet.
+$WARN_DOMAIN_ADMIN_EVENTS$=Domänadministratörer har inte rättigheter för att utföra den här åtgärden.
+$DATA$=Data
+$EVENTS_EXEC_PATH_LABEL$=Programmet körs ifrån
+$ENABLE_EVENT$=Aktivera event
+$CONFIRM_EMAIL_INFO_DELETE$=Genom att inaktivera den här funktionen nollställer du ämnet och meddelandet till standardvärdena.<BR /><BR />Är du säker på att du vill inaktivera funktionen?
+$CONFIRM_WAIT_DELAY_EXEC$=Väntetiden fördröjer alla Serv-U processer under den inställda tiden.  den måste användas med försiktighet.<BR /><BR />Är du säker på att du vill ställa in den här väntetiden?
+$EVENTS_EXEC_WAIT_LABEL$=Väntetid
+$EVENTS_EXEC_WAIT_SEC$=0-30 sekunder, 0 för omedelbart
+
+<!-- *************** Server Events ******************** -->
+$SUEVENT_ID_SERVER_START_TEXT$=Starta server
+$SUEVENT_ID_SERVER_STOP_TEXT$=Stoppa server
+<!-- *************** Domain and Server Events ********* -->
+$SUEVENT_ID_DOMAIN_START_TEXT$=Starta domän
+$SUEVENT_ID_DOMAIN_STOP_TEXT$=Stoppa domän
+$SUEVENT_ID_SESSION_CONNECT_TEXT$=Sessionsanslutning
+$SUEVENT_ID_SESSION_DISCONNECT_TEXT$=Sessionsfrånkoppling
+$SUEVENT_ID_SESSION_CONNECT_FAILURE_TEXT$=Sessionsanslutning misslyckades
+$SUEVENT_ID_LOG_DELETED_TEXT$=Loggfil borttagen
+<!-- *************** User, Group, Domain and Server Events ********* -->
+$SUEVENT_ID_USER_LOGIN_TEXT$=Användarinloggning
+$SUEVENT_ID_USER_LOGOUT_TEXT$=Användarutloggning
+$SUEVENT_ID_USER_LOGIN_FAILURE_TEXT$=Användarinloggning misslyckades
+$SUEVENT_ID_USER_PASSWORD_CHANGE_TEXT$=Byte av användarlösenord
+$SUEVENT_ID_USER_PASSWORD_CHANGE_FAILURE_TEXT$=Byte av användarlösenord misslyckades
+$SUEVENT_ID_USER_ENABLED_TEXT$=Användare aktiverad
+$SUEVENT_ID_USER_DISABLED_TEXT$=Användare inaktiverad
+$SUEVENT_ID_USER_DELETED_TEXT$=Användare borttagen
+$SUEVENT_ID_USER_ADDED_TEXT$=Användare tillagd
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_SENT_TEXT$=Begäran har skickats
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_FAILED_TEXT$=Återställning av lösenord misslyckades
+$SUEVENT_ID_IP_BLOCKED_TEXT$=IP blockerat
+$SUEVENT_ID_IP_BLOCKED_TIME_TEXT$=IP blockerat tid
+$SUEVENT_ID_TOO_MANY_SESSIONS_TEXT$=För många sessioner
+$SUEVENT_ID_TOO_MANY_SESSIONS_ON_IP_TEXT$=För många sessioner för IP
+$SUEVENT_ID_FILE_UPLOAD_TEXT$=Fil uppladdad
+$SUEVENT_ID_FILE_UPLOAD_FAIL_TEXT$=Filuppladdning misslyckades
+$SUEVENT_ID_FILE_DOWNLOAD_TEXT$=Fil nedladdad
+$SUEVENT_ID_FILE_DOWNLOAD_FAIL_TEXT$=Filnedladdning misslyckades
+$SUEVENT_ID_FILE_DELETE_TEXT$=Fil borttagen
+$SUEVENT_ID_FILE_MOVE_TEXT$=Fil flyttad
+$SUEVENT_ID_DIR_CREATE_TEXT$=Mapp skapad
+$SUEVENT_ID_DIR_DELETE_TEXT$=Mapp borttagen
+$SUEVENT_ID_DIR_CHANGE_TEXT$=Mapp ändrad
+$SUEVENT_ID_DIR_MOVE_TEXT$=Mapp flyttad
+$SUEVENT_ID_QUOTA_OVERAGE_TEXT$=Över quota
+$SUEVENT_ID_DISK_SPACE_OVERAGE_TEXT$=Över diskutrymme
+$SUEVENT_ID_IP_ADDR_AUTO_BLOCKED_TIME_TEXT$=Ip-adressen har automatiskt lagts till åtkomstreglerna
+<!-- *************** Event Actions ********* -->
+$SUEVENT_ACTION_EMAIL_TEXT$=Skicka epost
+$SUEVENT_ACTION_BALLOON_TIP_TEXT$=Visa Balloon-tips
+$SUEVENT_ACTION_EXEC_TEXT$=Kör kommando
+
+<!-- **************** CommonEventsDialog.htm **************** -->
+$COMMON_EVENTS$=Vanliga events
+$COMMON_EVENT_ACTION_GROUP$=Åtgärder för vanliga events
+$COMMON_EVENT_INFO$=Skapa automatiskt events för vanliga händelser.
+
+
+<!-- **************** SMTPConfigDialog.htm **************** -->
+$SMTP_CONFIG_INFO_DOMAIN$=Konfigurera Serv-U att använda en SMTP server för att skicka email för events som använder email.  Det här behöver bara ställas in en gång per domän.
+$SMTP_CONFIG_INFO_SERVER$=Konfigurera Serv-U att använda en SMTP server för att skicka email för events som använder email.  Det här behöver bara ställas in en gång per server eller per domän.
+$SMTP_SERVER_LABEL$=SMTP Server
+$SMTP_PORT_LABEL$=SMTP Server Port
+$SMTP_ACCOUNT_NAME_LABEL$=Kontonamn
+$SMTP_ACCOUNT_PASSWORD_LABEL$=Lösenord
+$SMTP_FROM_ADDRESS_LABEL$=Från-adress
+$SMTP_CONFIG_TITLE$=SMTP konfiguration
+$SMTP_SERVER_GROUP$=Server Information
+$SMTP_AUTH_GROUP$=Autentiserings Information
+$SMTP_USE_SPA$=Använd säker lösenordsautentisering
+$SMTP_REQUIRE_LOGIN$=Min server kräver autentisering
+$SMTP_FROM_NAME_LABEL$=Från namn
+$SMTP_REQUIRE_SSL$=Den här servern kräver en säker anslutning (SSL)
+$SMTP_USE_SSL_CERT$=Använd SSL-certifikat när anslutning till den här servern sker
+
+
+<!-- **************** LimitsLayer.htm **************** -->
+$LIMITS_INFO$=Begränsningar används för att definera olika inställningar för din FTP server. Begränsningar kan läggas till olika tider på dagen eller under veckan.
+$LIMIT_TYPE$=Begränsningstyp
+$CONNECTION_LIMIT$=Anslutning
+$PASSWORD_LIMIT$=Lösenord
+$DIR_LIST_LIMIT$=Mapplista
+$TRANSFER_LIMIT$=Dataöverföring
+$ADVANCED_LIMIT$=Avancerat
+$LIMIT_APPLIED_TOD$=Tillagt datum &amp; Tid
+$MONDAY_ABBREV$=Mån
+$TUESDAY_ABBREV$=Tis
+$WEDNESDAY_ABBREV$=Ons
+$THURSDAY_ABBREV$=Tors
+$FRIDAY_ABBREV$=Fre
+$SATURDAY_ABBREV$=Lör
+$SUNDAY_ABBREV$=Sön
+$LIMIT_NOT_LIMITED$=När som helst
+$LIMIT_CHARACTERS$=bokstäver
+$LIMIT_CHARACTER$=bokstav
+$LIMIT_SESSIONS$=sessioner
+$LIMIT_SESSION$=session
+$LIMIT_MINUTES$=minuter
+$LIMIT_MINUTE$=minut
+$LIMIT_UNLIMITED$=Obegränsat
+$LIMIT_NO_TIMEOUT$=Ingen Timeout
+$LIMIT_NEVER_EXPIRES$=Utgår aldrig
+$LIMIT_NO_MINIMUM$=Inget minsta värde
+$LIMIT_CANT_DELETE_INHERITED$=Standard begränsingar kan inte tas bort. För att överskrida det värdet måste du skapa ett annat värde.
+$ASK_DELETE_LIMIT$=Är du säker på att du vill ta bort den markerade begräsningen?
+$SELECT_A_LIMIT_TO_DELETE$=Markera endast ett värde att ta bort.
+$LIMIT_CANT_EDIT_INHERITED$=Standardvärden kan inte ändras. För att överskrida det värdet måste du skapa ett annat värde.
+$SELECT_A_LIMIT_TO_EDIT$=Markera endast ett värde att ändra.
+$RATIOS_QUOTAS_BUTTON$=Ratio &amp; Quota
+$LIMIT_CREATE_NEW$=Vill du sätta en begränsning?
+$LIMIT_SFTP_VERSION$=Version (3-6)
+$LIMIT_VERSION$=Version
+$SSH_AUTH_TYPE_PWD_AND_PUB$=Lösenord och den publika nyckeln
+$SSH_AUTH_TYPE_PWD_OR_PUB$=Lösenord eller den publika nyckeln
+$SSH_AUTH_TYPE_PUB$=Endast den publika nyckeln
+$SSH_AUTH_TYPE_PWD$=Endast lösenord
+
+
+<!-- **************** LimitsDialog.htm **************** -->
+$LIMIT_EDIT_INFO$=Avancerade begräsningar tillåter dig att konfigurera när regeln ska gälla.
+$LIMIT_LABEL$=Begränsning
+$LIMIT_START_TIME$=Start tid
+$LIMIT_END_TIME$=Slut tid
+$LIMITS_DIALOG_TITLE$=Begräsning
+$LIMIT_TIME_OF_DAY$=Tid på dagen
+$LIMIT_APPLY_TOD$=Tillämpa begränsning den här tiden
+$LIMIT_DAYS_OF_WEEK$=Veckans dagar
+$DAY_MONDAY$=Måndag
+$DAY_TUESDAY$=Tisdag
+$DAY_WEDNESDAY$=Onsdag
+$DAY_THURSDAY$=Torsdag
+$DAY_FRIDAY$=Fredag
+$DAY_SATURDAY$=Lördag
+$DAY_SUNDAY$=Söndag
+$ADVANCED_BUTTON$=Avancerat
+$LIMIT_INVALID_TOD$=Skriv in ett giltigt värde med följande format - HH:MM.
+
+<!-- **************** LoginLimitDialog.htm **************** -->
+$LOGIN_LIMIT_EDIT_INFO$=Inställningar för inloggningsbegränsning låter dig konfigurera specifik tid då användaren eller gruppen får logga in.
+$AVAILABILITY$=Tillgänglighet
+$LOGIN_LIMIT_DIALOG_TITLE$=Inställningar för tillgänglighet
+
+
+<!-- **************** GroupInfoLayer.htm **************** -->
+$GROUPINFOMSG$=Alla gruppinställningar gäller för användarkonton som är med i gruppen. För att överskrida gruppinställningar behöver du göra inställningar på användarnivå.
+$GROUP_TEMPLATE_INFOMSG$=Standardformen för grupper används för att konfigurera standardvärden när en ny grupp skapas. Konfigurera formen för att snabbt lägga till nya grupper med standard värden och inställningar.
+$GROUP_INFO_TAB$=Gruppinformation
+$GROUPNAME$=Gruppnamn
+$GROUP_APPLY_DIR_ACCESS$=Lägg till åtkomstregler för gruppen först
+
+
+<!-- **************** MembersLayer.htm **************** -->
+$GROUP_MEMBERS$=Gruppmedlemmar
+$GROUP_MEMBERS_INFO$=Följande lista är gruppens medlemmar. Gruppmedlemmar ärver gruppens inställningar som inte är definerade på användarnivå. För att ta bort eller lägga till användare till gruppen behöver du ändra användarkontot.
+$GROUP_MEMBERS_WINDOWS_GROUP$=Alla användarkonton i windows är medlemmar i den här gruppen.
+$MEMBER_OF_GROUPS$=Medlem i grupperna
+$AVAILABLE_GROUPS$=Tillgängliga grupper
+
+
+<!-- **************** BrowseDialog.htm **************** -->
+$DIRECTORY_PATH$=Sökväg
+$APPLY_BUTTON$=Verkställ
+$DRIVES$=Enheter
+$SELECT_DRIVE$=Välj enhet
+
+
+<!-- **************** CURRENTLY UNCLASSIFIED STRINGS (HOMELESS) **************** -->
+$SSLOPTIONS$=SSL alternativ
+$SSHOPTIONS$=SSH alternativ
+$LOGGING$=Loggning
+$GLOBALGROUPSLABEL$=Lista över alla grupper i domänen.
+$GLOBALIPACCESSINFO$=Serverns ip-åtkomst regler är globala för hela ftp-servern. Dem gäller direkt när en anslutning upprättas mot en klient, innan välkomstmeddelandet visas.
+$MEMBERS$=Medlemmar
+$NO_SCRIPT_TEXT$=Det verkar som att din webbläsare inte stödeer javascript. Den här sidan kräver att javascript är aktiverat.
+$NO_LOG_EXISTS$=Ingen logfil är vald för domänen.<br /><br />Vill du välja en loggfil nu?
+$FEATURE_NOT_AVAILABLE$=Den befintliga licenser tillåter inte användande av funktionen.  För att använda funktionen måste du uppgradera.
+
+
+<!-- **************** GENERAL STRINGS **************** -->
+<!-- General -->
+$VALUE$=Värde
+$GLOBAL$=Global
+$RULES$=Regler
+$NORULES$=Inga regler finns
+$USE_INHERITED$=Ärv standard värdet
+$DAY$=dag
+$DAYS$=dagar
+$CAUTION$=VARNING
+$PROPERTIES$=Egenskaper
+$NEW$=Ny
+$SELECT_ALL$=Markera alla
+$CLEAR_LOG$=Rensa loggen
+$NONE$=Ingen
+$BITS$=bitar
+
+<!-- **************** License Strings **************** -->
+$LICENSE_DISABLED_FEATURE$=Den här funktionen har blivit inaktiverad eftersom den inte är tillgänglig med din nuvarande licens.
+$UPGRADE_LICENSE_NOTE$=För att aktivera den här funktionen måste du uppgradera din licens. Du kan uppgradera på följande länk:
+
+
+<!-- **************** ActivityMonitor.htm **************** -->
+<!-- Grid strings -->
+$NOT_APPLICABLE$=Inte tillgänglig
+$ID$=ID
+$CONN_TYPE$=Typ
+$IP_ADDR_OR_HOST$=IP-adress / Värdnamn
+$SERVER_ADDRESS$=Server adress
+$LOCATION$=Plats
+$LAST_COMMAND$=Senaste kommandot
+$CLIENT_SOFTWARE$=Klient
+<!-- Session info -->
+$ACTIVITY_SESS_INFO$=Information om aktiva sessioner
+$IP_ADDRESS$=IP-adress
+$ACTIVITY_DL$=Nedladdat
+$ACTIVITY_UL$=Uppladdat
+$ACTIVITY_SINCE$=Sedan
+$ACTIVITY_SPEED$=Hastighet
+$ACTIVITY_TIME_ON$=Tid på
+$ACTIVITY_AVG_DL_SPEED$=Medelhastighet för nedladdning
+$ACTIVITY_IDLE$=Inaktiv
+$ACTIVITY_AVG_UL_SPEED$=Medelhastighet för uppladdning
+$ACTIVITY_SEC_ABBREV$=sek
+$ACTIVITY_KBSEC_ABBREV$=KB/sek
+$ACTIVITY_FILES$=filer
+$ACTIVTY_ACCESS$=Användar-rättigheter
+$NOT_LOGGED_IN$=Inte inloggad ännu
+$ACCESS_NONE$=Ingen
+$ACCESS_SYSADMIN$=Systemadministratör
+$ACCESS_DOMADMIN$=Domänadministratör
+$SELECTED_PUBLIC_KEY_PROTOCOL$=Protokoll för publik nyckel
+$SERVER_TO_CLIENT$=S--&gt;K
+$CLIENT_TO_SERVER$=K--&gt;S
+
+<!-- Buttons -->
+$KILL_USER_BUTTON$=Koppla från
+$SPY_CHAT_BUTTON$=Spion &amp; Chat
+$BROADCAST_MESSAGE_BUTTON$=Broadcast
+$ABORT_BUTTON$=Avbryt
+<!-- Alerts -->
+$DISCONNECT_SELECT$=Markera en session att avsluta
+$SPY_CHAT_SELECT$=Markera en session för att visa ytterligare information.
+$SEND_MESSAGE_ONLY_FTP$=Meddelanden kan endast skickas till en ftp-session.
+$SPY_CHAT_NO_HTTP$=HTTP-sessioner kan inte visas i spion-loggen. Välj en ftp eller sftp session.
+$ABORT_SELECT_ITEM$=Markera en sessions för att avbryta det senaste kommandot.
+$ABORT_CONFIRM_SESSION$=Är du säker på att du vill avbryta det senaste kommandot för de markerade sessionerna?
+$BROADCAST_NO_FTP_SESSIONS$=Det finns inga aktiva ftp-sessioner som kan motta ett broadcast-meddelande.
+$COMMAND_DENIED$=Det gick inte att köra kommandot: Den markerade användarens konto har högre rättigheter.
+
+
+<!-- **************** DisconnectDialog.htm **************** -->
+<!-- Java Script -->
+$DISCONNECT_DIALOG_TITLE$=Koppla från sessionen
+$DISCONNECT_ACTION$=Åtgärd
+$DISCONNECT_KICK$=Koppla från
+$DISCONNECT_BAN$=Koppla från och banna ip adressen i
+$DISCONNECT_BAN_LABEL$=minuter
+$DISCONNECT_BLOCK$=Koppla från och blockera ip-adressen permanent
+$DISCONNECT_LEVEL_LABEL$=Lägg till ip-regeln till
+$DISCONNECT_LEVEL_SERVER$=hela servern
+$DISCONNECT_LEVEL_DOMAIN$=aktuell domän
+$DISCONNECT_DISABLE_ACCT$=Inaktivera användarkontot
+$DISCONNECT_MESSAGE$=Meddelande till användare
+$DISCONNECT_NO_DURATION$=Skriv in hur många minuter du vill banna ip-adressen.
+
+
+<!-- **************** SendMessageDialog.htm **************** -->
+<!-- Java Script -->
+$SEND_MESSAGE_DIALOG_TITLE$=Skicka meddelande
+$SEND_MESSAGE_LABEL$=Meddelandeinnehåll
+$SEND_MESSAGE_NO_TEXT$=Skriv in ett meddelande att skicka till specifierad session.
+<!-- Session message strings -->
+$SESSION_MESSAGE_DIALOG_TITLE$=Skicka meddelande
+$SESSION_MESSAGE_LABEL$=Meddelandeinnehåll
+$SESSION_MESSAGE_NOTE$=NOTERING: Alla ftp-klienter stöder inte data från servern som inte är begärd.
+$SESSION_MESSAGE_NO_TEXT$=Skriv in ett meddelande att skicka till den valda ftp-sessionen.
+<!-- Broadcast message strings -->
+$BROADCAST_MESSAGE_DIALOG_TITLE$=Skicka meddelande till alla sessioner
+$BROADCAST_MESSAGE_LABEL$=Meddelandeinnehåll
+$BROADCAST_MESSAGE_NOTE$=NOTERING: Meddelanden kan endast skickas till ftp-sessioner. Alla ftp-klienter stöder inte data från servern som inte är begärd.
+$BROADCAST_MESSAGE_NO_TEXT$=Skriv in ett meddelande att skicka till alla aktiva ftp-sessioner.
+
+
+<!-- **************** SpyChatDialog.htm **************** -->
+<!-- Java Script -->
+$SPY_CHAT_DIALOG_TITLE$=Detaljerad information om sessionen
+$SESSION_LOG$=Sessionslog
+$SPY_STATS$=Sessions-information
+$SPY_CHAT$=Chat
+$UNKNOWN_USER$=Okänd användare
+$SESSION_DISCONNECT$=Sessionen har kopplats från.
+
+
+<!-- **************** Server.htm **************** -->
+<!-- Main Page -->
+$SERVER_PAGE_INFO$=Visar information som gäller för hela filservern. 
+<!-- IP Access Tab -->
+$SERVER_IP_ACCESS_INFO$=Server regler för IP-åtkomst kontrolleras när en anslutning upprättas med filservern, men innan välkomstmeddelandet visas.
+<!-- License Information Tab -->
+$LICENSE$=Licensinformation
+$LICENSE_INFO$=Information om Serv-U licensen visas nedan. För att lägga in eller ändra din licens, tryck på "Registrera".
+$REGGIE_INFO_GROUP$=Registreringsinformation
+$REGGIE_NAME$=Namn
+$REGGIE_EMAIL$=Emailadress
+$REGGIE_EDITION$=Serv-U Edition
+$REGGIE_COPIES$=Kopior
+$REGGIE_DATE$=Inköpsdatum
+$REGGIE_UPDATES$=Updateringar
+$REGGIE_UNREGISTERED$=Ej registrerad
+$REGGIE_TRIAL$=Trial
+$REGGIE_PERSONAL$=Personal
+$REGGIE_STANDARD$=Standard
+$REGGIE_HOME$=Home
+$REGGIE_PRO$=Professional
+$REGGIE_CORP$=Corporate
+$REGGIE_BRONZE$=Bronze
+$REGGIE_SILVER$=Silver
+$REGGIE_GOLD$=Gold
+$REGGIE_TEMP$=Tillfällig
+$REGGIE_SITE$=Sida
+$REGGIE_DEPT$=Avdelning
+$REGGIE_ENT$=Företag
+$REGGIE_EXPIRE$=Utgår
+$REGGIE_DAYS_REMAIN$=dagar kvar
+$REGGIE_TRIAL_EXPIRED$=Trial har utgått
+$REGGIE_FREE_FOR_LIFE$=Uppgraderingsskyddet utgår aldrig
+$EDITION_INFO_GROUP$=Information
+$EDITION_ENABLED$=Aktiverad
+$EDITION_DISABLED$=Inaktiverad
+$EDITION_UNLIMITED$=Obegränsad
+$EDITION_MAX_DOMAINS$=Högsta antal domäner
+$EDITION_MAX_USER$=Högsta antal användarkonton
+$EDITION_MAX_SESSIONS$=Högsta antal sessioner
+$EDITION_REMOTE_ADMIN$=Fjärradministration
+$EDITION_ODBC$=ODBC autentisering
+$EDITION_WEB_CLIENT$=Webbklienten
+$EDITION_WINDOWS_AUTH$=Windows autentisering
+$EDITION_VIRTUAL_PATHS$=Virtuell sökväg
+$EDITION_VIRTUAL_HOSTS$=Virtuell värd
+$EDITION_QUOTAS$=Quotas
+$EDITION_RATIOS$=Överföringsratio
+$EDITION_ENCRYPTION$=FTPS (FTP över SSL)
+$EDITION_ENCRYPTION_SSH$=SFTP över SSH2
+$EDITION_CA_CERTIFICATE$=CA Certifikat
+$EDITION_USER_GROUP_STATS$=Användar- och gruppstatistik
+$EDITION_ENCRYPTION_HTTPS$=HTTPS
+$EDITION_FVJV$=FTP Voyager JV
+$EDITION_FIPS$=FIPS 140-2
+$EDITION_INTEGRATION_DLL$=DLL Integrering
+$ENABLE_FIPS$=Aktivera FIPS 140-2
+$ADDITIONAL_PROD_INFO_GROUP$=Ytterligare produkter
+$REGISTER_BUTTON$=Registrera
+$UPDATE_BUTTON$=Uppdatera
+$LOST_ID_BUTTON$=Borttappat ID
+$PURCHASE_BUTTON$=Köp
+$PURCHASE_UPDATE$=Köp uppdatering
+$ENTER_LICENCE_ID_BUTTON$=Skriv in licens-ID
+$UPDATE_NOTICE_BALLOON_TITLE$=Serv-U licensinformation
+$UPDATE_NOTICE_BALLOON_TIP$=Uppgraderingsskyddet utgår om mindre än 90 dagar. <p>För att förlänga uppdateringsskyddet klicka på knappen nedan.</p>
+$UPGRADE_UNLIMITED$=Uppgradera till obegränsad!
+$UPGRADE_TO_ENABLE$=Uppgradera till aktiverad!
+$ENABLE_FVJV$=Enable FTP Voyager JV
+$UPGRADE_TO_FVJV$=Lägg till FTP Voyager JV till Serv-U genom att uppgradera din licens.
+$EDITION_CUSTOM_LOGO$=Egen HTTP Logo
+$CONFIRM_FIPS_MODE_TEXT$=Certifikat och privata nycklar som inte skapats i FIPS-läge kan ha slutat fungera.  Du kan behöva skapa om ditt certifikat och privata nycklar för både servern och individuella domäner.
+$CONFIRM_FIPS_MODE$=Vill du bekräfta servercertifikatet och den privata nyckeln?
+$EDITION_EVENTS$=Events / E-postnotiser
+$EDITION_USER_PASSWORD_RECOVER$=Återställning av lösenord
+
+<!-- Program Information Tab -->
+$PROGRAM_INFO$=Programinformation
+$FILE_SERVER$=Filserver
+$VERSION$=Version
+$DATE_INFO_GROUP$=Installationsinformation
+$BUILD_DATE$=Skapades datum:
+$INSTALL_DATE$=Installerades datum:
+$CONTACT_INFO_GROUP$=Kontaktinformation
+$DEV_INFO_GROUP$=Utveckling
+$DEVELOPED_BY$=Utvecklad av
+$TRANSLATION_BY$=Översättning
+$COPYRIGHT$=Kopieringsskydd
+$LEGAL_INFO_GROUP$=Rättslig
+$LEGAL_INFORMATION$=Varning: Det här programmet är skyddat enligt upphovsrätten. Otillåten distribution eller kopiering av detta program är förbjuden.
+$FVJV_PRODUCT_INFO$=FTP Voyager JV är en fullfjädrad ftp klient som designats speciellt för Serv-U. <br /><br /><a href="%FVJV_HOME%" target="_blank">Besök</a> FTP Voyager JVs hemsida för mer information.
+
+
+<!-- **************** RegistrationDialog.htm **************** -->
+$REGISTRATION_DIALOG_TITLE$=Registrerings-ID
+$REGISTRATION_CLEAR_CONFIRM$=Serv-U blir oregistrerad om du tar bort registrerings-ID. Är du säker på att du vill ta bort registreringsinformationen?
+$REGISTRATION_FAIL$=Ditt registrerings-ID är giltigt men kunde inte sparas till disk. Följ instruktionerna som är inkluderade i registreringsmeddelandet för att registrera Serv-U.
+$PASTE_REGGIE_BUTTON$=Klistra in registrerings-ID
+
+
+<!-- **************** Domain.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_SAVED_RESULT$=Domäninställningarna har sparats.
+$SELECT_ONLY_ONE_LISTENER_EDIT$=Markera endast en listener att ändra.
+$SELECT_ONE_LISTENER_EDIT$=Markera endast en listener att ändra.
+$SELECT_ONE_LISTENER_DELETE$=Markera endast en listener att ta bort.
+$ASK_DELETE_LISTENER$=Är du säker på att du vill ta bort följande listener?
+$SELECT_ONLY_ONE_VIRTUAL_HOST_EDIT$=Markera endast en virtuell värd att ändra.
+$SELECT_ONE_VIRTUAL_HOST_EDIT$=Markera endast en virtuell värd att ändra.
+<!-- Main Page -->
+$DOMAIN_PAGE_INFO$=Definera grundvärden för den markerade domänen, hur domänen lyssnar efter inkommande anslutningar och ip-åtkomst regler som bestämmer vem som får ansluta.
+<!-- Domain Tab -->
+$SETTINGS_TAB$=Inställningar
+$DOMAIN_INFO_TAB$=Gör ändringar till domänens namn och beskrivning, klicka på knappen Spara för att spara ändringarna.
+$ENABLE_DOMAIN$=Aktivera domänen
+$DOMAIN_INFO_GROUP$=Domäninformation
+$DOMAIN_HOME_DIR$=Domänens hem-mapp
+$MAXIMUM_SIZE$=Högsta storlek
+$MAXIMUM_SIZE_MB_NOTE$=NOTERA: Om du ställer in en maxstorlek på domänens hem-mapp tvingar du Serv-U att kontrollera existerande filer och undermappar innan och under uppladdning av nya filer. Det här kan vara en väldigt lång åtgärd beroende på befintlig mappstruktur.
+$BLANK_FOR_NO_LIMIT$=blank för ingen gräns
+$PLEASE_ENTER_DOMAIN_HOME_DIR$=Specificera en sökväg för domänens hem-mapp. Om ingen sökväg specificeras måste högsta storlek för domänens hem-mapp lämnas blank.
+<!-- Listeners Tab -->
+$LISTENERS_TAB$=Listener
+$LISTENERS_INFO_TAB$=Bestäm hur domänen accepterar inkommande anslutningar. Använd knapparna nedanför listan domän listeners. När inga listeners är konfigurerade fungerar domänen som en virtuell domän som använder en annan domäns listener.
+$LISTENER_DIALOG_TITLE$=Listener
+$LISTENER_IP$=IP-adress
+$LISTENER_IP_LABEL$=(blank för alla)
+$LISTENER_PORT$=Port
+$LISTENER_TYPE$=Typ
+$LISTENER_IP_ALL$=<< Alla tillgängliga ip-adresser >>
+$LISTENER_TYPE_FTP_DESC$=FTP och explicit SSL/TLS
+$LISTENER_TYPE_IMPLICIT_SSL_DESC$=Tyst FTPS (SSL/TLS)
+$LISTENER_TYPE_SSH_DESC$=SFTP använder SSH
+$LISTENER_TYPE_HTTP_DESC$=HTTP
+$LISTENER_TYPE_HTTPS_DESC$=HTTPS (SSL krypterad HTTP)
+$ENABLE_LISTENER$=Aktivera listener
+$LISTENER_PASV_DOMAIN$=PASV Ip-adress eller domänens namn
+$LISTENER_SFTP_UNAVAILABLE$=SFTP är bara tillgänglig med Serv-U Corporate licens. Du måste uppgradera din licens för att använda den här funktionen.
+$LISTENER_SSL_UNAVAILABLE$=SSL är inte tillgänglig med den nuvarande Serv-U licensen. Du måste uppgradera din licens för att använda den här funktionen.
+$PASV_IP_ADDRESS$=PASV ip-adress
+$USE_PASV_IP_SSL_ONLY$=Använd endast PASV ip-adress i SSL-anslutningar
+$USE_PASV_IP_LAN_ONLY$=Använd med LAN-anslutningar
+<!-- Virtual Hosts Tab-->
+$VIRTUAL_HOSTS_TAB$=Virtuell värd
+$VIRTUAL_HOSTS_INFO_TAB$=Virtuella värdar används för att komma åt en speciell domän när listeners delas av flera domäner. För ftp-anslutningar används HOST kommandot. För http-anslutningar används host headern från klienten för att avgöra domänen.
+$VIRTUAL_HOST_NAME$=Virtuellt värdnamn
+$ASK_DELETE_VIRTUAL_HOST$=Är du säker på att du vill ta bort de markerade virtuella värdnamnet?
+$SELECT_ONE_VIRTUAL_HOST_DELETE$=Markera endast ett virtuellt värdnamn att ta bort.
+<!-- IP Access Tab -->
+$DOMAIN_IP_ACCESS_INFO$=Domänens regler för ip-åtkomst kontrolleras när en klient försöker ansluta till en domän, antingen direkt eller genom en virtuell metod. Åtkomstreglerna gäller endast för den här domänen.
+<!-- Database Tab -->
+$DATABASE$=Databas
+$DATABASE_INFO$=Serv-U kan använda en extern databas för att ladda ytterliga användare och grupper. Databasen måste ha en ODBC drivrutin installerad och måste finnas som ODBC datakälla på systemet. Användare och grupper som laddas på det här sättet som krockar med lokalt skapade användare och grupper laddas inte.
+
+
+<!-- **************** DatabaseTab.htm **************** -->
+$DATA_SOURCE_GROUP$=Information om databaskälla
+$ODBC_SOURCE$=Databaskällans namn
+$ODBC_ACCOUNT$=Användarnamn för databasen
+$ODBC_PASSWORD$=Lösenord för databasen
+$ODBC_AUTO_CREATE_TABLES$=Skapa automatiskt de tabeller som behövs
+$ODBC_AUTO_CREATE_COLUMNS$=Skapa automatiskt de kolumner som behövs
+$ODBC_EDIT_SQL_TEMPLATES$=SQL mallar
+$ODBC_COLUMN_MAPPING_INFO$=Som standard skapar Serv-U de tabeller och kolumner som behövs med egna namn. Du kan konfigurera Serv-U att använda andra namn på tabeller och kolumner.
+$ODBC_MAP_USER_COLUMNS$=Tabellinställningar för användare
+$ODBC_MAP_GROUP_COLUMNS$=Tabellinställningar för grupper
+
+
+<!-- **************** DatabaseDialog.htm **************** -->
+$DATABASE_DIALOG_TITLE$=Inställningar för databas
+$DATABASE_MAPPING_INFO$=Markera ett objekt för att konfigurera inställningarna för objekt-typen i databasen. Värdet kan ändras genom att dubbelklicka på värdet eller genom att trycka på Ändra.
+$TABLE_MAPPING_OBJ$=Objekt-tabell
+$DATABASE_RENAME_DIALOG_TITLE$=Ändra mappat värde i databasen
+$DATABASE_RENAME_DIALOG_DESC$=Änge nytt mappat värde i databasen 
+$DB_ATTRIBUTE$=Attribut
+$DB_COLUMN_NAME$=Mappat värde i databasen
+$DB_USER_INFO$=Tabell för användarinformation
+$DB_USER_GROUP$=Tabell för användargrupper
+$DB_USER_DIRACCESS$=Tabell för mappåtkomst för användare
+$DB_USER_VIRPATH$=Tabell för användares virtuella sökvägar
+$DB_USER_IPACCESS$=Tabell för användares ip-åtkomst
+$DB_USER_FREEFILES$=Tabell för användares ratio-fria filer
+$DB_USER_USERFILES$=Tabell för användares separata filratio
+$DB_USER_USERBYTES$=Tabell för användares separata byteratio
+$DB_USER_SESSFILES$=Tabell för ratio per session
+$DB_USER_SESSBYTES$=Tabell för byteratio per session
+$DB_GROUP_INFO$=Tabell för gruppinformation
+$DB_GROUP_DIRACCESS$=Tabell för mappåtkomst för grupper
+$DB_GROUP_VIRPATH$=Tabell för gruppers virtuella sökvägar
+$DB_GROUP_IPACCESS$=Tabell för gruppers ip-åtkomst
+$DB_GROUP_FREEFILES$=Tabell för gruppers ratio-fria filer
+$SELECT_DB_COLUMN_EDIT$=Markera ett värde att ändra.
+$DB_NO_EMPTY_COLUMN$=Värdet får inte vara tomt.
+$DB_GROUP_EVENTS$=Tabell för grupp-events
+$DB_USER_EVENTS$=Tabell för användare-events
+$DB_USER_AVAILABILITY$=Tabell för tillgänglighet av användarattributer
+$DB_GROUP_AVAILABILITY$=Tabell för tillgänglighet av gruppattributer
+$ENABLE_TABLE$=Tabell aktiverad
+
+
+<!-- **************** SQLTemplateDialog.htm **************** -->
+$SQL_TEMPLATE_DIALOG_TITLE$=SQL mallar
+$SQL_TEMPLATE_INFO$=Följande mallar används för att skapa SQL mallar som används av Serv-U för att underhålla den externa databasen. En ändring av dessa mallar kan orsaka att ODBC slutar fungera.
+$SQLT_TEMPLATE$=Mall
+$SQLT_SELECT_ALL$=Visa alla rader
+$SQLT_SELECT_ROW$=Visa en särskild rad
+$SQLT_SELECT_ROW_SORT$=Visa och sortera särskila rader
+$SQLT_DELETE_ROW$=Ta bort rad
+$SQLT_INSERT_ROW$=Lägg in rad
+$SQLT_UPDATE_ROW$=Uppdatera rad
+$SELECT_SQL_TEMPLATE_EDIT$=Markera ett värde att ändra.
+
+
+<!-- **************** DomainUsers.htm **************** -->
+<!-- Java Script -->
+$VIRTUAL_HOST_DIALOG_TITLE$=Nytt virtuellt värdnamn
+$VIRTUAL_HOST_NAME_EMPTY$=Specifiera ett virtuellt värdnamn för den här domänen.
+
+
+<!-- **************** DomainUsers.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_USERS_TAB$=Domänanvändare
+$CONFIRM_USE_USER_WIZARD$=Vill du använda guiden för att skapa en användare?
+<!-- Main Page -->
+$DOMAIN_USERS_INFO$=Skapa, ändra och ta bort användarkonton för den här domänen.
+<!-- Users Tab -->
+$DOMAIN_USERS_TAB_DESCRIPTION$=Den här listan visar användarkonton som är tillåtna att ansluta till den aktiva domänen. Använd den här listan för att ändra domänens användare.
+
+
+<!-- **************** ServerUsers.htm **************** -->
+<!-- Java Script -->
+$SERVER_USERS_TAB$=Globala användare
+<!-- Main Page -->
+$SERVER_USERS_INFO$=Skapa, ändra och ta bort globala användarkonton för alla domäner på filservern.
+<!-- Users Tab -->
+$SERVER_USERS_TAB_DESCRIPTION$=Den här listan visar globala användarkonton som är tillåtna att ansluta till alla domäner på filservern. Globala konton kan överskridas genom att skapa kontot lokalt på den domän.
+
+
+<!-- **************** UsersInclude.htm **************** -->
+<!-- Java Script -->
+$SELECT_ONLY_ONE_USER_COPY$=Du kan endast kopiera en användare.
+$SELECT_ONE_USER_COPY$=Markera en användare att kopiera.
+$SELECT_ONLY_ONE_USER_EDIT$=Markera endast en användare att ändra.
+$SELECT_ONE_USER_EDIT$=Markera en användare att ändra.
+$SELECT_A_USER_TO_DELETE$=Markera en användare att ta bort.
+$ASK_DELETE_USER$=Är du säker på att du vill ta bort de markerade kontona?
+$NOUSERS$=Inga användarkonton existerar.
+$GENERAL_USERS_NAME$=Generell
+$USER_TEMPLATE_INFO$=En användarmall kan konfigureras för att skapa användare snabbare. När en ny användare skapas tas inställningarna från mallen.
+$DEFAULT_USER_TEMPLATE$=Standardmall för användare
+$USER_LIMITS_TAB_INFO$=Begränsingar grupperas beroende på vilket område på servern som dem berör. Begränsningarna tillåter flera olika värden för samma funktion beroende på tid på dagen och veckan. Begränsningar på användarnivå överskrider alla andra nivåer.
+$ODBC_USERS_NOT_CONFIGURED$=Ingen databas är konfigurerad. En databaskoppling måste vara konfigurerad innan databas-användare kan användas.
+$USER_CANT_LIST_HOMEDIR$=Det här användarkontot kan inte komma åt hem-mappen. Kontrollera kontots regler för mappåtkomst.
+$USER_PRIV_CANT_EDIT$=Det här kontot kan inte ändras eftersom administratörer inte kan ändra konton med samma eller högre rättigheter.
+$SELECT_USERS_TO_MOVE$=Markera användarna som du vill flytta till en annan samling.
+$CHECK_SYSADMIN_CONFIG$=System Administrator accounts are most effective when their home directory is \"\\\" and they are not locked in their home directory.  Otherwise, these accounts will be restricted from using paths outside their own home directory when administering the File Server.<br /><br />Would you like to make additional changes to this account?
+$NO_COLLECTION_TO_MOVE_TO$=Inga andra samlingar existerar. Vill du skapa en?
+$SELECT_USERS_TO_RECOVER_PASSWORD$=Markera användaren eller användarna som du vill återställa lösenordet för.
+$SELECT_USERS_TO_MOVE_ODBC$=Markera användarna som du vill flytta till ODBC databasen.
+$NO_SMTP_CONFIG$=Det finns ingen konfigurerad SMTP server. SMTP konfigurationen hittar du under \"Begränsningar &amp; Inställningar\" under fliken \"Inställningar\" . 
+$COLL_GROUP_WIDTH_1$=510
+$COLL_GROUP_WIDTH_2$=625
+$CANNOT_DECRYPT_CONFIRM_MSG_1$=Serv-U kan inte avkryptera lösenordet för minst en av dem markerade användarna. Om du fortsätter med lösenordsåterställningen kommer lösenordet för följande användare att bytas:
+$CANNOT_DECRYPT_CONFIRM_MSG_2$=Är du säker på att du vill återställa lösenordet för följande användare?
+
+<!-- Users Tab -->
+$SELECT_USER_COLLECTION$=Markera användarsamling
+$USER_ORG_PROPERTIES$=Användarsamling
+$ORG_NAME$=Samlingens namn
+$EMPTY_ORG_NAME$=Skriv in ett namn för användarsamlingen.
+$NO_RENAME_GENERAL_ORG$=Namnet på standardsamlingen kan inte ändras.
+$NO_DELETE_GENERAL_ORG$=Standardsamlingen kan inte tas bort.
+$ORG_DELETE_CONFIRM$=Är du säker på att du vill ta bort den markerade användarsamlingen? Genom att ta bort samlingen tar du bort alla konton i den.
+$USER_NAME_LOGIN_ID_COLUMN$=Inloggningsidentifieringen
+$FULL_NAME_COLUMN$=Namn
+$LAST_LOGIN_TIME$=Senast inloggad
+$USER_PROPERTIES$=Användaregenskaper
+$DEFAULT_USER_BUTTON$=Mapp
+$ENABLE_DEFAULT_USER$=Använd användarmallen.
+$USER_WIZARD_BALLOON_TITLE$=Serv-U Skapa användare
+$USER_WIZARD_BALLOON_TIP$=Användarguiden i Serv-U hjälper dig att enkelt skapa nya användarkonton.<p>Klicka på knapparna nedan för att skapa nya användarkonton.</p>
+$MOVE_BUTTON$=Flytta
+$MOVE_USERS_BALLOON_TITLE$=Flytta användare
+$MOVE_USER_BALLOON_TIP$=Förbättra prestandan i Serv-U genom att flytta användare till nya grupper. Markera de användare du vill flytta och klicka på Flytta.
+$COPY_BUTTON$=Kopiera
+$FILTER_USERS$=Filtrera användare
+$FILTER_GROUPS$=Filtrera grupper
+$ENTER_FILTER_INPUT$=Skriv in filteringsdata.
+$MOVE_ODBC_BUTTON$=Flytta till databas
+$MOVE_USERS_TO_ODBC_CONFIRM$=Är du säker på att du vill flytta dem markerade användarna till ODBC databasen?
+<!-- ODBC Users Tab -->
+$ODBC_USERS_TAB_NAME$=Databasanvändare
+$ODBC_USERS_TAB_INFO$=Databasanvändare laddas från en specifierad ODBC källa. Dem kompleterar den lokala användardatabasen. Ändringar till konton som lagras på det här sättet kan göras i det här interfacet eller direkt i databasen.
+<!-- Windows Auththentication Tab -->
+$WINDOWS_AUTH_TAB_NAME$=Windowsautentisering
+$WINDOWS_AUTH_TAB_INFO$=När windowsautentisering är aktiverat kan windowskonton användas för att logga in. Om ett konto redan existerar i Serv-U används det istället för windowskontot.
+$WINDOWS_DOMAIN_NAME$=Windows domännamn
+$ENABLE_WINDOWS_AUTH$=Aktivera windowsautentisering
+$WINDOWS_AUTH_USE_GROUP_HOMEDIR$=Använd Windows användargrupp som hem-mapp istället för kontots hem-mapp
+$OPTIONAL$=Valfritt
+
+
+<!-- **************** UserWizardDialog.htm **************** -->
+<!-- Main Page -->
+$USER_WIZARD$=Användarguiden
+$ACCESS_RIGHTS$=Åtkomsträttigheter
+$USER_WIZARD_INFO$=Välkommen till Serv-U guiden för användarkonton. Den här guiden hjälper dig att enkelt skapa nya användare i din filserver.
+$READ_WRITE_DESC$=Läs och skrivrättigheter
+$READ_ONLY_DESC$=Endast läsrättigheter
+$USER_NAME_WIZARD_DESCR$=Användarnamnet anges av klienten för att identifiera kontot när anslutningen upprättas mot servern.
+$USER_PASSWORD_WIZARD_DESCR$=Lösenordet kan lämnas blankt, men det kommer tillåta alla som kan användarnamnet att använda kontot.
+$USER_HOME_DIR_WIZARD_DESCR$=Hem-mappen är en fysisk plats dit användaren kommer efter ett lyckat anslutningsförsök. Om användaren är låst till hem-mappen kommer sökvägen att visas som /.
+$USER_ACCESS_RIGHTS_WIZARD_DESCR$=Markera rättigheter för åtkomst i användarens hem-mapp. Med endast läsrättigheter kommer användaren att kunna se och ladda ner filer. Full åtkomst ger användaren full kontroll över filer och mappar i hem-mappen.
+$FULL_ACCESS$=Full åtkomst
+$PLEASE_ENTER_USER_NAME$=Skriv in ett användarnamn.
+$PLEASE_ENTER_HOME_DIR$=Skriv in en hem-mapp.
+$USER_EMAIL_WIZARD_DESCR$=E-postfältet kan lämnas blankt men krävs för att skicka e-post till användaren.
+
+
+<!-- **************** DomainGroups.htm **************** -->
+<!-- Java Script -->
+$DOMAIN_GROUPS_TAB$=Domängrupper
+<!-- Main Page -->
+$DOMAIN_GROUPS_INFO$=Skapa, ändra och ta bort grupper för den aktiva domänen.
+<!-- Groups Tab -->
+$DOMAIN_GROUPS_TAB_DESCRIPTION$=Den här listan visar tillgängliga grupper på domänen. Grupper låter dig snabbt ge användarkonton inställingar. Konton kan vara medlemmar i fler grupper samtidigt. Gruppinställningar kan överskridas genom att göra inställningar på användarnivå.
+
+
+<!-- **************** ServerGroups.htm **************** -->
+<!-- Java Script -->
+$SERVER_GROUPS_TAB$=Globala grupper
+<!-- Main Page -->
+$SERVER_GROUPS_INFO$=Skapa, ändra och ta bort globala grupper på filservern.
+<!-- Groups Tab -->
+$SERVER_GROUPS_TAB_DESCRIPTION$=Den här listan visar tillgängliga globala grupper på filservern. Endast globala användarkonton kan vara med i grupperna. Grupper låter dig snabbt ge användarkonton inställingar. Konton kan vara medlemmar i fler grupper samtidigt. Gruppinställningar kan överskridas genom att göra inställningar på användarnivå.
+
+
+<!-- **************** GroupsInclude.htm **************** -->
+<!-- Java Script -->
+$SELECT_ONLY_ONE_GROUP_EDIT$=Markera endast en grupp att ändra.
+$SELECT_ONE_GROUP_EDIT$=Markera en grupp att ändra.
+$SELECT_A_GROUP_TO_DELETE$=Markera en grupp att ta bort.
+$ASK_DELETE_GROUP$=Är du säker på att du vill ta bort de markerade grupperna?
+$GROUP_TEMPLATE_INFO$=En grupp-mall kan konfigureras för att skapa nya grupper snabbare. När en ny grupp skapas används inställningarna från mallen.
+$DEFAULT_GROUP_TEMPLATE$=Gruppers standardmall
+$GROUP_LIMITS_TAB_INFO$=Begränsingar grupperas beroende på vilket område på servern som dem berör. Begränsningarna tillåter flera olika värden för samma funktion beroende på tid på dagen och veckan. Gruppbegränsningar överskrider domän och serverbegränsningar men inte användarbegränsningar.
+$ODBC_GROUPS_NOT_CONFIGURED$=Ingen databas är konfigurerad. En databas måste vara konfigurerad innan databasgrupper kan användas.
+<!-- Groups Tab -->
+$GROUP_PROPERTIES$=Gruppegenskaper
+$DEFAULT_GROUP_BUTTON$=Mall
+$ENABLE_DEFAULT_GROUP$=Använd grupp-mall
+$WINDOWS_AUTH_GROUP_CONFIG$=Konfigurera windows användargrupp
+$WINDOWS_AUTH_GROUP_NAME$=Standard windows användargrupp
+<!-- ODBC Groups Tab -->
+$ODBC_GROUPS_TAB_NAME$=Databasgrupper
+$ODBC_GROUPS_TAB_INFO$=Databasgrupper laddas från den specifierade ODBC källan. De kompleterar den lokala gruppdatabasen. Ändringar till grupper som lagras på det här sättet kan antingen göras i det här interfacet eller direkt i databasen.
+
+
+<!-- **************** ServerDir.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$SERVER_DIRECTORIES_PAGE_INFO$=Konfigurera mappstrukturen som är tillgänglig för alla användare på filservern.
+<!-- Directory Access Tab -->
+$SERVER_DIR_ACCESS$=Serverns regler för mappåtkomst är globala regler som bestämmer filer och mappar som alla användare på den här servern har tillgång till. Reglerna kan överskridas på domän, grupp och användarnivå.
+
+
+<!-- **************** DomainDir.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$DOMAIN_DIRECTORIES_PAGE_INFO$=Konfigurera mappstrukturen som är tillgänglig för alla användare på filservern.
+<!-- Directory Access Tab -->
+$DOMAIN_DIR_ACCESS$=Domänens regler för mappåtkomst är globala regler som bestämmer filer och mappar som alla användare på den här servern har tillgång till. Reglerna kan överskridas på grupp och användarnivå.
+
+
+<!-- **************** ServerLimits.htm **************** -->
+<!-- Main Page -->
+$SERVER_LIMITS$=Serverbegränsningar &amp; Inställningar
+$SERVER_LIMITS_PAGE_TITLE$=Serverbegränsningar och inställningar
+$SERVER_LIMITS_INFO$=Begränsningar och inställningar används för att konfigurera standardinställningarna för hela filservern. Det inkluderar även SSL/SSH kryptering och inställningar för certifikat. Inställningar på den här nivån ärvs av alla domäner, grupper och användare.
+$SERVER_LIMITS_TAB_INFO$=Begränsningar grupperas beroende på vilket område på servern dem har inställningar för. Begränsningarna tillåter flera olika värden för samma funktion beroende på tid på dagen och veckan. Begränsningar på servernivå kan överskridas på  domän, grupp och användarnivå.
+$SERVER_SETTINGS_TAB_INFO$=Inställningar på servernivå konfigurerar det globala beteendet av filservern. Några inställningar används av domäner, användarkonton och grupper som standardvärden. Se dokumentationen för detaljerade information om varje inställning.
+$SERVER_ENCRYPTION_TAB_INFO$=Konfigurera krypteringsinställningarna för filservern. Krypteringsinställningar specifierade på servernivå används som standard på domän-nivå. De avancerade SSL och SSH alternativen kan endast konfigureras på servernivå.
+
+
+<!-- **************** DomainLimits.htm **************** -->
+<!-- Main Page -->
+$DOMAIN_LIMITS$=Domänbegränsningar &amp; Inställningar
+$DOMAIN_LIMITS_PAGE_TITLE$=Domänbegränsningar och inställningar
+$DOMAIN_LIMITS_INFO$=Begränsningar och inställningar används för att konfigurera standardinställningarna för domänen. Det inkluderar även SSL/SSH kryptering och inställningar för certifikat. Inställningar på domän-nivå överskrider inställningar på servernivå.
+$DOMAIN_LIMITS_TAB_INFO$=Begränsningar grupperas beroende på vilket område på servern dem har inställningar för. Begränsningarna tillåter flera olika värden för samma funktion beroende på tid på dagen och veckan. Inställningar på domän-nivå överskrider inställningar på servernivå.
+$DOMAIN_SETTINGS_TAB_INFO$=Inställningar på domän-nivå överskrider dem på servernivå. Dem används även av domänens användarkonton och grupper som standardvärden. Se dokumentationen för detaljerad information om varje inställning.
+$DOMAIN_ENCRYPTION_TAB_INFO$=Konfigurera krypteringsalternativen för domänen, som överskrider inställningarna på servernivå. Krypteringsalternativ är tillgängliga för både SSL och SSH baserade anslutningar. För att använda inställningarna från server-nivån, lämna certifikat och sökväg för privat nyckel blanka.
+$CERTIFICATE_SHARE_NOTE$=<strong>INFORMATION:</strong> Domäner som delar listeners kan endast använda ett certifikat per krypteringsmetod.
+
+
+<!-- **************** LimitsInclude.htm **************** -->
+<!-- Limits Tab -->
+$LIMITS_TAB$=Begränsningar
+<!-- Settings Tab -->
+$LOCAL_ADMIN_CHANGE_PASSWORD_TITLE$=Ändra lösenord på det lokala administratörskontot
+$CONNECTION_GROUP$=Uppkopplingsinställningar
+$AH_CHECK_LABEL$=Blockera användare som ansluter mer än
+$AH_TIMES_WITHIN$=gånger inom
+$AH_SECONDS_FOR$=sekunder för
+$SSH_HIDE_SERVER_ID$=Dölj serverinformation från SSH identitet
+$EDIT_RATIO_FREE_FILES$=Ratio-fria filer
+$CLIENT_SUPPORT_LINK$=Klient supportlänk
+$CUSTOM_LOGO$=Egen logotyp
+$CUSTOM_LOGO_PATH$=Sökväg till egen logotyp
+$CUSTOM_LOGO_NOTE$=<strong>INFORMATION:</strong> Dimensionerna för logotypen måste ha en bredd på 400 pixlar och en höjd på 100 pixlar.
+$PASSWORD_RECOVERY_EMAIL_GROUP$=Meddelande för återställning av lösenord
+$PR_CHECK_LABEL$=Använd standardmeddelandet
+$INTEGRATION_DLL_PATH$=DLL sökväg för användaråtkomst
+$INTEGRATION_DLL_GROUP$=DLL för användaråtkomst
+$INTEGRATION_DLL_TEXT$=För att använda en DLL för användaråtkomst krävs det att man klarar av att skriva windowsprogramvara. Välj inte en DLL här om du inte har skrivit DLL-filen själv eller om den är från en säker källa. Användandet av en DLL kan ha negativ påverkan på säkerheten. Se hjälpfilen för att läsa mer om hur du skriver en DLL för användaråtkomst.
+$FOR_PERMANENTLY$=permanent
+
+<!-- FTP Command Processor Tab -->
+$FTP_COMMANDS_TAB$=FTP kommandon
+$SERVER_FTPCP_TAB$=FTP-kommando processorn används av alla domäner som standard. Den konfigurerar avancerat beteende som textsvar till FTP-kommandon, FTP-kommando inställningar eller inaktivering av FTP kommandon. Dessa inställningar kan överskridas på domän-nivå.
+$DOMAIN_FTPCP_TAB$=Domänens FTP-kommando processor överskrider inställningarna på server-nivå. Det konfigurerar avancerat beteende som textsvar till FTP-kommandon, FTP-kommando inställningar eller inaktivering av FTP kommandon.
+$FTPCP_USE_DEFAULT$=Använd standardinställningar
+$FTPCP_USE_OVERRIDE$=Använd användarinställningar
+$FTP_COMMAND$=Kommando
+$FTPCP_DEFAULT$=Den här domänen använder standardinställningarna definerade av filservern. För att överskrida dessa inställningar, klicka på knappen \"$FTPCP_USE_OVERRIDE$\".
+$FTPCP_OVERRIDE$=Den här domänen använder användarinställda inställningar. För att gå tillbaka till standardinställningarna, klicka på knappen \"$FTPCP_USE_DEFAULT$\".
+$CONFIRM_FTPCP_DELETE$=Att gå tillbaka till standardinställningarna kommer ta bort alla ändringar till inställningar och svarsmeddelanden som du gjort. Domänen kommer då använda serverns FTP kommando inställningar och svarsmeddelanden. Är du säker på att du vill använda standardinställningarna?
+$SELECT_ONE_COMMAND_EDIT$=Markera ett FTP kommando att ändra
+$GLOBAL_PROPERTIES$=Globala egenskaper
+$DISABLE_COMMAND$=Inaktivera kommando
+$ENABLE_COMMAND$=Aktivera kommando
+$FIPS_NOTE$=<strong>INFORMATION:</strong>  Vissa klienter kan sluta fungera när FIPS 140-2 används. (Gäller både SSH och SSL)
+$SSL_OPTION_NOT_AVAILABLE$=<strong>INFORMATION:</strong>  Genom aktivering av FIPS 140-2 gäller inte dem här inställningarna.
+$FIPS_OPTIONS$=FIPS Inställningar
+<!-- Encryption Tab -->
+$ENCRYPTION_TAB$=Kryptering
+$SSL_CERTIFICATE_OPTIONS$=SSL Certifikat för FTPS och HTTPS
+$SSH_PRIVATE_KEY_OPTIONS$=Privat nyckel för SSH, för SFTP.
+$CERTIFICATE$=Certifikatets sökväg
+$PRIVATE_KEY$=Den privata nyckelns sökväg
+$CACERTIFICATE$=CA (Certificate Authority) Certifikats-sökväg
+$VIEW_CERTIFICATE$=Visa Certifikat
+$CREATE_CERTIFICATE$=Skapa certifikat
+$CREATE_PRIVATE_KEY$=Skapa privat nyckel
+$SSL_OPTIONS$=Avancerade SSL alternativ
+$SSL_WEAK_CIPHERS$=Aktivera lågsäkerhets SSL kryptering
+$SSL_DISABLE_V2$=Inaktivera stöd för SSLv2
+$SSH_CIPHERS$=SSH Ciphers
+$SSH_MACs$=SSH MACs
+$SSH_AES128$=AES-128
+$SSH_3DES$=Triple DES
+$SSH_Blowfish$=Blowfish
+$SSH_AES192$=AES-192
+$SSH_AES256$=AES-256
+$SSH_CAST128$=CAST-128
+$SSH_CBC$=CBC
+$SSH_MACMD5$=MD5
+$SSH_MACSHA1$=SHA1
+$SSH_MACSHA1_96$=SHA1 96
+
+
+<!-- **************** ServerSettingsTab.htm **************** -->
+$NETWORK_SETTINGS$=Nätverksinställningar
+$ENABLE_UPNP$=Konfigurerar brandvägg med uPnP
+$PACKET_TIMEOUT$=Paketet timades ut
+$SECONDS$=sekunder
+$PASV_PORT_RANGE$=PASV Port-räckvidd
+$ADVANCED_SETTINGS$=Avancerade inställningar
+$DIR_LISTING_MASK$=Directory Listing Mask
+$MAX_SIMUL_THUMBS$=Högsta antal samtidiga miniatyrer
+$UPLOAD_FILE_MODE$=Skrivåtkomst
+$DOWNLOAD_FILE_MODE$=Läsåtkomst
+$FILE_MODE_READ$=Tillåt läsrättigheter
+$FILE_MODE_DENY$=Ingen åtkomst
+$FILE_MODE_FULL$=Full åtkomst
+$ADMIN_PASSWORD_BUTTON$=Byt administratörslösenordet
+
+
+<!-- **************** RatioQuotaDialog.htm **************** -->
+$RATIO_QUOTA_DIALOG_TITLE$=Överföringsratio &amp; Quotahantering
+$RATIO_GROUP$=Överföringsratio
+$RATIO_ENABLE$=Aktivera överföringsratio
+$RATIO_FPS$=Räkna filer per session
+$RATIO_BPS$=Räkna bytes per session
+$RATIO_FAS$=Räkna filer över alla sessioner
+$RATIO_BAS$=Räkna bytes över alla sessioner
+$RATIO_LABEL$=Ratio
+$RATIO_UPLOADS$=Uppladdat
+$RATIO_DOWNLOADS$=Nedladdat
+$RATIO_CREDIT$=Kredit
+$QUOTA_GROUP$=Quota
+$QUOTA_MAXIMUM$=Maximalt
+$QUOTA_CURRENT$=Nuvarande
+
+
+<!-- **************** RatioFreeFilesDialog.htm **************** -->
+$RATIO_FREE_FILE_DIALOG_TITLE$=Ratio-fria filer
+$RATIO_FREE_FILE_INFO$=Ratio-fria filer kan överföras utan att räknas mot ration. Enstaka filer kan specifieras eller så kan wildcards ("*" & "?") användas för att specifiera en filmask. Filnamn utan sökvägar kommer att gälla mot alla filer med samma namn oavsett sökväg.
+$RATIO_FREE_FILE_EDIT_DIALOG_TITLE$=Information om ratio-fri fil
+$FREE_FILE_PATH$=Sökväg
+$FREE_FILE_MASK_EMPTY$=Skriv in en sökväg eller mask för den ratio-fria filen.
+$SELECT_ONLY_ONE_RATIO_FREE_FILE_EDIT$=Markera endast en ratio-fri fil att ändra.
+$SELECT_ONE_RATIO_FREE_FILE_EDIT$=Markera en ratio-fri fil att ändra.
+$SELECT_RATIO_FREE_FILE_DELETE$=Markera en ratio-fri fil att ta bort.
+$ASK_DELETE_RATIO_FREE_FILE$=Är du säker på att du vill ta bort de markerade filerna?
+
+
+<!-- **************** NewCertificateDialog.htm **************** -->
+$NEW_CERTIFICATE_DIALOG_TITLE$=Skapa nytt certifikat
+$NEW_CERTIFICATE_INFO$=Den här guiden kommer skapa ett självsignerat certifikat i .crt format. Den kommer även att skapa en certifikatsförfrågan i .csr format och en privat nyckel i .key format.
+$CERT_OUTPUT_GROUP$=Utdata
+$CERT_SET_NAME$=Certifikatsamlingens namn
+$CERT_OUTPUT_PATH$=Utdatans sökväg
+$CERT_INFORMATION$=Information om certifikatet
+$CERT_CITY_TOWN$=Stad
+$CERT_STATE_PROVINCE$=State/Province
+$CERT_COUNTRY$=Landskod (t ex. SE)
+$CERT_PASSWORD$=Lösenord
+$CERT_ORGANIZATION$=Företag
+$CERT_COMMON_NAME$=Vanligt namn
+$CERT_DOMAIN_NAME$=Domänens namn
+$CERT_UNIT$=Enhet
+$NEW_CERT_EMPTY_FIELD$=Alla fälts måste användas för att skapa certifikatsfilerna.
+$NEW_CERT_TWO_DIGIT_COUNTRY$=Skriv in landskod med 2 bokstäver.
+$NEW_CERT_USE_NOW$=Certifikatet har skapats. Filerna har sparats i den angivna sökvägen. Vill du använda det nya certifikatet nu?
+
+
+<!-- **************** ViewCertificateDialog.htm **************** -->
+$VIEW_CERTIFICATE_DIALOG_TITLE$=Visa certifikat
+$CERT_ISSUER_GROUP$=Utfärdare
+$CERT_SUBJECT_GROUP$=Ämne
+$CERT_VALID_GROUP$=Giltiga datum
+$CERT_COUNTRY_VIEW$=Land
+$CERT_FROM$=Från
+$CERT_THROUGH$=Genom
+
+
+<!-- **************** NewCertificateDialog.htm **************** -->
+$NEW_PRIVATE_KEY_DIALOG_TITLE$=Skapa en ny privat nyckel
+$NEW_PRIVATE_KEY_INFO$=Den här guiden kommer skapa en ny privat nyckel för SSH krypterade sessioner. Nyckeln blir säkrare desto längre den är. En lång nyckel kan påverka prestandan.
+$PRIVATE_KEY_OUTPUT_GROUP$=Utdata
+$PRIVATE_KEY_NAME$=Den privata nyckelns namn
+$PRIVATE_KEY_OUTPUT_PATH$=Utdatans sökväg
+$PRIVATE_KEY_INFORMATION$=Information om den privata nyckeln
+$PRIVATE_KEY_TYPE$=Nyckeltyp
+$PRIVATE_KEY_TYPE_DSA$=DSA (stöds av de flesta servrar)
+$PRIVATE_KEY_TYPE_RSA$=RSA
+$PRIVATE_KEY_LENGTH$=Nyckelns längd (i bitar)
+$PRIVATE_KEY_LEN_1024$=1024 (bästa prestanda)
+$PRIVATE_KEY_LEN_4096$=4096 (bästa säkerhet)
+$PRIVATE_KEY_PASSWORD$=Lösenord
+$NEW_PRIVATE_KEY_EMPTY_FIELD$=Skriv in ett namn för den privata nyckeln och en sökväg för utdatan.
+$NEW_PRIVATE_KEY_USE_NOW$=Den privata nyckeln är skapad. Vill du använda den privata nyckeln nu?
+<!-- **************** NewSSHKeyPairDialog.htm **************** -->
+$SSH_KEY_PAIR_OUTPUT_GROUP$=Nyckelpar
+$SSH_KEY_PAIR_NAME$=Namn på nyckelparet
+$SSH_PUBLIC_KEY_INFORMATION$=Information om nyckeln
+$NEW_SSH_KEY_PAIR_INFO$=Det här verktyget skapar ett nytt SSH nyckelpar för användningen med säker SSH anslutning.  Säkerheten bestäms av nyckelns längd. Längre nyckel för högre säkerhet och kortare för lägre.  Längre nycklar kan påverka prestandan negativt.
+$NEW_SSH_KEY_PAIR_DIALOG_TITLE$=Skapa nytt SSH nyckelpar
+$NEW_PUBLIC_KEY_USE_NOW$=Nyckelparet har skapats.  Vill du använda den publika nyckeln nu?
+
+<!-- **************** FTPCommandDialog.htm **************** -->
+$FTP_COMMAND_DIALOG_TITLE$=Egenskaper för FTP kommandon
+$FTP_RESPONSES$=FTP svar
+$COMMAND_RESPONSE_INFO$=De möjliga svaren som kan skickas för ett kommando listas nedan. Svarstexten för varje kod kan modifieras.
+$RESPONSE_CODE$=Kod
+$RESPONSE_TEXT$=Svarskod
+$ADVANCED_OPTIONS$=Avancerade alternativ
+<!-- FTP Response Dialog -->
+$FTP_RESPONSE_DIALOG_TITLE$=Ändra ftp svarstext
+$EDIT_RESPONSE_INFO$=Textdelen av varje ftp-svar kan ändras. Speciella variabler kan även användas i svarstexten. Se dokumentationen för ytterligare information.
+$SELECT_ONE_RESPONSE_EDIT$=Markera ett svar att ändra.
+<!-- Information Tab -->
+$INFORMATION$=Information
+$COMMAND_GENERAL_INFO$=En summering av ftp kommandot och dess syfte visas nedan. Ytterligare detaljerad information hittar du om du klicka på länken. Individuella kommandon kan inaktiveras så att de inte känns igen när klienten använder dem.
+$ADDTL_INFO$=Ytterligare information
+$CLICK_ADDTL_INFO$=Klicka här för ytterligare information om kommandot
+<!-- Message File Tab -->
+$SECOND_MSG_FILE_INFO$=Om den specifierade filen inte kan hittas så kommer den sekundära filen att användas. Detta är användbart när den primära filens sökväg är relaterad till en användares aktuella mapp.
+$SECOND_MSG_FILE$=Sökväg för sekundär meddelandefil
+$MSG_FILE_FTPCP$=Den här filen används för att specifiera ett välkomstmeddelande för användare. När en klient ansluter till servern visas innehållet i filen tillsammans med den ordinarie hälsningen.
+$MSG_FILE_CDUP$=When the user changes their current working directory, the contents of the message file will be sent along with the usual response to the command.  Message files support the user of symbolic parameters.  See the Help documentation for more information.
+$MSG_FILE_CWD$=$MSG_FILE_CDUP$
+$MSG_FILE_QUIT$=When the user terminates their FTP session, the contents of the message file will be sent along with the usual response to the command.  Message files support the user of symbolic parameters.  See the Help documentation for more information.
+<!-- LIST Advanced Tab -->
+$DIR_LIST_STYLE$=Style of directory listings
+$LIST_ADVANCED_INFO$=The format of the response to the LIST command can be configured below.  Under most circumstances, the default setting should work for the majority of FTP clients.
+$LIST_STYLE_UNIX$=UNIX style listings (default)
+$LIST_STYLE_IIS$=IIS style listings
+$LIST_STYLE_DOS$=DOS style listings
+$ALLOW_LIST_STYLE_CHANGE$=Allow client to change LIST style using command directives
+<!-- MKD Advanced Tab -->
+$MKD_ADVANCED_INFO$=Om dem specificerade övermapperna inte finns så kommer dem att skapas automatiskt.
+$ALLOW_CREATE_PARENT_DIR$=Tillåt MKD kommandot att skapa övermappar som inte finns.
+<!-- MDTM Advanced Tab -->
+$MDTM_ADVANCED_INFO$=The MDTM command can be expanded to allow the client to modify a remote file's date and time.  Use the checkboxes below to configure this behavior.
+$MDTM_CHANGE_TIME$=Allow MDTM command to change file date / time
+$MDTM_BLOCK_FUTURE$=Blocka tider och datum som ännu inte inträffat
+<!-- NLST Advanced Tab -->
+$NLST_ADVANCED_INFO$=Traditionellt listar NLST kommandot endast filer. Bocka i rutan nedan om du vill att det även ska lista mappar.
+$NLST_LIST_DIRS$=NLST kommandot listar även mappar
+$NLST_LIST_EMPTY$=Lista tomma mappar istället för att returna ett 550 error
+<!-- FTPCP Advanced Tab -->
+$FTPCP_ADVANCED_INFO$=Följande inställningar gäller generellt för ftp protokollet. Se Dokumentationen för ytterligare information om alternativen.
+$FTPCP_BLOCK_FXP$=Blocka \"FTP_bounce\" attacker och FXP (Server-till-server överföringar)
+$FTPCP_INC_RESP_CODE$=Inkludera svarskod på alla rader i ett fler-radigt svar.
+$FTPCP_UTF8_DEFAULT$=Använd UTF-8 för skickade och mottagna sökvägar och filnamn
+
+<!-- **************** ImportExportUsersDialog.htm **************** -->
+$EXPORT_USER_PATH$=Exportera sökväg
+$IMPORT_USER_PATH$=Importera sökväg
+$IMPORT_USER_DIALOG_TITLE$=Importera användare
+$EXPORT_USER_DIALOG_TITLE$=Exportera användare
+$IMPORT_MSG$=användare har importerats från fil:
+$IMPORT_MSG_EXIST1$=användare har importerats.
+$IMPORT_MSG_EXIST2$=användare fanns redan och importerades inte:
+$EXPORT_MSG$=användare har exporterats till fil:
+$EXPORT_USERS_CONFIRM$=Vill du exportera alla användare?
+$EXPORT_USERS_YES_CONFIRM$=Svara \"Ja\" för att exportera alla användare i den här domänen/servern.
+$EXPORT_USERS_NO_CONFIRM$=Svara \"Nej\" för att endast exportera användare i den här kategorin.
+<!-- Java Script -->
+$PLEASE_ENTER_IMPORT_PATH$=Skriv in sökvägen till filen du vill importera.
+$PLEASE_ENTER_EXPORT_PATH$=Skriv in sökväg och filnamn som användare ska exporteras till.
+
+<!-- **************** DomainActivity.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$DOMAIN_ACTIVITY_INFO$=Visar information om aktivitet och logning för den aktuella domänen. Fliken inställningar tillåter konfigurering av fil- och real-tids logning.
+<!-- Sessions Tab -->
+$SESSIONS_TAB$=Sessioner
+$SESSIONS_INFO$=Information om aktiva sessioner visas nedan. Du kan visa sessionsinformation, chatta med eller banna användare.
+<!-- User and Group Stats Tab -->
+$USER_GROUP_STATS_SELECTION$=Urval för användar- och gruppstatistik
+$USER_GROUP_STATS_TAB$=Användar- &amp; Gruppstatistik
+$USER_STATS$=Användarstatistik
+$SELECT_USER_STATS$=Användare
+$USER_GROUP_STATS_INFO$=Visa statistik om användare och grupper, inklusive sessionsinformation, överförings-statistik och aktivitet.
+$GROUP_STATS$=Gruppstatistik
+$SELECT_GROUP_STATS$=Grupp
+$SELECT_COLLECTION$=Samling
+$SAVE_STATS_BUTTON$=Spara statistik
+<!-- Stats Tab -->
+$STATS_TAB$=Statistik
+$DOMAIN_STATS_INFO$=Visa statistik för den aktuella domänen, inklusive information om sessioner, överförings-statistik, och pågående aktiviteter.
+<!-- Log Tab -->
+$LOG_DISPLAY_INFO$=Den aktuella domänens logg visas nedan med uppdateringar i real-tid. För att pausa uppdateringen klicka på "Frys log".
+$LOG_TAB$=Log
+$FREEZE_LOG$=Frys log
+$LEGEND_BUTTON$=Legend
+$LOG_LEGEND$=Log Legend
+$FILTER_BUTTON$=Filter
+$FILTER_LOG_BUTTON$=Filter log
+$FILTER_DIALOG_TITLE$=Filter Log med sträng
+$LOG_FILTER_INFO$=Loggen kommer bara inkludera innehåll som matchar den specifierade strängen.
+$RESET_BUTTON$=Nollställ
+<!-- Settings Tab -->
+$LOG_SETTINGS_INFO$=Använd checkboxarna till vänster för att konfigurera vart du vill att aktiviteter ska loggas. Inställningarna till höger kontroller hur information loggas till fil.
+$LOG_FILE_LABEL$=Fil
+$LOG_SCREEN_LABEL$=Skärm
+$LOG_FILE_PATH$=Log sökväg
+$ENABLE_LOG_TO_FILE$=Aktivera loggning till fil
+$SYSTEM_MESSAGES_LABEL$=System-meddelanden
+$SECURITY_MESSAGES_LABEL$=Säkerhetsmeddelanden
+$IP_NAMES_LABEL$=Ip-namn
+$DOWNLOADS_LABEL$=Nedladdningar
+$UPLOADS_LABEL$=Uppladdningar
+$FILE_DELETIONS_LABEL$=Raderade filer
+$FILE_AND_DIRECTORY_RENAMES_LABEL$=Namnbyten på filer och mappar
+$DIRECTORY_CREATIONS_LABEL$=Skapning av mappar
+$DIRECTORY_DELETIONS_LABEL$=Raderade mappar
+$ODBC_CALLS_LABEL$=ODBC anrop
+$ODBC_ERRORS_LABEL$=ODBC fel
+$FTP_COMMANDS_LABEL$=FTP kommandon
+$FTP_REPLIES_LABEL$=FTP svar
+$SSH_COMMANDS_LABEL$=SSH kommandon
+$SSH_REPLIES_LABEL$=SSH svar
+$HTTP_COMMANDS_LABEL$=HTTP kommandon
+$HTTP_REPLIES_LABEL$=HTTP svar
+$LOG_FILE_SETTINGS$=Inställningar för logning till fil
+$LOG_FILE_PARAMETERS_LABEL$=Logga filsökvägar och attributer
+$DAY_OF_MONTH_LABEL$=dagen i månaden
+$MONTH_TEXT_LABEL$=Visa månader i ord
+$MONTH_NUMBER_LABEL$=Visa månader i nummer (1-12)
+$4_DIGIT_YEAR_LABEL$=Visa år med 4 siffror
+$2_DIGIT_YEAR_LABEL$=Visa år med 2 siffror
+$DOMAIN_NAME_LABEL$=Domän-namn
+$LOG_ROTATE_SETTING$=Rotera automatiskt logfilen
+$LOG_ROTATE_NEVER_DESC$=Aldrig
+$LOG_ROTATE_DAILY_DESC$=Dagligen
+$LOG_ROTATE_WEEKLY_DESC$=Vare vecka
+$LOG_ROTATE_MONTHLY_DESC$=Varje månad
+$LOG_ROTATE_YEARLY_DESC$=Årligen
+$LOG_IP_ACCESS_BUTTON$=Logga inte ip-adresser
+$PLEASE_ENTER_LOG_FILE_NAME$=Kontrollera att namnet på logfilen har skrivits in.
+$LOG_FILE_NAMING_EXAMPLES$=Examples:<br>/Serv-U-Log.txt<br>/Serv-U-Log%M.txt<br>/Serv-U-Log%N-%Y.txt<br>/Serv-U-Log%N-%D-%Y.txt<br>/Serv-U-Log-%S.txt
+$KEEP_UP_TO$=Spara upp till
+$LOG_EXCEED_FILES$=loggfiler.
+$LOG_EXCEED_BYTES$=MB loggfiler.
+$ZERO_NO_DELETE$=0 för att spara alla loggfiler
+
+<!-- **************** LogIPAccessListDialog.htm **************** -->
+$LOG_IP_ACCESS_LIST_DIALOG_TITLE$=Logga inte ip-regler
+$LOG_IP_ACCESS_LIST_INFO$=Följande ip-regler identifiera ip-adresser som inte loggas. Reglerna kan gälla för skärmloggen, fil-loggen eller båda.
+$APPLIES_TO$=Gäller för
+$LOG_FILE$=Fil
+$LOG_SCREEN$=Skärm
+$LOG_BOTH$=Båda
+$LOG_NONE$=Inaktiverad
+
+
+<!-- **************** LogIPAccessDialog.htm **************** -->
+$LOG_IP_ACCESS_DIALOG_TITLE$=Inkludera inte ip-regler i loggar
+$LOG_APPLY_SCREEN$=Lägg till information till skärmen
+$LOG_APPLY_FILE$=Lägg till information till fil
+
+
+<!-- **************** ServerActivity.htm **************** -->
+<!-- Java Script -->
+<!-- Main Page -->
+$SERVER_ACTIVITY_INFO$=Visar information om och tillåter hantering av användarsessioner på alla domäner på servern. Logfliken visar globala meddelanden och information.
+<!-- Stats Tab -->
+$SERVER_STATS_INFO$=Visa statistik om hela filservern med alla domäner, sessionsinformation, överförings-statistik och aktivitet.
+<!-- Log Tab -->
+$SERVER_LOG_DISPLAY_INFO$=Serverloggen uppdaterar i realtid. Serverloggen innehåller information om uppstart av server, globala meddelanden och felmeddelanden.
+
+
+<!-- **************** DomainAttrStats.htm **************** -->
+<!-- HTML -->
+$UP_TIME$=Domämens upp-tid
+$SESSIONS_CURRENT$=Nuvarande sessioner
+$SESSIONS_LAST_DAY$=Dagens sessioner
+$SESSIONS_TOTAL$=Totala antalet sessioner
+$SESSIONS_PASSWORD_CHANGED_ON$=Lösenordet senast bytt
+$SESSIONS_MAX$=Högsta session
+$SESSIONS_AVG_TIME$=Medelvärde för sessionslängd
+$SESSIONS_LONGEST$=Längsta session
+$TRANSFER_DL_SPEED$=Nedladdningshastighet
+$TRANSFER_AVG_DL_SPEED$=Medelhastighet för nedladdning
+$TRANSFER_DOWNLOADED$=Nedladdat
+$TRANSFER_UL_SPEED$=Uppladningshastighet
+$TRANSFER_AVG_UL_SPEED$=Medelhastighet för uppladdning
+$TRANSFER_UPLOADED$=Uppladdat
+$LOGIN_STATS_LOGINS$=Inloggningar
+$LOGIN_STATS_LOGOUTS$=Utloggningar
+$LOGIN_STATS_CURRENT_LOGINS$=Inloggade för tillfället
+$LOGIN_STATS_MOST_CURRENT_LOGINS$=Högsta antal samtidigt inloggade
+$LOGIN_STATS_LAST_LOGIN$=Senaste inloggningen
+$LOGIN_STATS_LAST_LOGOUT$=Senaste utloggningen
+$LOGIN_STATS_AVERAGE_LOGIN_SEC$=Tid inloggad (snitt)
+$LOGIN_STATS_LONG_LOGIN_SEC$=Längsta sessionen
+$LOGIN_STATS_SHORT_LOGIN_SEC$=Kortaste sessionen
+<!-- Java Script -->
+$SESSION_STATS$=Statistik för sessionen
+$TRANSFER_STATS$=Statistik för överföring
+$LOGIN_STATS$=Statistik för inloggningar
+
+
+<!-- **************** ChangeDomainDialog.htm **************** -->
+<!-- Java Script -->
+$CHANGE_DOMAIN_BUTTON$=Byt domän
+<!-- Main Page -->
+
+
+<!-- **************** Common Wizard Nav Dialog **************** -->
+<!-- Java Script -->
+$NEXT_BUTTON$=Nästa
+$BACK_BUTTON$=Föregående
+$FINISH_BUTTON$=Avsluta
+<!-- Main Page -->
+$STEP$=Steg
+$OF$=av
+
+<!-- **************** Save Stats Dialog **************** -->
+$SAVE_STATS_DIALOG_TITLE$=Spara statistik till fil
+$PLEASE_ENTER_STATS_SAVE_PATH$=Skriv in en sökväg och namn för statistikfilen.
+$SAVE_STATS_PATH$=Statistiksfilens sökväg
+$SAVE_GROUP_STATS_MSG$=Gruppens statistik har sparats till fil:
+$SAVE_USER_STATS_MSG$=Användarens statistik har sparats till fil:
+
+<!-- **************** Move Users Dialog **************** -->
+$MOVE_USERS_TITLE$=Flytta användaren
+$MOVE_USER_DESCR$=Markera samlingen dit du vill flytta användaren.
+
+
+<!-- **************** Bubble Tip Dialogs **************** -->
+$DONT_SHOW_AGAIN$=Visa inte det här meddelandet igen.

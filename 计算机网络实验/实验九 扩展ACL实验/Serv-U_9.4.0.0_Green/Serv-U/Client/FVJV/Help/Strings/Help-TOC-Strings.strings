@@ -1,0 +1,89 @@
+﻿<!-- File:		Help-TOC-Strings.strings																					-->
+<!-- Language:	English																										-->
+<!-- Purpose:	Provides translated strings for FTP Voyager JV's Help documentation.										-->
+<!-- Notes:		- Comment blocks are useful.  To place a comment, use the HTML tags at the beginning and end of this line	-->
+<!--			- Any text following a "$=" should be translated															-->
+<!--			- Any text between a "$::" through "::END" should be translated												-->
+<!--			- HTML tags should not be translated (Example:  "<strong>")													-->
+
+<!-- String table for Help-table of contents -->
+$TOC_TITLE$=Help Table of Contents
+$HELP_CONTENTS_TAB$=Contents
+$HELP_INDEX_TAB$=Index
+
+$TOC_OVERVIEW$=Overview
+$TOC_ACTIONS$=Actions
+
+$TOC_FVJV_CLIENT$=FTP Voyager JV
+	$TOC_OVERVIEW$=Overview
+$TOC_LAYOUT$=Layout
+	$TOC_LAYOUT_APP_OVERVIEW_1$=Application Overview
+	$TOC_LAYOUT_BROWSERS_1$=Local and Remote Panes
+		$TOC_LAYOUT_BROWSERS_OVERVIEW_1$=$TOC_OVERVIEW$
+		$TOC_LAYOUT_BROWSERS_TREE_OVERVIEW_1$=Tree Pane Overview
+		$TOC_LAYOUT_BROWSERS_PREVIEW_OVERVIEW_1$=Preview Pane Overview
+		$TOC_LAYOUT_BROWSERS_LIST_OVERVIEW_1$=List Pane Overview
+	$TOC_LAYOUT_TRANSFER_OVERVIEW_1$=Transfer Pane Overview
+	$TOC_LAYOUT_STATUS_BAR_OVERVIEW_1$=Status Bar Overview
+$TOC_MENU_MAIN$=Main Menu
+	$TOC_MENU_MAIN_OVERVIEW$=Overview
+	$TOC_MENU_MAIN_ITEMS$=Menu Items
+		$TOC_MENU_MAIN_ACTIONS_FILE$=File Menu
+		$TOC_MENU_MAIN_ACTIONS_EDIT$=Edit Menu
+		$TOC_MENU_MAIN_ACTIONS_VIEW$=View Menu
+		$TOC_MENU_MAIN_ACTIONS_WINDOWS$=Windows Menu
+		$TOC_MENU_MAIN_ACTIONS_HELP$=Help Menu
+$TOC_TOOLBARS$=Toolbars
+	$TOC_TOOLBAR_MAIN$=Main Toolbar
+		$TOC_TOOLBAR_MAIN_OVERVIEW$=$TOC_OVERVIEW$
+		$TOC_TOOLBAR_MAIN_ACTIONS$=$TOC_ACTIONS$
+	$TOC_TOOLBAR_BROWSER$=Local/Remote Toolbars
+		$TOC_TOOLBAR_BROWSER_CRUMBBAR$=Navigation Bar
+			$TOC_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$=$TOC_OVERVIEW$
+			$TOC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$=$TOC_ACTIONS$
+		$TOC_TOOLBAR_BROWSER_TOOLBAR$=Toolbar
+			$TOC_TOOLBAR_BROWSER_OVERVIEW$=$TOC_OVERVIEW$
+			$TOC_TOOLBAR_BROWSER_ACTIONS$=$TOC_ACTIONS$
+		$TOC_TOOLBAR_BROWSER_SEARCH_BAR$=Search Bar
+			$TOC_TOOLBAR_BROWSER_SEARCH_OVERVIEW$=$TOC_OVERVIEW$
+			$TOC_TOOLBAR_BROWSER_SEARCH_ACTIONS$=$TOC_ACTIONS$
+	$TOC_TOOLBAR_TRANSFER$=Transfer Toolbar
+		$TOC_TOOLBAR_TRANSFER_OVERVIEW$=$TOC_OVERVIEW$
+		$TOC_TOOLBAR_TRANSFER_ACTIONS$=$TOC_ACTIONS$
+$TOC_DIALOGS$=Dialogs
+	$TOC_DLG_ABOUT$=About Dialog
+		$TOC_DLG_ABOUT_PROGINFO$=Program Information
+		$TOC_DLG_ABOUT_COMPINFO$=Computer Information
+	$TOC_DLG_PREFS$=Preferences
+		$TOC_DLG_PREFS_GENERAL$=General
+		$TOC_DLG_PREFS_TBARS$=Toolbars
+	$TOC_DLG_SYNC_FOLDERS$=Synchronize Folders
+		$TOC_DLG_SYNC_FOLDERS_OVERVIEW$=Overview
+		$TOC_DLG_SYNC_FOLDERS_RESULTS_FRAMES$=Results Frame(s)
+			$TOC_DLG_SYNC_FOLDERS_RESULTS$=Layout
+			$TOC_DLG_SYNC_FOLDERS_RESULTS_TBAR$=Toolbar
+			$TOC_DLG_SYNC_FOLDERS_RESULTS_LIST$=List
+		$TOC_DLG_SYNC_FOLDERS_OPTIONS$=Options Frame
+	$TOC_DLG_SAVE_LOGIN$=Save Login Dialog
+	$TOC_DLG_CHG_PWORD$=Change Password Dialog
+	$TOC_DLG_ACTIVATE_WINDOW$=Activate Window Dialog
+$TOC_OTHER_INFO$=Other Information
+	$TOC_OI_ACTIVE_PANE_OVERVIEW$=Active Pane
+	$TOC_OI_DOCKING_FRAMEWORK_OVERVIEW$=Docking Framework
+	$TOC_OI_NAVIGATING_DIRS$=Navigating Directories
+	$TOC_OI_MANAGING_DIRS_AND_FILES$=Managing Directories and Files
+	$TOC_OI_TRANSFERRING_DIRS_AND_FILES$=Transferring Directories and Files
+	$TOC_OI_MANAGING_TRANSFERS$=Managing Transfers
+	$TOC_OI_SEARCHING$=Searching
+	$TOC_OI_FAQS$=Frequently Asked Questions
+
+<!-- ONLY the English file should have the lines below.																		-->
+<!-- If the same key is found in a translated file, then the translation is displayed instead of the English string.		-->
+<!--#include de "Help-TOC-Strings_DE.strings"-->
+<!--#include fr "Help-TOC-Strings_FR.strings"-->
+<!--#include it "Help-TOC-Strings_IT.strings"-->
+<!--#include es "Help-TOC-Strings_ES.strings"-->
+<!--#include jp "Help-TOC-Strings_JP.strings"-->
+<!--#include ru "Help-TOC-Strings_RU.strings"-->
+<!--#include zh,TW "Help-TOC-Strings_TW.strings"-->
+<!--#include zh,CN "Help-TOC-Strings_CN.strings"-->

@@ -1,0 +1,41 @@
+<!--#include "Strings/Help-Admin-Strings.strings"-->
+
+<!--#include "Help-DEFS.def"-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>$TITLE$</title>
+	<link type="text/css" href="%COMMON_FILE%Style/help.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="container">
+	<h1>$SMTP_CONFIG_HEADER$</h1>
+
+	<div>
+		^PB_1^$SMTP_CONFIG_BODY$
+		
+		<h2>$SMTP_CONFIG_SERVER_INFO$</h2>
+		<ul>
+		^LI_1^$SMTP_CONFIG_SERVER_INPUT$
+	
+        ^LI_1^$SMTP_CONFIG_FROM_NAME$
+
+        ^LI_1^$SMTP_CONFIG_SERVER_AUTH$
+	
+        ^LI_1^$SMTP_CONFIG_SSL_CONN$
+
+		</ul>
+		
+		<h2>$SMTP_CONFIG_AUTH_INFO$</h2>
+		^PB_1^$SMTP_CONFIG_AUTH_BODY$
+		<ul>
+		^LI_1^$SMTP_CONFIG_AUTH_INPUT$
+		</ul>
+        <img src="%ADMIN_FILE%Help/Images/Help-SMTP.png" border="0" class="img-border">
+	</div>
+</div>
+</body>
+</html>

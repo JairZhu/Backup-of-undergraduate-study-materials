@@ -1,0 +1,198 @@
+﻿<!-- Result.strings - For ease of localization, strings have been separated into this file.  This has result strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- ******************** RESULT CODE TEXT ******************** -->
+<!-- NOTE: This file should contain all result codes and only	-->
+<!--	   result codes, all other strings should be placed		-->
+<!--	   in other string files.								-->
+
+<!-- shared result strings -->
+$OR_CONTACT_SYSTEM_ADMIN$=eller kontakta systemadministratören för hjälp.
+$CONTACT_SYSTEM_ADMIN$=Var god kontakta systemadminstratören för hjälp.
+
+<!-- global results -->
+$SESS_OKAY_STR$=Åtgärden lyckades.
+$SESS_FAIL_STR$=FEL: Åtgärden kan inte utföras.
+$SESS_PENDING_STR$=FEL: Åtgärden utförs fortfarande.
+$SESS_PERMISSION_DENIED_STR$=FEL: Filen eller mappen du försökte öppna är inte tillgänglig för dig.
+$SESS_INVALID_PARAMETER_STR$=FEL: Åtgärden misslyckades, en parameter var inte giltig.
+$SESS_BAD_SEQUENCE_OF_COMMANDS_STR$=FEL: Åtgärdsföljden är felaktig.
+$SESS_NOT_FOUND_STR$=FEL: Den specifierade filen eller mappen finns inte.
+$SESS_PATH_IS_PORT_STR$=FEL: Den angivna sökvägen är en Windows PORT, åtgärden kan inte genomföras.
+$SESS_LOGIN_TOO_MANY_INVALID_TRIES_STR$=Du har överskridit antalet tillåtna inloggningsförsök.
+$SESS_COMMAND_PENDING_STR$=En åtgärd utförs fortfarande. Det här kommandot kan inte köras innan det pågående kommandot slutförts.
+$SESS_COMMAND_ABORTED_STR$=FEL: Åtgärden misslyckades, åtgärden avbröts.
+$SESS_INTERNAL_ERROR_STR$=FEL: Ett internt fel har inträffat, åtgärden kan inte genomföras.
+$SESS_ALREADY_EXISTS_STR$=FEL: Filen eller mappen finns redan.
+$SESS_FILE_IS_DIR_STR$=FEL: Åtgärden kan inte genomföras, den angivna sökvägen är en mapp, inte en fil.
+$SESS_DIR_IS_FILE_STR$=FEL: Åtgärden kan inte genomföras, den angivna sökvägen är en fil, inte en mapp.
+$SESS_CANT_REST_EMPTY_FILE_STR$=$SESS_FAIL_STR$
+$SESS_CANT_REST_BEYOND_EOF_STR$=$SESS_FAIL_STR$
+$SESS_CANT_SET_FILE_POS_STR$=$SESS_FAIL_STR$
+<!-- $SESS_COMPRESSED_TRANSFER_COMPLETE_STR$= -- placeholder -- -->
+$SESS_UNAUTHORIZED_IP_STR$=FEL: Otillåten IP-adress.
+$SESS_TIME_OUT_STR$=FEL: Sessionen gjorde time out.
+$SESS_EXCEEDED_MAX_SESSION_TIME_STR$=FEL: Den tillåtna tiden har överskridits för denna session.
+$SESS_TOO_MANY_SESSIONS_IP_STR$=FEL: För många anslutningar använder IP.
+$SESS_TOO_MANY_SESSIONS_STR$=FEL: För många anslutningar.
+$SESS_BLOCKED_STR$=Du har blivit blockerad.  Var god försök igen senare, $OR_CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_DATA_SOCKET_CONNECT_STR$= -- placeholder -- -->
+<!-- $SESS_DATA_SOCKET_CLOSED_STR$= -- placeholder -- -->
+<!-- $SESS_DECR_USER_QUOTA_STR$= -- placeholder -- -->
+$SESS_NO_FILES_FOUND_STR$=FEL: Inga filer hittades.
+<!-- $SESS_LOCK_CONFLICT_STR$= -- placeholder -- -->
+$SESS_ADMIN_ABORTED_STR$=FEL: Åtgärden avbröts av en administratör.
+$SESS_UNAUTHORIZED_STR$=FEL: Du är inte inloggad eller så har du blivit bortkopplad av en administratör.
+$SESS_CANT_DELETE_SESSION_DOMAIN_STR$=FEL: Kan inte ta bort en domän med inloggade användare.
+$SESS_NO_SUCH_PATH_STR$=Den begärda filsökvägen kan inte hittas. Kontrollera sökvägen och försök igen.
+$SESS_INVALID_PATH_STR$=Den begärda fil- eller mappsökvägen är inte giltig för åtgärden.
+$SESS_PROTOCOL_NOT_ALLOWED_FOR_USER_STR$=Du är inte tillåten att logga in med den webbläsare som du använder.  Kontakta din systemadministratör för information om hur du använder den här servern.
+$SESS_PERMISSION_DENIED_READ_ONLY_ADMIN_STR$=Du har inte tillåtelse att ändra på inställningar. Kontakta din administratör för vidare information.
+$SESS_CANT_DELETE_SELF_STR$=Du kan inte ta bort kontot som du är inloggad på.  Logga in med ett annat administratörskonto eller ta bort kontot lokalt på servern.
+$SESS_REVERSE_DNS_NAME_REQUIRED_TO_LOGIN_STR$=Ett rDNS-namn krävs för att ansluta till den här servern. Kontakta din internetleverantör och/eller din systemadministratör för vidare information.
+$SESS_USER_UNAVAILABLE_STR$=Ditt användarkonto är för tillfället inte tillgängligt.  Kontakta din systemadministratör för mer information om ditt konto.
+$SESS_ODBC_USER_PASSWORD_TOO_LONG_STR$=Det angivna lösenordet är för långt för databasen att spara i krypterad form.  Skriv in ett kortare lösenord.
+
+<!-- CheckUser() results -->
+$SESS_USER_OKAY_NEED_PWD_STR$=FEL: Användaren behöver ange ett lösenord.
+$SESS_USER_NOT_FOUND_STR$=FEL: Användaren kunde inte hittas.
+$SESS_USER_OKAY_NEED_EMAIL_STR$=FEL: Användaren måste ange en e-post adress.
+$SESS_USER_NO_ANONYMOUS_STR$=FEL: Anonym åtkomst nekades.
+$SESS_USER_NEED_SECURE_CONNECTION_STR$=Du kan endast ansluta med en säker anslutning.  $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_USER_OKAY_NEED_SKEY_PWD_STR$= -- placeholder -- -->
+
+<!-- CheckPassword() results -->
+$SESS_PASSWORD_CANT_FIND_HOME_STR$=FEL: Det finns ingen angiven hem-mapp för detta kontot.
+$SESS_PASSWORD_USE_REAL_EMAIL_ADDR_STR$=Var god och använd din riktiga e-postadress när du loggar in.
+$SESS_PASSWORD_EXPIRED_CHANGE_STR$=Lösenordet har gått ut. Var god byt lösenord för att fortsätta.
+
+<!-- ChangePassword() results -->
+$SESS_CHG_PASSWORD_NO_OLD_PASSWORD_MATCH_STR$=Det gamla lösenordet stämmer inte.
+$SESS_CHG_PASSWORD_TOO_SHORT_STR$=FEL: Det angivna lösenordet är för kort.
+$SESS_CHG_PASSWORD_NOT_COMPLEX_STR$=FEL: Det angivna lösenordet är inte starkt nog.
+$SESS_CHG_PASSWORD_OLD_NEW_MATCH_STR$=Det nya lösenordet måste skilja sig från det gamla lösenordet.
+$SESS_CHG_PASSWORD_CANT_CHANGE_ANONYMOUS_STR$=Det är inte möjligt att byta till anonym inloggning.
+
+<!-- Xcrc() results -->
+$SESS_XCRC_CANNOT_READ_FROM_FILE_STR$=XCRC-värdet kunde inte räknas fram. Antingen är filen otillgänglig eller så avbröts åtgärden.
+
+<!-- List() results -->
+<!-- $SESS_LIST_START_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_END_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_FILE_STR$= -- placeholder -- -->
+
+<!-- Retrieve() & Store() results -->
+<!-- $SESS_RETR_DATA_STR$= -- placeholder -- -->
+$SESS_CANT_LOAD_GDI_PLUS_STR$=Internt fel: GDI+ kan inte laddas för att utföra en åtgärd.  $CONTACT_SYSTEM_ADMIN$
+$SESS_CANT_CREATE_THUMBNAIL_STR$=Internt fel: Kan inte skapa miniatyr av bilden.
+$SESS_CANT_SAVE_THUMBNAIL_STR$=Internt fel: Kan inte spara miniatyr av bilden.  Lagringsutrymmet kan vara slut.
+<!-- $SESS_FILE_OPENED_STR$= -- placeholder -- -->
+$SESS_CANT_WRITE_STR$=Internt fel: Kan inte skriva till hårddisken. Lagringsutrymmet kan vara slut.  $CONTACT_SYSTEM_ADMIN$
+$SESS_SERVER_STOP_PENDING_STR$=Åtgärden är inte tillgänglig, servern håller på att stängas ner.
+$SESS_RETR_INSUFFICIENT_CREDIT_STR$=Du måste ladda upp innan du kan ladda ner. Var god ladda upp en fil innan du försöker ladda ner en fil.
+$SESS_STOR_INSUFFICIENT_DISK_QUOTA_STR$=Du har inte tillräckligt med ledigt diskutrymme. Frigör tillräckligt med utrymme innan du försöker ladda upp igen.
+$SESS_STOR_INSUFFICIENT_DISK_SPACE_STR$=Du har inte tillräckligt med ledigt diskutrymme.  Frigör tillräckligt med utrymme innan du försöker ladda upp igen, $OR_CONTACT_SYSTEM_ADMIN$
+$SESS_STOR_FILE_TOO_LARGE_STR$=Filen är för stor. Du måste frigöra tillräckligt med diskutrymme innan du försöker ladda upp, eller så har du inte tillräckligt utrymme allokerat.  $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_STOR_DATA_WRITTEN_STR$= -- placeholder -- -->
+$SESS_APPE_CANT_RESTART_STR$=Kan inte skriva till fil när sökvägen redan är angiven.
+
+<!-- GetUniqueFileName() results -->
+$SESS_STOU_CANT_CREATE_UNIQUE_NAME_STR$=Kunde inte skapa ett unikt filnamn.
+
+<!-- SetLastWriteTime() results -->
+$SESS_FUTURE_TIME_STR$=$SESS_FAIL_STR$
+
+<!-- HTTP attribute list results -->
+<!-- $SESS_LIST_NO_CHANGE_STR$= -- placeholder -- -->
+
+<!-- SSL certificate creation results -->
+$SESS_SSL_CANT_CREATE_KEY_FILE_STR$=SSL fel: Kan inte skapa nyckeln.
+$SESS_SSL_CANT_WRITE_KEY_FILE_STR$=SSL fel: Kan inte skriva till nyckeln.
+$SESS_SSL_CANT_CREATE_CERT_FILE_STR$=SSL fel: Kan inte skapa certifikatet.
+$SESS_SSL_CANT_WRITE_CERT_FILE_STR$=SSL fel: Kan inte skriva till certifikatet.
+$SESS_SSL_CANT_CREATE_CERT_REQUEST_FILE_STR$=SSL fel: Kan inte skapa förfrågan för certifikatet.
+
+<!-- licensing results -->
+$SESS_ID_INVALID_STR$=Det ID som angivits för registrering är inte giltigt. Skriv in ett giltigt ID.
+$SESS_ID_EXPIRED_STR$=Det ID som angivits har gått ut och är inte giltigt för den här versionen av Serv-U.  Skriv in ett nytt ID.
+$SESS_LIC_TOO_MANY_DOMAINS_STR$=Du har nått gränsen för antalet domäner som tillåts för din licens.  För att skapa en ny domän måste du uppgradera din licens.
+$SESS_LIC_TOO_MANY_USERS_STR$=Du har nått gränsen för antalet användarkonton som tillåts för din licens. För att skapa ett nytt konto måste du uppgradera din licens.
+$SESS_LIC_TOO_MANY_SESSIONS_STR$=Du har nått gränsen för samtidigt tillåtna anslutningar för din licens. För att tillåta fler samtidiga anslutningar måste du uppgradera din licens.
+$SESS_LIC_NO_REMOTE_ADMIN_STR$=Din licens tillåter inte remote server administrator.  För att aktivera remote server administrator måste du uppgradera din licens.
+$SESS_LIC_NO_FVJV_STR$=FTP Voyager JV är inte tillgänglig med den här licensen.
+$SESS_LIC_NO_WEB_CLIENT_STR$=Åtkomst via webbläsare är inte tillgängligt med den här Serv-U licensen.  Kontakta serverns administratör för att begära en uppgradering.
+$SESS_LIC_NO_PASSWORD_RECOVERY_STR$=Licensen har inte stöd för återställning av lösenord.
+
+<!-- password recovery -->
+$SESS_PASSWORD_RECOVERY_DISABLED_STR$=Återställning av lösenord är inaktiverat. Kontakta din administratör för hjälp.
+$SESS_PASSWORD_RECOVERY_CHANGE_DENIED_STR$=Återställning av lösenord nekades. Användaren kan inte byta lösenord. Kontakta din administratör för hjälp.
+
+<!-- Port() results -->
+<!-- $FTPSESS_PORT_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PORT_INVALID_PORT_NUMBER$= -- placeholder -- -->
+
+<!-- Pasv() results -->
+<!-- $FTPSESS_PASV_UNABLE_TOSETUP_LISTEN_SOCK$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_TOO_MANY_PASV_REQUESTS$= -- placeholder -- -->
+
+<!-- Mlsd() results  -->
+<!-- $FTPSESS_MLSD_WILDCARDS_NOT_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_MLSD_PATHNAME_NOT_DIRECTORY$= -- placeholder -- -->
+
+<!-- data connection -->
+<!-- $FTPSESS_DATACHAN_IN_USE$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_OUT_OF_NETWORK_SOCKETS$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CANNOT_OPEN$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CLOSED_ABORTED$= -- placeholder -- -->
+
+<!-- validation results -->
+$SU_VALID_USER_EXISTS_STR$=FEL: Ett konto med samma ID finns redan.
+$SU_VALID_GROUP_EXISTS_STR$=FEL: En grupp med samma namn finns redan.
+$SU_VALID_ATTR_LESS_THAN_MIN_STR$=FEL: Det angivna värdet är för litet. Använd ett större värde.
+$SU_VALID_ATTR_GREATER_THAN_MAX_STR$=FEL: Det angivna värdet är för stort. Använd ett mindre värde.
+$SU_VALID_INVALID_RESPONSE_CODE_FORMATTING_STR$=FEL: Det angivna FTP åtgärd kräver att vissa värden för formatet är angivna.  Låt värdena för formatet vara när du ändrar svarstexten.
+$SU_VALID_PATH_CONTAINS_WILDCARD_CHARS_STR$=$SESS_FAIL_STR$
+$SU_VALID_EMPTY_PHYSICAL_PATH_STR$=FEL: Ange en fysisk sökväg.
+$SU_VALID_EMPTY_VIRTUAL_PATH_STR$=FEL: Ange en virtuell sökväg.
+$SU_VALID_LOGIN_ID_EMPTY_STR$=FEL: Ange ett unikt ID för användaren.
+$SU_VALID_GROUP_NAME_EMPTY_STR$=FEL: Ange ett unikt namn för gruppen.
+$SU_VALID_DOMAIN_EXISTS_STR$=FEL: En domän med samma namn finns redan.
+$SU_VALID_ORGANIZATION_EXISTS_STR$=FEL: En användarsamling med det namnet finns redan.
+$SU_VALID_PERMISSION_DENIED_STR$=FEL: Åtkomst nekad.
+$SU_VALID_UNABLE_TO_CREATE_SSL_METHOD_STR$=OpenSSL FEL: Kunde inte skapa SSL-metoden.
+$SU_VALID_UNABLE_TO_CREATE_SSL_CONTEXT_STR$=OpenSSL FEL: Kunde inte skapa SSL objektet.
+$SU_VALID_CERT_PATH_IS_EMPTY_STR$=FEL: Please specify a valid path to a certificate file.
+$SU_VALID_UNABLE_TO_LOAD_CERT_FILE_STR$=FEL: Det gick inte att läsa certifikatet. Säkerställ att sökvägen är korrekt.
+$SU_VALID_UNABLE_TO_LOAD_PRIVATE_KEY_FILE_STR$=FEL: Det gick inte att läsa nyckel-filen. Säkerställ att sökvägen och lösenordet är korrekt.
+$SU_VALID_UNABLE_TO_LOAD_OPENSSL_STR$=Kunde inte läsa in OpenSSL-biblioteket.
+$SU_VALID_PHYSICAL_PATH_INVALID_STR$=FEL: Den angivna fysiska sökvägen är inkorrekt.
+$SU_VALID_VIRTUAL_PATH_INVALID_STR$=FEL: Den angivna virtuella sökvägen är inkorrekt.
+$SU_VALID_HOST_NAME_EXISTS_STR$=FEL: Det angivna värdnamnet används redan.
+$SU_VALID_FTP_RESP_REQUIRES_COMMAND_RESULT_STR$=FEL: Svaret på FTP åtgärden kräver att $CommandResult är inkluderat för att fungera korrekt.
+$SU_VALID_FTP_RESP_READ_ONLY_STR$=FEL: Det markerade svaret på FTP åtgärden är skrivskyddat och kan inte ändras.
+$SU_VALID_USER_CANNOT_BE_ADMIN_STR$=FEL: En domänadministratör kan inte skapa ett nytt administratörskonto.
+$SU_VALID_GROUP_CANNOT_BE_ADMIN_STR$=FEL: En domänadministratör kan inte skapa en ny administratörsgrupp.
+$SU_VALID_HOME_DIR_CANNOT_CONTAIN_HOME_VAR_STR$=FEL: Hem-mappen kan inte innehålla %HOME% macrot.
+$SU_VALID_CANNOT_LOAD_GDI_PLUS_STR$=$SESS_CANT_LOAD_GDI_PLUS_STR$
+$SU_VALID_NOT_AN_IMAGE_STR$=ERROR: Den angivna filen är inte en giltig bildfil.
+$SU_VALID_INVALID_IMAGE_SIZE_STR$=ERROR: Dimensionerna för den angivna bilden är felaktiga.  Dimensionerna för en bildlogga måste ha en bredd på 400 pixlar och en höjd på 100 pixlar.
+$SU_VALID_NOT_FOUND_STR$=Objektet kunde inte hittas.
+$SU_VALID_EV_SUBJECT_EMPTY_STR$=Det här eventet måste innehålla ett ämne för epost-meddelandet.
+$SU_VALID_EV_BODY_EMPTY_STR$=Det här eventet måste innehålla text för epost-meddelandet.
+$SU_VALID_EV_TO_ADDRESS_EMPTY_STR$=Det här eventet måste innehålla en epost-adress.
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_STR$=Det här eventet måste innehålla en giltig epost-adress.
+$SU_VALID_EV_BALLON_TIP_TITLE_TOO_LARGE_STR$=Balloon-tip titeln för det här eventet är för stort.
+$SU_VALID_EV_BALLON_TIP_MESSAGE_TOO_LARGE_STR$=Balloon-tip meddelandet för det här eventet är för stort.
+$SU_VALID_EV_BALLON_TIP_EMPTY_STR$=Det här eventet måste innehålla ett balloon-tip meddelande och titel.
+$SU_VALID_EV_EXE_PATH_EMPTY_STR$=Det här eventet måste innehålla en sökväg till en körbar fil.
+$SU_VALID_EV_EXE_PARAMETERS_CONTAIN_CR_LF_STR$=Parametrarna för kommandoprompten för den här åtgärden får inte innehålla line-feeds eller radbryten.
+$SU_VALID_EV_INVALID_VAR_FOR_ADMIN_STR$=Domänadministratören kan inte använda dem angivna variablerna för den här åtgärden.<br><br> Du kan använda följande:<br>$PathName<br>$FileName<br>$OldPathName<br>$OldFileName
+$SU_VALID_INVALID_SMTP_EMAIL_ADDRESS_STR$=Epost-adressen är inte giltig.
+$SU_VALID_INVALID_EMAIL_ADDRESS_STR$=E-postadressen är inte giltig.
+$SU_VALID_EV_INVALID_EMAIL_ADDRESS_BCC_STR$=Adressen i BCC-fältet är inte giltig.
+$SU_VALID_FILE_NAME_CONTAINS_WILDCARD_STR$=Ett fält innehåller wildcard-tecken.  Fältet får inte innehålla något av följande tecken: *?
+$SU_VALID_INVALID_FILE_NAME_CHARACTERS_STR$=Ett fält innehåller ogiltiga tecken. Fältet får inte innehålla något av följande tecken: \/:"&lt;&gt;|
+$SU_VALID_NOT_A_DOUBLE_STR$=Ett fält för flytande poäng innehåller ett ogiltigt nummer. Skriv in ett giltigt nummer.
+$SU_VALID_NOT_A_NUMBER_STR$=Ett numeriskt fält innehåller ett ogiltigt värde. Skriv in ett giltigt värde.

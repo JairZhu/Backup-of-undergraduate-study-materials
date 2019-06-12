@@ -1,0 +1,270 @@
+﻿<!-- Help-Client-Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- External links reused throughout the help documentation -->
+$LINK_FVJV_HOMEPAGE$=<a href="http://FVJV.Serv-U.com/" target="_blank">FTP Voyager JV 首頁</a>
+$LINK_FV_HOMEPAGE$=<a href="http://www.ftpvoyager.com/" target="_blank">FTP Voyager</a>
+
+
+<!-- Macros for inserting links to other Help doc pages.  The text within these anchor tags needs to be translated. -->
+$LINK_HELP_FILE_MANAGEMENT$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-File-Transfers.htm">檔案管理</a>
+$LINK_HELP_DIR_MANAGEMENT$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-Directory-Management.htm">目錄管理</a>
+$LINK_HELP_IMAGE_FEATURES$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-Image-Features.htm">縮略圖和幻燈片</a>
+
+
+<!-- String table for Help-Overview -->
+$OVERVIEW_HEADER$=Serv-U Web 使用者端概述
+
+$OVERVIEW_INTRO$::
+Serv-U Web 使用者端是基於 HTTP 的檔傳輸使用者端，供 Serv-U 檔伺服器上的所有使用者使用。Web 使用者端是針對初涉電腦的使用者和組織的完美解決方案，提供了在使用者間傳輸多個檔的簡單方法。由於在安全環境中使用 FTP 通訊協定會有一些麻煩，且現在常用的 Web 瀏覽器中對 FTP 的支援也很有限，而 Web 使用者端使用 HTTP 協定與 Serv-U 通信，因此避免了一些與使用 FTP 協定相關的麻煩。
+
+Web 使用者端可以完成多種任務，包括：
+::END
+
+$OVERVIEW_TASKS$::
+使用瀏覽器內的圖形使用者介面（GUI）從任何地方訪問檔。從檔伺服器收發檔，包括創建和移除目錄。以縮略圖形式檢視即時生成的遠端圖像，以節約帶寬並提高傳輸速度。使用內置幻燈片功能輕鬆共用相簿。支援使用<strong>十一種</strong>不同語言訪問檔伺服器。
+::END
+$OVERVIEW_LOGIN_PARAMS$=URL 登入和自動載入參數
+
+$OVERVIEW_LOGIN_PARAMS_TXT$::
+Web 使用者端可以發送登入信任書以及指向 Serv-U 檔案伺服器的 URL 中專用的載入參數。以下是可以加入 URL 的參數清單。
+::END
+
+$OVERVIEW_LOGIN_PARAMS_LIST$::
+使用 "thumbnail=1" 參數在登入後以縮圖模式啟動 Web 使用者端。
+使用 "slideshow=1" 參數在登入後立即啟動 Web 使用者端的幻燈片。
+使用 "playlist=1" 參數在登入到 Web 使用者端後立即播放音頻檔案。
+使用 "playmedia=1" 參數登入到 Web 使用者端後立即播放視頻檔案。
+使用 "dir=" 參數在登入到 Web 使用者端後立即直接導航到任何目錄。
+使用 "file=" 參數在登入到 Web 使用者端後立即下載在 "dir=" 參數裏指定目錄中的任何檔案。
+<strong>示例 URL:</strong> http://www.domainname.com?user=temp&password=temppw&thumbnail=1&dir=/D:/temp/&file=textfile.txt
+::END
+
+$OVERVIEW_SEARCH_PARAMS$=檔案名搜索與支援的萬用字元
+
+$OVERVIEW_SEARCH_PARAMS_TXT$::
+Web Client 提供基於使用者輸入（使用位於檔案清單窗格下方的“檔案搜索”按鈕）的檔案搜索功能。以下是同樣支持的萬用字元清單。
+::END
+
+$OVERVIEW_SEARCH_PARAMS_LIST$::
+當完整檔案名未知時，請使用 "*" 參數來搜索檔案（例如：*.txt, *SearchPhrase*, *FileName*）。
+當檔案名中的特定字元未知時，請使用 "?" 參數來搜索檔案（例如：????Name.txt, FileName.???）。
+當特定字元未知不過應該在方括號中包含某一指定字元，請使用 "[]" 參數來搜索檔案（例如：[fmn]ileName.txt, File[fmn]ame.txt）。
+::END
+
+
+$OVERVIEW_REQUIREMENTS$::
+Web 使用者端可以在當今大多數流行 Web 瀏覽器中運行，這些瀏覽器幾乎預安裝在每台電腦上。要運行 Web 使用者端，必須滿足以下最低系統要求：
+::END
+
+$OVERVIEW_REQ_LIST$::
+必須使用 Firefox 2.0 或 Internet Explorer 6.0 或更高版本的瀏覽器。
+瀏覽器中必須啟用 Cookies。
+瀏覽器中必須啟用 JavaScript。
+::END
+
+$OVERVIEW_LIMITATIONS$::
+Web 使用者端可以在當今應用最廣的平臺 - 標準 Web 瀏覽器 - 上輕鬆啟用基本檔傳輸功能。然而，它不能完全替代全功能的 FTP 使用者端。如果您正在尋找企業級解決方案以便為使用者提供全功能檔傳輸使用者端，那麼 <strong>FTP Voyager JV</strong> 可以滿足您的需求。使用 FTP Voyager JV，仍可通過 HTTP 輕鬆部署使用者端並組態訪問許可權，但其所基於的 Java 平臺啟用了以下 Web 使用者端不具備的功能：
+::END
+
+$OVERVIEW_LIMIT_LIST$::
+同時上傳多個檔。
+上傳過程中下載檔。
+下載目錄及其全部內容。
+基於屢獲殊榮的 $LINK_FV_HOMEPAGE$ 使用者端的傳統圖形使用者介面（GUI）。
+遠端和本地檔系統的並列視圖。
+多個不同檔系統視圖（例如清單、圖示、詳細資訊、縮略圖）。
+檔傳輸後保留原始檔日期和時間。
+在遠端和本地檔系統間&ldquo;移動&rdquo;檔案和資料夾。
+針對平臺的顯示主題，確保與您使用的平臺保持統一外觀。
+::END
+
+$OVERVIEW_FVJV_INFO$::
+要啟用 <strong>FTP Voyager JV</strong>，必須為檔伺服器購買支援該功能的許可證。一旦啟用，FTP Voyager JV 可供在系統上安裝了 Java 運行環境的所有檔伺服器使用者使用。有關 <strong>FTP Voyager JV</strong> 的更多資訊，請訪問 $LINK_FVJV_HOMEPAGE$。
+::END
+
+
+<!-- String table for Help-Layout -->
+$BWC_LAYOUT_HEADER$=Web 使用者端佈局
+
+$BWC_LAYOUT_INTRO$::
+Web 使用者端以標準網頁形式顯示，包含從當前遠端路徑可訪問的檔和目錄清單，以及能夠按一下的鏈結，用於執行與檔傳輸相關的各種作業。從該頁面可以使用 Web 使用者端的所有功能，使交互作業既快捷又輕鬆。
+::END
+
+$BWC_LAYOUT_UTILITY$=實用工具列
+$BWC_LAYOUT_UTILITY_TXT$::
+在頁面頂部是實用工具列，包含執行多種實用任務的按鈕。某些任務只有當管理人為使用者帳號啟用了該功能時才可用。這些任務用 <strong>(*)</strong> 表示。下面是每個可用任務的更多資訊。
+::END
+
+$BWC_LAYOUT_CURRENT_DIR$=當前目錄
+$BWC_LAYOUT_CURRENT_DIR_TXT$::
+實用工具列上顯示的第一項內容是連接的伺服器名及伺服器上的當前位置。當瀏覽伺服器上的不同目錄時，該位置會更新，使您總能知道當前所處的位置。
+::END
+
+$BWC_LAYOUT_BREAD_CRUMB_BAR_TXT$::
+可按一下每個列在當前目錄中的目錄段，允許您快速導航到特定的目錄。滑鼠懸停于任何一個目錄段，也可以顯示您當前路徑目錄段中可用的子目錄的子功能表。該功能表出現後，只需選擇想要的子目錄即可將其作為當前目錄。
+::END
+
+$BWC_LAYOUT_CONSOLE$=管理控制臺 (*)
+$BWC_LAYOUT_CONSOLE_TXT$::
+如果登入時使用帶管理許可權的帳號，則可按下<strong>管理控制臺</strong>按鈕返回 Serv-U 管理控制臺首頁。
+::END
+
+$BWC_LAYOUT_PASSWORD$=變更密碼 (*)
+$BWC_LAYOUT_PASSWORD_TXT$::
+如果管理人允許使用者變更帳號密碼，該選項可用。按一下<strong>變更密碼</strong>按鈕會顯示新對話方塊，詢問當前密碼和所需新密碼。輸入相應資訊後，請按一下<strong>確認</strong>按鈕以變更帳號密碼。如果新密碼不符合管理人的密碼安全設定，會顯示消息以解釋新密碼不滿足安全要求的地方。
+::END
+
+$BWC_LAYOUT_SUPPORT$=支持 (*)
+$BWC_LAYOUT_SUPPORT_TXT$::
+如果管理人組態了可選的支援鏈結以協助使用 Serv-U 檔伺服器，則該鏈結可用。按一下該鏈結可導向管理人喜歡的支援提供方式，包括打開另一個網頁，向管理人發送電子信件，或甚至開始即時通信連線期間。
+::END
+
+$BWC_LAYOUT_HELP$=說明
+$BWC_LAYOUT_HELP_TXT$::
+該鏈結啟動 Serv-U Web 使用者端幫助文檔，即您現在閱讀的文檔。
+::END
+
+$BWC_LAYOUT_LOGOUT$=登出
+$BWC_LAYOUT_LOGOUT_TXT$::
+Web 使用者端使用完畢後，請按一下<strong>登出</strong>按鈕以終止連線期間。
+::END
+
+$BWC_LAYOUT_LISTING$=目錄清單和作業
+$BWC_LAYOUT_LISTING_TXT$::
+實用工具列下是伺服器返回的當前目錄清單。目錄清單上下是可執行的多種作業，包括瀏覽伺服器、傳輸檔、或變更清單佈局。有關這些作業的更多資訊，請參見 $LINK_HELP_DIR_MANAGEMENT$、$LINK_HELP_FILE_MANAGEMENT$ 或 $LINK_HELP_IMAGE_FEATURES$ 的相應?明文檔。
+
+目錄清單的右下角是當前目錄內容的摘要。此處列出了目錄數、檔數和當前目錄所包含檔的總尺寸。
+::END
+
+
+<!-- String table for Help-Directory-Management -->
+$DIRS_HEADER$=目錄管理
+$DIRS_HEADER_TXT$::
+Web 使用者端的大部分視圖專用於顯示伺服器上當前瀏覽目錄的內容。該目錄清單顯示了當前目錄內的所有檔和檔夾。根據管理人授予使用者帳號的訪問許可權，可以對該清單中的檔和檔夾執行多種作業。
+::END
+
+$DIRS_NAVIGATING$=瀏覽目錄
+$DIRS_NAVIGATING_TXT$::
+有多種方法可以變更當前目錄。變更當前目錄會更新目錄清單的內容。變更當前目錄的最簡單方法是使用滑鼠按二下清單內的目錄。此外，可以右鍵按一下目錄並選擇<strong>打開</strong>選項。變更當前目錄的最後一種方法是選擇清單中的目錄，然後按一下清單下面的<strong>打開</strong>按鈕。
+::END
+
+$DIRS_PARENT_DIR$=父目錄
+$DIRS_PARENT_DIR_TXT$::
+如果使用者帳號鎖定於根目錄，且當前目錄即為根目錄，則該按鈕不可用。按一下該按鈕會將當前目錄變更為父目錄。例如，如果當前目錄為 <strong>/public/files</strong>，則按一下該按鈕會將當前目錄變更為 <strong>/public</strong>。
+::END
+
+$DIRS_REFRESH$=刷新
+$DIRS_REFRESH_TXT$::
+刷新當前目錄清單導致 Web 使用者端再次檢索目錄清單並更新顯示的檔和檔夾。
+::END
+
+$DIRS_THUMBNAILS$=縮略圖
+$DIRS_THUMBNAILS_TXT$::
+按一下<strong>縮略圖</strong>按鈕從詳細資訊視圖切換到縮略圖視圖。在縮略圖視圖中，Web 使用者端檢索並顯示當前目錄中任何圖像檔的縮略版。在縮略圖視圖模式中還有更多選項可供使用。有關縮略圖的更多資訊，請參見 $LINK_HELP_IMAGE_FEATURES$ 的幫助文檔。
+::END
+
+$DIRS_DETAILS$=詳細資訊
+$DIRS_DETAILS_TXT$::
+當前視圖為縮略圖模式時，<strong>詳細資訊</strong>按鈕可用。按一下該按鈕返回當前目錄內容的詳細清單視圖，不再顯示任何縮略圖。
+::END
+
+$DIRS_CREATE$=創建目錄
+$DIRS_CREATE_TXT$::
+按一下該按鈕可以在伺服器上創建新目錄。按一下後將顯示新建對話方塊，詢問要創建的新目錄名。如果使用者帳號不能創建目錄或現有目錄名與新目錄名有衝突，則顯示錯誤消息。
+::END
+
+$DIRS_RENAME$=重命名
+$DIRS_RENAME_TXT$::
+要重命名目錄，請在目錄清單中選擇要重命名的目錄並按一下此按鈕。右鍵按一下所需的目錄也可使用此選項。當前名稱顯示在新對話方塊中。將此名稱變更為所需的新名稱並按一下<strong>確認</strong>。如果使用者帳號不能重命名目錄或現有目錄名與新目錄名有衝突，則顯示錯誤消息。
+::END
+
+$DIRS_DELETE$=移除
+$DIRS_DELETE_TXT$::
+從清單中選擇所需的目錄並按一下<strong>移除</strong>按鈕可以移除目錄。右鍵按一下所需的目錄也可使用此選項。如果使用者帳號不能移除目錄，則顯示錯誤消息。<strong>注意：</strong>  移除目錄會移除該目錄中包含的所有檔和檔夾。無法在伺服器上撤銷此作業。
+::END
+
+
+<!-- String table for Help-File-Transfers -->
+$FILES_HEADER$=檔案管理
+<!-- The following string does not need to be translated.  It's copying a string from elsewhere. -->
+$FILES_HEADER_TXT$=$DIRS_HEADER_TXT$
+
+$FILES_UPLOAD$=上傳
+$FILES_UPLOAD_TXT$::
+如果使用者帳號有上傳新檔的許可權，則可使用此按鈕一次將一個檔上傳到伺服器上。按一下<strong>上傳</strong>按鈕會打開新視窗，從中可<strong>瀏覽</strong>系統查找需要上傳的檔。選擇了相應的檔後，請按一下<strong>上傳</strong>按鈕開始傳輸。
+
+上傳開始後將顯示進度對話方塊，該對話方塊使用即時資訊定時更新，包括當前傳輸速率、已發送的資料量、剩餘要發送的資料量和完成傳輸估計所需的時間。當檔正在上傳時無法執行其他作業，包括變更當前目錄或傳輸另一個檔。可隨時按一下<strong>取消</strong>按鈕終止上傳。取消的檔傳輸無法續傳，必須重新開始。
+
+上傳完成後，進度對話方塊消失，且目錄清單被刷新以顯示新檔。
+::END
+
+$FILES_DOWNLOAD$=下載
+$FILES_DOWNLOAD_TXT$::
+要開始檔下載，只需選擇所需的檔並按一下<strong>下載</strong>按鈕。右鍵按一下所需的檔也可使用此選項。瀏覽器提示您輸入保存檔的系統位置。一些瀏覽器還提供選項可以打開檔，而不用將其保存于永久位置。正在下載檔時，Web 使用者端可隨意執行其他作業。
+::END
+
+$FILES_RENAME$=重命名
+$FILES_RENAME_TXT$::
+要重命名檔，請在目錄清單中選擇要重命名的檔並按一下此按鈕。右鍵按一下所需的檔也可使用此選項。當前名稱顯示在新對話方塊中。將此名稱變更為所需的新名稱並按一下<strong>確認</strong>。如果使用者帳號不能重命名檔或現有檔案名與新檔案名有衝突，則顯示錯誤消息。
+::END
+
+$FILES_DELETE$=移除
+$FILES_DELETE_TXT$::
+從清單中選擇所需的檔並按一下<strong>移除</strong>按鈕可以移除檔。右鍵按一下所需的檔也可使用此選項。如果使用者帳號不能移除檔，則顯示錯誤消息。<strong>注意：</strong> 檔被從伺服器上永久移除。該作業無法撤銷。
+::END
+
+
+<!-- String table for Help-Image-Features -->
+$IMAGES_HEADER$=縮略圖、幻燈片及媒體播放器
+$IMAGES_HEADER_TXT$::
+Web 使用者端與 Serv-U 的進階功能相結合，為您與朋友、家人或客戶共用照片提供了完美的平臺。使用進階的即時壓縮技術，Web 使用者端可以為幾乎任何類型圖像檔生成定制大小的縮略圖。一旦伺服器收到要求就生成該縮略圖並送還給使用者端。採用這種方法，可以檢視較小版的圖像檔，所花時間僅為下載整個檔並在本地打開該檔所需時間的一小部分。同時伺服器發送圖像檔所佔用的帶寬也降低到最小程度。
+
+Web 使用者端支援兩種圖像檢視模式：縮略圖和幻燈片。在詳細資訊或縮略圖視圖模式中可以檢視幻燈片。
+::END
+
+$IMAGES_THUMBNAILS$=縮略圖
+$IMAGES_THUMBNAILS_TXT$::
+縮略圖視圖取代了詳細資訊目錄清單以顯示每個檔的縮略圖。如果檔類型不是所支援的圖像類型，則代之以顯示該檔類型的相應圖示。在縮略圖視圖模式中，每個縮略圖下方有一組按鈕以取代通常出現在目錄清單下方的標準作業按鈕。這些按鈕能以常規方式<strong>打開</strong>、<strong>下載</strong>、<strong>重命名</strong>並<strong>移除</strong>檔和檔夾。對於圖像檔，還有一個選項用於預覽圖像。
+::END
+
+$IMAGES_THUMB_SIZE$=縮略圖大小
+$IMAGES_THUMB_SIZE_TXT$::
+從<strong>縮略圖大小</strong>下拉清單可以定制每個圖像縮略圖的大小。有五種大小可供選擇，以平衡縮略圖大小和檢索所需時間。如果可用的大小顯示為平方值，則創建縮略圖時保留了圖像的實際縱橫比以避免扭曲原始圖像。
+::END
+
+$IMAGES_THUMB_PREVIEW$=預覽圖像
+$IMAGES_THUMB_PREVIEW_TXT$::
+在縮略圖模式和詳細資訊模式中都能預覽圖像。預覽的圖像顯示在新對話方塊中，就像播放幻燈片一樣，只是在該預覽圖像上暫停播放。圖像顯示的最大寬度為 600 圖元。如果預覽的圖像小於該尺寸，則以實際尺寸顯示圖像。預覽圖像時，按一下圖像上方的相應按鈕可以開始播放幻燈片。有關幻燈片的更多資訊，請繼續閱讀幫助文檔。
+::END
+
+$IMAGES_SLIDESHOWS$=幻燈片
+$IMAGES_SLIDESHOWS_TXT$::
+幻燈片是自動預覽當前目錄中包含的圖像的一種方法。當以幻燈片模式檢視圖像時，通過按一下圖像下方的相應按鈕，可以對該檔執行標準作業，包括<strong>下載</strong>、<strong>重命名</strong>和<strong>移除</strong>。
+::END
+
+$IMAGES_SLIDE_CONTROL$=控制幻燈片
+$IMAGES_SLIDE_CONTROL_TXT$::
+使用幻燈片對話方塊頂部的按鈕可以手動控制幻燈片的播放。從左至右的控制項分別為上一圖像、暫停幻燈片、播放幻燈片和下一圖像。這些控制項旁是一個計數器，顯示當前圖像的位置及幻燈片中所有圖像的總數。
+
+使用對話方塊底部的滑塊可以控制幻燈片播放的速度。將滑塊朝左向<strong>慢</strong>端調整會使圖像以較慢的速度向前播放。將滑塊向<strong>快</strong>端調整則加快播放速度。某些伺服器上，如果幻燈片的當前播放速度快于伺服器能生成幻燈片圖像的速度，則前進到下一圖像時可能顯示正在載入的圖像。
+
+檢視完幻燈片以後，請使用<strong>關閉</strong>按鈕關閉幻燈片對話方塊。
+::END
+
+$MEDIA_PLAYER$=媒體播放器
+$MEDIA_PLAYER_TXT$::
+媒體播放器允許使用者通過 Web 使用者端中的媒體播放器對話方塊立即播放常用的媒體格式。該功能令使用者能夠在下載音頻或視頻檔之前方便地進行預覽，並直接從 Web 使用者端構建流音頻的播放清單。
+::END
+
+$MEDIA_PLAY_LIST$=播放清單
+$MEDIA_PLAY_LIST_TXT$::
+Serv-U 動態生成的播放列表能夠播放使用者當前目錄中的所有音頻檔。一旦在當前目錄中檢測到音頻檔，便可使用“播放清單”選項。只需單擊按鈕，便可將使用者當前目錄中的所有音頻檔連續添加到內置的媒體播放器中。
+::END
+
+$MEDIA_PLAYER_CONTROLS$=媒體播放器控制項
+$MEDIA_PLAYER_CONTROLS_TXT$::
+可以使用播放器上方的上一個和下一個按鈕手動操控媒體播放器。這些控制項旁邊是計數器，顯示當前媒體檔的位置，以及當前目錄中媒體檔的總數。<strong>注意：</strong>這些控制項可以手動更改到當前目錄的上一個或下一個媒體檔。一旦開始播放媒體檔，媒體播放器不會自動移動到下一個媒體檔。
+
+要連續播放多個音頻檔，必須使用“播放清單”選項。使用此功能時，相應媒體播放器插件中的控制項可以用於更改當前音軌。從 Serv-U 中導入播放清單時，下載、移除和重命名操作隱藏。
+::END

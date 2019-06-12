@@ -1,0 +1,57 @@
+%PRIV_GROUP_ADMIN%
+<limits>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxGroupUploadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxGroupUploadRate.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxGroupUploadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxGroupUploadRate.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxGroupDownloadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxGroupDownloadRate.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxGroupDownloadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxGroupDownloadRate.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxSessionUploadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxSessionUploadRate.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxSessionUploadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxSessionUploadRate.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxSessionDownloadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxSessionDownloadRate.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxSessionDownloadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxSessionDownloadRate.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxUserUploadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxUserUploadRate.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxUserUploadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxUserUploadRate.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxUploadFileSize" val="%CRhinoAttr.%LIST_ID%.Value%" type="7" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" scale="1024" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxUploadFileSize.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxUploadFileSize" val="%CRhinoAttr.%LIST_ID%.Value%" type="7" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" scale="1024" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxUploadFileSize.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxUserDownloadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxUserDownloadRate.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxUserDownloadRate" val="%CRhinoAttr.%LIST_ID%.Value%" type="1" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.MaxUserDownloadRate.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="DeletePartiallyUploaded" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.DeletePartiallyUploaded.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="DeletePartiallyUploaded" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.DeletePartiallyUploaded.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="InterpretLFasEOL" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" />
+%CGroup.%ID%.InterpretLFasEOL.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="InterpretLFasEOL" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" />
+%CGroup.%ID%.InterpretLFasEOL.ListDefaults%
+</limits>

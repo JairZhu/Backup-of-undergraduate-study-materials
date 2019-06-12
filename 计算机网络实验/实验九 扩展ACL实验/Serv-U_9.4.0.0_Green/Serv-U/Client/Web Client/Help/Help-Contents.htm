@@ -1,0 +1,159 @@
+<!--#include "Strings/Help-TOC-Strings.strings"-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>$TITLE$</title>
+	<style type="text/css">
+		/*margin and padding on body element
+		  can introduce errors in determining
+		  element position and are not recommended;
+		  we turn them off as a foundation for YUI
+		  CSS treatments. */
+		body {
+			margin:0;
+			padding:0;
+			background-image: url(%COMMON_FILE%Images/vert-bg-fade.png);
+			background-repeat: repeat-x;	
+			background-position: center;
+			background-color: #d4d0c8;
+			text-align:center;
+		}
+	</style>
+<link type="text/css" href="%COMMON_FILE%Scripts/Help/fonts/fonts-min.css" rel="stylesheet" />
+<link type="text/css" href="%COMMON_FILE%Scripts/Help/assets/css/treeview.css" rel="stylesheet" />
+<link type="text/css" href="%COMMON_FILE%Scripts/Help/assets/css/tree.css" rel="stylesheet" />
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/yahoo/yahoo.js"></script>
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/event/event.js"></script>
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/treeview/treeview.js"></script>
+<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/Help.js"></script>
+<script type="text/javascript" language="javascript">
+	// determine if the browser is IE or Moz and what version 
+	nBrowserVersion = parseInt(navigator.appVersion); // browser version being used
+	sBrowserType = navigator.appName; // type of browser....IE or Moz
+
+	// if IE then drop in this style otherwise use the other style
+	if (sBrowserType == "Microsoft Internet Explorer" && (nBrowserVersion >= 4)) {
+		document.write("<style type='text/css'>");
+		document.write("BODY{margin:10px;}");
+		document.write("</style>");
+	} // if
+	else{
+		document.write("<style type='text/css'>");
+		document.write("BODY{margin:10px 14px 10px 10px;}");
+		document.write("</style>");
+	} // else
+</script>
+
+
+<!--Additional custom style rules for this example:-->
+<style type="text/css">
+    #treewrapper {background: #fff; position:relative;}
+	#treediv {position:relative; width:200px; background: #fff; padding:1em;}
+    .icon-item { display:block; padding-left: 20px; background: transparent url(%COMMON_FILE%Scripts/Help/assets/img/pageitem.gif) no-repeat; }
+</style>
+
+
+<!--end custom header content for this example-->
+</head>
+
+<body>
+<div id="TOCpanebox" style="text-align:left;overflow:auto;width:100%;background-color:#fff;border: inset 2px #fff;">
+	<div id="treewrapper">
+		<div id="treediv"> </div>
+	</div>	
+</div>
+</body>
+<script type="text/javascript" language="javascript">
+	//Wrap our initialization code in an anonymous function
+	//to keep out of the global namespace:
+	(function(){
+		var init = function() {
+			
+			//create the TreeView instance:
+			var tree = new YAHOO.widget.TreeView("treediv");
+			
+			//get a reusable reference to the root node:
+			var root = tree.getRoot();
+			
+			var RootItem1 = TreeTextNode("$BWC_ROOT_NODE$", root, true, false);
+				
+				var Item1_1 = TreeTextNode("$BWC_OVERVIEW$", RootItem1, false, true,"Help-Overview.htm");
+
+			var RootItem2 = TreeTextNode("$BWC_USING_NODE$", root, true, false);
+
+				var Item1_2 = TreeTextNode("$BWC_LAYOUT$", RootItem2, false, true,"Help-Layout.htm");
+
+				var Item2_2 = TreeTextNode("$BWC_DIR_MGMT$", RootItem2, false, true,"Help-Directory-Management.htm");
+
+				var Item3_2 = TreeTextNode("$BWC_FILE_TRANSFER$", RootItem2, false, true,"Help-File-Transfers.htm");
+
+				var Item4_2 = TreeTextNode("$BWC_THUMB_AND_SLIDE$", RootItem2, false, true,"Help-Image-Features.htm");
+
+			tree.subscribe("labelClick", function(node) {
+				//alert(node.data.href + " label was clicked");
+				sHelpPageURL = node.data.helppage;
+				if(sHelpPageURL != "" && sHelpPageURL != null && sHelpPageURL != undefined)
+					parent.frames[2].location.href = "%FILE%Help/" + sHelpPageURL;
+			}); 
+			
+			tree.draw();
+		}
+		//Add an onDOMReady handler to build the tree when the document is ready
+		YAHOO.util.Event.onDOMReady(init);
+	})();
+
+
+	function TreeTextNode(sLabel,sParentObj,bIsOpen,bHasImage,sHref)
+	{
+		var NodeObj = {label: sLabel, helppage: sHref };
+		
+		TextTreeItem = new YAHOO.widget.TextNode(NodeObj, sParentObj, bIsOpen);
+
+		if(bHasImage)
+			TextTreeItem.labelStyle = "icon-item";
+		 
+		return(TextTreeItem);
+	} // TreeTextNode
+
+
+	function ResizeTOC() 
+	{
+		// define some vars for width/height
+		var w_maxWidth = 1600, w_maxHeight = 1200;
+
+		// if the browser is from here
+		if (navigator.appName.indexOf("Microsoft") != -1) {
+
+			// set the new width/height
+			//w_newWidth = document.body.clientWidth;			
+			w_newHeight = document.body.clientHeight - 4;
+		} // if
+		else {
+			// estimate the size of the scroll bar
+			var netscapeScrollWidth = 15;
+
+			// set the new width/height
+			//w_newWidth = window.innerWidth - netscapeScrollWidth;
+			w_newHeight = window.innerHeight - netscapeScrollWidth;
+		} // else
+
+		// if the new width is greater than the max width, set the new width to the max
+		//if (w_newWidth > w_maxWidth)	
+		//	w_newWidth = w_maxWidth;
+
+		// if the new height is greater than the max height, set the new height to the max
+		if (w_newHeight > w_maxHeight)
+			w_newHeight = w_maxHeight;
+			
+		//TOC container resize
+		document.getElementById("TOCpanebox").style.height = (w_newHeight - 15);
+	} // ResizeTOC
+
+	// setup the resize handlers
+	window.onresize = ResizeTOC;
+	window.onload = ResizeTOC;
+</script>
+</html>

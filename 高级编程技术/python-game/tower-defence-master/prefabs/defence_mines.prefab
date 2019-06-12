@@ -1,0 +1,19 @@
+
+# UI Settings
+display_name   :  str   :  Mines
+
+# Sprite
+image  :  aimg  :  textures\defence_mines.png
+
+# Defence Settings
+cost   :  int   :  25
+rotate :  bool  :  0
+
+# Attack Settings
+attack  :  str  :  explosion
+attack_rate  :  float  :  -1
+attack_range :  float  :  25
+
+# Explosion Settings
+explosion_radius  :  float  :  40
+explosion_damage  :  float  :  120

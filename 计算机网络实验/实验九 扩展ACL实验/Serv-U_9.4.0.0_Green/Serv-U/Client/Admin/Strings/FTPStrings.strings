@@ -1,0 +1,168 @@
+﻿<!-- FTPStrings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- **************** FTP Commands and Descriptions **************** -->
+$COMMAND_FTPCommandProcessor_ABOR_NAME$=Abort
+$COMMAND_FTPCommandProcessor_ABOR_DESC$=Aborts the previously issued FTP command if it is still in progress.
+$COMMAND_FTPCommandProcessor_ACCT_NAME$=Account
+$COMMAND_FTPCommandProcessor_ACCT_DESC$=Specifies an account name to the server.
+$COMMAND_FTPCommandProcessor_ALLO_NAME$=Allocate
+$COMMAND_FTPCommandProcessor_ALLO_DESC$=Reserves the specified amount of space on the server for a file transfer.
+$COMMAND_FTPCommandProcessor_APPE_NAME$=Append [with create]
+$COMMAND_FTPCommandProcessor_APPE_DESC$=Allows uploaded data to be appended to another file (if it already exists).
+$COMMAND_FTPCommandProcessor_AUTH_NAME$=Authentication
+$COMMAND_FTPCommandProcessor_AUTH_DESC$=Initializes a secure connection the FTP server.
+$COMMAND_FTPCommandProcessor_AVBL_NAME$=Available Bytes in Directory
+$COMMAND_FTPCommandProcessor_AVBL_DESC$=Requests the number of bytes available for uploads in a specified directory, or the current directory.
+$COMMAND_FTPCommandProcessor_CCC_NAME$=Clear Command Channel
+$COMMAND_FTPCommandProcessor_CCC_DESC$=Instructs the server to stop using encryption over the command channel.
+$COMMAND_FTPCommandProcessor_CDUP_NAME$=Change to Parent Directory
+$COMMAND_FTPCommandProcessor_CDUP_DESC$=Changes the working directory for the connection to the immediate parent directory.
+$COMMAND_FTPCommandProcessor_CLNT_NAME$=Client
+$COMMAND_FTPCommandProcessor_CLNT_DESC$=Informs the server of the FTP software in use by the client.
+$COMMAND_FTPCommandProcessor_CSID_NAME$=Client / Server Identification
+$COMMAND_FTPCommandProcessor_CSID_DESC$=Exchanges identification information between the client and server.
+$COMMAND_FTPCommandProcessor_CWD_NAME$=Change Working Directory
+$COMMAND_FTPCommandProcessor_CWD_DESC$=Changes the working directory for the connection to the requested path.
+$COMMAND_FTPCommandProcessor_DELE_NAME$=Delete
+$COMMAND_FTPCommandProcessor_DELE_DESC$=Deletes the specified file on the server.
+$COMMAND_FTPCommandProcessor_DSIZ_NAME$=Directory Size
+$COMMAND_FTPCommandProcessor_DSIZ_DESC$=Requests the size of a specified directory, or the current directory, including subfolders.
+$COMMAND_FTPCommandProcessor_EPRT_NAME$=Extended Port
+$COMMAND_FTPCommandProcessor_EPRT_DESC$=Specifies extended address for the data connection.
+$COMMAND_FTPCommandProcessor_EPSV_NAME$=Extended Passive
+$COMMAND_FTPCommandProcessor_EPSV_DESC$=Instructs the server to listen on a data port and wait for a connection.
+$COMMAND_FTPCommandProcessor_FEAT_NAME$=Feature
+$COMMAND_FTPCommandProcessor_FEAT_DESC$=Requests a list of extended features (commands) supported by the server.
+$COMMAND_FTPCommandProcessor_HELP_NAME$=Help
+$COMMAND_FTPCommandProcessor_HELP_DESC$=Requests information on using the server or a specific FTP command.
+$COMMAND_FTPCommandProcessor_HOST_NAME$=Host
+$COMMAND_FTPCommandProcessor_HOST_DESC$=Specifies which domain on the server the client wants to connect to.
+$COMMAND_FTPCommandProcessor_LIST_NAME$=List
+$COMMAND_FTPCommandProcessor_LIST_DESC$=Requests a listing of all files and directories in a specified directory, or the current directory.
+$COMMAND_FTPCommandProcessor_MDTM_NAME$=Modification Time
+$COMMAND_FTPCommandProcessor_MDTM_DESC$=Requests or sets the last modification time of a specified file.
+$COMMAND_FTPCommandProcessor_MFMT_NAME$=Modify Fact: Modification Time
+$COMMAND_FTPCommandProcessor_MFMT_DESC$=Sets the last modification time of a specified file or directory.
+$COMMAND_FTPCommandProcessor_MFCT_NAME$=Modify Fact: Creation Time
+$COMMAND_FTPCommandProcessor_MFCT_DESC$=Sets the creation time of a specified file or directory.
+$COMMAND_FTPCommandProcessor_MFF_NAME$=Modify Fact: Facts
+$COMMAND_FTPCommandProcessor_MFF_DESC$=Sets file or directory facts (information such as the creation or modification time of a specified file or directory).
+$COMMAND_FTPCommandProcessor_MKD_NAME$=Make Directory
+$COMMAND_FTPCommandProcessor_MKD_DESC$=Creates the specified directory on the server.
+$COMMAND_FTPCommandProcessor_MLSD_NAME$=Machine List Directory
+$COMMAND_FTPCommandProcessor_MLSD_DESC$=Requests a machine readable listing of all files and directories in a specified directory, or the current directory.
+$COMMAND_FTPCommandProcessor_MLST_NAME$=Machine List
+$COMMAND_FTPCommandProcessor_MLST_DESC$=Requests machine readable information about a specified file or the current directory over the command channel.
+$COMMAND_FTPCommandProcessor_MODE_NAME$=Transfer Mode
+$COMMAND_FTPCommandProcessor_MODE_DESC$=Specifies a transfer mode to use when transferring data.
+$COMMAND_FTPCommandProcessor_NLST_NAME$=Name List
+$COMMAND_FTPCommandProcessor_NLST_DESC$=Requests a listing of all files in the current or specified directory.
+$COMMAND_FTPCommandProcessor_NOOP_NAME$=No Operation
+$COMMAND_FTPCommandProcessor_NOOP_DESC$=No action is performed; it is commonly used as a keep-alive command.
+$COMMAND_FTPCommandProcessor_OPTS_NAME$=Options
+$COMMAND_FTPCommandProcessor_OPTS_DESC$=Configures extended options for the specified command.
+$COMMAND_OPTS_MLST_NAME$=Options for MLST
+$COMMAND_OPTS_MLST_DESC$=Configures the format of the response to the MLST command.
+$COMMAND_OPTS_MODE_NAME$=Options for MODE
+$COMMAND_OPTS_MODE_DESC$=Configures extended options for a transfer mode (e.g., the level of compression for MODE Z).
+$COMMAND_OPTS_UTF8_NAME$=Options for UTF8
+$COMMAND_OPTS_UTF8_DESC$=Enables or disables UTF-8 file name and path encoding.  OPTS UTF8 must be followed by "ON" to enable or "OFF" to disable.
+$COMMAND_FTPCommandProcessor_PASS_NAME$=Password
+$COMMAND_FTPCommandProcessor_PASS_DESC$=Specifies the password to the previously provided username when logging in.
+$COMMAND_FTPCommandProcessor_PASV_NAME$=Passive Mode
+$COMMAND_FTPCommandProcessor_PASV_DESC$=Instructs the server to open a passive mode data connection on another port.
+$COMMAND_FTPCommandProcessor_PBSZ_NAME$=Protection Buffer Size
+$COMMAND_FTPCommandProcessor_PBSZ_DESC$=Specifies the maximum size of encoded data blocks, in bytes, to use when sending data over a secured connection.
+$COMMAND_FTPCommandProcessor_PORT_NAME$=Data Port
+$COMMAND_FTPCommandProcessor_PORT_DESC$=Specifies the IP address and port a server should connect to for the purpose of a data transfer.
+$COMMAND_FTPCommandProcessor_PROT_NAME$=Data Channel Protection Level
+$COMMAND_FTPCommandProcessor_PROT_DESC$=Specifies the level of protection to use on the data channel for a secured connection.
+$COMMAND_FTPCommandProcessor_PWD_NAME$=Print Working Directory
+$COMMAND_FTPCommandProcessor_PWD_DESC$=Requests the current working directory for the connection.
+$COMMAND_FTPCommandProcessor_QUIT_NAME$=Quit
+$COMMAND_FTPCommandProcessor_QUIT_DESC$=Instructs the FTP server to logout the current user.
+$COMMAND_FTPCommandProcessor_REIN_NAME$=Reinitialize
+$COMMAND_FTPCommandProcessor_REIN_DESC$=Instructs the server to reset the connection to the state it was in at the time of initial connection.
+$COMMAND_FTPCommandProcessor_REST_NAME$=Restart
+$COMMAND_FTPCommandProcessor_REST_DESC$=Specifies a marker value the server can use to resume a previous file transfer.
+$COMMAND_FTPCommandProcessor_RETR_NAME$=Retrieve
+$COMMAND_FTPCommandProcessor_RETR_DESC$=Starts a file transfer where the server sends a copy of a remote file to the client.
+$COMMAND_FTPCommandProcessor_RMD_NAME$=Remove Directory
+$COMMAND_FTPCommandProcessor_RMD_DESC$=Removes the specified directory on the server.
+$COMMAND_FTPCommandProcessor_RMDA_NAME$=Remove Directory &amp; Contents
+$COMMAND_FTPCommandProcessor_RMDA_DESC$=Removes the specified directory and all its file contents and sub-directories on the server.
+$COMMAND_FTPCommandProcessor_RNFR_NAME$=Rename From
+$COMMAND_FTPCommandProcessor_RNFR_DESC$=Specifies a file or directory that is to be renamed following a RNTO command.
+$COMMAND_FTPCommandProcessor_RNTO_NAME$=Rename To
+$COMMAND_FTPCommandProcessor_RNTO_DESC$=Provides the new name for a file or directory specified by the preceding RNFR command.
+$COMMAND_FTPCommandProcessor_SITE_NAME$=Site Command
+$COMMAND_FTPCommandProcessor_SITE_DESC$=Specifies an extended command for execution that may not be recognized by all FTP servers.
+$COMMAND_SITE_CHMOD_NAME$=Change Mode
+$COMMAND_SITE_CHMOD_DESC$=Specifies new permissions for a specified file or directory.
+$COMMAND_SITE_EXEC_NAME$=Execute
+$COMMAND_SITE_EXEC_DESC$=Executes the provided command-line on the server.
+$COMMAND_SITE_MSG_NAME$=Message
+$COMMAND_SITE_MSG_DESC$=Sends the provided text message to the server administrator.
+$COMMAND_SITE_PSWD_NAME$=Change Password
+$COMMAND_SITE_PSWD_DESC$=Changes the logged in user's password to the provided password.
+$COMMAND_SITE_SET_NAME$=Set [option]
+$COMMAND_SITE_SET_DESC$=Sets the site specific option specified in the command to the provided value.
+$COMMAND_SITE_ZONE_NAME$=Time Zone
+$COMMAND_SITE_ZONE_DESC$=Requests the UTC offset for the time zone the server is located in.
+$COMMAND_SITE_HELP_NAME$=Help
+$COMMAND_SITE_HELP_DESC$=Requests information on using the server or a specific FTP command.
+$COMMAND_FTPCommandProcessor_SIZE_NAME$=File Size
+$COMMAND_FTPCommandProcessor_SIZE_DESC$=Requests the number of bytes that would be sent to transfer a specified file.
+$COMMAND_FTPCommandProcessor_SMNT_NAME$=Structure Mount
+$COMMAND_FTPCommandProcessor_SMNT_DESC$=Mounts a different file system data structure for use by the user for the connection.
+$COMMAND_FTPCommandProcessor_SSCN_NAME$=Set Secured Client Negotiation
+$COMMAND_FTPCommandProcessor_SSCN_DESC$=Specifies how the server should negotiate secure connection for FXP.
+$COMMAND_FTPCommandProcessor_STAT_NAME$=Status
+$COMMAND_FTPCommandProcessor_STAT_DESC$=Requests status information on a current file transfer or other parameter dependent information.
+$COMMAND_FTPCommandProcessor_STOR_NAME$=Store
+$COMMAND_FTPCommandProcessor_STOR_DESC$=Starts a file transfer where the client sends a copy of a local file to the server.
+$COMMAND_FTPCommandProcessor_STOU_NAME$=Store Unique
+$COMMAND_FTPCommandProcessor_STOU_DESC$=Starts a file transfer like the STOR command, except the server returns a unique filename to use.
+$COMMAND_FTPCommandProcessor_STRU_NAME$=File Structure
+$COMMAND_FTPCommandProcessor_STRU_DESC$=Specifies a file structure to be used during data transfers.
+$COMMAND_FTPCommandProcessor_SYST_NAME$=System
+$COMMAND_FTPCommandProcessor_SYST_DESC$=Request that the server identify its system platform.
+$COMMAND_FTPCommandProcessor_THMB_NAME$=Thumbnail
+$COMMAND_FTPCommandProcessor_THMB_DESC$=Starts a file download where the server sends a thumbnail image of a remote file in the specified format.
+$COMMAND_FTPCommandProcessor_TYPE_NAME$=Representation Type
+$COMMAND_FTPCommandProcessor_TYPE_DESC$=Specifies the format of the data being transferred.
+$COMMAND_FTPCommandProcessor_USER_NAME$=Login ID
+$COMMAND_FTPCommandProcessor_USER_DESC$=Specifies the login ID to be used for authenticating the connection.
+$COMMAND_FTPCommandProcessor_XCRC_NAME$=Cyclic Redundancy Check
+$COMMAND_FTPCommandProcessor_XCRC_DESC$=Requests a CRC value for the specified remote file.
+$COMMAND_FTPCommandProcessor_XCUP_NAME$=$COMMAND_FTPCommandProcessor_CDUP_NAME$
+$COMMAND_FTPCommandProcessor_XCUP_DESC$=$COMMAND_FTPCommandProcessor_CDUP_DESC$
+$COMMAND_FTPCommandProcessor_XCWD_NAME$=$COMMAND_FTPCommandProcessor_CWD_NAME$
+$COMMAND_FTPCommandProcessor_XCWD_DESC$=$COMMAND_FTPCommandProcessor_CWD_DESC$
+$COMMAND_FTPCommandProcessor_XDEL_NAME$=$COMMAND_FTPCommandProcessor_DELE_NAME$
+$COMMAND_FTPCommandProcessor_XDEL_DESC$=$COMMAND_FTPCommandProcessor_DELE_DESC$
+$COMMAND_FTPCommandProcessor_XMKD_NAME$=$COMMAND_FTPCommandProcessor_MKD_NAME$
+$COMMAND_FTPCommandProcessor_XMKD_DESC$=$COMMAND_FTPCommandProcessor_MKD_DESC$
+$COMMAND_FTPCommandProcessor_XPWD_NAME$=$COMMAND_FTPCommandProcessor_PWD_NAME$
+$COMMAND_FTPCommandProcessor_XPWD_DESC$=$COMMAND_FTPCommandProcessor_PWD_DESC$
+$COMMAND_FTPCommandProcessor_XRMD_NAME$=$COMMAND_FTPCommandProcessor_RMD_NAME$
+$COMMAND_FTPCommandProcessor_XRMD_DESC$=$COMMAND_FTPCommandProcessor_RMD_DESC$
+
+
+<!-- NOTE TO TRANSLATORS: The following BLOCK MUST be removed from your translation -->
+<!-- localized strings, keep these at the end of this file, they "overwrite" any previously defined string -->
+<!--#include de "FTPStrings_DE.strings"-->
+<!--#include fr "FTPStrings_FR.strings"-->
+<!--#include it "FTPStrings_IT.strings"-->
+<!--#include es "FTPStrings_ES.strings"-->
+<!--#include pt "FTPStrings_PT.strings"-->
+<!--#include se "FTPStrings_SE.strings"-->
+<!--#include fi "FTPStrings_FI.strings"-->
+<!--#include no "FTPStrings_NO.strings"-->
+<!--#include dk "FTPStrings_DK.strings"-->
+<!--#include ru "FTPStrings_RU.strings"-->
+<!--#include zh,TW "FTPStrings_TW.strings"-->
+<!--#include zh,CN "FTPStrings_CN.strings"-->
+<!--#include jp "FTPStrings_JP.strings"-->

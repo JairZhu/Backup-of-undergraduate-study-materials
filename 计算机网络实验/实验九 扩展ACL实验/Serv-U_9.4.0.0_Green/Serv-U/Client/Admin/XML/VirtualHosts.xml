@@ -1,0 +1,13 @@
+%PRIV_DOMAIN_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<VirtualHosts>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<VirtualHost listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% <HostName>%CHostName.%LIST_ID%.HostName%</HostName>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING%	</VirtualHost>
+%CDomain.%ID%.HostName.List%
+</VirtualHosts>
+<listresult>%LIST_RESULT%</listresult>
+</response>

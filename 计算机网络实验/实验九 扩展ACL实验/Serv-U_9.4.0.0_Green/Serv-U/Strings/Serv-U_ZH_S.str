@@ -1,0 +1,517 @@
+﻿// Serv-U_ZH_S.str - contains Simplified Chinese string definitions for the Serv-U RES resource files
+//
+// Strings entered in this file must be one per line and in the format of:
+// $RSIDS_SOME_STRING_NAME$=Some string value
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup dialog
+
+// upgrade notice strings
+$RSIDS_UPGRADENOTICE_TITLE$=安装 - Serv-U
+$RSIDS_UPGRADENOTICE_BACKUP$=您先前安装的 Serv-U 已经备份到下列目录：
+$RSIDS_UPGRADENOTICE_IMPORTED$=已导入下列信息：
+$RSIDS_UPGRADENOTICE_IMPORT_INFO$=%d 域，%d 用户帐号，%d 组
+
+// old reggie strings
+$RSIDS_OLDREGGIE_TITLE$=安装 - Serv-U
+$RSIDS_OLDREGGIE_INVALID$=您当前的 Serv-U 注册码对于此版本无效，很可能是因为已超过升级保护期。\n\n要续订您的升级保护，请访问以下链接：
+$RSIDS_OLDREGGIE_CUSTOMER_SUPPORT$=http://www.RhinoSoft.com.cn/
+$RSIDS_OLDREGGIE_WARNING$=如果您继续本次安装，Serv-U 将成为未注册版，并且可能无法正确工作。强烈建议您退出本次安装。
+$RSIDS_OLDREGGIE_INSTRUCTIONS$=要取消本次安装，请点击取消按钮。要继续安装，请点击下一步。
+
+// beta warning strings
+$RSIDS_BETAWARNING_TITLE$=安装 - Serv-U
+$RSIDS_BETAWARNING_WARNING$=您正在安装 Beta 版本的 Serv-U。Serv-U Beta 版本应视为开发版本，并且使用时必需了解可能会出现严重的 bug。
+$RSIDS_BETAWARNING_CEASE$=本软件自构建之日起 %d 日后将停止工作。详见服务器日志。
+$RSIDS_BETAWARNING_CONTINUE$=继续本次安装即表明您理解安装 beta 版本软件所涉及的风险。
+$RSIDS_BETAWARNING_INSTRUCTIONS$=要取消本次安装，请点击取消按钮。要继续安装，请点击下一步。
+$RSIDS_BETAWARNING_BUILT$=构建于：
+$RSIDS_BETAWARNING_EXPIRES$=失效日期：
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup string table
+
+IDS_OLDREGGIE_COMMENT=继续安装之前请阅读以下有关您注册 ID 的信息。
+IDS_OLDREGGIE_HEADER=无效的注册 ID
+IDS_SERVER_SECURITY_REQD=Serv-U 6 允许服务器未启用任何安全设置的情况下运行。此选项已受到反对。
+IDS_DIR_CACHE_OBSOLETE=Serv-U 6 中的目录缓存功能已经过时。Serv-U 8 以独立的线程执行目录列表。
+IDS_SEND_RECV_BUFFERS=发送和接收缓存大小现在自动由 Serv-U 计算，以实现最大数据传输率。
+IDS_LINKS_DEPRECATED=不再支持在 Serv-U 内创建 UNIX 风格的链接。请使用虚拟路径（Virtual Paths）功能代替。
+IDS_NO_GROUP_ADMIN=群组管理权限已经从 Serv-U 8 中去除。含有这个管理级别的账户现在没有任何管理权限。
+IDS_SHUTTING_DOWN=正在关闭 Serv-U...
+IDS_UPDATING_DATA=正在升级数据文件...
+IDS_BACKING_UP=正在备份设置...
+
+IDS_CHECKING_REGGIE=正在检查注册 ID...
+IDS_UPNP_DISCOVER=正在等待 UPnP 发现...
+IDS_UN_HEADER=升级通知
+IDS_UN_COMMENT=请阅读以下通知，它是在导入您 Serv-U 数据时记录的。
+IDS_TRAY_PASSWORD_SET=Serv-U 管理控制台要求您使用先前版本 Serv-U 所用的相同密码。
+IDS_LOCK_IN_HOME_CHANGE=先前版本列出用户的主目录 "/"，当用户没有锁定到主目录。此设置 (RootIsDrives) 可以针对服务器、域、用户或群组来更改。
+IDS_ODBC_DOMAIN_UPGRADED=您的 ODBC 域用户和群组已经以 Serv-U 8 的存储格式复制到新的表和列。SQL 模板字符串已经重置为 Serv-U 8 默认值。您的原始数据并未从您的数据库删除！
+
+IDS_BETA_HEADING=Serv-U Beta 安装
+IDS_BETA_COMMENT=请阅读下列关于本 Serv-U 程序的重要信息。
+IDS_MSG_TAGS_CHANGED=Serv-U 的消息变量已更改。变量名现在必须以 "$" 而不是 "%" 开头。如果正在使用消息文件则必须手动更改变量。
+
+/////////////////////////////////////////////////////////////////////////////
+// password recovery message strings
+IDS_PWDREC_SUBJECT=您的账户信息
+IDS_PWDREC_MESSAGE=您好$SpaceFullName，\n\n需要您的登录信息：\n\n登录 ID：\t$Name\n密码：\t$Password\n\n如果您有任何疑问，请联系您的系统管理员。\n请保密该信息，因为该信息与您在这台服务器上的\n个人账户有关。\n\n谢谢！
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES dialog
+
+// theme editor strings
+$RSIDS_THEMEEDITOR_TITLE$=主题编辑器
+$RSIDS_THEMEEDITOR_DESC$=Serv-U 主题编辑器允许您定义 Serv-U Tray Application 如何在系统托盘上操作。请使用文件菜单来打开并保存主题。
+$RSIDS_THEMEEDITOR_NAME$=名称(&N)：
+$RSIDS_THEMEEDITOR_ICON_LISTS$=图标列表(&I)：
+$RSIDS_THEMEEDITOR_EDIT$=编辑(&E)...
+
+// icon list strings
+$RSIDS_ICONLIST_TITLE$=图标列表
+$RSIDS_ICONLIST_DESC$=下列图标用于动态显示选定的 Serv-U 状态。请指定一个图标文件路径和显示时间，以生成您自己的动态示意。
+$RSIDS_ICONLIST_ICONS$=图标(&I)：
+$RSIDS_ICONLIST_ADD$=添加(&A)...
+$RSIDS_ICONLIST_EDIT$=编辑(&E)...
+$RSIDS_ICONLIST_DELETE$=删除(&D)
+$RSIDS_ICONLIST_MOVE_UP$=上移(&O)
+$RSIDS_ICONLIST_MOVE_DOWN$=下移(&V)
+$RSIDS_ICONLIST_CLOSE$=关闭(&C)
+$RSIDS_ICONLIST_INFO$=图标只能为 16x16 像素，支持大多数图像类型。
+
+// icon dialog strings
+$RSIDS_ICON_TITLE$=图标
+$RSIDS_ICON_OK$=确定
+$RSIDS_ICON_CANCEL$=取消
+$RSIDS_ICON_FILE_PATH$=图像文件路径(&I)：
+$RSIDS_ICON_DURATION$=持续时间(&D)：
+$RSIDS_ICON_TIME_INFO$=（毫秒；1000 毫秒 = 1 秒）
+$RSIDS_ICON_BROWSE$=浏览(&B)...
+$RSIDS_ICON_INFO$=图像文件可以是 Windows 能识别的任何类型。推荐尺寸为 16x16 像素。当显示在系统托盘中时，所有图像大小都调整到 16x16。
+
+// managment console strings
+$RSIDS_MANAGMENTCONSOLE_TITLE$=Serv-U 管理控制台
+
+// warn esc strings
+$RSIDS_WARNESC_TITLE$=已启用 Windows Internet 增强的安全配置
+$RSIDS_WARNESC_OK$=确定
+$RSIDS_WARNESC_CANCEL$=取消
+$RSIDS_WARNESC_DONT_WARN$=不要再显示此提示(&D)。
+$RSIDS_WARNESC_ENABLED$=本电脑已启用微软的 "Internet 增强的安全配置 (ESC)"。
+$RSIDS_WARNESC_TROUBLESHOOT$=要使 Serv-U 管理控制台正常工作，您可能需要调整系统。如果管理控制台出现 "挂起" 或 "死锁" 现象，请尝试以下一种方法：
+$RSIDS_WARNESC_ADD$=* 添加 "http://localhost" 和/或 "http://127.0.0.1" 到您控制面板下 "Internet 选项 | 安全" 中的受信任的站点。
+$RSIDS_WARNESC_DISABLE$=* 禁用 "Internet Explorer 增强的安全配置"，可在控制面板中的 "添加或删除程序 | 添加/删除 Windows 组件" 里找到。
+$RSIDS_WARNESC_REBOOT$=这些解决方案可能都需要您重新启动电脑。微软建议在进行这些更改之前关闭所有 Internet Explorer，而我们发现重启电脑是最有效的方法。
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES menu
+
+// file strings
+$RSIDS_FILE_FILE$=文件(&F)
+$RSIDS_FILE_OPEN$=打开(&O)...
+$RSIDS_FILE_SAVE$=保存(&S)
+$RSIDS_FILE_SAVE_AS$=另存为(&A)...
+$RSIDS_FILE_EXPORT$=导出(&E)...
+$RSIDS_FILE_IMPORT$=导入...
+$RSIDS_FILE_CLOSE$=关闭(&C)
+
+// help strings
+$RSIDS_HELP_HELP$=帮助(&H)
+$RSIDS_HELP_MORE_THEMES$=更多主题(&M)...
+$RSIDS_HELP_SHARE_THEME$=分享主题(&S)...
+$RSIDS_HELP_ABOUT$=关于 Serv-U Tray(&A)...
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES string table
+
+IDS_SERVICE_DESC=提供文件服务并允许远程 FTP, SSH, 和网页 (HTTP) 客户端连接到该计算机。
+IDS_SUEXE_SERVICE_DESC=提供 FTP 服务并允许远程 FTP 客户端连接到该计算机
+IDS_ON=开
+IDS_OFF=关
+IDS_BLANK= 
+IDS_SSH_CHANGE_PASSWORD_PROMPT=请输入一个新密码
+
+IDS_EVENT=事件
+IDS_USER_WELCOME_MESSAGE=用户欢迎消息
+IDS_DATA1_SUEVENT_ID_USER_LOGIN=用户 "$Name" 已登录 ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGIN=连接自 $IP ($IPName)\n$UThisName 活动会话\n$UserSessions24H 过去 24 小时内的登录
+IDS_DATA1_SUEVENT_ID_USER_LOGOUT=用户 "$Name" 已注销 ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGOUT=IP: $IP ($IPName)\n$UThisName 保持活动会话\n$UserSessions24H 过去 24 小时内的登录
+IDS_DATA1_SUEVENT_ID_USER_LOGIN_FAILURE=无效 $Protocol 登录尝试 "$Name"
+IDS_DATA2_SUEVENT_ID_USER_LOGIN_FAILURE=IP: $IP ($IPName)
+IDS_DATA1_SUEVENT_ID_USER_ADDED=您的新账户信息
+IDS_DATA2_SUEVENT_ID_USER_ADDED=欢迎！您的账户已创建。您的登录信息为：\n\n登录 ID：\t$Name\n密码：\t$Password\n\n如果您有任何疑问，请联系您的系统管理员。\n请保密该信息，因为该信息与您在这台服务器上的\n个人账户有关。\n\n谢谢！
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED=$IP 已阻止
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED=$IP ($IPName) 已永久阻止
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED_TIME=$IP 已暂时阻止
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED_TIME=$IP ($IPName) 阻止 $TimeRemaining
+IDS_DATA1_SUEVENT_ID_FILE_UPLOAD="$Name" 已上传一个文件
+IDS_DATA2_SUEVENT_ID_FILE_UPLOAD=$LocalPathName\nSize: $FileSizeFmt 字节 ($FileSizeKB KB)\n$TransferBytes 字节已传输。 $TransferKBPerSecond KB/sec.\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DOWNLOAD="$Name" 已下载一个文件
+IDS_DATA2_SUEVENT_ID_FILE_DOWNLOAD=$LocalPathName\nSize: $FileSizeFmt 字节 ($FileSizeKB KB)\n$TransferBytes 字节已传输。 $TransferKBPerSecond KB/sec.\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DELETE="$Name" 已删除一个文件
+IDS_DATA2_SUEVENT_ID_FILE_DELETE=$LocalPathName\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_MOVE="$Name" 已重命名或移动一个文件
+IDS_DATA2_SUEVENT_ID_FILE_MOVE=$OldLocalPathName\n\n-- 更改成 --\n\n$LocalPathName
+IDS_DATA1_SUEVENT_ID_DIR_CREATE="$Name" 已创建一个目录
+IDS_DATA2_SUEVENT_ID_DIR_CREATE=$LocalPathName\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_DELETE="$Name" 已删除一个目录
+IDS_DATA2_SUEVENT_ID_DIR_DELETE=$LocalPathName\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_MOVE="$Name" 已重命名或移动一个目录
+IDS_DATA2_SUEVENT_ID_DIR_MOVE=$OldLocalPathName\n\n-- 更改成 --\n\n$LocalPathName
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-FTP-Responses string table
+// this section is intentionally not translated, translation is optional
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-SSH string table
+// this section is intentionally not translated, translation is optional
+
+// misc. strings
+IDS_SU_HTTP_ENCRYPTED=<< 已加密 >>
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Tray string table
+
+// tray pop-up menu
+IDS_SU_TRAY_MENU_START_ADMIN=启动管理控制台(&M)...
+IDS_SU_TRAY_MENU_START_SU=启动 Serv-U(&S)
+IDS_SU_TRAY_MENU_STOP_SU=停止 Serv-U(&S)
+IDS_SU_TRAY_MENU_THEMES=主题(&T)
+IDS_SU_TRAY_MENU_SHOW_NOTIFICATIONS=显示通知(&D)
+IDS_SU_TRAY_MENU_START_AUTOMATICALLY=自动启动托盘(&U)
+IDS_SU_TRAY_MENU_START_SERV_U_SERVICE=将 Serv-U 作为服务启动(&V)
+IDS_SU_TRAY_MENU_USE_BROWSER=使用系统浏览器(&B)
+IDS_SU_TRAY_MENU_KB=知识库(&K)...
+IDS_SU_TRAY_MENU_SUPPORT=技术支持(&E)...
+IDS_SU_TRAY_MENU_ABOUT=关于 Serv-U Tray(&A)...
+IDS_SU_TRAY_MENU_REGISTER=注册(&R)...
+IDS_SU_TRAY_MENU_EXIT_TRAY=退出托盘(&E)
+
+// sub-menus
+IDS_SU_TRAY_MENU_DEFAULT_THEME=默认(&D)
+IDS_SU_TRAY_MENU_DEFAULT_NO_ANI_THEME=默认不带动画(&E)
+IDS_SU_TRAY_MENU_CLASSIC_THEME=经典绿 U(&C)
+IDS_SU_TRAY_MENU_CUSTOM_THEME=定制(&U)
+IDS_SU_TRAY_MENU_THEME_EDITOR=主题编辑器(&T)...
+
+// server states
+IDS_SERVER_STATE_NOT_RUNNING=未运行
+IDS_SERVER_STATE_RUNNING=正在运行
+IDS_SERVER_STATE_RUNNING_LISTEN_ERROR=正在运行，监听错误
+IDS_SERVER_STATE_SESSION_CONNECTED=已连接的会话
+IDS_SERVER_STATE_TRANSFERRING=正在传输
+IDS_SERVER_STATE_PAST_TRIAL=Serv-U 试用期已结束
+
+// management console strings
+IDS_SERVER_UP_TIME_FMT=服务器正常运行时间：%s 日，%02d:%02d:%02d
+IDS_SERVER_SESSIONS_FMT=会话：当前 %s；过去24小时 %s；总计 %s
+IDS_SERVER_TRANSFER_STATS_FMT=上行：%s；下行：%s
+IDS_SU_TRAY_BYTES_FMT=%s 字节
+IDS_SU_TRAY_KB_FMT=%s KB
+IDS_SU_TRAY_MB_FMT=%s MB
+IDS_SU_TRAY_GB_FMT=%s GB
+IDS_SU_TRAY_DOMAINS_FMT=域：%s 共 %s 在线
+
+// tray tooltip strings
+IDS_SU_TRAY_TT_STATUS_FMT=状态：%s 上行；%s 下行；%s 会话
+IDS_SU_TRAY_TT_RECVD_FMT=已接收：%s；%s 文件
+IDS_SU_TRAY_TT_SENT_FMT=已发送：%s；%s 文件
+IDS_SU_TRAY_TT_BPS_FMT=%s 字节/秒
+IDS_SU_TRAY_TT_KBS_FMT=%s KB/秒
+IDS_SU_TRAY_TT_MBS_FMT=%s MB/秒
+IDS_SU_TRAY_TT_GBS_FMT=%s GB/秒
+IDS_SU_TRAY_TT_64_CHARS_FMT=%s; %d 会话；%s 已发送；%s 已接收
+IDS_SU_TRAY_TT_STOPPED=Serv-U 文件服务器已停止。
+IDS_SU_TRAY_STATUS_CHANGED=Serv-U 文件服务器状态
+IDS_SU_TRAY_STATUS_ONLINE=Serv-U 文件服务器已联机。
+IDS_SU_TRAY_STATUS_OFFLINE=Serv-U 文件服务器已脱机。
+IDS_SU_TRAY_UPDATE=有新版本
+IDS_SU_TRAY_UPDATE_AVAILABLE=Serv-U 有更新。请点击此处获得更多信息。
+IDS_SU_TRAY_STATUS_BETA_EXPIRED=本 Serv-U Beta Build 已失效。
+IDS_SU_TRAY_LICENSE_VIOLATION=Serv-U 许可证侵权
+IDS_SU_TRAY_LICENSE_VIOLATION_NO_CONNS=发生了许可证侵权。Serv-U 在该问题解决前将不接受连接。
+
+// trial / reggie baloon tip strings
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_TITLE=Serv-U 试用期已结束
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_BODY=您的 30 天试用期已结束。 Serv-U 将不再接受连接。\r\n\r\n点击此处购买 Serv-U。
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_TITLE=Serv-U 试用期即将结束
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_BODY_FMT=您的 30 天试用期即将在 %s 天内结束。试用期之后，Serv-U 将不再接受连接。\r\n\r\n点击此处购买 Serv-U。
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_TITLE=Serv-U 更新期即将结束
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_BODY_FMT=您的更新期即将在 %s 天内结束。更新期结束后，您将无法使用新版本的 Serv-U.\r\n\r\n点击此处更新您的许可证。
+
+// misc. strings
+IDS_SU_TRAY_STATE=状态
+IDS_SU_TRAY_IMAGES=图像
+IDS_TRAY_THEME_FILE_OPEN_FILTERS=Serv-U Tray 主题文件 (*.SU-Theme)|*.SU-Theme|所有文件 (*.*)|*.*||
+IDS_TRAY_THEME_FILEARCH_OPEN_FILTERS=Serv-U 主题 (*.SU-Theme; *.SU-Theme-Archive)|*.SU-Theme; *.SU-Theme-Archive|Serv-U Tray 主题文件 (*.SU-Theme)|*.SU-Theme|Serv-U Tray 主题归档文件 (*.SU-Theme-Archive)|*.SU-Theme-Archive|所有文件 (*.*)|*.*||
+IDS_SERVU_THEMES_DIR=Serv-U Tray 主题
+IDS_TRAY_USER_THEME_DIR_TIP=包含用户定义的 Serv-U Tray 主题
+// CAUTION: do not exceed 255 characters for this (or any) string
+IDS_DELETE_CREATED_DIRS_FMT=Serv-U 创建的目录可能包含这台电脑其他用户创建的数据。\r\n\r\n例如：\r\n%s\r\n\r\n您希望删除这些目录及其包含的文件吗？
+IDS_UNABLE_TO_LOAD_SELECTED_THEME=无法加载选定的主题文件。
+IDS_UNABLE_TO_STORE_THEME=无法将该主题保存到指定的文件。
+IDS_THEME_CHANGED_SAVE=您已更改了该主题。\r\n\r\n您希望保存该主题吗？
+IDS_SU_TRAY_FILE_NAME=文件名称
+IDS_SU_TRAY_DURATION=持续时间
+IDS_SU_TRAY_INVALID_ICON=指定的文件无法被 Windows 识别，可能\r\n不是有效的图像文件。请选择一个有效的图像文件。
+IDS_TRAY_ALL_IMAGE_FILES=所有图像文件
+IDS_TRAY_ALL_FILES=所有文件
+IDS_TRAY_THEME_ARCHIVEFILE_OPEN_FILTERS=Serv-U Tray 主题归档文件 (*.SU-Theme-Archive)|*.SU-Theme-Archive|所有文件 (*.*)|*.*||
+IDS_UNABLE_TO_LOAD_ZLIB=无法加载 zlib1.dll。请尝试重新安装 Serv-U。
+IDS_UNABLE_TO_CREATE_THEME_ARCHIVE_FILE=无法创建指定的主题归档文件。
+IDS_UNABLE_TO_OPEN_THEME_ARCHIVE_FILE=无法打开指定的主题归档文件。
+IDS_THEME_ARCHIVED=主题已保存到指定的归档文件。
+IDS_THEME_IMPORTED=主题已从指定的归档文件导入。
+IDS_THEME_FILE_DESC=Serv-U 主题文件
+IDS_THEME_ARCHIVE_FILE_DESC=Serv-U 主题归档文件
+IDS_IMPORT_ARCHIVE_FILE=您选中的文件似乎是 Serv-U 主题归档文件。\r\n\r\n您希望先导入此文件吗？
+IDS_MANAGEMENT_CONSOLE=Serv-U 管理控制台
+IDS_TRAY_SERVER_NOT_LISTENING_HTTP_HTTPS=Serv-U 引擎未监听任何 HTTP 或 HTTPs 请求。
+IDS_MANAGEMENT_CONSOLE_ALREADY_RUNNING=管理控制台已在本机上运行。\r\n\r\n请使用浏览器登录，或关闭另一个管理控制台会话。\r\n该错误通常发生在运行 RDP (远程桌面协议) 的情况下。
+IDS_USERS_ARE_CONNECTED_SERVICE_CHANGE=已有当前用户连接到您的服务器。更改服务模式将强制 Serv-U 重启，并断开这些用户。\r\n\r\n您确定要立即进行更改吗？
+IDS_CANNOT_EXEC_SERVICE_SETTING_NOT_CHANGED=无法执行 Serv-U.exe 来更改服务设置。\r\n\r\n如果已为您的用户账户启用用户访问控制（UAC）\r\n禁用或更改您的 UAC 设置。
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Log string table
+
+// system log strings
+IDS_LOG_SERVER_START_WELCOME_FMT=%s 版本 %s (%s) - %s，保留所有权利
+IDS_LOG_SERVER_START_BUILD_DATE_FMT=构建日期：%s
+IDS_LOG_SERVER_OPENSSL_INIT_OKAY=已加载的 SSL/TLS 库
+IDS_LOG_SERVER_OPENSSL_INIT_FAIL=无法加载 SSL/TLS 库
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_ON=FIPS 140-2 模式已开启。Serv-U 使用有效的嵌入式 FIPS 140-2 加密模块（证书 #105），它运行于 Microsoft Windows 平台上，每 FIPS 140-2 实施向导部分 G.5 指南。
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_OFF=FIPS 140-2 模式已关闭。
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_NOT_SUPPORTED=这台计算机可能不支持 FIPS 140-2。FIPS 140-2 模式并不在所有的硬件平台上运行，不过已在大部分较新的平台上测试过。该模式可能在 Pentium III 或更老的硬件平台上不可用。
+IDS_LOG_SERVER_STOPPING=服务器正在关闭...
+IDS_LOG_SERVER_STOP=服务器已停止
+IDS_LOG_CMD_LISTENING_FMT=%s 服务器正在监听端口号 %u, IP %s
+IDS_LOG_CMD_NOT_LISTENING_IN_USE_FMT=%s 服务器未监听 IP %s: 端口号 %u 已使用
+IDS_LOG_CMD_NOT_LISTENING_FMT=%s 服务器未监听 %s: 端口号 %u
+IDS_LOG_CMD_NOT_LISTENING_ADDR_NOT_AVAIL_FMT=%s 服务器未监听 IP %s: 尝试使用不存在的 IP 地址吗？
+IDS_LOG_CMD_CLOSED_FMT=%s 服务器已停止监听端口号 %u, IP %s
+IDS_LOG_PERM_DATA_LISTENING_FMT=监听 PASV FTP 连接在端口号 %u
+IDS_LOG_PERM_DATA_NOT_LISTENING_FMT=未监听 PASV FTP 连接在端口号 %u
+IDS_LOG_PERM_DATA_NOT_LISTENING_IN_USE_FMT=未监听 PASV FTP 连接，端口号 %u 已使用
+IDS_LOG_PERM_DATA_NOT_LISTENING_ADDR_NOT_AVAIL_FMT=未监听 PASV FTP 连接在端口号 %u，尝试使用不存在的 IP 地址吗？
+IDS_LOG_PERM_DATA_CLOSED_FMT=已停止监听 PASV FTP 连接在端口号 %u
+IDS_LOG_DOMAIN_STARTED=域已启动
+IDS_LOG_DOMAIN_STOPPED=域已停止
+IDS_LOG_SERVER_START_BETA_EXPIRED_FMT=BETA 版本已经过期。此版本自构建日期起最多可运行 %d 天。
+IDS_LOG_SERVER_START_BETA_NOTICE_FMT=这是一个 BETA 版本。此版本自构建日期起最多可运行 %d 天。
+IDS_LOG_EVENT_COULD_NOT_EXEC_FMT=事件错误: "%s" 无法执行。
+IDS_LOG_EVENT_COULD_NOT_EMAIL_FMT=事件错误: 无法发送电子邮件到 %s: %s
+IDS_LOG_SOCKET_TIME_OUT_FMT=套接字超时。  %s 秒不活动。
+IDS_LOG_EMAIL_RETRY_FMT=重新尝试发送电子邮件：使用服务器 %s 的端口 %d 尝试重新发送电子邮件消息到 %s。
+IDS_LOG_EMAIL_CANT_CONNECT_FMT=无法连接到 SMTP 服务器 %s 的端口 %d。
+IDS_LOG_EMAIL_SSL_CONNECT_FAIL_FMT=使用在端口 %d 上的 SMTP 服务器 "%s" 时发生 SSL 协商失败（SSL 错误: "%s"）。
+IDS_LOG_WINSOCK_INIT_FMT=已初始化 WinSock 版本 %d.%d。
+IDS_LOG_WINSOCK_INIT_FAILED_FMT=ERROR: WinSock 初始化失败（错误：%d）
+
+// UPnP log strings
+IDS_LOG_UPNP_FOUND_DEVICE_FMT=UPnP: 已发现设备：%s: %s (在 %s 子网)
+IDS_LOG_UPNP_DEVICE_DISCOVERY_COMPLETE_FMT=UPnP: 设备发现完成：%s: %s [%s] (在 %s 子网)
+IDS_LOG_UPNP_MAP_SUCCESSFUL_FMT=UPnP: 成功将端口 %d 映射到 IP %s
+IDS_LOG_UPNP_MAP_ERROR_FMT=UPnP: 将端口 %d 映射到 IP %s 出错 (HTTP: %d - UPnP: %s - Desc: %s)
+IDS_LOG_UPNP_DELETE_MAP_SUCCESSFUL_FMT=UPnP: 成功删除从端口 %d 到 IP %s 的端口映射
+IDS_LOG_UPNP_DELETE_MAP_ERROR_FMT=UPnP: 删除从端口 %d 到 IP %s 的端口映射出错 (HTTP: %d - UPnP: %s - Desc: %s)
+IDS_LOG_UPNP_DELETE_MAPS_SUCCESSFUL_FMT=UPnP: 成功删除从端口 %d-%d 到 IP %s 的端口映射
+IDS_LOG_UPNP_MAPS_SUCCESSFUL_FMT=UPnP: 成功映射端口 %d-%d 到 IP %s
+IDS_LOG_UPNP_DELETE_MAPS_ERROR_FMT=UPnP: 删除从端口 %d-%d 到 IP %s 的端口映射出错
+IDS_LOG_UPNP_MAPS_ERROR_FMT=UPnP: 从端口映射 %d-%d 到 IP %s 出错
+IDS_LOG_UPNP_TIMEOUT=超时
+IDS_LOG_UPNP_NA=N/A
+IDS_LOG_UPNP_DEAD_DEVICE_FMT=UPnP: 设备已不可用：%s: %s [%s] (在 %s 子网)
+IDS_LOG_UPNP_NO_DEVICES_REMAIN=UPnP: 无 UPnP 设备可用，正在按需要重新加载设置。
+IDS_LOG_UPNP_DEVICE_REDISCOVERY_FMT=UPnP: 设备可能无响应，尝试重新发现 %d: %s: %s [%s] (在 %s 子网)
+IDS_LOG_UPNP_DEVICE_INSPECTION=UPnP: 正在检查设备： %s: %s [%s] (在 %s 子网)
+
+// socket types
+// ^^^^^ intentionally not translated ^^^^^
+
+// session log strings
+IDS_LOG_RECEIVING_FILE_FMT=正在接收文件 "%s"
+IDS_LOG_RECEIVED_FILE_FMT=已成功收到文件 "%s" (%s KB/秒 - %s 字节)
+IDS_LOG_SENDING_FILE_FMT=正在发送文件 "%s"
+IDS_LOG_SENDING_THUMBNAIL_FMT=正在发送缩略图 (%s x %s) "%s"
+IDS_LOG_SENT_FILE_FMT=已成功发送文件 "%s" (%s KB/秒 - %s 字节)
+IDS_LOG_SENT_THUMBNAIL_FMT=已成功发送缩略图 (%s x %s) "%s" (%s KB/秒 - %s 字节)
+IDS_LOG_FILE_DELETED_FMT=文件已删除： "%s"
+IDS_LOG_FILE_DIR_RENAME_FMT=已将 "%s" 重命名为 "%s"
+IDS_LOG_DIR_CREATE_FMT=目录已创建： "%s"
+IDS_LOG_DIR_DELETE_FMT=目录已删除： "%s"
+IDS_LOG_IP_ADDRESS_REVERSE_DNS_FMT=IP-名称： %s (%s)
+
+// SSH log command strings
+IDS_SSH_UNEXPECTED_MESSAGE_FMT=无法识别的 SSH2 命令 (0x%08x - %d)
+IDS_SSH2_MSG_USERAUTH_REQUEST_FMT=SSH2_MSG_USERAUTH_REQUEST: 用户： %s；服务： %s；类型： %s
+IDS_SSH_STATUS_COMMAND_FMT={0x%08x} %s
+IDS_SSH_FXP_INIT_FMT=SSH_FXP_INIT: 客户端版本 %d (%s)
+IDS_SSH_FXP_OPEN_FMT={0x%08x} SSH_FXP_OPEN: 路径： "%s"
+IDS_SSH_FXP_CLOSE_FMT={0x%08x} SSH_FXP_CLOSE: 处理： 0x%08x
+IDS_SSH_FXP_READ_FMT={0x%08x} SSH_FXP_READ: 处理： 0x%08x; %u 字节
+IDS_SSH_FXP_WRITE_FMT={0x%08x} SSH_FXP_WRITE: 处理： 0x%08x; %u 字节
+IDS_SSH_FXP_STAT_FMT={0x%08x} %s: 路径： "%s"
+IDS_SSH_FXP_FSTAT_FMT={0x%08x} SSH_FXP_FSTAT: 处理： 0x%08x
+IDS_SSH_FXP_SETSTAT_FMT={0x%08x} SSH_FXP_SETSTAT: 路径： "%s"
+IDS_SSH_FXP_FSETSTAT_FMT={0x%08x} SSH_FXP_FSETSTAT: 处理： 0x%08x
+IDS_SSH_FXP_OPENDIR_FMT={0x%08x} SSH_FXP_OPENDIR: 路径： "%s"
+IDS_SSH_FXP_READDIR_FMT={0x%08x} SSH_FXP_READDIR: 处理： 0x%08x
+IDS_SSH_FXP_REMOVE_FMT={0x%08x} SSH_FXP_REMOVE: 路径： "%s"
+IDS_SSH_FXP_MKDIR_FMT={0x%08x} SSH_FXP_MKDIR: 路径： "%s"
+IDS_SSH_FXP_RMDIR_FMT={0x%08x} SSH_FXP_RMDIR: 路径： "%s"
+IDS_SSH_FXP_REALPATH_FMT={0x%08x} SSH_FXP_REALPATH: 路径： "%s"
+IDS_SSH_FXP_RENAME_FMT={0x%08x} SSH_FXP_RENAME: 旧： "%s"；新： "%s"
+IDS_SSH_FXP_READLINK_FMT={0x%08x} SSH_FXP_READLINK: 路径： "%s"
+IDS_SSH2_MSG_GLOBAL_REQUEST_FMT=SSH2_MSG_GLOBAL_REQUEST: 用户: %s; 需要回复: %d
+
+// SSH login reply strings
+IDS_SSH2_MSG_USERAUTH_SUCCESS=SSH2_MSG_USERAUTH_SUCCESS: 登录成功
+IDS_SSH2_MSG_USERAUTH_FAILURE=SSH2_MSG_USERAUTH_FAILURE: 登录失败
+IDS_SSH2_MSG_USERAUTH_PASSWD_CHANGEREQ=SSH2_MSG_USERAUTH_PASSWD_CHANGEREQ: 密码过期
+
+// SSH log reply strings
+IDS_SSH_STATUS_REPLY_FMT={0x%08x} %s: %s
+IDS_SSH_FXP_INIT_REPLY_FMT=SSH_FXP_VERSION: 服务器版本 %d
+IDS_SSH_FXP_OPEN_REPLY_FMT={0x%08x} SSH_FXP_HANDLE: 文件处理： 0x%08x
+IDS_SSH_FXP_OPENDIR_REPLY_FMT={0x%08x} SSH_FXP_HANDLE: 目录处理： 0x%08x
+IDS_SSH_FXP_READDIR_REPLY_FMT={0x%08x} SSH_FXP_NAME：找到 %u 个项目
+IDS_SSH_FXP_REALPATH_REPLY_FMT={0x%08x} SSH_FXP_NAME: 路径： "%s"
+IDS_SSH_FXP_ATTRS_REPLY_FMT={0x%08x} SSH_FXP_ATTRS
+IDS_SSH_FXP_DATA_REPLY_FMT={0x%08x} SSH_FXP_DATA: %u 字节
+IDS_SSH2_MSG_REQUEST_FAILURE_REPLY_FMT=SSH2_MSG_REQUEST_FAILURE: "%s" 不是支持的全局请求
+
+// SSH_FXP_STAT error strings
+// ^^^^^ intentionally not translated ^^^^^
+
+// HTTP log command strings
+IDS_HTTP_LOGIN_FMT=HTTP_LOGIN: 用户： %s
+IDS_HTTP_LOGIN_DOMAIN_FMT=HTTP_LOGIN: 用户： %s；域： %s
+IDS_HTTP_LOGOUT=HTTP_LOGOUT
+IDS_HTTP_LIST_FMT=HTTP_LIST: 路径： "%s"
+IDS_HTTP_DOWNLOAD_FMT=HTTP_DOWNLOAD: 路径： "%s"
+IDS_HTTP_DOWNLOAD_THUMBNAIL_FMT=HTTP_DOWNLOAD: 路径： "%s"；缩略图： 1；宽： %d；高： %d
+IDS_HTTP_UPLOAD_FMT=HTTP_UPLOAD: 路径： "%s"
+IDS_HTTP_DELETE_FMT=HTTP_DELETE: 路径： "%s"
+IDS_HTTP_DELETE_DIR_FMT=HTTP_DELETE_DIR: 路径： "%s"
+IDS_HTTP_CREATE_DIR_FMT=HTTP_CREATE_DIR: 路径： "%s"
+IDS_HTTP_RENAME_FMT=HTTP_RENAME: 旧： "%s"；新： "%s"
+IDS_HTTP_START_FVJV=HTTP_START_FVJV
+IDS_HTTP_START_ADMIN=HTTP_START_ADMIN
+IDS_HTTP_NOOP=HTTP_NOOP
+IDS_HTTP_ADMIN_COMMAND_FMT=HTTP_ADMIN_COMMAND: %s
+IDS_HTTP_ADMIN_COMMAND_OBJECT_FMT=HTTP_ADMIN_COMMAND: %s；对象："%s"
+IDS_HTTP_ADMIN_COMMAND_OBJECT_ID_FMT=HTTP_ADMIN_COMMAND: %s；对象："%s"；ID：%s
+IDS_HTTP_BUILD_PLAYLIST_FMT=HTTP_BUILD_PLAYLIST: %s 文件已加入播放列表
+IDS_HTTP_GET_PLAYLIST_FMT=HTTP_GET_PLAYLIST: %s 文件已位于播放列表中
+IDS_HTTP_SPACE_AVAILABLE_FMT=HTTP_SPACE_AVAILABLE: 路径: "%s"
+IDS_HTTP_DIRECTORY_SIZE_FMT=HTTP_DIRECTORY_SIZE: 路径: "%s"
+
+// other HTTP replies
+IDS_HTTP_RETR_ERROR_REPLY_FMT=HTTP_ERROR：无法获取 "%s"
+IDS_HTTP_STOR_ERROR_REPLY_FMT=HTTP_ERROR：无法存储 "%s"
+
+// HTTP log reply strings
+IDS_HTTP_OKAY_REPLY=HTTP_OKAY (%d)：正确
+IDS_HTTP_CREATED_REPLY=HTTP_CREATED (%d)：已创建
+IDS_HTTP_ACCEPTED_REPLY=HTTP_ACCEPTED (%d)：已接受
+IDS_HTTP_NO_CONTENT_REPLY=HTTP_NO_CONTENT (%d)：无内容
+IDS_HTTP_OKAY_REPLY_FMT=HTTP_OKAY (%d): %s
+IDS_HTTP_MOVED_PERMANENTLY_REPLY=HTTP_MOVED_PERMANENTLY (%d)：已永久移动
+IDS_HTTP_MOVED_TEMPORARILY_REPLY=HTTP_MOVED_TEMPORARILY (%d)：已临时移动
+IDS_HTTP_NOT_MODIFIED_REPLY=HTTP_NOT_MODIFIED (%d)：未修改
+IDS_HTTP_BAD_REQUEST_REPLY=HTTP_BAD_REQUEST (%d)：无效的请求
+IDS_HTTP_UNAUTHORIZED_REPLY=HTTP_UNAUTHORIZED (%d)：未授权
+IDS_HTTP_FORBIDDEN_REPLY=HTTP_FORBIDDEN (%d)：已禁止
+IDS_HTTP_NOT_FOUND_REPLY=HTTP_NOT_FOUND (%d)：未找到
+IDS_HTTP_INTERNAL_SERVER_ERROR_REPLY=HTTP_INTERNAL_SERVER_ERROR (%d)：内部服务器错误
+IDS_HTTP_NOT_IMPLEMENTED_REPLY=HTTP_NOT_IMPLEMENTED (%d)：未实现
+IDS_HTTP_BAD_GATEWAY_REPLY=HTTP_BAD_GATEWAY (%d)：无效的网关
+IDS_HTTP_SERVICE_UNAVAILABLE_REPLY=HTTP_SERVICE_UNAVAILABLE (%d)：服务不可用
+
+// system log strings
+IDS_SYSLOG_OPENED_INTEGRATION_DLL_FMT=打开集成 DLL: "%s"
+IDS_SYSLOG_CLOSED_INTEGRATION_DLL_FMT=关闭集成 DLL: "%s"
+IDS_SYSLOG_CANT_LOAD_INTEGRATION_DLL_FMT=无法打开集成 DLL: "%s"
+IDS_SYSLOG_CANT_LOAD_INTEGRATION_DLL__NO_LIC_FMT=未被许可打开集成 DLL:  "%s"
+
+// security log strings
+IDS_SECLOG_CONNECTED_FMT=已连接到 %s (本地地址 %s，端口 %d)
+IDS_SECLOG_IP_BANNED_FMT=已拒绝来自 IP 地址 %s 的连接 (本地地址 %s，端口 %d)
+IDS_SECLOG_CLOSED_SESSION=会话已关闭
+IDS_SECLOG_IDLE_TIMEOUT=会话空闲超时
+IDS_SECLOG_SESSION_TIMEOUT=已超过最大会话时间
+IDS_SECLOG_SSL_ACCEPT_FAILED_FMT=无法建立 SSL 连接 (%s)
+IDS_SECLOG_USER_ADMIN_DENIED_FMT=用户 "%s" 尝试以管理员方式访问服务器但被拒绝。
+IDS_SECLOG_USER_SERVER_ADMIN_FMT=使用户 "%s" 进入服务器管理员模式
+IDS_SECLOG_USER_DOMAIN_ADMIN_FMT=使用户 "%s" 进入域管理员模式
+IDS_SECLOG_USER_GROUP_ADMIN_FMT=使用户 "%s" 进入组管理员模式
+IDS_SECLOG_USER_PASSWORD_CHANGE_FMT=用户 "%s" 已更改密码
+IDS_SECLOG_PASSWORD_WRONG_TOO_MANY_TIMES_FMT=用户 "%s" 的密码错误次数太多- 正在断开连接
+IDS_SECLOG_USER_IP_BANNED_FMT=已拒绝用户 "%s" 的连接来自 IP 地址 %s (本地地址 %s，端口 %d)
+IDS_SECLOG_USER_NO_HOME_FMT=登录用户 "%s" 时出错，主目录 "%s" 不存在
+IDS_SECLOG_USER_LOGGED_IN_FMT=用户 "%s" 已登录
+IDS_SECLOG_USER_LOGGED_OUT_FMT=用户 "%s" 已注销
+IDS_SECLOG_ANONYMOUS_USER_LOGGED_IN_FMT=匿名者已登录，密码： %s
+IDS_SECLOG_BLOCKING_IP_FMT=阻止 IP %s
+IDS_SECLOG_BLOCKING_IP_FOR_FMT=阻止 IP %s 时间 %d:%02d
+IDS_SECLOG_ADMIN_OPERATION_DENIED_FMT=操作：%s
+IDS_SECLOG_LIC_NO_REMOTE_ADMIN_FMT=许可证：不允许远程管理，IP 地址 %s，用户 %s。
+IDS_SECLOG_LIC_TOO_MANY_SESSIONS_FMT=许可证：已超过许可证的会话数，IP 地址 %s，用户 %s。
+IDS_SECLOG_LIC_NET_REGGIE_VIOLATION_FMT=许可证：检测到许可证侵权。当前的许可证适用于 %d 台电脑。目前使用此许可证的有 %d 台电脑。Serv-U 在该问题解决前，将不再接受连接。
+IDS_SECLOG_LIC_NET_REGGIE_VIOLATION2_FMT=许可证：请联系我们 %s
+IDS_SECLOG_LIC_VALID_ID_PRESENT=已找到有效的注册码
+IDS_SECLOG_LIC_PAST_TRIAL=许可证：试用版到期。Serv-U 将不再接受连接。
+IDS_SECLOG_SSL_CANT_OPEN_CERT_FILE_FMT=无法打开证书文件： %s
+IDS_SECLOG_SSL_CANT_OPEN_PRIVATE_KEY_FILE_FMT=无法打开私钥文件： %s
+IDS_SECLOG_SSL_CANT_LOAD_TRUSTED_CA_FILE_FMT=无法打开受信任的证书授权文件： %s
+IDS_SECLOG_FAILED_LOGIN_FMT=无效的登录帐号；用户名： "%s"；密码： "%s"
+IDS_SECLOG_CONNECTION_ACCEPTED_FMT=连接到 %s (本地地址 %s, 端口 %d) 已接受
+IDS_SECLOG_CONNECTION_DENIED_FMT=连接到 %s (本地地址 %s, 端口 %d) 已拒绝
+IDS_SECLOG_SSL_CLIENT_ERROR=客户端错误：客户端可能已拒绝 SSL 证书。请确保该 SSL 证书由认证机构颁发。
+IDS_SECLOG_USER_REQUESTED_PASSWORD_RECOVERY_FMT=用户 "%s" 提出密码恢复请求。
+IDS_SECLOG_INTEGRATION_CONNECTION_DENIED_FMT=集成 DLL: 拒绝 IP 地址 %s 的连接（本地地址 %s, 端口 %d）
+
+// ODBC
+IDS_ODBC_ERROR=ODBC 错误： 
+
+// triggered event log strings
+IDS_TELOG_EVENT_FMT=事件：%s (%s)；类型：%s
+IDS_TELOG_EMAIL_FMT=电子邮件；收件人：%s
+IDS_TELOG_BALLOON_TIP_FMT=气球提示；"%s" 
+IDS_TELOG_EXEC_FMT=执行；路径 "%s"
+IDS_TELOG_EMAIL_ADDRESS_FMT=%s；密送：%s
+
+/////////////////////////////////////////////////////////////////////////////
+// statistic strings used for saving stats to .CSV file, translation is okay
+$IDS_NAME$=名称
+$IDS_CURRENT_SESSIONS$=当前会话
+$IDS_HIGHEST_NUMBER_OF_SESSIONS$=最大会话数目
+$IDS_24_HOUR_SESSIONS$=24 小时会话
+$IDS_TOTAL_SESSIONS$=会话总数
+$IDS_AVERAGE_SESSION_LENGTH$=平均会话长度
+$IDS_LONGEST_SESSION_LENGTH$=最长会话长度
+
+$IDS_LOGINS$=登录
+$IDS_LOGOUTS$=注销
+$IDS_CURRENT_LOGGED_IN$=当前已登录
+$IDS_MOST_LOGGED_IN$=最多登录
+$IDS_AVERAGE_LOGIN_DURATION$=平均登录时间
+$IDS_LONGEST_LOGIN_DURATION$=最长登录时间
+$IDS_SHORTEST_LOGIN_DURATION$=最短登录时间
+$IDS_LAST_LOGIN_TIME$=最后登录时间
+$IDS_LAST_LOGOUT_TIME$=最后注销时间
+
+$IDS_DOWNLOAD_RATE_KB_SEC$=下载速度 KB/秒
+$IDS_UPLOAD_RATE_KB_SEC$=上传速度 KB/秒
+$IDS_AVERAGE_DOWNLOAD_RATE_KB_SEC$=平均下载速度 KB/秒
+$IDS_AVERAGE_UPLOAD_RATE_KB_SEC$=平均上传速度 KB/秒
+$IDS_DOWNLOAD_RATE_BYTES_SEC$=下载速度 字节/秒
+$IDS_UPLOAD_RATE_BYTES_SEC$=上传速度 字节/秒
+$IDS_BYTES_DOWNLOADED$=字节已下载
+$IDS_FILES_DOWNLOADED$=文件已下载 
+$IDS_BYTES_UPLOADED$=字节已上传
+$IDS_FILES_UPLOADED$=文件已上传

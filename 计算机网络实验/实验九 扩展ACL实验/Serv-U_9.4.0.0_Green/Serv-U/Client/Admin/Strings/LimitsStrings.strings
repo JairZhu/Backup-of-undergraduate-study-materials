@@ -1,0 +1,92 @@
+﻿<!-- LimitsStrings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- **************** Advanced Limits **************** -->
+$LIMIT_ADV_CONVERTURLCHARS$=Convert URL characters in commands to ASCII
+$LIMIT_ADV_CHECKDIRSIZE$=Automatically check directory sizes during upload
+$LIMIT_ADV_INLINEOOB$=Inline out-of-band data
+$LIMIT_ADV_KEEPALIVE$=Send keep-alive packets to detect broken connections
+$LIMIT_ADV_NAGLE$=Disable usage of Nagle algorithm
+$LIMIT_ADV_ADAPTIVETO$=Use adaptive time-out on fast file uploads
+$LIMIT_ADV_SFTPMAXVERSION$=Maximum supported SFTP version
+$LIMIT_ADV_ALLOWRENAMEOVERWRITE$=Allow rename overwrite
+$LIMIT_ADV_WARNOLDBROWSER$=Warn end users when using old web browsers
+$LIMIT_ADV_DEFAULT_LANG$=Default language for Web Client
+
+<!-- **************** Connection Limits **************** -->
+$LIMIT_CONN_MAXSERVERSESS$=Maximum number of sessions on server
+$LIMIT_CONN_MAXSERVERSESSIP$=Maximum sessions per IP address on server
+$LIMIT_CONN_MAXDOMAINSESS$=Maximum number of sessions on domain
+$LIMIT_CONN_MAXDOMAINSESSIP$=Maximum sessions per IP address on domain
+$LIMIT_CONN_MAXGROUPSESS$=Maximum number of sessions for group
+$LIMIT_CONN_MAXGROUPSESSIP$=Maximum sessions per IP address for group
+$LIMIT_CONN_MAXSESSUSER$=Maximum number of sessions per user account
+$LIMIT_CONN_MAXSESSIPUSER$=Maximum sessions per IP address for user account
+$LIMIT_CONN_REQUIRESECURE$=Require secure connection before login
+$LIMIT_CONN_IDLETO$=Automatic idle connection timeout
+$LIMIT_CONN_SESSTO$=Automatic session timeout
+$LIMIT_CONN_BLOCKANTITO$=Block anti-timeout schemes
+$LIMIT_CONN_AUTOCREATE$=Automatically create home directories
+$LIMIT_CONN_TIMEOUTBLOCKIP$=Block IP address of timed out session
+$LIMIT_CONN_FTP$=Allow FTP and FTPS connections
+$LIMIT_CONN_SSH$=Allow SFTP connections
+$LIMIT_CONN_HTTP$=Allow HTTP and HTTPS connections
+$LIMIT_CONN_REQ_REV_DNS$=Require reverse DNS name
+$LIMIT_CONN_ALLOWXFORWARD$=Allow X-Forwarded-For to change HTTP connection IP addresses
+
+<!-- **************** Directory Listing Limits **************** -->
+$LIMIT_DL_HIDEHIDDEN$=Hide files marked as hidden from listings
+$LIMIT_DL_LOWERCASE$=Use lowercase for file names and directories
+$LIMIT_DL_SCLINKS$=Interpret Windows shortcuts as links
+$LIMIT_DL_SCASTARGET$=Treat Windows shortcuts as target in listings
+$LIMIT_DL_LOCK$=Lock users in home directory
+$LIMIT_DL_ROOT$=Allow root (\"/\") to list drives for unlocked users
+$LIMIT_DL_COMP_STATE$=Hide the compressed state of files and directories
+$LIMIT_DL_ENCRYPT_STATE$=Hide the encrypted state of files and directories
+$LIMIT_DL_NATURALSORT$=Use natural language sorting for sorted listings
+
+<!-- **************** Password Limits **************** -->
+$LIMIT_PW_CHECKANON$=Check anonymous passwords
+$LIMIT_PW_REQCOMPLEX$=Require complex passwords
+$LIMIT_PW_MINLENGTH$=Minimum password length
+$LIMIT_PW_EXPIRES$=Automatically expire passwords
+$LIMIT_PW_CHANGE$=Allow users to change password
+$LIMIT_PW_ENCRYPT$=Store passwords in encrypted form
+$LIMIT_PW_HIDEINLOG$=Mask received passwords in logs
+$LIMIT_PW_SSHAUTHTYPE$=SSH authentication type
+$LIMIT_PW_TYPE$=FTP password type
+$LIMIT_PW_ENCRYPT_MODE$=Password encryption mode
+$LIMIT_PW_ENABLE_RECOVERY$=Allow users to recover passwords
+
+<!-- **************** Transfer Limits **************** -->
+$LIMIT_TRAN_SERVERUP$=Maximum upload speed for server
+$LIMIT_TRAN_SERVERDN$=Maximum download speed for server
+$LIMIT_TRAN_DOMAINUP$=Maximum upload speed for domain
+$LIMIT_TRAN_DOMAINDN$=Maximum download speed for domain
+$LIMIT_TRAN_GROUPUP$=Maximum upload speed for all group members
+$LIMIT_TRAN_GROUPDN$=Maximum download speed for all group members
+$LIMIT_TRAN_USERUP$=Maximum upload speed for user accounts
+$LIMIT_TRAN_USERDN$=Maximum download speed for user accounts
+$LIMIT_TRAN_SESSUP$=Maximum upload speed per session
+$LIMIT_TRAN_SESSDN$=Maximum download speed per session
+$LIMIT_TRAN_DELETEPARTIAL$=Delete partially uploaded files
+$LIMIT_TRAN_MAX_FILE_SIZE$=Maximum upload file size
+$LIMIT_TRAN_INTERPRETLFASEOL$=Interpret line feed byte as a new line when in ASCII mode
+$LIMIT_TRAN_ALLOWMEDIAPLAY$=Allow HTTP media playback
+
+<!-- NOTE TO TRANSLATORS: The following BLOCK MUST be removed from your translation -->
+<!-- localized strings, keep these at the end of this file, they "overwrite" any previously defined string -->
+<!--#include de "LimitsStrings_DE.strings"-->
+<!--#include fr "LimitsStrings_FR.strings"-->
+<!--#include it "LimitsStrings_IT.strings"-->
+<!--#include es "LimitsStrings_ES.strings"-->
+<!--#include pt "LimitsStrings_PT.strings"-->
+<!--#include se "LimitsStrings_SE.strings"-->
+<!--#include fi "LimitsStrings_FI.strings"-->
+<!--#include no "LimitsStrings_NO.strings"-->
+<!--#include dk "LimitsStrings_DK.strings"-->
+<!--#include ru "LimitsStrings_RU.strings"-->
+<!--#include zh,TW "LimitsStrings_TW.strings"-->
+<!--#include zh,CN "LimitsStrings_CN.strings"-->
+<!--#include jp "LimitsStrings_JP.strings"-->

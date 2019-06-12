@@ -1,0 +1,21 @@
+%PRIV_DOMAIN_ADMIN%
+<!--#include "..\Strings\FTPStrings.Strings"-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<commands>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <command listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% 	<Name></Name>
+%ADD_LIST_STRING% 	<TextName>##COMMAND_%%CFTPCommand.%LIST_ID%.Parent%.Name%_%CFTPCommand.%LIST_ID%.Name%_NAME##</TextName>
+%ADD_LIST_STRING% 	<Description>##COMMAND_%%CFTPCommand.%LIST_ID%.Parent%.Name%_%CFTPCommand.%LIST_ID%.Name%_DESC##</Description>
+%ADD_LIST_STRING% 	<Enabled>%CFTPCommand.%LIST_ID%.Enabled%</Enabled>
+%ADD_LIST_STRING% <Implemented>%CFTPCommand.%LIST_ID%.IsImplemented%</Implemented>
+%ADD_LIST_STRING% 	<CommandName>%CFTPCommand.%LIST_ID%.Name%</CommandName>
+%ADD_LIST_STRING% <ParentName>%%CFTPCommand.%LIST_ID%.Parent%.Name%</ParentName>
+%ADD_LIST_STRING% <IsParentEnabled>%CFTPCommand.%LIST_ID%.IsParentEnabled%</IsParentEnabled>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING% </command>
+%CFTPCommandProcessor.%ID%.ListCommands%
+</commands>
+<listresult>%LIST_RESULT%</listresult>
+</response>

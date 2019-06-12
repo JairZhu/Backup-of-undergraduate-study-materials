@@ -1,0 +1,24 @@
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<users>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<user listitem="%LIST_ITEM%">
+%ADD_LIST_STRING%		<LoginID>%CUser.%LIST_ID%.LoginID%</LoginID>
+%ADD_LIST_STRING%		<FullName>%CUser.%LIST_ID%.FullName%</FullName>
+%ADD_LIST_STRING%		<Description>%CUser.%LIST_ID%.Description%</Description>
+%ADD_LIST_STRING%		<LastLoginTime>%CUser.%LIST_ID%.LastLoginTime%</LastLoginTime>
+%ADD_LIST_STRING%		<HomeDir>%CUser.%LIST_ID%.HomeDir%</HomeDir>
+%ADD_LIST_STRING%		<Type>%CUser.%LIST_ID%.Type%</Type>
+%ADD_LIST_STRING%		<CanListHomeDir>%CUser.%LIST_ID%.CanListHomeDir%</CanListHomeDir>
+%ADD_LIST_STRING%		<Enabled>%CUser.%LIST_ID%.Enabled%</Enabled>
+%ADD_LIST_STRING%		<AutoDisabled>%CUser.%LIST_ID%.AutoDisabled%</AutoDisabled>
+%ADD_LIST_STRING%		<CanDecryptPassword>%CUser.%LIST_ID%.CanDecryptPassword%</CanDecryptPassword>
+%ADD_LIST_STRING%		<AdminType>%CUser.%LIST_ID%.AdminType%</AdminType>
+%ADD_LIST_STRING%		<ExpiresOn>%CUser.%LIST_ID%.ExpiresOn%</ExpiresOn>
+%ADD_LIST_STRING%		<ID>%LIST_ID%</ID>
+%ADD_LIST_STRING%	</user>
+%CGroup.%ID%.ListMembers%
+</users>
+<listresult>%LIST_RESULT%</listresult>
+</response>

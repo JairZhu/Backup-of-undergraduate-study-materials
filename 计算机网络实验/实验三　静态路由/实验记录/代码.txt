@@ -1,0 +1,10 @@
+router1:
+interface gigabitethernet 0/1
+ipv6 address 3::1/64
+ipv6 route 4::/64 serial2/0 5::2
+
+router2:
+interface gigabitethernet 0/1
+ipv6 address 4::1/64
+ipv6 route 3::/64 serial2/0 5::1
+

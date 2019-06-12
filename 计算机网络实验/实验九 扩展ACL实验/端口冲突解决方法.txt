@@ -1,0 +1,12 @@
+
+如果www服务启动不了，可以尝试修改端口：
+修改目录
+C:\Program Files\Apache Software Foundation\Apache2.2\conf
+下的httpd.conf文件,
+找到Listen 80一行，
+把80改为8080(可以设为其它的，最好大于1024，而且必须小于等于65535)，
+保存，然后重新启动apache服务
+
+访问在ip地址后面加上端口8080即可，
+例如：
+http://192.168.1.1:8080

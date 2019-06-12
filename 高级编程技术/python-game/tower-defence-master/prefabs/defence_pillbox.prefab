@@ -1,0 +1,18 @@
+
+# UI Settings
+display_name   :  str   :  Pillbox
+
+# Sprite
+images  :  rotimg  :  textures\defence_pillbox.png
+
+# Physics
+block  :  bool  :  1
+
+# Defence Settings
+cost    :  int   :  280
+rotate  :  bool  :  1
+flash_offset  :  float  :  16
+# Attack Settings
+attack          :  str   :  bullet
+attack_rate     :  float :  0.1
+attack_range    :  float :  200

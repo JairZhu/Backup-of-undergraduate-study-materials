@@ -1,0 +1,36 @@
+<!--#include "Strings/Help-Frame-Strings.strings"-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>$TITLE$</title>
+	<script type="text/javascript" language="JavaScript" src="%COMMON_FILE%Scripts/Help/Help.js"></script>
+	<script type="text/javascript" language="javascript">
+		var sDefaultHelpPage = "Help-Overview.htm";  // change to your default frame page
+		var blank = " "; // blank page
+		var sHelpPage = (GetHelpVar("helpfile")) ? GetHelpVar("helpfile") : sDefaultHelpPage;		
+		var sHelpNode = GetHelpVar("helpnode");
+
+		// if query string ('?' after URL) set content variable to what follows the '?'
+		// otherwise, start fresh by setting content variable to table_of_contents page
+
+		function FillHelpFrame() 
+		{
+			document.getElementById("main").src = "%ADMIN_FILE%Help/" + sHelpPage;
+			document.getElementById("nav-contents").src = "%ADMIN_FILE%Help/Help-Contents.htm?helpnode=" + sHelpNode;
+		} // FillHelpFrame
+	</script>
+</head>
+
+<!-- STEP THREE: Copy this code into the BODY of your HTML document  -->
+<frameset rows="39,*,80" frameborder="0" border="0" framespacing="0">
+	<frame id="header" name="header"  scrolling="no" src="%ADMIN_FILE%Help/Help-Header.htm">
+	
+	<frameset cols="250,*"  onLoad="javascript:FillHelpFrame();">
+	  <frame id="nav-contents" name="nav-contents" scrolling="no">
+	  <frame id="main" name="main"  scrolling="auto" >
+	</frameset>
+	<frame id="footer" name="footer"  scrolling="no" src="%ADMIN_FILE%Help/Help-footer.htm">
+</frameset>
+</html>

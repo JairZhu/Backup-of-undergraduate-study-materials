@@ -1,0 +1,73 @@
+﻿<!-- LimitsStrings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- **************** Advanced Limits **************** -->
+$LIMIT_ADV_CONVERTURLCHARS$=將命令中的 URL 字元轉換為 ASCII
+$LIMIT_ADV_CHECKDIRSIZE$=上傳時自動檢查目錄大小
+$LIMIT_ADV_INLINEOOB$=內嵌帶外 (out-of-band) 數據
+$LIMIT_ADV_KEEPALIVE$=發送保持活動資料包以檢測斷開的連接
+$LIMIT_ADV_NAGLE$=禁用 Nagle 演算法
+$LIMIT_ADV_ADAPTIVETO$=快速上傳檔時使用適應性逾時
+$LIMIT_ADV_SFTPMAXVERSION$=所支持的 SFTP 最高版本
+$LIMIT_ADV_ALLOWRENAMEOVERWRITE$=允許重命名覆蓋
+$LIMIT_ADV_WARNOLDBROWSER$=使用舊的 web 瀏覽器時警告最終使用者
+
+<!-- **************** Connection Limits **************** -->
+$LIMIT_CONN_MAXSERVERSESS$=伺服器連接的最大連線期間數
+$LIMIT_CONN_MAXSERVERSESSIP$=伺服器上每個 IP 位址連接的最大連線期間數
+$LIMIT_CONN_MAXDOMAINSESS$=域連接的最大連線期間數
+$LIMIT_CONN_MAXDOMAINSESSIP$=域中每個 IP 位址連接的最大連線期間數
+$LIMIT_CONN_MAXGROUPSESS$=群組連接的最大連線期間數
+$LIMIT_CONN_MAXGROUPSESSIP$=群組中每個 IP 位址連接的最大連線期間數
+$LIMIT_CONN_MAXSESSUSER$=每個使用者帳號連接的最大連線期間數
+$LIMIT_CONN_MAXSESSIPUSER$=使用者帳號的每個 IP 連接的最大連線期間數
+$LIMIT_CONN_REQUIRESECURE$=登入前要求安全連接
+$LIMIT_CONN_IDLETO$=逾時後連接自動空閒
+$LIMIT_CONN_SESSTO$=連線期間自動逾時
+$LIMIT_CONN_BLOCKANTITO$=阻止反逾時的組態方案
+$LIMIT_CONN_AUTOCREATE$=自動創建根目錄
+$LIMIT_CONN_TIMEOUTBLOCKIP$=阻止逾時連線期間的 IP 地址
+$LIMIT_CONN_FTP$=允准 FTP 與 FTPS 連接
+$LIMIT_CONN_SSH$=允准 SFTP 連接
+$LIMIT_CONN_HTTP$=允准 HTTP 與 HTTPS 連接
+$LIMIT_CONN_REQ_REV_DNS$=需要反向 DNS 名稱
+$LIMIT_CONN_ALLOWXFORWARD$=允許 X-Forwarded-For變更HTTP 連接 IP 位址
+
+<!-- **************** Directory Listing Limits **************** -->
+$LIMIT_DL_HIDEHIDDEN$=不列出標記為隱藏的檔
+$LIMIT_DL_LOWERCASE$=檔案名和目錄使用小寫
+$LIMIT_DL_SCLINKS$=將 Windows 快捷方式轉譯為鏈結
+$LIMIT_DL_SCASTARGET$=清單時顯示 Windows 快捷方式
+$LIMIT_DL_LOCK$=鎖定使用者於根目錄
+$LIMIT_DL_ROOT$=允許未鎖定的使用者使用根符號 (\"/\") 列出驅動器
+$LIMIT_DL_COMP_STATE$=隱藏檔案與目錄的壓縮狀態
+$LIMIT_DL_ENCRYPT_STATE$=隱藏檔案與目錄的加密狀態
+
+<!-- **************** Password Limits **************** -->
+$LIMIT_PW_CHECKANON$=檢查匿名密碼
+$LIMIT_PW_REQCOMPLEX$=需要複雜密碼
+$LIMIT_PW_MINLENGTH$=最短密碼長度
+$LIMIT_PW_EXPIRES$=密碼自動過期
+$LIMIT_PW_CHANGE$=允許使用者變更密碼
+$LIMIT_PW_ENCRYPT$=以加密形式保存密碼
+$LIMIT_PW_HIDEINLOG$=在記錄檔中顯示接收的密碼為遮罩
+$LIMIT_PW_SSHAUTHTYPE$=SSH 驗證類型
+$LIMIT_PW_TYPE$=FTP 密碼類型
+$LIMIT_PW_ENCRYPT_MODE$=密碼加密模式
+$LIMIT_PW_ENABLE_RECOVERY$=允許使用者恢復密碼
+
+<!-- **************** Transfer Limits **************** -->
+$LIMIT_TRAN_SERVERUP$=伺服器最大上傳速度
+$LIMIT_TRAN_SERVERDN$=伺服器最大下載速度
+$LIMIT_TRAN_DOMAINUP$=域最大上傳速度
+$LIMIT_TRAN_DOMAINDN$=域最大下載速度
+$LIMIT_TRAN_GROUPUP$=所有群組成員的最大上傳速度
+$LIMIT_TRAN_GROUPDN$=所有群組成員的最大下載速度
+$LIMIT_TRAN_USERUP$=使用者帳號的最大上傳速度
+$LIMIT_TRAN_USERDN$=使用者帳號的最大下載速度
+$LIMIT_TRAN_SESSUP$=每個連線期間的最大上傳速度
+$LIMIT_TRAN_SESSDN$=每個連線期間的最大下載速度
+$LIMIT_TRAN_DELETEPARTIAL$=移除上傳不完整的檔
+$LIMIT_TRAN_MAX_FILE_SIZE$=最大上傳檔案大小
+$LIMIT_TRAN_INTERPRETLFASEOL$=在 ASCII 模式中將換行位元組解釋為新行

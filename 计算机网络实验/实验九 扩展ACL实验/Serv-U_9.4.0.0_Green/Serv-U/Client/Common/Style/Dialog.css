@@ -1,0 +1,334 @@
+
+.OpaqueLayer {
+	width:100%;height:100%;background:#292929;
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.80;
+	opacity: 0.80;
+	position:fixed;
+	left:0;
+	top:0;
+	display:none;
+	margin:0;
+	padding:0;
+}
+* html .OpaqueLayer { /* ie hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+.DialogLayer{
+	position:absolute;
+	left:0;
+	top:0;
+	display:none;
+	/*border:1px solid #bfbbbb;*/
+	background:transparent;
+	font-family:Arial,sans-serif;
+}
+.DialogTitle {
+	width:100%;
+	height:25px;
+	/*border-bottom:1px solid black;
+	background:transparent;*/	
+	/*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr= '#ffffff' , EndColorStr= '#93c038' );*/
+	position: relative;
+	vertical-align:bottom;	
+	margin:0;
+	padding:0;
+	border-left:1px solid #d4d0c8;
+	border-right:1px solid #d4d0c8;
+	border-top:1px solid #d4d0c8;
+}
+/********** SU Classic Theme **********/
+.aw-su .DialogTitle {
+	width:100%;
+	height:25px;
+	/*border-bottom:1px solid black;*/
+	background:transparent;
+	/*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr= '#ffffff' , EndColorStr= '#93c038' );*/
+	position: relative;
+	vertical-align:bottom;	
+	margin:0;
+	padding:0;
+	border:none;
+}
+/**********************************/
+
+.DialogBody
+{
+	font-family:Arial,sans-serif;
+	padding:10px 0 10px 0;
+	border-left:1px solid #d4d0c8;
+	border-right:1px solid #d4d0c8;
+	border-bottom:1px solid #d4d0c8;
+	/*background: url(/Common/Images/dialog-fade-bg.png);
+	background-repeat: repeat-x;
+	background-position: bottom left;*/
+	/*background-color:#d4d0c8;
+	background-color:#ffffff;*/
+	font-size:11px;
+}
+.aw-su .DialogBody
+{
+	font-family:Arial,sans-serif;
+	padding:10px 0 10px 0;
+	border:1px solid #fff;
+	background-color:#d4d0c8;
+	font-size:11px;
+}
+.aw-xp .headcontainer SPAN,.aw-classic .headcontainer SPAN
+{
+	color:#fff !important;
+}
+.aw-xp .DialogTitle{
+	background: url(/Common/Images/SystemDialogBar-bg.png)  0px -124px repeat-x;
+}
+.aw-classic .DialogTitle{
+	background: url(/Common/Images/SystemDialogBar-bg.png)  0px 0px repeat-x;	
+}
+.aw-aqua .DialogTitle{
+	background: url(/Common/Images/SystemDialogBar-bg.png) 0px -62px repeat-x;
+}
+.aw-vista .DialogTitle{
+	background: url(/Common/Images/SystemDialogBar-bg.png) 0px -92px repeat-x;
+}
+.aw-xp .DialogBody{
+	background-color: #ece9d8;	
+}
+.aw-classic .DialogBody{
+	background-color: #d4d0c8;	
+}
+.aw-aqua .DialogBody{
+	background-color: #dddada;	
+}
+.aw-vista .DialogBody{
+	background-color: #f0f0f0;	
+}
+
+.closebox-none{
+	background:transparent;
+}
+.closebox-hover{
+	background: url(/Common/Images/close-hover.gif) center center no-repeat;
+}
+.aw-xp .closebox{
+	background: url(/Common/Images/xp-close.gif) center center no-repeat;
+}
+.aw-classic .closebox{
+	background: url(/Common/Images/classic-close.gif) center center no-repeat;	
+}
+.aw-aqua .closebox{
+	background: url(/Common/Images/aqua-close.gif) center center no-repeat;	
+}
+.aw-vista .closebox{
+	background: url(/Common/Images/vista-close.gif) center center no-repeat;	
+}
+
+.aw-su .closebox, .aw-su .closebox-hover, .aw-su .closebox-none{
+	background: url(/Common/Images/DialogBar-bg.png) 0px -31px repeat-x;
+}
+.aw-su .closebox span{
+	background:url(/Common/Images/close.gif) center center no-repeat;
+}
+.aw-su .closebox-hover span{
+	background: url(/Common/Images/close-hover.gif) center center no-repeat;
+}
+.DialogBody table
+{
+	font-family:Arial,sans-serif;
+	font-size:11px;
+}
+.ToolTipDialogBody table
+{
+	font-family:Arial,sans-serif;
+	font-size:11px;
+}
+.taskbar table
+{
+	font-family:Arial,sans-serif;
+	font-size:11px;
+}
+.headcontainer {
+	/*background: url(/Common/Images/DialogBar-bg.png) 0px -31px repeat-x;*/
+}
+.dialogrightcorner 
+{
+	/*background: url(/Common/Images/DialogBar-bg.png) -13px -1px repeat-x;
+	background: url(/Common/Images/DialogBar-bg.png) 0px -31px repeat-x;*/
+	width:10px;
+	height:25px;
+}
+.dialogleftcorner 
+{
+	/*background: url(/Common/Images/DialogBar-bg.png) -1px -1px repeat-x;
+	background: url(/Common/Images/DialogBar-bg.png) 0px -31px repeat-x;*/
+	width:10px;
+	height:25px;
+}
+.headcontainer SPAN
+{
+	font-family:Arial,sans-serif;
+	padding-top:4px;
+	vertical-align:middle;
+	line-height:20px;
+	height:20px;
+	font-size:12px;
+	color:#000;
+	font-weight:bold;
+}
+.DialogTable {
+	width:100%;padding:0;margin:0;
+}
+.leftcorner {
+	width:10px;
+	overflow:hidden;
+}
+.rightcorner {
+	width:10px;
+	overflow:hidden;
+}
+.closebox, .closebox-hover {
+	/*background: url(/Common/Images/DialogBar-bg.png) 0px -31px repeat-x;*/
+	padding-top:1px;	
+	text-align:right;
+	width:17px;
+}
+
+/***************************SU classic theme *************/
+.aw-su .headcontainer {
+	background: url(/Common/Images/DialogBar-bg.png) 0px -31px repeat-x;
+}
+.aw-su .dialogrightcorner 
+{
+	background: url(/Common/Images/DialogBar-bg.png) -13px -1px repeat-x;
+	width:10px;
+	height:25px;
+}
+.aw-su .dialogleftcorner 
+{
+	background: url(/Common/Images/DialogBar-bg.png) -1px -1px repeat-x;
+	width:10px;
+	height:25px;
+}
+.aw-su .headcontainer SPAN
+{
+	font-family:Arial,sans-serif;
+	padding-top:4px;
+	vertical-align:middle;
+	line-height:20px;
+	height:20px;
+	font-size:11px;
+	color:#000;
+	font-weight:bold;
+}
+.aw-su .DialogTable {
+	width:100%;padding:0;margin:0;
+}
+.aw-su .leftcorner {
+	width:10px;
+	overflow:hidden;
+}
+.aw-su .rightcorner {
+	width:10px;
+	overflow:hidden;
+}
+/**.aw-su .closebox {
+	background: url(/Common/Images/DialogBar-bg.png) 0px -31px repeat-x;
+	padding-top:1px;	
+	text-align:right;
+	width:17px;
+}
+****************************************************/
+
+
+.layercontent {
+	padding:5px 5px 0px 5px;
+}
+.wiz-bg
+{
+	padding:5px;
+	margin:0 5px 0 5px;
+	border:1px solid #fff;
+	background-position: top left;
+	background-image: url(/Common/Images/wiz-bg-fade.png);
+	background-repeat: repeat-y;
+}
+.ToolTipDialogTitle, .ToolTipFooter {
+	width:100%;
+	height:23px;
+	/*border-bottom:1px solid black;*/
+	background:transparent;
+	/*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr= '#ffffff' , EndColorStr= '#93c038' );*/
+	position: relative;
+	vertical-align:bottom;	
+	margin:0;
+	padding:0;
+}
+.ToolTipDialogBody
+{
+	font-family:Arial,sans-serif;
+	padding:10px 0 10px 0;
+	border-left:1px solid #ababab;
+	border-right:1px solid #ababab;
+	background-image: url(/Common/Images/Tooltip-fill.png);
+	font-size:11px;
+}
+.ToolTipLeftCorner {
+	width:27px;
+	overflow:hidden;
+}
+.ToolTipRightCorner {
+	width:27px;
+	overflow:hidden;
+}
+.ToolTipRightCornerBottom {
+	width:27px;
+	height:23px;
+	overflow:hidden;
+	background: url(/Common/Images/Tooltip-bars-bg.png) -1px -31px no-repeat;
+}
+.ToolTipLeftCornerBottom {
+	width:27px;
+	height:23px;
+	overflow:hidden;
+	background: url(/Common/Images/Tooltip-bars-bg.png) -36px -31px no-repeat;
+}
+.TopPointer{
+	width:53px;
+	height:38px;
+	overflow:hidden;
+	background: url(/Common/Images/Tooltip-bars-bg.png) -269px -31px no-repeat;
+}
+.TopPntToolTipHeadContainer{
+	background: url(/Common/Images/Tooltip-bars-bg.png) -1px -1px no-repeat;
+}
+.ToolTipHeadContainer{
+	background: url(/Common/Images/Tooltip-bars-bg.png) 0px -106px repeat-x;
+}
+.ToolTipFooterFill{
+	background: url(/Common/Images/Tooltip-bars-bg.png) 0px -76px repeat-x;
+}
+.ToolTipPointerCell
+{
+	margin-left:33px;
+	background: url(/Common/Images/Tooltip-bars-bg.png) -203px -31px no-repeat;
+	width:53px;
+	height:38px;
+}
+.TopPntToolTipPointerCell{
+	margin:0 27px 0 22px;
+}
+.ToolTipPointerTop
+{
+	text-align:left;
+	padding-left:6px;
+	background: url(/Common/Images/Tooltip-bars-bg.png) 0px -76px repeat-x;
+}
+.BottomPointerOpening
+{
+	overflow:hidden;
+	margin-left:15px;
+	width:35px;
+	height:23px;
+	background: url(/Common/Images/Tooltip-bars-bg.png) -90px -31px no-repeat;
+}

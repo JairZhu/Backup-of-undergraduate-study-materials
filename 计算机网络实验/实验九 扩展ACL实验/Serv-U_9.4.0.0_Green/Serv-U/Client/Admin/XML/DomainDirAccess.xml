@@ -1,0 +1,15 @@
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<rules>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <rule listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% <Path>%CDirAccess.%LIST_ID%.Dir%</Path>
+%ADD_LIST_STRING% <Access>%CDirAccess.%LIST_ID%.Access%</Access>
+%ADD_LIST_STRING% <MaxSize>%CDirAccess.%LIST_ID%.MaxSize%</MaxSize>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING% </rule>
+%CDomain.%ID%.DirAccess.List%
+</rules>
+<listresult>%LIST_RESULT%</listresult>
+</response>

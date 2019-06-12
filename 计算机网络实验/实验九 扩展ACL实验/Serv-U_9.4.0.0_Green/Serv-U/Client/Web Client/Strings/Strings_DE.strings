@@ -1,0 +1,206 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Web Client\Include\ -->
+
+<!-- General -->
+$CLICK_HERE_CURRENT_DIR$=<a href="%FILE%ListDir.htm?Dir=%CURRENT_DIR%">Klicken Sie hier, um das aktuelle Verzeichnis anzuzeigen.</a>
+$WARN_IMAGE$=<img src="%FILE%Images\warn.gif" style="float:left;">
+$DELETE$=Löschen
+$OPEN$=Öffnen
+$CURRENTLY_LOCATED$=Derzeit zu finden in
+$USE_INHERITED$=Erbe Standardwert
+$NO_SCRIPT_TEXT$=Es scheint, dass Ihr Browser JavaScript nicht aktiviert hat. Für diese Seite ist es notwendig, JavaScript zu aktivieren.
+$PLEASE_ENTER_USER_NAME$=Bitte geben Sie einen Benutzernamen ein.
+$FOLDER_SIZE$=Verzeichnisgrösse
+$DIR_PROPERTIES$=Verzeichniseigenschaften
+$MODIFIED_TIME$=geändert am
+$CREATED_TIME$=angelegt am
+$LAST_ACCESSED_TIME$=letzter Zugriff
+
+<!-- Login -->
+$LOGIN_TITLE$=Serv-U von RhinoSoft.com
+$LANGUAGE$=Sprache
+$PASSWORD$=Kennwort
+$LOGIN$=Anmelden
+$CHANGE_PASSWORD$=Kennwort ändern
+$REMEMBER_USER$=Daten speichern
+$RELOAD$=Neuladen
+$JSCRIPT_DISABLED_WARN$=JavaScript ist in Ihren Browsereinstellungen deaktiviert.  Um den Serv-U Fileserver verwenden zu können, muss Ihr Browser JavaScript ermöglichen.<br /><br />Klicken Sie auf "Neuladen", nachdem Sie JavaScript in Ihren Browsereinstellungen aktiviert haben.
+$IE_NOT_COMPATIBLE_WARN$=Sie verwenden eine nicht kompatible Version des Internet Explorers.  Bitte aktualisieren Sie den Internet Explorer auf eine Version 6.0 oder höher, damit Sie Serv-U verwenden können.
+$BROWSER_NOT_COMPATIBLE_WARN$=Sie verwenden einen Webbrowser, der mit die aktuellen Version von Serv-U nicht kompatibel ist.  Bitte verwenden Sie entweder Internet Explorer 6.0+, Firefox 1.0+, Safari 3+ oder Opera 9+.
+
+<!-- Languages -->
+$ENGLISH$=English (englisch)
+$GERMAN$=Deutsch 
+$ITALIAN$=Italiano (italienisch)
+$FRENCH$=Français (französisch)
+$SPANISH$=Español (spanisch)
+$PORTUGUESE$=Português (portugiese)
+$SWEDISH$=Svenska (schwedisch)
+$FINISH$=Suomi (finnish)
+$NORWEGIAN$=Norsk (norwegisch)
+$DANISH$=Dansk (dänisch)
+$RUSSIAN$=Русский (russisch)
+$TRADITIONAL_CHINESE$=繁體中文 (traditionell Chinesisch)
+$SIMPLIFIED_CHINESE$=简体中文 (vereinfachtes Chinesisch)
+$JAPANESE$=日本語 (japanisch)
+
+
+<!-- Logout -->
+$LOGOUT_TITLE$=Abgemeldet
+$LOGOUT_DESC$=Sie wurden abgemeldet.  <a href="%LOGIN%">Klicken Sie hier, um sich wieder anzumelden.</a>
+$LOGGED_OUT_MSG$=Sie wurden abgemeldet.
+
+<!-- Login Change Password -->
+$PASSWORD_EXPIRED_TITLE$=Kennwort abgelaufen - Kennwort ändern
+$PASSWORD_EXPIRED_DESC$=Ihr Kennwort ist abgelaufen, bitte ändern Sie Ihr Kennwort, bevor Sie weiterarbeiten.
+
+
+<!-- Session Not Found -->
+$SESSION_NOT_FOUND_TITLE$=Nicht authorisiert - Sitzung nicht gefunden
+$SESSION_NOT_FOUND_HEAD$=401 Nicht authorisiert, angegebene Sitzung existiert nicht
+$SESSION_NOT_FOUND_DESC$=Die angegebene Sitzung existiert nicht.  Das kann aufgrund längerer Inaktivität vorkommen.  Versuchen Sie einen neuerlichen Login.
+
+
+<!-- Not Logged In -->
+$NOT_LOGGED_IN_TITLE$=Nicht authorisiert - Nicht angemeldet
+$NOT_LOGGED_IN_HEAD$=401 Nicht authorisiert, Sie sind nicht angemeldet
+$NOT_LOGGED_IN_DESC$=Es ist Ihnen nicht erlaubt, die gewünschte Operation auszuführen.  <a href="%LOGIN%">Bitte melden Sie sich an, bevor Sie diese Operation versuchen.</a>
+
+
+<!-- Permission Denied -->
+$PERMISSION_DENIED_TITLE$=Zugriff verweigert
+$PERMISSION_DENIED_DESC$=Zugriff verweigert
+
+
+<!-- Listing -->
+$CURR_DIR_HOST$=%HOST%
+$CURR_DIR_NAME$=%CURRENT_DIR_NAME%
+$MOD_TIME$=Zeit
+$ATTRS$=Attribute
+$THUMBNAIL_LIST$=Vorschaubilder
+$UPLOAD_ACTION$=Upload
+$UPLOAD$=Upload
+$UPLOAD_ALT$=Upload
+$THUMBNAILS_ALT$=Vorschaubilder
+$DETAILS_ALT$=Details
+$CREATE_DIR_ALT$=Verzeichnis angelegt
+$FILETOOLS$=Tools
+$DOWNLOAD$=Download
+$THUMBNAIL_SIZE$=Vorschau Größe
+$SELECT_THUMBNAIL_SIZE$=Größe auswählen
+$PREVIEW_IMAGE$=Bildvorschau
+$CHANGE_PASSWORD_BUTTON$=Kennwort ändern
+$FILE_PATH$=Dateipfad
+$PLAY_MEDIA$=Medium abspielen
+$PLAY_LIST$=Wiedergabeliste
+$AUDIO_PLAY_LIST$=Audio Wiedergabeliste
+$PLAYLIST_SIZE$=Größe der Wiedergabeliste
+$SHUFFLE_PLAYLIST$=Zufällige Wiedergabeliste
+$NEXT_MEDIA_FILE$=Nächste Mediendatei
+$PREVIOUS_MEDIA_FILE$=Vorherige Mediendatei
+$HOME$=Start
+$FOLDER_EMPTY$=Verzeichnis ist leer
+$BACK$=Zurück
+$FORWARD$=Vorwärts
+$HISTORY_LIST$=Verlauf
+$SEARCH_ACTION$=Suchen
+$NO_FILES_FOUND$=Keine Dateien gefunden.
+$HTTP_MEDIA_PLAY_DISABLED$=Das Abspielen von Medien via HTTP wurde vom Administrator deaktiviert.
+
+
+<!-- Thumbnail Listing -->
+$DETAIL_LIST$=Details
+
+
+<!-- STOR File Uploaded -->
+$STOR_FILE_UPLOADED_TITLE$=Datei zum Server transferiert
+$STOR_FILE_UPLOADED_DESC$=Die Datei wurde erfolgreich zum Server transferiert.<br><br>$CLICK_HERE_CURRENT_DIR$
+
+
+<!-- Rename -->
+$RENAME_TITLE$=Umbenennen
+$RENAME_DESC$=Neuen Namen eingeben:
+$NEW_NAME$=Neuer Name
+$RENAME$=Umbenennen
+
+
+<!-- Delete -->
+$DELETE_DIR$=Sind Sie sicher, das ausgewählte Verzeichnis zu löschen?
+$DELETE_FILE$=Sind Sie sicher, die ausgewählte Datei zu löschen?
+
+
+<!-- Style Swap Properties -->
+$BOX_WIDTH_SMALL$=boxwidth300
+
+
+<!-- Overwrite file on upload -->
+$OVERWRITE_FILE$=Sind Sie sicher, diese Datei zu überschreiben?
+
+<!-- Search -->
+$FILE_SEARCH_DESC$=Gesamter oder Teile des Dateinamens
+$FILE_SEARCH_TITLE$=Dateisuche
+$SEARCH_SAMPLES$=Suchbeispiele
+$SEARCH_RESULTS$=Suchresultate
+
+
+<!-- **************** ImagePreviewDialog.htm **************** -->
+$IMAGE_DIALOG_TITLE$=Vorschaubild
+$PREVIOUS_IMAGE$=Vorheriges Bild
+$PAUSE_SLIDESHOW$=Diashow pausieren
+$PLAY_SLIDESHOW$=Diashow abspielen
+$NEXT_IMAGE$=Nächstes Bild
+$OF$=von
+$IMAGES$=Bildern
+$SLIDE_SHOW$=Diashow
+$SLIDE_SHOW_SPEED$=Diashow Geschwindigkeit
+$FAST$=Schnell
+$SLOW$=Langsam
+$THUMBNAIL_SCROLL$=Vorschaubilder blätter
+
+
+<!-- **************** AlertDialog.htm **************** -->
+$SELECT_FILE_DELETE$=Bitte wählen Sie zuerst eine Datei/ein Verzeichnis zum Löschen.
+$SELECT_FILE_RENAME$=Bitte wählen Sie zuerst eine Datei/ein Verzeichnis zum Umbenennen.
+$RECOMMEND_IE_UPGRADE_1$=Sie verwenden eine ältere Version des Microsoft Internet Explorers. Internet Explorer 8.0 oder höher besitzen viele Verbesserungen und Funktionen, die Ihre Arbeit mit Serv-U verbessert.
+$RECOMMEND_IE_UPGRADE_2$=<a class="links" href="http://www.microsoft.com/ie" target="_blank">Click here</a> zum Download der aktuellsten Version des Internet Explorer.
+
+
+<!-- **************** AskUserPlacementDialog.htm **************** -->
+$ASK_USER_TITLE$=Client Optionen
+$CLIENT_SELECTION$=Client Auswahl
+$USER_PLACEMENT_DESC1$=Bitte wählen Sie, wie Sie auf Ihr Konto zugreifen möchten.  Der Webclient ist eine einfach zu handhabende, Browser-basierte Schnittstelle.
+$USER_PLACEMENT_DESC2$=FTP Voyager JV ist ein voll-funktionsfähiger FTP Client, der Java Ihres Browsers verwendet.
+$BASIC_WEB_CLIENT$=Webclient
+$FVJV$=FTP Voyager JV
+
+
+<!-- **************** LoggedInDialog.htm **************** -->
+$LOGGED_IN_DIALOG_TITLE$=Aktuell angemeldet
+$LOGGED_IN_DESC$=Sie sind aktuell angemeldet. Klicken Sie OK um Ihre Sitzung neu zu starten und sich anzumelden.
+
+
+<!-- **************** FVJVLoggedInDialog.htm **************** -->
+$FVJV_LOGGED_IN_DESC$=Sie sind aktuell angemeldet. 
+$FVJV_LOGGED_IN_ACTION$=Klicken Sie hier, um Ihre Sitzung neu zu starten und sich anzumelden.
+
+
+<!-- **************** UploadProgressDialog.htm **************** -->
+$UPLOAD_PROGRESS$=Upload Fortschritt
+$TRANSFER_RATE$=Transferrate
+$WRITTEN$=Geschrieben
+$REMAINING$=Verbleibend
+$TIME_REMAINING$=Zeit verbleibend
+$DESTINATION$=Ziel
+$KB_SEC_LABEL$=KB/Sek
+$PLEASE_SELECT_FILE_UPLOAD$=Bitte wählen Sie eine Datei zum Upload über Durchsuchen...
+$UPLOADING$=Transfer zum Server
+$LARGE_FILE_UPLOAD_WARN$=Der Upload von Dateien größer als 2GB kann unvollständig und/oder fehlerhaft sind aufgrund Ihres Browsers.
+$MOZ_LARGE_FILE_UPLOAD_WARN$=Mozilla Webbrowser erlauben den Upload von Dateien grösser als 2 GB nicht.
+$UNABLE_TO_UPLOAD$=Der Webbrowser konnte die Datei nicht zum Server transferieren.  Die Datei ist möglicherweise zu groß für Ihren Browser.  $MOZ_LARGE_FILE_UPLOAD_WARN$
+
+<!-- **************** PasswordRecoveryDialog.htm **************** -->
+$RECOVER_PASSWORD_TITLE$=Kennwortwiederherstellung
+$PASSWORD_RECOVERED$=Das Kennwort wurde erfolgreich wiederhergestellt.  Das Kennwort wurde verschickt.
+$PASSWORD_RECOVER_FAILURE_ERROR$=Kennwortwiederherstellung fehlgeschlagen.  Bitte kontaktieren Sie Ihren Sytemadministrator für weitere Hilfestellungen. 
+

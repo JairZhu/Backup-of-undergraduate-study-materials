@@ -1,0 +1,19 @@
+%PRIV_DOMAIN_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<Certificate>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <IssueOrg>%SSLCERT_ISSUE_ORG%</IssueOrg>
+%ADD_LIST_STRING% <IssueUnit>%SSLCERT_ISSUE_UNIT%</IssueUnit>
+%ADD_LIST_STRING% <IssueCN>%SSLCERT_ISSUE_CN%</IssueCN>
+%ADD_LIST_STRING% <IssueCity>%SSLCERT_ISSUE_CITY%</IssueCity>
+%ADD_LIST_STRING% <IssueCountry>%SSLCERT_ISSUE_COUNTRY%</IssueCountry>
+%ADD_LIST_STRING% <SubjOrg>%SSLCERT_SUBJ_ORG%</SubjOrg>
+%ADD_LIST_STRING% <SubjUnit>%SSLCERT_SUBJ_UNIT%</SubjUnit>
+%ADD_LIST_STRING% <SubjCN>%SSLCERT_SUBJ_CN%</SubjCN>
+%ADD_LIST_STRING% <SubjCity>%SSLCERT_SUBJ_CITY%</SubjCity>
+%ADD_LIST_STRING% <SubjCountry>%SSLCERT_SUBJ_COUNTRY%</SubjCountry>
+%ADD_LIST_STRING% <ValidFrom>%SSLCERT_VALID_FROM%</ValidFrom>
+%ADD_LIST_STRING% <ValidTo>%SSLCERT_VALID_TO%</ValidTo>
+%ADD_LIST_STRING% <Result>%VIEW_RESULT%</Result>
+%CSSLCertificate.%ID%.ViewCertificate%
+</Certificate>

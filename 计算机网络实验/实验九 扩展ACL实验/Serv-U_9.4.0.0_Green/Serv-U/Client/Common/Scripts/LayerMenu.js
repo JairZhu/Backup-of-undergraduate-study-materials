@@ -1,0 +1,1 @@
+var ltw=document.all;function vvcb(whp){qql=ltw?"BODY":"HTML";xvqb=ltw?event.srcElement:whp.target;while(xvqb.id!="titleBar"&&xvqb.tagName!=qql){xvqb=ltw?xvqb.parentElement:xvqb.parentNode;}if(xvqb.id=="titleBar"){tgx=true;document.onmousemove=vqjb;}}function vqjb(whp){if(!tgx)return;return false;}document.onmousedown=vvcb;document.onmouseup=Function("ddEnabled=false");

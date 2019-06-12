@@ -1,0 +1,1134 @@
+﻿// Serv-U.str - contains string definitions for the Serv-U RES resource files
+//
+// Strings entered in this file must be one per line and in the format of:
+// $RSIDS_SOME_STRING_NAME$=Some string value
+
+#include "Serv-U-Strings.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup dialog
+
+// upgrade notice strings
+$RSIDS_UPGRADENOTICE_TITLE$=Setup - Serv-U
+$RSIDS_UPGRADENOTICE_BACKUP$=Your previous installation of Serv-U has been backed up to the following directory:
+$RSIDS_UPGRADENOTICE_IMPORTED$=The following information has been imported:
+$RSIDS_UPGRADENOTICE_IMPORT_INFO$=%d domain(s), %d user account(s), %d group(s)
+
+// old reggie strings
+$RSIDS_OLDREGGIE_TITLE$=Setup - Serv-U
+$RSIDS_OLDREGGIE_INVALID$=Your current Serv-U registration key is not valid for this version, most likely because the upgrade protection period has expired.\n\nTo renew your upgrade protection, please follow the link below:
+$RSIDS_OLDREGGIE_CUSTOMER_SUPPORT$=http://www.RhinoSoft.com/customer/
+$RSIDS_OLDREGGIE_WARNING$=If you continue this installation, Serv-U will become unregistered and may cease to function correctly.  It is highly recommended that you exit this installation.
+$RSIDS_OLDREGGIE_INSTRUCTIONS$=To cancel this installation, click the Cancel button.  To continue this installation, click Next.
+
+// beta warning strings
+$RSIDS_BETAWARNING_TITLE$=Setup - Serv-U
+$RSIDS_BETAWARNING_WARNING$=You are installing a beta version of Serv-U.  Serv-U Beta versions are to be considered development versions and should be used only with the understanding there can be serious bugs.
+$RSIDS_BETAWARNING_CEASE$=This software will cease to function %d days after the build date.  Please see the server log for details.
+$RSIDS_BETAWARNING_CONTINUE$=By continuing with this installation, you are signifying that you understand the risks involved with installing beta software.
+$RSIDS_BETAWARNING_INSTRUCTIONS$=To cancel this installation, click the Cancel button.  To continue this installation, click Next.
+$RSIDS_BETAWARNING_BUILT$=Built On:
+$RSIDS_BETAWARNING_EXPIRES$=Expires On:
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Setup string table
+
+IDS_OLDREGGIE_COMMENT=Please read the following information about your registration ID before continuing.
+IDS_OLDREGGIE_HEADER=Invalid Registration ID
+IDS_SERVER_SECURITY_REQD=Serv-U 6 allowed the server to run without any security settings enabled.  This option has been deprecated.
+IDS_DIR_CACHE_OBSOLETE=The directory caching feature in Serv-U 6 has been rendered obsolete.  Serv-U 8 performs directory listings in a separate thread.
+IDS_SEND_RECV_BUFFERS=Send and receive buffer sizes are now automatically calculated by Serv-U to achieve maximum data transfer rates.
+IDS_LINKS_DEPRECATED=The creation of built-in UNIX style links in Serv-U is no longer supported.  Please use the Virtual Paths feature instead.
+IDS_NO_GROUP_ADMIN=The group administration privilege has been removed from Serv-U 8.0.  Accounts containing this administration level now have no administration rights.
+IDS_SHUTTING_DOWN=Shutting down Serv-U...
+IDS_UPDATING_DATA=Upgrading data files...
+IDS_BACKING_UP=Backing up settings...
+
+IDS_CHECKING_REGGIE=Checking Registration ID...
+IDS_UPNP_DISCOVER=Waiting for UPnP discover...
+IDS_UN_HEADER=Upgrade Notices
+IDS_UN_COMMENT=Please review the following notices that were logged while importing your Serv-U data.
+IDS_TRAY_PASSWORD_SET=The Serv-U Management Console will require the same password that you were using in the previous version of Serv-U.
+IDS_LOCK_IN_HOME_CHANGE=Previous versions listed the user's home directory for "/" when the user wasn't locked in the home directory.  This setting (RootIsDrives) may be changed for the server, domain, user, or group.
+IDS_ODBC_DOMAIN_UPGRADED=Your ODBC domain users and groups have been copied to new tables and columns in the Serv-U 8.0 storage format.  The SQL template strings have been reset to Serv-U 8.0 defaults.  Your original data has NOT been removed from your database!
+
+IDS_BETA_HEADING=Serv-U Beta Installation
+IDS_BETA_COMMENT=Please read the following important information about this Serv-U build.
+IDS_MSG_TAGS_CHANGED=Message variables from Serv-U have changed.  Variable names must now start with "$" instead of "%".  If you are using message files you must change the variables manually.
+
+/////////////////////////////////////////////////////////////////////////////
+// password recovery message strings
+IDS_PWDREC_SUBJECT=Your Account Information
+IDS_PWDREC_MESSAGE=Hello$SpaceFullName,\n\nSomeone has requested your login information:\n\nLogin ID:\t$Name\nPassword:\t$Password\n\nIf you have any questions, please contact your system administrator.\nPlease keep this information private because it pertains to your\npersonal account on this server.\n\nThank you!
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES dialog
+
+// theme editor strings
+$RSIDS_THEMEEDITOR_TITLE$=Theme Editor
+$RSIDS_THEMEEDITOR_DESC$=The Serv-U Theme Editor allows you define how the Serv-U Tray Application operates on the system tray.  Use the File menu to Open and Save themes.
+$RSIDS_THEMEEDITOR_NAME$=&Name:
+$RSIDS_THEMEEDITOR_ICON_LISTS$=&Icon Lists:
+$RSIDS_THEMEEDITOR_EDIT$=&Edit...
+
+// icon list strings
+$RSIDS_ICONLIST_TITLE$=Icon List
+$RSIDS_ICONLIST_DESC$=The icons, shown below, are used to animate the selected Serv-U state.  Specify an icon's file path and display duration to produce your own animation.
+$RSIDS_ICONLIST_ICONS$=&Icons:
+$RSIDS_ICONLIST_ADD$=&Add...
+$RSIDS_ICONLIST_EDIT$=&Edit...
+$RSIDS_ICONLIST_DELETE$=&Delete
+$RSIDS_ICONLIST_MOVE_UP$=M&ove Up
+$RSIDS_ICONLIST_MOVE_DOWN$=Mo&ve Down
+$RSIDS_ICONLIST_CLOSE$=&Close
+$RSIDS_ICONLIST_INFO$=Icons should be only 16x16 pixels, most image types are supported.
+
+// icon dialog strings
+$RSIDS_ICON_TITLE$=Icon
+$RSIDS_ICON_OK$=OK
+$RSIDS_ICON_CANCEL$=Cancel
+$RSIDS_ICON_FILE_PATH$=&Image File Path:
+$RSIDS_ICON_DURATION$=&Duration:
+$RSIDS_ICON_TIME_INFO$=(milliseconds; 1000 milliseconds = 1 second)
+$RSIDS_ICON_BROWSE$=&Browse...
+$RSIDS_ICON_INFO$=The image file may be any type regcognized by Windows.  The recommended size is 16x16 pixels.  All images are scaled to 16x16 when displayed on the system tray.
+
+// managment console strings
+$RSIDS_MANAGMENTCONSOLE_TITLE$=Serv-U Management Console
+
+// warn esc strings
+$RSIDS_WARNESC_TITLE$=Windows Internet Enhanced Security Configuration Enabled
+$RSIDS_WARNESC_OK$=OK
+$RSIDS_WARNESC_CANCEL$=Cancel
+$RSIDS_WARNESC_DONT_WARN$=&Do not show this message again.
+$RSIDS_WARNESC_ENABLED$=This computer has Microsoft's "Internet Enhanced Security Configuration (ESC)" enabled.
+$RSIDS_WARNESC_TROUBLESHOOT$=In order for the Serv-U Management Console to work properly, you may need to adjust your system.  If the Management Console appears to "hang" or "lock up", please attempt one of the following:
+$RSIDS_WARNESC_ADD$=* Add "http://localhost" and/or "http://127.0.0.1" to your Trusted Sites in your "Internet Options | Security" in the Control Panel.
+$RSIDS_WARNESC_DISABLE$=* Disable "Internet Explorer Enhanced Security Configuration" as found in the Control Panel under "Add or Remove Programs | Add or Remove Windows Components".
+$RSIDS_WARNESC_REBOOT$=Each of these solutions may require you to reboot your computer.  Microsoft suggests closing all copies of Internet Explorer prior to making these changes, however we have found rebooting to be the most effective solution.
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES menu
+
+// file strings
+$RSIDS_FILE_FILE$=&File
+$RSIDS_FILE_OPEN$=&Open...
+$RSIDS_FILE_SAVE$=&Save
+$RSIDS_FILE_SAVE_AS$=S&ave As...
+$RSIDS_FILE_EXPORT$=&Export...
+$RSIDS_FILE_IMPORT$=Import...
+$RSIDS_FILE_CLOSE$=&Close
+
+// help strings
+$RSIDS_HELP_HELP$=&Help
+$RSIDS_HELP_MORE_THEMES$=&More Themes...
+$RSIDS_HELP_SHARE_THEME$=&Share Theme...
+$RSIDS_HELP_ABOUT$=&About Serv-U Tray...
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-RES string table
+
+IDS_SERVICE_DESC=Provides file services and allows remote FTP, SSH, and web (HTTP) clients to connect to this computer.
+IDS_SUEXE_SERVICE_DESC=Provides FTP services and allows remote FTP clients to connect to this computer
+IDS_ON=on
+IDS_OFF=off
+IDS_BLANK= 
+IDS_SSH_CHANGE_PASSWORD_PROMPT=Please enter a new password
+
+IDS_EVENT=Event
+IDS_USER_WELCOME_MESSAGE=User Welcome Message
+IDS_DATA1_SUEVENT_ID_USER_LOGIN=User "$Name" Has Logged In ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGIN=Connecting from $IP ($IPName)\n$UThisName active sessions\n$UserSessions24H logins in past 24 hours
+IDS_DATA1_SUEVENT_ID_USER_LOGOUT=User "$Name" Has Logged Out ($Protocol)
+IDS_DATA2_SUEVENT_ID_USER_LOGOUT=IP: $IP ($IPName)\n$UThisName remaining active sessions\n$UserSessions24H logins in past 24 hours
+IDS_DATA1_SUEVENT_ID_USER_LOGIN_FAILURE=Invalid $Protocol Login Attempt for "$Name"
+IDS_DATA2_SUEVENT_ID_USER_LOGIN_FAILURE=IP: $IP ($IPName)
+IDS_DATA1_SUEVENT_ID_USER_ADDED=Your New Account Information
+IDS_DATA2_SUEVENT_ID_USER_ADDED=Welcome!  Your account has been created.  Your login information is:\n\nLogin ID:\t$Name\nPassword:\t$Password\n\nIf you have any questions, please contact your system administrator.\nPlease keep this information private because it pertains to your\npersonal account on this server.\n\nThank you!
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED=$IP Has Been Blocked
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED=$IP ($IPName) blocked permanently
+IDS_DATA1_SUEVENT_ID_IP_BLOCKED_TIME=$IP Has Been Temporarily Blocked"
+IDS_DATA2_SUEVENT_ID_IP_BLOCKED_TIME=$IP ($IPName) blocked for $TimeRemaining"
+IDS_DATA1_SUEVENT_ID_FILE_UPLOAD="$Name" Has Uploaded a File
+IDS_DATA2_SUEVENT_ID_FILE_UPLOAD=$LocalPathName\nSize: $FileSizeFmt bytes ($FileSizeKB KB)\n$TransferBytes bytes transferred. $TransferKBPerSecond KB/sec.\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DOWNLOAD="$Name" Has Downloaded a File
+IDS_DATA2_SUEVENT_ID_FILE_DOWNLOAD=$LocalPathName\nSize: $FileSizeFmt bytes ($FileSizeKB KB)\n$TransferBytes bytes transferred. $TransferKBPerSecond KB/sec.\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_DELETE="$Name" Has Deleted a File
+IDS_DATA2_SUEVENT_ID_FILE_DELETE=$LocalPathName\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_FILE_MOVE="$Name" Has Renamed or Moved a File
+IDS_DATA2_SUEVENT_ID_FILE_MOVE=$OldLocalPathName\n\n-- changed to --\n\n$LocalPathName
+IDS_DATA1_SUEVENT_ID_DIR_CREATE="$Name" Has Created a Directory
+IDS_DATA2_SUEVENT_ID_DIR_CREATE=$LocalPathName\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_DELETE="$Name" Has Deleted a Directory
+IDS_DATA2_SUEVENT_ID_DIR_DELETE=$LocalPathName\nProtocol: $Protocol
+IDS_DATA1_SUEVENT_ID_DIR_MOVE="$Name" Has Renamed or Moved a Directory
+IDS_DATA2_SUEVENT_ID_DIR_MOVE=$OldLocalPathName\n\n-- changed to --\n\n$LocalPathName
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-FTP-Responses string table
+
+// %TRANSLATION_OPTIONAL%
+
+// general response strings
+IDS_LIST_USER=user
+IDS_LIST_GROUP=group
+IDS_LIST_TOTAL=total
+
+// global FTP command responses
+// 200's
+IDS_FTPRESP_HELLO=220 Serv-U FTP Server v$ServerVersionShort ready...
+IDS_FTPRESP_SYSOP_MESSAGE=214 Message from SysOp: 
+IDS_FTPRESP_COMMAND_OKAY=200 Command okay.
+IDS_FTPRESP_CMD_UNIMPLEMENTED=202 Command not implemented, superfluous at this site.
+IDS_FTPRESP_TRANSFER_COMPLETE=226 Transfer complete. $TransferBytes bytes transferred. $TransferKBPerSecond KB/sec.
+IDS_FTPRESP_COMPRESSED_TRANSFER_COMPLETE=226 Transfer complete. $TransferBytes bytes ($ActualTransferBytes compressed to $CompressionRatio%) transferred. $ActualTransferKBPerSecond actual KB/sec,  $TransferKBPerSecond effective KB/sec.
+
+// 300's
+IDS_FTPRESP_TRANSFER_STATUS=321 Transferred $CurrentUncompressedTransferBytes Bytes.
+
+// 400's
+IDS_FTPRESP_TOO_MANY_USERS=421 Too many users - please try again later.
+IDS_FTPRESP_CONNECTION_TIMED_OUT=421 Connection timed out - closing.
+IDS_FTPRESP_SERVER_GOING_DOWN=421 Server is going down - please try again later.
+IDS_FTPRESP_SERVER_TEMP_UNAVAIL=421 Server is temporarily unavailable - please try again later.
+IDS_FTPRESP_EXCEEDED_MAX_SESSION_TIME=421 Maximum session time exceeded - closing.
+IDS_FTPRESP_TOO_MANY_COMMANDS_BEFORE_LOGIN=421 Too many commands before login - closing.
+IDS_FTPRESP_TOO_MANY_SESSIONS_IP=421 Not logged in, only $CommandResult sessions from same IP allowed concurrently.
+IDS_FTPRESP_IP_TEMPORARILY_BLOCKED=421 IP address is temporarily blocked - please try again later.
+IDS_FTPRESP_DATA_CONNECTION_IN_USE=425 Try later, data connection in use.
+IDS_FTPRESP_OUT_OF_NETWORK_SOCKETS=425 Try later, out of network sockets.
+IDS_FTPRESP_CANNOT_OPEN_DATA_CONNECTION=425 Cannot open data connection.
+IDS_FTPRESP_DATA_CONN_CLOSED_TRANS_ABORTED=426 Data connection closed, file transfer $PathName aborted.
+IDS_FTPRESP_DATA_CONN_CLOSED_SYSOP_ABORTED=426 Data connection closed, file transfer $PathName aborted by SysOp.
+IDS_FTPRESP_DATA_CONN_SSL_NEG_FAILED=426 Data connection closed, SSL / TLS negotiation failed.
+IDS_FTPRESP_DATA_CONN_UNEXPECTEDLY_CLOSED=426 Data connection unexpectedly closed.
+IDS_FTPRESP_DATA_CONN_NOT_SPECIFIED=426 Data connection not specified.  A PORT/EPRT or PASV/EPSV command must be issued before executing this operation.
+IDS_FTPRESP_TRANSFER_ABORTED=426 Transfer aborted.
+IDS_FTPRESP_COMMAND_PENDING=451 Another command is currently pending, please try again later.
+IDS_FTPRESP_COMMAND_ABORTED=451 Operation aborted due to ABOR command.
+IDS_FTPRESP_INTERNAL_ERROR=451 Requested action aborted: internal error in processing.
+
+// 500's
+IDS_FTPRESP_CMD_UNKNOWN=500 '$Command': command not understood.
+IDS_FTPRESP_MISSING_RESPONSE_STRING_FMT=500 INTERNAL ERROR: '%s' is missing the response string for %d.  Please contact RhinoSoft.com
+IDS_FTPRESP_SYNTAX_ERROR_PARAMETERS=501 Syntax error in parameters or arguments.
+IDS_FTPRESP_INVALID_PATH=501 The specified path is invalid.
+IDS_FTPRESP_CMD_DISABLED=502 Command not implemented.
+IDS_FTPRESP_BAD_SEQUENCE_OF_COMMANDS=503 Bad sequence of commands.
+IDS_FTPRESP_CMD_NOT_IMPL_FOR_PARAM=504 Command not implemented for that parameter.
+IDS_FTPRESP_NOT_LOGGED_IN=530 Not logged in.
+IDS_FTPRESP_LOGIN_TOO_MANY_INVALID_TRIES=530 Not logged in, too many tries with incorrect password.
+IDS_FTPRESP_PASSWORD_EXPIRED=530 PASSWORD EXPIRED - please change password before proceeding.
+IDS_FTPRESP_UNAUTHORIZED_IP=530 Not logged in, unauthorized IP address.
+IDS_FTPRESP_HOME_DIR_MISSING=530 Not logged in, home directory does not exist.
+IDS_FTPRESP_INVALID_OPT_SECURE_DATA_REQ=534 Invalid option. Secure data connection required for implicit SFTP.
+IDS_FTPRESP_PATHNAME_PERMISSION_DENIED=550 $PathName: Permission denied.
+IDS_FTPRESP_PATHNAME_NO_SUCH_FILE_OR_DIR=550 $PathName: No such file or directory.
+IDS_FTPRESP_FILE_DOES_NOT_EXIST=550 $PathName: No such file.
+IDS_FTPRESP_DIR_DOES_NOT_EXIST=550 $PathName: No such directory.
+IDS_FTPRESP_SERVER_STOP_PENDING=550 File transfers not allowed, server stop is pending.
+IDS_FTPRESP_FILE_IS_DIR=550 $PathName: Is a directory.
+IDS_FTPRESP_DIR_IS_FILE=550 $PathName: Is a file.
+IDS_FTPRESP_PATH_IS_PORT=550 $PathName: Is a port.
+IDS_FTPRESP_CANT_REST_EMPTY_FILE=550 Cannot RESTart in zero-length file.
+IDS_FTPRESP_CANT_REST_BEYOND_EOF=550 Cannot RESTart beyond end-of-file.
+IDS_FTPRESP_CANT_SET_FILE_POS=550 Cannot position file at requested starting point.
+IDS_FTPRESP_NO_FILES_FOUND=550 No files found.
+IDS_FTPRESP_CANT_CHANGE_DATE_TIME=553 $PathName: Cannot change date/time.
+IDS_FTPRESP_RNTO_ALREADY_EXISTS=550 $PathName: Destination path already exists, unable to rename.
+
+// general FTP command strings
+IDS_FTPCMND_BINARY=BINARY
+IDS_FTPCMND_ASCII=ASCII
+IDS_UNLIMITED=unlimited
+IDS_NA=N/A
+IDS_USER=user
+IDS_SESSION=session
+IDS_FILES=files
+IDS_KB=KB
+
+// OPTS messages
+IDS_FTPRESP_OPTS_SYNTAX=OPTS <sp> subcommand <sp> parameters (configures options for subcommands)
+IDS_FTPRESP_OPTS_INVALID_OPTION=501 '$Parameters': option not understood.
+IDS_FTPRESP_OPTS_INVALID_SUBCOMMAND=501 '$Parameters': '$Command' options not understood.
+
+// OPTS MODE messages
+IDS_FTPCMND_OPTS_MODE_SYNTAX=OPTS <sp> MODE <sp> Z <sp> LEVEL <sp> value(1-9) (sets the zLib compression level)
+IDS_FTPRESP_OPTS_MODE_Z=200 MODE Z LEVEL set to $CommandResult.
+
+// OPTS MLST messages
+IDS_FTPCMND_OPTS_MLST_SYNTAX=OPTS <sp> MLST <sp> option;[additional options] (specifies MLST/MLSD options for standardize directory listings)
+IDS_FTPRESP_OPTS_MLST_OPTS=200 MLST OPTS
+IDS_FTPRESP_OPTS_MLST_INVALID_OPTIONS=501 Invalid MLST options.
+
+// OPTS UTF8 messages
+IDS_FTPCMND_OPTS_UTF8_SYNTAX=OPTS <sp> UTF8 <sp> ON|OFF (enable or disable UTF-8 support; ON enables UTF-8 support; OFF disables UTF-8 path support)
+IDS_FTPRESP_OPTS_UTF8=200 OPTS UTF8 is set to $CommandResult.
+
+// CLNT messages
+IDS_FTPCMND_CLNT_SYNTAX=CLNT [<sp> ftp client name and version] (identify client to the server)
+IDS_FEATDESC_CLNT=CLNT
+IDS_FTPRESP_CLIENT_NOTED=200 Noted.
+
+// CSID messages
+IDS_FTPCMND_CSID_SYNTAX=CSID [<sp> Name=ClientName;] [<sp> Version=3.0.0.16;] (identify the client to the server and the server to the client)
+IDS_FEATDESC_CSID=CSID Name; Version;
+IDS_FTPRESP_CSID_OKAY=200 Name=$ServerName; Version=$ServerVersionLong; OS=$OS; OSVer=$OSVer; CaseSensitive=0;
+
+// MODE messages
+IDS_FTPCMND_MODE_SYNTAX=MODE <sp> S|Z (standard or zLib compression)
+IDS_FEATDESC_MODE=MODE Z
+IDS_FTPRESP_MODE_OKAY=200 MODE $CommandResult ok.
+
+// NOOP messages
+IDS_FTPCMND_NOOP_SYNTAX=NOOP (no operation)
+
+// HELP messages
+IDS_FTPCMND_HELP_SYNTAX=HELP [<sp> command] (list all commands, or specific information about a command)
+IDS_FTPRESP_HELP_INVALID_COMMAND=501 '$Parameters': HELP unknown command.
+IDS_FTPRESP_HELP_UNAVAIL=501 '$Parameters': help is unavailable for this command.
+IDS_FTPRESP_HELP_SYNTAX=214 Syntax: $CommandResult
+IDS_FTPRESP_HELP_FIRST=214-The following commands are recognized (* => unimplemented).
+IDS_FTPRESP_HELP_LAST=214 End
+
+// FEAT messages
+IDS_FTPCMND_FEAT_SYNTAX=FEAT (list server extension commands)
+IDS_FTPRESP_FEAT_FIRST=211-Extensions supported
+IDS_FTPRESP_FEAT_LAST=211 End (for details use "HELP commmand" where command is the command of interest)
+
+// HOST messages
+IDS_FTPCMND_HOST_SYNTAX=HOST <sp> domain (select a domain prior to logging in)
+IDS_FEATDESC_HOST=HOST domain
+IDS_FTPRESP_HOST_INVALID_PARAMETER=504 Invalid parameter.
+IDS_FTPRESP_HOST_DOMAIN_NOT_FOUND=530 Domain (host) not found.
+IDS_FTPRESP_HOST_ALREADY_LOGGED_IN=530 Not in authorization state, already logged in.
+IDS_FTPRESP_HOST_UNAUTHORIZED_IP=530 Domain (host) not changed, unauthorized IP address.
+
+// USER messages
+IDS_FTPCMND_USER_SYNTAX=USER <sp> username (login as username)
+IDS_FTPRESP_USER_LOGGED_IN=230 User logged in.
+IDS_FTPRESP_USER_NAME_OKAY_NEED_PASSWORD=331 User name okay, need password.
+IDS_FTPRESP_USER_NAME_OKAY_NEED_EMAILADDR=331 User name okay, please send complete E-mail address as password.
+IDS_FTPRESP_USER_OKAY_SKEY_PASSWORD=331 Response to otp-md$CommandResult required for skey.
+IDS_FTPRESP_USER_NO_ANONYMOUS=530 Sorry, no ANONYMOUS access allowed.
+IDS_FTPRESP_USER_NEED_SECURE=530 Not logged in, need secure connection.
+IDS_FTPRESP_USER_INVALID=530 Invalid user name.
+
+// PASS messages
+IDS_FTPCMND_PASS_SYNTAX=PASS <sp> password (complete user login with password)
+IDS_FTPRESP_PASS_OKAY=230 User logged in, proceed.
+IDS_FTPRESP_PASS_PASSWORD_EXPIRED_CHANGE=233 User logged in, PASSWORD EXPIRED - please change before proceeding.
+IDS_FTPRESP_PASS_CANT_FIND_HOME=530 Not logged in, cannot find home directory.
+IDS_FTPRESP_PASS_USE_REAL_EMAIL_ADDR=530 Not logged in, use real E-mail address as password.
+IDS_FTPRESP_PASS_NO_FTP=530 FTP is not allowed for this user account.  Please contact your system administrator for information about how to use this server.
+IDS_FTPRESP_REVERSE_DNS_NAME_REQUIRED_TO_LOGIN=530 Not logged in, the system administrator has disallowed login from computers without a reverse DNS name.
+IDS_FTPRESP_USER_UNAVAILABLE=530 Not logged in, this user account is currently unavailable.
+
+// REIN messages
+IDS_FTPCMND_REIN_SYNTAX=REIN (logout keeping transfers running, await a new login)
+IDS_FTPRESP_REIN_OKAY=220 Service ready for new user.
+
+// QUIT messages
+IDS_FTPCMND_QUIT_SYNTAX=QUIT (logout stops running transfers, closes command channel)
+IDS_FTPRESP_QUIT_OKAY=221 Goodbye, closing session.
+
+// ABOR messages
+IDS_FTPCMND_ABOR_SYNTAX=ABOR (aborts the current operation)
+IDS_FTPRESP_ABOR_OKAY=226 Abort successful.
+
+// SYST messages
+IDS_FTPCMND_SYST_SYNTAX=SYST (returns the system type)
+IDS_FTPRESP_SYST_OKAY=215 UNIX Type: L8
+
+// STAT messages
+IDS_FTPCMND_STAT_SYNTAX=STAT [<sp> pathname] (status of current user or file status)
+IDS_FTPRESP_STAT_FIRST=211-Status for user $Name from $IP:\r\nConnected for $TConM minutes, $TConS seconds\r\n$UserLoggedIn logins, $UserSessions24H in the past 24 hours.\r\nStored $FUp files, $BUp KB, $UserUploadAvgKBps KB/sec average\r\nRetrieved $FDown files, $BDown KB, $UserDownloadAvgKBps KB/sec average\r\nCurrent transfer mode is $DataMode
+IDS_FTPRESP_STAT_LAST=211 End of status.
+IDS_FTPCMND_STAT_RATIO=Using UL/DL ratio $RatioUp/$RatioDown, $RatioCreditType per $RatioType
+IDS_FTPCMND_STAT_RATIO_CREDIT=Current UL/DL ratio credit $RatioCredit $RatioCreditType per $RatioType
+IDS_FTPCMND_STAT_QUOTA=Maximum disk quota limited to $QuotaMax MB\r\nUsed disk quota $QuotaUsed MB, available $QuotaLeft MB
+IDS_FTPCMND_STAT_ACTIVE_UPLOAD=Receiving file $PathName ($TransferBytes Bytes)
+IDS_FTPCMND_STAT_ACTIVE_DOWNLOAD=Sending file $PathName ($FileSize of $TransferBytes Bytes)
+
+// AUTH messages
+IDS_FTPCMND_AUTH_SYNTAX=AUTH <sp> TLS|SSL|TLS-C|TLS-P (begin secure SSL connection)
+IDS_FEATDESC_AUTH=AUTH TLS;SSL;TLS-C;TLS-P;
+IDS_FTPRESP_AUTH_OKAY_INITIALIZING_SSL=234 AUTH command OK. Initializing SSL connection.
+IDS_FTPRESP_AUTH_OKAY_ALREADY_HAVE_SSL=234 AUTH command OK. Already have SSL connection.
+IDS_FTPRESP_AUTH_UNKNOWN_MECHANISM=504 Unknown security mechanism.
+IDS_FTPRESP_AUTH_CANT_OPEN_CERT_FILE=504 SSL SERVER CONFIGURATION ERROR: Can't open certificate file.
+IDS_FTPRESP_AUTH_CANT_OPEN_PRIVATE_KEY_FILE=504 SSL SERVER CONFIGURATION ERROR: Can't open private key file.
+IDS_FTPRESP_AUTH_CANT_LOAD_TRUSTED_CA_FILE=504 SSL SERVER CONFIGURATION ERROR: Can't load trusted certificate authority file.
+
+// PBSZ messages
+IDS_FTPCMND_PBSZ_SYNTAX=PBSZ [<sp> size] (set the protection buffer size, ignored by Serv-U)
+IDS_FEATDESC_PBSZ=PBSZ
+IDS_FTPRESP_PBSZ_IS_ZERO=200 PBSZ=0
+IDS_FTPRESP_PBSZ_SET_TO=200 PBSZ command OK. Protection buffer size set to 0.
+IDS_FTPRESP_PBSZ_SSL_REQ_BEFORE=503 Secure command connection required prior to PBSZ command.
+
+// PROT messages
+IDS_FTPCMND_PROT_SYNTAX=PROT <sp> P|C (set the protection channel; P = command and data channels; C = command channel only)
+IDS_FEATDESC_PROT=PROT
+IDS_FTPRESP_PROT_P_OKAY=200 PROT command OK. Using private data connection.
+IDS_FTPRESP_PROT_C_OKAY=200 PROT command OK. Using clear data connection.
+IDS_FTPRESP_PROT_COMMAND_NOT_SECURE=503 Secure command connection required prior to PROT command.
+IDS_FTPRESP_PROT_CANNOT_OPEN_DATA=521 Data connection cannot be opened with this PROT setting.
+
+// CCC messages
+IDS_FTPCMND_CCC_SYNTAX=CCC (clear command channel, switch the command channel to use clear text)
+IDS_FEATDESC_CCC=CCC
+IDS_FTPRESP_CCC_OKAY=200 Command channel switched to clear-text.
+IDS_FTPRESP_CCC_COMMAND_NOT_SECURE=533 SSL command connection required prior to CCC command.
+
+// SSCN messages
+IDS_FTPCMND_SSCN_SYNTAX=SSCN <sp> ON|OFF (set secure client notification; ON = negotiate as an SSL client; OFF = normal, act as SSL server)
+IDS_FEATDESC_SSCN=SSCN
+IDS_FTPRESP_SSCN_SERVER_METHOD=200 SSCN:SERVER METHOD
+IDS_FTPRESP_SSCN_CLIENT_METHOD=200 SSCN:CLIENT METHOD
+
+// CWD messages
+IDS_FTPCMND_CWD_SYNTAX=$Command <sp> pathname (change working directory to pathname)
+IDS_FTPRESP_CWD_DIR_CHANGED=250 Directory changed to $PathName
+IDS_FTPRESP_CWD_CANNOT_CHANGE_PATH_TO_PORT=550 Cannot change path to a port.
+
+// CDUP messages
+IDS_FTPCMND_CDUP_SYNTAX=$Command (change working directory up one directory (same as "CWD .."))
+
+// PWD messages
+IDS_FTPCMND_PWD_SYNTAX=$Command (returns current working directory)
+IDS_FTPRESP_PWD_OKAY=257 "$PathName" is current directory.
+
+// MKD messages
+IDS_FTPCMND_MKD_SYNTAX=$Command <sp> pathname (creates the specified directory)
+IDS_FTPRESP_MKD_OKAY=257 "$PathName" directory created.
+IDS_FTPRESP_MKD_UNABLE_TO_CREATE=550 $PathName: Failed to create.
+IDS_FTPRESP_MKD_CANNOT_CREATE_PORT=550 Cannot create a port.
+IDS_FTPRESP_MKD_ALREADY_EXISTS=550 $PathName: Already exists, failed to create.
+
+// RMD messages
+IDS_FTPCMND_RMD_SYNTAX=$Command <sp> pathname (deletes (removes) the specified directory)
+IDS_FTPRESP_RMD_OKAY=250 $Command command successful.
+IDS_FTPRESP_RMD_CANNOT_DELETE_DIRECTORY=550 $PathName: Cannot delete directory.
+IDS_FTPRESP_RMD_CANNOT_REMOVE_PORT=550 Cannot remove a port.
+
+// RMDA messages
+IDS_FTPCMND_RMDA_SYNTAX=$Command <sp> pathname (deletes (removes) the specified directory and its contents)
+IDS_FEATDESC_RMDA=RMDA directoryname
+
+// PORT messages
+IDS_FTPCMND_PORT_SYNTAX=PORT <sp> h1,h2,h3,h4,p1,p2 (create a data connection to IP address h1.h2.h3.h4 on port ((p1 * 256) + p2))
+IDS_FTPRESP_PORT_OKAY=200 PORT command successful.
+IDS_FTPRESP_PORT_ONLY_CLIENT_IP_ALLOWED=530 Only client IP address allowed for PORT command.
+IDS_FTPRESP_PORT_INVALID_PORT_NUMBER=530 Port number has to be between 1024 and 65535.
+IDS_FTPRESP_PORT_BAD_SEQUENCE_OF_COMMANDS=530 PORT command unavailable due to EPSV ALL request.  Reconnect to use PORT.
+
+// EPRT messages
+IDS_FTPCMND_EPRT_SYNTAX=EPRT <sp> <d><net-prt><d><net-addr><d><tcp-port><d> (create a data connection to IP address <net-prt> on port <tcp-port>)
+IDS_FEATDESC_EPRT=EPRT
+IDS_FTPRESP_EPRT_OKAY=200 EPRT command successful.
+IDS_FTPRESP_EPRT_ONLY_CLIENT_IP_ALLOWED=530 Only client IP address allowed for EPRT command.
+IDS_FTPRESP_EPRT_INVALID_PORT_NUMBER=530 Port number has to be between 1024 and 65535.
+IDS_FTPRESP_EPRT_PROTOCOL_NOT_SUPPORTED=522 Network protocol not supported, use (1,2)
+IDS_FTPRESP_EPRT_BAD_SEQUENCE_OF_COMMANDS=530 EPRT command unavailable due to EPSV ALL request.  Reconnect to use EPRT.
+
+// PASV messages
+IDS_FTPCMND_PASV_SYNTAX=PASV (returns address and port for a new data connection)
+IDS_FTPRESP_PASV_OKAY=227 Entering Passive Mode ($CommandResult)
+IDS_FTPRESP_PASV_UNABLE_TOSETUP_LISTEN_SOCK=425 Unable to set up passive listening socket.
+IDS_FTPRESP_PASV_TOO_MANY_PASV_REQUESTS=425 Unable to listen, too many pending PASV/EPSV requests.
+IDS_FTPRESP_PASV_ONLY_CLIENT_IP_ALLOWED=530 Only client IP address allowed to connect to PASV socket.
+IDS_FTPRESP_PASV_BAD_SEQUENCE_OF_COMMANDS=530 PASV command unavailable due to EPSV ALL request.  Reconnect to use PASV.
+
+// EPSV messages
+IDS_FTPCMND_EPSV_SYNTAX=EPSV <sp> <net-prt> (returns address and port for a new data connection)
+IDS_FEATDESC_EPSV=EPSV
+IDS_FTPRESP_EPSV_OKAY=229 Entering Extended Passive Mode ($CommandResult)
+IDS_FTPRESP_EPSV_UNABLE_TOSETUP_LISTEN_SOCK=425 Unable to set up extended passive listening socket.
+IDS_FTPRESP_EPSV_TOO_MANY_PASV_REQUESTS=425 Unable to listen, too many pending PASV/EPSV requests.
+IDS_FTPRESP_EPSV_ONLY_CLIENT_IP_ALLOWED=530 Only client IP address allowed to connect to EPSV socket.
+IDS_FTPRESP_EPSV_PROTOCOL_NOT_SUPPORTED=522 Network protocol not supported, use (1,2)
+IDS_FTPRESP_EPSV_PROTOCOL_1_NOT_SUPPORTED=522 Network protocol not supported, use (2)
+IDS_FTPRESP_EPSV_PROTOCOL_2_NOT_SUPPORTED=522 Network protocol not supported, use (1)
+
+// TYPE messages
+IDS_FTPCMND_TYPE_SYNTAX=TYPE <sp> type-code (A = ASCII; I = Image (binary))
+IDS_FTPRESP_TYPE_SET_A=200 Type set to A.
+IDS_FTPRESP_TYPE_SET_I=200 Type set to I.
+
+// RETR messages
+IDS_FTPCMND_RETR_SYNTAX=RETR <sp> pathname (begin sending the file "pathname")
+IDS_FTPRESP_RETR_OPENING_DATA_CONNECTION=150 Opening $DataMode mode data connection for $FileName ($FileSize Bytes).
+IDS_FTPRESP_RETR_DATA_CONN_CLOSED_BY_CLIENT=426 Data connection closed, file transfer $PathName aborted by client.
+IDS_FTPRESP_RETR_CANT_OPEN_FILE=450 Cannot open file $PathName for reading.
+IDS_FTPRESP_RETR_INSUFFICIENT_CREDIT=550 Sorry, insufficient credit for download - upload first.
+
+// STOR messages
+IDS_FTPCMND_STOR_SYNTAX=STOR <sp> pathname (begin receiving the file "pathname")
+IDS_FTPRESP_STOR_OPENING_DATA_CONNECTION=150 Opening $DataMode mode data connection for $FileName.
+IDS_FTPRESP_STOR_CANT_WRITE=426 Data connection closed, cannot write file $PathName - disk full?
+IDS_FTPRESP_STOR_INSUFFICIENT_DISK_QUOTA=452 Maximum disk quota limited to $QuotaMax MB\r\nUsed disk quota $QuotaUsed MB, available $QuotaLeft MB\r\nSorry, insufficient disk quota - receive file $PathName aborted.
+IDS_FTPRESP_STOR_INSUFFICIENT_DISK_SPACE=452 Sorry, insufficient disk space available - receive file $PathName aborted.
+IDS_FTPRESP_STOR_FILE_TOO_LARGE=452 Sorry, file size is too large - receive file $PathName aborted.
+IDS_FTPRESP_STOR_CANT_CREATE_FILE=550 $PathName: Cannot create file.
+
+// STOU messages
+IDS_FTPCMND_STOU_SYNTAX=STOU (begin receiving a file, creates a unique file name)
+IDS_FTPRESP_STOU_OPENING_DATA_CONNECTION=150 FILE: $PathName
+IDS_FTPRESP_STOU_CANT_CREATE_UNIQUE_NAME=550 Cannot create unique file name.
+
+// THMB messages
+IDS_FTPCMND_THMB_SYNTAX=THMB <sp> BMP|JPEG|GIF|TIFF|PNG (output type) <sp> max_width <sp> max_height <sp> pathname (returns a thumbnail image of pathname)
+IDS_FEATDESC_THMB=THMB BMP|JPEG|GIF|TIFF|PNG max_width max_height pathname
+IDS_FTPRESP_THMB_OPENING_DATA_CONNECTION=150 Opening thumbnail image transfer BINARY mode data connection ($FileSize Bytes) for $FileName.
+IDS_FTPRESP_THMB_CANT_LOAD_GDI_PLUS=550 Unable to load required software for thumbnail creation.
+IDS_FTPRESP_THMB_CANT_CREATE_THUMBNAIL=550 Cannot create thumbnail image, try using different parameters.
+IDS_FTPRESP_THMB_CANT_SAVE_THUMBNAIL=550 Cannot save thumbnail image.
+
+// STRU messages
+IDS_FTPCMND_STRU_SYNTAX=STRU <sp> F|R (sets file structure)
+IDS_FTPRESP_STRU_F_OKAY=200 STRU F ok.
+IDS_FTPRESP_STRU_R_OKAY=200 STRU R ok.
+IDS_FTPRESP_STRU_P_OKAY=200 STRU P ok.
+
+// APPE messages
+IDS_FTPCMND_APPE_SYNTAX=APPE <sp> pathname (begin appending to the file "pathname")
+IDS_FTPRESP_APPE_CANT_RESTART=550 Cannot RESTart at any position while APPEnding to a file.
+
+// ALLO messages
+IDS_FTPCMND_ALLO_SYNTAX=ALLO <sp> bytes_required (check if ""bytes_required"" bytes are available on the current disk drive)
+IDS_FTPRESP_ALLO_OKAY=200 Command OK, $FileSize Bytes available in "$PathName"
+IDS_FTPRESP_ALLO_NOT_ENOUGH_SPACE=501 Not enough space, only $FileSize Bytes available in "$PathName"
+
+// REST messages
+IDS_FTPCMND_REST_SYNTAX=REST <sp> byte_count (sets the starting position within a file for transfers)
+IDS_FEATDESC_REST=REST STREAM
+IDS_FTPRESP_REST_RESTARTING_AT=350 Restarting at $CommandResult. Send STORE or RETRIEVE.
+
+// SIZE messages
+IDS_FTPCMND_SIZE_SYNTAX=SIZE <sp> pathname (returns the size, in bytes, of pathname)
+IDS_FEATDESC_SIZE=SIZE
+IDS_FTPRESP_SIZE_OKAY=213 $FileSize
+IDS_FTPRESP_SIZE_CANT_GET_SIZE_OF_PORT=550 Cannot determine size of a port.
+
+// DSIZ messages
+IDS_FTPCMND_DSIZ_SYNTAX=DSIZ [<sp> dirpath] (returns the number of bytes in the directory or current working directory, including sub directories)
+IDS_FEATDESC_DSIZ=DSIZ
+IDS_FTPRESP_DSIZ_OKAY=213 $FileSize
+IDS_FTPRESP_DSIZ_CANT_GET_SIZE_OF_PORT=550 Cannot determine size of a port.
+
+// AVBL messages
+IDS_FTPCMND_AVBL_SYNTAX=AVBL [<sp> dirpath] (returns the number of bytes available for uploading in the directory or current working directory)
+IDS_FEATDESC_AVBL=AVBL
+IDS_FTPRESP_AVBL_OKAY=213 $FileSize
+IDS_FTPRESP_AVBL_CANT_GET_AVBL_OF_PORT=550 Cannot determine the number of available bytes of a port.
+
+// RNFR messages
+IDS_FTPCMND_RNFR_SYNTAX=RNFR <sp> pathname (specifies the old file name to use for the rename (RNTO) operation)
+IDS_FTPRESP_RNFR_OKAY=350 File or directory exists, ready for destination name.
+
+// RNTO messages
+IDS_FTPCMND_RNTO_SYNTAX=RNTO <sp> pathname (rename or move the file specified by the RNFR command)
+IDS_FTPRESP_RNTO_OKAY=250 RNTO command successful.
+IDS_FTPRESP_RNTO_CANNOT_RENAME_TO_PORT=550 Cannot rename to a port.
+IDS_FTPRESP_RNTO_UNABLE_TO_RENAME=553 $PathName: Unable to rename file or directory.
+
+// DELE messages
+IDS_FTPCMND_DELE_SYNTAX=$Command <sp> pathname (delete the file specified by pathname)
+IDS_FTPRESP_DELE_OKAY=250 $Command command successful.
+IDS_FTPRESP_DELE_CANNOT_DELETE_FILE=550 $PathName: Cannot delete file.
+IDS_FTPRESP_DELE_CANNOT_DELETE_A_PORT=550 Cannot delete a port.
+
+// MDTM messages
+IDS_FTPCMND_MDTM_SYNTAX=MDTM <sp> pathname (returns the modification time of a file or directory)\r\nMDTM <sp> YYYYMMDDHHMMSS[+-TZ];pathname (sets UTC date and time of a file)
+IDS_FEATDESC_MDTM=MDTM\r\nMDTM YYYYMMDDHHMMSS[+-TZ];filename
+IDS_FTPRESP_MDTM_OKAY=213 $CommandResult
+IDS_FTPRESP_MDTM_DATE_TIME_CHANGE_OKAY=253 Date/time changed okay.
+IDS_FTPRESP_MDTM_CANT_DETERMINE_DATE_TIME=550 $PathName: Cannot determine date/time.
+IDS_FTPRESP_MDTM_CANT_DO_PORT=550 Cannot determine date/time for a port.
+IDS_FTPRESP_MDTM_CANT_SET_TO_FUTURE=550 File date/time cannot be set to future.
+
+// XCRC messages
+IDS_FTPCMND_XCRC_SYNTAX=XCRC <sp> pathname [<sp> start <sp> end] (returns the XCRC value for a file on the server)
+IDS_FEATDESC_XCRC=XCRC filename;start;end
+IDS_FTPRESP_XCRC_OKAY=250 $CommandResult
+IDS_FTPRESP_XCRC_CANNOT_READ_FROM_FILE=550 Cannot read requested number of bytes from file.
+
+// LIST messages
+IDS_FTPCMND_LIST_SYNTAX=$Command [<sp> parameters <sp> pathname] (returns a directory listing on the data channel)
+IDS_FTPRESP_LIST_OKAY=150 Opening ASCII mode data connection for /bin/ls.
+IDS_FTPRESP_LIST_CANNOT_LIST_PORT=550 Cannot list port.
+IDS_FTPRESP_LIST_DATA_CONN_CLOSED_ABORTED=426 Data connection closed, listing for $PathName aborted.
+
+// NLST messages
+IDS_FTPCMND_NLST_SYNTAX=NLST [<sp> parameters <sp> pathname] (returns a file listing on the data channel)
+
+// MLST messages
+IDS_FTPCMND_MLST_SYNTAX=MLST <sp> pathname (returns a single file listing on the command channel)
+IDS_FEATDESC_MLST=MLST Type*;Size*;Create;Modify*;Perm;Win32.ea;Win32.dt;Win32.dl
+IDS_FTPRESP_MLST_OKAY=250-Listing $PathName\r\n$CommandResult\r\nEnd
+
+// MLSD messages
+IDS_FTPCMND_MLSD_SYNTAX=MLSD [<sp> pathname] (returns a directory listing on the data channel)
+IDS_FTPRESP_MLSD_OKAY=150 Opening BINARY mode data connection for MLSD.
+IDS_FTPRESP_MLSD_WILDCARDS_NOT_ALLOWED=501 Wildcards not allowed.
+IDS_FTPRESP_MLSD_PATHNAME_NOT_DIRECTORY=501 $PathName: Not a directory.
+
+// SITE messages
+IDS_FTPCMND_SITE_SYNTAX=SITE <sp> subcommand <sp> parameters (issues a server specific FTP command)
+
+// SITE PSWD messages
+IDS_FTPCMND_SITE_PSWD_SYNTAX=SITE <sp> PSWD <sp> oldpassword <sp> newpassword (changes the password for the current user account)
+IDS_FTPRESP_SITE_PSWD_OKAY=230 Password changed okay.
+IDS_FTPRESP_SITE_PSWD_NO_OLD_PASSWORD_MATCH=431 Password not changed, no match for old password.
+IDS_FTPRESP_SITE_PSWD_PASSWORD_TOO_SHORT=432 Password not changed, new password should be at least $CommandResult characters long.
+IDS_FTPRESP_SITE_PSWD_NOT_COMPLEX=432 Password not changed, new password should contain at least one upper-case character and symbol
+IDS_FTPRESP_SITE_PSWD_OLD_NEW_MATCH=432 Password not changed, old and new passwords cannot be identical.
+IDS_FTPRESP_SITE_PSWD_INVALID_PARAMETERS=502 Syntax error - use SITE PSWD "<oldpassword>" "<newpassword>".
+IDS_FTPRESP_SITE_PSWD_CANT_CHANGE_PASSWORD=530 Cannot change password.
+IDS_FTPRESP_SITE_PSWD_CANT_CHANGE_ANONYMOUS=530 Cannot change Anonymous password.
+
+// SITE SET TRANSFERPROGRESS messages
+IDS_FTPCMND_SITE_SET_SYNTAX=SITE <sp> SET <sp> TRANSFERPROGRESS <sp> ON|OFF (turns unsolicited transfer progress notification on or off)
+IDS_FTPRESP_SITE_SET_TRANSFER_PROG_OKAY=200 Transfer progress notification is $CommandResult.
+
+// SITE ZONE messages
+IDS_FTPCMND_SITE_ZONE_SYNTAX=SITE <sp> ZONE (returns the server's time zone difference from UTC)
+IDS_FTPRESP_SITE_ZONE_OKAY=210 UTC$CommandResult
+IDS_FTPRESP_SITE_ZONE_CANT_GET_TZ=510 Cannot determine server time zone.
+
+// SITE CHMOD messages
+IDS_FTPCMND_SITE_CHMOD_SYNTAX=SITE <sp> CHMOD <sp> permissions <sp> pathname (changes file permissions for the file, permissions match UNIX "777" format)
+IDS_FTPRESP_SITE_CHMOD_OKAY=253 $PathName: Attributes changed okay.
+IDS_FTPRESP_SITE_CHMOD_CANT_CHANGE=553 $PathName: Cannot change attributes.
+
+// SITE MSG messages
+IDS_FTPCMND_SITE_MSG_SYNTAX=SITE <sp> MSG <sp> message (sends a message to the server SysOp)
+IDS_FTPRESP_SITE_MSG_OKAY=200 Message received okay.
+
+// SITE EXEC messages
+IDS_FTPCMND_SITE_EXEC_SYNTAX=SITE <sp> EXEC <sp> pathname (executes a program on the server)
+IDS_FTPRESP_SITE_EXEC_OKAY=200 EXEC command successful (TID=$CommandResult).
+IDS_FTPRESP_SITE_EXEC_COMMAND_LINE=501 Cannot EXEC command line (error=$CommandResult).
+IDS_FTPRESP_SITE_EXEC_PORTS=550 Cannot EXEC a port.
+
+// MFMT messages
+IDS_FTPCMND_MFMT_SYNTAX=MFMT <sp> time-val <sp> pathname (sets the file modification time (in UTC) of a file or directory)
+IDS_FEATDESC_MFMT=MFMT
+IDS_FTPRESP_MFMT_OKAY=213 Modify=$CommandResult; $PathName
+
+// MFCT messages
+IDS_FTPCMND_MFCT_SYNTAX=MFCT <sp> time-val <sp> pathname (sets the file creation time (in UTC) of a file or directory)
+IDS_FEATDESC_MFCT=MFCT
+IDS_FTPRESP_MFCT_OKAY=213 Create=$CommandResult; $PathName
+
+// MFF messages
+IDS_FTPCMND_MFF_SYNTAX=MFF <sp> fact=fact-value; <sp> pathname (sets the file creation or modification time (in UTC) of a file or directory)
+IDS_FEATDESC_MFF=MFF Create;Modify;
+IDS_FTPRESP_MFF_OKAY=213 $CommandResult $PathName
+IDS_FTPRESP_MFF_INVALID_FACT=504 Invalid fact: $CommandResult
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-SSH string table
+
+// TRANSLATOR: please translate this to the two letter abreviation of your language, zh-Simplified Chinese, fr-French, de-German, etc.
+IDS_SSH_LANGUAGE=en
+
+// authentication
+IDS_SSH_PROTERR_PASSWORD_EXPECTED=SSH Protocol Error: password expected during authentication.
+IDS_SSH_PROTERR_EXPECTED_AUTH_TYPE=SSH Protocol Error: authorization type expected.
+IDS_SSH_PROTERR_EXPECTED_PUBLIC_KEY_AUTH=SSH Protocol Error: public key authentication packet malformed.
+IDS_SSH_PROTERR_EXPECTED_SSH_CONNECTION=SSH Protocol Error: ssh-connection expected.
+IDS_SSH_PROTERR_PACKET_TOO_LARGE=SSH Protocol Error: packet size exceeds maximum allowed.
+IDS_SSH_INVALID_CLIENT_PROTOCOL_ID=SSH Protocol Error: invalid client protocol identification.
+IDS_SSH_UNABLE_TO_CHOOSE_CRYPTOS=SSH Protocol Error: unable to choose cryptos.
+IDS_SSH_UNABLE_TO_USE_CLIENT_KEYS_SIG=SSH Protocol Error: unable to use the client keys, (signature).
+IDS_SSH_INVALID_KEY_EXCHANGE_VALUE=SSH Protocol Error: invalid key exchange value.
+IDS_SSH_INVALID_STATE=SSH Protocol Error: invalid state for the command from the client.
+IDS_SSH_INVALID_PUBLIC_KEY=SSH Protocol Error: invalid public key value from the client.
+IDS_SSH_INVALID_SERVICE_REQUEST=SSH Protocol Error: invalid service request, ssh-userauth was expected.
+IDS_SSH_CLIENT_DISCONNECT_REQUEST_FMT=SSH Protocol Error: client has requested a disconnect, key exchange may be incorrect.  Reason code: %d
+IDS_SSH_INVALID_GLOBAL_REQUEST=SSH Protocol Error: invalid global request.
+
+// channel results
+IDS_SSH_CHANNEL_FAILURE=SSH channel failure, closing session.
+
+// SSH_FXP_STAT error strings
+IDS_SSH_FX_OK=Success.
+IDS_SSH_FX_EOF=End of file.
+IDS_SSH_FX_NO_SUCH_FILE=No such file.
+IDS_SSH_FX_PERMISSION_DENIED=Permission denied.
+IDS_SSH_FX_FAILURE=Failure.
+IDS_SSH_FX_BAD_MESSAGE=Bad message.
+IDS_SSH_FX_NO_CONNECTION=No connection.
+IDS_SSH_FX_CONNECTION_LOST=Connection lost.
+IDS_SSH_FX_OP_UNSUPPORTED=Operation unsupported.
+IDS_SSH_FX_INVALID_HANDLE=Invalid handle.
+IDS_SSH_FX_NO_SUCH_PATH=No such path.
+IDS_SSH_FX_FILE_ALREADY_EXISTS=File already exists.
+IDS_SSH_FX_WRITE_PROTECT=Write protected.
+IDS_SSH_FX_NO_MEDIA=No media.
+IDS_SSH_FX_NO_SPACE_ON_FILESYSTEM=No space available.
+IDS_SSH_FX_QUOTA_EXCEEDED=Qutoa has been exceeded.
+IDS_SSH_FX_UNKNOWN_PRINCIPLE=Unknown principle.
+IDS_SSH_FX_LOCK_CONFlICT=Lock conflict.
+IDS_SSH_FX_DIR_NOT_EMPTY=Directory is not empty.
+IDS_SSH_FX_NOT_A_DIRECTORY=Specified path is not a directory.
+IDS_SSH_FX_INVALID_FILENAME=Invalid file name.
+IDS_SSH_FX_LINK_LOOP=Link loop.
+IDS_SSH_FX_CANNOT_DELETE=Cannot delete.
+IDS_SSH_FX_INVALID_PARAMETER=Invalid parameter.
+IDS_SSH_FX_FILE_IS_A_DIRECTORY=Specified file is a directory.
+IDS_SSH_FX_BYTE_RANGE_LOCK_CONFLICT=Byte range lock conflict.
+IDS_SSH_FX_BYTE_RANGE_LOCK_REFUSED=Byte range lock refused.
+IDS_SSH_FX_DELETE_PENDING=Delete is pending.
+IDS_SSH_FX_FILE_CORRUPT=File is corrupt.
+IDS_SSH_FX_OWNER_INVALID=Owner is invalid.
+IDS_SSH_FX_GROUP_INVALID=Group is invalid.
+IDS_SSH_FX_NO_MATCHING_BYTE_RANGE_LOCK=No matching byte range lock.
+IDS_SSH_FX_UNKNOWN_ERROR=Unknown error.
+
+// disconnect reason code
+IDS_SSHDIS_HOST_NOT_ALLOWED_TO_CONNECT=SSH Disconnect Error: host not allowed to connect.
+IDS_SSHDIS_PROTOCOL_ERROR=SSH Disconnect Error: protocol error.
+IDS_SSHDIS_KEY_EXCHANGE_FAILED=SSH Disconnect Error: key exchange failed.
+IDS_SSHDIS_HOST_AUTHENTICATION_FAILED=SSH Disconnect Error: host authentication failed.
+IDS_SSHDIS_MAC_ERROR=SSH Disconnect Error: MAC error.
+IDS_SSHDIS_COMPRESSION_ERROR=SSH Disconnect Error: compression error.
+IDS_SSHDIS_SERVICE_NOT_AVAILABLE=SSH Disconnect Error: service not available.
+IDS_SSHDIS_PROTOCOL_VERSION_NOT_SUPPORTED=SSH Disconnect Error: protocol version not supported.
+IDS_SSHDIS_HOST_KEY_NOT_VERIFIABLE=SSH Disconnect Error: host key not verifiable.
+IDS_SSHDIS_CONNECTION_LOST=SSH Disconnect Error: connection lost.
+IDS_SSHDIS_BY_APPLICATION=SSH Disconnect Error: disconnect by application.
+IDS_SSHDIS_TOO_MANY_CONNECTIONS=SSH Disconnect Error: too many connections.
+IDS_SSHDIS_AUTH_CANCELLED_BY_USER=SSH Disconnect Error: authorization cancelled by the user.
+IDS_SSHDIS_NO_MORE_AUTH_METHODS_AVAILABLE=SSH Disconnect Error: no more authentication methods available.
+IDS_SSHDIS_ILLEGAL_USER_NAME=SSH Disconnect Error: illegal user name.
+
+/////////////////////////////////////////////////////////////////////////////
+// HTTP strings
+
+// HTTP errors
+// DO NOT TRANSLATE THESE STRINGS, they are used internally only
+IDS_SU_HTTP_OK=HTTP OK
+IDS_SU_HTTP_CREATED=HTTP Created
+IDS_SU_HTTP_ACCEPTED=HTTP Accepted
+IDS_SU_HTTP_NO_CONTENT=HTTP No Content
+IDS_SU_HTTP_PARTIAL_CONTENT=HTTP Partial Content
+IDS_SU_HTTP_MOVED_PERMANENTLY=HTTP Moved Permanently
+IDS_SU_HTTP_MOVED_TEMPORARILY=HTTP Moved Temporarily
+IDS_SU_HTTP_NOT_MODIFIED=HTTP Not Modified
+IDS_SU_HTTP_BAD_REQUEST=HTTP Bad Request
+IDS_SU_HTTP_UNAUTHORIZED=HTTP Unauthorized
+IDS_SU_HTTP_FORBIDDEN=HTTP Forbidden
+IDS_SU_HTTP_NOT_FOUND=HTTP Not Found
+IDS_SU_HTTP_INTERNAL_SERVER_ERROR=HTTP Internal Server Error
+IDS_SU_HTTP_NOT_IMPLEMENTED=HTTP Not Implemented
+IDS_SU_HTTP_BAD_GATEWAY=HTTP Bad Gateway
+IDS_SU_HTTP_SERVICE_UNAVAILABLE=HTTP Service Unavailable
+
+// %TRANSLATION_NOT_OPTIONAL%
+
+// misc. strings
+IDS_SU_HTTP_ENCRYPTED=<< Encrypted >>
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Tray string table
+
+// tray pop-up menu
+IDS_SU_TRAY_MENU_START_ADMIN=Start &Management Console...
+IDS_SU_TRAY_MENU_START_SU=&Start Serv-U
+IDS_SU_TRAY_MENU_STOP_SU=&Stop Serv-U
+IDS_SU_TRAY_MENU_THEMES=&Themes
+IDS_SU_TRAY_MENU_SHOW_NOTIFICATIONS=&Display Notifications
+IDS_SU_TRAY_MENU_START_AUTOMATICALLY=Start Tray A&utomatically
+IDS_SU_TRAY_MENU_START_SERV_U_SERVICE=Start Serv-U as Ser&vice
+IDS_SU_TRAY_MENU_USE_BROWSER=Use System &Browser
+IDS_SU_TRAY_MENU_KB=&Knowledge Base...
+IDS_SU_TRAY_MENU_SUPPORT=T&echnical Support...
+IDS_SU_TRAY_MENU_ABOUT=&About Serv-U Tray...
+IDS_SU_TRAY_MENU_REGISTER=&Register...
+IDS_SU_TRAY_MENU_EXIT_TRAY=&Exit Tray
+
+// sub-menus
+IDS_SU_TRAY_MENU_DEFAULT_THEME=&Default
+IDS_SU_TRAY_MENU_DEFAULT_NO_ANI_THEME=D&efault Without Animation
+IDS_SU_TRAY_MENU_CLASSIC_THEME=&Classic Green U
+IDS_SU_TRAY_MENU_CUSTOM_THEME=C&ustom
+IDS_SU_TRAY_MENU_THEME_EDITOR=&Theme Editor...
+
+// server states
+IDS_SERVER_STATE_NOT_RUNNING=Not Running
+IDS_SERVER_STATE_RUNNING=Running
+IDS_SERVER_STATE_RUNNING_LISTEN_ERROR=Running, Listening Error
+IDS_SERVER_STATE_SESSION_CONNECTED=Connected Session
+IDS_SERVER_STATE_TRANSFERRING=Transferring
+IDS_SERVER_STATE_PAST_TRIAL=Serv-U Trial Expired
+
+// management console strings
+IDS_SERVER_UP_TIME_FMT=Server Up Time: %s days, %02d:%02d:%02d
+IDS_SERVER_SESSIONS_FMT=Sessions: %s current; %s past 24 hrs; %s total
+IDS_SERVER_TRANSFER_STATS_FMT=Up: %s; Down: %s
+IDS_SU_TRAY_BYTES_FMT=%s Bytes
+IDS_SU_TRAY_KB_FMT=%s KB
+IDS_SU_TRAY_MB_FMT=%s MB
+IDS_SU_TRAY_GB_FMT=%s GB
+IDS_SU_TRAY_DOMAINS_FMT=Domains: %s of %s online
+
+// tray tooltip strings
+IDS_SU_TRAY_TT_STATUS_FMT=Status: %s Up; %s Down; %s Session(s)
+IDS_SU_TRAY_TT_RECVD_FMT=Recv: %s; %s files(s)
+IDS_SU_TRAY_TT_SENT_FMT=Sent: %s; %s files(s)
+IDS_SU_TRAY_TT_BPS_FMT=%s Bytes/s
+IDS_SU_TRAY_TT_KBS_FMT=%s KB/s
+IDS_SU_TRAY_TT_MBS_FMT=%s MB/s
+IDS_SU_TRAY_TT_GBS_FMT=%s GB/s
+IDS_SU_TRAY_TT_64_CHARS_FMT=%s; %d Session(s); %s Sent; %s Recv
+IDS_SU_TRAY_TT_STOPPED=The Serv-U File Server is stopped.
+IDS_SU_TRAY_STATUS_CHANGED=Serv-U File Server Status
+IDS_SU_TRAY_STATUS_ONLINE=The Serv-U File Server is online.
+IDS_SU_TRAY_STATUS_OFFLINE=The Serv-U File Server is offline.
+IDS_SU_TRAY_UPDATE=New Version Available
+IDS_SU_TRAY_UPDATE_AVAILABLE=An update is available for Serv-U.  Click here for more information.
+IDS_SU_TRAY_STATUS_BETA_EXPIRED=This Serv-U Beta Build has expired.
+IDS_SU_TRAY_LICENSE_VIOLATION=Serv-U License Violation
+IDS_SU_TRAY_LICENSE_VIOLATION_NO_CONNS=A license violation has occurred.  Serv-U will not accept connections until resolved.
+
+// trial / reggie baloon tip strings
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_TITLE=Serv-U Trial Expired
+IDS_SU_TRAY_REGBAL_PAST_TRIAL_BODY=Your 30-day trial has expired.  Serv-U is no longer accepting connections.\r\n\r\nClick here to purchase Serv-U.
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_TITLE=Serv-U Trial Will Expire Soon
+IDS_SU_TRAY_REGBAL_NEAR_TRIAL_END_BODY_FMT=Your 30-day trial expires in %s days.  After the trial period, Serv-U will no longer accept connections.\r\n\r\nClick here to purchase Serv-U.
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_TITLE=Serv-U Update Period Nearing End
+IDS_SU_TRAY_REGBAL_NEAR_UPDATE_END_BODY_FMT=Your update period expires in %s days.  After the update period expires, you will not be able to use new versions of Serv-U.\r\n\r\nClick here to update your license.
+
+// misc. strings
+IDS_SU_TRAY_STATE=State
+IDS_SU_TRAY_IMAGES=Images
+IDS_TRAY_THEME_FILE_OPEN_FILTERS=Serv-U Tray Theme Files (*.SU-Theme)|*.SU-Theme|All Files (*.*)|*.*||
+IDS_TRAY_THEME_FILEARCH_OPEN_FILTERS=Serv-U Themes (*.SU-Theme; *.SU-Theme-Archive)|*.SU-Theme; *.SU-Theme-Archive|Serv-U Tray Theme Files (*.SU-Theme)|*.SU-Theme|Serv-U Tray Theme Archive Files (*.SU-Theme-Archive)|*.SU-Theme-Archive|All Files (*.*)|*.*||
+IDS_SERVU_THEMES_DIR=Serv-U Tray Themes
+IDS_TRAY_USER_THEME_DIR_TIP=Contains user defined Serv-U Tray Themes
+// CAUTION: do not exceed 255 characters for this (or any) string
+IDS_DELETE_CREATED_DIRS_FMT=Serv-U created directories that may contain data created by users on this computer.\r\n\r\nFor example:\r\n%s\r\n\r\nWould you like to delete these directories and the files they contain?
+IDS_UNABLE_TO_LOAD_SELECTED_THEME=Unable to load the selected theme file.
+IDS_UNABLE_TO_STORE_THEME=Unable to store the theme to the specified file.
+IDS_THEME_CHANGED_SAVE=You have made changes to this theme.\r\n\r\nDo you want to save this theme?
+IDS_SU_TRAY_FILE_NAME=File Name
+IDS_SU_TRAY_DURATION=Duration
+IDS_SU_TRAY_INVALID_ICON=The specified file is not recognized by Windows and may\r\nnot be a valid image file.  Please select a valid image file.
+IDS_TRAY_ALL_IMAGE_FILES=All Image Files
+IDS_TRAY_ALL_FILES=All Files
+IDS_TRAY_THEME_ARCHIVEFILE_OPEN_FILTERS=Serv-U Tray Theme Archive Files (*.SU-Theme-Archive)|*.SU-Theme-Archive|All Files (*.*)|*.*||
+IDS_UNABLE_TO_LOAD_ZLIB=Unable to load zlib1.dll.  Try reinstalling Serv-U.
+IDS_UNABLE_TO_CREATE_THEME_ARCHIVE_FILE=Unable to create the specified theme archive file.
+IDS_UNABLE_TO_OPEN_THEME_ARCHIVE_FILE=Unable to open the specified theme archive file.
+IDS_THEME_ARCHIVED=Theme stored to the specified archive file.
+IDS_THEME_IMPORTED=Theme imported from the specified archive file.
+IDS_THEME_FILE_DESC=Serv-U Theme File
+IDS_THEME_ARCHIVE_FILE_DESC=Serv-U Theme Archive File
+IDS_IMPORT_ARCHIVE_FILE=The file you have selected appears to be a Serv-U Theme Archive file.\r\n\r\nWould you like to import this file first?
+IDS_MANAGEMENT_CONSOLE=Serv-U Management Console
+IDS_TRAY_SERVER_NOT_LISTENING_HTTP_HTTPS=The Serv-U Engine is not listening for any HTTP or HTTPs requests.
+IDS_MANAGEMENT_CONSOLE_ALREADY_RUNNING=The Management Console is already running on this computer.\r\n\r\nEither login using a browser or close the other session.\r\nThis error usually appears when running RDP (Remote Desktop Protocol).
+IDS_USERS_ARE_CONNECTED_SERVICE_CHANGE=There are currently users connected to your server.  Changing the service mode will force Serv-U to restart, disconnecting these users.\r\n\r\nAre you sure you would like to make this change now?
+IDS_CANNOT_EXEC_SERVICE_SETTING_NOT_CHANGED=Cannot execute Serv-U.exe to change the service settings.\r\n\r\nIf User Access Control (UAC) is enabled for your user account\r\ndisable or change your UAC settings.
+
+/////////////////////////////////////////////////////////////////////////////
+// Serv-U-Log string table
+
+// system log strings
+IDS_LOG_SERVER_START_WELCOME_FMT=%s Version %s (%s) - %s, All Rights Reserved
+IDS_LOG_SERVER_START_BUILD_DATE_FMT=Build Date: %s
+IDS_LOG_SERVER_OPENSSL_INIT_OKAY=Loaded SSL/TLS libraries
+IDS_LOG_SERVER_OPENSSL_INIT_FAIL=Unable to load SSL/TLS libraries
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_ON=FIPS 140-2 mode is ON.  Serv-U uses an embedded FIPS 140-2-validated cryptographic module (Certificate #1051) running on a Microsoft Windows platform per FIPS 140-2 Implementation Guidance section G.5 guidelines.
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_OFF=FIPS 140-2 mode is OFF.
+IDS_LOG_SERVER_OPENSSL_FIPS_MODE_NOT_SUPPORTED=FIPS 140-2 may not be supported on this computer.  FIPS 140-2 mode does not run on all hardware platforms, but has been tested on most newer platforms.  This mode may not be available on Pentium III or older hardware platforms.
+IDS_LOG_SERVER_STOPPING=Server is going down...
+IDS_LOG_SERVER_STOP=Server stopped
+IDS_LOG_CMD_LISTENING_FMT=%s server listening on port number %u, IP %s
+IDS_LOG_CMD_NOT_LISTENING_IN_USE_FMT=%s SERVER IS NOT LISTENING ON IP %s: Port number %u is already in use
+IDS_LOG_CMD_NOT_LISTENING_FMT=%s SERVER IS NOT LISTENING ON IP %s: Port number %u
+IDS_LOG_CMD_NOT_LISTENING_ADDR_NOT_AVAIL_FMT=%s SERVER IS NOT LISTENING ON IP %s: Trying to use non-existent IP address?
+IDS_LOG_CMD_CLOSED_FMT=%s server stopped listening on port number %u, IP %s
+IDS_LOG_PERM_DATA_LISTENING_FMT=Listening for PASV FTP connections on port number %u
+IDS_LOG_PERM_DATA_NOT_LISTENING_FMT=NOT LISTENING FOR PASV FTP connections on port number %u
+IDS_LOG_PERM_DATA_NOT_LISTENING_IN_USE_FMT=NOT LISTENING FOR PASV FTP connections, port number %u is already in use
+IDS_LOG_PERM_DATA_NOT_LISTENING_ADDR_NOT_AVAIL_FMT=NOT LISTENING FOR PASV FTP connections on port number %u, trying to use non-existent IP address?
+IDS_LOG_PERM_DATA_CLOSED_FMT=Stopped listening for PASV FTP connections on port number %u
+IDS_LOG_DOMAIN_STARTED=Domain started
+IDS_LOG_DOMAIN_STOPPED=Domain stopped
+IDS_LOG_SERVER_START_BETA_EXPIRED_FMT=BETA BUILD HAS EXPIRED.  This build will run up to %d days beyond the build date.
+IDS_LOG_SERVER_START_BETA_NOTICE_FMT=THIS IS A BETA BUILD.  This build will run up to %d days beyond the build date.
+IDS_LOG_EVENT_COULD_NOT_EXEC_FMT=EVENT ERROR: "%s" could not be executed.
+IDS_LOG_EVENT_COULD_NOT_EMAIL_FMT=EVENT ERROR: Unable to send message to %s: %s
+IDS_LOG_SOCKET_TIME_OUT_FMT=Socket timed out.  %s seconds of inactivity.
+IDS_LOG_EMAIL_RETRY_FMT=EMAIL RETRY: Attempting to resend email message to %s using server %s on port %d.
+IDS_LOG_EMAIL_CANT_CONNECT_FMT=Unable to connect to SMTP server %s on port %d.
+IDS_LOG_EMAIL_SSL_CONNECT_FAIL_FMT=SSL negotiation failure with SMTP server "%s" on port %d (SSL error: "%s").
+IDS_LOG_WINSOCK_INIT_FMT=WinSock Version %d.%d initialized.
+IDS_LOG_WINSOCK_INIT_FAILED_FMT=ERROR: WinSock initialization failed (error: %d)
+
+// UPnP log strings
+IDS_LOG_UPNP_FOUND_DEVICE_FMT=UPnP: Found device: %s: %s (on %s subnet)
+IDS_LOG_UPNP_DEVICE_DISCOVERY_COMPLETE_FMT=UPnP: Device discovery complete: %s: %s [%s] (on %s subnet)
+IDS_LOG_UPNP_MAP_SUCCESSFUL_FMT=UPnP: Successful port mapping on port %d to IP %s
+IDS_LOG_UPNP_MAP_ERROR_FMT=UPnP: Error mapping port %d to IP %s (HTTP: %d - UPnP: %s - Desc: %s)
+IDS_LOG_UPNP_DELETE_MAP_SUCCESSFUL_FMT=UPnP: Successful port map deletion on port %d to IP %s
+IDS_LOG_UPNP_DELETE_MAP_ERROR_FMT=UPnP: Error deleting mapping on port %d to IP %s (HTTP: %d - UPnP: %s - Desc: %s)
+IDS_LOG_UPNP_DELETE_MAPS_SUCCESSFUL_FMT=UPnP: Successful port map deletion on ports %d-%d to IP %s
+IDS_LOG_UPNP_MAPS_SUCCESSFUL_FMT=UPnP: Successful port mapping on ports %d-%d to IP %s
+IDS_LOG_UPNP_DELETE_MAPS_ERROR_FMT=UPnP: Error deleting mapping on ports %d-%d to IP %s
+IDS_LOG_UPNP_MAPS_ERROR_FMT=UPnP: Error mapping ports %d-%d to IP %s
+IDS_LOG_UPNP_TIMEOUT=Timeout
+IDS_LOG_UPNP_NA=N/A
+IDS_LOG_UPNP_DEAD_DEVICE_FMT=UPnP: Device no longer available: %s: %s [%s] (on %s subnet)
+IDS_LOG_UPNP_NO_DEVICES_REMAIN=UPnP: No UPnP devices are available, reloading settings as needed.
+IDS_LOG_UPNP_DEVICE_REDISCOVERY_FMT=UPnP: Device may not be responding, rediscovery attempt %d: %s: %s [%s] (on %s subnet)
+IDS_LOG_UPNP_DEVICE_INSPECTION=UPnP: Inspecting device:  %s: %s [%s] (on %s subnet)
+
+// %TRANSLATION_OPTIONAL%
+
+// socket types
+IDS_LOG_FTP_TYPE=FTP
+IDS_LOG_FTPS_TYPE=FTPS
+IDS_LOG_SSH_TYPE=SFTP (SSH)
+IDS_LOG_HTTP_TYPE=HTTP
+IDS_LOG_HTTPS_TYPE=HTTPS
+
+// %TRANSLATION_NOT_OPTIONAL%
+
+// session log strings
+IDS_LOG_RECEIVING_FILE_FMT=Receiving file "%s"
+IDS_LOG_RECEIVED_FILE_FMT=Received file "%s" successfully (%s KB/sec - %s Bytes)
+IDS_LOG_SENDING_FILE_FMT=Sending file "%s"
+IDS_LOG_SENDING_THUMBNAIL_FMT=Sending thumbnail (%s x %s) "%s"
+IDS_LOG_SENT_FILE_FMT=Sent file "%s" successfully (%s KB/sec - %s Bytes)
+IDS_LOG_SENT_THUMBNAIL_FMT=Sent thumbnail (%s x %s) "%s" successfully (%s KB/sec - %s Bytes)
+IDS_LOG_FILE_DELETED_FMT=File deleted: "%s"
+IDS_LOG_FILE_DIR_RENAME_FMT=Renamed "%s" to "%s"
+IDS_LOG_DIR_CREATE_FMT=Directory created: "%s"
+IDS_LOG_DIR_DELETE_FMT=Directory deleted: "%s"
+IDS_LOG_IP_ADDRESS_REVERSE_DNS_FMT=IP-Name: %s (%s)
+
+// %TRANSLATION_OPTIONAL%
+// SSH log command strings
+IDS_SSH_UNEXPECTED_MESSAGE_FMT=Unrecognized SSH2 command (0x%08x - %d)
+IDS_SSH2_MSG_USERAUTH_REQUEST_FMT=SSH2_MSG_USERAUTH_REQUEST: user: %s; service: %s; type: %s
+IDS_SSH_STATUS_COMMAND_FMT={0x%08x} %s
+IDS_SSH_FXP_INIT_FMT=SSH_FXP_INIT: client version %d (%s)
+IDS_SSH_FXP_OPEN_FMT={0x%08x} SSH_FXP_OPEN: path: "%s"
+IDS_SSH_FXP_CLOSE_FMT={0x%08x} SSH_FXP_CLOSE: handle: 0x%08x
+IDS_SSH_FXP_READ_FMT={0x%08x} SSH_FXP_READ: handle: 0x%08x; %u bytes
+IDS_SSH_FXP_WRITE_FMT={0x%08x} SSH_FXP_WRITE: handle: 0x%08x; %u bytes
+IDS_SSH_FXP_STAT_FMT={0x%08x} %s: path: "%s"
+IDS_SSH_FXP_FSTAT_FMT={0x%08x} SSH_FXP_FSTAT: handle: 0x%08x
+IDS_SSH_FXP_SETSTAT_FMT={0x%08x} SSH_FXP_SETSTAT: path: "%s"
+IDS_SSH_FXP_FSETSTAT_FMT={0x%08x} SSH_FXP_FSETSTAT: handle: 0x%08x
+IDS_SSH_FXP_OPENDIR_FMT={0x%08x} SSH_FXP_OPENDIR: path: "%s"
+IDS_SSH_FXP_READDIR_FMT={0x%08x} SSH_FXP_READDIR: handle: 0x%08x
+IDS_SSH_FXP_REMOVE_FMT={0x%08x} SSH_FXP_REMOVE: path: "%s"
+IDS_SSH_FXP_MKDIR_FMT={0x%08x} SSH_FXP_MKDIR: path: "%s"
+IDS_SSH_FXP_RMDIR_FMT={0x%08x} SSH_FXP_RMDIR: path: "%s"
+IDS_SSH_FXP_REALPATH_FMT={0x%08x} SSH_FXP_REALPATH: path: "%s"
+IDS_SSH_FXP_RENAME_FMT={0x%08x} SSH_FXP_RENAME: old: "%s"; new: "%s"
+IDS_SSH_FXP_READLINK_FMT={0x%08x} SSH_FXP_READLINK: path: "%s"
+IDS_SSH2_MSG_GLOBAL_REQUEST_FMT=SSH2_MSG_GLOBAL_REQUEST: user: %s; wants reply: %d
+
+// SSH login reply strings
+IDS_SSH2_MSG_USERAUTH_SUCCESS=SSH2_MSG_USERAUTH_SUCCESS: successful login
+IDS_SSH2_MSG_USERAUTH_FAILURE=SSH2_MSG_USERAUTH_FAILURE: login failed
+IDS_SSH2_MSG_USERAUTH_PASSWD_CHANGEREQ=SSH2_MSG_USERAUTH_PASSWD_CHANGEREQ: password expired
+
+// SSH log reply strings
+IDS_SSH_STATUS_REPLY_FMT={0x%08x} %s: %s
+IDS_SSH_FXP_INIT_REPLY_FMT=SSH_FXP_VERSION: server version %d
+IDS_SSH_FXP_OPEN_REPLY_FMT={0x%08x} SSH_FXP_HANDLE: file handle: 0x%08x
+IDS_SSH_FXP_OPENDIR_REPLY_FMT={0x%08x} SSH_FXP_HANDLE: directory handle: 0x%08x
+IDS_SSH_FXP_READDIR_REPLY_FMT={0x%08x} SSH_FXP_NAME: found %u items
+IDS_SSH_FXP_REALPATH_REPLY_FMT={0x%08x} SSH_FXP_NAME: path: "%s"
+IDS_SSH_FXP_ATTRS_REPLY_FMT={0x%08x} SSH_FXP_ATTRS
+IDS_SSH_FXP_DATA_REPLY_FMT={0x%08x} SSH_FXP_DATA: %u bytes
+IDS_SSH2_MSG_REQUEST_FAILURE_REPLY_FMT=SSH2_MSG_REQUEST_FAILURE: "%s" is an unsupported global request
+
+// SSH_FXP_STAT error strings
+IDS_SSH_FX_OK_ERRSTR=SSH_FX_OK
+IDS_SSH_FX_EOF_ERRSTR=SSH_FX_EOF
+IDS_SSH_FX_NO_SUCH_FILE_ERRSTR=SSH_FX_NO_SUCH_FILE
+IDS_SSH_FX_PERMISSION_DENIED_ERRSTR=SSH_FX_PERMISSION_DENIED
+IDS_SSH_FX_FAILURE_ERRSTR=SSH_FX_FAILURE
+IDS_SSH_FX_BAD_MESSAGE_ERRSTR=SSH_FX_BAD_MESSAGE
+IDS_SSH_FX_NO_CONNECTION_ERRSTR=SSH_FX_NO_CONNECTION
+IDS_SSH_FX_CONNECTION_LOST_ERRSTR=SSH_FX_CONNECTION_LOST
+IDS_SSH_FX_OP_UNSUPPORTED_ERRSTR=SSH_FX_OP_UNSUPPORTED
+IDS_SSH_FX_INVALID_HANDLE_ERRSTR=SSH_FX_INVALID_HANDLE 
+IDS_SSH_FX_NO_SUCH_PATH_ERRSTR=SSH_FX_NO_SUCH_PATH
+IDS_SSH_FX_FILE_ALREADY_EXISTS_ERRSTR=SSH_FX_FILE_ALREADY_EXISTS
+IDS_SSH_FX_WRITE_PROTECT_ERRSTR=SSH_FX_WRITE_PROTECT
+IDS_SSH_FX_NO_MEDIA_ERRSTR=SSH_FX_NO_MEDIA
+IDS_SSH_FX_NO_SPACE_ON_FILESYSTEM_ERRSTR=SSH_FX_NO_SPACE_ON_FILESYSTEM
+IDS_SSH_FX_QUOTA_EXCEEDED_ERRSTR=SSH_FX_QUOTA_EXCEEDED
+IDS_SSH_FX_UNKNOWN_PRINCIPLE_ERRSTR=SSH_FX_UNKNOWN_PRINCIPLE
+IDS_SSH_FX_LOCK_CONFlICT_ERRSTR=SSH_FX_LOCK_CONFlICT
+IDS_SSH_FX_DIR_NOT_EMPTY_ERRSTR=SSH_FX_DIR_NOT_EMPTY
+IDS_SSH_FX_NOT_A_DIRECTORY_ERRSTR=SSH_FX_NOT_A_DIRECTORY
+IDS_SSH_FX_INVALID_FILENAME_ERRSTR=SSH_FX_INVALID_FILENAME
+IDS_SSH_FX_LINK_LOOP_ERRSTR=SSH_FX_LINK_LOOP
+IDS_SSH_FX_CANNOT_DELETE_ERRSTR=SSH_FX_CANNOT_DELETE
+IDS_SSH_FX_INVALID_PARAMETER_ERRSTR=SSH_FX_INVALID_PARAMETER
+IDS_SSH_FX_FILE_IS_A_DIRECTORY_ERRSTR=SSH_FX_FILE_IS_A_DIRECTORY
+IDS_SSH_FX_BYTE_RANGE_LOCK_CONFLICT_ERRSTR=SSH_FX_BYTE_RANGE_LOCK_CONFLICT
+IDS_SSH_FX_BYTE_RANGE_LOCK_REFUSED_ERRSTR=SSH_FX_BYTE_RANGE_LOCK_REFUSED
+IDS_SSH_FX_DELETE_PENDING_ERRSTR=SSH_FX_DELETE_PENDING
+IDS_SSH_FX_FILE_CORRUPT_ERRSTR=SSH_FX_FILE_CORRUPT
+IDS_SSH_FX_OWNER_INVALID_ERRSTR=SSH_FX_OWNER_INVALID
+IDS_SSH_FX_GROUP_INVALID_ERRSTR=SSH_FX_GROUP_INVALID
+IDS_SSH_FX_NO_MATCHING_BYTE_RANGE_LOCK_ERRSTR=SSH_FX_NO_MATCHING_BYTE_RANGE_LOCK
+IDS_SSH_FX_UNKNOWN_ERROR_ERRSTR=SSH_FX_UNKNOWN_ERROR
+
+// HTTP log command strings
+IDS_HTTP_LOGIN_FMT=HTTP_LOGIN: user: %s
+IDS_HTTP_LOGIN_DOMAIN_FMT=HTTP_LOGIN: user: %s; domain: %s
+IDS_HTTP_LOGOUT=HTTP_LOGOUT
+IDS_HTTP_LIST_FMT=HTTP_LIST: path: "%s"
+IDS_HTTP_DOWNLOAD_FMT=HTTP_DOWNLOAD: path: "%s"
+IDS_HTTP_DOWNLOAD_THUMBNAIL_FMT=HTTP_DOWNLOAD: path: "%s"; thumbnail: 1; width: %d; height: %d
+IDS_HTTP_UPLOAD_FMT=HTTP_UPLOAD: path: "%s"
+IDS_HTTP_DELETE_FMT=HTTP_DELETE: path: "%s"
+IDS_HTTP_DELETE_DIR_FMT=HTTP_DELETE_DIR: path: "%s"
+IDS_HTTP_CREATE_DIR_FMT=HTTP_CREATE_DIR: path: "%s"
+IDS_HTTP_RENAME_FMT=HTTP_RENAME: old: "%s"; new: "%s"
+IDS_HTTP_START_FVJV=HTTP_START_FVJV
+IDS_HTTP_START_ADMIN=HTTP_START_ADMIN
+IDS_HTTP_NOOP=HTTP_NOOP
+IDS_HTTP_ADMIN_COMMAND_FMT=HTTP_ADMIN_COMMAND: %s
+IDS_HTTP_ADMIN_COMMAND_OBJECT_FMT=HTTP_ADMIN_COMMAND: %s; Object: "%s"
+IDS_HTTP_ADMIN_COMMAND_OBJECT_ID_FMT=HTTP_ADMIN_COMMAND: %s; Object: "%s"; ID: %s
+IDS_HTTP_BUILD_PLAYLIST_FMT=HTTP_BUILD_PLAYLIST: %s files added to playlist
+IDS_HTTP_GET_PLAYLIST_FMT=HTTP_GET_PLAYLIST: %s files in playlist
+IDS_HTTP_SPACE_AVAILABLE_FMT=HTTP_SPACE_AVAILABLE: path: "%s"
+IDS_HTTP_DIRECTORY_SIZE_FMT=HTTP_DIRECTORY_SIZE: path: "%s"
+
+// other HTTP replies
+IDS_HTTP_RETR_ERROR_REPLY_FMT=HTTP_ERROR: unable to retrieve "%s"
+IDS_HTTP_STOR_ERROR_REPLY_FMT=HTTP_ERROR: unable to store "%s"
+
+// HTTP log reply strings
+IDS_HTTP_OKAY_REPLY=HTTP_OKAY (%d): okay
+IDS_HTTP_CREATED_REPLY=HTTP_CREATED (%d): created
+IDS_HTTP_ACCEPTED_REPLY=HTTP_ACCEPTED (%d): accepted
+IDS_HTTP_NO_CONTENT_REPLY=HTTP_NO_CONTENT (%d): no content
+IDS_HTTP_OKAY_REPLY_FMT=HTTP_OKAY (%d): %s
+IDS_HTTP_MOVED_PERMANENTLY_REPLY=HTTP_MOVED_PERMANENTLY (%d): moved permanently
+IDS_HTTP_MOVED_TEMPORARILY_REPLY=HTTP_MOVED_TEMPORARILY (%d): moved temporarily
+IDS_HTTP_NOT_MODIFIED_REPLY=HTTP_NOT_MODIFIED (%d): not modified
+IDS_HTTP_BAD_REQUEST_REPLY=HTTP_BAD_REQUEST (%d): bad request
+IDS_HTTP_UNAUTHORIZED_REPLY=HTTP_UNAUTHORIZED (%d): unauthorized
+IDS_HTTP_FORBIDDEN_REPLY=HTTP_FORBIDDEN (%d): forbidden
+IDS_HTTP_NOT_FOUND_REPLY=HTTP_NOT_FOUND (%d): not found
+IDS_HTTP_INTERNAL_SERVER_ERROR_REPLY=HTTP_INTERNAL_SERVER_ERROR (%d): internal server error
+IDS_HTTP_NOT_IMPLEMENTED_REPLY=HTTP_NOT_IMPLEMENTED (%d): not implemented
+IDS_HTTP_BAD_GATEWAY_REPLY=HTTP_BAD_GATEWAY (%d): bad gateway
+IDS_HTTP_SERVICE_UNAVAILABLE_REPLY=HTTP_SERVICE_UNAVAILABLE (%d): service unavailable
+
+// %TRANSLATION_NOT_OPTIONAL%
+
+// system log strings
+IDS_SYSLOG_OPENED_INTEGRATION_DLL_FMT=Opened Integration DLL: "%s"
+IDS_SYSLOG_CLOSED_INTEGRATION_DLL_FMT=Closed Integration DLL: "%s"
+IDS_SYSLOG_CANT_LOAD_INTEGRATION_DLL_FMT=Unable to open Integration DLL: "%s"
+IDS_SYSLOG_CANT_LOAD_INTEGRATION_DLL__NO_LIC_FMT=Not licensed to open Integration DLL:  "%s"
+
+// security log strings
+IDS_SECLOG_CONNECTED_FMT=Connected to %s (local address %s, port %d)
+IDS_SECLOG_IP_BANNED_FMT=Connection denied from IP address %s (local address %s, port %d)
+IDS_SECLOG_CLOSED_SESSION=Closed session
+IDS_SECLOG_IDLE_TIMEOUT=Session idle time out
+IDS_SECLOG_SESSION_TIMEOUT=Maximum session time exceeded
+IDS_SECLOG_SSL_ACCEPT_FAILED_FMT=Unable to establish SSL connection (%s)
+IDS_SECLOG_USER_ADMIN_DENIED_FMT=User "%s" attempted to access server administratively but was denied.
+IDS_SECLOG_USER_SERVER_ADMIN_FMT=Entering server ADMINISTRATIVE mode for user "%s"
+IDS_SECLOG_USER_DOMAIN_ADMIN_FMT=Entering domain ADMINISTRATIVE mode for user "%s"
+IDS_SECLOG_USER_GROUP_ADMIN_FMT=Entering group ADMINISTRATIVE mode for user "%s"
+IDS_SECLOG_USER_PASSWORD_CHANGE_FMT=User "%s" changed password
+IDS_SECLOG_PASSWORD_WRONG_TOO_MANY_TIMES_FMT=Password wrong too many times for user "%s" - disconnecting
+IDS_SECLOG_USER_IP_BANNED_FMT=Connection denied for user "%s" from IP address %s (local address %s, port %d)
+IDS_SECLOG_USER_NO_HOME_FMT=Error logging in user "%s", home dir "%s" does not exist
+IDS_SECLOG_USER_LOGGED_IN_FMT=User "%s" logged in
+IDS_SECLOG_USER_LOGGED_OUT_FMT=User "%s" logged out
+IDS_SECLOG_ANONYMOUS_USER_LOGGED_IN_FMT=ANONYMOUS logged in, password: %s
+IDS_SECLOG_BLOCKING_IP_FMT=Blocking IP %s
+IDS_SECLOG_BLOCKING_IP_FOR_FMT=Blocking IP %s for %d:%02d
+IDS_SECLOG_ADMIN_OPERATION_DENIED_FMT=OPERATION: %s
+IDS_SECLOG_LIC_NO_REMOTE_ADMIN_FMT=LICENSE: Remote administration is not allowed, IP address %s, user %s.
+IDS_SECLOG_LIC_TOO_MANY_SESSIONS_FMT=LICENSE: Licensed number of sessions exceeded, IP address %s, user %s.
+IDS_SECLOG_LIC_NET_REGGIE_VIOLATION_FMT=LICENSE: A license violation has been detected.  The current license is good for %d computer(s).  There are currently %d computer(s) using this license.  Serv-U will not accept connections until this is corrected.
+IDS_SECLOG_LIC_NET_REGGIE_VIOLATION2_FMT=LICENSE: Please contact us at %s
+IDS_SECLOG_LIC_VALID_ID_PRESENT=Valid registration key found
+IDS_SECLOG_LIC_PAST_TRIAL=LICENSE: Running beyond trial period.  Serv-U will no longer accept connections.
+IDS_SECLOG_SSL_CANT_OPEN_CERT_FILE_FMT=Unable to open certificate file: %s
+IDS_SECLOG_SSL_CANT_OPEN_PRIVATE_KEY_FILE_FMT=Unable to open private key file: %s
+IDS_SECLOG_SSL_CANT_LOAD_TRUSTED_CA_FILE_FMT=Unable to open trusted certificate authority file: %s
+IDS_SECLOG_FAILED_LOGIN_FMT=Invalid login credentials; user: "%s"; password: "%s"
+IDS_SECLOG_CONNECTION_ACCEPTED_FMT=Connection to %s (local address %s, port %d) ACCEPTED
+IDS_SECLOG_CONNECTION_DENIED_FMT=Connection to %s (local address %s, port %d) DENIED
+IDS_SECLOG_SSL_CLIENT_ERROR=CLIENT ERROR: Client may have rejected the SSL certificate.  Ensure the SSL certificate has been issued by a certificate authority.
+IDS_SECLOG_USER_REQUESTED_PASSWORD_RECOVERY_FMT=User "%s" made a password recovery request.
+IDS_SECLOG_INTEGRATION_CONNECTION_DENIED_FMT=Integration DLL: connection denied for IP address %s (local address %s, port %d)
+
+// ODBC
+IDS_ODBC_ERROR=ODBC ERROR: 
+
+// triggered event log strings
+IDS_TELOG_EVENT_FMT=Event: %s (%s); Type: %s
+IDS_TELOG_EMAIL_FMT=EMAIL; To: %s
+IDS_TELOG_BALLOON_TIP_FMT=BALLOON TIP; "%s"
+IDS_TELOG_EXEC_FMT=EXECUTE; Path "%s"
+IDS_TELOG_EMAIL_ADDRESS_FMT=%s; BCC: %s
+
+/////////////////////////////////////////////////////////////////////////////
+// statistic strings used for saving stats to .CSV file, translation is okay
+$IDS_NAME$=Name
+$IDS_CURRENT_SESSIONS$=Current Sessions
+$IDS_HIGHEST_NUMBER_OF_SESSIONS$=Highest Number of Sessions
+$IDS_24_HOUR_SESSIONS$=24-Hour Sessions
+$IDS_TOTAL_SESSIONS$=Total Sessions
+$IDS_AVERAGE_SESSION_LENGTH$=Average Session Length
+$IDS_LONGEST_SESSION_LENGTH$=Longest Session Length
+
+$IDS_LOGINS$=Logins
+$IDS_LOGOUTS$=Logouts
+$IDS_CURRENT_LOGGED_IN$=Current Logged In
+$IDS_MOST_LOGGED_IN$=Most Logged In
+$IDS_AVERAGE_LOGIN_DURATION$=Average Login Duration
+$IDS_LONGEST_LOGIN_DURATION$=Longest Login Duration
+$IDS_SHORTEST_LOGIN_DURATION$=Shortest Login Duration
+$IDS_LAST_LOGIN_TIME$=Last Login Time
+$IDS_LAST_LOGOUT_TIME$=Last Logout Time
+
+$IDS_DOWNLOAD_RATE_KB_SEC$=Download Rate KB/Sec
+$IDS_UPLOAD_RATE_KB_SEC$=Upload Rate KB/Sec
+$IDS_AVERAGE_DOWNLOAD_RATE_KB_SEC$=Average Download Rate KB/Sec
+$IDS_AVERAGE_UPLOAD_RATE_KB_SEC$=Average Upload Rate KB/Sec
+$IDS_DOWNLOAD_RATE_BYTES_SEC$=Download Rate Bytes/Sec
+$IDS_UPLOAD_RATE_BYTES_SEC$=Upload Rate Bytes/Sec
+$IDS_BYTES_DOWNLOADED$=Bytes Downloaded
+$IDS_FILES_DOWNLOADED$=Files Downloaded
+$IDS_BYTES_UPLOADED$=Bytes Uploaded
+$IDS_FILES_UPLOADED$=Files Uploaded
+
+// NOTE TO TRANSLATORS: The following BLOCK MUST be removed from your translation
+// localized strings.
+// Keep these at the end of this file, they "overwrite" any previously defined string
+#include DE "Serv-U_DE.str"
+#include ES "Serv-U_ES.str"
+#include FR "Serv-U_FR.str"
+#include IT "Serv-U_IT.str"
+#include ES "Serv-U_ES.str"
+#include PT "Serv-U_PT.str"
+#include JA "Serv-U_JA.str"
+#include RU "Serv-U_RU.str"
+#include SV "Serv-U_SV.str"
+#include ZH,S "Serv-U_ZH_S.str"
+#include ZH,T "Serv-U_ZH_T.str"

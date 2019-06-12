@@ -1,0 +1,83 @@
+; Serv-U Integration Sample DLL.def : Declares the DLL exports.
+
+LIBRARY	"Serv-U Integration Sample DLL"
+
+EXPORTS
+	; Comment out any function export if implementation is not desired
+	; for that function, Serv-U will not attempt to call functions that
+	; are not loaded.
+	;
+	; Functions labeled as "required" must be implemented as a minimum
+	; for User Access (SUUA).
+	;-------------------------
+	; user management
+	;-------------------------
+	SUUAFindUser						; required
+	SUUAUnloadUser
+	SUUAChangePassword
+	SUUAPasswordChanged
+	SUUAStoreUser
+	SUUAUserLoaded
+	SUUAGetUserAvailability
+	SUUAIsUserDirty
+	;-------------------------
+	; attribute
+	;-------------------------
+	SUUAGetAttribute					; required
+	SUUAGetAttributeEx
+	SUUASetAttribute					; required
+	;-------------------------
+	; collections
+	;-------------------------
+	SUUAEnumDirAccess					; required if not using groups
+	SUUAEnumVirtualPath
+	SUUAEnumIPAccess
+	SUUAEnumUlDlRatioFreeFile
+	SUUAEnumEvent
+	SUUAEnumGroupName					; required if not using SUUAEnumDirAccess, group must have a home directory
+	;-------------------------
+	; upload / download ratios
+	;-------------------------
+	SUUAGetUserFilesUlDlRatio
+	SUUAGetUserBytesUlDlRatio
+	SUUAGetSessionFilesUlDlRatio
+	SUUAGetSessionBytesUlDlRatio
+	SUUASetUserFilesUlDlRatio
+	SUUASetUserBytesUlDlRatio
+	SUUASetSessionFilesUlDlRatio
+	SUUASetSessionBytesUlDlRatio
+	;-------------------------
+	; login
+	;-------------------------
+	SUUAVerifyPassword
+	SUUAVerifyIP
+
+	;-------------------------
+	; connection (SUCN)
+	;-------------------------
+	SUCNConnect
+	SUCNDisconnect
+
+	;-------------------------
+	; status (SUST)
+	;-------------------------
+	SUSTFireEvent
+	SUSTLogString
+
+	;-------------------------
+	; operation hooks (SUOH)
+	;-------------------------
+	SUOHRetrieve
+	SUOHStore
+	SUOHRename
+	SUOHDeleteFile
+	SUOHDeleteDirectory
+	SUOHCreateDirectory
+	SUOHChangeWorkingDirectory
+
+	;-------------------------
+	; command hooks (SUCH)
+	;-------------------------
+	SUCHFTPAppendFEAT
+	SUCHFTPSITE
+	SUCHFTPCommand

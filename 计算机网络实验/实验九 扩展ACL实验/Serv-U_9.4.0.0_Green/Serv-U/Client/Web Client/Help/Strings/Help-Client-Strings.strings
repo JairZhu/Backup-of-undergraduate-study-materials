@@ -1,0 +1,376 @@
+﻿<!-- Help-Client-Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- External links reused throughout the help documentation -->
+$LINK_FVJV_HOMEPAGE$=<a href="http://FVJV.Serv-U.com/" target="_blank">FTP Voyager JV homepage</a>
+$LINK_FV_HOMEPAGE$=<a href="http://www.ftpvoyager.com/" target="_blank">FTP Voyager</a>
+
+
+<!-- Macros for inserting links to other Help doc pages.  The text within these anchor tags needs to be translated. -->
+$LINK_HELP_FILE_MANAGEMENT$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-File-Transfers.htm">File Management</a>
+$LINK_HELP_DIR_MANAGEMENT$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-Directory-Management.htm">Directory Management</a>
+$LINK_HELP_IMAGE_FEATURES$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-Image-Features.htm">Thumbnails & Slideshows</a>
+
+
+<!-- String table for Help-Overview -->
+$OVERVIEW_HEADER$=Serv-U Web Client Overview
+
+$OVERVIEW_INTRO$::
+The Serv-U Web Client is an HTTP-based file transfer client available for use by all Users on a properly licensed Serv-U File Server.  The Web Client is a perfect
+solution for novice computer users and organizations with a need to provide a simple method of transferring a few files between your users.  Because it uses
+the HTTP protocol to communicate with Serv-U, the Web Client avoids some of the headaches associated with using the FTP protocol in a secured environment
+or through the limited support of FTP in today's common web browsers.
+
+The  Web Client is capable of enabling users to accomplish a wide variety of tasks, including:
+::END
+
+$OVERVIEW_TASKS$::
+Access your files from anywhere using a Graphical User Interface (GUI) from within your browser.
+Transfer files to and from your File Server, including creating and deleting directories.
+View remote images as thumbnails generated on-the-fly to conserve bandwidth and increase transfer speed.
+Easily share photo albums using the built-in Slideshow feature.
+Play Audio and Video files in the built-in Media Player.
+Provide access to the File Server in <strong>eleven</strong> different supported languages.
+::END
+$OVERVIEW_LOGIN_PARAMS$=URL login and auto load parameters
+
+$OVERVIEW_LOGIN_PARAMS_TXT$::
+The Web Client offers the ability to send login credentials and special load parameters in the URL pointing to Serv-U File Server. Below is the list of 
+parameters that can be added to the URL.
+::END
+
+$OVERVIEW_LOGIN_PARAMS_LIST$::
+Use the "thumbnail=1" parameter to start the Web Client in Thumbnails mode after login.
+Use the "slideshow=1" parameter to start the Web Client slide show immediately after login.
+Use the "playlist=1" parameter to play audio files immediately after login to the Web Client.
+Use the "playmedia=1" parameter to play video files immediately after login to the Web Client.
+Use the "dir=" parameter to navigate directly to any directory immediately after login to the Web Client.
+Use the "file=" parameter to download a file located in the directory specified in the "dir=" parameter immediately after login to the Web Client.
+<strong>Example URL:</strong> http://www.domainname.com?user=temp&password=temppw&thumbnail=1&dir=/D:/temp/&file=textfile.txt
+::END
+
+$OVERVIEW_SEARCH_PARAMS$=File Name Search and Supported Wildcards
+
+$OVERVIEW_SEARCH_PARAMS_TXT$::
+The Web Client offers the ability to search for files based on the users input using the "File Search" button located under the file list pane.  Below is a 
+list of wildcards that are also supported.
+::END
+
+$OVERVIEW_SEARCH_PARAMS_LIST$::
+Use the "*" parameter to search for files when the whole file name is unknown (ie..*.txt, *SearchPhrase*, *FileName*).
+Use the "?" parameter when a specific character is unknown in the filename (ie..????Name.txt, FileName.???).
+Use the "[]" parameter when a specific character is unknown but should contain one of the specified characters in the brackets (ie..[fmn]ileName.txt, File[fmn]ame.txt).
+::END
+
+
+$OVERVIEW_REQUIREMENTS$::
+The Web Client can be run in today's most popular Web browsers that are available on virtually every computer "out of the box."  The following minimum
+system requirements must be met to run the Web Client:
+::END
+
+$OVERVIEW_REQ_LIST$::
+Must be using Firefox 2.0 or Internet Explorer 6.0 or better.
+Cookies must be enabled in the browser.
+JavaScript must be enabled in the browser.
+::END
+
+$OVERVIEW_LIMITATIONS$::
+The Web Client is intended to easily enable basic file transfer functionality on the broadest platform available - the standard Web browser.  However, it
+is not intended to be a wholesale replacement for a full-featured FTP client.  If you're looking for an enterprise level solution that offers a full-featured
+file transfer client to your users, then <strong>FTP Voyager JV</strong> is available to meet your needs.  With FTP Voyager JV, you still get easy deployment
+and access configuration of the client through HTTP, but its basis on the Java platform enables the following features that are not available in the Web
+Client:
+::END
+
+$OVERVIEW_LIMIT_LIST$::
+Concurrently upload multiple files.
+Download files while an upload is in progress.
+Download a directory and its entire contents.
+A traditional Graphical User Interface (GUI) based on our award-winning $LINK_FV_HOMEPAGE$ client.
+Side-by-side views of the remote and local file systems.
+Multiple different file system views, (e.g., list, icons, details, thumbnails).
+Maintain original file dates and times after file transfer.
+"Move" files and folders between the remote and local file systems.
+Platform specific display themes to ensure a uniform appearance on the platform of choice.
+::END
+
+$OVERVIEW_FVJV_INFO$::
+To enable <strong>FTP Voyager JV</strong>, a supported license must be purchased for the File Server.  Once enabled, FTP Voyager JV is available to all Users
+of the File Server that have installed the Java Runtime Environment on their system.  For more information on <strong>FTP Voyager JV</strong>, visit the
+$LINK_FVJV_HOMEPAGE$.
+::END
+
+
+<!-- String table for Help-Layout -->
+$BWC_LAYOUT_HEADER$=Web Client Layout
+
+$BWC_LAYOUT_INTRO$::
+The Web Client is presented as a standard web page containing a list of the files and directories available from the current remote path and clickable
+links that perform various file transfer related actions.  All available functionality of the Web Client is available from this single page to keep
+interactions quick and easy to perform.
+::END
+
+$BWC_LAYOUT_UTILITY$=The Utility Bar
+$BWC_LAYOUT_UTILITY_TXT$::
+At the top of the page is the utility bar that contains buttons to perform various utility tasks.  Some of these tasks are only available if an administrator
+has enabled this feature for your user account.  These tasks are denoted with <strong>(*)</strong>.  Additional information on each available task is found
+below.
+::END
+
+$BWC_LAYOUT_CURRENT_DIR$=Current Directory
+$BWC_LAYOUT_CURRENT_DIR_TXT$::
+The first thing displayed on the utility bar is the name of the server you're connected to and your current location on the server.  As you navigate the
+different directories on the server, this location updates so you always know where you are.
+::END
+
+$BWC_LAYOUT_BREAD_CRUMB_BAR_TXT$::
+Each of the directory segments, listed in the current directory, is clickable, allowing you to quickly navigate to that specific directory.  Mousing over
+any of these segments also shows a sub-menu of sub-directories that are available at that segment in your current path.  After this menu appears, simply
+select the desired sub-directory to make it your current directory.
+::END
+
+$BWC_LAYOUT_CONSOLE$=Management Console (*)
+$BWC_LAYOUT_CONSOLE_TXT$::
+If you are logged in using an account with administrative privileges, the <strong>Management Console</strong> button can be pressed to return to the Serv-U
+Management Console's main page.
+::END
+
+$BWC_LAYOUT_PASSWORD$=Change Password (*)
+$BWC_LAYOUT_PASSWORD_TXT$::
+If the administrator allows users to change their account's password, this option is available.  Clicking the <strong>Change Password</strong> button brings up
+a new dialog that asks for your current password and a desired new password.  After entering the appropriate information, click the <strong>OK</strong> button
+to change the account's password.  If the new password does not meet the administrator's security settings for passwords, a message is displayed that explains
+how the new password doesn't meet these security requirements.
+::END
+
+$BWC_LAYOUT_SUPPORT$=Support (*)
+$BWC_LAYOUT_SUPPORT_TXT$::
+This link is available if the administrator has configured an optional support link for assistance with using their Serv-U File Server.  Clicking this link
+takes you to the administrator's preferred method of providing support, which may include opening another Web page, sending an email to an administrator
+address, or even starting an Instant Messenger session.
+::END
+
+$BWC_LAYOUT_HELP$=Help
+$BWC_LAYOUT_HELP_TXT$::
+This link launches the Serv-U Web Client Help documentation, which you are reading right now.
+::END
+
+$BWC_LAYOUT_LOGOUT$=Logout
+$BWC_LAYOUT_LOGOUT_TXT$::
+When you are finished with the Web Client, click the <strong>Logout</strong> button to terminate your session.
+::END
+
+$BWC_LAYOUT_LISTING$=Directory Listing & Actions
+$BWC_LAYOUT_LISTING_TXT$::
+Below the Utility Bar is the directory listing returned by the server for the current directory.  Above and below the directory listing are the various actions
+that can be performed to navigate the server, transfer files, or change the layout of the listings.  For more information on these actions, see the appropriate
+Help documentation on $LINK_HELP_DIR_MANAGEMENT$, $LINK_HELP_FILE_MANAGEMENT$, or $LINK_HELP_IMAGE_FEATURES$.
+
+In the bottom right-corner of the directory listing is a summary of the contents of the current directory.  Listed here is the number of directories, the
+number of files, and the total size of the files contained in the current directory.
+::END
+
+
+<!-- String table for Help-Directory-Management -->
+$DIRS_HEADER$=Directory Management
+$DIRS_HEADER_TXT$::
+The majority of the Web Client's view is dedicated towards displaying the contents of the current directory being browsed on the server.  This directory
+listing shows all the files and folders contained in the current directory.  Depending on the access rights granted to your user account by the administrator,
+various actions can be performed on the files and folders in this listing.
+::END
+
+$DIRS_NAVIGATING$=Navigating Directories
+$DIRS_NAVIGATING_TXT$::
+There are various ways the current directory can be changed.  Changing the current directory updates the contents of the directory listing.  The easiest method
+to change the current directory is to use your mouse to double-click a directory in the listing.  Additionally, a directory can be right-clicked and the
+<strong>Open</strong> option selected.  A final method to change the current directory is to select a directory in the listing and click the <strong>Open</strong>
+button found below the listing.
+::END
+
+$DIRS_PARENT_DIR$=Parent Directory
+$DIRS_PARENT_DIR_TXT$::
+If your user account is locked in your home directory and the current directory is your home directory, then this button is not available.  Clicking the button
+changes the current directory to the parent directory.  For example, if your current directory is <strong>/public/files</strong>, clicking the button changes
+the current directory to <strong>/public</strong>.
+::END
+
+$DIRS_REFRESH$=Refresh
+$DIRS_REFRESH_TXT$::
+Refreshing the current directory listing causes the Web Client to retrieve the directory listing again and update the displayed files and folders.
+::END
+
+$DIRS_THUMBNAILS$=Thumbnails
+$DIRS_THUMBNAILS_TXT$::
+Clicking the <strong>Thumbnails</strong> button changes the view from a detailed view to a thumbnails view.  While in thumbnails view, the Web Client
+retrieves and displays small versions of any image files in the current directory.  Additional options are available while in thumbnail view mode.  For more
+information on thumbnails, see the Help documentation on $LINK_HELP_IMAGE_FEATURES$.
+::END
+
+$DIRS_DETAILS$=Details
+$DIRS_DETAILS_TXT$::
+When the current view is in thumbnail mode, the <strong>Details</strong> button is available.  Clicking the button returns the current view to a detailed
+listing of the contents of the current directory without any thumbnail images.
+::END
+
+$DIRS_CREATE$=Create Directory
+$DIRS_CREATE_TXT$::
+New directories can be created on the server by clicking this button.  Once clicked, a new dialog is displayed that asks for the name of the new directory that
+should be created.  If your user account does not have the ability to create directories or there is a conflict with the new directory name, an error message
+is displayed.
+::END
+
+$DIRS_RENAME$=Rename
+$DIRS_RENAME_TXT$::
+To rename a directory, select the directory you want to rename in the directory listing and click this button.  This option is also available by right-clicking
+on the desired directory.  The current name is displayed in a new dialog.  Change this name to the desired new name and click <strong>OK</strong>.  If your
+user account does not have the ability to rename directories or there is a conflict with the new directory name, an error message is displayed.
+::END
+
+$DIRS_DELETE$=Delete
+$DIRS_DELETE_TXT$::
+A directory can be deleted by selecting the desired directory from the listing and clicking the <strong>Delete</strong> button.  This option is also available
+by right-clicking on the desired directory.  If your user account does not have the ability to delete directories, an error message is displayed.
+<strong>NOTE:</strong>  Deleting a directory deletes all files and folders that are contained in the directory.  This action cannot be undone on the server.
+::END
+
+
+<!-- String table for Help-File-Transfers -->
+$FILES_HEADER$=File Management
+<!-- The following string does not need to be translated.  It's copying a string from elsewhere. -->
+$FILES_HEADER_TXT$=$DIRS_HEADER_TXT$
+
+$FILES_UPLOAD$=Upload
+$FILES_UPLOAD_TXT$::
+If your user account has permission to upload new files, you may upload a single file at a time to the server using this button.  Clicking the <strong>Upload</strong>
+button opens a new window from which you can <strong>Browse</strong> your system for the file you want to upload.  Once you've selected the appropriate file,
+click <strong>Upload</strong> to begin the transfer.
+
+When the upload has started, a progress dialog is displayed that is regularly updated with live information, including the current transfer rate, how much data
+has been sent, how much data remains to be sent, and the estimated time until completion of the transfer.  While a file is being uploaded, no other action can
+be taken including changing the current directory or transferring another file.  The upload can be terminated at any time by clicking the <strong>Cancel</strong>
+button.  Cancelled file transfers cannot be resumed and must be started over.
+
+After the upload has completed, the progress dialog disappears and the directory listing is refreshed to show the new file.
+::END
+
+$FILES_DOWNLOAD$=Download
+$FILES_DOWNLOAD_TXT$::
+To begin a file download, simply select the desired file and click the <strong>Download</strong> button.  This option is also available by right-clicking on the
+desired file.  The browser prompts you for a location on your system to save the file.  Some browsers may also offer the option to open the file instead of
+saving it to a permanent location.  While a file is being downloaded, the Web Client is free to perform other actions.
+::END
+
+$FILES_RENAME$=Rename
+$FILES_RENAME_TXT$::
+To rename a file, select the file you want to rename in the directory listing and click this button.  This option is also available by right-clicking on the
+desired file.  The current name is displayed in a new dialog.  Change this name to the desired new name and click <strong>OK</strong>.  If your user account
+does not have the ability to rename files or there is a conflict with the new file name, an error message is displayed.
+::END
+
+$FILES_DELETE$=Delete
+$FILES_DELETE_TXT$::
+A file can be deleted by selecting the desired file from the listing and clicking the <strong>Delete</strong> button.  This option is also available by
+right-clicking on the desired file.  If your user account does not have the ability to delete files, an error message is displayed. <strong>NOTE:</strong>
+Files are permanently deleted on the server.  This action cannot be undone.
+::END
+
+
+<!-- String table for Help-Image-Features -->
+$IMAGES_HEADER$=Thumbnails, Slideshows & Media Player
+$IMAGES_HEADER_TXT$::
+The Web Client, combined with advanced features in Serv-U, is a perfect platform for sharing photos with friends, family, or clients.  Using advanced
+on-the-fly compression techniques, the Web Client can request a custom sized thumbnail image for virtually any type of image file.  This thumbnail image
+is generated by the server upon receiving the request and sent back to the client.  In this way, you can view a smaller version of an image file in a fraction
+of the time it would take to download the entire file and open it up locally.  This also minimizes the amount of bandwidth used by the server to send these
+image files.
+
+The Web Client supports two image viewing modes:  thumbnails and slideshows.  Slideshows
+can be viewed when in either the detailed or thumbnail view mode.
+::END
+
+$IMAGES_THUMBNAILS$=Thumbnails
+$IMAGES_THUMBNAILS_TXT$::
+The thumbnail view replaces the detailed directory listing with one that allows a thumbnail image to be displayed for each file.  If the file isn't of a
+supported image type, then the appropriate icon for the file type is displayed instead.  While in thumbnail view mode, a set of buttons appears below each
+thumbnail that replaces the standard action buttons that are usually found below the directory listing.  These buttons let you <strong>Open</strong>,
+<strong>Download</strong>, <strong>Rename</strong>, and <strong>Delete</strong> files and folders like normal.  For image files, there is an additional option
+available to preview the image.
+::END
+
+$IMAGES_THUMB_SIZE$=Thumbnail Size
+$IMAGES_THUMB_SIZE_TXT$::
+The size of each image thumbnail can be customized from the <strong>Thumbnail Size</strong> drop-down box.  Five sizes are offered to help you find a balance
+between the size of the thumbnails and the time it takes to retrieve them.  While the available sizes are displayed as square values, the actual aspect ratio
+of the image is preserved when creating a thumbnail to avoid distorting the original image.
+::END
+
+$IMAGES_THUMB_PREVIEW$=Preview Image
+$IMAGES_THUMB_PREVIEW_TXT$::
+Images can be previewed in both the thumbnail and detailed view mode.  An image that is previewed is displayed in a new dialog as if in a slideshow, however it
+is paused on the previewed image.  Images are shown at a maximum width of 600 pixels.  If the previewed image is smaller than this size, then the image is shown
+using its actual dimensions.  While previewing an image, a slideshow can be started by clicking the appropriate buttons located above the image.  For more
+information on slideshows, continue reading.
+::END
+
+$IMAGES_SLIDESHOWS$=Slideshows
+$IMAGES_SLIDESHOWS_TXT$::
+Slideshows are a way to automatically preview the images contained in the current directory.  While viewing an image in slideshow mode, standard actions can be
+performed on that file including <strong>Download</strong>, <strong>Rename</strong>, and <strong>Delete</strong> by clicking the appropriate button below the
+image.
+::END
+
+$IMAGES_SLIDE_CONTROL$=Controlling a Slideshow
+$IMAGES_SLIDE_CONTROL_TXT$::
+The slideshow can be controlled manually using the buttons at the top of the slideshow dialog.  From left to right, the controls go to the previous image,
+pause, start, and go to the next image in the slideshow, respectively.  Next to these controls is a counter showing the position of the current image along
+with the total number of images in the slideshow.
+
+The speed at which the images are displayed in the slideshow can be controlled using the slider at the bottom of the dialog.  Adjusting the slider to the left
+towards <strong>Slow</strong> causes the images to be advanced at a slower pace.  Adjusting the slider towards <strong>Fast</strong> increases this pace.  On
+some servers, a loading image may be displayed when advancing to the next image if the current pace is faster than the server is capable of generating the
+slideshow image.
+
+When you are finished viewing the slideshow, use the <strong>Close</strong> button to dismiss the slideshow dialog.
+::END
+
+$IMAGES_SLIDESHOWS$=Slideshows
+$IMAGES_SLIDESHOWS_TXT$::
+Slideshows are a way to automatically preview the images contained in the current directory.  While viewing an image in slideshow mode, standard actions can be
+performed on that file including <strong>Download</strong>, <strong>Rename</strong>, and <strong>Delete</strong> by clicking the appropriate button below the
+image.
+::END
+
+$MEDIA_PLAYER$=Media Player
+$MEDIA_PLAYER_TXT$::
+The Media Player allows users to play most common media formats instantly using the Media Player dialog in the Web Client. This feature allows user to 
+conveniently preview audio & video files before downloading as well as build playlists to stream audio straight from the Web Client.
+::END
+
+$MEDIA_PLAY_LIST$=Playlists
+$MEDIA_PLAY_LIST_TXT$::
+Playlists are dynamically generated by Serv-U to play all audio files located in the user's current directory. If audio files are detected in the current 
+directory, a "Play List" option is made available. Simply click the button to begin successively streaming all audio files in the user's current directory 
+to the built-in Media Player.
+::END
+
+$MEDIA_PLAYER_CONTROLS$=Media Player Controls
+$MEDIA_PLAYER_CONTROLS_TXT$::
+The Media Player can be controlled manually using the previous and next buttons located above the player. Next to these controls is a counter showing the 
+position of the current media file along with the total number of media files in the current directory. <strong>Note:</strong> These controls manually 
+change to the previous or next media file in the current directory.  Once the media file has been played, the Media Player does not automatically move 
+on to the next media file.
+
+To play multiple audio files in succession, you must use the "Play List" option. When utilizing this feature, the controls in the appropriate media player 
+plug-in can be used to change the current track.  While streaming a playlist from Serv-U, the download, delete, and rename actions are hidden.
+::END
+
+
+<!-- NOTE TO TRANSLATORS: The following BLOCK MUST be removed from your translation -->
+<!-- localized strings, keep these at the end of this file, they "overwrite" any previously defined string -->
+<!--#include de "Help-Client-Strings_DE.strings"-->
+<!--#include fr "Help-Client-Strings_FR.strings"-->
+<!--#include it "Help-Client-Strings_IT.strings"-->
+<!--#include es "Help-Client-Strings_ES.strings"-->
+<!--#include zh,TW "Help-Client-Strings_TW.strings"-->
+<!--#include zh,CN "Help-Client-Strings_CN.strings"-->
+<!--#include jp "Help-Client-Strings_JP.strings"-->

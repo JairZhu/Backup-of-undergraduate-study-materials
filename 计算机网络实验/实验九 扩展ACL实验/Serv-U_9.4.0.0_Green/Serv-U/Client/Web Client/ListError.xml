@@ -1,0 +1,29 @@
+<!--#include "..\Common\Strings\Result.strings"-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<files>
+<file>
+<FileName></FileName>
+<FileSize></FileSize>
+<FileDate></FileDate>
+<FilePath></FilePath>
+<FileIsDir></FileIsDir>
+<FileIsImage></FileIsImage>
+<FileDriveLabel></FileDriveLabel>
+<FileIsDrive></FileIsDrive>
+<FileDriveType></FileDriveType>
+<FileIsDeleted>0</FileIsDeleted>
+</file>
+</files>
+<hidden>
+<ErrorResponse>%RESULT%</ErrorResponse>
+<ResultText>%RESULT_TEXT%</ResultText>
+<CurrentDir>%CURRENT_DIR%</CurrentDir>
+<CurrentDirIsDrive></CurrentDirIsDrive>
+<CurrentDirDriveType></CurrentDirDriveType>
+<CurrentDirDriveLabel></CurrentDirDriveLabel>
+<CurrentDirCanUpload></CurrentDirCanUpload>
+<CurrentDirIsHome></CurrentDirIsHome>
+<CurrentDirCanCreate></CurrentDirCanCreate>
+</hidden>
+</response>

@@ -1,0 +1,79 @@
+﻿<!-- LimitsStrings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Admin\Include\ -->
+
+<!-- **************** Advanced Limits **************** -->
+$LIMIT_ADV_CONVERTURLCHARS$=Konvertiere URL Zeichen in Kommandos zu ASCII
+$LIMIT_ADV_CHECKDIRSIZE$=Automatische Prüfung der Verzeichnisgrösse beim Upload
+$LIMIT_ADV_INLINEOOB$=Out-of-band Daten verwalten
+$LIMIT_ADV_KEEPALIVE$=Verbindung mit keep-alive Paketen auf Unterbrechnungen prüfen
+$LIMIT_ADV_NAGLE$=Deaktiviere die Verwendung des Nagle Algorithmus
+$LIMIT_ADV_ADAPTIVETO$=Anpassungsfähige Time-Outs bei schnellen Dateiuploads erlauben
+$LIMIT_ADV_SFTPMAXVERSION$=Maximal unterstützte SFTP Version
+$LIMIT_ADV_ALLOWRENAMEOVERWRITE$=Erlaube Überschreiben beim Umbenennen
+$LIMIT_ADV_WARNOLDBROWSER$=Endbenutzer warnen, wenn veraltete Webbrowser verwendet werden
+$LIMIT_ADV_DEFAULT_LANG$=Standardsprache für Webclient
+
+<!-- **************** Connection Limits **************** -->
+$LIMIT_CONN_MAXSERVERSESS$=Maximalanzahl an Sitzungen am Server
+$LIMIT_CONN_MAXSERVERSESSIP$=Maximalanzahl an Sitzungen pro IP Adresse am Server
+$LIMIT_CONN_MAXDOMAINSESS$=Maximalanzahl an Sitzungen der Domäne
+$LIMIT_CONN_MAXDOMAINSESSIP$=Maximalanzahl an Sitzungen pro IP Adresse auf der Domäne
+$LIMIT_CONN_MAXGROUPSESS$=Maximalanzahl an Sitzungen pro Gruppe
+$LIMIT_CONN_MAXGROUPSESSIP$=Maximalanzahl an Sitzungen pro IP Adresse für Gruppe
+$LIMIT_CONN_MAXSESSUSER$=Maximalanzahl an Sitzungen pro Benutzerkonto
+$LIMIT_CONN_MAXSESSIPUSER$=Maximalanzahl an Sitzungen pro IP Adresse für Benutzerkonto
+$LIMIT_CONN_REQUIRESECURE$=Sichere Verbindung vor dem Login erforderlich 
+$LIMIT_CONN_IDLETO$=Automatisches Verbindungs-Time-Out bei Inaktivität
+$LIMIT_CONN_SESSTO$=Automatisches Sitzungs-Time-Out
+$LIMIT_CONN_BLOCKANTITO$=Unterbinde versuchte Permanentverbindungen
+$LIMIT_CONN_AUTOCREATE$=Stammverzeichnisse automatisch anlegen
+$LIMIT_CONN_TIMEOUTBLOCKIP$=Sperre IP Adresse der abgelaufenen Sitzung
+$LIMIT_CONN_FTP$=Erlaube FTP und FTPS Verbindungen
+$LIMIT_CONN_SSH$=Erlaube SFTP Verbindungen
+$LIMIT_CONN_HTTP$=Erlaube HTTP und HTTPS Verbindungen
+$LIMIT_CONN_REQ_REV_DNS$=Reverse DNS Name erforderlich
+$LIMIT_CONN_ALLOWXFORWARD$=Erlaube X-Forwarded-For um IP Adressen bei HTTP Verbindungen zu ändern
+
+<!-- **************** Directory Listing Limits **************** -->
+$LIMIT_DL_HIDEHIDDEN$=Verstecke Dateien in Liste, die als versteckt markiert sind
+$LIMIT_DL_LOWERCASE$=Verwende Kleinschreibung für Dateinamen und Verzeichnisse
+$LIMIT_DL_SCLINKS$=Windows Verknüpfungen als Links anzeigen
+$LIMIT_DL_SCASTARGET$=Behandle Windows Verknüpfungen als Ziel für Listen
+$LIMIT_DL_LOCK$=Zugriff auf Stammverzeichnis beschränken
+$LIMIT_DL_ROOT$=Erlaube (\"/\"), um für nicht zugriffsbeschränkte Benutzer, Laufwerke anzuzeigen
+$LIMIT_DL_COMP_STATE$=Verberge den Komprimierungsstatus der Dateien und Verzeichnissen
+$LIMIT_DL_ENCRYPT_STATE$=Verbergen den Verschlüsselungsstatus von Dateien und Verzeichnissen
+$LIMIT_DL_NATURALSORT$=Verwende normale alphabetische Sortierung für sortierte Listen
+
+<!-- **************** Password Limits **************** -->
+$LIMIT_PW_CHECKANON$=Prüfe anonyme Kennwörter
+$LIMIT_PW_REQCOMPLEX$=Komplexe Kennworter erforderlich
+$LIMIT_PW_MINLENGTH$=Minimale Kennwortlänge
+$LIMIT_PW_EXPIRES$=Kennwörter laufen automatisch aus
+$LIMIT_PW_CHANGE$=Benutzer dürfen Kennwörter ändern
+$LIMIT_PW_ENCRYPT$=Speichere Kennwörter verschlüsselt
+$LIMIT_PW_HIDEINLOG$=Maskiere empfangene Kennwörter in Logs
+$LIMIT_PW_SSHAUTHTYPE$=SSH Authentifizierungstyp
+$LIMIT_PW_TYPE$=Kennwort Typ
+$LIMIT_PW_ENCRYPT_MODE$=Kennwortverschlüsselungsmodus
+$LIMIT_PW_ENABLE_RECOVERY$=Erlaube Benutzer, Kenworter wiederherzustellen
+
+<!-- **************** Transfer Limits **************** -->
+$LIMIT_TRAN_SERVERUP$=Maximale Uploadgeschwindigkeit für den Server
+$LIMIT_TRAN_SERVERDN$=Maximale Downloadgeschwindigkeit für den Server
+$LIMIT_TRAN_DOMAINUP$=Maximale Uploadgeschwindigkeit für Domäne
+$LIMIT_TRAN_DOMAINDN$=Maximale Downloadgeschwindigkeit für Domäne
+$LIMIT_TRAN_GROUPUP$=Maximale Uploadgeschwindigkeit für alle Gruppenmitglieder
+$LIMIT_TRAN_GROUPDN$=Maximale Downloadgeschwindigkeit für alle Gruppenmitglieder
+$LIMIT_TRAN_USERUP$=Maximale Uploadgeschwindigkeit für Benutzerkontenuser
+$LIMIT_TRAN_USERDN$=Maximale Downloadgeschwindigkeit für Benutzerkonten
+$LIMIT_TRAN_SESSUP$=Maximale Uploadgeschwindigkeit pro Sitzung
+$LIMIT_TRAN_SESSDN$=Maximale Downloadgeschwindigkeit pro Sitzung
+$LIMIT_TRAN_DELETEPARTIAL$=Lösche nur teilweise zum Server transferierte Dateien
+$LIMIT_TRAN_MAX_FILE_SIZE$=Maximalgrösse von Dateien beim Upload
+$LIMIT_TRAN_INTERPRETLFASEOL$=Interpretiere das Zeilenvorschub Byte (Zeichen CR) als neue Zeile im ASCII Modus.
+$LIMIT_TRAN_ALLOWMEDIAPLAY$=Erlaube Medienwiedergabe via HTTP
+
+
+

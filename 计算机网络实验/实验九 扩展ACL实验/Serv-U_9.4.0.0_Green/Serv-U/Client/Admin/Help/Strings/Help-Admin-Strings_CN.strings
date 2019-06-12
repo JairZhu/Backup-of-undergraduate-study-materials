@@ -1,0 +1,2584 @@
+﻿<!-- Help-Admin-Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- External links reused throughout the help documentation -->
+$LINK_PRODUCT_HOME$=<a href="http://www.Serv-U.com/" target="_blank">http://www.Serv-U.com/</a>
+$LINK_PRODUCT_SALES$=<a href="http://www.Serv-U.com/sales/" target="_blank">http://www.Serv-U.com/sales/</a>
+$LINK_PRODUCT_SUPPORT$=<a href="http://www.Serv-U.com/support/" target="_blank">http://www.Serv-U.com/support/</a>
+$LINK_PRODUCT_HELP_DESK$=<a href="http://www.Serv-U.com/prodsupport" target="_blank">Serv-U Help Desk</a>
+$LINK_PRODUCT_KB$=<a href="http://www.Serv-U.com/kb/" target="_blank">http://www.Serv-U.com/kb/</a>
+$LINK_PRODUCT_PURCHASE$=<a href="http://www.Serv-U.com/purchase/" target="_blank">http://www.Serv-U.com/purchase/</a>
+$LINK_PRODUCT_PRICING$=<a href="http://www.Serv-U.com/pricing/" target="_blank">http://www.Serv-U.com/pricing/</a>
+$LINK_CUSTOMER_SERVICE$=<a href="http://www.RhinoSoft.com/customer/" target="_blank">RhinoSoft.com Online Customer Service Center</a>
+$LINK_DNS4ME$=<a href="http://www.DNS4Me.com/" target="_blank">DNS4Me</a>
+$RHINOSOFT_CONTACT_INFO$::
+<strong>RhinoSoft.com<br />
+P.O. Box 53<br />
+Helenville, WI 53137<br />
+U.S.A.<br />
+
+销售：+1 (262) 560-9627<br />
+电话：+1 (262) 560-9627<br />
+传真：+1 (262) 560-9628<br />
+</strong>$LINK_PRODUCT_HOME$<br />
+$LINK_PRODUCT_SALES$<br />
+$LINK_PRODUCT_SUPPORT$<br />
+::END
+
+
+<!-- Macros for inserting links to other Help doc pages.  The text within these anchor tags needs to be translated. -->
+$LINK_HELP_EDITIONS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-ServU-Editions.htm">Serv-U 版本</a>
+$LINK_HELP_UIC$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-UIC-Info.htm">用户界面转换</a>
+$LINK_HELP_RATIOS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-User-Quotas-Ratios.htm">传输率</a>
+$LINK_HELP_SYSTEM_VARS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-System-Variables.htm">系统变量</a>
+$LINK_HELP_LOG_SETTINGS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Configure-Logs.htm">域日志设置</a>
+$LINK_HELP_GUIDE$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Quick-Start.htm">快速入门指南</a>
+$LINK_HELP_VIRTUAL$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Virtual-Hosts.htm">虚拟主机</a>
+$LINK_HELP_DIRACCESS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Directory-Access.htm">目录访问规则</a>
+$LINK_HELP_USER_LIMITS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Limits-Settings-User.htm">密码限制</a>
+$LINK_HELP_GROUPS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-About-Groups.htm">群组</a>
+
+
+<!-- String table for Help-Overview -->
+$OVERVIEW_HEADER$=Serv-U 文件服务器概述
+
+$OVERVIEW1$::
+欢迎使用 Serv-U 文件服务器！
+
+Serv-U 文件服务器是一款多协议文件服务器，它能通过多种方法从其它联网计算机收发文件。管理员为用户创建帐户，以便访问服务器硬盘上或任何其它可用网络资源上的特定文件和文件夹。这些访问权限定义用户在哪里可以访问可用资源和访问方式。Serv-U 的多协议支持意味着用户可以使用任何可用的访问方法连接到服务器。Serv-U 文件服务器支持以下协议：
+::END
+
+$OVERVIEW_PROTOCOLS$::
+FTP（文件传输协议）
+HTTP（超文本传输协议）
+FTPS（通过 SSL 的 FTP）
+HTTPS（通过 SSL 的 HTTP）
+使用 SSH2* 的 SFTP（安全外壳程序上的文件传输）
+::END
+
+$OVERVIEW_EDITION_NOTE$::
+* - SSH2 需要 Serv-U 金版或银版
+::END
+
+$OVERVIEW2$::
+除了Serv-U 能极好地支持的许多流行的 FTP 客户端之外，您还能使用喜爱的 Web 浏览器或 SSH 客户端连接 Serv-U 并传输文件。服务器管理员为没有 FTP 客户端许可证的用户提供全功能 FTP 客户端，甚至能授权用户在登录 Serv-U 帐户后使用 FTP Voyager JV&mdash;&mdash;一款启用 Java 的 FTP 客户端。有关授权使用<a href="http://www.Serv-U.com/Web-FTP-Client.asp" target="_blank">FTP Voyager JV 的更多信息，请单击这里。</a>
+
+Serv-U 文件服务器在继承 Serv-U 品牌著名功能的同时，不断提升文件服务器的易用性，使您可以：
+::END
+
+$OVERVIEW_LIST$::
+从任何地方访问文件
+与朋友、家人和客户共享文件
+为员工提供集中收发数据文件的场所
+完全支持群组以优化用户创建和维护
+查看实时生成的缩略图和幻灯片图像，将带宽使用降到最低程度
+通过定制的 web 界面管理服务器
+实时地与 FTP 客户端聊天并查看会话日志
+定制 FTP 命令响应
+创建极其细致的定制限制和规则以控制服务器上的资源使用
+使用 SSL/TLS 或 SSH2 安全地进行连接*
+使用第三方数字证书向客户端担保服务器的身份*
+多个域共用相同的 IP 地址和端口*
+在同一个域上使用多个验证源（本地用户数据库、NT/SAM、ODBC）*
+自动构建 ODBC 验证需要的表格*
+...以及更多！
+::END
+
+$OVERVIEW3$::
+Serv-U 试用版作为全功能 "金版" 可运行 30 天。注册可以获得 1 年的免费软件升级服务（升级保护）和 1 年的邮件技术支持。也可以折扣价购买许可证以延长升级保护和邮件技术支持到 2 年时间。
+::END
+
+
+<!-- String table for Help-ServU-Editions -->
+$SERVU_EDITIONS_HEADER$=Serv-U 版本
+
+$SERVU_EDITION_INTRO$::
+Serv-U 文件服务器有三个不同版本，分别为满足当今服务器管理员的各种需求而设计。RhinoSoft.com 提供<strong>铜版</strong>，它配备了核心工具和功能；<strong>银版</strong>，它新增了对于 SSH 的支持；以及<strong>金版</strong>，它提供了一整套企业级功能，针对的是文件服务器通信量巨大的大中型企业。
+::END
+
+$SERVU_BRONZE_HEADER$=Serv-U 铜版
+
+$SERVU_BRONZE_BODY1$::
+Serv-U 铜版提供一套强大的功能集，配备所有用于管理与传输文件的工具：
+::END
+
+$SERVU_BRONZE_LIST$::
+无限数量的域拥有无限数量的并发连接
+无限数量的用户帐户
+支持加密的 FTPS 连接
+支持虚拟目录映射
+支持传输比率和配额 
+支持从单个地点远程管理多个服务器 
+支持 ODBC 数据库用户和群组帐户存储
+支持基于 NT-SAM/活动目录的用户帐户
+::END
+
+$SERVU_SILVER_HEADER$=Serv-U 银版
+
+$SERVU_SILVER_BODY$::
+Serv-U 银版扩展了铜版的性能，新增:
+::END
+
+$SERVU_SILVER_LIST$::
+三个域并支持 100 个并发连接
+250 个用户账户
+支持加密的 FTPS 连接
+支持虚拟主机
+通过登录页面恢复用户密码
+::END
+
+$SERVU_SILVER_LIST_OLD$::
+三个域并支持 100 个并发连接
+250 个用户账户
+支持加密的 FTPS 连接
+支持虚拟主机
+::END
+
+$SERVU_GOLD_HEADER$=Serv-U 金版
+
+$SERVU_GOLD_BODY$::
+Serv-U 金版致力于解决对企业级文件服务器的需求，它没有限制且能随企业的发展而不断扩展。除了银版中支持的 SSH，Serv-U 金版还可以使用 Web 客户端。鉴于此，Serv-U 金版具有如下额外的新功能：
+::END
+
+$SERVU_GOLD_LIST$::
+无限数量的域拥有无限数量的并发连接
+无限数量的用户帐户
+FTPS 140-2 支持，通过 OpenSSL（证书 #1051）验证
+支持自定义 HTTP 标志
+支持用户与群组统计
+支持加密的 HTTPS 连接
+使用 SSH2 的 SFTP （通过安全外壳的文件传输）
+支持从单个位置远程管理多个服务器
+支持 ODBC 数据库用户和群组帐户存储
+支持基于 NT-SAM/活动目录的用户帐户
+支持邮件、外部程序与气球提示事件
+::END
+
+$SERVU_GOLD_LIST_OLD$::
+无限数量的域拥有无限数量的并发连接 
+无限数量的用户帐户 
+支持自定义 HTTP 标志
+支持用户与群组统计
+支持加密的 HTTPS 连接
+使用 SSH2 的 SFTP （通过安全外壳的文件传输）
+支持从单个位置远程管理多个服务器
+支持 ODBC 数据库用户和群组帐户存储
+支持基于 NT-SAM/活动目录的用户帐户
+支持邮件、外部程序与气球提示事件
+::END
+
+$SERVU_EDITIONS_LINK_INFO$=<a href="http://www.Serv-U.com/" target="_blank">点击此处</a> 以获得更多关于 Serv-U 文件服务器三个版本的更多信息。
+
+
+<!-- String table for Help-How-To-Purchase -->
+$HOW_TO_PURCHASE_HEADER$=如何购买 Serv-U
+
+$HOWTOPURCHASE$::
+Serv-U 在初次安装日期后可在 30 天内作为全功能金版试用。为了继续使用带完整功能的 Serv-U，必须购买 Serv-U 许可证。
+
+您可以在 $LINK_PRODUCT_PURCHASE$ 在线购买许可证。请确认所需 Serv-U 文件服务器的版本和购买数量（批量购买有折扣价格）。购买 FTP Voyager JV 许可证之前必须购买 Serv-U 文件服务器许可证。同时，可以按较大的折扣捆绑购买 FTP Voyager（我们的首选 FTP 客户端程序）许可证。
+
+访问以下网址可获得价格信息：$LINK_PRODUCT_PRICING$。
+
+如果遗失了注册 ID，您可访问以下网址重新获取 ID：$LINK_CUSTOMER_SERVICE$。
+
+一旦完成购买，会立即向您发送包含注册详情的电子邮件。如果在一个小时内仍未收到，请检查您的垃圾邮件过滤器以确保此邮件没有被过滤掉。有时，过滤器会阻止我们邮件中作为附件的 .reg 安装文件。如果发生这种情况，只需遵照邮件内的 "手动注册" 指导进行注册即可。
+::END
+
+<!-- String table for Help-Contact-Tech -->
+$TECHNICAL_SUPPORT_HEADER$=技术支持
+
+$TS_INTRO$::
+有问题并需要更多帮助吗？RhinoSoft.com 提供多种技术支持选项。有关当前产品支持政策，请参考 $LINK_PRODUCT_HELP_DESK$。
+
+从 RhinoSoft.com 的官方经销商处购买 Serv-U 的用户可转而向该经销商寻求技术支持。我们提供电话技术支持服务。可以访问 $LINK_PRODUCT_HELP_DESK$ 获得电话技术支持服务的收费信息，包括最低电话支持费用。我们也提供高级支持合约，它包括优先的邮件技术支持和 5 次电话技术支持的费用。
+
+如果您遗失了注册 ID，请访问 $LINK_CUSTOMER_SERVICE$。
+::END
+
+$TS_FREE_EMAIL$=免费电子邮件支持
+$TS_FREE_EMAIL_INFO$::
+通过电子邮件向所有用户提供免费技术支持。RhinoSoft.com 要求所有用户向 $LINK_PRODUCT_SUPPORT$ 提交其技术支持查询。
+::END
+
+$TS_KNOWLEDGE_BASE$=知识库
+$TS_KNOWLEDGE_BASE_INFO$::
+我们的知识库是一个动态工具供您用来研究问题的解决方案。几乎向我们的技术支持团队提交的每个技术问题都在此作出答复。知识库可以为您的问题提供快速、详细的逐步解答，并带有屏幕截图。
+
+访问 $LINK_PRODUCT_KB$ 立刻获得解答。
+::END
+
+$TS_SALES_SUPPORT$=销售支持
+$TS_SALES_SUPPORT_INFO$::
+有关 Serv-U 文件服务器软件的销售问题（非技术性质）,请访问：$LINK_PRODUCT_SALES$。也可以通过拨打+1 (262) 560-9627 致电 RhinoSoft.com 联系销售代表。
+
+RhinoSoft.com 可自行地对技术支持选项作出变更而无需发布通知
+::END
+
+
+<!-- String table for Help-Contact -->
+$CONTACT_HEADER$=联系 RhinoSoft.com
+
+$CONTACT_INTRO$::
+如果您遗失了注册 ID，请访问 $LINK_CUSTOMER_SERVICE$。
+
+您可通过将信件邮寄至以下地址来联系 RhinoSoft.com：
+::END
+
+$CONTACT_SALES$::
+有关销售查询，请访问：$LINK_PRODUCT_SALES$。
+::END
+
+$CONTACT_PRODUCT_INFO$::
+要了解有关 Serv-U 文件服务器的更多信息，请访问：$LINK_PRODUCT_HOME$。
+::END
+
+
+<!-- String table for Help-Quick-Start -->
+$QUICK_START_HEADER$=快速入门指南
+
+$QS_INTRODUCTION$::
+Serv-U 设计的配置简单，其灵活性和控制功能使您得以在可能的最佳安全保护下与其他人方便地共享文件。快速入门指南将帮助您安装服务器，创建首个域，并向新域中添加用户帐户。一旦完成这些简单步骤，您就能连接到新的文件服务器并开始传输文件！
+::END
+
+$QS_INSTALLATION$=安装
+$QS_INSTALLATION_INFO$::
+如果您是首次安装 Serv-U，只需遵照安装屏上的指令选择安装目录并配置桌面快捷方式，以便快速访问服务器。您也可选择将 Serv-U 作为系统服务安装，这意味着当 Windows 启动时自动启动 Serv-U&mdash;&mdash;在任何用户登录服务器前。如果 Serv-U 运行于专用的服务器机器，且没有交互式用户会话定期登录该服务器时，该选项很有用。如果 Serv-U 未作为系统服务安装，则登录 Windows 后需要手动启动该软件。
+
+如果覆盖安装现有 Serv-U，我们推荐首先备份原始安装文件夹。尽管可以安全地覆盖安装任何现有的 Serv-U 并对数据文件和二进制代码进行必要的升级，在升级前备份关键组件仍被视为良好的数据管理措施。如果进行升级的安装版本早于 7.0 版，将会出现提示对话窗，指出在版本 6 后作出的关键更改，以及这些更改会如何影响您对 Serv-U 文件服务器的管理。
+
+一旦完成安装，将启动 Serv-U 管理控制台。如果选择安装后不启动 Serv-U 管理控制台，可以通过双击系统托盘内的 Serv-U 图标，或单击右键选择 "启动管理控制台" 选项，来随时启动控制台。
+::END
+
+$QS_FIRST_DOMAIN$=创建首个域
+$QS_FIRST_DOMAIN_INFO$::
+完成加载管理控制台后，如果当前没有现存域会提示您是否创建新域。单击<strong>是</strong>启动域创建向导。任何时候要运行该向导，可以单击管理控制台顶部或<strong>更改域</strong>对话框内的<strong>新建域</strong>按钮，从管理控制台内的任何页面都可打开更改域对话框。在 Serv-U 文件服务器上创建新域有 3 个简单步骤。
+
+第一步是提供唯一的域名。域名对其用户是不可见的，并且不影响其他人访问域的方式。它只是域的标识符，使其管理员更方便的识别和管理域。同时域名必须是唯一的,从而使 Serv-U 可以将其与服务器上的其它域区分开。您也可在描述区提供域的任何其它描述说明。默认情况下，启用域并供用户访问。如果您希望在配置过程中暂时拒绝用户访问该域，取消选中<strong>启用域</strong>选择框。单击<strong>下一步</strong>继续创建域。
+
+创建域的第二步是指定用户访问该域所用的协议。标准文件共享协议是 FTP（文件传输协议），它运行于默认端口 21。然而，任何这些端口号都可更改为您所选择的数值。如果在非默认端口上运行服务器，推荐使用 1024 以上的端口。关于每个 Serv-U 版本所支持协议的更多信息，请参考有关 Serv-U 版本的文档。选中您希望域支持的协议旁的选择框，然后单击<strong>下一步</strong>继续。
+
+第三步即最后一步是指定用于连接该域的物理地址。通常，这是用户指定的 IP 地址，用于在 Internet 上查找您的服务器。大多数家庭用户可以保留该选项空白，以使 Serv-U 使用计算机上的任何可用 IP 地址。
+::END
+
+$QS_FIRST_DOMAIN_ENCRYPT$::
+第四步与最后一个步骤是决定在该域存储密码时将使用的加密模式。默认情况下，使用单向加密安全地存储所有密码，一旦保存密码就会将其锁定。不过，用户希望利用 Web 客户端上的“密码恢复”工具时，可以选择使用双向密码，这样在要求密码恢复时，Serv-U 就无需重置其密码。最后，若希望将密码存储为明文，Serv-U 也可以实现。不推荐这一方式，不过要与过去的系统集成（特别是在使用数据库支持时），这可能是必需的。
+::END
+
+$QS_FIRST_DOMAIN_DONE$::
+现在，点击<strong>完成</strong>以让 Serv-U 创建你的第一个域。祝贺您！现在您的第一个域上线了。下一次可以配置域的更多属性。有关这些选项的更多信息，请参见域设置文档。现在，您需要创建用户帐户以便通过该域开始共享文件。
+::END
+
+$QS_FIRST_USER$=创建首个用户帐户
+$QS_FIRST_USER_INFO$::
+创建首个域后，管理控制台将显示用户页面并询问您是否希望使用新建用户向导创建新用户帐户。单击<strong>是</strong>启动新建用户帐户向导。任何时候通过单击用户帐户页面上的 "向导" 按钮可以运行该向导。创建新用户帐户有 4 个简单步骤。
+::END
+
+$QS_FIRST_USER_LOGIN_OLD$::
+第一步是提供帐户的唯一的登录 ID。连接域时使用该登录 ID开始验证过程。登录 ID对于该域必须是唯一的，但服务器上其它域可能有帐户拥有同样的登录 ID。要创建匿名帐户，请指定登录 ID为 "anonymous" 或 "ftp"。单击<strong>下一步</strong>继续创建用户帐户。
+::END
+
+$QS_FIRST_USER_LOGIN$::
+第一步是提供帐户的唯一的登录 ID。连接域时使用该登录 ID开始验证过程。登录 ID对于该域必须是唯一的，但服务器上其它域可能有帐户拥有同样的登录 ID。要创建匿名帐户，请指定登录 ID为 "anonymous" 或 "ftp"。
+
+此时，还需为该用户账户指定全名与电子邮件地址。全名提供引用用户账户的规范名，电子邮件地址允许将 Serv-U 邮件通知与恢复的密码发送到用户账户。单击<strong>下一步</strong>继续创建用户帐户。
+::END
+
+$QS_FIRST_USER_PASSWORD$::
+指定唯一登录 ID后，您还必须为帐户指定密码。当用户连接域时，密码是验证用户身份所需的第二条信息。如果有人要连接该域，他们必须知道第一步中指定的登录 ID，以及此密码。密码可以留空，但将导致知道登录 ID的任何人都能访问域。点击<strong>下一步</strong>继续。
+
+第三步是指定帐户的根目录。根目录是登录成功时用户帐户在服务器硬盘（或可访问的网络资源）上所处的位置。实质上，它是用户帐户在服务器上收发文件时您希望它使用的位置。单击<strong>浏览</strong>按钮转到硬盘上的某个位置，或手动输入该位置。如果锁定用户至根目录，他们就不能访问其根目录结构之上的文件或文件夹。此外，根目录的真正位置将被屏蔽而显示为 "/"。单击<strong>下一步</strong>按钮继续最后一个步骤。
+
+最后一步是授予用户帐户访问权。访问权是按目录授予的。然而，可访问目录中的所有子目录可以继承访问权。默认访问权是 "只读"，这意味着用户可以列表显示其根目录中的文件和文件夹并进行下载。然而他们不能上传文件、创建新目录、删除文件/文件夹或重命名文件/文件夹。如果选择 "完全访问"，用户就能执行所有上述操作。创建用户后，通过编辑用户并选择 "目录访问" 选项卡，可以更细致的配置这些访问权限。选择目录访问权限后，单击<strong>完成</strong>按钮创建用户帐户。
+
+祝贺您！您的 Serv-U 文件服务器已准备就绪可供访问和共享。您可以像创建该帐户一样创建更多帐户以便与其他朋友、家人或同事共享。每个用户可有不同的根目录从而使您可与不同人共享不同文件。还有更多用户配置选项使您可以微调帐户访问服务器的权限。有关这些选项的更多信息，请参见用户帐户的文档。
+::END
+
+
+<!-- String table for Help-Serv-U-Concepts -->
+$SERVER_CONCEPTS_HEADER$=服务器概念
+
+$SERVER_CONCEPTS_INTRO$::
+Serv-U 文件服务器使用一些概念，帮助您理解如何将文件服务器作为单一的分级单元进行配置和管理。Serv-U 文件服务器有四个相关的配置级别：<strong>服务器</strong>、<strong>域</strong>、<strong>群组</strong>和<strong>用户</strong>。其中，只有<strong>群组</strong>级别是可选的&mdash;&mdash;所有其它级别是文件服务器的必要组成部分。下面提供了对每个级别的解释。
+::END
+
+$SERVER_CONCEPTS_SERVER_HEADER$=服务器
+$SERVER_CONCEPTS_SERVER_BODY$::
+服务器级别是 Serv-U 文件服务器的基本单元，也是可用的最高配置级别。它代表了文件服务器整体，并管理所有域、组和用户的行为。Serv-U 文件服务器带有一组默认选项，可逐个对其进行覆盖。因此，服务器是 Serv-U 配置等级的最高级别。域、组和用户从服务器继承了它们的默认设置。在每个较低级别可以覆盖继承的设置。然而，一些设置是服务器级别特有的，例如 PASV 端口范围。
+::END
+
+$SERVER_CONCEPTS_DOMAIN_HEADER$=域
+$SERVER_CONCEPTS_DOMAIN_BODY$::
+一台服务器可以包含一个或多个域。通过域这个接口用户连接文件服务器并访问特定用户帐户。域的设置是从服务器继承而来。它也定义了其所有群组和用户帐户能继承的设置集。如果服务器级别的设置在域级别被覆盖，那么该域所有群组和用户帐户将继承该值为其默认值。
+::END
+
+$SERVER_CONCEPTS_GROUP_HEADER$=群组
+$SERVER_CONCEPTS_GROUP_BODY$::
+群组是进行额外配置的可选级别，通过它可以更为方便地对分享许多相同设置的相关用户帐户进行管理。通过使用群组，管理员可以快速更改多个用户帐户，而不必分别手动配置各个帐户。群组从它所属的域中继承所有默认设置。它定义了所有群组成员用户继承的设置集。实际上，每个用户级别设置可在群组级别进行配置，或在用户级别被覆盖。
+::END
+
+$SERVER_CONCEPTS_USER_HEADER$=用户
+$SERVER_CONCEPTS_USER_BODY$::
+用户级别处于等级底部。它可以从多个群组继承其默认设置（如果它是多个群组的成员），或从父域继承默认设置（如果它不是任何群组的成员或群组未定义默认设置）。用户帐户标识了与文件服务器的物理连接，并定义了该连接的访问权限。在用户级别被覆盖的设置在他处不能被覆盖，并将永远应用于使用该用户帐户进行验证的连接。
+::END
+
+$SERVER_CONCEPTS_COLLECTION_HEADER$=用户集
+$SERVER_CONCEPTS_COLLECTION_BODY$::
+不同于群组，用户集对其包含的用户帐户不提供任何级别的配置。相反，它只是提供了一种方法将用户归类以便查看和管理。例如，为了基于群组成员资格管理用户帐户，可以创建用户集，然而当用户帐户更改群组成员资格时必须手动对其进行维护。
+::END
+
+
+<!-- String table for Help-Nav-Serv-U -->
+$NAV_SERVU_HEADER1$=Serv-U 管理控制台
+$NAV_SERVU_INFO$::
+Serv-U 管理控制台的设计旨在以熟悉的方式快速便捷地访问文件服务器配置选项。查看配置页面时，您可通过单击左上角的 Serv-U 文件服务器标志在任何时候返回管理控制台主页面。
+::END
+
+$NAV_LAYOUT$=管理控制台布局
+$NAV_LAYOUT_INFO$::
+管理控制台显示为熟悉的控制面板类型的布局，并对相关选项进行归类。单击类标题，例如 "用户"，显示用户帐户管理屏幕。从该屏幕可使用每个子类配置选项。也可选择子类以直接转到该子类的配置页面。
+
+对于服务器管理员，管理控制台分两列显示。右列显示的类别与配置服务器范围的选项和设置有关。左列显示的类别与配置活动域有关。要更改活动域，请单击管理控制台左上角的<strong>管理域</strong>按钮，并选择另一个要管理的域。此外，页脚的右下角提供了<strong>更改域</strong>按钮。可使用该方法从管理控制台的任何页面更改活动域。
+
+域管理员只能访问适用于域的配置设置和选项，不能访问为系统管理员显示的服务器级别类项目。
+::END
+
+$NAV_MENU$=导航菜单
+$NAV_MENU_INFO$::
+导航菜单位于屏幕的左下角，提供了与 Serv-U 所有配置类别的直接链接。它是上下文相关的，显示了所选配置对象（域或服务器）的相关类别，以及当前所选类别的可扩展配置选项列表。
+::END
+
+$NAV_TABS$=选项卡式配置页面
+$NAV_TABS_INFO$::
+当从管理控制台打开某个类别时，所有相关的子类别页面都在同一个屏幕上以选项卡形式显示。这容许在相关配置选项间快速导航。
+::END
+
+$NAV_SERVU_WEB_CLIENT$=启动 Web 客户端
+$NAV_SERVU_WEB_CLIENT_INFO$::
+当配置 Serv-U 文件服务器时，通过单击页面底部工具栏内的适当启动按钮，可在任何时候启动 HTTP 会话。如果获得使用授权，<strong>Web 客户端</strong>随时可用，且可以从浏览器内启动。如果获得使用授权，也可通过单击 <strong>FTP Voyager JV</strong> 按钮，在 Java 运行环境中启动 FTP Voyager JV。
+::END
+
+$NAV_SERVU_THEMES$=更改 Serv-U 中的主题
+$NAV_SERVU_THEMES_INFO$::
+“主题”按钮，用于启动主题菜单，位于屏幕右下角。该菜单列出了可以更改 Serv-U 外观与风格的可用主题。只要从下拉式组框中选择一个主题并点击“确定”按钮即可。不用刷新页面就可加载这个主题。
+::END
+
+
+<!-- String table for Help-UIC-Info -->
+$UIC_HEADER$=用户界面协定
+$UIC_INTRO$::
+Serv-U 文件服务器使用统一的方式显示配置选项，它不但表达了选项的当前值，也表达了该选项是否是默认（或继承）值。传统方式为使用所谓三态复选框达到上述目的。三态复选框有两个主要缺点：
+::END
+$UIC_TRI_STATE_LIST$::
+默认状态不能清晰的表达选项的当前值。在某些版本的 Windows 中，该选择框被选中并带灰色的背景色&mdash;&mdash;即使当前未启用该选项！它们只能用来表示二元数值，即它们只能表示两个数值&mdash;&mdash;开或关。
+::END
+$UIC_INTRO2$::
+Serv-U 文件服务器使用不同的便于理解的协定克服了这些缺点。当选项从父对象中继承值时，选项的文本将显示为常规的非粗体文本。显示的值（无论是文本数值还是复选框）随着父对象的更改而更改，因为该值是从父对象中继承而来。
+
+然而，如果默认值被覆盖，则其文本将以<strong>粗体</strong>显示。当前显示的值始终是选项的值，而与其父对象的更改无关。
+::END
+
+$UIC_CASEFILE1_HEADER$=理解用户界面协定
+$UIC_CASEFILE1_BODY$::
+为了更好的说明用户界面协定，请参考以下案例文档。
+
+Acme Technology Co. 是一家计算机维修公司，使用 Serv-U 文件服务器向出差工程师提供对共享企业资源的全局访问权限。每个工程师在文件服务器上都有自己的帐户。为便于管理用户帐户，文件服务器管理员使每个用户帐户成为 "工程师" 群组的成员。该群组的管理权限被设为<strong>无权限</strong>，因为工程师没有管理文件服务器的责任。
+::END
+$UIC_CASEFILE1_BODY2$::
+一个工程师获得升职。除了他当前的技术工作以外，他也被授予文件服务器的管理权限，以便协助其他工程师进行帐户管理。文件服务器管理员只需编辑该工程师的用户帐户，并将管理权限更改为<strong>域管理员</strong>。该选项的文本变为粗体，表示它覆盖了默认值（无权限），该默认值是用户帐户从其 "工程师" 群组成员资格中继承得来。
+::END
+$UIC_CASEFILE1_BODY3$::
+以后，通过选择 "管理权限" 下拉框中的<strong>继承默认值</strong>选项可以将管理权限恢复为从 "工程师" 群组继承而来的默认值。
+::END
+
+
+<!-- String table for Help-Server-Overview -->
+$SERVER_OVERVIEW_HEADER$=服务器概述
+
+$SERVER_OVERVIEW$::
+Serv-U 文件服务器允许在服务器级别配置某些设置。当在服务器级别进行配置时，除非在更低级别修改了该配置，否则它们将应用到服务器上的所有用户、群组和域。可在服务器级别进行的配置包括：目录访问规则、IP 访问规则、带宽限制、全局用户帐户（可以登录任意 Serv-U 域的用户帐户）等。在以下帮助页面中列出了有关每个设置及其配置方式的详情。
+::END
+
+
+<!-- String table for Help-IP-ACL -->
+$IP_ACL_HEADER$=IP 访问规则
+
+$IP_ACCESS_TXT$::
+IP 访问规则是用户验证的一种补充形式，它可以限制登录特定 IP 地址、IP 地址群、甚至域。可以在服务器、域、群组和用户级别配置 IP 访问规则。在哪个级别指定 IP 访问规则也决定了连接在被拒绝前可以深入到哪个程度。发送欢迎消息前应用服务器和域级别的 IP 访问规则。当响应 HOST 命令以连接虚拟域时也应用域级别的 IP 访问规则。当客户端向服务器表明身份时，对 USER 命令的响应应用群组和用户级别的 IP 访问规则。
+
+指定这些规则确保了只有某些网络内的客户端可以登录。要配置 IP 访问规则，首先指定允许/禁止登录的客户端。要添加规则，请单击<strong>添加</strong>按钮，并指定受该规则约束的 IP 地址或地址范围。如果使用动态 DNS 服务，例如 $LINK_DNS4ME$，那么可以指定域名而不是 IP 地址，从而允许访问没有静态 IP 地址的移动客户端。也可使用反向 DNS 名称。如果创建了域名或反向 DNS 规则，Serv-U 必须执行反向 DNS 查询或 DNS 解析以应用这些规则。这会在登录期间取决于系统 DNS 服务器的速度，引起轻微的延迟。特殊格式允许使用范围和通配符，如下所示：
+::END
+
+$IP_ACCESS_RULE_EXACT$=xxx
+$IP_ACCESS_RULE_EXACT_TXT$=精确匹配，例如 <strong>192.168.1.1</strong>。
+
+$IP_ACCESS_RULE_RANGE$=xxx-xxx
+$IP_ACCESS_RULE_RANGE_TXT$=指定范围的 IP 地址，例如 <strong>192.168.1.10-19</strong>。
+
+$IP_ACCESS_RULE_STAR$=*
+$IP_ACCESS_RULE_STAR_TXT$=任何有效的 IP 地址值，例如 <strong>192.168.1.*</strong>，它类似于<strong>192.168.1.0-255</strong>。
+
+$IP_ACCESS_RULE_QUESTION$=?
+$IP_ACCESS_RULE_QUESTION_TXT$=指定反向 DNS 名称的任何有效字符，例如 <strong>server?.mydomain.com</strong>。
+
+$IP_ACCESS_RULE_SLASH$=/
+$IP_ACCESS_RULE_SLASH_TXT$=斜杠分隔符允许使用 CIDR 记数法来指定应允许或阻止哪些 IP 地址。常用的 CIDR 表示法为<strong>/8 (用于 1.*.*.*)</strong>, <strong>/16 (用于 1.2.*.*)</strong>与<strong>/24 (用于 1.2.3.*)</strong>。表示法 /32 可以用来指定单个 IP 地址。
+
+$IP_ACCESS_ABOUT$::
+IP 访问规则以显示的顺序依次应用。因此可以将特定规则置于顶部，以便在以后应用列表中更宽泛的规则前允许（或拒绝）访问。列表右侧的箭头可用来更改列表中单个规则的位置。
+::END
+
+$IP_ACCESS_APPROVED$::
+反恶意攻击规则无法自动阻止已出现在该列表中的允许地址。例如，本地 IP 地址 <strong>192.168.0.17</strong>
+引起 Serv-U 初始化其反恶意攻击规则来阻止该 IP 地址，但是由于列表中已明确允许了 <strong>192.168.0.17</strong>，反恶意攻击规则就无法自动阻止 <strong>192.168.0.17</strong>。
+
+以下为其工作原理。假设以下 IP 访问规则： 
+
++ 192.168.0.17<br />
++ *
+
+当出现来自 <strong>192.168.0.17</strong> 的活动时, 自动 IP 阻止（通过超时、反恶意攻击或会话活动的系统管理员）无法发生，因为该 IP 地址是特别启用的。底部的项目 * 表示允许任何人，无仅允许 <strong>192.168.0.17</strong> 这个值。如果反恶意攻击对另一个不同的 IP 地址起效，就会将被阻止的这个 IP 地址添加到列表顶部，如下所示：
+
+- 10.10.10.1<br />
++ 192.168.0.17<br />
++ *
+
+如果要允许整块 IP 地址，可以按照如下说明实现：
+
++ 192.168.0.1-255<br />
++ *
+
+如果反恶意攻击规则要作用于这些地址中的任何一个，都无法阻止该 IP 地址。此处的关键是通配符*。Serv-U 还会检查 *.*, *.*.*, *.*.*.* 作为“任何” IP 地址。
+::END
+
+$IP_ACCESS_SORT_HEADER$=启用排序模式
+
+$IP_ACCESS_SORT_INFO$::
+该选项允许 IP 访问列表按数序而非处理顺序进行排序。以排序模式显示 IP 访问列表不会更改处理规则的顺序 - 要查看规则优先级，请禁用该选项。以数序查看 IP 访问列表可以作为极有价值的工具，在查看冗长的访问规则列表以确定条目是否存在时很有用。
+::END
+
+$IP_ACL_CASEFILE1_HEADER$=案例文档 - 承包商
+$IP_ACL_CASEFILE1_BODY$::
+临时雇佣了一名承包商，为了有效完成承包的工作需要访问 Serv-U 文件服务器。为了避免泄密，授权该承包商不能从工地办公室之外的位置访问服务器。办公室内的所有工作站分配到的 IP 地址为 192.168.10.2 到 192.168.10.254。因此，创建允许访问规则如下所示：
+::END
+$IP_ACL_CASEFILE1_BODY2$::
+以上所示的规则允许承包商从办公室内访问文件服务器，但是因为创建了 "允许访问" 规则，因此添加了一条隐式的 "拒绝所有访问" 规则，该规则阻止从任何其它地方使用帐户。他被授予其所处位置需要的访问权，但管理员拥有更高的控制权，可以控制从哪里能访问数据。
+::END
+
+$IP_ACL_CASEFILE2_HEADER$=案例文档 - 开放式机器房
+$IP_ACL_CASEFILE2_BODY$::
+用户需要从办公室内访问服务器，但出于安全考虑不能从办公楼内的一组开放式 PC 机房内进行登录。该机器房分配到的 IP 地址为 192.168.15.100 到 192.168.15.110。因此，创建拒绝访问规则以拒绝对 192.168.15.100 到 192.168.15.110 的访问。请记住因为在使用 IP 访问规则时添加了隐式 "拒绝所有访问" 规则，在列表末尾必须添加 "允许所有访问" 规则允许用户从所有其它地址范围进行登录，这可以通过输入允许访问规则允许对 "*.*.*.*" 的访问来实现。列表末尾的这条规则保证了从所有其它 IP 地址可以进行连接。
+::END
+
+$IP_ACL_CASEFILE3_HEADER$=案例文档 - 通过名称访问
+$IP_ACL_CASEFILE3_BODY$::
+从 examplesite.com 域进行连接的用户应该是唯一可以访问该域的用户。为了限制可以访问该域的用户，采用基于反向 DNS 和主机名的 IP 访问规则。首先，创建新的访问规则允许访问 <strong>*.examplesite.com</strong>。
+
+<strong>注意</strong>：为使这条访问规则起作用，相关 IP 地址的 PTR 记录必须匹配已创建的规则。一般来说，为使连接 IP 地址拥有这样的 PTR 记录，连接客户端必须从已分配了 IP 地址范围的大型公司进行连接&mdash;&mdash;通常情况下，动态 IP 地址不能满足要求。
+::END
+
+
+<!-- String table for Help-Database-Access -->
+$DATABASE_HEADER$=数据库访问
+
+$DATABASE_ACCESS_BODY1$::
+Serv-U 可以使用 ODBC 数据库保存并维护域级别和服务器级别的群组和用户帐户。可在两个地方配置 ODBC 连接：<strong>域 | 域详情 | 数据库</strong>和<strong>服务器 | 服务器详情 | 数据库</strong>。Serv-U 可以自动创建所有需要的表和列以便开始在数据库中保存用户和群组。因为 Serv-U 使用一组表格名来存储信息，所以必须为在数据库中保存详细信息的每个项目单独配置 ODBC 连接。换句话说，服务器和每个域必须有唯一的 ODBC 连接以确保分别对其进行存储。要配置数据库，请按以下步骤操作：
+::END
+
+$DATABASE_PREP_LIST1$::
+创建 ODBC 连接供 Serv-U 使用。RhinoSoft.com 推荐使用 MySQL，但也可使用任何具有 Windows ODBC 驱动程序的数据库。如果 Serv-U 作为系统服务运行则使用系统 DSN，如果作为常规应用程序运行则使用用户 DSN。打开 Serv-U 管理控制台，转到相应的域或服务器数据库设置。输入数据源名称（DSN）、登录 ID 和密码，并单击<strong>保存</strong>。
+::END
+
+$DATABASE_ACCESS_BODY2$::
+如果是首次配制数据库连接，请选中<strong>自动创建</strong>选项。选中该选项后，Serv-U 文件服务器自动构建数据库表格和列。
+::END
+
+$DB_SQL_TEMPLATES$=SQL 模板
+$DB_SQL_TEMPLATES_TXT$::
+Serv-U 使用多个查询来维护包含用户和群组信息的数据库。这些查询符合 SQL 语言标准。然而，如果您使用的数据库与 Serv-U 的协作有问题，可能需要更改这些查询。从 SQL 模板对话框，可以特别定制 Serv-U 使用的每条查询以符合数据库支持的标准。
+
+<strong>注意：</strong>不正确地编辑这些 SQL 查询可能导致 Serv-U 内不再支持 ODBC。除非您擅长编写 SQL 语句，并肯定有必要启用数据库软件的 ODBC 支持，否则请勿擅自改动这些查询。
+::END
+
+$DB_TABLE_MAPPINGS$=用户和群组表格映射
+$DB_TABLE_MAPPINGS_TXT$::
+默认情况下，Serv-U 自动创建并维护在数据库中存储用户和群组信息所必需的表格和列。但如果试图将 Serv-U 连接到包含此信息的现有数据库，您需要定制表格和列的名称以符合现有数据库的结构。首先单击<strong>用户表格映射</strong>或<strong>群组表格映射</strong>。
+
+Serv-U 在10个不同表格中保存用户或群组的信息。只有用户/群组信息表和用户/群组目录访问表是必需的。可以从<strong>对象表</strong>下拉框更改当前表格。<strong>属性</strong>列列出了当前表格中存储的属性。<strong>数据库映射值</strong>显示数据库中属性所映射到的列名。首行总是显示 "表格名"，并可用来更改表格的名称。
+
+某些表格中的条目顺序至关重要，这些表格列出了<strong>排序列</strong>属性。该列用于保存规则应用的顺序。
+
+单击<strong>编辑</strong>按钮，或双击列名以编辑值。
+::END
+
+$DB_TABLE_MAPPINGS_TXT2$::
+<strong>启用</strong>后, 可以在需要时访问该表格。在特殊情况下，可以禁用未被使用的表格，以此来减少 ODBC（数据库）调用数。例如，如果不使用上传/下载率与配额，可以禁用“用户上传/下载率不限文件”表，“每个用户的文件上传/下载率”表，“每个用户的字节上传/下载率”表，以及“每个会话的字节上传/下载率”表，防止不必要的 ODBC 调用。禁用表格时请格外小心，因为在对话框中会出现字段，但不保存或加载它们。无法禁用“用户信息”与“群组信息”表格。
+::END
+
+$DATABASE_ACCESS_CASEFILE1_HEADER1$=案例文档 - ODBC 验证
+$DATABASE_ACCESS_CASEFILE1_BODY1$::
+通过 ODBC 数据库可以在 Serv-U 文件服务器中进行验证，允许脚本式帐户管理和维护。为了使用 ODBC 功能，请转到数据库的 ODBC 验证。通过将凭证存入数据库的设置中，就可以在 Serv-U 管理控制台外部由脚本式数据库操作管理帐户，该操作可以嵌入许多现存的帐户设置系统中。必须首先在 控制面板 | 管理工具 | 数据源（ODBC）中创建 DSN&mdash;&mdash;如果 Serv-U 作为服务运行则使用系统 DSN，否则如果 Serv-U 作为应用程序运行则使用用户 DSN。一旦创建了正确的 DSN 后，请指定数据源名、登录 ID 和密码并选择<strong>保存</strong>。Serv-U 透明地创建表和列。可以从 Serv-U 的数据库用户和数据库群组区域（位于普通用户和群组选项卡旁）管理数据库用户和群组．
+::END
+
+
+<!-- String table for Help-Events -->
+$EVENTS_HEADER$=Serv-U 事件
+
+$EVENTS_BODY1$::
+Serv-U 允许使用事件处理，执行各种由选定的事件列表所触发的操作。以下是管理员可以使用的操作：
+::END
+
+$EVENTS_SERVER$=服务器事件
+$EVENTS_LIST1$::
+$SUEVENT_ID_SERVER_START_TEXT$
+$SUEVENT_ID_SERVER_STOP_TEXT$
+::END
+
+$EVENTS_SERVER_DOMAIN$=服务器和域事件
+$EVENTS_LIST2$::
+$SUEVENT_ID_DOMAIN_START_TEXT$
+$SUEVENT_ID_DOMAIN_STOP_TEXT$
+$SUEVENT_ID_SESSION_CONNECT_TEXT$
+$SUEVENT_ID_SESSION_DISCONNECT_TEXT$
+$SUEVENT_ID_SESSION_CONNECT_FAILURE_TEXT$
+::END
+
+$EVENTS_LIST2_FUTURE_FEATURE$::
+$SUEVENT_ID_LOG_DELETED_TEXT$
+::END
+
+$EVENTS_ALL$=服务器，域，用户和群组事件
+$EVENTS_LIST3$::
+$SUEVENT_ID_USER_LOGIN_TEXT$
+$SUEVENT_ID_USER_LOGOUT_TEXT$
+$SUEVENT_ID_USER_LOGIN_FAILURE_TEXT$
+$SUEVENT_ID_USER_PASSWORD_CHANGE_TEXT$
+$SUEVENT_ID_USER_PASSWORD_CHANGE_FAILURE_TEXT$
+$SUEVENT_ID_USER_ENABLED_TEXT$
+$SUEVENT_ID_USER_DISABLED_TEXT$
+$SUEVENT_ID_USER_DELETED_TEXT$
+$SUEVENT_ID_USER_ADDED_TEXT$
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_SENT_TEXT$
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_FAILED_TEXT$
+$SUEVENT_ID_IP_BLOCKED_TEXT$
+$SUEVENT_ID_IP_BLOCKED_TIME_TEXT$
+$SUEVENT_ID_TOO_MANY_SESSIONS_TEXT$
+$SUEVENT_ID_TOO_MANY_SESSIONS_ON_IP_TEXT$
+::END
+$EVENTS_LIST3_2$::
+$SUEVENT_ID_FILE_UPLOAD_TEXT$
+$SUEVENT_ID_FILE_UPLOAD_FAIL_TEXT$
+$SUEVENT_ID_FILE_DOWNLOAD_TEXT$
+$SUEVENT_ID_FILE_DOWNLOAD_FAIL_TEXT$
+$SUEVENT_ID_FILE_DELETE_TEXT$
+$SUEVENT_ID_FILE_MOVE_TEXT$
+$SUEVENT_ID_DIR_CREATE_TEXT$
+$SUEVENT_ID_DIR_DELETE_TEXT$
+$SUEVENT_ID_DIR_CHANGE_TEXT$
+$SUEVENT_ID_DIR_MOVE_TEXT$
+$SUEVENT_ID_QUOTA_OVERAGE_TEXT$
+$SUEVENT_ID_DISK_SPACE_OVERAGE_TEXT$
+::END
+
+$EVENTS_ACTIONS$=事件操作
+$EVENTS_BODY2$::
+当一个事件触发时，管理员可以从三个不同的操作中选择一个来执行。以下是这些操作的列表：
+::END
+
+$EVENTS_LIST4$::
+$SUEVENT_ACTION_EMAIL_TEXT$
+$SUEVENT_ACTION_BALLOON_TIP_TEXT$（仅服务器管理员）
+$SUEVENT_ACTION_EXEC_TEXT$（仅服务器管理员） 
+::END
+
+$EVENTS_EMAIL_ACTION$=电子邮件操作
+$EVENTS_BODY3$::
+可以配置电子邮件操作在事件触发时发送邮件。电子邮件操作包含“收件人”，“主题”以及“正文”参数。特殊变量可以用于发送与事件相关的特定数据。请参考这些变量的列表，其位于"<a href="Help-System-Variables.htm">系统变量</a>"下。
+::END
+$FUTURE_FEATURE_EVENTS_BODY3$::
+可以配置电子邮件操作在事件触发时向多个收件人与 Serv-U 群组发送电子邮件。要添加电子邮件地址，请在“收件人”或“密送”字段中输入。要向 Serv-U 群组发送邮件，请使用“群组”图标以从分发列表中添加或删除 Serv-U 群组。必须使用逗号或分号分隔电子邮件地址。电子邮件操作包含“收件人”，“主题”与“正文”参数。特殊变量可以用于发送与事件相关的特定数据。请参考这些变量的列表，其位于"<a href="Help-System-Variables.htm">系统变量</a>"之下。
+::END
+
+$EVENTS_BALLOON_ACTION$=气球提示操作
+$EVENTS_BODY4$::
+可以将气球提示操作配置为在事件触发时在系统托盘中显示气球提示。气球提示操作包含“气球标题”和“气球消息”参数。特殊变量可以用于发送事件的详细数据。请参考这些变量的列表，其位于"<a href="Help-System-Variables.htm">系统变量</a>"下。
+::END
+
+$EVENTS_EXEC_ACTION$=执行命令操作
+$EVENTS_BODY5$::
+可以将执行命令操作配置为在事件触发时在文件上执行命令。执行命令操作包含“可执行程序路径”和“命令行参数”参数。特殊变量可以用于发送事件的详细数据。请参考这些变量的列表，其位于"<a href="Help-System-Variables.htm">系统变量</a>"下。
+::END
+
+$EVENTS_COMMON$=创建常规事件
+$EVENTS_COMMON_BODY$::
+Serv-U 允许管理员自动创建最常规事件的列表。您可以选择使用电子邮件和/或气球提示操作来创建这些常规事件。只要点击位于“事件”标签的“创建常规事件”按钮即可。选择“发送电子邮件”或“显示气球提示”单选按钮来执行您要对常规事件采取的操作。如果您选择“发送电子邮件”，您必须输入该事件将被发往的“收件人：”地址。
+::END
+
+
+<!-- String table for Help-Events -->
+$SMTP_CONFIG_HEADER$=Serv-U SMTP 配置
+
+$SMTP_CONFIG_BODY$::
+Serv-U 允许管理员配置 SMTP 连接来为配置为要使用电子邮件操作的事件发送邮件。SMTP 可以配置为服务器和/或域级别。域级别的 SMTP 配置可以从服务器级别继承。SMTP 配置对话框位于“域详细信息”与“服务器详细信息”页面的“事件”标签中。只要点击“配置 SMTP”按钮就能启动该对话框。
+::END
+
+$SMTP_CONFIG_SERVER_INFO$=SMTP 服务器信息
+$SMTP_CONFIG_SERVER_INPUT$::
+SMTP 服务器 - SMTP 服务器的名称或 IP 地址。
+SMTP 服务器端口 - 正在使用的 smtp 服务器端口。
+从电子邮件地址 - 用于出站邮件的电子邮件地址。
+::END
+
+$SMTP_CONFIG_FROM_NAME$::
+从名称（可选）- 用于出站邮件的名称。
+::END
+
+$SMTP_CONFIG_SERVER_AUTH$::
+我的服务器需要验证 - 要启用验证请勾选该选框。
+::END
+
+$SMTP_CONFIG_SSL_CONN$::
+此服务器需要安全连接（SSL）——某些 SMTP 服务器要求所有的入站连接都进行加密以防范可能遭受的攻击。如果您的服务器需要加密入站 SMTP 连接，请启用此选项。用于加密 SMTP 连接的默认端口是 465。Serv-U 只支持隐式 SSL，不支持显式 SSL（端口 587）。
+::END 
+
+
+
+$SMTP_CONFIG_AUTH_INFO$=验证信息
+$SMTP_CONFIG_AUTH_BODY$::
+如果您的 SMTP 服务器要求验证，您必须输入以下信息：
+::END
+$SMTP_CONFIG_AUTH_INPUT$::
+从电子邮件地址 - 用于验证的电子邮件地址。
+使用安全密码验证 - 启用密码验证来检查该框。
+::END
+
+<!-- String table for Help-License-Details -->
+$LICENSE_DETAILS_HEADER$=许可证信息
+
+$LICENSE_DETAILS_BODY1$::
+许可证详细信息选项卡中显示了 Serv-U 文件服务器使用的当前注册 ID 中包含的信息。如果安装的是试用版，则将同时显示剩余试用天数的信息。该选项卡上包含的信息包括：
+::END
+
+$LICENSE_DETAILS_NAME$=名称
+$LICENSE_DETAILS_NAME_TXT$=与当前许可证相关的名称。
+
+$LICENSE_DETAILS_EMAIL$=电子邮件地址
+$LICENSE_DETAILS_EMAIL_TXT$=与当前许可证相关的电子邮件地址。
+
+$LICENSE_DETAILS_EDITION$=Serv-U 版本
+$LICENSE_DETAILS_EDITION_TXT$=当前许可证启用的 Serv-U 版本。参见 $LINK_HELP_EDITIONS$ 以了解更多信息。
+
+$LICENSE_DETAILS_COPIES$=份数
+$LICENSE_DETAILS_COPIES_TXT$=当前许可证允许的并发安装数量。
+
+$LICENSE_DETAILS_DATE$=购买日期
+$LICENSE_DETAILS_DATE_TXT$=当前许可证的购买日期。
+
+$LICENSE_DETAILS_UPDATES$=更新
+$LICENSE_DETAILS_UPDATES_TXT$=当前许可证允许免费更新到最新版本的截止日期。如果作为试用版运行，则显示剩余的试用天数。
+
+$LICENSE_DETAILS_INFO$=版本信息
+$LICENSE_DETAILS_INFO_TXT$=显示获得授权的 Serv-U 版本所启用的功能和限制。
+
+$LICENSE_DETAILS_PRODUCTS$=更多产品
+$LICENSE_DETAILS_PRODUCTS_TXT$=Serv-U 的附加插件及其是否启用。
+
+$LICENSE_DETAILS_REGISTER_HEADER1$=注册 Serv-U
+$LICENSE_DETAILS_REGISTER_BODY1$::
+要注册 Serv-U 文件服务器，请单击底部工具栏上的<strong>注册</strong>按钮，并输入由文字和数字组成的注册 ID。如果您遗失了 ID，请单击<strong>丢失 ID</strong> 按钮以便获得帮助找回 ID。如果您需要购买 ID，请单击<strong>购买</strong>按钮访问我们的网站来购买 ID。
+::END
+
+
+<!-- String table for Help-Prog-Info -->
+$PROG_INFO_HEADER$=程序信息
+$PROG_INFO_BODY$::
+程序信息选项卡显示了有关服务器上当前安装的 Serv-U 版本的信息，包括：
+::END
+
+$PROG_INFO_BUILD$=构建日期
+$PROG_INFO_BUILD_TXT$::
+当前安装软件的构建日期
+::END
+
+$PROG_INFO_INSTALL$=安装日期
+$PROG_INFO_INSTALL_TXT$::
+Serv-U 第一次安装在计算机上的初始日期。
+::END
+
+$PROG_INFO_VERSION$=Serv-U 文件服务器版本编号
+$PROG_INFO_VERSION_TXT$::
+当前安装的完整版本编号。
+::END
+
+$PROG_INFO_CONTACT$=联系信息
+$PROG_INFO_CONTACT_TXT$::
+RhinoSoft.com 的联系信息。如果您使用非英语语言管理 Serv-U，则将提供负责翻译的 RhinoSoft.com 授权经销商的联系信息。
+::END
+
+$PROG_INFO_DEV$=开发信息
+$PROG_INFO_DEV_TXT$::
+Serv-U 文件服务器的开发和本地化（如果适用）信息。
+::END
+
+$PROG_INFO_LEGAL$=法律免责声明
+$PROG_INFO_LEGAL_TXT$::
+Serv-U 法律免责声明。
+::END
+
+
+<!-- String table for Help-Limits-Settings-XXXXX -->
+$LIMITS_SETTINGS_HEADER$=限制和设置
+
+$LIMITS_SETTINGS_BASICS_BODY1$::
+Serv-U 提供了高级选项用来定制它的使用方式，以及将限制和定制设置应用于整个 Serv-U 内的<strong>用户</strong>、<strong>群组</strong>、<strong>域</strong>和<strong>服务器</strong>的方法。限制能智能化地迭加，使得用户设置覆盖群组设置，群组设置覆盖域设置，而域设置覆盖服务器设置。此外，只能在一星期的某几天或一天的某些时间内应用限制。可以授予管理员例外权限，并对特定用户比其它用户作出更多限制，从而完全控制服务器。Serv-U 内的限制和设置分为5类：<strong>连接</strong>、<strong>密码</strong>、<strong>目录列表</strong>、<strong>数据传输</strong>和<strong>高级</strong>。
+
+要应用限制，请选择相应的类别，单击<strong>添加</strong>按钮，选择限制，然后选择或输入限制值。例如，要禁用域的<strong>锁定用户至根目录</strong>选项，请按以下步骤执行：
+::END
+
+$LIMITS_SETTINGS_BASICS_LIST1$::
+从 Serv-U 管理控制台选择域限制和设置链接。
+从 "限制类型" 下拉框选择<strong>目录列表</strong>。
+单击<strong>添加</strong>按钮。
+从 "限制" 下拉框选择<strong>锁定用户至根目录</strong>。
+取消选中该选项。
+单击<strong>保存</strong>按钮。
+::END
+
+$LIMITS_SETTINGS_BASICS_BODY2$::
+限制列表显示了应用到域上的当前限制。带淡蓝色背景的限制为默认值。带白色背景的限制值覆盖默认值。完成以上步骤后，列表中出现新的<strong>锁定用户至根目录</strong>限制条目，其值显示为 "否"。由于继承规则，除非在群组或用户级别被覆盖，否则该选项将应用于域内所有用户。有关该继承方式的更多信息，请参见帮助文档的 $LINK_HELP_UIC$ 小节。
+
+通过选择限制并单击<strong>删除</strong>按钮可以删除限制。要编辑被覆盖的值，请选择限制并单击<strong>编辑</strong>按钮。默认规则不能被编辑或删除。创建新的限制以覆盖默认值。
+
+要创建限定于一天的特定时段或一星期的特定日子的限制，请从新建／编辑限制对话框中单击<strong>高级</strong>按钮。附加的选项使您可以<strong>仅在该时间内应用限制</strong>，在此可以输入新限制的开始和结束时间。要将限制限定于一星期的某几天，请取消选中您不希望应用限制的日子旁的复选框。当以这种方法对限制作出限定时，如果不满足该限制的时间或日期的限定，则应用默认值（或限制的其他覆盖值）。
+::END
+
+$LIMITS_SETTINGS_SERVER$::
+以下是所有可用<strong>服务器</strong>限制的说明，按类别归类。
+::END
+$LIMITS_SETTINGS_DOMAIN$::
+以下是所有可用<strong>域</strong>限制的说明，按类别归类。
+::END
+$LIMITS_SETTINGS_GROUP$::
+以下是所有可用<strong>群组</strong>限制的说明，按类别归类。
+::END
+$LIMITS_SETTINGS_USER$::
+以下是所有可用<strong>用户</strong>限制的说明，按类别归类。
+::END
+
+$CONNECTION_LS_HEADER$=连接
+$CONNECTION_LS_USER_GROUP_LIST_HEADER$=连接
+
+$CONNECTION_LS_HOMEDIR$=自动创建根目录
+$CONNECTION_LS_HOMEDIR_TXT$::
+指示 Serv-U 在创建新用户帐户时，如果目录不存在，是否自动创建指定的根目录。
+::END
+
+$CONNECTION_LS_ANTI_TIMEOUT$=阻止反超时方案
+$CONNECTION_LS_ANTI_TIMEOUT_TXT$::
+阻止使用 "NOOP" 之类的命令，该命令通常用于在传输冗长文件或其它闲置时段保持 FTP 命令通道连接开放，此时在控制通道上没有信息传输。当阻止了这些命令时，Serv-U 在连接空闲（例如无数据传输）了指定的一段时间后断开客户端的连接。
+::END
+
+$CONNECTION_LS_IDLE$=自动空闲连接超时
+$CONNECTION_LS_IDLE_TXT$::
+指定最后一次客户端数据传输后，因空闲而断开会话前，必须间隔的分钟数。
+::END
+
+$CONNECTION_LS_SERVER_SESSIONS$=服务器上的最大会话数
+$CONNECTION_LS_SERVER_SESSIONS_TXT$::
+指定整个服务器上所允许的最大并发会话数。
+::END
+
+$CONNECTION_LS_SERVER_IP_SESSIONS$=服务器上每个 IP 地址的最大会话数
+$CONNECTION_LS_SERVER_IP_SESSIONS_TXT$::
+指定单个 IP 地址在整个服务器上可以打开的最大并发会话数。
+::END
+
+$CONNECTION_LS_USER_IP_SESSIONS$=用户帐户的每个 IP 地址的最大会话数
+$CONNECTION_LS_USER_IP_SESSIONS_TXT$::
+指定用户从单个 IP 地址可以打开的最大并发会话数。
+::END
+
+$CONNECTION_LS_USER_SESSIONS$=每个用户帐户的最大会话数
+$CONNECTION_LS_USER_SESSIONS_TXT$::
+指定单个用户帐户可以打开的最大并发会话数。
+::END
+
+$CONNECTION_LS_SECURE$=登录前需要安全连接
+$CONNECTION_LS_SECURE_TXT$::
+要求被接受的连接必须是安全的（例如 FTPS、SFTP 或 HTTPS）。
+::END
+
+$CONNECTION_LS_TIMEOUT$=自动会话超时
+$CONNECTION_LS_TIMEOUT_TXT$::
+指定会话被服务器断开前允许持续的分钟数。
+::END
+
+$CONNECTION_LS_BLOCK_IP_SESSION_TIMEOUT$=阻止超时会话的 IP 地址
+$CONNECTION_LS_BLOCK_IP_SESSION_TIMEOUT_TXT$::
+指定阻止超时会话 IP 地址的分钟数。
+::END
+
+$CONNECTION_LS_ALLOW_XFORWARDED_FOR$=允许 X-Forwarded-For 更改 HTTP 连接 IP 地址
+$CONNECTION_LS_ALLOW_XFORWARDED_FOR_TXT$::
+启用时，"X-Forwarded-For" HTTP 报头参数更改 Serv-U 客户端的 IP 地址。在所有 HTTP 连接来自代理服务器或负载均衡器时，这极为有用。代理服务器与负载均衡器通常将这一参数附加至 HTTP 报头，这样 HTTP 服务器就可识别实际的客户端 IP 地址并应用所需的安全规则。
+::END
+
+$CONNECTION_LS_REQUIRE_PTR$=需要反向 DNS 名称
+$CONNECTION_LS_REQUIRE_PTR_TXT$::
+要求连接至服务器的用户从具有有效反向 DNS 名称（也称作 PTR 记录）的 IP 地址连接。检查有效 PTR 记录的存在，不检查其内容。
+::END
+
+$CONNECTION_LS_ALLOW_FTP_FTPS$=允许 FTP 与 FTPS 连接
+$CONNECTION_LS_ALLOW_FTP_FTPS_TXT$::
+允许用户使用 FTP 与 FTPS 协议进行连接。取消勾选“允许 FTP 与 FTPS 连接”将禁用 FTP 与 FTPS 协议。
+::END
+
+$CONNECTION_LS_ALLOW_SFTP$=允许 SFTP 连接
+$CONNECTION_LS_ALLOW_SFTP_TXT$::
+允许用户使用 SFTP 协议进行连接。取消勾选“允许 SFTP 连接”将禁用 SFTP 协议。
+::END
+
+$CONNECTION_LS_ALLOW_HTTP_HTTPS$=允许 HTTP 与 HTTPS 连接
+$CONNECTION_LS_ALLOW_HTTP_HTTPS_TXT$::
+允许用户使用 HTTP 与 HTTPS 协议进行连接。取消勾选“允许 HTTP 与 HTTPS 连接”将禁用 HTTP 与 HTTPS 协议。
+::END
+
+$CONNECTION_LS_DOMAIN_SESSIONS$=域上的最大会话数
+$CONNECTION_LS_DOMAIN_SESSIONS_TXT$::
+指定当前域上所允许的最大并发会话数。
+::END
+
+$CONNECTION_LS_DOMAIN_IP_SESSIONS$=域上每个 IP 地址的最大会话数
+$CONNECTION_LS_DOMAIN_IP_SESSIONS_TXT$::
+指定单个 IP 地址在当前域上可以打开的最大并发会话数。
+::END
+
+$CONNECTION_LS_GROUP_SESSIONS$=群组的最大会话数
+$CONNECTION_LS_GROUP_SESSIONS_TXT$::
+指定作为群组成员的所有用户可以进行的最大并发会话数。
+::END
+
+$CONNECTION_LS_GROUP_IP_SESSIONS$=群组的每个 IP 地址的最大会话数
+$CONNECTION_LS_GROUP_IP_SESSIONS_TXT$::
+指定群组的所有用户从单个 IP 地址可以打开的最大并发会话数。
+::END
+
+$PASSWORD_LS_HEADER$=密码
+
+$PASSWORD_LS_ANON_PASS$=检查匿名密码
+$PASSWORD_LS_ANON_PASS_TXT$::
+指定匿名登录时 Serv-U 是否该验证作为密码提供的电子邮件地址。
+::END
+
+$PASSWORD_LS_ENCRYPT_PASS$=密码加密模式
+$PASSWORD_LS_ENCRYPT_PASS_TXT$::
+指定用户密码上的密码加密级别。这些选项为：“单向加密（更安全）”：完全加密密码且无法反向，“简单的双向加密（不太安全）”：以可以反向的格式加密密码以便轻松恢复，以及“无加密（不推荐）”：以明文存储密码。更改该设置时，不更新现有密码，并且必须再次保存以使用新格式存储。
+::END
+
+$PASSWORD_LS_USER_PASS_RECOVERY$=允许用户恢复密码
+$PASSWORD_LS_USER_PASS_RECOVERY_TXT$::
+若启用，允许用户使用 Web 客户端登录页面上的密码恢复工具恢复密码。
+::END
+
+$PASSWORD_LS_MASK_PASS$=在日志中屏蔽接收到的密码
+$PASSWORD_LS_MASK_PASS_TXT$::
+屏蔽从客户端接收到的密码，使其不显示在日志文件中。禁用该选项允许在日志文件中显示密码，这有助于调试连接问题或审计用户帐户的安全性。
+::END
+
+$PASSWORD_LS_MIN_PASS_LEN$=最短密码长度
+$PASSWORD_LS_MIN_PASS_LEN_TXT$::
+指定用户帐户的密码需要的最小字符数。指定０个字符表示无最小要求。
+::END
+
+$PASSWORD_LS_CHANGE_PASS$=允许用户更改密码
+$PASSWORD_LS_CHANGE_PASS_TXT$::
+指定是否允许用户更改其自身的密码。
+::END
+
+$PASSWORD_LS_EXPIRE_PASS$=密码自动过期
+$PASSWORD_LS_EXPIRE_PASS_TXT$::
+指定密码在必须作出变更前的有效天数。指定０天表示密码永不过期。
+::END
+
+$PASSWORD_LS_COMPLEX_PASS$=需要复杂密码
+$PASSWORD_LS_COMPLEX_PASS_TXT$::
+指定所有用户帐户的密码必须包含至少一个大写字符和一个非字母字符才被认为有效。
+::END
+
+$PASSWORD_LS_SSH_AUTH_TYPE$=SSH 验证类型
+$PASSWORD_LS_SSH_AUTH_TYPE_TXT$::
+指定 SSH 验证发生的类型。这些选项包括：“密码与公共密钥” - 需要密码和公共密钥（指定时）来登录；“密码或公共密钥” - 需要密码或公共密钥来登录；“仅公共密钥” - 需要提供公共密钥来成功登录，不允许使用密码；“仅密码” - 需要提供密码来成功登录，不允许使用公共密钥。
+::END
+
+$DIRECTORY_LISTING_LS_HEADER$=目录列表
+
+$DIR_LIST_HIDE_HIDDEN$=使标记为隐藏的文件不显示在列表中
+$DIR_LIST_HIDE_HIDDEN_TXT$::
+从目录列表中隐藏文件和文件夹，其 Windows 系统属性设置为 "隐藏"。
+::END
+
+$DIR_LIST_LOCK_HOMEDIR$=锁定用户至根目录
+$DIR_LIST_LOCK_HOMEDIR_TXT$::
+锁定用户至其根目录，并禁止用户浏览上级文件夹．此外，其根目录显示为 "／" 而屏蔽了真正的物理位置。
+::END
+
+$DIR_LIST_USE_LOWER$=文件名和目录使用小写
+$DIR_LIST_USE_LOWER_TXT$::
+强制 Serv-U 以小写字符显示所有文件名和目录，而不管文件或目录使用的真正大小写。
+::END
+
+$DIR_LIST_UNLOCK_ROOT$=允许未锁定的用户使用根符号（"/"）列出驱动器
+$DIR_LIST_UNLOCK_ROOT_TXT$::
+允许用户将目录更改为系统的根目录（"/"）并显示计算机上的所有驱动器。只有当未锁定用户至根目录时，该选项才有用。
+::END
+
+$DIR_LIST_TREAT_SHORTCUTS$=将 Windows 快捷方式作为链接目标处理
+$DIR_LIST_TREAT_SHORTCUTS_TXT$::
+指示 Serv-U 将所有有效的 .lnk（快捷方式）文件作为 UNIX 符号链接处理。
+::END
+
+$DIR_LIST_SHORTCUT_LINKS$=将 Windows 快捷方式转译为链接
+$DIR_LIST_SHORTCUT_LINKS_TXT$::
+指示 Serv-U 将所有有效的 .lnk 文件作为实际的目的对象处理。换句话说，如果某个 .lnk 文件指向另一个文件，则在目录列表中显示的是目的文件而不是 .lnk 文件自身。
+::END
+
+
+$DIR_LIST_COMP_STATE$=隐藏文件与目录的压缩状态。
+$DIR_LIST_COMP_STATE_TXT$::
+隐藏正在被用户查看的所有已压缩文件与目录的压缩状态。
+::END
+
+
+$DIR_LIST_ENCRYPT_STATE$=隐藏文件与目录的加密状态。
+$DIR_LIST_ENCRYPT_STATE_TXT$::
+隐藏正在被用户查看的所有已加密文件与目录的加密状态。
+::END
+
+$DATA_TRANSFER_LS_HEADER$=数据传输
+
+$DATA_TRANSFER_DELETE_PARTIAL$=删除部分上传的文件
+$DATA_TRANSFER_DELETE_PARTIAL_TXT$::
+指示 Serv-U 删除未完整上传的文件。如果启用该选项，用户就不能使用 REST（重启）FTP 命令重启中断的上传。
+::END
+
+$DATA_TRANSFER_SERVER_MAX_DL$=服务器的最大下载速度
+$DATA_TRANSFER_SERVER_MAX_DL_TXT$::
+限制了服务器范围内所有下载可用的最大带宽。设置０千字节／秒表示无限带宽。
+::END
+
+$DATA_TRANSFER_SERVER_MAX_UL$=服务器的最大上传速度
+$DATA_TRANSFER_SERVER_MAX_UL_TXT$::
+限制了服务器范围内所有上传可用的最大带宽。设置０千字节／秒表示无限带宽。
+::END
+
+$DATA_TRANSFER_MAX_SESSION_DL$=每个会话的最大下载速度
+$DATA_TRANSFER_MAX_SESSION_DL_TXT$::
+为每个单独的会话限制最大下载带宽。设置０千字节／秒表示无限带宽。
+::END
+
+$DATA_TRANSFER_MAX_SESSION_UL$=每个会话最大上传速度
+$DATA_TRANSFER_MAX_SESSION_UL_TXT$::
+为每个单独的会话限制最大上传带宽。设置０千字节／秒表示无限带宽。
+::END
+
+$DATA_TRANSFER_MAX_USER_DL$=用户帐户的最大下载速度
+$DATA_TRANSFER_MAX_USER_DL_TXT$::
+限制与单个用户帐户相关的所有会话间共享的最大下载带宽。设置０千字节／秒表示无限带宽。
+::END
+
+$DATA_TRANSFER_MAX_USER_UL$=用户帐户的最大上传速度
+$DATA_TRANSFER_MAX_USER_UL_TXT$::
+限制与单个用户帐户相关的所有会话间共享的最大上传带宽。设置０千字节／秒表示无限带宽。
+::END
+
+$DATA_TRANSFER_MAX_UL_SIZE$=最大上传文件大小
+$DATA_TRANSFER_MAX_UL_SIZE_TXT$::
+限制用户可以上传到 Serv-U 的最大单个文件大小。文件大小以千字节计算。
+::END
+
+$DATA_TRANSFER_INTERPRET_LINE_FEED$=在 ASCII 模式中将换行字节解释为新行
+$DATA_TRANSFER_INTERPRET_LINE_FEED_TXT$::
+在使用 ASCII 模式上传与下载文件时，Serv-U 将假定 &lt;LF&gt; 字符与 &lt;CR&gt;&lt;LF&gt; 行尾标记相同。大部分 Windows 应用程序就如 FTP 协议一样，认为 &lt;CR&gt;&lt;LF&gt; 表示新行。不过，由于在 Windows 中并未完全定义新行序列，这一选项允许 Serv-U 假定 &lt;LF&gt; 与 &lt;CR&gt;&lt;LF&gt; 相同。在使用 ASCII 模式上传时，在写到文件之前将单独的 &lt;LF&gt; 字符更改为 &lt;CR&gt;&lt;LF&gt。在使用 ASCII 模式下载时，在发送到客户端之前将单独的 &lt;LF> 字符更改为 &lt;CR&gt;&lt;LF&gt;。
+::END
+
+$DATA_TRANSFER_DOMAIN_MAX_DL$=域的最大下载速度
+$DATA_TRANSFER_DOMAIN_MAX_DL_TXT$::
+限制了域范围内所有下载可用的最大带宽。设置０千字节／秒表示无限带宽。
+::END
+
+$DATA_TRANSFER_DOMAIN_MAX_UL$=域的最大上传速度
+$DATA_TRANSFER_DOMAIN_MAX_UL_TXT$::
+限制了域范围内所有上传可用的最大带宽。设置０千字节／秒表示无限带宽。
+::END
+
+$DATA_TRANSFER_GROUP_MAX_DL$=所有群组成员的最大下载速度
+$DATA_TRANSFER_GROUP_MAX_DL_TXT$::
+限制了群组所有成员的所有下载能占用的最大总带宽。设置０千字节／秒表示无限带宽。
+::END
+
+$DATA_TRANSFER_GROUP_MAX_UL$=所有群组成员的最大上传速度
+$DATA_TRANSFER_GROUP_MAX_UL_TXT$::
+限制了群组所有成员的所有上传能占用的最大总带宽。设置０千字节／秒表示无限带宽。
+::END
+
+$ADVANCED_LS_HEADER$=高级
+
+$ADVANCED_CHECK_DIRSIZE$=上传时自动检查目录大小
+$ADVANCED_CHECK_DIRSIZE_TXT$::
+指示 Serv-U 不时检查目录大小，并指定了最大目录尺寸。该属性确保 Serv-U 总备有最新的目录尺寸，而不用在传输时进行计算，在传输时进行计算是一项费时的操作。
+::END
+
+$ADVANCED_URL_CHARS$=将命令中的 URL 字符转换为 ASCII
+$ADVANCED_URL_CHARS_TXT$::
+指示 Serv-U 将命令参数中包含的特殊字符转换为纯 ASCII 文本。某些 Web 浏览器在使用 FTP 协议时，能对文件名和目录中包含的特殊字符进行编码。该属性允许 Serv-U 对这些特殊字符进行解码。
+::END
+
+$ADVANCED_RENAME_OVERWRITE$=使用旧的 web 浏览器时警告最终用户
+$ADVANCED_RENAME_OVERWRITE_TXT$::
+在已启用的（默认的）Serv-U 允许重命名文件到目标位置已经存在的文件时。在不允许已禁用的用户重命名文件或目录到现有的路径名称时。
+::END
+
+$ADVANCED_WARN_OLD_BROWSER$=允许重命名覆盖
+$ADVANCED_WARN_OLD_BROWSER_TXT$::
+在已启用的（默认的）Serv-U 将警告用户以下内容时：他们正在使用过时的浏览器，应升级其浏览器以充分利用性能与功能的增强，从而改进他们的使用体验。
+::END
+
+$ADVANCED_DISABLE_NAGLE$=禁用 Nagle 算法
+$ADVANCED_DISABLE_NAGLE_TXT$::
+不用在发送下一个数据包前等待 ACK TCP 握手。该选项通常仅用于等待时间很长的连接，例如卫星连接。
+::END
+
+$ADVANCED_INLINE_OOB$=内嵌带外数据
+$ADVANCED_INLINE_OOB_TXT$::
+将带外套接字数据解析到正规 TCP 数据流中，将其视为常规数据处理。该选项有助于阻遏拒绝服务攻击，该攻击发送大量带外数据（ODB）到不能对其进行处理的套接字堆栈。
+::END
+
+$ADVANCED_SEND_KEEPALIVE$=发送保持活动数据包以检测中断的连接
+$ADVANCED_SEND_KEEPALIVE_TXT$::
+定期发送保持活动数据包以确定套接字是否仍处于连接状态。
+::END
+
+$ADVANCED_ADAPTIVE_TIMEOUT$=对快速文件上传使用自适应超时
+$ADVANCED_ADAPTIVE_TIMEOUT_TXT$::
+为了在文件上传中连贯地进行快速传输慢慢降低数据包超时时间。如果未成功完成传输，自适应超时使得恢复上传更为方便，因为 Serv-U 可以更快速的识别死亡的传输，然后得以更早的访问文件。
+::END
+
+
+<!-- String table for Help-Domain-Settings, Help-Server-Settings -->
+$DOMAIN_SETTINGS_HEADER$=设置
+
+$DOMAIN_SETTINGS_BASICS$::
+域设置和服务器设置选项卡可以配置影响性能、安全和网络连接的基本域/服务器设置。要配置某个设置，只需在相应区域输入所需的数值，并单击<strong>保存</strong>按钮。有关可以配置的设置的更多信息，请参见如下内容。
+::END
+
+$CONNECTION_SETTINGS_HEADER$=连接设置
+
+$CONNECTION_SETTINGS_ANTIHAMMER$=阻止用户 'z' 分钟，其在 'y' 秒内连接超过 'x' 次
+$CONNECTION_SETTINGS_ANTIHAMMER_TXT$::
+启用该选项能防止强力密码猜测系统使用词典式攻击找到用户帐户的有效密码，这也称为反攻击。使用强健的复杂密码能战胜大多数词典式攻击。然而，启用该选项确保了 Serv-U 不会浪费时间处理这些非法源所发起的连接。当配置该选项时，请确保合法用户被阻止前有更正错误密码的余地。
+
+启用时，该选项暂时阻止 IP 地址 'z' 分钟，该地址在 'y' 秒内登录失败了 'x' 次。可以在相应的 IP 访问规则选项卡中查看用该方法阻止的 IP 地址。成功的登录重置了追踪登录企图的计数器。
+::END
+
+$CONNECTION_SETTINGS_HIDE_SSH_SERVER_ID$=从 SSH 标识里隐藏服务器信息
+$CONNECTION_SETTINGS_HIDE_SSH_SERVER_ID_TXT$::
+成功完成 SSH 登录之后，服务器发送标识信息给客户端。通常情况下，此信息含有服务器名称和版本号。启用此选项可以防止将这些信息发给客户端。
+::END
+
+$CONNECTION_SETTINGS_DEFAULT_CLIENT$=默认 Web 客户端
+$CONNECTION_SETTINGS_DEFAULT_CLIENT_TXT$::
+指定默认情况下所有 HTTP 客户端是否应该使用 Web 客户端还是 FTP Voyager JV。而第三个选项（默认选项）是提示用户选择想使用的客户端。在群组级别和用户级别也可以使用该选项。
+::END
+
+$SUPPORT_LINK_HEADER$=客户端支持链接
+$SUPPORT_LINK_BODY1$::
+客户端支持链接是一个强大的功能，它可以在客户端需要支持或协助时，在 Web 客户端和 FTP Voyager JV 中插入直接的联系方法。该功能的基本语法为<strong>协议:路径</strong>。该选项相当灵活，允许使用任何网络快捷方式，例如：
+::END
+$SUPPORT_LINK_LIST1$::
+<strong>http://www.website.com/support/
+
+mailto:service@website.com?subject=Serv-U 文件服务器支持
+
+aim:goim?screenname=ExampleAdminUser&amp;message=我需要获得帮助以使用 Serv-U 文件服务器!</strong>
+::END
+$SUPPORT_LINK_BODY2$::
+只要客户端的机器能理解所提供的协议，可以使用任何格式。
+::END
+
+$CUSTOM_LOGO_SETTINGS_HEADER$=自定义标志设置。
+$CUSTOM_LOGO_SETTINGS$=指定显示于登录与 Web 客户端页面的自定义标志。
+$CUSTOM_LOGO_SETTINGS_TXT$::
+自定义标志的尺寸必须为宽 400 像素 X 高 100 像素。如果标志没有满足这个条件，在您尝试保存该标志时会出现错误消息。<strong>请注意：</strong> 使用 CMYK 而非 RGB 编码的 JPEG 图像可能无法在某些浏览器上正确显示。请测试您的标志以确保其在所有的浏览器上都正确显示。
+
+要添加标志，只要在“自定义标志”组框中点击“浏览”按钮并选择指向您标志的路径即可。点击“保存”按钮后该标志就会在“自定义标志路径”输入区域下出现。要移除自定义标志，只要清除“自定义标志路径”输入区域中的路径并点击“保存”按钮即可。
+::END
+
+$PASSWORD_RECOVERY_EMAIL_HEADER$=密码恢复电子邮件消息
+$PASSWORD_RECOVERY_EMAIL$=使用此可自定义的密码恢复消息，将电子邮件消息连同其登录凭证一起发送给用户。
+$PASSWORD_RECOVERY_EMAIL_TXT$::
+密码恢复电子邮件消息拥有一个简单的默认主题与含有用户登录 ID 和密码的消息。如果该用户拥有记录在 Serv-U 中的有效邮件地址，则发送此消息。用户可以从 Serv-U 登录页面请求此消息。
+
+管理员也可以使用管理控制台中位于域用户与全局用户之下的“恢复密码”按钮，将此消息发送给用户。
+::END
+
+$INTEGRATION_DLL_HEADER$=集成 DLL
+$INTEGRATION_DLL_TXT$::
+要获得有关编写集成 DLL 的信息，请参阅 Serv-U 集成示例 DLL，其安装在名为“Serv-U 
+Integration Sample DLL”的子目录中。该示例说明了集成 API。
+::END	
+
+$ADVANCED_SETTINGS_HEADER$=高级设置
+
+$ADVANCED_SETTINGS_DIRMASK$=目录列表掩码
+$ADVANCED_SETTINGS_DIRMASK_TXT$::
+指定发送给 FTP 客户端的文本字符串，以规定文件访问权限。Windows 不像 Unix 那样支持传统的文件访问权限，因而使该选项在很大程度上流于形式，然而一些客户端需要掩码才能正确操作。
+::END
+
+$ADVANCED_SETTINGS_MAX_THUMB$=最大同步缩略图数量
+$ADVANCED_SETTINGS_MAX_THUMB_TXT$::
+指定了专门用于为 HTTP 客户端生成缩略图和响应 FTP THUMB 命令的线程的最大数量。生成缩略图是一项占用 CPU 的操作。即使 Serv-U 能并发处理更多客户端缩略图请求，该数值增加得太高也会导致花费更长时间生成缩略图。
+::END
+
+$ADVANCED_SETTINGS_UPLOAD_ACCESS$=文件上传访问
+$ADVANCED_SETTINGS_UPLOAD_ACCESS_TXT$::
+指定从客户端接收上传文件时这些文件的打开方式。默认的<strong>允许读取访问</strong>表示在文件仍处于接收状态时，其他客户端就可以尝试下载该文件。<strong>允许完全访问</strong>表示在文件传输时其他客户端可以读写该文件。在文件仍处于传输状态时要防止其他客户端访问该文件，请选择<strong>不允许访问</strong>。
+::END
+
+$ADVANCED_SETTINGS_DOWNLOAD_ACCESS$=文件下载访问
+$ADVANCED_SETTINGS_DOWNLOAD_ACCESS_TXT$::
+指定向客户端发送下载文件时这些文件的打开方式。默认的<strong>允许读取访问</strong>表示其他客户端也可以同时下载相同的文件。<strong>允许完全访问</strong>表示在将文件发送给某个客户端时其他客户端可以读写该文件。在文件仍处于发送状态时要防止任何其他客户端访问该文件，请选择<strong>不允许访问</strong>。
+::END
+
+$NETWORK_SETTINGS_HEADER$=网络设置
+
+$NETWORK_SETTINGS_UPNP$=通过 UPnP 自动配置防火墙
+$NETWORK_SETTINGS_UPNP_TXT$::
+启用时，Serv-U 在启用 UPnP 的网络设备（通常为路由器）中自动配置必要的端口转发，从而可以从网络外部访问该文件服务器。这对于启用 PASV 模式的 FTP 数据传输特别有用。
+::END
+
+$NETWORK_SETTINGS_PACKET_TO$=数据包超时
+$NETWORK_SETTINGS_PACKET_TO_TXT$::
+指定 TCP 数据包传输的超时时间，以秒为单位。只有等待时间很长、速度非常缓慢的网络才可能需要更改该选项的 300 秒默认值。
+::END
+
+$NETWORK_SETTINGS_PASV$=PASV 端口范围
+$NETWORK_SETTINGS_PASV_TXT$::
+指定了 Serv-U 用于 PASV 模式数据传输的端口包含范围。Serv-U 通常在打开套接字用于 PASV 模式数据传输时，允许操作系统为它指派一个随机的端口号。该属性通过将 Serv-U 的 PASV 端口范围限定于一个已知的范围，满足了路由器或防火墙预先了解特定端口范围的需求。对最繁忙的文件服务器来说 10 个端口足够了。
+
+<strong>请注意：</strong> 某些 NAT 路由器工作方式不同，可能需要更大的端口范围。如果 Serv-U 和客户端列出目录或传输文件有问题，请尝试在此处及路由器上增加端口范围。
+::END
+
+$OTHER_SETTINGS_HEADER$=其它设置
+
+$OTHER_SETTINGS_RATIO_FREE$=比率不限文件
+$OTHER_SETTINGS_RATIO_FREE_TXT$::
+由打开<strong>比率不限文件</strong>按钮所列出的文件不受对文件传输所作的传输比率限制的影响。在服务器或域级别指定的比率不限文件由其所有用户帐户继承。更多信息，请参见 $LINK_HELP_RATIOS$ 的帮助内容。
+::END
+
+$OTHER_SETTINGS_ADMIN_PASS$=更改管理密码
+$OTHER_SETTINGS_ADMIN_PASS_TXT$::
+双击 Serv-U 系统托盘图标启动 Serv-U 时，Serv-U 管理控制台可以受密码保护。当管理控制台以该方式运行时，更改密码的选项变为有效。默认情况下，没有管理密码。
+::END
+
+
+<!-- String table for Help-Custom-FTP-Strings -->
+$CUSTOM_FTP_HEADER$=FTP 设置
+
+$CUSTOM_FTP_COMMANDS_BODY1$::
+Serv-U 文件服务器允许定制其接受的 FTP 命令以及对收到的 FTP 命令的应答。当在服务器级别配置这些选项时，所有域继承这些定制设置。要定制特定域的 FTP 行为，请选择相应域，打开该域的 <strong>FTP 设置</strong>选项卡，并单击<strong>用户定制设置</strong>按钮。任何时候，单击<strong>用户默认设置</strong>按钮可以将域还原为服务器的默认设置。
+
+我们不推荐使用该方法定制 FTP 行为，除非用户非常熟悉 FTP 协议及其标准和扩展命令集。
+::END
+
+$CUSTOM_FTP_GLOBAL_PROPS$=全局属性
+$CUSTOM_FTP_GLOBAL_PROPS_TXT$::
+当使用定制设置时，<strong>全局属性</strong>按钮变为有效。
+::END
+
+$CUSTOM_FTP_GLOBAL_RESP$=全局 FTP 响应
+$CUSTOM_FTP_GLOBAL_RESP_TXT$::
+全局 FTP 响应是大多数 FTP 命令间共享的响应，例如未找到文件时发送的错误消息。定制全局 FTP 响应确保该响应为所有其它 FTP 命令所使用，而无需为每个单独 FTP 命令定制响应。FTP 命令响应可以包含特殊宏，该宏可以将实时数据插入响应。请参见 $LINK_HELP_SYSTEM_VARS$ 的帮助内容以了解更多信息。
+::END
+
+$CUSTOM_FTP_SERVER_MSG$=服务器欢迎消息
+$CUSTOM_FTP_SERVER_MSG_TXT$::
+当服务器和客户端首次连接时，除了发送标准的 "220 欢迎消息" 以向客户端标识服务器身份之外，还发送服务器欢迎消息。如果选中<strong>在消息文件文本中包含响应代码</strong>选择框，则指定欢迎消息的每一行均以 220 响应代码开头。要定制欢迎消息，请在<strong>消息文件路径</strong>输入框中输入文本文件的路径。使用<strong>浏览</strong>按钮选择计算机上的文件。Serv-U 打开该文件并将其内容发送给连接的客户端。
+::END
+
+$CUSTOM_FTP_ADVANCED$=高级选项
+$CUSTOM_FTP_GLOBAL_ADVANCED_TXT$::
+<em>阻止 "FTP_bounce" 攻击和 FXP（服务器间传输）</em> - 选择该复选框阻止了所有涉及该 Serv-U 文件服务器的服务器间文件传输，只允许将文件传输到命令通道所用的 IP 地址。有关 "FTP_bounce" 攻击的更多信息，请参见 <a href="http://www.cert.org/advisories/CA-1997-27.html" target="_blank">CERT advisory CA-97.27</a>。
+
+<em>在多行响应的所有行上包含响应代码</em> - FTP 协议定义了 FTP 服务器发布多行响应的两种方法。如果多行响应的每一行不包含 3 位响应代码，一些较早的 FTP 客户端就无法对其进行解析。如果您所用的 FTP 客户端难以处理来自 Serv-U 的多行响应，请选择该复选框。
+
+<em>对所有已收发的路径和文件名使用 UTF-8 编码</em> - 默认情况下，Serv-U 将所有文件名和路径视为以 UTF-8 编码的字符串。并以 UTF-8 编码的字符串发送所有文件名和路径，如发送目录列表时。取消选中该选项则禁止 Serv-U 将这些字符串编码为 UTF-8。如果未选中该选项，则 UTF8 不包含在 FEAT 命令响应中，该响应用于向客户端说明服务器未使用 UTF-8 编码。
+::END
+
+$CUSTOM_FTP_EDIT$=编辑 FTP 命令和响应
+$CUSTOM_FTP_EDIT_TXT$::
+要编辑 FTP 命令，请选择要编辑的 FTP 命令并单击<strong>编辑</strong>按钮。
+::END
+
+$CUSTOM_FTP_INFO$=信息
+$CUSTOM_FTP_INFO_TXT$::
+在<strong>信息</strong>选项卡下，显示了有关命令的基本信息，以及指向我们的网站上更多信息的链接。通过选择<strong>禁用命令</strong>复选框，也可以禁用每条 FTP 命令。当从客户端接收到禁用的命令时，将其作为未识别命令进行处理。
+::END
+
+$CUSTOM_FTP_RESPONSES$=FTP 响应
+$CUSTOM_FTP_RESPONSES_TXT$::
+在<strong>FTP 响应</strong>选项卡下，通过单击每条响应的<strong>编辑</strong>按钮，可以修改服务器对命令发布的所有可能的 FTP 响应。FTP 命令响应可以包含特殊宏，该宏可以将实时数据插入响应。请参见 $LINK_HELP_SYSTEM_VARS$ 的帮助内容以了解更多信息。
+::END
+
+$CUSTOM_FTP_MSGFILE$=消息文件
+$CUSTOM_FTP_MSGFILE_TXT$::
+某些 FTP 命令允许关联消息文件。消息文件的内容与标准 FTP 响应一起发送。此外，作为默认选项可使用次要消息文件路径。使用<strong>消息文件</strong>所在的用户根目录的相对路径可以指定消息文件。如果未找到第一个消息文件，Serv-U 就试图使用<strong>次要消息文件</strong>来代替。通过在次要文件位置指定绝对文件路径，可以保证每个用户收到消息文件。
+
+以下为允许指定消息文件的所有 FTP 命令的列表：
+::END
+$CUSTOM_FTP_MSGFILE_LIST$::
+CDUP
+CWD
+QUIT
+::END
+
+$CUSTOM_FTP_COMMAND_ADVANCED_TXT$::
+一些 FTP 命令包含高级配置选项，它们提供了配置命令行为的更多方法。在管理控制台中可使用配置选项的地方，对它们作了详细描述。以下为包含高级配置选项的 FTP 命令的列表：
+::END
+$CUSTOM_FTP_ADV_COMMAND_LIST$::
+LIST
+MDTM
+NLST
+::END
+
+
+$FTP_RESP_CASEFILE1_HEADER1$=案例文档 - 定制 FTP 命令响应
+$FTP_RESP_CASEFILE1_BODY1$::
+连接到服务器的用户需要知道当传输完成时给定的文件夹内有多少配额空间可用。为此，编辑对 STOR 命令的响应以包含有关可用空间的报告。默认情况下，对 STOR 命令（它将文件保存在服务器上）的226（命令成功）响应为：
+
+"传输完成。$TransferBytes 字节已传送。$TransferKBPerSecond 千字节/秒。"
+
+修改该响应使其多包含一个变量：
+
+"传输完成。$TransferBytes 字节已传送。$TransferKBPerSecond 千字节/秒。剩余存储空间为 $QuotaLeft。"
+
+最后一条语句向用户显示了每个文件上传完成后剩余多少存储空间。可同样处理 DELE 命令，从而使每次用户删除文件后，显示更新的配额数值以反映可用空间的增加情况。可同样处理任何 FTP 命令响应。
+::END
+
+
+<!-- String table for Help-Encryption -->
+$ENCYRPTION_HEADER$=加密
+
+$ENCRYPTION_BODY$::
+Serv-U 支持两种加密数据传输方式 - 安全套接层（SSL）和安全外壳（SSH2）。SSL 用于保护文件传输协议（FTP）和超文本传输协议（HTTP）。SSH2 是一种安全地与远程系统交互作用的方法，该远程系统支持通常称为 SFTP 的文件传输方法。除了名称，SFTP 与 FTP 协议自身没有任何共同之处。
+
+为了使每种加密方法有效工作，必须提供证书和/或私钥。SSL 需要提供证书和私钥，而 SSH2 只需要私钥。如果您没有所需要的文件，Ser-U 可以创建这些文件。
+
+在服务器级别指定的加密选项被所有域自动继承。在域级别指定的加密选项自动覆盖相应的服务器级别选项。某些配置选项仅可用于服务器。
+::END
+
+$SSL_SETUP_HEADER$=为 FTPS 和 HTTPS 配置 SSL
+
+$SSL_SETUP_NOTE$::
+当在 Serv-U 中创建 SSL/TLS、SSH 和 HTTPS 加密域时，加密域不能共享监听器，这一点很重要。因为 SSL/TLS 和 SSH 加密是基于对在 IP 地址之间传送的通信进行加密，因此每个域都必须具有单独的监听器才能正确操作。如果创建了多个加密域共享监听器，则第一个创建的域能优先使用监听器，造成其它加密域不能正确工作。要操作多个加密域，请修改每个域的监听器以确保它们监听唯一的端口号。
+::END
+
+$SSL_SETUP_EXISTING$=使用现有的证书
+
+$SSL_SETUP_EXISTING_LIST$::
+从证书颁发机构获得 SSL 证书和私人密钥文件。
+将这些文件置于服务器中的安全目录内。
+使用合适的<strong>浏览</strong>按钮来选择证书和私人密钥文件。
+如果已经发行了 CA（证书颁发机构）PEM 文件，输入或浏览至该文件。
+输入用于加密私人密钥文件的密码。
+点击<strong>保存</strong>按钮。
+::END
+
+$SSL_SETUP_EXISTING_TXT$::
+如果所提供的文件路径和密码都正确，Serv-U 立即开始使用所提供的证书来保护 FTPS 和 HTTPS 连接。如果密码不正确，或 Serv-U 无法找到所提供的文件，则显示错误消息对所遇到的错误作出解释。
+::END
+
+$SSL_CREATE_CERT$=创建新证书
+$SSL_CREATE_CERT_LIST$::
+首先单击<strong>创建证书</strong>按钮。
+指定<strong>证书设置名称</strong>用于命名 Serv-U 创建的每个文件。
+指定放置所创建文件的输出路径。在大多数情况下，安装目录是一个安全的位置（即，C:\Program Files\RhinoSoft.com\Serv-U\）。
+指定服务器或企业所在的市/镇。
+指定服务器或企业所在省/自治区/直辖市（如果适用）。
+指定服务器或企业所在国家的 2 位国家编码。
+输入用来保护私钥的密码。
+指定完整的机构名称。
+指定证书的通用名称。此处必须列出用户连接所用的 IP 地址或全称域名（FQDN）。<strong>注意</strong>：如果通用名称不是客户端连接所用的 IP 地址或 FQDN，则客户端可能收到提示指出证书不匹配连接的域名。
+指定服务器所处的业务单元。
+单击<strong>创建</strong>按钮完成证书创建。
+::END
+$SSL_CREATE_CERT_TXT$::
+Serv-U 使用所提供的信息创建3个文件：一个自签名证书（.crt），它能在服务器上立即使用，但未经任何已知证书颁发机构的验证；一个证书申请（.csr），可以提供给证书颁发机构用于验证；以及一个私钥文件（.key），用于保护以上两种证书文件。将私钥保存在安全可靠的位置极其重要。如果您的私钥暴露了，则怀有恶意的人士就能使用您的证书。
+::END
+
+$SSL_VIEW_CERT$=查看证书
+$SSL_VIEW_CERT_TXT$::
+配置 SSL 证书后要查看证书，请单击<strong>查看证书</strong>按钮。所有有关证书的标识信息，包括证书的有效日期，都显示在新对话窗内。
+::END
+
+$SSL_ADVANCED$=高级 SSL 选项
+$SSL_ADVANCED_TXT$::
+只能在服务器级别配置这些高级 SSL 选项。所有域继承该行为，而不能单独进行覆盖。
+
+<em>启用低安全性密码</em> - 选择该选择框启用低安全性 SSL 密码。一些较早的或国际客户端可能不支持现今的最佳 SSL 密码。因为现今的计算标准认为这些密码不安全，默认情况下 Serv-U 不接受这些密码。
+
+<em>禁用 SSLv2 支持</em> - Serv-U 支持的 SSL 有数个不同版本。较早的 SSLv2 版本已证明有安全漏洞，其安全性不如 SSLv3 和 TLS。然而，为了与导出的客户端或以前的客户端软件相兼容，可能需要支持 SSLv2。选中该框不支持较早的 SSLv2 协议。
+::END
+
+$FIPS_MODE_HEADER$=FIPS 选项
+$FIPS_MODE_TXT$::
+<em>启用 FIPS 140-2 模式</em> - FIPS 140-2 是一套经过严格测试的加密规范，由国际标准与技术协会（NIST）设置。启用 FIPS 140-2 模式限制 Serv-U 使用经验证符合 FIPS 140-2 的加密算法，并确保加密连接的最高安全级别。
+::END
+
+$SFTP_SETUP_HEADER$=SFTP（SSH2 上的安全文件传输）
+
+$SFTP_SETUP_EXISTING$=使用现存的私钥
+$SFTP_SETUP_EXISTING_LIST$::
+获得私钥文件。
+将私钥文件置于服务器内的安全目录中。使用 Serv-U 内的<strong>浏览</strong>按钮选择文件。
+输入私钥文件的密码。
+单击<strong>保存</strong>按钮。
+::END
+
+$SFTP_SETUP_CREATE$=创建私钥
+$SFTP_SETUP_CREATE_LIST$::
+单击<strong>创建私钥</strong>按钮。
+输入私钥的名称（如 "MyDomain Key"），该名称也用来命名保存文件。
+输入证书的输出路径（如 C:\Program Files\RhinoSoft.com\Serv-U\）。
+选择密钥类型（最好使用默认的 DSA 类型，但也可使用 RSA）。
+选择密钥长度（默认的 1024 位提供最佳性能，2048 位较为适中，而 4096 位提供最好的安全性）。
+输入用来保护私钥文件的密码。
+::END
+
+
+$SFTP_SETUP_CIPHER_MAC$=SSH 密码和 MAC
+$SFTP_SETUP_CIPHER_MAC_TXT$::
+默认情况下，服务器启用所有支持的 SSH 密码和 MAC（消息认证码）。如果您的特定安全需求规定只能使用某些密码或 MAC，您可以通过取消选中相应的选择框来单独禁用不需要的密码和 MAC。
+::END
+
+
+<!-- String table for Help-Domain-Server-Activity -->
+$SD_SESSIONS_HEADER$=服务器和域会话
+
+$SD_SESSIONS_TXT$::
+服务器和域会话选项卡显示了当前的文件服务器会话活动。当从服务器查看会话页时，显示来自所有域的所有连接的会话。当在管理域的同时进行查看，则只显示该域的当前会话。从该页可以看到文件服务器上当前活动的概貌。此外，可以查看单个会话，包括其当前状态、连接状况和传输信息。
+
+要查看特定会话的详细信息，请选择该会话。<strong>活动会话信息</strong>组内包含了当前高亮显示的会话的详情。该信息被频繁更新以提供会话活动的最新精确快照。
+
+根据会话的连接类型（例如 FTP、HTTP 或 SFTP），可以使用某些附加功能。
+::END
+
+$SD_SESSIONS_DISCONNECT$=断开连接
+$SD_SESSIONS_DISCONNECT_TXT$::
+通过单击<strong>断开连接</strong>按钮，可以随时断开任何类型的会话。单击该按钮打开了另一个对话框，其中有其他选项用于设置断开方式。有 3 种断开连接选项可供选择：
+::END
+$SD_SESSIONS_DISCONNECT_LIST$::
+<em>断开连接</em> - 立即断开会话的连接。断开连接的客户端能立即建立另一个会话。这也称为 "踢开" 用户。
+<em>断开连接并禁用 IP</em> - 立即断开会话连接并禁用其 IP 地址达指定的分钟数，以防止立即进行重新连接。
+<em>断开连接并永久阻止 IP</em> - 立即断开会话连接，并为其 IP 地址添加拒绝 IP 访问规则，以永久地防止从相同 IP 地址进行重新连接。
+::END
+$SD_SESSIONS_DISCONNECT_TXT2$::
+当从服务器会话视图中断开会话连接时，有称为<strong>应用 IP 规则到</strong>的附加选项可供使用。该组合框允许您选择应用临时或永久 IP 禁令的位置&mdash;&mdash;整个服务器或只是会话所连接的域。
+
+除了断开会话连接，也可以通过选择标记为<strong>禁用用户帐户</strong>的选择框禁用会话使用的用户帐户。
+
+如果当前会话使用 FTP 协议，通过在标记为<strong>发送给用户的消息</strong>的文本框内输入消息可以在断开连接前将其发送给用户。HTTP 或 SFTP 会话不可使用该选项，因为这两个协议未定义与用户聊天的方法。
+::END
+
+$SD_SESSIONS_SPY$=探查和聊天
+$SD_SESSIONS_SPY_TXT$::
+通过单击<strong>探查和聊天</strong>按钮或双击列表中的会话可以探查任何类型的会话。探查用户显示了加亮会话时通常能看到的所有详细信息，但也包含了自会话首先与文件服务器建立连接起的完整会话日志。这使得管理员可以浏览日志并查看会话用户所采取的所有行动。
+
+如果当前会话使用 FTP 协议，则有附加的选项可以与用户聊天。<strong>聊天</strong>组显示了开始 "探查" 会话后该会话收发的所有消息。要向会话发送消息，请在标记为<strong>消息内容</strong>的文本框内输入消息文本并单击<strong>发送</strong>按钮。当收到来自会话的消息时，也将在此自动显示。
+
+<strong>注意：</strong> 并非所有的 FTP 客户端都支持与系统管理员聊天。向服务器发送消息所用的命令为 SITE MSG。为了使客户端接收到消息，客户端应用程序必须能接收来自服务器的自发响应（而不是简单地丢弃它们）。
+::END
+
+$SD_SESSIONS_BROADCAST$=广播
+$SD_SESSIONS_BROADCAST_TXT$::
+通过单击<strong>广播</strong>按钮，可以向当前所有连接的 FTP 会话发送消息。通过广播发送消息等同于打开每个 FTP 会话的探查和聊天对话框并发送聊天消息。
+::END
+
+$SD_SESSIONS_ABORT$=中断
+$SD_SESSIONS_ABORT_TXT$::
+如果会话正在执行文件传输，通过单击<strong>中断</strong>按钮无需断开会话连接就可以终止文件传输。确认中断命令后，服务器就终止该会话当前的文件传输。某些客户端，尤其是 FTP 和 SFTP 客户端，可以自动重启中断的传输，而使中断操作看上去似乎失败了。在这种情况下，请转而尝试<strong>断开</strong>会话。
+::END
+
+
+<!-- String table for Help-Domain-Server-Stats -->
+$SD_STATS_HEADER$=服务器和域统计
+
+$SD_STATS_TXT$::
+域和服务器统计页面显示了有关服务器使用的详细统计信息，用于基准测试和记录保存。在服务器级别查看到的统计信息是服务器上所有域的累积统计信息的集合。单个域上查看到的统计信息只是该域的统计信息。显示的信息包括：
+::END
+
+$SD_UP_TIME$=连续运行时间
+$SD_UP_TIME_TXT$::
+如果查看的是服务器统计信息，则指自文件服务器启动以来的时间长度；如果查看的是特定域的统计信息，则指自该域联机以来的时间长度。
+::END
+
+$SD_STATS_SESSION$=会话统计
+
+$SD_STATS_SESSION_CURRENT$=当前会话
+$SD_STATS_SESSION_CURRENT_TXT$::
+当前连接的会话数。
+::END
+
+$SD_STATS_SESSION_DAY$=24 小时会话
+$SD_STATS_SESSION_DAY_TXT$::
+过去24小时内连接的会话数。
+::END
+
+$SD_STATS_SESSION_TOTAL$=会话总计
+$SD_STATS_SESSION_TOTAL_TXT$::
+联机以来所连接的会话总数。
+::END
+
+$SD_STATS_SESSION_MAX$=最大会话数量
+$SD_STATS_SESSION_MAX_TXT$::
+联机以来所记录的最大并发会话数量。
+::END
+
+$SD_STATS_SESSION_AVG$=平均会话长度
+$SD_STATS_SESSION_AVG_TXT$::
+会话保持连接的平均时间长度。
+::END
+
+$SD_STATS_SESSION_LONGEST$=最长会话
+$SD_STATS_SESSION_LONGEST_TXT$::
+会话的最长记录时间。
+::END
+
+$SD_STATS_LOGIN$=登录统计
+$SD_STATS_LOGIN_TXT$::
+取决于当前正被查看的统计，这些统计可以应用于一个域或整个服务器。登录统计与会话统计不同，因为它们应用于登录（提供登录 ID 与密码），与连接与断开相对。
+::END
+
+$SD_STATS_LOGINS$=登录
+$SD_STATS_LOGINS_TXT$::
+成功登录总数。
+::END
+
+$SD_STATS_LOGOUTS$=注销
+$SD_STATS_LOGOUTS_TXT$::
+注销总数。
+::END
+
+$SD_STATS_CURRENT_LOGINS$=当前登录
+$SD_STATS_CURRENT_LOGINS_TXT$::
+当前登录的会话数。
+::END
+
+$SD_STATS_MOST_LOGINS$=最多并发登录
+$SD_STATS_MOST_LOGINS_TXT$::
+同时登录进会话的最大数。
+::END
+
+$SD_STATS_LAST_LOGIN$=上次登录时间
+$SD_STATS_LAST_LOGIN_TXT$::
+上次记录的有效登录时间（并非上次创建连接的时间）。
+::END
+
+$SD_STATS_LAST_LOGOUT$=上次注销时间
+$SD_STATS_LAST_LOGOUT_TXT$::
+上次记录的有效注销时间。
+::END
+
+$SD_STATS_AVERAGE_LOGIN$=平均登录时间
+$SD_STATS_AVERAGE_LOGIN_TXT$::
+所有会话的平均登录时间。
+::END
+
+$SD_STATS_LONGEST_LOGIN$=最长登录时间
+$SD_STATS_LONGEST_LOGIN_TXT$::
+登录会话的最长时间。
+::END
+
+$SD_STATS_SHORTEST_LOGIN$=最短登录时间
+$SD_STATS_SHORTEST_LOGIN_TXT$::
+登录会话的最短时间。
+::END
+
+$SD_STATS_TRANSFER$=传输统计
+
+$SD_STATS_TRANSFER_DL_SPEED$=下载速度
+$SD_STATS_TRANSFER_DL_SPEED_TXT$::
+当前累积占用的下载带宽。
+::END
+
+$SD_STATS_TRANSFER_UL_SPEED$=上传速度
+$SD_STATS_TRANSFER_UL_SPEED_TXT$::
+当前累积占用的上传带宽。
+::END
+
+$SD_STATS_TRANSFER_AVG_DL_SPEED$=平均下载速度
+$SD_STATS_TRANSFER_AVG_DL_SPEED_TXT$::
+联机以来占用的平均下载带宽。
+::END
+
+$SD_STATS_TRANSFER_AVG_UL_SPEED$=平均上传速度
+$SD_STATS_TRANSFER_AVG_UL_SPEED_TXT$::
+联机以来占用的平均上传带宽。
+::END
+
+$SD_STATS_TRANSFER_DL$=已下载
+$SD_STATS_TRANSFER_DL_TXT$::
+联机以来下载的数据总量和文件数目。
+::END
+
+$SD_STATS_TRANSFER_UL$=已上传
+$SD_STATS_TRANSFER_UL_TXT$::
+联机以来上传的数据总量和文件数目。
+::END
+
+$SD_STATS_SAVE$=保存统计
+$SD_STATS_SAVE_TXT$::
+可以将用户与群组统计直接保存到 CSV 文件以便程序分析与查看。要将统计保存到文件，先选定您要为其生成统计文件的用户或群组，然后点击位于该页面底部的“保存统计”按钮。
+::END
+
+
+<!-- String table for Help-User-Group-Stats -->
+$UG_STATS_HEADER$=用户和群组统计
+
+$UG_STATS_TXT$::
+用户与群组统计页面显示了基于个人用户或群组活动的详细统计。用户或群组的统计查看仅适用于该用户或群组。显示的信息包括：
+::END
+
+$UG_STATS_SESSION$=会话统计
+
+$UG_STATS_SESSION_CURRENT$=当前会话
+$UG_STATS_SESSION_CURRENT_TXT$::
+当前连接的会话数。
+::END
+
+$UG_STATS_SESSION_DAY$=24 小时会话
+$UG_STATS_SESSION_DAY_TXT$::
+过去 24 小时内所连接的会话数。
+::END
+
+$UG_STATS_SESSION_TOTAL$=会话总数
+$UG_STATS_SESSION_TOTAL_TXT$::
+联机以来所连接的会话总数。
+::END
+
+$UG_STATS_SESSION_MAX$=最大会话数量
+$UG_STATS_SESSION_MAX_TXT$::
+联机以来所记录的最大并发会话数量。
+::END
+
+$UG_STATS_SESSION_AVG$=平均会话长度
+$UG_STATS_SESSION_AVG_TXT$::
+会话保持连接的平均时间长度。
+::END
+
+$UG_STATS_SESSION_LONGEST$=最长会话
+$UG_STATS_SESSION_LONGEST_TXT$::
+会话的最长记录时间。
+::END
+
+$UG_STATS_LOGIN$=登录统计
+$UG_STATS_LOGIN_TXT$::
+取决于当前正被查看的统计，这些统计可以应用于一个用户或一组用户。登录统计与会话统计不同，因为它们应用于登录（提供登录 ID 与密码），与连接与断开相对。
+::END
+
+$UG_STATS_LOGINS$=登录
+$UG_STATS_LOGINS_TXT$::
+成功登录总数。
+::END
+
+$UG_STATS_LOGOUTS$=注销
+$UG_STATS_LOGOUTS_TXT$::
+注销总数。
+::END
+
+$UG_STATS_CURRENT_LOGINS$=当前登录
+$UG_STATS_CURRENT_LOGINS_TXT$::
+当前登录的会话数。
+::END
+
+$UG_STATS_MOST_LOGINS$=最多并发登录
+$UG_STATS_MOST_LOGINS_TXT$::
+同时登录进会话的最大数。
+::END
+
+$UG_STATS_LAST_LOGIN$=上次登录时间
+$UG_STATS_LAST_LOGIN_TXT$::
+上次记录的有效登录时间（并非上次创建连接的时间）。
+::END
+
+$UG_STATS_LAST_LOGOUT$=上次注销时间
+$UG_STATS_LAST_LOGOUT_TXT$::
+上次记录的有效注销时间。
+::END
+
+$UG_STATS_AVERAGE_LOGIN$=平均登录时间
+$UG_STATS_AVERAGE_LOGIN_TXT$::
+所有会话的平均登录时间。
+::END
+
+$UG_STATS_LONGEST_LOGIN$=最长登录时间
+$UG_STATS_LONGEST_LOGIN_TXT$::
+登录会话的最长时间。
+::END
+
+$UG_STATS_SHORTEST_LOGIN$=最短登录时间
+$UG_STATS_SHORTEST_LOGIN_TXT$::
+登录会话的最短时间。
+::END
+
+$UG_STATS_TRANSFER$=传输统计
+
+$UG_STATS_TRANSFER_DL_SPEED$=下载速度
+$UG_STATS_TRANSFER_DL_SPEED_TXT$::
+当前累积占用的下载带宽。
+::END
+
+$UG_STATS_TRANSFER_UL_SPEED$=上传速度
+$UG_STATS_TRANSFER_UL_SPEED_TXT$::
+当前累积占用的上传带宽。
+::END
+
+$UG_STATS_TRANSFER_AVG_DL_SPEED$=平均下载速度
+$UG_STATS_TRANSFER_AVG_DL_SPEED_TXT$::
+联机以来所占用的平均下载带宽。
+::END
+
+$UG_STATS_TRANSFER_AVG_UL_SPEED$=平均上传速度
+$UG_STATS_TRANSFER_AVG_UL_SPEED_TXT$::
+联机以来所占用的平均上传带宽。
+::END
+
+$UG_STATS_TRANSFER_DL$=已下载
+$UG_STATS_TRANSFER_DL_TXT$::
+联机以来已下载的数据总量和文件数目。
+::END
+
+$UG_STATS_TRANSFER_UL$=已上传
+$UG_STATS_TRANSFER_UL_TXT$::
+联机以来已上传的数据总量和文件数目。
+::END
+
+
+<!-- String table for Help-Domain-Server-Log -->
+$SD_LOG$=服务器和域日志
+
+$SD_LOG_TXT$::
+服务器和域日志选项卡显示服务器或域的活动记录。
+
+服务器日志显示文件服务器的启动、配置和关闭信息。它不显示域活动信息。要了解域活动信息，请转而查看相应域的日志。除了文件服务器开始启动时所记录的有关库、授权和当前构建的状态信息，服务器日志也包含有关所有域监听器状态、通用即插即用（UPnP）状态和 PASV 端口范围状态的信息。服务器日志中包含的信息也保存在安装目录中名为 <strong>Serv-U-StartupLog.txt</strong> 的文本文件中。每次启动 Serv-U 文件服务器时更新该文件。
+
+域日志仅包含有关当前所管理域的活动信息。这包括域监听器的状态和任何已配置活动的日志信息。要了解有关域日志中记录的活动类型信息的更多详情，请参见标题为 $LINK_HELP_LOG_SETTINGS$ 的帮助内容。
+
+通过单击并在所需的日志部分上拖动鼠标可以高亮显示日志中包含的信息。一旦高亮显示，就可以将所选部分复制到剪贴板。
+::END
+
+$SD_LOG_FREEZE$=冻结日志
+$SD_LOG_FREEZE_TXT$::
+选择该选择框可以暂时停止刷新日志。这对于繁忙的系统很有用，因为在日志滚动到视窗之外前可以加亮并复制一部分日志。完成操作后，取消选择该选择框以恢复日志的自动更新。
+::END
+
+$SD_LOG_SELECT_ALL$=全选
+$SD_LOG_SELECT_ALL_TXT$::
+单击该按钮可以自动冻结日志并加亮当前显示的所有日志信息，以便将其复制到剪贴板中。
+::END
+
+$SD_LOG_CLEAR$=清除日志
+$SD_LOG_CLEAR_TXT$::
+当日志庞大到不能一目了然时，请单击该按钮删除当前显示的日志信息。只显示单击该按钮之后收到的日志信息。
+::END
+
+$SD_LOG_LEGEND$=图例
+$SD_LOG_LEGEND_TXT$::
+为了更方便地查看日志的不同部分，对每种不同类型的日志信息进行了色彩编码以利于快速识别。单击该按钮在可拖拽的对话框中显示图例。将图例对话框拖拽到方便的位置，以便在浏览日志时可以参考图例。
+::END
+
+$SD_LOG_FILTER$=筛选日志
+$SD_LOG_FILTER_TXT$::
+要快速查找和通读日志的特定部分，可以根据搜索字符串来筛选日志。单击该按钮显示筛选日志对话框。输入搜索字符串并单击<strong>筛选</strong>按钮将刷新日志，使其只显示包含搜索字符串的日志条目。要再次查看完整的日志内容，请打开筛选日志对话框并单击<strong>重置</strong>按钮。
+::END
+
+$SD_LOG_DOWNLOAD$=下载日志
+$SD_LOG_DOWNLOAD_TXT$::
+要从 Serv-U 下载完整的日志文件，点击“下载日志”按钮。如果您有权限下载该文件，您的 web 浏览器将提示您选择保存该文件的位置，或自动开始下载该文件。
+::END
+
+
+<!-- String table for Help-Domain-Overview -->
+$DOMAIN_OVERVIEW_HEADER$=域概述
+
+$DOMAIN_OVERVIEW$::
+Serv-U 文件服务器的核心是 Serv-U 域。在最基本的级别，Serv-U 域是一组用户帐户和监听器，使得用户可以连接服务器以访问文件和文件夹。也可以进一步配置 Serv-U 域，从而约束基于 IP 地址的访问，限制带宽的使用，强制实施传输配额等。实际上在服务器级别上的每个设置都可以被个别的域设置覆盖。提前进行仔细的计划可以在服务器级别指定默认选项的适当设置，从而使配置域所需的工作量降到最低。
+
+Serv-U 能支持文件服务器上任意数量的域。域能共享监听器，或者当系统拥有多个 IP 地址时每个域都能使用唯一的 IP 地址。然而，许可证规定了一个安装实例能创建的域的最大数量。要了解 Serv-U 不同版本的更多信息，请参见 $LINK_HELP_EDITIONS$ 的帮助文档。
+
+当首次运行 Serv-U 文件服务器的新安装实例时，会提示您使用新建域向导创建第一个域。如果许可证支持，通过单击 Serv-U 管理控制台主页上的<strong>新建域</strong>按钮，或从 "更改域" 对话框中单击<strong>新建域</strong>按钮，可以随时创建另一个新域。
+
+有关使用新建域向导创建新域的更多信息，请参见 $LINK_HELP_GUIDE$。
+::END
+
+$DOMAIN_MANAGING$=管理域
+$DOMAIN_MANAGING_TXT$::
+当前管理的域总是显示在每页的页眉中“管理”的旁边。有几种方法可以更改活动的域。从 Serv-U 管理控制台的控制台页面，点击<strong>管理域</strong>按钮将显示一份文件服务器上可用的域列表。双击一个域或高亮显示它并点击<strong>选择</strong>按钮，可以使这个域变成活动域。域列表也可以从任何域配置页面获得，只需点击该页面的页脚里<strong>变更域</strong>按钮。
+
+如果您的许可证支持，您可以随时创建另一个新域，只需点击控制台页面上的<strong>新建域</strong>按钮。该按钮也可以直接在上述包含可用域列表的域对话框里找到。更改了活动的域之后，当前页面自动重新载入，以反映新的活动域设置。
+
+域列表对话框里的<strong>删除</strong>按钮会立即删除域及其全部用户和组。该操作无法撤销。
+::END
+
+<!-- String table for Help-Domain-Name-Description -->
+$DOMAIN_NAME_DESCRIPTION_HEADER$=域名及说明
+
+$EDITING_NAME_DESCRIPTION$::
+每个域必须用唯一的<strong>域名</strong>进行标识。如果提供的名称不唯一，则会显示错误消息指出每个域需要唯一的名称。<strong>域名</strong>仅用于管理目的，对用户是不可见或不能访问的。
+
+此外，通过使用<strong>说明</strong>字段，每个域可以拥有附加的相关说明信息。类似于<strong>域名</strong>，<strong>说明</strong>文本也仅供有管理权限的用户使用。该字段用于说明域的目的，或总结文件服务器上由于存在域而变为可用的资源。
+
+通过取消选中<strong>启用域</strong>选择框，可以暂时禁用域。禁用时，所有用户都完全不能访问该域。该域仍存在于文件服务器上，所有设置被保存，且在禁用的同时仍能对其进行管理。要再次使用户可以访问该域，请选中<strong>启用域</strong>选择框。
+
+对上述域设置作出更改后，请单击<strong>保存</strong>按钮来应用更改。
+::END
+
+$DOMAIN_INFO_HOMEDIR$=域根目录
+$DOMAIN_INFO_HOMEDIR_TXT$::
+系统管理员可通过配置域根目录并指定最大容量来限制域的可用磁盘空间。域根目录不会影响用户目录访问规则，也不会以任何方式限制用户的可用路径。然而，为计算域占用的磁盘空间数量，Serv-U 必须知道保存所有域文件的根目录。
+  
+要指定域根目录，请在标记为<strong>域根目录</strong>字段中输入路径。也可使用<strong>浏览</strong>按钮来选择路径。当为该域创建域管理员帐户时，推荐使用同样的根目录，以确保将所有域用户置于域根目录的相应子目录中。请在<strong>最大容量</strong>字段中输入该域的可用磁盘空间大小，以 MB 为单位。此字段留空或输入 "0" 未对该域设置最大尺寸。设置了限制后，服务器将拒绝任何会导致超出最大容量的上传行为。    
+请单击<strong>保存</strong>按钮以应用这些更改。 
+
+<strong>请注意：</strong> 计算域占用的磁盘空间数量是一项耗时的操作，这取决于目录结构。
+::END
+
+<!-- String table for Help-Domain-Listeners -->
+$DOMAIN_LISTENERS_HEADER$=域监听器
+
+$DOMAIN_LISTENERS$::
+Serv-U 文件服务器提供高度可配置的界面，以便在域上启用不同文件共享协议。使用适当标识的按钮可以添加、编辑和删除监听器。通过添加绑定于所需 IP 地址和端口的监听器，每个域可以监听多个端口和 IP 地址。除了选择监听器的连接属性之外，也必须选择文件共享协议。以下为 Serv-U 文件服务器支持的文件共享协议的列表和简短说明。
+::END
+
+$LISTENER_FTP$=FTP - 文件传输协议
+$LISTENER_FTP_TXT$::
+FTP 是在因特网上传输文件的传统协议。它通常运作于默认端口 21。 传统上，以纯文本形式处理 FTP，然而 SSL 连接通过使用 AUTH 命令获得明确支持。
+::END
+
+$LISTENER_FTPS$=FTPS - 使用 SSL 的文件传输协议
+$LISTENER_FTPS_TXT$::
+FTPS 类似于 FTP，然而连接为 FTPS 配置的监听器，意味着执行任何协议通信前必须进行 SSL 连接。这一般被称为隐式 FTPS，它通常使用默认端口 990。
+::END
+
+$LISTENER_SFTP$=SFTP - 使用 SSH2 的安全文件传输
+$LISTENER_SFTP_TXT$::
+SFTP 是通过安全外壳会话传输文件的一种安全方式。它在相同端口上执行所有协议通信和数据传输，而无需打开防火墙的多个端口，这一点不同于 FTP。SFTP 会话总是加密的。SFTP 使用默认端口 22。
+::END
+
+$LISTENER_HTTP$=HTTP - 超文本传输协议
+$LISTENER_HTTP_TXT$::
+HTTP 是用于浏览网站的协议。它也是下载并传输文件的一种简单方法。向域添加 HTTP 监听器的优点是可以使用 Web 客户端，从而使用户无需独立客户端就可以向文件服务器收发文件。HTTP 通常使用端口 80。
+::END
+
+$LISTENER_HTTPS$=HTTPS -  使用 SSL 的超文本传输协议
+$LISTENER_HTTPS_TXT$::
+HTTPS 类似于 HTTP，但其所有通信都用 SSL 进行保护。如同 FTPS，连接运行 HTTPS 协议的监听器意味着进行安全连接。HTTPS 的默认端口是 443。
+::END
+
+$LISTENER_ADDING$=添加监听器
+$LISTENER_ADDING_TXT$::
+单击<strong>添加</strong>按钮后，显示监听器配置对话框。配置每个监听器选项后，单击<strong>保存</strong>按钮向域添加监听器。
+::END
+
+$LISTENER_TYPE$=类型
+$LISTENER_TYPE_TXT$::
+选择所需的为该监听器所支持的文件共享协议。每个监听器只能支持单个协议。要向域添加更多文件共享协议，请为每个协议创建新监听器。从上面可以找到对所支持的文件共享协议的简短说明。
+::END
+
+$LISTENER_IP_ADDRESS$=IP 地址
+$LISTENER_IP_ADDRESS_TXT$::
+在这里输入单个 IP 地址可以将监听器绑定于该地址。如果文件服务器没有外部 IP 地址（例如，它在路由器后面），该字段可以留空。该字段留空使 Serv-U 监听所有可用的 IP 地址。
+::END
+
+$LISTENER_PASV_IP$=PASV IP 地址或域名（仅FTP）
+$LISTENER_PASV_IP_TXT$::
+如果监听器支持 FTP 协议，则可使用该附加字段来指定单独的 IP 地址用于 PASV 模式的数据传输。在这里输入 IP 地址保证 PASV 模式在不安全连接和安全连接上都能正常工作。如果文件服务器没有外部 IP 地址，请尝试使用 $LINK_DNS4ME$ 并在该字段中输入您的 DNS4Me 域名。Serv-U 解析 DNS4Me 域名以保证总有正确的外部 IP 地址用于 PASV 命令响应。
+::END
+
+$LISTENER_SSL_ONLY$=仅使用 SSL 连接
+$LISTENER_SSL_ONLY_TXT$::
+该选项允许仅将 PASV IP 地址或域名用于 SSL 连接，适用于总是必须提供 PASV IP 地址来连接客户端的情况。启用该选项时，不会将指定为 PASV 模式的 IP 地址提供给通过非 SSL FTP 连接的客户端。
+::END
+
+$LISTENER_USE_LAN$=使用 LAN 连接
+$LISTENER_USE_LAN_TXT$::
+通常，Serv-U 不将 PASV IP 地址用于来自局域网（与 Serv-U 处于相同网络的计算机）的连接。启用该选项时，也可将 PASV IP 地址用于局域网连接。
+::END
+
+$LISTENER_PORT$=端口
+$LISTENER_PORT_TXT$::
+自动提供所选协议的默认端口。然而，可以使用 1 和 65535 之间的任何端口。当使用非标准端口时，客户端在试图连接域之前必须预先知道正确的端口。如果使用非标准端口，我们推荐使用 1024 以上的端口值以避免潜在的冲突。
+::END
+
+$LISTENER_ENABLE$=启用监听器
+$LISTENER_ENABLE_TXT$::
+取消选中该选择框能暂时禁用监听器。禁用时，监听器使用不同的图标显示在列表中。
+::END
+
+$LISTENER_PURE_VIRTUAL$=纯虚拟域
+$LISTENER_PURE_VIRTUAL_TXT$::
+Serv-U 支持多个域 "共享" 相同的监听器。换句话说，第一个域拥有必要的监听器配置，而其他域 "驮靠" 在第一个域之上。这样，第二个域以虚拟方式存在。要使某个域 "驮靠" 在现有域的监听器配置上，请将该域的监听器列表留空。"驮靠" 域必须至少定义了一个 $LINK_HELP_VIRTUAL$。
+
+"驮靠" 的方法仅作用于 FTP 和 HTTP 协议，因为只有这两个文件共享协议指定了建立连接后标识所需主机的方法。对于 FTP 连接，客户端必须发布 HOST 命令以标识所需域。对于 HTTP 连接，浏览器基于用来建立 HTTP 连接的域名，自动向 Serv-U 提供必需的主机报头。
+::END
+
+
+<!-- String table for Help-Virtual-Hosts -->
+$VIRTUAL_HOSTS_HEADER$=虚拟主机
+
+$VIRTUAL_HOSTS$::
+虚拟主机为多个域提供了一种方式，使它们可以共享相同的 IP 和监听器端口号。通常情况下，每个域监听器必须使用唯一的 IP 地址和端口号的组合。使用虚拟主机，无需使用非标准端口号，就可以在仅有唯一 IP 地址的系统上使用多个域。通过正确地配置虚拟主机，多个域可以共享相同的监听器。该功能仅适用于当前许可证支持多域的情形。
+
+要配置域的虚拟主机，单击<strong>添加</strong>按钮并输入域的虚拟主机名。虚拟主机名通常是用来连接域的全称域名，例如 "ftp.Serv-U.com"。
+
+客户端连接所需虚拟主机的方式取决于连接 Serv-U 所用的协议。
+
+<strong>FTP</strong><br />
+FTP 用户可使用两种方式之一来连接特定虚拟主机。如果 FTP 客户端支持 HOST 命令，则可在登录前向 Serv-U 发布该命令以标识虚拟主机。否则，可用以下格式提供虚拟主机及登录 ID：<em>虚拟_主机_名</em>|<em>登录 ID</em>。
+首先输入虚拟主机名，后接竖线字符 ('|')，然后是登录 ID。
+
+<strong>SFTP</strong><br />
+希望连接到特定虚拟主机的 SFTP 用户必须使用专门设计的登录 ID格式，如同以上 FTP 部分中所述。
+
+<strong>HTTP</strong><br />
+对于 HTTP 用户，浏览器自动将访问网站所用的主机名提供给 Serv-U，使得 Serv-U 可从输入浏览器导航栏的全称域名中识别虚拟主机。
+::END
+
+
+$VIRTUAL_HOSTS_CASEFILE1_HEADER$=案例文档&mdash;&mdash;虚拟主机
+
+$VIRTUAL_HOSTS_CASEFILE1_BODY$::
+多个域在同一个服务器上进行配置，该服务器有一个 IP 地址和两个全称域名（FQDN）指向它。由于用户必须使用端口 21 来连接到这两个域，请在每个域上配置虚拟主机，以使 Serv-U 能区分对这两个域的请求。在每个域上设置了相同的监听器属性后，请打开虚拟主机选项卡，单击<strong>添加</strong>，然后输入客户端用于连接域的 FQDN（例如 ftp.Serv-U.com）。
+
+使用 FTP 连接服务器后，用户能发送 <strong>HOST ftp.Serv-U.com</strong> 命令以连接文件服务器上相应的域。FTP 和 SFTP 用户也能通过其登录 ID <strong>ftp.Serv-U.com|登录 ID</strong> 来标识虚拟主机。如果使用 HTTP，用户能通过访问 http://ftp.Serv-U.com 连接该域。
+::END
+
+
+<!-- String table for Help-Directory-Access -->
+$DIRECTORY_ACCESS_HEADER$=目录访问规则
+
+$DIR_ACCESS_BASICS$::
+目录访问规则定义用户帐户可以访问的系统区域。与传统的限制到用户和组级别的方式不同，Serv-U 通过全局目录访问规则的创建，将目录访问规则的使用扩展到域和服务器级别。在服务器级别指定的目录访问规则可供文件服务器中的所有用户继承。如果在域级别指定，则仅供该域内的用户继承。继承的传统应用规则为，在较低级别指定的规则（如用户级别）可以覆盖在较高级别（如服务器级别）指定的冲突或重复的规则。  
+
+设置目录访问路径时，可以使用 %USER%、%HOME% 和 %DOMAIN_HOME% 变量简化这一过程。例如，可以使用 %HOME%/ftproot/ 创建目录访问规则，在用户根目录下指定 "ftproot" 文件夹。以这种方式指定的目录访问规则具有 "可移植性"，在实际的根目录更改时，能够保持原有的子目录结构。这将减轻文件服务器管理员的维护负担。如果在路径中指定了 %USER% 变量，该变量将被替换为用户的登录 ID。变量在指定群组根目录时非常有用，可以确保用户继承符合逻辑且唯一的根目录。最后，标识用户根目录时还可使用 %DOMAIN_HOME% 宏。例如，使用 %DOMAIN_HOME%\%USER% 将用户及其根目录置于公共目录。
+
+目录访问规则按其列出的顺序应用。Serv-U 碰到的列表中第一条符合客户端路径的规则，即应用于该规则的规则。换句话说，如果现有的规则拒绝访问某个子目录，但该规则列于授权访问父目录的规则<em>之下</em>，则用户仍可以访问该子目录。目录访问列表右边的箭头用于重新排列规则应用的顺序。
+
+以下是列表和每种可用的访问权限的描述。
+::END
+
+$FILE_PERMS_HEADER$=文件权限
+
+$FILE_PERMS_READ$=读
+$FILE_PERMS_READ_TXT$::
+允许用户读取（即下载）文件。该权限不允许用户列出目录内容，执行该操作需要<strong>列表</strong>权限。
+::END
+
+$FILE_PERMS_WRITE$=写
+$FILE_PERMS_WRITE_TXT$::
+允许用户写入（即上传）文件。该权限不允许用户修改现有的文件，执行该操作需要<strong>追加</strong>权限。
+::END
+
+$FILE_PERMS_APPEND$=追加
+$FILE_PERMS_APPEND_TXT$::
+允许用户向现有文件中追加数据。该权限通常用于使用户能够对部分上传的文件进行续传。
+::END
+
+$FILE_PERMS_RENAME$=重命名
+$FILE_PERMS_RENAME_TXT$::
+允许用户重命名现有的文件。以前版本的 Serv-U 要重命名文件需要<strong>删除</strong>和<strong>写</strong>权限。从 7.0 版本开始，<strong>重命名</strong>成为明确的权限。
+::END
+
+$FILE_PERMS_DELETE$=删除
+$FILE_PERMS_DELETE_TXT$::
+允许用户删除文件。
+::END
+
+$FILE_PERMS_EXECUTE$=执行
+$FILE_PERMS_EXECUTE_TXT$::
+允许用户远程执行文件。执行访问用于远程启动程序并通常应用于特定文件。这是非常强大的权限，在将该权限授予用户时需格外谨慎。具有<strong>写</strong>和<strong>执行</strong>权限的用户实际上能够选择在您的系统上安装任何程序。
+::END
+
+$DIR_PERMS_HEADER$=目录权限
+
+$DIR_PERMS_LIST$=列表
+$DIR_PERMS_LIST_TXT$::
+允许用户列出目录中包含的文件。
+::END
+
+$DIR_PERMS_CREATE$=创建
+$DIR_PERMS_CREATE_TXT$::
+允许用户在目录中新建子目录。
+::END
+
+$DIR_PERMS_RENAME$=重命名
+$DIR_PERMS_RENAME_TXT$::
+允许用户在目录中重命名现有子目录。以前版本的 Serv-U 要重命名目录需要<strong>删除</strong>和<strong>写</strong>权限。从 7.0 版本开始，<strong>重命名</strong>成为明确的权限。
+::END
+
+$DIR_PERMS_DELETE$=删除
+$DIR_PERMS_DELETE_TXT$::
+允许用户在目录中删除现有子目录。<strong>注意：</strong>  如果目录包含文件，用户要删除目录还需要具有<strong>删除</strong>文件权限。
+::END
+
+$SUBDIR_PERMS_HEADER$=子目录权限
+$SUBDIR_PERMS_INHERIT$=继承
+$SUBDIR_PERMS_INHERIT_TXT$::
+允许所有子目录继承其父目录具有的相同权限。<strong>继承</strong>权限适用于大多数情况，但是如果访问必须受限于子文件夹，例如实施强制访问控制（Mandatory Access Control）时，则取消继承并为文件夹逐一授予权限。
+::END
+
+$WINDOWS_USER_ACCESS$=作为 Windows 用户访问
+$WINDOWS_USER_ACCESS_TXT$::
+由于种种原因，要将文件和文件夹保存在外部服务器上以便集中文件存储或提供额外的安全级别。在这种环境下，可以使用 UNC 路径 (\\servername\folder\) 替代传统的 "C:\ftproot\folder" 路径来访问文件。不过，访问跨网络存储的文件夹别具挑战 - 默认情况下，Windows 服务器运行于“本地系统”账户之下，没有访问网络资源的权限。
+
+为使整个 Serv-U 避免这一问题，可以配置“Serv-U 文件服务器”服务运行于网络账户之下。或者，当存在多个服务器或出于安全原因 Serv-U 服务器服务必须运行于“本地系统”之下时，可以配置目录访问规则以使用特定的 Windows 用户访问文件。点击“高级”按钮可以为每个单独的目录访问规则指定特定的 Windows 用户。就如同在 Windows 验证中目录访问取决于 NTFS 权限一样，在 Serv-U 中的文件访问也取决于所配置的权限。
+::END
+
+$QUOTA_PERMS_HEADER$=配额权限
+$QUOTA_PERMS_MAXSIZE$=目录内容的最大尺寸
+$QUOTA_PERMS_MAXSIZE_TXT$::
+设置最大尺寸，动态地将目录内容大小限制在指定的值以内。任何尝试的文件传输如果使目录内容超过这一限制值，则被拒绝。它作为传统配额功能的替代功能，传统功能依赖于追踪所有的文件传输（上传和删除）以计算目录大小，且无法在用户文件服务器活动以外考虑对目录内容的更改。
+::END
+
+$DIR_ACCESS_CASEFILE1_HEADER$=强制访问控制
+$DIR_ACCESS_CASEFILE1_TXT$::
+当用户需要访问相同根目录但不一定都能访问其下的子目录时，Serv-U 启用强制访问控制。要在目录级别实施强制访问控制，只需禁用 "继承" 权限，如下所示（假设该规则应用于 "D:\ftproot\"）：
+::END
+$DIR_ACCESS_CASEFILE1_TXT2$::
+现在，用户可以访问 "ftproot" 文件夹但不能访问其下的子文件夹。必须为用户需要访问的子文件夹个别授予访问权限，从而在 Serv-U 文件服务器中提供强制访问控制的安全保护作用。
+::END
+
+$DIR_ACCESS_CASEFILE2_HEADER$=限制文件类型
+$DIR_ACCESS_CASEFILE2_TXT$::
+如果用户使用 Serv-U 文件服务器上的存储空间保存与工作无关的文件，例如 MP3 音乐文件，通过配置目录访问规则并将其置于主目录访问规则<strong>之上</strong>（使用右边的箭头对规则重新排序）可以阻止传输 MP3 文件以杜绝上述操作，如下所示。在规则的文本条目中输入 "*.mp3" 并使用下列权限：
+::END
+
+$DIR_ACCESS_CASEFILE2_TXT2$::
+该规则拒绝传输任何以 .mp3 为扩展名的文件，并可作修改以显示任何文件扩展名。同样，如果会计部门的员工只需要传输以 .mdb 为扩展名的文件，则可配置一对规则以授予传输 .mdb 文件的权限但拒绝对任何其他文件的访问，如下所示。在第一条规则中输入用户根目录或需要访问的目录的路径，在第二条规则中输入需要访问的文件扩展名（例如 "*.mdb"）：
+::END
+
+$DIR_ACCESS_CASEFILE2_TXT3$::
+这些规则仅允许用户访问指定目录中的 .mdb 文件，也可改编为任何文件扩展名或文件扩展名组。
+::END
+
+
+<!-- String table for Help-Virtual-Paths -->
+$VIRTUAL_PATHS_HEADER$=虚拟路径
+
+$VIR_PATHS$::
+虚拟路径允许用户访问根目录以外的文件和文件夹。虚拟路径仅定义一种方式，将现有目录映射到系统中的其他位置，使用户能够在其可访问的目录结构中看到该目录。为了能够访问该映射的位置，用户还是需要满足对虚拟路径物理路径的目录访问规则。
+
+和 $LINK_HELP_DIRACCESS$ 一样，虚拟路径可以在服务器、域、群组和用户级别进行配置。在服务器级别创建的虚拟路径可供文件服务器上的所有用户使用。如果在域级别创建，则仅供该域内的用户访问。Serv-U 的粒状文件访问控制甚至允许为个别用户或群组专门创建虚拟路径。
+::END
+
+$VIRTUAL_PATHS_PHYSICAL$=物理路径
+$VIRTUAL_PATHS_PHYSICAL_TXT$::
+物理路径是系统或网络中的真实位置，可以置于可供用户访问的虚拟位置。如果物理路径位于同一计算机上，应使用完整路径，如 "D:\inetpub\ftp\public"。也可以使用 UNC 路径，如 "\\Server\share\public"。为了使用户能够看到虚拟路径，必须具有指定给物理路径的目录访问规则。
+::END
+
+$VIRTUAL_PATHS_VIRTUAL$=虚拟路径
+$VIRTUAL_PATHS_VIRTUAL_TXT$::
+虚拟路径是应该向用户显示的物理路径位置。通常在虚拟路径中使用宏 %HOME% 以将指定的物理路径置于用户根目录中。指定虚拟路径时，最后指定的目录作为用户目录列表中显示的名称。例如，虚拟路径 "%HOME%/public" 取代指定物理路径中名称为 "public" 的文件夹，该文件位于用户的根目录下。也可以使用不带任何宏的完整路径。
+::END
+
+$VIRTUAL_PATHS_INCLUDE_IN_MAX_SIZE$=包括在"最大目录尺寸"计算范围内
+$VIRTUAL_PATHS_INCLUDE_IN_MAX_SIZE_TXT$::
+选中时，虚拟路径包括在最大目录尺寸计算范围内。若未选中，虚拟路径不包括在最大目录尺寸计算范围内。最大目录尺寸限制了目录大小，从而影响可上传的数据量。
+::END
+
+$VIRTUAL_PATHS_CASEFILE1_HEADER$=案例文件 - 使用虚拟路径
+
+$VIRTUAL_PATHS_CASEFILE1_BODY$::
+假如为了进行 Web 开发，授予一组 Web 开发者可以访问目录 "D:\ftproot\examplesite.com\" 的权限。开发者还需要访问位于 "D:\corpimages\" 的图片库。为了避免授予群组访问 D 盘根目录的权限，必须配置虚拟路径使图片库<em>看起来</em>包含在群组的根目录中。在 Web 开发者群组中要添加虚拟路径 "使用户能够访问目录"，可以将 "D:\corpimages\" 指定为<strong>物理路径</strong>，同时将 "D:\ftproot\examplesite.com\corpimages" 指定为<strong>虚拟路径</strong>。请确保也为 "D:\corpimages\" 添加了群组级的目录访问规则。开发者现在可以访问图片库，同时也不需要折衷安全性或重新安排共享的资源。
+::END
+
+$VIRTUAL_PATHS_CASEFILE2_HEADER$=案例文件 - 创建相对虚拟路径
+
+$VIRTUAL_PATHS_CASEFILE2_BODY$::
+继续上面的例子，如果 Web 开发者群组的根目录被重新安排到其他驱动器，则不仅需要更新其根目录，还需要更新虚拟路径以反映这一更改。要避免此问题，可以使用 %HOME% 宏创建相对虚拟路径位置，便无需在根目录更改时更新虚拟路径。和使用 "D:\ftproot\examplesite.com\corpimages" 作为<strong>虚拟路径</strong>不同，可以使用 "%HOME%\corpimages"。这将告诉 Serv-U 将 "corpimages" 虚拟路径置于群组根目录中&mdash;&mdash;无论根目录在什么位置。如果之后根目录有所更改，虚拟路径将还出现在根目录中原来的位置。
+::END
+
+
+<!-- String table for Help-Configure-Logs -->
+$DOMAIN_LOGS_HEADER$=配置域日志
+
+$CONF_DOMAIN_LOGS$::
+Serv-U 文件服务器允许大量定制操作用于将域事件和活动记入日志。日志记录分为两个部分：文件和屏幕。要启用日志选项，请选中文件或屏幕列中相应的复选框。从 "文件" 列中选中选项时，如果选中<strong>启用记录日志到文件</strong>，则相应的日志信息将保存到指定的日志文件中。从 "屏幕" 列中选中选项时，从 Serv-U 管理控制台将看到事件显示在日志中。日志显示内容的多少可以根据您的需要进行配置。配置好需要的日志选项后，单击<strong>保存</strong>按钮以保存更改。
+::END
+
+$DOMAIN_LOG_FILE_SETTINGS$=记录日志到文件设置
+
+$DOMAIN_LOG_FILE$=日志文件路径
+$DOMAIN_LOG_FILE_TXT$::
+将信息保存到文件之前，必须为日志文件命名。可以使用<strong>浏览</strong>按钮为日志文件选择已有的文件或目录位置。日志文件路径支持以下列出的这些通配符。通配符字符表示日志文件创建的日期。和<strong>自动循环更新日志文件</strong>选项结合使用时，通配符能够自动归档域活动用于审计，如 HIPAA 需要的活动日志。可用的通配符字符包括：
+::END
+$DOMAIN_LOG_FILE_LIST$::
+%D - 每月的当前日期
+%M - 当前月份名称
+%N - 当前月的数字值 (1-12)
+%Y - 当前年份的四位数字值 (如 %COPYRIGHT_END_YEAR%)
+%X - 当前年份的两位数字值 (如用 %SHORT_COPYRIGHT_END_YEAR% 表示 %COPYRIGHT_END_YEAR%)
+%S - 活动日志正被记录的域名
+::END
+
+$DOMAIN_LOG_ENABLE_FILE$=启用记录日志到文件
+$DOMAIN_LOG_ENABLE_FILE_TXT$::
+选中该选择框，Serv-U 将开始将日志信息保存到在<strong>日志文件路径</strong>中指定的文件。如果未选中该选项，Serv-U 不会将任何日志记录到文件，而不管在 "文件" 列中选中了哪些个别选项。
+::END
+
+$DOMAIN_LOG_ROTATE$=自动循环更新日志文件
+$DOMAIN_LOG_ROTATE_TXT$::
+要确保日志文件维持可管理的尺寸，并且在审计时能够轻松引用，Serv-U 支持每隔固定的时间自动循环更新日志文件。通过指定<strong>日志文件路径</strong>时使用通配符表示当前日期，Serv-U 可以每日、每周、每月或每年循环更新日志文件并创建唯一的文件名。
+::END
+
+$DOMAIN_LOG_PURGE$=清除旧日志文件
+$DOMAIN_LOG_PURGE_TXT$::
+Serv-U 支持自动清除旧日志文件的功能，只要以 MB 为单位设置需保持的文件最大数量和/或需限制的文件最大尺寸即可。将这些选项设置为“0”表示该设置为无限，不应用限制。
+
+<strong>注意:</strong> 日志文件仅基于当前日志文件的路径名称进行清除。日志文件变量将被替代成 Windows 通配符值，用于搜索匹配的文件。例如：
+
+<strong>C:\Logs\%Y:%N:%D %S Log.txt</strong> 搜索自 <strong>C:\Logs\????:??:?? * Log.txt</strong><br />
+<strong>C:\Logs\%Y:%M:%D %S Log.txt</strong> 搜索自 <strong>C:\Logs\????:*:?? * Log.txt</strong><br />
+<strong>C:\Logs\%S\%Y:%M:%D Log.txt</strong> 搜索自 <strong>C:\Logs\--DomainName--\????:*:?? Log.txt</strong>
+
+日志变量的通配符化如下所示：
+
+%D --&gt; ??<br />
+%N --&gt; ??<br />
+%M --&gt; *<br />
+%Y --&gt; ????<br />
+%X --&gt; ??<br />
+%S --&gt; *
+
+可以清除任何匹配通配符化路径名称的文件。请谨慎使用；其最佳惯例是将日志文件放置在单一目录，以避免意外的文件删除。
+::END
+
+$DOMAIN_LOG_NO_LOG$=不记入日志的 IP
+$DOMAIN_LOG_NO_LOG_TXT$::
+Serv-U 支持指定 IP 地址，使其不被记入日志的功能。来自这些 IP 地址的活动将不被记录到规则指定的位置&mdash;&mdash;记录到屏幕和/或文件。该功能能够使管理员忽略一些 IP 地址，否则将生产大量日志信息，从而使域活动和其他常规用户活动混淆。还可以用于节省日志存储空间并减少管理成本。只需单击<strong>不记入日志的 IP</strong>按钮并根据需要添加 IP 地址。
+::END
+
+
+<!-- String table for Help-About-User-Accts -->
+$ABOUT_USERS_HEADER$=有关用户帐户
+
+$ABOUT_USER_ACCTS$::
+要访问文件服务器，必须提供用户帐户。在最基本的级别，用户帐户定义登录信息（如登录 ID和密码）、根目录和一套 $LINK_HELP_DIRACCESS$，用于定义系统中该用户可以访问的区域以及在这些区域内可以执行的操作。文件服务器上每项活动会话都有相关联的用户帐户，便于管理员识别客户端。
+
+在 Serv-U 文件服务器中定义用户帐户的方法有多种，包括：
+::END
+
+$ABOUT_USERS_LIST$::
+<em>域用户</em> - 在域级别定义，域用户只能登录创建该用户的域。
+<em>全局用户</em> - 在服务器级别定义，全局用户可以登录文件服务器上的<strong>任何</strong>域。
+<em>数据库用户</em> - 可以在服务器和域级别定义，数据库用户存储在外部数据库中，能够通过 ODBC 访问，是本地帐户数据库的补充。
+<em>Windows 用户</em> - 可以域级别定义，Windows 用户可以是位于本地系统也可通过域控制器访问 的 Windows 帐户，它作为本地帐户数据库的补充，允许客户端使用 Windows 登录帐号登录到文件服务器。
+::END
+
+$ABOUT_USER_ACCTS2$::
+由于可以在各种级别使用相同的登录 ID指定用户帐户，因此 Serv-U 使用层次结构确定哪种帐户具有较高的优先级。以上列出的帐户类型按其优先级高低顺序排列。如果在域和服务器级别都指定了用户帐户，则域级别帐户的优先级总是高于服务器级别指定的帐户。
+
+创建用户时，考虑它们需要何种访问类型，并相应选择合适的用户类型——在服务器级别输入设置节省了在域级别输入多个用户的时间和精力。
+
+在 Serv-U 企业版中，用户帐户可以归类到集合中从而使帐户管理更加合理和方便。这在管理一个部门或某个物理位置的所有用户时非常有用。例如，财务部门的所有用户可以归入名称为 "Accounting" 的集合中，或位于 Topeka 办事处的所有用户都可以归入 Topeka Users" 集合中。
+
+要创建新集合，请在<strong>选择用户集合</strong>群组中，单击位于 "用户" 窗口中的<strong>添加</strong>按钮。在新建对话框中，输入集合的名称并单击<strong>保存</strong>按钮。用户现在便可以添加新的集合，只需选中集合并单击用户列表下的<strong>添加</strong>按钮。要将用户从一个集合移动到另一个集合，请单击用户列表下方的<strong>移动</strong>按钮，然后选择高亮显示的用户帐户要转移到的目标集合。使用相应的按钮还可以<strong>重命名</strong>或<strong>删除</strong>集合。
+
+<strong>注意：</strong> 删除集合时，该集合包含的所有用户帐户也被删除。如果要保留用户帐户，请确保在删除集合前将帐户转移。
+
+默认情况下，所有用户都在 "通用" 用户集合中创建。
+::END
+
+
+$ABOUT_USER_WIZARD$=新建用户向导
+$ABOUT_USER_WIZARD_TXT$::
+单击<strong>向导</strong>按钮，可以使用向导帮助您创建新的用户帐户。新建用户向导带领您执行创建用户帐户所需的四个步骤，只需要输入最低需求的属性。帐户一旦创建，可以对其进行编辑以配置更多的高级设置，如群组成员或其他目录访问规则。有关使用新建用户向导的更多信息，请参见<strong>创建第一个用户帐户</strong>部分，位于 $LINK_HELP_GUIDE$ 中。
+::END
+
+$ABOUT_USER_TEMPLATE$=用户模板
+$ABOUT_USER_TEMPLATE_TXT$::
+尽管新建用户向导提供了一种快速创建用户帐户的方式，且只需输入最少的必须属性，但大多数文件服务器管理员希望所有用户帐户都遵守一定的设置组合。群组是实现这一功能的最好途径，但有时也并不是实现操作的最佳方式。
+
+Serv-U 使管理员能够为新用户帐户配置模板，只需单击<strong>模板</strong>按钮。打开后，除了登录 ID以外，可以像配置其他用户帐户一样配置模板用户。将设置保存到模板后，所有手动创建的新用户帐户将使用模板中的设置作为其默认设置。
+::END
+
+$ABOUT_USER_COPY$=复制用户账户
+$ABOUT_USER_COPY_TXT$::
+用户模板提供一种方式以使用相同的设置创建大量用户。在仅单个用户的设置必须复制的场合或存在多用户模板需求时，可以使用“复制”按钮来创建仅缺少用户名与密码的用户账户副本。要复制用户，请选定用户账户并选择“复制”。
+::END
+
+$ABOUT_USER_PASS_RECOVERY$=恢复密码
+$ABOUT_USER_PASS_RECOVERY_TXT$::
+Serv-U 支持通过管理控制台与 Web 客户端来恢复密码。要启用密码恢复，必须配置服务器或域的 SMTP 选项，用户账户也必须列出电子邮件地址。要从管理控制台使用密码恢复，请选定用户账户并点击“恢复密码”按钮。如果该密码使用单向加密保存，将重置密码并将新密码发送至该用户的电子邮件地址。如果该密码使用双向加密或无加密保存，就会将原始密码通过电子邮件发送给用户。
+
+要从 Web 客户端恢复密码，需要为用户账户启用“允许用户恢复密码”限制。一旦启用该选项，只要用户使用 Serv-U 银版或金版许可证，他们即可使用 Web 客户端中的“恢复密码”选项。其它方面的工作原理与从管理控制台恢复密码相同。
+::END
+
+$IMPORT_USER_ACCOUNTS$=导入/导出用户账户
+$IMPORT_USER_ACCOUNTS_TXT$::
+可以使用位于屏幕顶端的“导入”与“导出”按钮导入或导出用户账户。“导出”按钮会将当前域/服务器或当前集合中的所有用户导出到逗号分隔值文件（CSV 文件），该文件可在 Excel 中查看，也可使用数据库引擎进行分析等等。此外，在导出时使用相同的格式创建 CSV 文件，可以将 CSV 文件中的用户列表导入 Serv-U。
+::END
+
+
+<!-- String table for Help-User-Info -->
+$USER_INFO_HEADER$=用户信息
+
+$USER_INFO_TXT$::
+用户帐户包括各种属性和设置。用户信息选项包含该用户帐户的一般信息，如登录信息、根目录和帐户类型。关于每种属性的详细信息请参见以下内容。
+::END
+
+$USER_INFO_USERNAME$=登录 ID
+$USER_INFO_USERNAME_TXT$::
+也称为 "登录 ID"，客户端提供登录 ID作为连接到文件服务器会话验证的一部分。除了登录 ID之外，客户端还必须提供密码以完成验证。在某一级别指定的每个帐户必须使用唯一的登录 ID。登录 ID不得包含以下任一特殊字符： \ / &lt; &gt; | : ? *.
+
+<strong>注意</strong>：有两种特殊登录 ID："Anonymous" 和 "FTP"。这两个登录 ID含义相同，可供访客访问文件服务器。这些用户不需要密码，因此密码部分应该留空。虽然无需输入密码，但 Serv-U 会要求使用这些帐户登录的用户提供其 email 地址以完成登录过程。
+::END
+
+$USER_INFO_PASSWORD$=密码
+$USER_INFO_PASSWORD_TXT$::
+文件服务器会话验证所需的第二个项目是密码。密码应保密妥善保存，不应与除了帐户所有者之外的人共享。强密码至少含有 6 个字符，包括大小写字母和至少一个数字。可以在限制中对密码的长度和复杂程度进行修改，制定限制。更多信息，请参见帮助文档中有关 $LINK_HELP_USER_LIMITS$ 的内容。
+::END
+
+$USER_INFO_PASSWORD_GEN_TXT$::
+此外, “密码”字段旁的“锁定”图标允许为用户生成新的随机密码。该新密码将遵循定义的密码长度要求。默认情况下，所有密码长度为 8 个字符，形式必须复杂。如果“最小密码长度”等于或少于 4 个字符，该密码长度将为 4 个字符 - 否则，生成的密码将遵循指定的域值。
+::END
+
+$USER_INFO_ADMIN$=管理权限
+$USER_INFO_ADMIN_TXT$::
+可以授予用户帐户以下三种管理权限之一：无权限、系统管理员或域管理员。该属性的值可以从群组成员继承。
+
+无权限的用户帐户就是一般的用户帐户，只能从文件服务器上传和下载文件。这些用户帐户无法使用 Serv-U 管理控制台。
+
+系统管理员可以执行任何的文件服务器管理活动，包括创建和删除域、用户帐户，甚至可以更新文件服务器的许可证。通过 HTTP 远程管理登录的具有系统管理员权限的用户帐户只要和计算机有物理连接，便能管理这台服务器。
+
+与管理员只能管理其帐户所属域中的事务。域管理员也无法执行可能影响其他域的和域相关的活动。域管理员<em>无法</em>执行的和域相关的活动包括配置域监听器或配置域的 ODBC 数据库访问。
+::END
+
+$USER_INFO_ADMIN_READ_ONLY$::
+Serv-U 还支持只读账户，允许管理员以域或服务器级别登录与查看配置选项，与外部人员工作时极其有助于远程问题诊断。只读管理员权限与其完全访问相同，只是他们不能更改任何设置或创建/删除/编辑用户账户。
+::END
+
+$USER_INFO_ADMIN_NOTE$::
+<strong>注意:</strong> 使用管理员权限配置用户账户时，请谨慎指定其根目录。在配置文件服务器时，使用 "\"（根，锁定于其根目录中）以外的根目录的管理员无法使用其根目录外部的文件路径。
+::END
+
+$USER_INFO_TYPE$=帐户类型
+$USER_INFO_TYPE_TXT$::
+默认情况下所有帐户都是永久帐户，除非手动删除或禁用，将一直保留在文件服务器上。可以配置使帐户在指定的日期被自动禁用或删除，只需配置<strong>帐户类型</strong>。选择需要的类型后，将显示<strong>帐户过期日期</strong>控件。单击日历或过期日期选择将帐户禁用或删除的日期。
+::END
+
+$USER_INFO_WEB_CLIENT$=默认 Web 客户端
+$USER_INFO_WEB_CLIENT_TXT$::
+如果您的 Serv-U 许可证可以使用 FTP Voyager JV，则通过 HTTP 连接到文件服务器上的用户可以选择登录后使用哪种客户端。如果不需要询问用户使用哪种客户端，也可以使用默认客户端。如果该选项更改，将覆盖在服务器或域级别指定的选项。还可以通过群组成员的用户继承。使用<strong>继承默认值</strong>选项将其重新设置为相应的默认值。
+::END
+
+$USER_INFO_EMAIL_ADDRESS$=电子邮件地址
+$USER_INFO_EMAIL_ADDRESS_TXT$::
+Serv-U 事件可以在向群组发送电子邮件通知时使用“电子邮件地址”字段，并且使用 Web 客户端的密码恢复需要电子邮件地址，以将恢复的密码发送给用户。在此处输入电子邮件地址以允许用于用户账户的电子邮件通知或密码恢复。
+::END
+
+$USER_INFO_ENABLE$=启用帐户
+$USER_INFO_ENABLE_TXT$::
+取消选择该对话框将禁用当前帐户。已禁用的帐户仍保留在文件服务器上，但无法使用其进行登录。要重新启用帐户，请再次选中<strong>启用帐户</strong>选择框。
+::END
+
+$USER_INFO_FULL_NAME$=全名
+$USER_INFO_FULL_NAME_TXT$::
+可以使用帐户的全名指定有关帐户的更多身份信息。但不在客户端登录时使用。
+::END
+
+$USER_INFO_PASS_TYPE$=密码类型
+$USER_INFO_PASS_TYPE_TXT$::
+所有密码存储在一个加密的、无法反向操作的 Serv-U 配置文件中（除非通过 $LINK_HELP_USER_LIMITS$ 将文件服务器配置为不加密存储的密码）。除了<strong>常规密码</strong>选项，使用 FTP 协议的帐户还可以使用其他两种密码存储类型：<strong>MD4</strong> 和 <strong>MD5</strong> OTP S/KEY 密码。这种密码设置类型允许用户通过 FTP 登录且无需以纯文本的格式向文件服务器发送密码。这些选项仅适用于 FTP 协议。-设置该选项不影响用户通过其他协议登录的功能。
+::END
+
+$USER_INFO_HOMEDIR$=根目录
+$USER_INFO_HOMEDIR_TXT$::
+用户帐户的根目录是用户一旦登录到文件服务器后所处的位置。必须为每个用户指定其根目录，如果用户是群组的成员，也可以在群组级别指定其根目录。必须指定根目录的完整路径，包括盘符或 UNC 共享名。如果找不到根目录，可以配置 Serv-U 为用户创建根目录。
+
+当指定根目录时，可以使用 %USER% 宏将登录 ID插入到路径中。这多数用于配置群组基本的默认根目录或在新用户的模板中使用，以保证所有用户都有独特的根目录。当结合 %HOME% 的目录访问规则时，可以用最轻松的方式将新用户配置为带有独特根目录和对该位置恰当的访问权限。
+
+标识用户根目录时还可使用 %DOMAIN_HOME% 宏。例如，使用 %DOMAIN_HOME%\%USER% 将用户根目录置于公共位置。
+
+可以将根目录指定为 "\" (根) 使用户获得系统级别的访问权限，能够访问所有的系统驱动器。为了使其正确工作，必须将用户锁定在其根目录。
+::END
+
+$USER_SSH_PUBLIC_PATH$=SSH 公共密钥路径
+$USER_SSH_PUBLIC_PATH_TXT$::
+公共密钥可以用来验证用户何时登录 Serv-U 文件服务器。该公共密钥路径应该指向服务器上安全目录中的密钥文件。该路径可以包含以下宏：SSH
+
+%HOME% - 用户账户的根目录<br /> 
+%USER% - 登录 ID，在公共密钥将登录 ID 作为部分文件名时使用<br />
+%DOMAIN_HOME% - 域的根目录，在域详细信息 | 设置中进行设置，在密钥位于与域的根目录相关的中央文件夹时使用
+
+示例：
+
+%HOME%\SSHpublic.pub<br />
+%HOME%\%USER%.pub<br />
+%DOMAIN_HOME%\SSHKeys\%USER%.pub
+
+<a href="Help-SSH-Key-Pair.htm">点击此处</a>获得有关创建 SSH 密钥对的信息。
+::END
+
+$USER_INFO_LOCK_HOMEDIR$=锁定用户至根目录
+$USER_INFO_LOCK_HOMEDIR_TXT$::
+被锁定在根目录的用户无法访问其根目录以上的路径。此外，根目录的实际物理地址显示为掩码，Serv-U 总是将其显示为 "/" (根)。该属性的值可以从群组成员继承。
+::END
+
+$USER_INFO_ALWAYS_LOGIN$=永远允许登录
+$USER_INFO_ALWAYS_LOGIN_TXT$::
+启用该选项表示总是允许该用户帐户登录，无论文件服务器级别设置的限制，如 IP 访问规则或最大会话数。这是非常有用的故障-安全手段，以便确保关键的系统管理员帐户总是能够在任何情况下远程访问文件服务器。由于该选项可以绕过任何访问规则，因此使用时需格外谨慎。该属性的值可以从群组成员继承。
+::END
+
+$USER_INFO_DESCRIPTION$=说明
+$USER_INFO_DESCRIPTION_TXT$::
+说明可以为条目添加更多注释，仅供管理员查看。
+::END
+
+$LOGIN_AVAILABILITY$=可用性
+$LOGIN_AVAILABILITY_TXT$::
+该功能限制用户何时可以连接该服务器。可以基于时间或星期几放置限制。当在指定的可用时间以外的时段登录时，会向用户显示该用户账户当前不可用的消息。
+::END
+
+
+<!-- String table for Help-User-Groups -->
+$USER_GROUPS_HEADER$=群组成员
+
+$USER_GROUPS_OLD$::
+一个用户可以是多个群组的成员。群组提供了一种便捷的方式，将一组基本属性和设置应用于多个用户。有关配置群组的更多信息，请参见帮助文档，位于 $LINK_HELP_GROUPS$。
+
+由于用户可以是多个群组的成员，因此显示的所属群组顺序非常重要。用户在 Serv-U 中的第一个群组成员使用的属性值即为群组的属性值。使用群组成员列表右边的箭头，根据需要重新排列群组成员的顺序。
+
+使用<strong>添加</strong>和<strong>删除</strong>箭头按钮，分别可以为用户添加更多群组或将用户从选中的群组中删除。
+::END
+
+$USER_GROUPS$::
+一个用户可以是多个群组的成员。群组提供了一种便捷的方式，将一组基本属性和设置应用于多个用户。有关配置群组的更多信息，请参见帮助文档，位于 $LINK_HELP_GROUPS$。
+
+由于用户可以是多个群组的成员，因此显示的所属群组顺序非常重要。用户在 Serv-U 中的第一个群组成员使用的属性值即为群组的属性值。使用群组成员列表右边的箭头，根据需要重新排列群组成员的顺序。
+
+使用<strong>向左</strong>和<strong>向右</strong>箭头按钮，分别可以为用户添加更多群组或将用户从选中的群组中删除。
+::END
+
+
+<!-- String table for Help-Welcome-Message -->
+$WELCOME_MESSAGE_HEADER$=欢迎消息
+
+$WELCOME_MESSAGE_BODY$::
+欢迎消息是用户成功登录后，通常发送给 FTP 客户端的消息。Serv-U 将这一功能扩展到 HTTP 连接，因此通过 Web 客户端或 FTP Voyager JV 访问文件服务器的用户也会收到欢迎消息。该功能不适用于通过 SSH2 的 SFTP 登录的用户，因为该协议无法定义将一般纯文本信息发送给用户的方式。
+
+欢迎信息包含有关服务器的常规信息、给用户的特殊消息、免责声明或其它法律声明。配置欢迎消息的方式有两种。第一种方式可以在<strong>消息文件路径</strong>字段中指定文件路径，该文件中包含了需要的欢迎消息。可以使用<strong>浏览</strong>按钮选择系统中已有的文件。  
+
+要使用另一种方法，可以在提供的文本框中输入欢迎消息，Serv-U 将使用其中的内容。要在用户级别覆盖指定的欢迎消息，必须首先选中<strong>覆盖继承的群组欢迎消息</strong>复选框。则系统会向用户发送提供的文本，而不使用在<strong>消息文件路径</strong>中指定的文件所包含的内容。
+
+还可以通过群组成员的用户继承这些值。
+
+也可在欢迎消息中使用系统变量。有关可用的系统变量的详细信息，请参见帮助文档中有关 $LINK_HELP_SYSTEM_VARS$ 的内容。
+::END
+
+
+<!-- String table for Help-Quotas-Ratios -->
+$QR_HEADER$=传输率和配额管理
+
+$QR_TXT$::
+传输率和配额是在 Serv-U 文件服务器上管理文件传输的众多方式之一。有关这些选项的更多信息，请继续阅读本文档。
+::END
+
+$QR_RATIOS$=传输率
+$QR_RATIOS_TXT$::
+传输率是鼓励在文件服务器上共享文件的一种方便途径。通过指定合适的传输率设置，您可以给用户指定 "信用额度"，用于传输指定数量的字节数或指定数量的完成文件。该方法通常用于使用户每上传 'y' 千兆字节的数据或文件，便能下载 'x' 千兆字节的数据或文件。
+
+要为当前用户帐户启用传输率，请选中标记为<strong>启用传输率</strong>的选择框。选择合适类型的传输率应用于用户帐户。传输率可以按千兆字节或完成的文件进行追踪。还可以按每个建立的会话追踪，或为该用户帐户创建所有会话追踪。
+
+要配置比率，可以在比率的<strong>上传</strong>和<strong>下载</strong>两边都指定数值。例如，计算所有会话文件数的比率为 3/1 表示，用户帐户要能够下载一个文件，必须上传三个文件。用户帐户的当前信用量显示在<strong>信用值</strong>字段中。该值是当前值，可以将其初始化为非零的值以便授予用户初始信用值。
+::END
+
+$QR_QUOTA$=配额
+$QR_QUOTA_TXT$::
+配额是另外一种限制用户帐户数据传输量的方法。如果为用户指定<strong>最大</strong>配额值，则该用户无法使用大于该值的磁盘空间。<strong>当前</strong>字段显示用户帐户当前已使用的磁盘空间。初次配置配额时，这两个字段都不得留空。设置后，Serv-U 将追踪用户的文件上传和删除情况，并相应地更新<strong>当前</strong>字段值。
+
+<strong>注意：</strong> 使用配额有个明显的缺点，为了保持<strong>当前</strong>值的精确，不能对 Serv-U 以外的用户帐户可以访问的目录内容进行更改。由于这些更改发生在文件服务器连接之外，Serv-U 无法追踪并更新当前的配额值。除了配额以外，还可以考虑在为用户帐户指定目录访问规则时限制目录内容的最大尺寸。有关该选项的更多信息，请参见有关 $LINK_HELP_DIRACCESS$ 的帮助文档。
+::END
+
+$QR_FREE_FILES$=传输率不限的文件
+$QR_FREE_FILES_TXT$::
+位于传输率不限的文件列表中的文件不受任何传输率的限制。换句话说，如果用户必须上传文件以获取下载文件所需的信用度，则用户总是能够下载位于该列表中的文件，即使他们没有足够的信用度。通常用于特殊文件，如 "自述文件" 或目录信息文件，总能供用户访问。
+
+指定传输率不限的文件时，可以使用通配符 '*' 和 '?'。使用 '*' 通配符可以指定任何长度的任意字符。例如，输入 "*.txt" 可以自由下载任何后缀名是 .txt 的文件，无论其实际的文件名是什么。'?' 可以用于指定文件名或目录中的单个字符。
+
+此外，设置传输率不限的文件条目时可以使用完整路径或相对路径。指定文件名时如果使用完整路径，则仅指定的文件不受传输率限制。如果使用相对路径，如只输入 "readme.txt"，则无论其目录位于何处，该文件总是不受传输率限制。
+::END
+
+
+<!-- String table for Help-Windows-Auth -->
+$WINDOWS_AUTH_HEADER$=Windows 验证
+
+$WINDOWS_AUTH_BASICS$::
+如果启用 Windows 验证，用户可以使用其 Windows 登录信息（由本地 Windows 帐户数据库或指定的 Windows 域服务器提供）登录 Serv-U。使用 Windows 帐户登录时，用户将自动位于根目录下，因为 Windows 帐户无需手动指定根目录。
+
+要启用 Windows 验证，请选中标记为<strong>启用 Windows 验证</strong>的选择框。如果 <strong>Windows 域名</strong>字段留空，Serv-U 将使用系统的本地 Windows 帐户数据库验证用户登录。如果系统是 Windows 域的成员，可以在该字段中输入域名，通过域服务器验证用户登录。字段更改后，单击<strong>保存</strong>按钮应用更改。
+::END
+
+$WINDOWS_AUTH_USE_GROUP_HOMEDIR$=使用 Windows 用户组根目录而不使用账户根目录
+$WINDOWS_AUTH_USE_GROUP_HOMEDIR_TXT$::
+默认情况下，客户端使用 Windows 用户账户登录时，Serv-U 使用 Windows 账户的根目录。启用此选项导致 Serv-U 使用 Windows 用户组里指定的根目录。如果在组级别没有指定根目录，则仍然使用该 Windows 用户账户的根目录。
+::END
+
+$WINDOWS_AUTH_GROUP$=配置 Windows 用户群组
+$WINDOWS_AUTH_GROUP_TXT$::
+在 Serv-U 上无法分别查看或配置 Windows 用户。为了有助于为本地用户帐户配置多项高级选项，所有 Windows 用户帐户都是特殊 Windows 用户群组的成员。单击<strong>配置 Windows 用户组</strong>按钮，则可以像配置普通组一样配置该组。在此组中配置的设置将由 Windows 用户帐户继承。可以使用该功能添加 IP 访问规则，指定带宽限制或添加更多目录访问规则。
+
+更多信息，请参见有关配置 $LINK_HELP_GROUPS$ 的帮助文档。
+::END
+
+
+<!-- String table for Help-About-Groups -->
+$ABOUT_GROUPS_HEADER$=关于群组
+
+$ABOUT_GROUPS_TXT$::
+群组可以用来和多个用户帐户共享相同的配置选项。配置群组的方法和配置用户帐户类似。基本上用于用户帐户的每个配置选项都可以在群组级别进行设置。用户要继承群组的设置，必须是该群组的成员。用户从群组成员中继承的权限和属性仍可以在用户级别被覆盖。一个用户可以是多个群组的成员以便获取多种权限，如目录或 IP 访问规则。
+
+和用户帐户一样，群组也可在多个级别上创建，包括：
+::END
+
+$ABOUT_GROUPS_TYPES$::
+全局群组
+域群组
+数据库群组 - 可以在服务器和域级别使用
+::END
+
+$ABOUT_GROUPS_TXT2$::
+但是群组仅可用于在相同级别定义的用户帐户。换句话说，全局用户（即在服务器级别定义的用户）只能是全局群组的成员。以此类推，在特定域定义的用户仅可能是也在相同域创建的群组的成员。这一限制还应用于在数据库中创建的群组，仅在相同级别的数据库中创建的用户才能是这些群组的成员。
+
+使用<strong>添加</strong>、<strong>编辑</strong>和<strong>删除</strong>按钮管理可用的群组。
+::END
+
+$ABOUT_GROUPS_TEMPLATE$=群组模板
+$ABOUT_GROUPS_TEMPLATE_TXT$::
+Serv-U 使管理员能够为新群组配置模板，只需单击<strong>模板</strong>按钮。打开后，除了群组名称以外，可以像配置其他群组一样配置模板群组。将设置保存到模板后，所有手动创建的新群组将使用模板中的设置作为其默认设置。如果要将所有群组配置为默认使用一些基本设置，使用群组模板是一种在创建新群组时节省时间的好方法。
+::END
+
+$ABOUT_GROUPS_NTUSER$=配置 Windows 用户群组
+$ABOUT_GROUPS_NTUSER_TXT$::
+管理员能够允许客户端使用本地 Windows 用户数据库或通过域服务器能够访问的帐户登录到文件服务器。这些帐户在本地 Serv-U 用户数据库中不存在，无法进行个别配置。为了有助于配置帐户，所有通过这种方法登录的用户都属于默认 Windows 用户群组。单击该按钮可以像配置普通群组一样配置该群组。但是，对该群组的更改将仅应用于 Windows 用户帐户。
+::END
+
+
+<!-- String table for Help-Group-Information -->
+$GROUP_INFO_HEADER$=群组信息
+
+$GROUP_INFO$::
+基本上用于用户帐户的每个属性都可以在群组级别进行配置。群组级别的设置由群组成员继承，且可以在用户级别被覆盖。群组信息选项卡包括群组的常规信息，如群组成员的名称、根目录和默认管理权限。关于每种属性的详细信息请参见以下内容。
+::END
+
+$GROUP_INFO_NAME$=群组名称
+$GROUP_INFO_NAME_TXT$::
+群组名称是唯一的标识符，同一级别（服务器或域级别）不能有重复的群组名称。群组名不得包含以下任一特殊字符：\ / &lt; &gt; | : ? *.
+::END
+
+$GROUP_INFO_DIRACCESS$=首先应用群组目录访问规则
+$GROUP_INFO_DIRACCESS_TXT$::
+正如帮助文档中有关 $LINK_HELP_DIRACCESS$ 部分所述，目录访问规则列出的顺序对于确定用户帐户可以访问的资源有非常重要的作用。默认情况下，在群组级别指定的目录访问规则其优先级高于在用户级别指定的规则。但是，某些情况下您可能希望用户级别的规则拥有更高的优先级。取消该选择框，可以将群组的目录访问规则排到用户级别的规则<em>下面</em>。
+::END
+
+
+<!-- String table for Help-Group-Members -->
+$GROUP_MEMBERS_HEADER$=群组成员
+
+$GROUP_MEMBERS$::
+该选项卡中显示当前所选群组中的成员用户帐户。可以用于快速浏览这时哪些用户继承了群组的设置。当前状态下，无法使用该界面在群组中添加或删除用户。必须从相应的用户帐户属性窗口添加或删除群组成员关系。
+::END
+
+
+<!--  String table for Help-System-Variables.htm -->
+$SYSTEM_VARIABLES_HEADER$=系统变量
+$SYSTEM_VARIABLES_BODY1$::
+Serv-U 中的某些可配置的消息可以定制为包含各种变量，如以下列表中的变量。这些变量在运行时会替换为相应的值，可以为登录的用户提供最新的统计和反馈。可以使用这些变量的地方包括定制的 FTP 命令响应，或欢迎消息。
+
+以下包含了所有可用的变量和每个变量的简短描述。如果没有另外指定，统计信息自上次启动 Serv-U 文件服务器后开始计算。
+::END
+
+$SYS_VARS_SERVER_INFO$=服务器信息
+$SYS_VARS_SERVER_INFO_LIST$::
+$ServerName - 服务器的完整名称（如：Serv-U）
+$ServerVersionShort - Serv-U 文件服务器当前版本的前两位数字（如 7.0）
+$ServerVersionLong - Serv-U 文件服务器版本的完整数字（如 7.0.0.3）
+$OS - 操作系统的名称（如：Windows XP）
+$OSVer - 操作系统的完整版本号（如：5.1.2600）
+::END
+
+$SYS_VARS_SERVER_INFO_LIST_FUTURE_FEATURE$::
+$ComputerName - 从操作系统检索计算机名称，通常与 Windows 网络上的 UNC 名称相同（例如：WEB-SERVER-01）。
+$LogFilePath - 检索日志文件的路径（仅日志文件删除事件）
+::END
+
+$SYS_VARS_SERVER_STATS$=服务器统计
+$SYS_VARS_SERVER_STATS_LIST$::
+$ServerDays - 服务器连续上线的总天数
+$ServerHours - 服务器上线的小时数，从 0 到 24 循环
+$ServerMins - 服务器上线的分钟数，从 0 到 60 循环
+$ServerSecs - 服务器上线的秒数，从 0 到 60 循环
+$ServerKBup - 上传的千字节总数
+$ServerKBdown - 下载的千字节总数
+$ServerFilesUp - 上传的文件总数
+$ServerFilesDown - 下载的文件总数
+$ServerFilesTot - 传输的文件总数，相当于 ($ServerFilesUp + $ServerFilesDown)
+$LoggedInAll - 已建立会话的总数
+$ServerUploadAvgKBps - 平均上传速度，单位 KB/s
+$ServerDownloadAvgKBps - 平均下载速度，单位 KB/s
+$ServerAvg - 平均数据传输速度（上传和下载），单位 KB/s
+$ServerUploadKBps - 当前上传速率，单位 KB/s
+$ServerDownloadKBps - 当前下载速率，单位 KB/s
+$ServerKBps - 当前平均数据传输速率，单位 KB/s
+$ServerSessions24HPlusOne - 过去 24 小时内的会话总数再加一个会话
+$ServerSessions24H - 过去 24 小时内的会话总数
+::END 
+
+$SYS_VARS_DOMAIN_STATS$=域统计
+$SYS_VARS_DOMAIN_STATS_LIST$::
+$DomainKBup - 已上传的千字节总数
+$DomainKBdown - 已下载的千字节总数
+$DomainFilesUp - 已上传的文件总数
+$DomainFilesDown - 已下载的文件总数
+$DomainFilesTot - 已传输的文件总数，相当于 ($DomainFilesUp + $DomainFilesDown)
+$DomainLoggedIn - 当前已连接的会话总数
+$DomainUploadAvgKBps - 平均上传速率，单位 KB/s
+$DomainDownloadAvgKBps - 平均下载速率，单位 KB/s
+$DomainAvg - 平均数据传输率总计（上传和下载），单位 KB/s
+$DomainUploadKBps - 当前上传传输率，单位 KB/s
+$DomainDownloadKBps - 当前下载传输率，单位 KB/s
+$DomainKBps - 当前数据传输率总计，单位 KB/s
+$DomainSessions24HPlusOne - 过去 24 小时内的会话总数再加一个会话
+$DomainSessions24H - 过去 24 小时内的会话总数
+::END
+
+$SYS_VARS_USER_STATS$=用户统计 - 应用于用户帐户附带的所有会话
+$SYS_VARS_USER_STATS_LIST$::
+$UserKBUp - 已上传的千字节总数
+$UserKBDown - 已上传的千字节总数
+$UserKBTot - 已传输的千字节总数
+$UserLoggedIn - 会话总数
+$UserUploadAvgKBps - 平均上传速度，单位 KB/s
+$UserDownloadAvgKBps - 平均下载速度，单位 KB/s
+$UserAvg - 平均数据传输率总计（上传和下载），单位 KB/s
+$UserUploadKBps - 当前上传速度，单位 KB/s
+$UserDownloadKBps - 当前下载速度，单位 KB/s
+$UserKBps - 当前数据传输率总计，单位 KB/s
+$UserSessions24HPlusOne - 过去 24 小时内的会话总数再加一个会话
+$UserSessions24H - 过去 24 小时内的会话总数
+::END
+
+$SYS_VARS_LAST_TRANSFER_STATS$=上次传输统计 - 应用于最新完成的成功数据传输
+$SYS_VARS_LAST_TRANSFER_STATS_LIST$::
+$TransferBytesPerSecond - 有效的（已压缩）传输速度，单位 bytes/s
+$TransferKBPerSecond - 有效的（已压缩）传输速度，单位 KB/s
+$TransferBytes - 已传输的有效（已压缩）字节数，显示格式，例如，32,164
+$NoFormatTransferBytes - 已传输的有效（已压缩）字节数，未格式化，例如，32164
+$TransferKB - 已传输的有效（已压缩）千字节数，显示格式
+$ActualTransferBytesPerSecond - 实际（未压缩）传输速度，单位 bytes/s
+$ActualTransferKBPerSecond - 实际（未压缩）传输速度，单位 KB/s
+$ActualTransferBytes - 已传输的实际（未压缩）字节数，显示格式，例如，32,164
+$NoFormatActualTransferBytes - 已传输的实际（未压缩）字节数，未格式化，例如，32164
+$ActualTransferKB - 已传输的实际（未压缩）千字节数，显示格式
+$CompressionRatio - 传输压缩比率表示为预期传输数据总量的百分比。例如，值 100.00 表示无法压缩数据。值 200.00 表示该数据被压缩为原来大小的一半。
+$CurrentCompressedTransferBytes - 已传输的当前有效（已压缩）字节数，未格式化，例如，32164 (仅 FTP)
+$CurrentUncompressedTransferBytes - 已传输的当前实际（未压缩）字节数，未格式化，例如，32164 (仅 FTP)
+::END
+
+$SYS_VARS_DATE$=日期/时间
+$SYS_VARS_DATE_LIST$::
+$Date - 根据 Serv-U 文件服务器显示的当前日期，使用系统本地日期格式
+$Time - 根据 Serv-U 文件服务器显示的当前时间，使用系统本地时间格式
+::END
+
+$SYS_VARS_SERVER_SETTINGS$=服务器设置
+$SYS_VARS_SERVER_SETTINGS_LIST$::
+$MaxUsers - 允许登录的最大会话数，由许可证类型限制
+$MaxAnonymous - 允许登录的匿名用户最大数量
+::END
+
+$SYS_VARS_USER_INFO$=会话信息 - 应用到当前会话
+$SYS_VARS_USER_INFO_LIST$::
+$Name - 附属用户帐户的登录 ID
+$IP - 客户端的 IP 地址
+$IPName - 通过反向 DNS 查询 $IP 获取的反向 DNS 名称
+$Dir - 会话的当前目录
+$Disk - 正被访问的驱动器盘符
+$DFree - $Disk 上的可用空间，单位 MB
+$FUp -  上传文件总数
+$FDown - 下载文件总数
+$FTot -  传输文件总数，相当于 ($FUp + $FDown)
+$BUp -  上传千字节总数
+$Bdown -  下载千字节总数
+$BTot -  传输的千字节总数
+$TconM -  会话持续连接的分钟总数
+$TconS -  会话连接的秒数，从 0 到 60 循环到 $TconM
+$RatioUp -  应用比率中 '上传' 部分，如果不使用则为 "N/A"
+$RatioDown -  应用比率中 '下载' 部分，如果不使用则为 "N/A"
+$RatioType - 应用的比列类型，按每个会话或用户
+$RatioCreditType - 授予传输的信用量比率类型，按每个字节或完成的文件
+$RatioCredit -  应用比率的当前传输信用量，按千兆字节或完成的文件
+$QuotaUsed - 显示当前已使用的磁盘空间配额，单位 MB，如果不使用配额则为 "不限"
+$QuotaLeft - 显示还有多少可用的磁盘配额，单位 MB，如果不使用配额则为 "不限"
+$QuotaMax -  显示可以使用的最大磁盘空间数，单位 MB，如果不使用配额则为 "不限"
+::END
+
+$SYS_VARS_USER_INFO_NOTE$::
+<strong>注意：</strong> 使用事件或登录消息内的 $IPName 变量会在检索 $IP 的反向 DNS 信息时造成轻微的延迟。
+::END
+
+$SYS_VARS_USER_INFO_8_0_LIST$::
+$Protocol - 当前使用的协议（FTP, FTPS, HTTP, HTTPS, 或 SFTP (SSH2)）
+$DomainName - 记录会话的当前域
+$DomainDescription - 描述记录会话的当前域
+$TimeRemaining - 阻止 IP 地址一段时间的剩余时间（仅在事件通知中可用） 
+::END
+
+$SYS_VARS_USER_INFO_LIST_FUTURE$::
+$LocalHomeDirectory - 本地根目录。它只能用于需要特定信息的事件，例如用户创建。
+$Password - 密码与用户账户有关。它只能用于事件。它不应用于欢迎消息。
+$UserEmailAddress - 用户的电子邮件地址。
+$FullName - 用户的全名就是在“全名”字段为用户账户输入的名称。
+$SpaceFullName - 与 "$FullName" 相同，不过在用户的全名之前多了一个空格。当用户的全名为空时留空（无空格或名称）。
+$FullNameSpace - 与 "$FullName" 相同，不过在用户的全名之后多了一个空格。当用户的全名为空时留空（无空格或名称）。
+::END
+
+
+$SYS_VARS_FILE_INFO$=文件信息 - 应用于最后远程访问的文件，并不一定是最后传输的文件
+$SYS_VARS_FILE_INFO_LIST$::
+$PathName - 检索完整的远程路径
+$FileName - 仅从 $PathName 检索文件名
+$FileSize - 检索 $FileName 文件的大小，单位字节
+::END
+
+$SYS_VARS_FILE_INFO_8_0_LIST$::
+$FileSizeFmt - 文件大小的格式化版本，包括数千个分隔字符（逗号或句号，取决于计算机的区域设置）
+$FileSizeKB - 以 KB 表示文件大小的格式化浮点值
+$LocalPathName - 检索一个操作允许全称的本地路径名称，因为它与 Windows 相关。例如用 "C:\Temp\File.fid" 替代 "/Temp/file.fid"
+$LocalFileName - 检索文件名，因为该文件存储在本地计算机上。要了解详细信息请参见 $LocalPathName
+$OldLocalPathName - 同 $LocalPathName 一样，但包括重命名前的路径
+$OldLocalFileName - 同 $LocalFileName 一样，但包括重命名前的文件名
+$OldPathName - 检索重命名前的远程路径名称
+$OldFileName - 检索重命名前的远程文件名
+::END
+
+$SYS_VARS_USAGE_STATS$=当前活动
+$SYS_VARS_USAGE_STATS_LIST$::
+$UNow -  Serv-U 文件服务器上的当前会话数
+$UAll -  从上次启动后连接到 Serv-U 文件服务器上的会话总数
+$U24h -  过去 24 小时内连接到 Serv-U 文件服务器上的会话总数
+$UAnonAll - Serv-U 文件服务器上当前匿名用户的会话数
+$UAnonThisDomain  - 连接的域上当前匿名用户的会话数
+$UNonAnonAll  - Serv-U 文件服务器上当前非匿名用户的会话数
+$UNonAnonThisDomain - 连接的域上当前非匿名用户的会话数
+$UThisName - 连接用户帐户的当前会话数
+::END

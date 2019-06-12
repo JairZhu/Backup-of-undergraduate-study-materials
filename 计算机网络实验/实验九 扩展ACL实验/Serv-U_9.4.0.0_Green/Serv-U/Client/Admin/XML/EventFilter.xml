@@ -1,0 +1,12 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<filter>
+<var name="ObjectID" val="%ID%" />
+<var name="RuleName" val="%CVarRule.%ID%.RuleName%"/>
+<var name="Description" val="%CVarRule.%ID%.Description%"/>
+<var name="Logic" val="%CVarRule.%ID%.Logic%"/>
+<var name="Enabled" val="%CVarRule.%ID%.Enabled%"/>
+<var name="Result" val="%RESULT%"/>
+<var name="ResultText" val="%RESULT_TEXT%"/>
+</filter>

@@ -1,0 +1,74 @@
+﻿<!-- File:		Help-Keyword-Strings.strings																				-->
+<!-- Language:	English																										-->
+<!-- Purpose:	Provides translated strings for FTP Voyager JV's Help documentation.										-->
+<!-- Notes:		- Comment blocks are useful.  To place a comment, use the HTML tags at the beginning and end of this line	-->
+<!--			- Any text following a "$=" should be translated															-->
+<!--			- Any text between a "$::" through "::END" should be translated												-->
+<!--			- HTML tags should not be translated (Example:  "<strong>")													-->
+
+<!-- Each string is a keyword that indexes to one of the help pages -->
+$KEYWORD$=My keyword text
+$FVJV_OVERVIEW$=FTP Voyager JV Overview
+$APP_OVERVIEW$=Application Overview
+$LOCAL_REMOTE_PANE$=Local/Remote Pane
+$TREE_PANE$=Tree Pane
+$LIST_PANE$=List Pane
+$TRANSFER_PANE$=Transfer Pane
+$MAIN_MENU$=Main Menu
+$FILE_MENU$=File Menu
+$EDIT_MENU$=Edit Menu
+$VIEW_MENU$=View Menu
+$WINDOWS_MENU$=Windows Menu
+$HELP_MENU$=Help Menu
+$MAIN_TBAR$=Main Toolbar
+$MAIN_TBAR_ACTIONS$=Main Toolbar (Actions)
+$CRUMB_BAR$=Navigation Bar
+$CRUMB_BAR_ACTIONS$=Navigation Bar (Actions)
+$LOCAL_TBAR$=Local Toolbar
+$LOCAL_TBAR_ACTIONS$=Local Toolbar (Actions)
+$REMOTE_TBAR$=Remote Toolbar
+$REMOTE_TBAR_ACTIONS$=Remote Toolbar (Actions)
+$TRANSFER_TBAR$=Transfer Toolbar
+$TRANSFER_TBAR_ACTIONS$=Transfer Toolbar (Actions)
+$ABOUT_DLG_PROG_INFO$=About Box (Program Information)
+$ABOUT_DLG_COMP_INFO$=About Box (Computer Information)
+$PREFS_DLG_GENERAL$=Preferences (General)
+$PREFS_DLG_TBARS$=Preferences (Toolbars)
+$CHANGE_PWORD_DLG$=Change Password
+$ACTIVATE_WINDOWS_DLG$=Activate Windows
+$ACTIVE_PANE$=Active Pane
+$DOCKING_FRAMEWORK$=Docking Framework
+$HOW_TO_NAVIGATE_DIRS$=How to Navigate Directories
+$HOW_TO_MANAGE_DIRS$=How to Manage Directories
+$HOW_TO_MANAGE_TRANSFERS$=How to Manage Transfers
+$HOW_TO_TRANSFER_DIRS$=How to Transfer Files
+$DRAG_AND_DROP_COPY_MOVE$=Drag & Drop (Copy/Move)
+$TRANSFERRING_FILES$=Transferring Files
+$DRAG_AND_DROP_XFER$=Drag & Drop (Transfers)
+$UPLOADING_FILES$=Uploading Files
+$DOWNLOADING_FILES$=Downloading Files
+$FAQS$=Frequently Asked Questions
+$PREVIEW_PANE$=Preview Pane
+$STYLES$=Styles (User Interface)
+$AUTO_HIDE$=Auto-Hide
+$FLOAT_PANES$=Floating Panes
+$INVERT_SELECTION$=Inverting Selection
+$CRUMB_BAR$=Crumb Bar
+$LOCAL_BROWSER$=Local Browser
+$REMOTE_BROWSER$=Remote Browser
+$STOP_LISTING$=Stop Remote Listing
+$SAVE_LOGIN$=Save Login
+$SEARCH$=Search
+$SYNC_FOLDERS$=Synchronize Folders
+
+
+<!-- ONLY the English file should have the lines below.																		-->
+<!-- If the same key is found in a translated file, then the translation is displayed instead of the English string.		-->
+<!--#include de "Help-Keyword-Strings_DE.strings"-->
+<!--#include fr "Help-Keyword-Strings_FR.strings"-->
+<!--#include it "Help-Keyword-Strings_IT.strings"-->
+<!--#include es "Help-Keyword-Strings_ES.strings"-->
+<!--#include jp "Help-Keyword-Strings_JP.strings"-->
+<!--#include ru "Help-Keyword-Strings_RU.strings"-->
+<!--#include zh,TW "Help-Keyword-Strings_TW.strings"-->
+<!--#include zh,CN "Help-Keyword-Strings_CN.strings"-->

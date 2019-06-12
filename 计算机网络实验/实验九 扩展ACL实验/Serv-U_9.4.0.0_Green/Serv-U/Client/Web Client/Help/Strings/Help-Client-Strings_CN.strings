@@ -1,0 +1,270 @@
+﻿<!-- Help-Client-Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- External links reused throughout the help documentation -->
+$LINK_FVJV_HOMEPAGE$=<a href="http://FVJV.Serv-U.com/" target="_blank">FTP Voyager JV 主页</a>
+$LINK_FV_HOMEPAGE$=<a href="http://www.ftpvoyager.com/" target="_blank">FTP Voyager</a>
+
+
+<!-- Macros for inserting links to other Help doc pages.  The text within these anchor tags needs to be translated. -->
+$LINK_HELP_FILE_MANAGEMENT$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-File-Transfers.htm">文件管理</a>
+$LINK_HELP_DIR_MANAGEMENT$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-Directory-Management.htm">目录管理</a>
+$LINK_HELP_IMAGE_FEATURES$=<a href="/?InternalDir=Web Client&InternalFile=Help/Help-Image-Features.htm">缩略图和幻灯片</a>
+
+
+<!-- String table for Help-Overview -->
+$OVERVIEW_HEADER$=Serv-U Web 客户端概述
+
+$OVERVIEW_INTRO$::
+Serv-U Web 客户端是基于 HTTP 的文件传输客户端，供 Serv-U 文件服务器上的所有用户使用。Web 客户端是针对初涉计算机的用户和组织的完美解决方案，提供了在用户间传输多个文件的简单方法。由于在安全环境中使用 FTP 协议会有一些麻烦，且现在常用的 Web 浏览器中对 FTP 的支持也很有限，而 Web 客户端使用 HTTP 协议与 Serv-U 通信，因此避免了一些与使用 FTP 协议相关的麻烦。
+
+Web 客户端可以完成多种任务，包括：
+::END
+
+$OVERVIEW_TASKS$::
+使用浏览器内的图形用户界面（GUI）从任何地方访问文件。从文件服务器收发文件，包括创建和删除目录。以缩略图形式查看即时生成的远程图像，以节约带宽并提高传输速度。使用内置幻灯片功能轻松共享相簿。支持使用<strong>十一种</strong>不同语言访问文件服务器。
+::END
+$OVERVIEW_LOGIN_PARAMS$=URL 登录和自动加载参数
+
+$OVERVIEW_LOGIN_PARAMS_TXT$::
+Web 客户端可以发送登录凭证以及指向 Serv-U 文件服务器的 URL 中专用的加载参数。以下是可以加入 URL 的参数列表。
+::END
+
+$OVERVIEW_LOGIN_PARAMS_LIST$::
+使用 "thumbnail=1" 参数在登录后以缩略图模式启动 Web 客户端。
+使用 "slideshow=1" 参数在登录后立即启动 Web 客户端的幻灯片。
+使用 "playlist=1" 参数在登录到 Web 客户端后立即播放音频文件。
+使用 "playmedia=1" 参数登录到 Web 客户端后立即播放视频文件。
+使用 "dir=" 参数在登录到 Web 客户端后立即直接导航到任何目录。
+使用 "file=" 参数在登录到 Web 客户端后立即下载在 "dir=" 参数里指定目录中的任何文件。
+<strong>示例 URL:</strong> http://www.domainname.com?user=temp&password=temppw&thumbnail=1&dir=/D:/temp/&file=textfile.txt
+::END
+
+$OVERVIEW_SEARCH_PARAMS$=文件名搜索与支持的通配符
+
+$OVERVIEW_SEARCH_PARAMS_TXT$::
+Web Client 提供基于用户输入（使用位于文件列表窗格下方的“文件搜索”按钮）的文件搜索功能。以下是同样支持的通配符列表。
+::END
+
+$OVERVIEW_SEARCH_PARAMS_LIST$::
+当完整文件名未知时，请使用 "*" 参数来搜索文件（例如：*.txt, *SearchPhrase*, *FileName*）。
+当文件名中的特定字符未知时，请使用 "?" 参数来搜索文件（例如：????Name.txt, FileName.???）。
+当特定字符未知不过应该在方括号中包含某一指定字符，请使用 "[]" 参数来搜索文件（例如：[fmn]ileName.txt, File[fmn]ame.txt）。
+::END  
+
+
+$OVERVIEW_REQUIREMENTS$::
+Web 客户端可以在当今大多数流行 Web 浏览器中运行，这些浏览器几乎预安装在每台计算机上。要运行 Web 客户端，必须满足以下最低系统要求：
+::END
+
+$OVERVIEW_REQ_LIST$::
+必须使用 Firefox 2.0 或 Internet Explorer 6.0 或更高版本的浏览器。
+浏览器中必须启用 Cookies。
+浏览器中必须启用 JavaScript。
+::END
+
+$OVERVIEW_LIMITATIONS$::
+Web 客户端可以在当今应用最广的平台 - 标准 Web 浏览器 - 上轻松启用基本文件传输功能。然而，它不能完全替代全功能的 FTP 客户端。如果您正在寻找企业级解决方案以便为用户提供全功能文件传输客户端，那么 <strong>FTP Voyager JV</strong> 可以满足您的需求。使用 FTP Voyager JV，仍可通过 HTTP 轻松部署客户端并配置访问权限，但其所基于的 Java 平台启用了以下 Web 客户端不具备的功能：
+::END
+
+$OVERVIEW_LIMIT_LIST$::
+同时上传多个文件。
+上传过程中下载文件。
+下载目录及其全部内容。
+基于屡获殊荣的 $LINK_FV_HOMEPAGE$ 客户端的传统图形用户界面（GUI）。
+远程和本地文件系统的并列视图。
+多个不同文件系统视图（例如列表、图标、详细信息、缩略图）。
+文件传输后保留原始文件日期和时间。
+在远程和本地文件系统间&ldquo;移动&rdquo;文件和文件夹。
+针对平台的显示主题，确保与您使用的平台保持统一外观。
+::END
+
+$OVERVIEW_FVJV_INFO$::
+要启用 <strong>FTP Voyager JV</strong>，必须为文件服务器购买支持该功能的许可证。一旦启用，FTP Voyager JV 可供在系统上安装了 Java 运行环境的所有文件服务器用户使用。有关 <strong>FTP Voyager JV</strong> 的更多信息，请访问 $LINK_FVJV_HOMEPAGE$。
+::END
+
+
+<!-- String table for Help-Layout -->
+$BWC_LAYOUT_HEADER$=Web 客户端布局
+
+$BWC_LAYOUT_INTRO$::
+Web 客户端以标准网页形式显示，包含从当前远程路径可访问的文件和目录列表，以及能够单击的链接，用于执行与文件传输相关的各种操作。从该页面可以使用 Web 客户端的所有功能，使交互操作既快捷又轻松。
+::END
+
+$BWC_LAYOUT_UTILITY$=实用工具栏
+$BWC_LAYOUT_UTILITY_TXT$::
+在页面顶部是实用工具栏，包含执行多种实用任务的按钮。某些任务只有当管理员为用户帐户启用了该功能时才可用。这些任务用 <strong>(*)</strong> 表示。下面是每个可用任务的更多信息。
+::END
+
+$BWC_LAYOUT_CURRENT_DIR$=当前目录
+$BWC_LAYOUT_CURRENT_DIR_TXT$::
+实用工具栏上显示的第一项内容是连接的服务器名及服务器上的当前位置。当浏览服务器上的不同目录时，该位置会更新，使您总能知道当前所处的位置。
+::END
+
+$BWC_LAYOUT_BREAD_CRUMB_BAR_TXT$::
+可点击每个列在当前目录中的目录段，允许您快速导航到特定的目录。鼠标悬停于任何一个目录段，也可以显示您当前路径目录段中可用的子目录的子菜单。该菜单出现后，只需选择想要的子目录即可将其作为当前目录。
+::END
+
+$BWC_LAYOUT_CONSOLE$=管理控制台 (*)
+$BWC_LAYOUT_CONSOLE_TXT$::
+如果登录时使用带管理权限的帐户，则可按下<strong>管理控制台</strong>按钮返回 Serv-U 管理控制台主页。
+::END
+
+$BWC_LAYOUT_PASSWORD$=更改密码 (*)
+$BWC_LAYOUT_PASSWORD_TXT$::
+如果管理员允许用户更改帐户密码，该选项可用。单击<strong>更改密码</strong>按钮会显示新对话框，询问当前密码和所需新密码。输入相应信息后，请单击<strong>确认</strong>按钮以更改帐户密码。如果新密码不符合管理员的密码安全设置，会显示消息以解释新密码不满足安全要求的地方。
+::END
+
+$BWC_LAYOUT_SUPPORT$=支持 (*)
+$BWC_LAYOUT_SUPPORT_TXT$::
+如果管理员配置了可选的支持链接以协助使用 Serv-U 文件服务器，则该链接可用。单击该链接可导向管理员喜欢的支持提供方式，包括打开另一个网页，向管理员发送电子邮件，或甚至开始即时通信会话。
+::END
+
+$BWC_LAYOUT_HELP$=帮助
+$BWC_LAYOUT_HELP_TXT$::
+该链接启动 Serv-U Web 客户端帮助文档，即您现在阅读的文档。
+::END
+
+$BWC_LAYOUT_LOGOUT$=注销
+$BWC_LAYOUT_LOGOUT_TXT$::
+Web 客户端使用完毕后，请单击<strong>注销</strong>按钮以终止会话。
+::END
+
+$BWC_LAYOUT_LISTING$=目录列表和操作
+$BWC_LAYOUT_LISTING_TXT$::
+实用工具栏下是服务器返回的当前目录列表。目录列表上下是可执行的多种操作，包括浏览服务器、传输文件、或更改列表布局。有关这些操作的更多信息，请参见 $LINK_HELP_DIR_MANAGEMENT$、$LINK_HELP_FILE_MANAGEMENT$ 或 $LINK_HELP_IMAGE_FEATURES$ 的相应帮助文档。
+
+目录列表的右下角是当前目录内容的摘要。此处列出了目录数、文件数和当前目录所包含文件的总尺寸。
+::END
+
+
+<!-- String table for Help-Directory-Management -->
+$DIRS_HEADER$=目录管理
+$DIRS_HEADER_TXT$::
+Web 客户端的大部分视图专用于显示服务器上当前浏览目录的内容。该目录列表显示了当前目录内的所有文件和文件夹。根据管理员授予用户帐户的访问权限，可以对该列表中的文件和文件夹执行多种操作。
+::END
+
+$DIRS_NAVIGATING$=浏览目录
+$DIRS_NAVIGATING_TXT$::
+有多种方法可以更改当前目录。更改当前目录会更新目录列表的内容。更改当前目录的最简单方法是使用鼠标双击列表内的目录。此外，可以右键单击目录并选择<strong>打开</strong>选项。更改当前目录的最后一种方法是选择列表中的目录，然后单击列表下面的<strong>打开</strong>按钮。
+::END
+
+$DIRS_PARENT_DIR$=父目录
+$DIRS_PARENT_DIR_TXT$::
+如果用户帐户锁定于根目录，且当前目录即为根目录，则该按钮不可用。单击该按钮会将当前目录更改为父目录。例如，如果当前目录为 <strong>/public/files</strong>，则单击该按钮会将当前目录更改为 <strong>/public</strong>。
+::END
+
+$DIRS_REFRESH$=刷新
+$DIRS_REFRESH_TXT$::
+刷新当前目录列表导致 Web 客户端再次检索目录列表并更新显示的文件和文件夹。
+::END
+
+$DIRS_THUMBNAILS$=缩略图
+$DIRS_THUMBNAILS_TXT$::
+单击<strong>缩略图</strong>按钮从详细信息视图切换到缩略图视图。在缩略图视图中，Web 客户端检索并显示当前目录中任何图像文件的缩略版。在缩略图视图模式中还有更多选项可供使用。有关缩略图的更多信息，请参见 $LINK_HELP_IMAGE_FEATURES$ 的帮助文档。
+::END
+
+$DIRS_DETAILS$=详细信息
+$DIRS_DETAILS_TXT$::
+当前视图为缩略图模式时，<strong>详细信息</strong>按钮可用。单击该按钮返回当前目录内容的详细列表视图，不再显示任何缩略图。
+::END
+
+$DIRS_CREATE$=创建目录
+$DIRS_CREATE_TXT$::
+单击该按钮可以在服务器上创建新目录。单击后将显示新建对话框，询问要创建的新目录名。如果用户帐户不能创建目录或现有目录名与新目录名有冲突，则显示错误消息。
+::END
+
+$DIRS_RENAME$=重命名
+$DIRS_RENAME_TXT$::
+要重命名目录，请在目录列表中选择要重命名的目录并单击此按钮。右键单击所需的目录也可使用此选项。当前名称显示在新对话框中。将此名称更改为所需的新名称并单击<strong>确认</strong>。如果用户帐户不能重命名目录或现有目录名与新目录名有冲突，则显示错误消息。
+::END
+
+$DIRS_DELETE$=删除
+$DIRS_DELETE_TXT$::
+从列表中选择所需的目录并单击<strong>删除</strong>按钮可以删除目录。右键单击所需的目录也可使用此选项。如果用户帐户不能删除目录，则显示错误消息。<strong>注意：</strong>  删除目录会删除该目录中包含的所有文件和文件夹。无法在服务器上撤销此操作。
+::END
+
+
+<!-- String table for Help-File-Transfers -->
+$FILES_HEADER$=文件管理
+<!-- The following string does not need to be translated.  It's copying a string from elsewhere. -->
+$FILES_HEADER_TXT$=$DIRS_HEADER_TXT$
+
+$FILES_UPLOAD$=上传
+$FILES_UPLOAD_TXT$::
+如果用户帐户有上传新文件的权限，则可使用此按钮一次将一个文件上传到服务器上。单击<strong>上传</strong>按钮会打开新窗口，从中可<strong>浏览</strong>系统查找需要上传的文件。选择了相应的文件后，请单击<strong>上传</strong>按钮开始传输。
+
+上传开始后将显示进度对话框，该对话框使用实时信息定时更新，包括当前传输速率、已发送的数据量、剩余要发送的数据量和完成传输估计所需的时间。当文件正在上传时无法执行其他操作，包括更改当前目录或传输另一个文件。可随时单击<strong>取消</strong>按钮终止上传。取消的文件传输无法续传，必须重新开始。
+
+上传完成后，进度对话框消失，且目录列表被刷新以显示新文件。
+::END
+
+$FILES_DOWNLOAD$=下载
+$FILES_DOWNLOAD_TXT$::
+要开始文件下载，只需选择所需的文件并单击<strong>下载</strong>按钮。右键单击所需的文件也可使用此选项。浏览器提示您输入保存文件的系统位置。一些浏览器还提供选项可以打开文件，而不用将其保存于永久位置。正在下载文件时，Web 客户端可随意执行其他操作。
+::END
+
+$FILES_RENAME$=重命名
+$FILES_RENAME_TXT$::
+要重命名文件，请在目录列表中选择要重命名的文件并单击此按钮。右键单击所需的文件也可使用此选项。当前名称显示在新对话框中。将此名称更改为所需的新名称并单击<strong>确认</strong>。如果用户帐户不能重命名文件或现有文件名与新文件名有冲突，则显示错误消息。
+::END
+
+$FILES_DELETE$=删除
+$FILES_DELETE_TXT$::
+从列表中选择所需的文件并单击<strong>删除</strong>按钮可以删除文件。右键单击所需的文件也可使用此选项。如果用户帐户不能删除文件，则显示错误消息。<strong>注意：</strong> 文件被从服务器上永久删除。该操作无法撤销。
+::END
+
+
+<!-- String table for Help-Image-Features -->
+$IMAGES_HEADER$=缩略图、幻灯片及媒体播放器
+$IMAGES_HEADER_TXT$::
+Web 客户端与 Serv-U 的高级功能相结合，为您与朋友、家人或客户共享照片提供了完美的平台。使用高级的即时压缩技术，Web 客户端可以为几乎任何类型图像文件生成定制大小的缩略图。一旦服务器收到要求就生成该缩略图并送还给客户端。采用这种方法，可以查看较小版的图像文件，所花时间仅为下载整个文件并在本地打开该文件所需时间的一小部分。同时服务器发送图像文件所占用的带宽也降低到最小程度。
+
+Web 客户端支持两种图像查看模式：缩略图和幻灯片。在详细信息或缩略图视图模式中可以查看幻灯片。
+::END
+
+$IMAGES_THUMBNAILS$=缩略图
+$IMAGES_THUMBNAILS_TXT$::
+缩略图视图取代了详细信息目录列表以显示每个文件的缩略图。如果文件类型不是所支持的图像类型，则代之以显示该文件类型的相应图标。在缩略图视图模式中，每个缩略图下方有一组按钮以取代通常出现在目录列表下方的标准操作按钮。这些按钮能以常规方式<strong>打开</strong>、<strong>下载</strong>、<strong>重命名</strong>并<strong>删除</strong>文件和文件夹。对于图像文件，还有一个选项用于预览图像。
+::END
+
+$IMAGES_THUMB_SIZE$=缩略图大小
+$IMAGES_THUMB_SIZE_TXT$::
+从<strong>缩略图大小</strong>下拉框可以定制每个图像缩略图的大小。有五种大小可供选择，以平衡缩略图大小和检索所需时间。如果可用的大小显示为平方值，则创建缩略图时保留了图像的实际纵横比以避免扭曲原始图像。
+::END
+
+$IMAGES_THUMB_PREVIEW$=预览图像
+$IMAGES_THUMB_PREVIEW_TXT$::
+在缩略图模式和详细信息模式中都能预览图像。预览的图像显示在新对话框中，就像播放幻灯片一样，只是在该预览图像上暂停播放。图像显示的最大宽度为 600 像素。如果预览的图像小于该尺寸，则以实际尺寸显示图像。预览图像时，单击图像上方的相应按钮可以开始播放幻灯片。有关幻灯片的更多信息，请继续阅读帮助文档。
+::END
+
+$IMAGES_SLIDESHOWS$=幻灯片
+$IMAGES_SLIDESHOWS_TXT$::
+幻灯片是自动预览当前目录中包含的图像的一种方法。当以幻灯片模式查看图像时，通过单击图像下方的相应按钮，可以对该文件执行标准操作，包括<strong>下载</strong>、<strong>重命名</strong>和<strong>删除</strong>。
+::END
+
+$IMAGES_SLIDE_CONTROL$=控制幻灯片
+$IMAGES_SLIDE_CONTROL_TXT$::
+使用幻灯片对话框顶部的按钮可以手动控制幻灯片的播放。从左至右的控件分别为上一图像、暂停幻灯片、播放幻灯片和下一图像。这些控件旁是一个计数器，显示当前图像的位置及幻灯片中所有图像的总数。
+
+使用对话框底部的滑块可以控制幻灯片播放的速度。将滑块朝左向<strong>慢</strong>端调整会使图像以较慢的速度向前播放。将滑块向<strong>快</strong>端调整则加快播放速度。某些服务器上，如果幻灯片的当前播放速度快于服务器能生成幻灯片图像的速度，则前进到下一图像时可能显示正在加载的图像。
+
+查看完幻灯片以后，请使用<strong>关闭</strong>按钮关闭幻灯片对话框。
+::END
+
+$MEDIA_PLAYER$=媒体播放器
+$MEDIA_PLAYER_TXT$::
+媒体播放器允许用户通过 Web 客户端中的媒体播放器对话框立即播放常用的媒体格式。该功能使用户能够在下载音频或视频文件之前方便地进行预览，并直接从 Web 客户端构建流音频的播放列表。
+::END
+
+$MEDIA_PLAY_LIST$=播放列表
+$MEDIA_PLAY_LIST_TXT$::
+Serv-U 动态生成的播放列表能够播放用户当前目录中的所有音频文件。一旦在当前目录中检测到音频文件，便可使用“播放列表”选项。只需单击按钮，便可将用户当前目录中的所有音频文件连续添加到内置的媒体播放器中。
+::END
+
+$MEDIA_PLAYER_CONTROLS$=媒体播放器控件
+$MEDIA_PLAYER_CONTROLS_TXT$::
+可以使用播放器上方的上一个和下一个按钮手动操控媒体播放器。这些控件旁边是计数器，显示当前媒体文件的位置，以及当前目录中媒体文件的总数。<strong>注意：</strong>这些控件可以手动更改到当前目录的上一个或下一个媒体文件。一旦开始播放媒体文件，媒体播放器不会自动移动到下一个媒体文件。
+
+要连续播放多个音频文件，必须使用“播放列表”选项。使用此功能时，相应媒体播放器插件中的控件可以用于更改当前音轨。从 Serv-U 中导入播放列表时，下载、删除和重命名操作隐藏。
+::END

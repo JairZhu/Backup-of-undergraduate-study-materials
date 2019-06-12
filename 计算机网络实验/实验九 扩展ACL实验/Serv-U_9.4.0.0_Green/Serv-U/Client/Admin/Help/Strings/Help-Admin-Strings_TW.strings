@@ -1,0 +1,2586 @@
+﻿<!-- Help-Admin-Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- External links reused throughout the help documentation -->
+$LINK_PRODUCT_HOME$=<a href="http://www.Serv-U.com/" target="_blank">http://www.Serv-U.com/</a>
+$LINK_PRODUCT_SALES$=<a href="http://www.Serv-U.com/sales/" target="_blank">http://www.Serv-U.com/sales/</a>
+$LINK_PRODUCT_SUPPORT$=<a href="http://www.Serv-U.com/support/" target="_blank">http://www.Serv-U.com/support/</a>
+$LINK_PRODUCT_HELP_DESK$=<a href="http://www.Serv-U.com/prodsupport" target="_blank">Serv-U Help Desk</a>
+$LINK_PRODUCT_KB$=<a href="http://www.Serv-U.com/kb/" target="_blank">http://www.Serv-U.com/kb/</a>
+$LINK_PRODUCT_PURCHASE$=<a href="http://www.Serv-U.com/purchase/" target="_blank">http://www.Serv-U.com/purchase/</a>
+$LINK_PRODUCT_PRICING$=<a href="http://www.Serv-U.com/pricing/" target="_blank">http://www.Serv-U.com/pricing/</a>
+$LINK_CUSTOMER_SERVICE$=<a href="http://www.RhinoSoft.com/customer/" target="_blank">RhinoSoft.com Online Customer Service Center</a>
+$LINK_DNS4ME$=<a href="http://www.DNS4Me.com/" target="_blank">DNS4Me</a>
+$RHINOSOFT_CONTACT_INFO$::
+<strong>RhinoSoft.com<br />
+P.O. Box 53<br />
+Helenville, WI 53137<br />
+U.S.A.<br />
+
+銷售：+1 (262) 560-9627<br />
+電話：+1 (262) 560-9627<br />
+傳真：+1 (262) 560-9628<br />
+</strong>$LINK_PRODUCT_HOME$<br />
+$LINK_PRODUCT_SALES$<br />
+$LINK_PRODUCT_SUPPORT$<br />
+::END
+
+
+<!-- Macros for inserting links to other Help doc pages.  The text within these anchor tags needs to be translated. -->
+$LINK_HELP_EDITIONS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-ServU-Editions.htm">Serv-U 版本</a>
+$LINK_HELP_UIC$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-UIC-Info.htm">使用者介面轉換</a>
+$LINK_HELP_RATIOS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-User-Quotas-Ratios.htm">傳輸率</a>
+$LINK_HELP_SYSTEM_VARS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-System-Variables.htm">系統變數</a>
+$LINK_HELP_LOG_SETTINGS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Configure-Logs.htm">域記錄檔設定</a>
+$LINK_HELP_GUIDE$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Quick-Start.htm">快速入門指南</a>
+$LINK_HELP_VIRTUAL$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Virtual-Hosts.htm">虛擬主機</a>
+$LINK_HELP_DIRACCESS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Directory-Access.htm">目錄訪問規則</a>
+$LINK_HELP_USER_LIMITS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Limits-Settings-User.htm">密碼限制</a>
+$LINK_HELP_GROUPS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-About-Groups.htm">群組</a>
+
+
+<!-- String table for Help-Overview -->
+$OVERVIEW_HEADER$=Serv-U 檔伺服器概述
+
+$OVERVIEW1$::
+歡迎使用 Serv-U 檔伺服器！
+
+Serv-U 檔伺服器是一款多通訊協定檔伺服器，它能通過多種方法從其他聯網電腦收發檔。管理人為使用者創建帳號，以便訪問伺服器硬碟上或任何其他可用網路資源上的特定檔和資料夾。這些訪問許可權定義使用者在哪里可以訪問可用資源和訪問方式。Serv-U 的多協定支援意味著使用者可以使用任何可用的訪問方法連接到伺服器。Serv-U 檔伺服器支援以下通訊協定：
+::END
+
+$OVERVIEW_PROTOCOLS$::
+FTP（檔傳輸通訊協定）
+HTTP（超文本傳輸通訊協定）
+FTPS（通過 SSL 的 FTP）
+HTTPS（通過 SSL 的 HTTP）
+使用 SSH2* 的 SFTP（安全外殼程式上的檔傳輸）
+::END
+
+$OVERVIEW_EDITION_NOTE$::
+* - SSH2 需要 Serv-U 金版或銀版
+::END
+
+$OVERVIEW2$::
+除了Serv-U 能極好地支持的許多流行的 FTP 使用者端之外，您還能使用喜愛的 Web 瀏覽器或 SSH 使用者端連接 Serv-U 並傳輸檔。伺服器管理人為沒有 FTP 使用者端許可證的使用者提供全功能 FTP 使用者端，甚至能授權使用者在登入 Serv-U 帳號後使用 FTP Voyager JV&mdash;&mdash;一款啟用 Java 的 FTP 使用者端。有關授權使用<a href="http://www.Serv-U.com/Web-FTP-Client.asp" target="_blank"> FTP Voyager JV 的更多資訊，請按一下這裏。</a>
+
+Serv-U 檔伺服器在繼承 Serv-U 品牌著名功能的同時，不斷提升檔伺服器的易用性，使您可以：
+::END
+
+$OVERVIEW_LIST$::
+從任何地方訪問檔
+與朋友、家人和客戶共用檔
+為員工提供集中收發資料檔案的場所
+完全支持群組以優化使用者創建和維護
+檢視即時生成的縮略圖和幻燈片圖像，將帶寬使用降到最低程度
+通過定制的 web 介面管理伺服器
+即時地與 FTP 使用者端聊天並檢視連線期間記錄檔
+定制 FTP 命令回應
+創建極其細緻的定制限制和規則以控制伺服器上的資源使用
+使用 SSL/TLS 或 SSH2 安全地進行連接*
+使用第三方數位證書向使用者端擔保伺服器的身份*
+多個域共用相同的 IP 位址和埠*
+在同一個域上使用多個驗證源（本地使用者資料庫、NT/SAM、ODBC）*
+自動構建 ODBC 驗證需要的表格*
+...以及更多！
+::END
+
+$OVERVIEW3$::
+Serv-U 試用版作為全功能 "金版" 可運行 30 天。註冊可以獲得 1 年的免費軟體升級服務（升級保護）和 1 年的信件技術支援。也可以折扣價購買許可證以延長升級保護和信件技術支援到 2 年時間。
+::END
+
+
+<!-- String table for Help-ServU-Editions -->
+$SERVU_EDITIONS_HEADER$=Serv-U 版本
+
+$SERVU_EDITION_INTRO$::
+Serv-U 檔伺服器有三個不同版本，分別為滿足當今伺服器管理人的各種需求而設計。RhinoSoft.com 提供<strong>銅版</strong>，它配備了核心工具和功能；<strong>銀版</strong>，它新增了對於 SSH 的支持；以及<strong>金版</strong>，它提供了一整套企業級功能，針對的是檔伺服器通信量巨大的大中型企業。
+::END
+
+$SERVU_BRONZE_HEADER$=Serv-U 銅版
+
+$SERVU_BRONZE_BODY1$::
+Serv-U 銅版提供一套強大的功能集，配備所有用於管理與傳輸文件的工具：
+::END
+
+$SERVU_BRONZE_LIST$::
+無限數量的域擁有無限數量的併發連接
+無限數量的使用者帳號
+支援加密的 FTPS 連接
+支援虛擬目錄映射
+支援傳輸比率和配額 
+支援從單個地點遠端管理多個伺服器 
+支援 ODBC 資料庫使用者和群組帳號存儲
+支援基於 NT-SAM/活動目錄的使用者帳號
+::END
+
+$SERVU_SILVER_HEADER$=Serv-U 銀版
+
+$SERVU_SILVER_BODY$::
+Serv-U 銀版擴展了銅版的性能，新增:
+::END
+
+$SERVU_SILVER_LIST$::
+三個域並支援 100 個併發連接
+250 個使用者帳號
+支援加密的 FTPS 連接
+支援虛擬主機
+通過登入頁面恢復使用者密碼
+::END
+
+$SERVU_SILVER_LIST_OLD$::
+三個域並支援 100 個併發連接
+250 個使用者帳號
+支援加密的 FTPS 連接
+支援虛擬主機
+::END
+
+$SERVU_GOLD_HEADER$=Serv-U 金版
+
+$SERVU_GOLD_BODY$::
+Serv-U 金版致力於解決對企業級檔伺服器的需求，它沒有限制且能隨企業的發展而不斷擴展。除了銀版中支援的 SSH，Serv-U 金版還可以使用 Web 使用者端。鑒於此，Serv-U 金版具有如下額外的新功能：
+::END
+
+$SERVU_GOLD_LIST$::
+無限數量的域擁有無限數量的併發連接
+無限數量的使用者帳號
+FTPS 140-2 支持，通過 OpenSSL（證書 #1051）驗證
+支援自定義HTTP 標誌
+支援使用者與群組統計
+支援加密的 HTTPS 連接
+使用 SSH2 的 SFTP （通過安全外殼的檔案傳輸）
+支援從單個位置遠端管理多個伺服器
+支援 ODBC 資料庫使用者和群組帳號存儲
+支援基於 NT-SAM/活動目錄的使用者帳號
+支援郵件、外部程式與氣球提示事件
+::END
+
+$SERVU_GOLD_LIST_OLD$::
+無限數量的域擁有無限數量的併發連接
+無限數量的使用者帳號
+支援自定義HTTP 標誌
+支援使用者與群組統計
+支援加密的 HTTPS 連接
+使用 SSH2 的 SFTP （通過安全外殼的檔案傳輸）
+支援從單個位置遠端管理多個伺服器
+支援 ODBC 資料庫使用者和群組帳號存儲
+支援基於 NT-SAM/活動目錄的使用者帳號
+支援郵件、外部程式與氣球提示事件
+::END
+
+$SERVU_EDITIONS_LINK_INFO$=<a href="http://www.Serv-U.com/" target="_blank">點擊此處</a> 以獲得更多關於 Serv-U 檔伺服器三個版本的更多資訊。
+
+
+<!-- String table for Help-How-To-Purchase -->
+$HOW_TO_PURCHASE_HEADER$=如何購買 Serv-U
+
+
+$HOWTOPURCHASE$::
+Serv-U 在初次安裝日期後可在 30 天內作為全功能金版試用。為了繼續使用帶完整功能的 Serv-U，必須購買 Serv-U 許可證。
+
+您可以在 $LINK_PRODUCT_PURCHASE$ 線上購買許可證。請確認所需 Serv-U 檔伺服器的版本和購買數量（批量購買有折扣價格）。購買 FTP Voyager JV 許可證之前必須購買 Serv-U 檔伺服器許可證。同時，可以按較大的折扣捆綁購買 FTP Voyager（我們的首選 FTP 使用者端程式）許可證。
+
+訪問以下網址可獲得價格資訊：$LINK_PRODUCT_PRICING$。
+
+如果遺失了註冊 ID，您可訪問以下網址重新獲取 ID：$LINK_CUSTOMER_SERVICE$。
+
+一旦完成購買，會立即向您發送包含註冊詳情的電子信件。如果在一個小時內仍未收到，請檢查您的垃圾信篩檢程式以確保此信件沒有被過濾掉。有時，篩檢程式會阻止我們信件中作為附件的 .reg 安裝檔案。如果發生這種情況，只需遵照信件內的 "手動註冊" 指導進行註冊即可。
+::END
+
+<!-- String table for Help-Contact-Tech -->
+$TECHNICAL_SUPPORT_HEADER$=技術支援
+
+$TS_INTRO$::
+有問題並需要更多幫助嗎？RhinoSoft.com 提供多種技術支援選項。有關當前產品支援政策，請參考 $LINK_PRODUCT_HELP_DESK$。
+
+從 RhinoSoft.com 的官方經銷商處購買 Serv-U 的使用者可轉而向該經銷商尋求技術支援。我們提供電話技術支援服務。可以訪問 $LINK_PRODUCT_HELP_DESK$ 獲得電話技術支援服務的收費資訊，包括最低電話支援費用。我們也提供進階支援合約，它包括優先的信件技術支援和 5 次電話技術支援的費用。
+
+如果您遺失了註冊 ID，請訪問 $LINK_CUSTOMER_SERVICE$。
+::END
+
+$TS_FREE_EMAIL$=免費電子信件支援
+$TS_FREE_EMAIL_INFO$::
+通過電子信件向所有使用者提供免費技術支援。RhinoSoft.com 要求所有使用者向 $LINK_PRODUCT_SUPPORT$ 提交其技術支援查詢。
+::END
+
+$TS_KNOWLEDGE_BASE$=知識庫
+$TS_KNOWLEDGE_BASE_INFO$::
+我們的知識庫是一個動態工具供您用來研究問題的解決方案。幾乎向我們的技術支援團隊提交的每個技術問題都在此作出答復。知識庫可以為您的問題提供快速、詳細的逐步解答，並帶有螢幕截圖。
+
+訪問 $LINK_PRODUCT_KB$ 立刻獲得解答。
+::END
+
+$TS_SALES_SUPPORT$=銷售支援
+$TS_SALES_SUPPORT_INFO$::
+有關 Serv-U 檔伺服器軟體的銷售問題（非技術性質）,請訪問：$LINK_PRODUCT_SALES$。也可以通過撥打+1 (262) 560-9627 致電 RhinoSoft.com 接洽銷售代表。
+
+RhinoSoft.com 可自行地對技術支援選項作出變更而無需發佈通知
+::END
+
+
+<!-- String table for Help-Contact -->
+$CONTACT_HEADER$=接洽 RhinoSoft.com
+
+$CONTACT_INTRO$::
+如果您遺失了註冊 ID，請訪問 $LINK_CUSTOMER_SERVICE$。
+
+您可通過將信件郵寄至以下地址來接洽 RhinoSoft.com：
+::END
+
+$CONTACT_SALES$::
+有關銷售查詢，請訪問：$LINK_PRODUCT_SALES$。
+::END
+
+$CONTACT_PRODUCT_INFO$::
+要瞭解有關 Serv-U 檔伺服器的更多資訊，請訪問：$LINK_PRODUCT_HOME$。
+::END
+
+
+<!-- String table for Help-Quick-Start -->
+$QUICK_START_HEADER$=快速入門指南
+
+$QS_INTRODUCTION$::
+Serv-U 設計的組態簡單，其靈活性和控制功能使您得以在可能的最佳安全保護下與其他人方便地共用檔。快速入門指南將幫助您安裝伺服器，創建首個域，並向新域中添加使用者帳號。一旦完成這些簡單步驟，您就能連接到新的檔伺服器並開始傳輸檔！
+::END
+
+$QS_INSTALLATION$=安裝
+$QS_INSTALLATION_INFO$::
+如果您是首次安裝 Serv-U，只需遵照安裝屏上的指令選擇安裝目錄並組態桌面快捷方式，以便快速訪問伺服器。您也可選擇將 Serv-U 作為系統服務安裝，這意味著當 Windows 啟動時自動啟動 Serv-U&mdash;&mdash;在任何使用者登入伺服器前。如果 Serv-U 運行於專用的伺服器機器，且沒有互動式使用者連線期間定期登入該伺服器時，該選項很有用。如果 Serv-U 未作為系統服務安裝，則登入 Windows 後需要手動啟動該軟體。
+
+如果覆蓋安裝現有 Serv-U，我們推薦首先備份原始安裝資料夾。儘管可以安全地覆蓋安裝任何現有的 Serv-U 並對資料檔案和二進位碼進行必要的升級，在升級前備份關鍵元件仍被視為良好的資料管理措施。如果進行升級的安裝版本早於 7.0 版，將會出現提示對話窗，指出在版本 6 後作出的關鍵變更，以及這些變更會如何影響您對 Serv-U 檔伺服器的管理。
+
+一旦完成安裝，將啟動 Serv-U 管理控制臺。如果選擇安裝後不啟動 Serv-U 管理控制臺，可以通過按二下系統託盤內的 Serv-U 圖示，或按一下右鍵選擇 "啟動管理控制臺" 選項，來隨時啟動控制臺。
+::END
+
+$QS_FIRST_DOMAIN$=創建首個域
+$QS_FIRST_DOMAIN_INFO$::
+完成載入管理控制臺後，如果當前沒有現存域會提示您是否創建新域。按一下<strong>是</strong>啟動域創建嚮導。任何時候要運行該嚮導，可以按一下管理控制臺頂部或<strong>變更域</strong>對話方塊內的<strong>新建域</strong>按鈕，從管理控制臺內的任何頁面都可打開變更域對話方塊。在 Serv-U 檔伺服器上創建新域有 3 個簡單步驟。
+
+第一步是提供唯一的網域名稱。網域名稱對其使用者是不可見的，並且不影響其他人訪問域的方式。它只是域的識別字，使其管理人更方便的識別和管理域。同時網域名稱必須是唯一的,從而使 Serv-U 可以將其與伺服器上的其他域區分開。您也可在描述區提供域的任何其他描述說明。默認情況下，啟用域並供使用者訪問。如果您希望在組態過程中暫時拒絕使用者訪問該域，取消選取<strong>啟用域</strong>選擇框。按一下<strong>下一步</strong>繼續創建域。
+
+創建域的第二步是指定使用者訪問該域所用的通訊協定。標準檔共用通訊協定是 FTP（檔傳輸通訊協定），它運行於默認埠 21。然而，任何這些埠號都可變更為您所選擇的數值。如果在非默認埠上運行伺服器，推薦使用 1024 以上的埠。關於每個 Serv-U 版本所支援通訊協定的更多資訊，請參考有關 Serv-U 版本的文檔。選取您希望域支援的通訊協定旁的選擇框，然後按一下<strong>下一步</strong>繼續。
+
+第三步即最後一步是指定用於連接該域的物理位址。通常，這是使用者指定的 IP 位址，用於在 Internet 上查找您的伺服器。大多數家庭使用者可以保留該選項空白，以使 Serv-U 使用電腦上的任何可用 IP 位址。
+::END
+
+$QS_FIRST_DOMAIN_ENCRYPT$::
+第四步與最後一個步驟是決定在該域存儲密碼時將使用的加密模式。預設情況下，使用單向加密安全地存儲所有密碼，一旦保存密碼就會將其鎖定。不過，使用者希望利用 Web 使用者端上的“密碼恢復”工具時，可以選擇使用雙向密碼，這樣在要求密碼恢復時，Serv-U 就無需重置其密碼。最後，若希望將密碼存儲為明文，Serv-U 也可以實現。不推薦這一方式，不過要與過去的系統集成（特別是在使用資料庫支援時），這可能是必需的。
+::END
+
+$QS_FIRST_DOMAIN_DONE$::
+現在，按一下<strong>完成</strong>以讓 Serv-U 創建你的第一個域。祝賀您！現在您的第一個域上線了。下一次可以組態域的更多屬性。有關這些選項的更多資訊，請參見域設定文檔。現在，您需要創建使用者帳號以便通過該域開始共用檔。
+::END
+
+$QS_FIRST_USER$=創建首個使用者帳號
+$QS_FIRST_USER_INFO$::
+創建首個域後，管理控制臺將顯示使用者頁面並詢問您是否希望使用新建使用者嚮導創建新使用者帳號。按一下<strong>是</strong>啟動新建使用者帳號嚮導。任何時候通過按一下使用者帳號頁面上的 "嚮導" 按鈕可以運行該嚮導。創建新使用者帳號有 4 個簡單步驟。
+::END
+
+$QS_FIRST_USER_LOGIN_OLD$::
+第一步是提供帳號的唯一登入 ID。連接域時使用該登入 ID開始驗證過程。登入 ID對於該域必須是唯一的，但伺服器上其他域可能有帳號擁有同樣的登入 ID。要創建匿名帳號，請指定登入 ID為 "anonymous" 或 "ftp"。按一下<strong>下一步</strong>繼續創建使用者帳號。
+::END
+
+$QS_FIRST_USER_LOGIN$::
+第一步是提供帳號的唯一登入 ID。連接域時使用該登入 ID開始驗證過程。登入 ID對於該域必須是唯一的，但伺服器上其他域可能有帳號擁有同樣的登入 ID。要創建匿名帳號，請指定登入 ID為 "anonymous" 或 "ftp"。
+
+此時，還需為該使用者帳號指定全名與電子信件位址。全名提供引用使用者帳號的規範名，電子信件位址允許將 Serv-U 信件通知與恢復的密碼發送到使用者帳號。按一下<strong>下一步</strong>繼續創建使用者帳號。
+::END
+
+$QS_FIRST_USER_PASSWORD$::
+指定唯一登入 ID後，您還必須為帳號指定密碼。當使用者連接域時，密碼是驗證使用者身份所需的第二條資訊。如果有人要連接該域，他們必須知道第一步中指定的登入 ID，以及此密碼。密碼可以留空，但將導致知道登入 ID的任何人都能訪問域。點擊<strong>下一步</strong>繼續。
+
+第三步是指定帳號的根目錄。根目錄是登入成功時使用者帳號在伺服器硬碟（或可訪問的網路資源）上所處的位置。實質上，它是使用者帳號在伺服器上收發檔時您希望它使用的位置。按一下<strong>瀏覽</strong>按鈕轉到硬碟上的某個位置，或手動輸入該位置。如果鎖定使用者至根目錄，他們就不能訪問其根目錄結構之上的檔或資料夾。此外，根目錄的真正位置將被遮罩而顯示為 "/"。按一下<strong>下一步</strong>按鈕繼續最後一個步驟。
+
+最後一步是授予使用者帳號訪問權。訪問權是按目錄授予的。然而，可訪問目錄中的所有子目錄可以繼承訪問權。默認訪問權是 "唯讀"，這意味著使用者可以清單顯示其根目錄中的檔和資料夾並進行下載。然而他們不能上傳檔、創建新目錄、移除檔/資料夾或重命名檔/資料夾。如果選擇 "完全訪問"，使用者就能執行所有上述作業。創建使用者後，通過編輯使用者並選擇 "目錄訪問" 選項卡，可以更細緻的組態這些訪問許可權。選擇目錄訪問許可權後，按一下<strong>完成</strong>按鈕創建使用者帳號。
+
+祝賀您！您的 Serv-U 檔案伺服器已準備就緒可供訪問和共用。您可以像創建該帳號一樣創建更多帳號以便與其他朋友、家人或同事共用。每個使用者可有不同的根目錄從而使您可與不同人共用不同檔。還有更多使用者組態選項使您可以微調帳號訪問伺服器的許可權。有關這些選項的更多資訊，請參見使用者帳號的文檔。
+::END
+
+
+<!-- String table for Help-Serv-U-Concepts -->
+$SERVER_CONCEPTS_HEADER$=伺服器概念
+
+$SERVER_CONCEPTS_INTRO$::
+Serv-U 檔伺服器使用一些概念，幫助您理解如何將檔伺服器作為單一的分級單元進行組態和管理。Serv-U 檔伺服器有四個相關的組態級別：<strong>伺服器</strong>、<strong>域</strong>、<strong>群組</strong>和<strong>使用者</strong>。其中，只有<strong>群組</strong>級別是可選的&mdash;&mdash;所有其他級別是檔伺服器的必要組成部分。下面提供了對每個級別的解釋。
+::END
+
+$SERVER_CONCEPTS_SERVER_HEADER$=伺服器
+$SERVER_CONCEPTS_SERVER_BODY$::
+伺服器級別是 Serv-U 檔伺服器的基本單元，也是可用的最高組態級別。它代表了檔伺服器整體，並管理所有域、組和使用者的行為。Serv-U 檔伺服器帶有一組默認選項，可逐個對其進行覆蓋。因此，伺服器是 Serv-U 組態等級的最進階別。域、組和使用者從伺服器繼承了它們的默認設定。在每個較低級別可以覆蓋繼承的設定。然而，一些設定是伺服器級別特有的，例如 PASV 埠範圍。
+::END
+
+$SERVER_CONCEPTS_DOMAIN_HEADER$=域
+$SERVER_CONCEPTS_DOMAIN_BODY$::
+一台伺服器可以包含一個或多個域。通過域這個介面使用者連接檔伺服器並訪問特定使用者帳號。域的設定是從伺服器繼承而來。它也定義了其所有群組和使用者帳號能繼承的設定集。如果伺服器級別的設定在域級別被覆蓋，那麼該域所有群組和使用者帳號將繼承該值為其預設值。
+::END
+
+$SERVER_CONCEPTS_GROUP_HEADER$=群組
+$SERVER_CONCEPTS_GROUP_BODY$::
+群組是進行額外組態的可選級別，通過它可以更為方便地對分享許多相同設定的相關使用者帳號進行管理。通過使用群組，管理人可以快速變更多個使用者帳號，而不必分別手動組態各個帳號。群組從它所屬的域中繼承所有默認設定。它定義了所有群組成員使用者繼承的設定集。實際上，每個使用者級別設定可在群組級別進行組態，或在使用者級別被覆蓋。
+::END
+
+$SERVER_CONCEPTS_USER_HEADER$=使用者
+$SERVER_CONCEPTS_USER_BODY$::
+使用者級別處於等級底部。它可以從多個群組繼承其默認設定（如果它是多個群組的成員），或從父域繼承默認設定（如果它不是任何群組的成員或群組未定義默認設定）。使用者帳號標識了與檔伺服器的物理連接，並定義了該連接的訪問許可權。在使用者級別被覆蓋的設定在他處不能被覆蓋，並將永遠應用於使用該使用者帳號進行驗證的連接。
+::END
+
+$SERVER_CONCEPTS_COLLECTION_HEADER$=使用者集
+$SERVER_CONCEPTS_COLLECTION_BODY$::
+不同於群組，使用者集對其包含的使用者帳號不提供任何級別的組態。相反，它只是提供了一種方法將使用者歸類以便檢視和管理。例如，為了基於群組成員資格管理使用者帳號，可以創建使用者集，然而當使用者帳號變更群組成員資格時必須手動對其進行維護。
+::END
+
+
+<!-- String table for Help-Nav-Serv-U -->
+$NAV_SERVU_HEADER1$=Serv-U 管理控制臺
+$NAV_SERVU_INFO$::
+Serv-U 管理控制臺的設計旨在以熟悉的方式快速便捷地訪問檔伺服器組態選項。檢視組態頁面時，您可通過按一下左上角的 Serv-U 檔伺服器標誌在任何時候返回管理控制臺首頁面。
+::END
+
+$NAV_LAYOUT$=管理控制臺佈局
+$NAV_LAYOUT_INFO$::
+管理控制臺顯示為熟悉的控制臺類型的佈局，並對相關選項進行歸類。按一下類標題，例如 "使用者"，顯示使用者帳號管理螢幕。從該螢幕可使用每個子類組態選項。也可選擇子類以直接轉到該子類的組態頁面。
+
+對於伺服器管理人，管理控制臺分兩列顯示。右列顯示的類別與組態伺服器範圍的選項和設定有關。左列顯示的類別與組態活動域有關。要變更活動域，請按一下管理控制臺左上角的<strong>管理域</strong>按鈕，並選擇另一個要管理的域。此外，頁腳的右下角提供了<strong>變更域</strong>按鈕。可使用該方法從管理控制臺的任何頁面變更活動域。
+
+域管理人只能訪問適用於域的組態設定和選項，不能訪問為系統管理人顯示的伺服器級別類專案。
+::END
+
+$NAV_MENU$=導航菜單
+$NAV_MENU_INFO$::
+導航功能表位於螢幕的左下角，提供了與 Serv-U 所有組態類別的直接鏈結。它是上下文相關的，顯示了所選組態物件（域或伺服器）的相關類別，以及當前所選類別的可擴展組態選項清單。
+::END
+
+$NAV_TABS$=選項卡式組態頁面
+$NAV_TABS_INFO$::
+當從管理控制臺打開某個類別時，所有相關的子類別頁面都在同一個螢幕上以選項卡形式顯示。這容許在相關組態選項間快速導航。
+::END
+
+$NAV_SERVU_WEB_CLIENT$=啟動 Web 使用者端
+$NAV_SERVU_WEB_CLIENT_INFO$::
+當組態 Serv-U 檔伺服器時，通過按一下頁面底部工具列內的適當啟動按鈕，可在任何時候啟動 HTTP 連線期間。如果獲得使用授權，<strong>Web 使用者端</strong>隨時可用，且可以從瀏覽器內啟動。如果獲得使用授權，也可通過按一下 <strong>FTP Voyager JV</strong> 按鈕，在 Java 運行環境中啟動 FTP Voyager JV。
+::END
+
+$NAV_SERVU_THEMES$=變更 Serv-U 中的主題
+$NAV_SERVU_THEMES_INFO$::
+“主題”按鈕，用於啟動主題功能表，位於螢幕右下角。該功能表列出了可以變更 Serv-U 外觀與風格的可用主題。只要從下拉式組框中選擇一個主題並按一下“確定”按鈕即可。不用刷新頁面就可載入這個主題。
+::END
+
+
+<!-- String table for Help-UIC-Info -->
+$UIC_HEADER$=使用者介面協定
+$UIC_INTRO$::
+Serv-U 檔伺服器使用統一的方式顯示組態選項，它不但表達了選項的當前值，也表達了該選項是否是默認（或繼承）值。傳統方式為使用所謂三態核取方塊達到上述目的。三態核取方塊有兩個主要缺點：
+::END
+$UIC_TRI_STATE_LIST$::
+默認狀態不能清晰的表達選項的當前值。在某些版本的 Windows 中，該選擇框被選取並帶灰色的背景色&mdash;&mdash;即使當前未啟用該選項！它們只能用來表示二元數值，即它們只能表示兩個數值&mdash;&mdash;開或關。
+::END
+$UIC_INTRO2$::
+Serv-U 檔伺服器使用不同的便於理解的協定克服了這些缺點。當選項從父物件中繼承值時，選項的文本將顯示為常規的非粗體文本。顯示的值（無論是文本數值還是核取方塊）隨著父物件的變更而變更，因為該值是從父物件中繼承而來。
+
+然而，如果預設值被覆蓋，則其文本將以<strong>粗體</strong>顯示。當前顯示的值始終是選項的值，而與其父物件的變更無關。
+::END
+
+$UIC_CASEFILE1_HEADER$=理解使用者介面協定
+$UIC_CASEFILE1_BODY$::
+為了更好的說明使用者介面協定，請參考以下案例文檔。
+
+Acme Technology Co. 是一家電腦維修公司，使用 Serv-U 檔伺服器向出差工程師提供對共用企業資源的全局訪問許可權。每個工程師在檔伺服器上都有自己的帳號。為便於管理使用者帳號，檔伺服器管理人使每個使用者帳號成為 "工程師" 群組的成員。該群組的管理許可權被設為<strong>無許可權</strong>，因為工程師沒有管理檔伺服器的責任。
+::END
+$UIC_CASEFILE1_BODY2$::
+一個工程師獲得升職。除了他當前的技術工作以外，他也被授予檔伺服器的管理許可權，以便協助其他工程師進行帳號管理。檔伺服器管理人只需編輯該工程師的使用者帳號，並將管理許可權變更為<strong>域管理人</strong>。該選項的文本變為粗體，表示它覆蓋了預設值（無許可權），該預設值是使用者帳號從其 "工程師" 群組成員資格中繼承得來。
+::END
+$UIC_CASEFILE1_BODY3$::
+以後，通過選擇 "管理許可權" 下拉清單中的<strong>繼承預設值</strong>選項可以將管理許可權恢復為從 "工程師" 群組繼承而來的預設值。
+::END
+
+
+<!-- String table for Help-Server-Overview -->
+$SERVER_OVERVIEW_HEADER$=伺服器概述
+
+$SERVER_OVERVIEW$::
+Serv-U 檔伺服器允許在伺服器級別組態某些設定。當在伺服器級別進行組態時，除非在更低級別修改了該組態，否則它們將應用到伺服器上的所有使用者、群組和域。可在伺服器級別進行的組態包括：目錄訪問規則、IP 訪問規則、帶寬限制、全局使用者帳號（可以登入任意 Serv-U 域的使用者帳號）等。在以下幫助頁面中列出了有關每個設定及其組態方式的詳情。
+::END
+
+
+<!-- String table for Help-IP-ACL -->
+$IP_ACL_HEADER$=IP 訪問規則
+
+$IP_ACCESS_TXT$::
+IP 訪問規則是使用者驗證的一種補充形式，它可以限制登入特定 IP 位址、IP 位址群、甚至域。可以在伺服器、域、群組和使用者級別組態 IP 訪問規則。在哪個級別指定 IP 訪問規則也決定了連接在被拒絕前可以深入到哪個程度。發送歡迎消息前應用伺服器和域級別的 IP 訪問規則。當回應 HOST 命令以連接虛擬域時也應用域級別的 IP 訪問規則。當使用者端向伺服器表明身份時，對 USER 命令的回應應用群組和使用者級別的 IP 訪問規則。
+
+指定這些規則確保了只有某些網路內的使用者端可以登入。要組態 IP 訪問規則，首先指定允許/禁止登入的使用者端。要添加規則，請按一下<strong>添加</strong>按鈕，並指定受該規則約束的 IP 位址或地址範圍。如果使用動態 DNS 服務，例如 $LINK_DNS4ME$，那麼可以指定網域名稱而不是 IP 位址，從而允許訪問沒有靜態 IP 位址的移動使用者端。也可使用反向 DNS 名稱。如果創建了網域名稱或反向 DNS 規則，Serv-U 必須執行反向 DNS 查詢或 DNS 解析以套用這些規則。這會在登入期間取決於系統 DNS 伺服器的速度，引起輕微的延遲。特殊格式允許使用範圍和萬用字元，如下所示：
+::END
+
+$IP_ACCESS_RULE_EXACT$=xxx
+$IP_ACCESS_RULE_EXACT_TXT$=精確匹配，例如 <strong>192.168.1.1</strong>。
+
+$IP_ACCESS_RULE_RANGE$=xxx-xxx
+$IP_ACCESS_RULE_RANGE_TXT$=指定範圍的 IP 地址，例如 <strong>192.168.1.10-19</strong>。
+
+$IP_ACCESS_RULE_STAR$=*
+$IP_ACCESS_RULE_STAR_TXT$=任何有效的 IP 位址值，例如 <strong>192.168.1.*</strong>，它類似於<strong>192.168.1.0-255</strong>。
+
+$IP_ACCESS_RULE_QUESTION$=?
+$IP_ACCESS_RULE_QUESTION_TXT$=指定反向 DNS 名稱的任何有效字元，例如 <strong>server?.mydomain.com</strong>。
+
+$IP_ACCESS_RULE_SLASH$=/
+$IP_ACCESS_RULE_SLASH_TXT$=斜杠分隔符允許使用 CIDR 記數法來指定應允許或阻止哪些 IP 位址。常用的 CIDR 表示法為<strong>/8 (用於 1.*.*.*)</strong>, <strong>/16 (用於 1.2.*.*)</strong>與<strong>/24 (用於 1.2.3.*)</strong>。表示法 /32 可以用來指定單個 IP 位址。
+
+$IP_ACCESS_ABOUT$::
+IP 訪問規則以顯示的順序依次應用。因此可以將特定規則置於頂部，以便在以後應用清單中更寬泛的規則前允許（或拒絕）訪問。清單右側的箭頭可用來變更清單中單個規則的位置。
+::END
+
+$IP_ACCESS_APPROVED$::
+反惡意攻擊規則無法自動阻止已出現在該清單中的允許位址。例如，本地 IP 地址 <strong>192.168.0.17</strong>
+引起 Serv-U 初始化其反惡意攻擊規則來阻止該 IP 位址，但是由於清單中已明確允許了 <strong>192.168.0.17</strong>，反惡意攻擊規則就無法自動阻止 <strong>192.168.0.17</strong>。
+
+以下為其工作原理。假設以下 IP 訪問規則： 
+
++ 192.168.0.17<br />
++ *
+
+當出現來自 <strong>192.168.0.17</strong> 的活動時, 自動 IP 阻止（通過逾時、反惡意攻擊或連線期間活動的系統管理人）無法發生，因為該 IP 位址是特別啟用的。底部的項目 * 表示允許任何人，無僅允許 <strong>192.168.0.17</strong> 這個值。如果反惡意攻擊對另一個不同的 IP 位址起效，就會將被阻止的這個 IP 位址添加到清單頂部，如下所示：
+
+- 10.10.10.1<br />
++ 192.168.0.17<br />
++ *
+
+如果要允許整塊 IP 位址，可以按照如下說明實現：
+
++ 192.168.0.1-255<br />
++ *
+
+如果反惡意攻擊規則要作用於這些位址中的任何一個，都無法阻止該 IP 位址。此處的關鍵是萬用字元 *。Serv-U 還會檢查 *.*, *.*.*, *.*.*.* 作為“任何”IP 位址。
+::END
+
+$IP_ACCESS_SORT_HEADER$=啟用排序模式
+
+$IP_ACCESS_SORT_INFO$::
+該選項允許 IP 訪問清單按數序而非處理順序進行排序。以排序模式顯示 IP 訪問清單不會變更處理規則的順序 - 要檢視規則優先順序，請禁用該選項。以數序檢視 IP 訪問清單可以作為極有價值的工具，在檢視冗長的訪問規則清單以確定條目是否存在時很有用。
+::END
+
+$IP_ACL_CASEFILE1_HEADER$=案例文檔 - 承包商
+$IP_ACL_CASEFILE1_BODY$::
+臨時雇傭了一名承包商，為了有效完成承包的工作需要訪問 Serv-U 檔伺服器。為了避免洩密，授權該承包商不能從工地辦公室之外的位置訪問伺服器。辦公室內的所有工作站分配到的 IP 地址為 192.168.10.2 到 192.168.10.254。因此，創建允許訪問規則如下所示：
+::END
+$IP_ACL_CASEFILE1_BODY2$::
+以上所示的規則允許承包商從辦公室內訪問檔伺服器，但是因為創建了 "允許訪問" 規則，因此添加了一條隱式的 "拒絕所有訪問" 規則，該規則阻止從任何其他地方使用帳號。他被授予其所處位置需要的訪問權，但管理人擁有更高的控制權，可以控制從哪里能訪問資料。
+::END
+
+$IP_ACL_CASEFILE2_HEADER$=案例文檔 - 開放式機器房
+$IP_ACL_CASEFILE2_BODY$::
+使用者需要從辦公室內訪問伺服器，但出於安全考慮不能從辦公樓內的一組開放式 PC 機房內進行登入。該機器房分配到的 IP 地址為 192.168.15.100 到 192.168.15.110。因此，創建拒絕訪問規則以拒絕對 192.168.15.100 到 192.168.15.110 的訪問。請記住因為在使用 IP 訪問規則時添加了隱式 "拒絕所有訪問" 規則，在清單末尾必須添加 "允許所有訪問" 規則允許使用者從所有其他位址範圍進行登入，這可以通過輸入允許訪問規則允許對 "*.*.*.*" 的訪問來實現。清單末尾的這條規則保證了從所有其他 IP 位址可以進行連接。
+::END
+
+$IP_ACL_CASEFILE3_HEADER$=案例文檔 - 通過名稱訪問
+$IP_ACL_CASEFILE3_BODY$::
+從 examplesite.com 域進行連接的使用者應該是唯一可以訪問該域的使用者。為了限制可以訪問該域的使用者，採用基於反向 DNS 和主機名的 IP 訪問規則。首先，創建新的訪問規則允許訪問 <strong>*.examplesite.com</strong>。
+
+<strong>注意</strong>：為使這條訪問規則起作用，相關 IP 位址的 PTR 記錄必須匹配已創建的規則。一般來說，為使連接 IP 位址擁有這樣的 PTR 記錄，連接使用者端必須從已分配了 IP 位址範圍的大型公司進行連接&mdash;&mdash;通常情況下，動態 IP 位址不能滿足要求。
+::END
+
+
+<!-- String table for Help-Database-Access -->
+$DATABASE_HEADER$=資料庫訪問
+
+$DATABASE_ACCESS_BODY1$::
+Serv-U 可以使用 ODBC 資料庫保存並維護域級別和伺服器級別的群組和使用者帳號。可在兩個地方組態 ODBC 連接：<strong>域 | 域詳情 | 資料庫</strong>和<strong>伺服器 | 伺服器詳情 | 資料庫</strong>。Serv-U 可以自動創建所有需要的表和列以便開始在資料庫中保存使用者和群組。因為 Serv-U 使用一組表格名來存儲資訊，所以必須為在資料庫中保存詳細資訊的每個專案單獨組態 ODBC 連接。換句話說，伺服器和每個域必須有唯一的 ODBC 連接以確保分別對其進行存儲。要組態資料庫，請按以下步驟作業：
+::END
+
+$DATABASE_PREP_LIST1$::
+創建 ODBC 連接供 Serv-U 使用。RhinoSoft.com 推薦使用 MySQL，但也可使用任何具有 Windows ODBC 驅動程式的資料庫。如果 Serv-U 作為系統服務運行則使用系統 DSN，如果作為常規應用程式運行則使用使用者 DSN。打開 Serv-U 管理控制臺，轉到相應的域或伺服器資料庫設定。輸入資料源名稱（DSN）、登入 ID 和密碼，並按一下<strong>保存</strong>。
+::END
+
+$DATABASE_ACCESS_BODY2$::
+如果是首次配製資料庫連接，請選取<strong>自動創建</strong>選項。選取該選項後，Serv-U 檔伺服器自動構建資料庫表格和列。
+::END
+
+$DB_SQL_TEMPLATES$=SQL 範本
+$DB_SQL_TEMPLATES_TXT$::
+Serv-U 使用多個查詢來維護包含使用者和群組資訊的資料庫。這些查詢符合 SQL 語言標準。然而，如果您使用的資料庫與 Serv-U 的協作有問題，可能需要變更這些查詢。從 SQL 範本對話方塊，可以特別定制 Serv-U 使用的每條查詢以符合資料庫支援的標準。
+
+<strong>注意：</strong>不正確地編輯這些 SQL 查詢可能導致 Serv-U 內不再支持 ODBC。除非您擅長編寫 SQL 語句，並肯定有必要啟用資料庫軟體的 ODBC 支援，否則請勿擅自改動這些查詢。
+::END
+
+$DB_TABLE_MAPPINGS$=使用者和群組表格映射
+$DB_TABLE_MAPPINGS_TXT$::
+默認情況下，Serv-U 自動創建並維護在資料庫中存儲使用者和群組資訊所必需的表格和列。但如果試圖將 Serv-U 連接到包含此資訊的現有資料庫，您需要定制表格和列的名稱以符合現有資料庫的結構。首先按一下<strong>使用者表格映射</strong>或<strong>群組表格映射</strong>。
+
+Serv-U 在10個不同表格中保存使用者或群組的資訊。只有使用者/群組資訊表和使用者/群組目錄訪問表是必需的。可以從<strong>物件表</strong>下拉清單變更當前表格。<strong>屬性</strong>列列出了當前表格中存儲的屬性。<strong>資料庫映射值</strong>顯示資料庫中屬性所映射到的列名。首行總是顯示 "表格名"，並可用來變更表格的名稱。
+
+某些表格中的條目順序至關重要，這些表格列出了<strong>排序列</strong>屬性。該列用於保存規則應用的順序。
+
+按一下<strong>編輯</strong>按鈕，或按二下列名以編輯值。
+::END
+
+$DB_TABLE_MAPPINGS_TXT2$::
+<strong>啟用</strong>後, 可以在需要時訪問該表格。在特殊情況下，可以禁用未被使用的表格，以此來減少 ODBC（資料庫）調用數。例如，如果不使用上傳/下載率與配額，可以禁用“使用者上傳/下載率不限檔案”表，“每個使用者的檔上傳/下載率”表，“每個使用者的位元組上傳/下載率”表，以及“每個連線期間的位元組上傳/下載率”表，防止不必要的 ODBC 調用。禁用表格時請格外小心，因為在對話方塊中會出現欄位，但不保存或載入它們。無法禁用“使用者資訊”與“群組資訊”表格。
+::END
+
+$DATABASE_ACCESS_CASEFILE1_HEADER1$=案例文檔 - ODBC 驗證
+$DATABASE_ACCESS_CASEFILE1_BODY1$::
+通過 ODBC 資料庫可以在 Serv-U 檔伺服器中進行驗證，允許腳本式帳號管理和維護。為了使用 ODBC 功能，請轉到資料庫的 ODBC 驗證。通過將信任書存入資料庫的設定中，就可以在 Serv-U 管理控制臺外部由腳本式資料庫作業管理帳號，該作業可以嵌入許多現存的帳號設定系統中。必須首先在 控制臺 | 管理工具 | 資料源（ODBC）中創建 DSN&mdash;&mdash;如果 Serv-U 作為服務運行則使用系統 DSN，否則如果 Serv-U 作為應用程式運行則使用使用者 DSN。一旦創建了正確的 DSN 後，請指定資料源名、登入 ID 和密碼並選擇<strong>保存</strong>。Serv-U 透明地創建表和列。可以從 Serv-U 的資料庫使用者和資料庫群組區域（位於普通使用者和群組選項卡旁）管理資料庫使用者和群組．
+::END
+
+
+<!-- String table for Help-Events -->
+$EVENTS_HEADER$=Serv-U 事件
+
+$EVENTS_BODY1$::
+Serv-U 允准使用事件處理，執行各種由選取的事件清單所觸發的作業。以下是管理人可以使用的作業：
+::END
+
+$EVENTS_SERVER$=伺服器事件
+$EVENTS_LIST1$::
+$SUEVENT_ID_SERVER_START_TEXT$
+$SUEVENT_ID_SERVER_STOP_TEXT$
+::END
+
+$EVENTS_SERVER_DOMAIN$=伺服器和域事件
+$EVENTS_LIST2$::
+$SUEVENT_ID_DOMAIN_START_TEXT$
+$SUEVENT_ID_DOMAIN_STOP_TEXT$
+$SUEVENT_ID_SESSION_CONNECT_TEXT$
+$SUEVENT_ID_SESSION_DISCONNECT_TEXT$
+$SUEVENT_ID_SESSION_CONNECT_FAILURE_TEXT$
+::END
+
+$EVENTS_LIST2_FUTURE_FEATURE$::
+$SUEVENT_ID_LOG_DELETED_TEXT$
+::END
+
+$EVENTS_ALL$=伺服器，域，使用者和群組事件
+$EVENTS_LIST3$::
+$SUEVENT_ID_USER_LOGIN_TEXT$
+$SUEVENT_ID_USER_LOGOUT_TEXT$
+$SUEVENT_ID_USER_LOGIN_FAILURE_TEXT$
+$SUEVENT_ID_USER_PASSWORD_CHANGE_TEXT$
+$SUEVENT_ID_USER_PASSWORD_CHANGE_FAILURE_TEXT$
+$SUEVENT_ID_USER_ENABLED_TEXT$
+$SUEVENT_ID_USER_DISABLED_TEXT$
+$SUEVENT_ID_USER_DELETED_TEXT$
+$SUEVENT_ID_USER_ADDED_TEXT$
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_SENT_TEXT$
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_FAILED_TEXT$
+$SUEVENT_ID_IP_BLOCKED_TEXT$
+$SUEVENT_ID_IP_BLOCKED_TIME_TEXT$
+$SUEVENT_ID_TOO_MANY_SESSIONS_TEXT$
+$SUEVENT_ID_TOO_MANY_SESSIONS_ON_IP_TEXT$
+::END
+$EVENTS_LIST3_2$::
+$SUEVENT_ID_FILE_UPLOAD_TEXT$
+$SUEVENT_ID_FILE_UPLOAD_FAIL_TEXT$
+$SUEVENT_ID_FILE_DOWNLOAD_TEXT$
+$SUEVENT_ID_FILE_DOWNLOAD_FAIL_TEXT$
+$SUEVENT_ID_FILE_DELETE_TEXT$
+$SUEVENT_ID_FILE_MOVE_TEXT$
+$SUEVENT_ID_DIR_CREATE_TEXT$
+$SUEVENT_ID_DIR_DELETE_TEXT$
+$SUEVENT_ID_DIR_CHANGE_TEXT$
+$SUEVENT_ID_DIR_MOVE_TEXT$
+$SUEVENT_ID_QUOTA_OVERAGE_TEXT$
+$SUEVENT_ID_DISK_SPACE_OVERAGE_TEXT$
+::END
+
+$EVENTS_ACTIONS$=事件作業
+$EVENTS_BODY2$::
+當一個事件觸發時，管理人可以從三個不同的作業中選取一個執行。以下是這些作業的清單：
+::END
+
+$EVENTS_LIST4$::
+$SUEVENT_ACTION_EMAIL_TEXT$
+$SUEVENT_ACTION_BALLOON_TIP_TEXT$（僅伺服器管理人）
+$SUEVENT_ACTION_EXEC_TEXT$（僅伺服器管理人） 
+::END
+
+$EVENTS_EMAIL_ACTION$=電子信件作業
+$EVENTS_BODY3$::
+可以組態電子信件作業在事件觸發時發送信件。電子信件作業包含“收信人”，“主題”以及“正文”參數。特殊變數可以用於發送與事件相關的特定資料。請參考這些變數的清單，其位於"<a href="Help-System-Variables.htm">系統變數</a>"下。
+::END
+$FUTURE_FEATURE_EVENTS_BODY3$::
+可以組態電子信件作業在事件觸發時向多個收信人與 Serv-U 群組發送電子信件。要添加電子信件位址，請在“收件人”或“密送”欄位中輸入。要向 Serv-U 群組發送信件，請使用“群組”圖示以從分發清單中添加或移除 Serv-U 群組。必須使用逗號或分號分隔電子信件位址。電子信件作業包含“收信人”，“主題”與“正文”參數。特殊變數可以用於發送與事件相關的特定資料。請參考這些變數的清單，其位於"<a href="Help-System-Variables.htm">系統變數</a>"之下。
+::END
+
+$EVENTS_BALLOON_ACTION$=氣球提示作業
+$EVENTS_BODY4$::
+可以將氣球提示作業組態為在事件觸發時在系統託盤中顯示氣球提示。氣球提示作業包含“氣球標題”和“氣球消息”參數。特殊變數可以用於發送事件的詳細資料。請參考這些變數的清單，其位於"<a href="Help-System-Variables.htm">系統變數</a>"下。
+::END
+
+$EVENTS_EXEC_ACTION$=執行命令作業
+$EVENTS_BODY5$::
+可以將執行命令作業組態為在事件觸發時在檔案上執行命令。執行命令作業包含“可執行程式路徑”和“命令行參數”參數。特殊變數可以用於發送事件的詳細資料。請參考這些變數的清單，其位於"<a href="Help-System-Variables.htm">系統變數</a>"下。
+::END
+
+$EVENTS_COMMON$=創建常規事件
+$EVENTS_COMMON_BODY$::
+Serv-U 允准管理人自動創建最常規事件的清單。您可以選擇使用電子信件和/或氣球提示作業來創建這些常規事件。只要按一下位於“事件”標籤的“創建常規事件”按鈕即可。選擇“發送電子信件”或“顯示氣球提示”單選按鈕來執行您要對常規事件採取的作業。如果您選擇“發送電子信件”，您必須輸入該事件將被發往的“收信人：”位址。
+::END
+
+
+<!-- String table for Help-Events -->
+$SMTP_CONFIG_HEADER$=Serv-U SMTP 組態
+
+$SMTP_CONFIG_BODY$::
+Serv-U 允准管理人組態 SMTP 連接來為組態為要使用電子信件作業的事件發送信件。SMTP 可以組態為伺服器和/或域級別。域級別的 SMTP 組態可以從伺服器級別繼承。SMTP 組態對話方塊位於“域詳細資訊”與“伺服器詳細資訊”頁面的“事件”標籤中。只要按一下“組態 SMTP”按鈕就能啟動該對話方塊。
+::END
+
+$SMTP_CONFIG_SERVER_INFO$=SMTP 伺服器資訊
+$SMTP_CONFIG_SERVER_INPUT$::
+SMTP 伺服器 - SMTP 伺服器的名稱或 IP 地址。
+SMTP 伺服器埠 - 正在使用的 smtp 伺服器埠。
+從電子信件位址 - 用於出站信件的電子信件位址。
+::END
+
+$SMTP_CONFIG_FROM_NAME$::
+從名稱（可選）- 用於出站信件的名稱。
+::END
+
+$SMTP_CONFIG_SERVER_AUTH$::
+我的伺服器需要驗證 - 要啟用驗證請勾選該選框。
+::END
+
+$SMTP_CONFIG_SSL_CONN$::
+此伺服器需要安全連接（SSL）——某些 SMTP 伺服器要求所有的入站連接都進行加密以防範可能遭受的攻擊。如果您的伺服器需要加密入站 SMTP 連接，請啟用此選項。用於加密 SMTP 連接的預設埠是 465。Serv-U 只支援隱式 SSL，不支援顯式 SSL（埠 587）。
+::END
+
+
+
+$SMTP_CONFIG_AUTH_INFO$=驗證信息
+$SMTP_CONFIG_AUTH_BODY$::
+如果您的 SMTP 伺服器要求驗證，您必須輸入以下資訊：
+::END
+$SMTP_CONFIG_AUTH_INPUT$::
+從電子信件位址 - 用於驗證的電子信件位址。
+使用安全密碼驗證 - 啟用密碼驗證來檢查該框。
+::END
+
+<!-- String table for Help-License-Details -->
+$LICENSE_DETAILS_HEADER$=許可證資訊
+
+$LICENSE_DETAILS_BODY1$::
+許可證詳細資訊選項卡中顯示了 Serv-U 檔伺服器使用的當前註冊 ID 中包含的資訊。如果安裝的是試用版，則將同時顯示剩餘試用天數的資訊。該選項卡上包含的資訊包括：
+::END
+
+$LICENSE_DETAILS_NAME$=名稱
+$LICENSE_DETAILS_NAME_TXT$=與當前許可證相關的名稱。
+
+$LICENSE_DETAILS_EMAIL$=電子信件位址
+$LICENSE_DETAILS_EMAIL_TXT$=與當前許可證相關的電子信件位址。
+
+$LICENSE_DETAILS_EDITION$=Serv-U 版本
+$LICENSE_DETAILS_EDITION_TXT$=當前許可證啟用的 Serv-U 版本。參見 $LINK_HELP_EDITIONS$ 以瞭解更多資訊。
+
+$LICENSE_DETAILS_COPIES$=份數
+$LICENSE_DETAILS_COPIES_TXT$=當前許可證允許的併發安裝數量。
+
+$LICENSE_DETAILS_DATE$=購買日期
+$LICENSE_DETAILS_DATE_TXT$=當前許可證的購買日期。
+
+$LICENSE_DETAILS_UPDATES$=更新
+$LICENSE_DETAILS_UPDATES_TXT$=當前許可證允許免費更新到最新版本的截止日期。如果作為試用版運行，則顯示剩餘的試用天數。
+
+$LICENSE_DETAILS_INFO$=版本資訊
+$LICENSE_DETAILS_INFO_TXT$=顯示獲得授權的 Serv-U 版本所啟用的功能和限制。
+
+$LICENSE_DETAILS_PRODUCTS$=更多產品
+$LICENSE_DETAILS_PRODUCTS_TXT$=Serv-U 的附加插件及其是否啟用。
+
+$LICENSE_DETAILS_REGISTER_HEADER1$=註冊 Serv-U
+$LICENSE_DETAILS_REGISTER_BODY1$::
+要註冊 Serv-U 檔伺服器，請按一下底部工具列上的<strong>註冊</strong>按鈕，並輸入由文字和數位組成的註冊 ID。如果您遺失了 ID，請按一下<strong>丟失 ID</strong> 按鈕以便獲得幫助找回 ID。如果您需要購買 ID，請按一下<strong>購買</strong>按鈕訪問我們的網站來購買 ID。
+::END
+
+
+<!-- String table for Help-Prog-Info -->
+$PROG_INFO_HEADER$=程式資訊
+$PROG_INFO_BODY$::
+程式資訊選項卡顯示了有關伺服器上當前安裝的 Serv-U 版本的資訊，包括：
+::END
+
+$PROG_INFO_BUILD$=構建日期
+$PROG_INFO_BUILD_TXT$::
+當前安裝軟體的構建日期
+::END
+
+$PROG_INFO_INSTALL$=安裝日期
+$PROG_INFO_INSTALL_TXT$::
+Serv-U 第一次安裝在電腦上的初始日期。
+::END
+
+$PROG_INFO_VERSION$=Serv-U 檔伺服器版本編號
+$PROG_INFO_VERSION_TXT$::
+當前安裝的完整版本編號。
+::END
+
+$PROG_INFO_CONTACT$=接洽資訊
+$PROG_INFO_CONTACT_TXT$::
+RhinoSoft.com 的接洽資訊。如果您使用非英語語言管理 Serv-U，則將提供負責翻譯的 RhinoSoft.com 授權經銷商的接洽資訊。
+::END
+
+$PROG_INFO_DEV$=開發資訊
+$PROG_INFO_DEV_TXT$::
+Serv-U 檔伺服器的開發和本地化（如果適用）資訊。
+::END
+
+$PROG_INFO_LEGAL$=法律免責聲明
+$PROG_INFO_LEGAL_TXT$::
+Serv-U 法律免責聲明。
+::END
+
+
+<!-- String table for Help-Limits-Settings-XXXXX -->
+$LIMITS_SETTINGS_HEADER$=限制和設定
+
+$LIMITS_SETTINGS_BASICS_BODY1$::
+Serv-U 提供了進階選項用來定制它的使用方式，以及將限制和定制設定應用於整個 Serv-U 內的<strong>使用者</strong>、<strong>群組</strong>、<strong>域</strong>和<strong>伺服器</strong>的方法。限制能智慧化地迭加，使得使用者設定覆蓋群組設定，群組設定覆蓋域設定，而域設定覆蓋伺服器設定。此外，只能在一星期的某幾天或一天的某些時間內應用限制。可以授予管理人例外許可權，並對特定使用者比其他使用者作出更多限制，從而完全控制伺服器。Serv-U 內的限制和設定分為5類：<strong>連接</strong>、<strong>密碼</strong>、<strong>目錄清單</strong>、<strong>資料傳輸</strong>和<strong>進階</strong>。
+
+要應用限制，請選擇相應的類別，按一下<strong>添加</strong>按鈕，選擇限制，然後選擇或輸入限制值。例如，要禁用域的<strong>鎖定使用者至根目錄</strong>選項，請按以下步驟執行：
+::END
+
+$LIMITS_SETTINGS_BASICS_LIST1$::
+從 Serv-U 管理控制臺選擇域限制和設定鏈結。
+從 "限制類型" 下拉清單選擇<strong>目錄清單</strong>。
+按一下<strong>添加</strong>按鈕。
+從 "限制" 下拉清單選擇<strong>鎖定使用者至根目錄</strong>。
+取消選取該選項。
+按一下<strong>保存</strong>按鈕。
+::END
+
+$LIMITS_SETTINGS_BASICS_BODY2$::
+限制清單顯示了應用到域上的當前限制。帶淡藍色背景的限制為預設值。帶白色背景的限制值覆蓋預設值。完成以上步驟後，清單中出現新的<strong>鎖定使用者至根目錄</strong>限制條目，其值顯示為 "否"。由於繼承規則，除非在群組或使用者級別被覆蓋，否則該選項將應用於域內所有使用者。有關該繼承方式的更多資訊，請參見幫助文檔的 $LINK_HELP_UIC$ 小節。
+
+通過選擇限制並按一下<strong>移除</strong>按鈕可以移除限制。要編輯被覆蓋的值，請選擇限制並按一下<strong>編輯</strong>按鈕。默認規則不能被編輯或移除。創建新的限制以覆蓋預設值。
+
+要創建限定於一天的特定時段或一星期的特定日子的限制，請從新建／編輯限制對話方塊中按一下<strong>進階</strong>按鈕。附加的選項使您可以<strong>僅在該時間內應用限制</strong>，在此可以輸入新限制的開始和結束時間。要將限制限定於一星期的某幾天，請取消選取您不希望應用限制的日子旁的核取方塊。當以這種方法對限制作出限定時，如果不滿足該限制的時間或日期的限定，則應用預設值（或限制的其他覆蓋值）。
+::END
+
+$LIMITS_SETTINGS_SERVER$::
+以下是所有可用<strong>伺服器</strong>限制的說明，按類別歸類。
+::END
+$LIMITS_SETTINGS_DOMAIN$::
+以下是所有可用<strong>域</strong>限制的說明，按類別歸類。
+::END
+$LIMITS_SETTINGS_GROUP$::
+以下是所有可用<strong>群組</strong>限制的說明，按類別歸類。
+::END
+$LIMITS_SETTINGS_USER$::
+以下是所有可用<strong>使用者</strong>限制的說明，按類別歸類。
+::END
+
+$CONNECTION_LS_HEADER$=連接
+$CONNECTION_LS_USER_GROUP_LIST_HEADER$=連接
+
+$CONNECTION_LS_HOMEDIR$=自動創建根目錄
+$CONNECTION_LS_HOMEDIR_TXT$::
+指示 Serv-U 在創建新使用者帳號時，如果目錄不存在，是否自動創建指定的根目錄。
+::END
+
+$CONNECTION_LS_ANTI_TIMEOUT$=阻止反逾時方案
+$CONNECTION_LS_ANTI_TIMEOUT_TXT$::
+阻止使用 "NOOP" 之類的命令，該命令通常用於在傳輸冗長檔案或其他閒置時段保持 FTP 命令通道連接開放，此時在控制通道上沒有資訊傳輸。當阻止了這些命令時，Serv-U 在連接空閒（例如無資料傳輸）了指定的一段時間後斷開使用者端的連接。
+::END
+
+$CONNECTION_LS_IDLE$=自動空閒連接逾時
+$CONNECTION_LS_IDLE_TXT$::
+指定最後一次使用者端資料傳輸後，因空閒而斷開連線期間前，必須間隔的分鐘數。
+::END
+
+$CONNECTION_LS_SERVER_SESSIONS$=伺服器上的最大連線期間數
+$CONNECTION_LS_SERVER_SESSIONS_TXT$::
+指定整個伺服器上所允許的最大併發連線期間數。
+::END
+
+$CONNECTION_LS_SERVER_IP_SESSIONS$=伺服器上每個 IP 位址的最大連線期間數
+$CONNECTION_LS_SERVER_IP_SESSIONS_TXT$::
+指定單個 IP 位址在整個伺服器上可以打開的最大併發連線期間數。
+::END
+
+$CONNECTION_LS_USER_IP_SESSIONS$=使用者帳號的每個 IP 位址的最大連線期間數
+$CONNECTION_LS_USER_IP_SESSIONS_TXT$::
+指定使用者從單個 IP 位址可以打開的最大併發連線期間數。
+::END
+
+$CONNECTION_LS_USER_SESSIONS$=每個使用者帳號的最大連線期間數
+$CONNECTION_LS_USER_SESSIONS_TXT$::
+指定單個使用者帳號可以打開的最大併發連線期間數。
+::END
+
+$CONNECTION_LS_SECURE$=登入前需要安全連接
+$CONNECTION_LS_SECURE_TXT$::
+要求被接受的連接必須是安全的（例如 FTPS、SFTP 或 HTTPS）。
+::END
+
+$CONNECTION_LS_TIMEOUT$=自動連線期間逾時
+$CONNECTION_LS_TIMEOUT_TXT$::
+指定連線期間被伺服器斷開前允許持續的分鐘數。
+::END
+
+$CONNECTION_LS_BLOCK_IP_SESSION_TIMEOUT$=阻止逾時連線期間的 IP 地址
+$CONNECTION_LS_BLOCK_IP_SESSION_TIMEOUT_TXT$::
+指定阻止逾時連線期間 IP 地址的分鐘數。
+::END
+
+$CONNECTION_LS_ALLOW_XFORWARDED_FOR$=允許 X-Forwarded-For變更HTTP 連接 IP 位址
+$CONNECTION_LS_ALLOW_XFORWARDED_FOR_TXT$::
+啟用時，"X-Forwarded-For" HTTP 報頭參數變更 Serv-U 使用者端的 IP 地址。在所有 HTTP 連接來自代理伺服器或負載等化器時，這極為有用。代理伺服器與負載等化器通常將這一參數附加至 HTTP 報頭，這樣 HTTP 伺服器就可識別實際的使用者端 IP 地址並套用所需的安全規則。
+::END
+
+$CONNECTION_LS_REQUIRE_PTR$=需要反向 DNS 名稱
+$CONNECTION_LS_REQUIRE_PTR_TXT$::
+要求連接至伺服器的使用者從具有有效反向 DNS 名稱（也稱作 PTR 記錄）的 IP 位址連接。檢查有效 PTR 記錄的存在，不檢查其內容。
+::END
+
+$CONNECTION_LS_ALLOW_FTP_FTPS$=允許 FTP 與 FTPS 連接
+$CONNECTION_LS_ALLOW_FTP_FTPS_TXT$::
+允許使用者使用 FTP 與 FTPS 協定進行連接。取消勾選“允許 FTP 與 FTPS 連接”將禁用 FTP 與 FTPS 協定。
+::END
+
+$CONNECTION_LS_ALLOW_SFTP$=允許 SFTP 連接
+$CONNECTION_LS_ALLOW_SFTP_TXT$::
+允許使用者使用 SFTP 協定進行連接。取消勾選“允許 SFTP 連接”將禁用 SFTP 協定。
+::END
+
+$CONNECTION_LS_ALLOW_HTTP_HTTPS$=允許 HTTP 與 HTTPS 連接
+$CONNECTION_LS_ALLOW_HTTP_HTTPS_TXT$::
+允許使用者使用 HTTP 與 HTTPS 協定進行連接。取消勾選“允許 HTTP 與 HTTPS 連接”將禁用 HTTP 與 HTTPS 協定。
+::END
+
+$CONNECTION_LS_DOMAIN_SESSIONS$=域上的最大連線期間數
+$CONNECTION_LS_DOMAIN_SESSIONS_TXT$::
+指定當前域上所允許的最大併發連線期間數。
+::END
+
+$CONNECTION_LS_DOMAIN_IP_SESSIONS$=域上每個 IP 位址的最大連線期間數
+$CONNECTION_LS_DOMAIN_IP_SESSIONS_TXT$::
+指定單個 IP 位址在當前域上可以打開的最大併發連線期間數。
+::END
+
+$CONNECTION_LS_GROUP_SESSIONS$=群組的最大連線期間數
+$CONNECTION_LS_GROUP_SESSIONS_TXT$::
+指定作為群組成員的所有使用者可以進行的最大併發連線期間數。
+::END
+
+$CONNECTION_LS_GROUP_IP_SESSIONS$=群組的每個 IP 位址的最大連線期間數
+$CONNECTION_LS_GROUP_IP_SESSIONS_TXT$::
+指定群組的所有使用者從單個 IP 位址可以打開的最大併發連線期間數。
+::END
+
+$PASSWORD_LS_HEADER$=密碼
+
+$PASSWORD_LS_ANON_PASS$=檢查匿名密碼
+$PASSWORD_LS_ANON_PASS_TXT$::
+指定匿名登入時 Serv-U 是否該驗證作為密碼提供的電子信件位址。
+::END
+
+$PASSWORD_LS_ENCRYPT_PASS$=密碼加密模式
+$PASSWORD_LS_ENCRYPT_PASS_TXT$::
+指定使用者密碼上的密碼加密級別。這些選項為：“單向加密（更安全）”：完全加密密碼且無法反向，“簡單的雙向加密（不太安全）”：以可以反向的格式加密密碼以便輕鬆恢復，以及“無加密（不推薦）”：以明文存儲密碼。變更該設定時，不更新現有密碼，並且必須再次保存以使用新格式存儲。
+::END
+
+$PASSWORD_LS_USER_PASS_RECOVERY$=允許使用者恢復密碼
+$PASSWORD_LS_USER_PASS_RECOVERY_TXT$::
+若啟用，允許使用者使用 Web 使用者端登入頁面上的密碼恢復工具恢復密碼。
+::END
+
+$PASSWORD_LS_MASK_PASS$=在記錄檔中遮罩接收到的密碼
+$PASSWORD_LS_MASK_PASS_TXT$::
+遮罩從使用者端接收到的密碼，使其不顯示在記錄檔檔中。禁用該選項允許在記錄檔檔中顯示密碼，這有助於調試連接問題或審計使用者帳號的安全性。
+::END
+
+$PASSWORD_LS_MIN_PASS_LEN$=最短密碼長度
+$PASSWORD_LS_MIN_PASS_LEN_TXT$::
+指定使用者帳號的密碼需要的最小字元數。指定０個字元表示無最小要求。
+::END
+
+$PASSWORD_LS_CHANGE_PASS$=允許使用者變更密碼
+$PASSWORD_LS_CHANGE_PASS_TXT$::
+指定是否允許使用者變更其自身的密碼。
+::END
+
+$PASSWORD_LS_EXPIRE_PASS$=密碼自動過期
+$PASSWORD_LS_EXPIRE_PASS_TXT$::
+指定密碼在必須作出變更前的有效天數。指定０天表示密碼永不過期。
+::END
+
+$PASSWORD_LS_COMPLEX_PASS$=需要複雜密碼
+$PASSWORD_LS_COMPLEX_PASS_TXT$::
+指定所有使用者帳號的密碼必須包含至少一個大寫字元和一個非字母字元才被認為有效。
+::END
+
+$PASSWORD_LS_SSH_AUTH_TYPE$=SSH 驗證類型
+$PASSWORD_LS_SSH_AUTH_TYPE_TXT$::
+指定 SSH 驗證發生的類型。這些選項包括：“密碼與公共密鑰” - 需要密碼和公共密鑰（指定時）來登入；“密碼或公共密鑰” - 需要密碼或公共密鑰來登入；“僅公共密鑰” - 需要提供公共密鑰來成功登入，不允許使用密碼；“僅密碼” - 需要提供密碼來成功登入，不允許使用公共密鑰。
+::END
+
+$DIRECTORY_LISTING_LS_HEADER$=目錄清單
+
+$DIR_LIST_HIDE_HIDDEN$=使標記為隱藏的檔不顯示在清單中
+$DIR_LIST_HIDE_HIDDEN_TXT$::
+從目錄清單中隱藏檔和資料夾，其 Windows 系統屬性設定為 "隱藏"。
+::END
+
+$DIR_LIST_LOCK_HOMEDIR$=鎖定使用者至根目錄
+$DIR_LIST_LOCK_HOMEDIR_TXT$::
+鎖定使用者至其根目錄，並禁止使用者瀏覽上級資料夾．此外，其根目錄顯示為 "／" 而遮罩了真正的物理位置。
+::END
+
+$DIR_LIST_USE_LOWER$=檔案名和目錄使用小寫
+$DIR_LIST_USE_LOWER_TXT$::
+強制 Serv-U 以小寫字元顯示所有檔案名和目錄，而不管檔或目錄使用的真正大小寫。
+::END
+
+$DIR_LIST_UNLOCK_ROOT$=允許未鎖定的使用者使用根符號（"/"）列出驅動器
+$DIR_LIST_UNLOCK_ROOT_TXT$::
+允許使用者將目錄變更為系統的根目錄（"\"）並顯示電腦上的所有驅動器。只有當未鎖定使用者至根目錄時，該選項才有用。
+::END
+
+$DIR_LIST_TREAT_SHORTCUTS$=將 Windows 快捷方式作為鏈結目標處理
+$DIR_LIST_TREAT_SHORTCUTS_TXT$::
+指示 Serv-U 將所有有效的 .lnk（快捷方式）檔作為 UNIX 符號鏈結處理。
+::END
+
+$DIR_LIST_SHORTCUT_LINKS$=將 Windows 快捷方式轉譯為鏈結
+$DIR_LIST_SHORTCUT_LINKS_TXT$::
+指示 Serv-U 將所有有效的 .lnk 檔作為實際的目的物件處理。換句話說，如果某個 .lnk 檔指向另一個檔，則在目錄清單中顯示的是目的檔而不是 .lnk 檔自身。
+::END
+
+
+$DIR_LIST_COMP_STATE$=隱藏檔案與目錄的壓縮狀態。
+$DIR_LIST_COMP_STATE_TXT$::
+隱藏正在被使用者檢視的所有已壓縮檔與目錄的壓縮狀態。
+::END
+
+
+$DIR_LIST_ENCRYPT_STATE$=隱藏檔案與目錄的加密狀態。
+$DIR_LIST_ENCRYPT_STATE_TXT$::
+隱藏正在被使用者檢視的所有已加密檔與目錄的加密狀態。
+::END
+
+$DATA_TRANSFER_LS_HEADER$=資料傳輸
+
+$DATA_TRANSFER_DELETE_PARTIAL$=移除部分上傳的檔
+$DATA_TRANSFER_DELETE_PARTIAL_TXT$::
+指示 Serv-U 移除未完整上傳的檔。如果啟用該選項，使用者就不能使用 REST（重啟）FTP 命令重啟中斷的上傳。
+::END
+
+$DATA_TRANSFER_SERVER_MAX_DL$=伺服器的最大下載速度
+$DATA_TRANSFER_SERVER_MAX_DL_TXT$::
+限制了伺服器範圍內所有下載可用的最大帶寬。設定０千位元組／秒表示無限帶寬。
+::END
+
+$DATA_TRANSFER_SERVER_MAX_UL$=伺服器的最大上傳速度
+$DATA_TRANSFER_SERVER_MAX_UL_TXT$::
+限制了伺服器範圍內所有上傳可用的最大帶寬。設定０千位元組／秒表示無限帶寬。
+::END
+
+$DATA_TRANSFER_MAX_SESSION_DL$=每個連線期間的最大下載速度
+$DATA_TRANSFER_MAX_SESSION_DL_TXT$::
+為每個單獨的連線期間限制最大下載帶寬。設定０千位元組／秒表示無限帶寬。
+::END
+
+$DATA_TRANSFER_MAX_SESSION_UL$=每個連線期間最大上傳速度
+$DATA_TRANSFER_MAX_SESSION_UL_TXT$::
+為每個單獨的連線期間限制最大上傳帶寬。設定０千位元組／秒表示無限帶寬。
+::END
+
+$DATA_TRANSFER_MAX_USER_DL$=使用者帳號的最大下載速度
+$DATA_TRANSFER_MAX_USER_DL_TXT$::
+限制與單個使用者帳號相關的所有連線期間間共用的最大下載帶寬。設定０千位元組／秒表示無限帶寬。
+::END
+
+$DATA_TRANSFER_MAX_USER_UL$=使用者帳號的最大上傳速度
+$DATA_TRANSFER_MAX_USER_UL_TXT$::
+限制與單個使用者帳號相關的所有連線期間間共用的最大上傳帶寬。設定０千位元組／秒表示無限帶寬。
+::END
+
+$DATA_TRANSFER_MAX_UL_SIZE$=最大上傳檔案大小
+$DATA_TRANSFER_MAX_UL_SIZE_TXT$::
+限制使用者可以上傳到 Serv-U 的最大單個檔案大小。檔案大小以千位元組計算。
+::END
+
+$DATA_TRANSFER_INTERPRET_LINE_FEED$=在 ASCII 模式中將換行位元組解釋為新行
+$DATA_TRANSFER_INTERPRET_LINE_FEED_TXT$::
+在使用 ASCII 模式上傳與下載檔案時，Serv-U 將假定 &lt;LF&gt; 字元與 &lt;CR&gt;&lt;LF&gt; 行尾標記相同。大部分 Windows 套用程式就如 FTP 協定一樣，認為 &lt;CR&gt;&lt;LF&gt; 表示新行。不過，由於在 Windows 中並未完全定義新行序列，這一選項允許 Serv-U 假定 &lt;LF&gt; 與 &lt;CR&gt;&lt;LF&gt; 相同。在使用 ASCII 模式上傳時，在寫到檔案之前將單獨的 &lt;LF&gt; 字元變更為 &lt;CR&gt;&lt;LF&gt。在使用 ASCII 模式下載時，在發送到使用者端之前將單獨的 &lt;LF> 字元變更為 &lt;CR&gt;&lt;LF&gt;。
+::END
+
+$DATA_TRANSFER_DOMAIN_MAX_DL$=域的最大下載速度
+$DATA_TRANSFER_DOMAIN_MAX_DL_TXT$::
+限制了域範圍內所有下載可用的最大帶寬。設定０千位元組／秒表示無限帶寬。
+::END
+
+$DATA_TRANSFER_DOMAIN_MAX_UL$=域的最大上傳速度
+$DATA_TRANSFER_DOMAIN_MAX_UL_TXT$::
+限制了域範圍內所有上傳可用的最大帶寬。設定０千位元組／秒表示無限帶寬。
+::END
+
+$DATA_TRANSFER_GROUP_MAX_DL$=所有群組成員的最大下載速度
+$DATA_TRANSFER_GROUP_MAX_DL_TXT$::
+限制了群組所有成員的所有下載能佔用的最大總帶寬。設定０千位元組／秒表示無限帶寬。
+::END
+
+$DATA_TRANSFER_GROUP_MAX_UL$=所有群組成員的最大上傳速度
+$DATA_TRANSFER_GROUP_MAX_UL_TXT$::
+限制了群組所有成員的所有上傳能佔用的最大總帶寬。設定０千位元組／秒表示無限帶寬。
+::END
+
+$ADVANCED_LS_HEADER$=進階
+
+$ADVANCED_CHECK_DIRSIZE$=上傳時自動檢查目錄大小
+$ADVANCED_CHECK_DIRSIZE_TXT$::
+指示 Serv-U 不時檢查目錄大小，並指定了最大目錄尺寸。該屬性確保 Serv-U 總備有最新的目錄尺寸，而不用在傳輸時進行計算，在傳輸時進行計算是一項費時的作業。
+::END
+
+$ADVANCED_URL_CHARS$=將命令中的 URL 字元轉換為 ASCII
+$ADVANCED_URL_CHARS_TXT$::
+指示 Serv-U 將命令參數中包含的特殊字元轉換為純 ASCII 文本。某些 Web 瀏覽器在使用 FTP 通訊協定時，能對檔案名和目錄中包含的特殊字元進行編碼。該屬性允許 Serv-U 對這些特殊字元進行解碼。
+::END
+
+$ADVANCED_RENAME_OVERWRITE$=使用舊的 web 瀏覽器時警告最終使用者
+$ADVANCED_RENAME_OVERWRITE_TXT$::
+在已啟用的（預設的）Serv-U 允許重命名檔案到目標位置已經存在的檔案時。在不允許已禁用的使用者重命名檔案或目錄到現有的路徑名稱時。
+::END
+
+$ADVANCED_WARN_OLD_BROWSER$=允許重命名覆蓋
+$ADVANCED_WARN_OLD_BROWSER_TXT$::
+在已啟用的（預設的）Serv-U 將警告使用者以下內容時：他們正在使用過時的瀏覽器，應升級其瀏覽器以充分利用性能與功能的增強，從而改進他們的使用體驗。
+::END
+
+$ADVANCED_DISABLE_NAGLE$=禁用 Nagle 演算法
+$ADVANCED_DISABLE_NAGLE_TXT$::
+不用在發送下一個資料包前等待 ACK TCP 握手。該選項通常僅用於等待時間很長的連接，例如衛星連接。
+::END
+
+$ADVANCED_INLINE_OOB$=內嵌帶外數據
+$ADVANCED_INLINE_OOB_TXT$::
+將帶外通訊端資料解析到正規 TCP 資料流程中，將其視為常規資料處理。該選項有助於阻遏拒絕服務攻擊，該攻擊發送大量帶外資料（ODB）到不能對其進行處理的通訊端堆疊。
+::END
+
+$ADVANCED_SEND_KEEPALIVE$=發送保持活動資料包以檢測中斷的連接
+$ADVANCED_SEND_KEEPALIVE_TXT$::
+定期發送保持活動資料包以確定通訊端是否仍處於連接狀態。
+::END
+
+$ADVANCED_ADAPTIVE_TIMEOUT$=對快速檔上傳使用自適應逾時
+$ADVANCED_ADAPTIVE_TIMEOUT_TXT$::
+為了在檔上傳中連貫地進行快速傳輸慢慢降低資料包逾時時間。如果未成功完成傳輸，自適應逾時使得恢復上傳更為方便，因為 Serv-U 可以更快速的識別死亡的傳輸，然後得以更早的訪問檔。
+::END
+
+
+<!-- String table for Help-Domain-Settings, Help-Server-Settings -->
+$DOMAIN_SETTINGS_HEADER$=設定
+
+$DOMAIN_SETTINGS_BASICS$::
+域設定和伺服器設定選項卡可以組態影響性能、安全和網路連接的基本域/伺服器設定。要組態某個設定，只需在相應區域輸入所需的數值，並按一下<strong>保存</strong>按鈕。有關可以組態的設定的更多資訊，請參見如下內容。
+::END
+
+$CONNECTION_SETTINGS_HEADER$=連接設定
+
+$CONNECTION_SETTINGS_ANTIHAMMER$=阻止使用者 'z' 分鐘，其在 'y' 秒內連接超過 'x' 次
+$CONNECTION_SETTINGS_ANTIHAMMER_TXT$::
+啟用該選項能防止強力密碼猜測系統使用詞典式攻擊找到使用者帳號的有效密碼，這也稱為反攻擊。使用強健的複雜密碼能戰勝大多數詞典式攻擊。然而，啟用該選項確保了 Serv-U 不會浪費時間處理這些非法源所發起的連接。當組態該選項時，請確保合法使用者被阻止前有更正錯誤密碼的餘地。
+
+啟用時，該選項暫時阻止 IP 位址 'z' 分鐘，該地址在 'y' 秒內登入失敗了 'x' 次。可以在相應的 IP 訪問規則選項卡中檢視用該方法阻止的 IP 位址。成功的登入重置了追蹤登入企圖的計數器。
+::END
+
+$CONNECTION_SETTINGS_HIDE_SSH_SERVER_ID$=從 SSH 標識裏隱藏伺服器資訊
+$CONNECTION_SETTINGS_HIDE_SSH_SERVER_ID_TXT$::
+成功完成 SSH 登錄之後，伺服器發送標識資訊給使用者端。通常情況下，此資訊含有伺服器名稱和版本號。啟用此選項可以防止將這些資訊發給使用者端。
+::END
+
+$CONNECTION_SETTINGS_DEFAULT_CLIENT$=默認 Web 使用者端
+$CONNECTION_SETTINGS_DEFAULT_CLIENT_TXT$::
+指定默認情況下所有 HTTP 使用者端是否應該使用 Web 使用者端還是 FTP Voyager JV。而第三個選項（默認選項）是提示使用者選擇想使用的使用者端。在群組級別和使用者級別也可以使用該選項。
+::END
+
+$SUPPORT_LINK_HEADER$=使用者端支援鏈結
+$SUPPORT_LINK_BODY1$::
+使用者端支援鏈結是一個強大的功能，它可以在使用者端需要支援或協助時，在 Web 使用者端和 FTP Voyager JV 中插入直接的接洽方法。該功能的基本語法為<strong>協定:路徑</strong>。該選項相當靈活，允許使用任何網路快捷方式，例如：
+::END
+$SUPPORT_LINK_LIST1$::
+<strong>http://www.website.com/support/
+
+mailto:service@website.com?subject=Serv-U 檔伺服器支援
+
+aim:goim?screenname=ExampleAdminUser&amp;message=我需要獲得幫助以使用 Serv-U 檔伺服器!</strong>
+::END
+$SUPPORT_LINK_BODY2$::
+只要使用者端的機器能理解所提供的通訊協定，可以使用任何格式。
+::END
+
+$CUSTOM_LOGO_SETTINGS_HEADER$=自定義標誌設定。
+$CUSTOM_LOGO_SETTINGS$=指定顯示於登入與 Web 使用者端頁面的自定義標誌。
+$CUSTOM_LOGO_SETTINGS_TXT$::
+自定義標誌的尺寸必須為寬 400 圖元 X 高 100 圖元。如果標誌沒有滿足這個條件，在您嘗試保存該標誌時會出現錯誤消息。<strong>請注意：</strong> 使用 CMYK 而非 RGB 編碼的 JPEG 圖像可能無法在某些瀏覽器上正確顯示。請測試您的標誌以確保其在所有的瀏覽器上都正確顯示。
+
+要添加標誌，只要在“自定義標誌”組框中按一下“瀏覽”按鈕並選擇指向您標誌的路徑即可。按一下“保存”按鈕後該標誌就會在“自定義標誌路徑”輸入區域下出現。要移除自定義標誌，只要清除“自定義標誌路徑”輸入區域中的路徑並按一下“保存”按鈕即可。
+::END
+
+$PASSWORD_RECOVERY_EMAIL_HEADER$=密碼恢復電子信件消息
+$PASSWORD_RECOVERY_EMAIL$=使用此可自定義的密碼恢復消息，將電子信件消息連同其登入信任書一起發送給使用者。
+$PASSWORD_RECOVERY_EMAIL_TXT$::
+密碼恢復電子信件消息擁有一個簡單的預設主題與含有使用者登入 ID 和密碼的消息。如果該使用者擁有記錄在 Serv-U 中的有效信件位址，則發送此消息。使用者可以從 Serv-U 登入頁面請求此消息。
+
+管理員也可以使用管理控制臺中位於域使用者與全局使用者之下的“恢復密碼”按鈕，將此消息發送給使用者。
+::END
+
+$INTEGRATION_DLL_HEADER$=集成 DLL
+$INTEGRATION_DLL_TXT$::
+要獲得有關編寫集成 DLL 的資訊，請參閱 Serv-U 集成示例 DLL，其安裝在名為“Serv-U 
+Integration Sample DLL”的子目錄中。該示例說明了集成 API。
+::END
+
+$ADVANCED_SETTINGS_HEADER$=進階設定
+
+$ADVANCED_SETTINGS_DIRMASK$=目錄清單遮罩
+$ADVANCED_SETTINGS_DIRMASK_TXT$::
+指定發送給 FTP 使用者端的文本字串，以規定檔訪問許可權。Windows 不像 Unix 那樣支持傳統的檔訪問許可權，因而使該選項在很大程度上流於形式，然而一些使用者端需要遮罩才能正確作業。
+::END
+
+$ADVANCED_SETTINGS_MAX_THUMB$=最大同步縮略圖數量
+$ADVANCED_SETTINGS_MAX_THUMB_TXT$::
+指定了專門用於為 HTTP 使用者端生成縮略圖和回應 FTP THUMB 命令的線程的最大數量。生成縮略圖是一項佔用 CPU 的作業。即使 Serv-U 能併發處理更多使用者端縮略圖請求，該數值增加得太高也會導致花費更長時間生成縮略圖。
+::END
+
+$ADVANCED_SETTINGS_UPLOAD_ACCESS$=檔上傳訪問
+$ADVANCED_SETTINGS_UPLOAD_ACCESS_TXT$::
+指定從使用者端接收上傳檔時這些檔的打開方式。默認的<strong>允許讀取訪問</strong>表示在檔仍處於接收狀態時，其他使用者端就可以嘗試下載該檔。<strong>允許完全訪問</strong>表示在檔傳輸時其他使用者端可以讀寫該檔。在檔仍處於傳輸狀態時要防止其他使用者端訪問該檔，請選擇<strong>不允許訪問</strong>。
+::END
+
+$ADVANCED_SETTINGS_DOWNLOAD_ACCESS$=檔下載訪問
+$ADVANCED_SETTINGS_DOWNLOAD_ACCESS_TXT$::
+指定向使用者端發送下載檔時這些檔的打開方式。默認的<strong>允許讀取訪問</strong>表示其他使用者端也可以同時下載相同的檔。<strong>允許完全訪問</strong>表示在將檔發送給某個使用者端時其他使用者端可以讀寫該檔。在檔仍處於發送狀態時要防止任何其他使用者端訪問該檔，請選擇<strong>不允許訪問</strong>。
+::END
+
+$NETWORK_SETTINGS_HEADER$=網路設定
+
+$NETWORK_SETTINGS_UPNP$=通過 UPnP 自動組態防火牆
+$NETWORK_SETTINGS_UPNP_TXT$::
+啟用時，Serv-U 在啟用 UPnP 的網路設備（通常為路由器）中自動組態必要的埠轉發，從而可以從網路外部訪問該檔伺服器。這對於啟用 PASV 模式的 FTP 資料傳輸特別有用。
+::END
+
+$NETWORK_SETTINGS_PACKET_TO$=封包逾時
+$NETWORK_SETTINGS_PACKET_TO_TXT$::
+指定 TCP 資料包傳輸的逾時時間，以秒為單位。只有等待時間很長、速度非常緩慢的網路才可能需要變更該選項的 300 秒預設值。
+::END
+
+$NETWORK_SETTINGS_PASV$=PASV 埠範圍
+$NETWORK_SETTINGS_PASV_TXT$::
+指定了 Serv-U 用於 PASV 模式資料傳輸的埠包含範圍。Serv-U 通常在打開通訊端用於 PASV 模式資料傳輸時，允許作業系統為它指派一個隨機的埠號。該屬性通過將 Serv-U 的 PASV 埠範圍限定於一個已知的範圍，滿足了路由器或防火牆預先瞭解特定埠範圍的需求。對最繁忙的檔伺服器來說 10 個埠足夠了。
+
+<strong>注意：</strong> 某些 NAT 路由器工作方式不同，可能需要更大的埠範圍。如果 Serv-U 和使用者端列出目錄或傳輸檔有問題，請嘗試在此處及路由器上增加埠範圍。
+::END
+
+$OTHER_SETTINGS_HEADER$=其他設定
+
+$OTHER_SETTINGS_RATIO_FREE$=比率不限檔案
+$OTHER_SETTINGS_RATIO_FREE_TXT$::
+由打開<strong>比率不限檔</strong>按鈕所列出的檔不受對檔傳輸所作的傳輸比率限制的影響。在伺服器或域級別指定的比率不限檔由其所有使用者帳號繼承。更多資訊，請參見 $LINK_HELP_RATIOS$ 的幫助內容。
+::END
+
+$OTHER_SETTINGS_ADMIN_PASS$=變更管理密碼
+$OTHER_SETTINGS_ADMIN_PASS_TXT$::
+按二下 Serv-U 系統託盤圖示啟動 Serv-U 時，Serv-U 管理控制臺可以受密碼保護。當管理控制臺以該方式運行時，變更密碼的選項變為有效。默認情況下，沒有管理密碼。
+::END
+
+
+<!-- String table for Help-Custom-FTP-Strings -->
+$CUSTOM_FTP_HEADER$=FTP 設定
+
+$CUSTOM_FTP_COMMANDS_BODY1$::
+Serv-U 檔伺服器允許定制其接受的 FTP 命令以及對收到的 FTP 命令的應答。當在伺服器級別組態這些選項時，所有域繼承這些定制設定。要定制特定域的 FTP 行為，請選擇相應域，打開該域的 <strong>FTP 設定</strong>選項卡，並按一下<strong>使用者定制設定</strong>按鈕。任何時候，按一下<strong>使用者默認設定</strong>按鈕可以將域還原為伺服器的默認設定。
+
+我們不推薦使用該方法定制 FTP 行為，除非使用者非常熟悉 FTP 通訊協定及其標準和擴展命令集。
+::END
+
+$CUSTOM_FTP_GLOBAL_PROPS$=全局屬性
+$CUSTOM_FTP_GLOBAL_PROPS_TXT$::
+當使用定制設定時，<strong>全局屬性</strong>按鈕變為有效。
+::END
+
+$CUSTOM_FTP_GLOBAL_RESP$=全局 FTP 回應
+$CUSTOM_FTP_GLOBAL_RESP_TXT$::
+全局 FTP 回應是大多數 FTP 命令間共用的回應，例如未找到檔時發送的錯誤消息。定制全局 FTP 回應確保該回應為所有其他 FTP 命令所使用，而無需為每個單獨 FTP 命令定制回應。FTP 命令回應可以包含特殊巨集，該巨集可以將即時資料插入回應。請參見 $LINK_HELP_SYSTEM_VARS$ 的幫助內容以瞭解更多資訊。
+::END
+
+$CUSTOM_FTP_SERVER_MSG$=伺服器歡迎消息
+$CUSTOM_FTP_SERVER_MSG_TXT$::
+當伺服器和使用者端首次連接時，除了發送標準的 "220 歡迎消息" 以向使用者端標識伺服器身份之外，還發送伺服器歡迎消息。如果選取<strong>在消息檔文本中包含回應代碼</strong>選擇框，則指定歡迎消息的每一行均以 220 回應代碼開頭。要定制歡迎消息，請在<strong>消息檔路徑</strong>輸入框中輸入文字檔案的路徑。使用<strong>瀏覽</strong>按鈕選擇電腦上的檔。Serv-U 打開該檔並將其內容發送給連接的使用者端。
+::END
+
+$CUSTOM_FTP_ADVANCED$=進階選項
+$CUSTOM_FTP_GLOBAL_ADVANCED_TXT$::
+<em>阻止 "FTP_bounce" 攻擊和 FXP（伺服器間傳輸）</em> - 選擇該核取方塊阻止了所有涉及該 Serv-U 檔伺服器的伺服器間檔傳輸，只允許將檔傳輸到命令通道所用的 IP 位址。有關 "FTP_bounce" 攻擊的更多資訊，請參見 <a href="http://www.cert.org/advisories/CA-1997-27.html" target="_blank">CERT advisory CA-97.27</a>。
+
+<em>在多行回應的所有行上包含回應代碼</em> - FTP 通訊協定定義了 FTP 伺服器發佈多行回應的兩種方法。如果多行回應的每一行不包含 3 位回應代碼，一些較早的 FTP 使用者端就無法對其進行解析。如果您所用的 FTP 使用者端難以處理來自 Serv-U 的多行回應，請選擇該核取方塊。
+
+<em>對所有已收發的路徑和檔案名使用 UTF-8 編碼</em> - 默認情況下，Serv-U 將所有檔案名和路徑視為以 UTF-8 編碼的字串。並以 UTF-8 編碼的字串發送所有檔案名和路徑，如發送目錄列表時。取消選中該選項則禁止 Serv-U 將這些字串編碼為 UTF-8。如果未選中該選項，則 UTF8 不包含在 FEAT 命令回應中，該回應用於向使用者端說明伺服器未使用 UTF-8 編碼。
+::END
+
+$CUSTOM_FTP_EDIT$=編輯 FTP 命令和回應
+$CUSTOM_FTP_EDIT_TXT$::
+要編輯 FTP 命令，請選擇要編輯的 FTP 命令並按一下<strong>編輯</strong>按鈕。
+::END
+
+$CUSTOM_FTP_INFO$=資訊
+$CUSTOM_FTP_INFO_TXT$::
+在<strong>資訊</strong>選項卡下，顯示了有關命令的基本資訊，以及指向我們的網站上更多資訊的鏈結。通過選擇<strong>禁用命令</strong>核取方塊，也可以禁用每條 FTP 命令。當從使用者端接收到禁用的命令時，將其作為未識別命令進行處理。
+::END
+
+$CUSTOM_FTP_RESPONSES$=FTP 回應
+$CUSTOM_FTP_RESPONSES_TXT$::
+在<strong>FTP 回應</strong>選項卡下，通過按一下每條回應的<strong>編輯</strong>按鈕，可以修改伺服器對命令發佈的所有可能的 FTP 回應。FTP 命令回應可以包含特殊巨集，該巨集可以將即時資料插入回應。請參見 $LINK_HELP_SYSTEM_VARS$ 的幫助內容以瞭解更多資訊。
+::END
+
+$CUSTOM_FTP_MSGFILE$=消息檔
+$CUSTOM_FTP_MSGFILE_TXT$::
+某些 FTP 命令允許關聯消息檔。消息檔的內容與標準 FTP 回應一起發送。此外，作為默認選項可使用次要消息檔路徑。使用<strong>消息檔</strong>所在的使用者根目錄的相對路徑可以指定消息檔。如果未找到第一個消息檔，Serv-U 就試圖使用<strong>次要消息檔</strong>來代替。通過在次要檔位置指定絕對檔路徑，可以保證每個使用者收到消息檔。
+
+以下為允許指定消息檔的所有 FTP 命令的清單：
+::END
+$CUSTOM_FTP_MSGFILE_LIST$::
+CDUP
+CWD
+QUIT
+::END
+
+$CUSTOM_FTP_COMMAND_ADVANCED_TXT$::
+一些 FTP 命令包含進階組態選項，它們提供了組態命令行為的更多方法。在管理控制臺中可使用組態選項的地方，對它們作了詳細描述。以下為包含進階組態選項的 FTP 命令的清單：
+::END
+$CUSTOM_FTP_ADV_COMMAND_LIST$::
+LIST
+MDTM
+NLST
+::END
+
+
+$FTP_RESP_CASEFILE1_HEADER1$=案例文檔 - 定制 FTP 命令回應
+$FTP_RESP_CASEFILE1_BODY1$::
+連接到伺服器的使用者需要知道當傳輸完成時給定的資料夾內有多少配額空間可用。為此，編輯對 STOR 命令的回應以包含有關可用空間的報告。默認情況下，對 STOR 命令（它將檔保存在伺服器上）的226（命令成功）回應為：
+
+"傳輸完成。$TransferBytes 位元組已傳送。$TransferKBPerSecond 千位元組/秒。"
+
+修改該響應使其多包含一個變數：
+
+"傳輸完成。$TransferBytes 位元組已傳送。$TransferKBPerSecond 千位元組/秒。剩餘存儲空間為 $QuotaLeft。"
+
+最後一條語句向使用者顯示了每個檔上傳完成後剩餘多少存儲空間。可同樣處理 DELE 命令，從而使每次使用者移除檔後，顯示更新的配額數值以反映可用空間的增加情況。可同樣處理任何 FTP 命令回應。
+::END
+
+
+<!-- String table for Help-Encryption -->
+$ENCYRPTION_HEADER$=加密
+
+$ENCRYPTION_BODY$::
+Serv-U 支援兩種加密資料傳輸方式 - 安全套接層（SSL）和安全外殼（SSH2）。SSL 用於保護檔傳輸通訊協定（FTP）和超文本傳輸通訊協定（HTTP）。SSH2 是一種安全地與遠端系統交互作用的方法，該遠端系統支援通常稱為 SFTP 的檔傳輸方法。除了名稱，SFTP 與 FTP 通訊協定自身沒有任何共同之處。
+
+為了使每種加密方法有效工作，必須提供證書和/或私鑰。SSL 需要提供證書和私鑰，而 SSH2 只需要私鑰。如果您沒有所需要的檔，Ser-U 可以創建這些檔。
+
+在伺服器級別指定的加密選項被所有域自動繼承。在域級別指定的加密選項自動覆蓋相應的伺服器級別選項。某些組態選項僅可用於伺服器。
+::END
+
+$SSL_SETUP_HEADER$=為 FTPS 和 HTTPS 組態 SSL
+
+$SSL_SETUP_NOTE$::
+當在 Serv-U 中創建 SSL/TLS、SSH 和 HTTPS 加密域時，加密域不能共用監聽器，這一點很重要。因為 SSL/TLS 和 SSH 加密是基於對在 IP 位址之間傳送的通信進行加密，因此每個域都必須具有單獨的監聽器才能正確作業。如果創建了多個加密域共用監聽器，則第一個創建的域能優先使用監聽器，造成其他加密域不能正確工作。要作業多個加密域，請修改每個域的監聽器以確保它們監聽唯一的埠號。
+::END
+
+$SSL_SETUP_EXISTING$=使用現有的證書
+
+$SSL_SETUP_EXISTING_LIST$::
+從證書頒發機構獲得 SSL 證書和私人密鑰檔案。
+將這些檔案置於伺服器中的安全目錄內。
+使用合適的<strong>瀏覽</strong>按鈕來選擇證書和私人密鑰文件。
+如果已經發行了 CA（證書頒發機構）PEM 檔案，輸入或瀏覽至該檔案。
+輸入用於加密私人密鑰檔案的密碼。
+按一下<strong>保存</strong>按鈕。
+::END
+
+
+$SSL_SETUP_EXISTING_TXT$::
+如果所提供的檔路徑和密碼都正確，Serv-U 立即開始使用所提供的證書來保護 FTPS 和 HTTPS 連接。如果密碼不正確，或 Serv-U 無法找到所提供的檔，則顯示錯誤消息對所遇到的錯誤作出解釋。
+::END
+
+$SSL_CREATE_CERT$=創建新證書
+$SSL_CREATE_CERT_LIST$::
+首先按一下<strong>創建證書</strong>按鈕。
+指定<strong>證書設定名稱</strong>用於命名 Serv-U 創建的每個檔。
+指定放置所創建檔的輸出路徑。在大多數情況下，安裝目錄是一個安全的位置（即，C:\Program Files\RhinoSoft.com\Serv-U\）。
+指定伺服器或企業所在的市/鎮。
+指定伺服器或企業所在省/自治區/直轄市（如果適用）。
+指定伺服器或企業所在國家的 2 位元國家編碼。
+輸入用來保護私鑰的密碼。
+指定完整的機構名稱。
+指定證書的通用名稱。此處必須列出使用者連接所用的 IP 位址或全稱網域名稱（FQDN）。<strong>注意</strong>：如果通用名稱不是使用者端連接所用的 IP 地址或 FQDN，則使用者端可能收到提示指出證書不匹配連接的網域名稱。
+指定伺服器所處的業務單元。
+按一下<strong>創建</strong>按鈕完成證書創建。
+::END
+$SSL_CREATE_CERT_TXT$::
+Serv-U 使用所提供的資訊創建3個檔：一個自簽名證書（.crt），它能在伺服器上立即使用，但未經任何已知證書頒發機構的驗證；一個證書申請（.csr），可以提供給證書頒發機構用於驗證；以及一個私鑰檔（.key），用於保護以上兩種證書檔。將私鑰保存在安全可靠的位置極其重要。如果您的私鑰暴露了，則懷有惡意的人士就能使用您的證書。
+::END
+
+$SSL_VIEW_CERT$=檢視證書
+$SSL_VIEW_CERT_TXT$::
+組態 SSL 證書後要檢視證書，請按一下<strong>檢視證書</strong>按鈕。所有有關證書的標識資訊，包括證書的有效日期，都顯示在新對話窗內。
+::END
+
+$SSL_ADVANCED$=進階 SSL 選項
+$SSL_ADVANCED_TXT$::
+只能在伺服器級別組態這些進階 SSL 選項。所有域繼承該行為，而不能單獨進行覆蓋。
+
+<em>啟用低安全性密碼</em> - 選擇該選擇框啟用低安全性 SSL 密碼。一些較早的或國際使用者端可能不支援現今的最佳 SSL 密碼。因為現今的計算標準認為這些密碼不安全，默認情況下 Serv-U 不接受這些密碼。
+
+<em>禁用 SSLv2 支援</em> - Serv-U 支援的 SSL 有數個不同版本。較早的 SSLv2 版本已證明有安全漏洞，其安全性不如 SSLv3 和 TLS。然而，為了與導出的使用者端或以前的使用者端軟體相容，可能需要支援 SSLv2。選中該框不支援較早的 SSLv2 協定。
+::END
+
+$FIPS_MODE_HEADER$=FIPS 選項
+$FIPS_MODE_TXT$::
+<em>啟用 FIPS 140-2 模式</em> - FIPS 140-2 是一套經過嚴格測試的加密規範，由國際標準與技術協會（NIST）設定。啟用 FIPS 140-2 模式限制 Serv-U 使用經驗證符合 FIPS 140-2 的加密演算法，並確保加密連接的最高安全級別。
+::END
+
+$SFTP_SETUP_HEADER$=SFTP（SSH2 上的安全檔傳輸）
+
+$SFTP_SETUP_EXISTING$=使用現存的私鑰
+$SFTP_SETUP_EXISTING_LIST$::
+獲得私鑰檔案。
+將私鑰檔置於伺服器內的安全目錄中。使用 Serv-U 內的<strong>瀏覽</strong>按鈕選擇檔。
+輸入私鑰檔的密碼。
+按一下<strong>保存</strong>按鈕。
+::END
+
+$SFTP_SETUP_CREATE$=創建私鑰
+$SFTP_SETUP_CREATE_LIST$::
+按一下<strong>創建私鑰</strong>按鈕。
+輸入私鑰的名稱（如 "MyDomain Key"），該名稱也用來命名保存檔。
+輸入證書的輸出路徑（如 C:\Program Files\RhinoSoft.com\Serv-U\）。
+選擇密鑰類型（最好使用默認的 DSA 類型，但也可使用 RSA）。
+選擇密鑰長度（默認的 1024 位元提供最佳性能，2048 位元較為適中，而 4096 位提供最好的安全性）。
+輸入用來保護私鑰檔的密碼。
+::END
+
+
+$SFTP_SETUP_CIPHER_MAC$=SSH 密碼和 MAC
+$SFTP_SETUP_CIPHER_MAC_TXT$::
+默認情況下，伺服器啟用所有支援的 SSH 密碼和 MAC（消息認證碼）。如果您的特定安全需求規定只能使用某些密碼或 MAC，您可以通過取消選取相應的選擇框來單獨禁用不需要的密碼和 MAC。
+::END
+
+
+<!-- String table for Help-Domain-Server-Activity -->
+$SD_SESSIONS_HEADER$=伺服器和域連線期間
+
+$SD_SESSIONS_TXT$::
+伺服器和域連線期間選項卡顯示了當前的檔伺服器連線期間活動。當從伺服器檢視連線期間頁時，顯示來自所有域的所有連接的連線期間。當在管理域的同時進行檢視，則只顯示該域的當前連線期間。從該頁可以看到檔伺服器上當前活動的概貌。此外，可以檢視單個連線期間，包括其當前狀態、連接狀況和傳輸資訊。
+
+要檢視特定連線期間的詳細資訊，請選擇該連線期間。<strong>活動連線期間資訊</strong>組內包含了當前高亮顯示的連線期間的詳情。該資訊被頻繁更新以提供連線期間活動的最新精確快照。
+
+根據連線期間的連接類型（例如 FTP、HTTP 或 SFTP），可以使用某些附加功能。
+::END
+
+$SD_SESSIONS_DISCONNECT$=斷開連接
+$SD_SESSIONS_DISCONNECT_TXT$::
+通過按一下<strong>斷開連接</strong>按鈕，可以隨時斷開任何類型的連線期間。按一下該按鈕打開了另一個對話方塊，其中有其他選項用於設定斷開方式。有 3 種斷開連接選項可供選擇：
+::END
+$SD_SESSIONS_DISCONNECT_LIST$::
+<em>斷開連接</em> - 立即斷開連線期間的連接。斷開連接的使用者端能立即建立另一個連線期間。這也稱為 "踢開" 使用者。
+<em>斷開連接並禁用 IP</em> - 立即斷開連線期間連接並禁用其 IP 位址達指定的分鐘數，以防止立即進行重新連接。
+<em>斷開連接並永久阻止 IP</em> - 立即斷開連線期間連接，並為其 IP 位址添加拒絕 IP 訪問規則，以永久地防止從相同 IP 位址進行重新連接。
+::END
+$SD_SESSIONS_DISCONNECT_TXT2$::
+當從伺服器連線期間視圖中斷開連線期間連接時，有稱為<strong>應用 IP 規則到</strong>的附加選項可供使用。該下拉式列示方塊允許您選擇應用臨時或永久 IP 禁令的位置&mdash;&mdash;整個伺服器或只是連線期間所連接的域。
+
+除了斷開連線期間連接，也可以通過選擇標記為<strong>禁用使用者帳號</strong>的選擇框禁用連線期間使用的使用者帳號。
+
+如果當前連線期間使用 FTP 協定，通過在標記為<strong>發送給使用者的消息</strong>的文本框內輸入消息可以在斷開連接前將其發送給使用者。HTTP 或 SFTP 連線期間不可使用該選項，因為這兩個協定未定義與使用者聊天的方法。
+::END
+
+$SD_SESSIONS_SPY$=探查和聊天
+$SD_SESSIONS_SPY_TXT$::
+通過按一下<strong>探查和聊天</strong>按鈕或按二下清單中的連線期間可以探查任何類型的連線期間。探查使用者顯示了加亮連線期間時通常能看到的所有詳細資訊，但也包含了自連線期間首先與檔伺服器建立連接起的完整連線期間記錄檔。這使得管理人可以瀏覽記錄檔並檢視連線期間使用者所採取的所有行動。
+
+如果當前連線期間使用 FTP 通訊協定，則有附加的選項可以與使用者聊天。<strong>聊天</strong>組顯示了開始 "探查" 連線期間後該連線期間收發的所有消息。要向連線期間發送消息，請在標記為<strong>消息內容</strong>的文本框內輸入消息文本並按一下<strong>發送</strong>按鈕。當收到來自連線期間的消息時，也將在此自動顯示。
+
+<strong>注意：</strong> 並非所有的 FTP 使用者端都支援與系統管理人聊天。向伺服器發送消息所用的命令為 SITE MSG。為了使使用者端接收到消息，使用者端應用程式必須能接收來自伺服器的自發回應（而不是簡單地丟棄它們）。
+::END
+
+$SD_SESSIONS_BROADCAST$=廣播
+$SD_SESSIONS_BROADCAST_TXT$::
+通過按一下<strong>廣播</strong>按鈕，可以向當前所有連接的 FTP 連線期間發送消息。通過廣播發送消息等同於打開每個 FTP 連線期間的探查和聊天對話方塊並發送聊天消息。
+::END
+
+$SD_SESSIONS_ABORT$=中斷
+$SD_SESSIONS_ABORT_TXT$::
+如果連線期間正在執行檔傳輸，通過按一下<strong>中斷</strong>按鈕無需斷開連線期間連接就可以終止檔傳輸。確認中斷命令後，伺服器就終止該連線期間當前的檔案傳輸。某些使用者端，尤其是 FTP 和 SFTP 使用者端，可以自動重啟中斷的傳輸，而使中斷作業看上去似乎失敗了。在這種情況下，請轉而嘗試<strong>斷開</strong>連線期間。
+::END
+
+
+<!-- String table for Help-Domain-Server-Stats -->
+$SD_STATS_HEADER$=伺服器和域統計
+
+$SD_STATS_TXT$::
+域和伺服器統計頁面顯示了有關伺服器使用的詳細統計資訊，用於基準測試和記錄保存。在伺服器級別檢視到的統計資訊是伺服器上所有域的累積統計資訊的集合。單個域上檢視到的統計資訊只是該域的統計資訊。顯示的資訊包括：
+::END
+
+$SD_UP_TIME$=連續運行時間
+$SD_UP_TIME_TXT$::
+如果檢視的是伺服器統計資訊，則指自檔伺服器啟動以來的時間長度；如果檢視的是特定域的統計資訊，則指自該域聯機以來的時間長度。
+::END
+
+$SD_STATS_SESSION$=連線期間統計
+
+$SD_STATS_SESSION_CURRENT$=當前連線期間
+$SD_STATS_SESSION_CURRENT_TXT$::
+當前連接的連線期間數。
+::END
+
+$SD_STATS_SESSION_DAY$=24 小時連線期間
+$SD_STATS_SESSION_DAY_TXT$::
+過去24小時內連接的連線期間數。
+::END
+
+$SD_STATS_SESSION_TOTAL$=連線期間總計
+$SD_STATS_SESSION_TOTAL_TXT$::
+聯機以來所連接的連線期間總數。
+::END
+
+$SD_STATS_SESSION_MAX$=最大連線期間數量
+$SD_STATS_SESSION_MAX_TXT$::
+聯機以來所記錄的最大併發連線期間數量。
+::END
+
+$SD_STATS_SESSION_AVG$=平均連線期間長度
+$SD_STATS_SESSION_AVG_TXT$::
+連線期間保持連接的平均時間長度。
+::END
+
+$SD_STATS_SESSION_LONGEST$=最長連線期間
+$SD_STATS_SESSION_LONGEST_TXT$::
+連線期間的最長記錄時間。
+::END
+
+$SD_STATS_LOGIN$=登入統計
+$SD_STATS_LOGIN_TXT$::
+取決於當前正被檢視的統計，這些統計可以套用於一個域或整個伺服器。登入統計與連線期間統計不同，因為它們套用於登入（提供登入 ID 與密碼），與連接與斷開相對。
+::END
+
+$SD_STATS_LOGINS$=登入
+$SD_STATS_LOGINS_TXT$::
+成功登入總數。
+::END
+
+$SD_STATS_LOGOUTS$=登出
+$SD_STATS_LOGOUTS_TXT$::
+登出總數。
+::END
+
+$SD_STATS_CURRENT_LOGINS$=當前登入
+$SD_STATS_CURRENT_LOGINS_TXT$::
+當前登入的連線期間數。
+::END
+
+$SD_STATS_MOST_LOGINS$=最多併發登入
+$SD_STATS_MOST_LOGINS_TXT$::
+同時登入進連線期間的最大數。
+::END
+
+$SD_STATS_LAST_LOGIN$=上次登入時間
+$SD_STATS_LAST_LOGIN_TXT$::
+上次記錄的有效登入時間（並非上次創建連接的時間）。
+::END
+
+$SD_STATS_LAST_LOGOUT$=上次登出時間
+$SD_STATS_LAST_LOGOUT_TXT$::
+上次記錄的有效登出時間。
+::END
+
+$SD_STATS_AVERAGE_LOGIN$=平均登入時間
+$SD_STATS_AVERAGE_LOGIN_TXT$::
+所有連線期間的平均登入時間。
+::END
+
+$SD_STATS_LONGEST_LOGIN$=最長登入時間
+$SD_STATS_LONGEST_LOGIN_TXT$::
+登入連線期間的最長時間。
+::END
+
+$SD_STATS_SHORTEST_LOGIN$=最短登入時間
+$SD_STATS_SHORTEST_LOGIN_TXT$::
+登入連線期間的最短時間。
+::END
+
+$SD_STATS_TRANSFER$=傳輸統計
+
+$SD_STATS_TRANSFER_DL_SPEED$=下載速度
+$SD_STATS_TRANSFER_DL_SPEED_TXT$::
+當前累積佔用的下載帶寬。
+::END
+
+$SD_STATS_TRANSFER_UL_SPEED$=上傳速度
+$SD_STATS_TRANSFER_UL_SPEED_TXT$::
+當前累積佔用的上傳帶寬。
+::END
+
+$SD_STATS_TRANSFER_AVG_DL_SPEED$=平均下載速度
+$SD_STATS_TRANSFER_AVG_DL_SPEED_TXT$::
+聯機以來佔用的平均下載帶寬。
+::END
+
+$SD_STATS_TRANSFER_AVG_UL_SPEED$=平均上傳速度
+$SD_STATS_TRANSFER_AVG_UL_SPEED_TXT$::
+聯機以來佔用的平均上傳帶寬。
+::END
+
+$SD_STATS_TRANSFER_DL$=已下載
+$SD_STATS_TRANSFER_DL_TXT$::
+聯機以來下載的資料總量和檔數目。
+::END
+
+$SD_STATS_TRANSFER_UL$=已上傳
+$SD_STATS_TRANSFER_UL_TXT$::
+聯機以來上傳的資料總量和檔數目。
+::END
+
+$SD_STATS_SAVE$=保存統計
+$SD_STATS_SAVE_TXT$::
+可以將使用者與群組統計直接保存到 CSV 檔以便程式分析與檢視。要將統計保存到檔案，先選取您要為其生成統計檔案的使用者或群組，然後按一下位於該頁面底部的“保存統計”按鈕。
+::END
+
+
+<!-- String table for Help-User-Group-Stats -->
+$UG_STATS_HEADER$=使用者和群組統計
+
+$UG_STATS_TXT$::
+使用者與群組統計頁面顯示了基於個人使用者或群組活動的詳細統計。使用者或群組的統計檢視僅適用於該使用者或群組。顯示的資訊包括：
+::END
+
+$UG_STATS_SESSION$=連線期間統計
+
+$UG_STATS_SESSION_CURRENT$=當前連線期間
+$UG_STATS_SESSION_CURRENT_TXT$::
+當前連接的連線期間數。
+::END
+
+$UG_STATS_SESSION_DAY$=24 小時連線期間
+$UG_STATS_SESSION_DAY_TXT$::
+過去 24 小時內所連接的連線期間數。
+::END
+
+$UG_STATS_SESSION_TOTAL$=連線期間總數
+$UG_STATS_SESSION_TOTAL_TXT$::
+聯機以來所連接的連線期間總數。
+::END
+
+$UG_STATS_SESSION_MAX$=最大連線期間數量
+$UG_STATS_SESSION_MAX_TXT$::
+聯機以來所記錄的最大併發連線期間數量。
+::END
+
+$UG_STATS_SESSION_AVG$=平均連線期間長度
+$UG_STATS_SESSION_AVG_TXT$::
+連線期間保持連接的平均時間長度。
+::END
+
+$UG_STATS_SESSION_LONGEST$=最長連線期間
+$UG_STATS_SESSION_LONGEST_TXT$::
+連線期間的最長記錄時間。
+::END
+
+$UG_STATS_LOGIN$=登入統計
+$UG_STATS_LOGIN_TXT$::
+取決於當前正被檢視的統計，這些統計可以套用於一個使用者或一組使用者。登入統計與連線期間統計不同，因為它們套用於登入（提供登入 ID 與密碼），與連接與斷開相對。
+::END
+
+$UG_STATS_LOGINS$=登入
+$UG_STATS_LOGINS_TXT$::
+成功登入總數。
+::END
+
+$UG_STATS_LOGOUTS$=登出
+$UG_STATS_LOGOUTS_TXT$::
+登出總數。
+::END
+
+$UG_STATS_CURRENT_LOGINS$=當前登入
+$UG_STATS_CURRENT_LOGINS_TXT$::
+當前登入的連線期間數。
+::END
+
+$UG_STATS_MOST_LOGINS$=最多併發登入
+$UG_STATS_MOST_LOGINS_TXT$::
+同時登入進連線期間的最大數。
+::END
+
+$UG_STATS_LAST_LOGIN$=上次登入時間
+$UG_STATS_LAST_LOGIN_TXT$::
+上次記錄的有效登入時間（並非上次創建連接的時間）。
+::END
+
+$UG_STATS_LAST_LOGOUT$=上次登出時間
+$UG_STATS_LAST_LOGOUT_TXT$::
+上次記錄的有效登出時間。
+::END
+
+$UG_STATS_AVERAGE_LOGIN$=平均登入時間
+$UG_STATS_AVERAGE_LOGIN_TXT$::
+所有連線期間的平均登入時間。
+::END
+
+$UG_STATS_LONGEST_LOGIN$=最長登入時間
+$UG_STATS_LONGEST_LOGIN_TXT$::
+登入連線期間的最長時間。
+::END
+
+$UG_STATS_SHORTEST_LOGIN$=最短登入時間
+$UG_STATS_SHORTEST_LOGIN_TXT$::
+登入連線期間的最短時間。
+::END
+
+$UG_STATS_TRANSFER$=傳輸統計
+
+$UG_STATS_TRANSFER_DL_SPEED$=下載速度
+$UG_STATS_TRANSFER_DL_SPEED_TXT$::
+當前累積佔用的下載帶寬。
+::END
+
+$UG_STATS_TRANSFER_UL_SPEED$=上傳速度
+$UG_STATS_TRANSFER_UL_SPEED_TXT$::
+當前累積佔用的上傳帶寬。
+::END
+
+$UG_STATS_TRANSFER_AVG_DL_SPEED$=平均下載速度
+$UG_STATS_TRANSFER_AVG_DL_SPEED_TXT$::
+聯機以來所佔用的平均下載帶寬。
+::END
+
+$UG_STATS_TRANSFER_AVG_UL_SPEED$=平均上傳速度
+$UG_STATS_TRANSFER_AVG_UL_SPEED_TXT$::
+聯機以來所佔用的平均上傳帶寬。
+::END
+
+$UG_STATS_TRANSFER_DL$=已下載
+$UG_STATS_TRANSFER_DL_TXT$::
+聯機以來已下載的資料總量和檔案數目。
+::END
+
+$UG_STATS_TRANSFER_UL$=已上傳
+$UG_STATS_TRANSFER_UL_TXT$::
+聯機以來已上傳的資料總量和檔案數目。
+::END
+
+
+<!-- String table for Help-Domain-Server-Log -->
+$SD_LOG$=伺服器和域記錄檔
+
+$SD_LOG_TXT$::
+伺服器和域記錄檔選項卡顯示伺服器或域的活動記錄。
+
+伺服器記錄檔顯示檔伺服器的啟動、組態和關閉資訊。它不顯示域活動資訊。要瞭解域活動資訊，請轉而檢視相應域的記錄檔。除了檔伺服器開始啟動時所記錄的有關庫、授權和當前構建的狀態資訊，伺服器記錄檔也包含有關所有域監聽器狀態、通用即插即用（UPnP）狀態和 PASV 埠範圍狀態的資訊。伺服器記錄檔中包含的資訊也保存在安裝目錄中名為 <strong>Serv-U-StartupLog.txt</strong> 的文字檔案中。每次啟動 Serv-U 檔伺服器時更新該檔。
+
+域記錄檔僅包含有關當前所管理域的活動資訊。這包括域監聽器的狀態和任何已組態活動的記錄檔資訊。要瞭解有關域記錄檔中記錄的活動類型資訊的更多詳情，請參見標題為 $LINK_HELP_LOG_SETTINGS$ 的幫助內容。
+
+通過按一下並在所需的記錄檔部分上拖動滑鼠可以高亮顯示記錄檔中包含的資訊。一旦高亮顯示，就可以將所選部分複製到剪貼簿。
+::END
+
+$SD_LOG_FREEZE$=凍結記錄檔
+$SD_LOG_FREEZE_TXT$::
+選擇該選擇框可以暫時停止刷新記錄檔。這對於繁忙的系統很有用，因為在記錄檔滾動到視窗之外前可以加亮並複製一部分記錄檔。完成作業後，取消選擇該選擇框以恢復記錄檔的自動更新。
+::END
+
+$SD_LOG_SELECT_ALL$=全選
+$SD_LOG_SELECT_ALL_TXT$::
+按一下該按鈕可以自動凍結記錄檔並加亮當前顯示的所有記錄檔資訊，以便將其複製到剪貼簿中。
+::END
+
+$SD_LOG_CLEAR$=清除記錄檔
+$SD_LOG_CLEAR_TXT$::
+當記錄檔龐大到不能一目了然時，請按一下該按鈕移除當前顯示的記錄檔資訊。只顯示按一下該按鈕之後收到的記錄檔資訊。
+::END
+
+$SD_LOG_LEGEND$=圖例
+$SD_LOG_LEGEND_TXT$::
+為了更方便地檢視記錄檔的不同部分，對每種不同類型的記錄檔資訊進行了色彩編碼以利於快速識別。按一下該按鈕在可拖拽的對話方塊中顯示圖例。將圖例對話方塊拖拽到方便的位置，以便在瀏覽記錄檔時可以參考圖例。
+::END
+
+$SD_LOG_FILTER$=篩選記錄檔
+$SD_LOG_FILTER_TXT$::
+要快速查找和通讀記錄檔的特定部分，可以根據搜索字串來篩選記錄檔。按一下該按鈕顯示篩選記錄檔對話方塊。輸入搜索字串並按一下<strong>篩選</strong>按鈕將刷新記錄檔，使其只顯示包含搜索字串的記錄檔條目。要再次檢視完整的記錄檔內容，請打開篩選記錄檔對話方塊並按一下<strong>重置</strong>按鈕。
+::END
+
+$SD_LOG_DOWNLOAD$=下載記錄檔
+$SD_LOG_DOWNLOAD_TXT$::
+要從 Serv-U 下載完整的記錄檔，按一下“下載記錄檔”按鈕。如果您有許可權下載該檔，您的 web 瀏覽器將提示您選擇保存該檔的位置，或自動開始下載記錄檔。
+::END
+
+
+<!-- String table for Help-Domain-Overview -->
+$DOMAIN_OVERVIEW_HEADER$=域概述
+
+$DOMAIN_OVERVIEW$::
+Serv-U 檔伺服器的核心是 Serv-U 域。在最基本的級別，Serv-U 域是一組使用者帳號和監聽器，使得使用者可以連接伺服器以訪問檔和資料夾。也可以進一步組態 Serv-U 域，從而約束基於 IP 位址的訪問，限制帶寬的使用，強制實施傳輸配額等。實際上在伺服器級別上的每個設定都可以被個別的域設定覆蓋。提前進行仔細的計畫可以在伺服器級別指定默認選項的適當設定，從而使設定網域所需的工作量降到最低。
+
+Serv-U 能支援檔伺服器上任意數量的域。域能共用監聽器，或者當系統擁有多個 IP 位址時每個域都能使用唯一的 IP 位址。然而，許可證規定了一個安裝實例能創建的域的最大數量。要瞭解 Serv-U 不同版本的更多資訊，請參見 $LINK_HELP_EDITIONS$ 的幫助文檔。
+
+當首次運行 Serv-U 檔伺服器的新安裝實例時，會提示您使用新建域嚮導創建第一個域。如果許可證支持，通過按一下 Serv-U 管理控制臺首頁上的<strong>新建域</strong>按鈕，或從 "變更域" 對話方塊中按一下<strong>新建域</strong>按鈕，可以隨時創建另一個新域。
+
+有關使用新建域嚮導創建新域的更多資訊，請參見 $LINK_HELP_GUIDE$。
+::END
+
+$DOMAIN_MANAGING$=管理域
+$DOMAIN_MANAGING_TXT$::
+當前管理的域總是顯示在每頁的頁眉中“管理”的旁邊。有幾種方法可以變更活動的域。從 Serv-U 管理控制臺的控制臺頁面，點擊<strong>管理域</strong>按鈕將顯示一份檔伺服器上可用的域清單。按二下一個域或高亮顯示它並點擊<strong>選擇</strong>按鈕，可以使這個域變成活動域。域清單也可以從任何域組態頁面獲得，只需點擊該頁面的頁腳裏<strong>變更域</strong>按鈕。
+
+如果您的許可證支援，您可以隨時創建另一個新域，只需點擊控制臺頁面上的<strong>新建域</strong>按鈕。該按鈕也可以直接在上述包含可用域清單的域對話方塊裏找到。變更了活動的域之後，當前頁面自動重新載入，以反映新的活動域設定。
+
+域清單對話方塊裏的<strong>移除</strong>按鈕會立即移除域及其全部使用者和組。該作業無法撤銷。
+::END
+
+<!-- String table for Help-Domain-Name-Description -->
+$DOMAIN_NAME_DESCRIPTION_HEADER$=網域名稱及說明
+
+$EDITING_NAME_DESCRIPTION$::
+每個域必須用唯一的<strong>網域名稱</strong>進行標識。如果提供的名稱不唯一，則會顯示錯誤消息指出每個域需要唯一的名稱。<strong>網域名稱</strong>僅用於管理目的，對使用者是不可見或不能訪問的。
+
+此外，通過使用<strong>說明</strong>欄位，每個域可以擁有附加的相關說明資訊。類似於<strong>網域名稱</strong>，<strong>說明</strong>文本也僅供有管理許可權的使用者使用。該欄位用於說明域的目的，或總結檔伺服器上由於存在域而變為可用的資源。
+
+通過取消選取<strong>啟用域</strong>選擇框，可以暫時禁用域。禁用時，所有使用者都完全不能訪問該域。該域仍存在於檔伺服器上，所有設定被保存，且在禁用的同時仍能對其進行管理。要再次使使用者可以訪問該域，請選取<strong>啟用域</strong>選擇框。
+
+對上述域設定作出變更後，請按一下<strong>保存</strong>按鈕來應用變更。
+::END
+
+$DOMAIN_INFO_HOMEDIR$=域根目錄
+$DOMAIN_INFO_HOMEDIR_TXT$::
+系統管理員可通過配置域根目錄並指定最大容量來限制域的可用磁碟空間。域根目錄不會影響使用者目錄訪問規則，也不會以任何方式限制用戶的可用路徑。然而，為計算域佔用的磁碟空間數量，Serv-U 必須知道保存所有域檔的根目錄。
+  
+要指定域根目錄，請在標記為<strong>域根目錄</strong>的欄位中輸入路徑。也可使用<strong>瀏覽</strong>按鈕來選擇路徑。當為該域創建域管理員帳戶時，推薦使用同樣的根目錄，以確保將所有域使用者置於域根目錄的相應子目錄中。請在<strong>最大容量</strong>欄位中輸入該域的可用磁碟空間大小，以 MB 為單位。此欄位留空或輸入 "0" 不對該域設置最大尺寸。設置了限制後，伺服器將拒絕任何會導致超出最大容量的上傳行為。 
+請單擊<strong>保存</strong>按鈕以應用這些更改。 
+
+<strong>請注意：</strong> 計算域佔用的磁碟空間數量可能是一項耗時的操作，這取決於目錄結構。
+::END
+
+<!-- String table for Help-Domain-Listeners -->
+$DOMAIN_LISTENERS_HEADER$=域監聽器
+
+$DOMAIN_LISTENERS$::
+Serv-U 檔伺服器提供高度可組態的介面，以便在域上啟用不同檔共用通訊協定。使用適當標識的按鈕可以添加、編輯和移除監聽器。通過添加系結於所需 IP 位址和埠的監聽器，每個域可以監聽多個埠和 IP 位址。除了選擇監聽器的連接屬性之外，也必須選擇檔共用通訊協定。以下為 Serv-U 檔伺服器支援的檔共用通訊協定的清單和簡短說明。
+::END
+
+$LISTENER_FTP$=FTP - 檔傳輸通訊協定
+$LISTENER_FTP_TXT$::
+FTP 是在網際網路上傳輸檔的傳統通訊協定。它通常運作於默認埠 21。 傳統上，以純文本形式處理 FTP，然而 SSL 連接通過使用 AUTH 命令獲得明確支持。
+::END
+
+$LISTENER_FTPS$=FTPS - 使用 SSL 的檔傳輸協定
+$LISTENER_FTPS_TXT$::
+FTPS 類似於 FTP，然而連接為 FTPS 組態的監聽器，意味著執行任何通訊協定通信前必須進行 SSL 連接。這一般被稱為隱式 FTPS，它通常使用默認埠 990。
+::END
+
+$LISTENER_SFTP$=SFTP - 使用 SSH2 的安全檔傳輸
+$LISTENER_SFTP_TXT$::
+SFTP 是通過安全外殼連線期間傳輸檔的一種安全方式。它在相同埠上執行所有通訊協定通信和資料傳輸，而無需打開防火牆的多個埠，這一點不同於 FTP。SFTP 連線期間總是加密的。SFTP 使用默認埠 22。
+::END
+
+$LISTENER_HTTP$=HTTP - 超文本傳輸協定
+$LISTENER_HTTP_TXT$::
+HTTP 是用於瀏覽網站的協定。它也是下載並傳輸檔的一種簡單方法。向域添加 HTTP 監聽器的優點是可以使用 Web 使用者端，從而使使用者無需獨立使用者端就可以向檔伺服器收發檔。HTTP 通常使用埠 80。
+::END
+
+$LISTENER_HTTPS$=HTTPS -  使用 SSL 的超文本傳輸協定
+$LISTENER_HTTPS_TXT$::
+HTTPS 類似於 HTTP，但其所有通信都用 SSL 進行保護。如同 FTPS，連接運行 HTTPS 通訊協定的監聽器意味著進行安全連接。HTTPS 的默認埠是 443。
+::END
+
+$LISTENER_ADDING$=添加監聽器
+$LISTENER_ADDING_TXT$::
+按一下<strong>添加</strong>按鈕後，顯示監聽器組態對話方塊。組態每個監聽器選項後，按一下<strong>保存</strong>按鈕向域添加監聽器。
+::END
+
+$LISTENER_TYPE$=類型
+$LISTENER_TYPE_TXT$::
+選擇所需的為該監聽器所支援的檔共用協定。每個監聽器只能支援單個協定。要向域添加更多檔共用協定，請為每個協定創建新監聽器。從上面可以找到對所支援的檔共用協定的簡短說明。
+::END
+
+$LISTENER_IP_ADDRESS$=IP 地址
+$LISTENER_IP_ADDRESS_TXT$::
+在這裏輸入單個 IP 位址可以將監聽器系結於該位址。如果檔伺服器沒有外部 IP 位址（例如，它在路由器後面），該欄位可以留空。該欄位留空使 Serv-U 監聽所有可用的 IP 地址。
+::END
+
+$LISTENER_PASV_IP$=PASV IP 地址或網域名稱（僅FTP）
+$LISTENER_PASV_IP_TXT$::
+如果監聽器支援 FTP 協定，則可使用該附加欄位來指定單獨的 IP 位址用於 PASV 模式的資料傳輸。在這裏輸入 IP 位址保證 PASV 模式在不安全連接和安全連接上都能正常工作。如果檔伺服器沒有外部 IP 位址，請嘗試使用 $LINK_DNS4ME$ 並在該欄位中輸入您的 DNS4Me 網域名稱。Serv-U 解析 DNS4Me 網域名稱以保證總有正確的外部 IP 位址用於 PASV 命令回應。
+::END
+
+$LISTENER_SSL_ONLY$=僅使用 SSL 連接
+$LISTENER_SSL_ONLY_TXT$::
+該選項允許僅將 PASV IP 位址或網域名稱用於 SSL 連接，適用於總是必須提供 PASV IP 位址來連接使用者端的情況。啟用該選項時，不會將指定為 PASV 模式的 IP 位址提供給通過非 SSL FTP 連接的使用者端。
+::END
+
+$LISTENER_USE_LAN$=使用 LAN 連接
+$LISTENER_USE_LAN_TXT$::
+通常，Serv-U 不將 PASV IP 位址用於來自局域網（與 Serv-U 處於相同網路的電腦）的連接。啟用該選項時，也可將 PASV IP 位址用於局域網連接。
+::END
+
+$LISTENER_PORT$=埠
+$LISTENER_PORT_TXT$::
+自動提供所選協定的默認埠。然而，可以使用 1 和 65535 之間的任何埠。當使用非標準埠時，使用者端在試圖連接域之前必須預先知道正確的埠。如果使用非標準埠，我們推薦使用 1024 以上的埠值以避免潛在的衝突。
+::END
+
+$LISTENER_ENABLE$=啟用監聽器
+$LISTENER_ENABLE_TXT$::
+取消選取該選擇框能暫時禁用監聽器。禁用時，監聽器使用不同的圖示顯示在清單中。
+::END
+
+$LISTENER_PURE_VIRTUAL$=純虛擬域
+$LISTENER_PURE_VIRTUAL_TXT$::
+Serv-U 支持多個域 "共用" 相同的監聽器。換句話說，第一個域擁有必要的監聽器組態，而其他域 "馱靠" 在第一個域之上。這樣，第二個域以虛擬方式存在。要使某個域 "馱靠" 在現有域的監聽器組態上，請將該域的監聽器清單留空。"馱靠" 域必須至少定義了一個 $LINK_HELP_VIRTUAL$。
+
+"馱靠" 的方法僅作用於 FTP 和 HTTP 通訊協定，因為只有這兩個檔共用通訊協定指定了建立連接後標識所需主機的方法。對於 FTP 連接，使用者端必須發佈 HOST 命令以標識所需域。對於 HTTP 連接，瀏覽器基於用來建立 HTTP 連接的網域名稱，自動向 Serv-U 提供必需的主機標頭。
+::END
+
+
+<!-- String table for Help-Virtual-Hosts -->
+$VIRTUAL_HOSTS_HEADER$=虛擬主機
+
+$VIRTUAL_HOSTS$::
+虛擬主機為多個域提供了一種方式，使它們可以共用相同的 IP 和監聽器埠號。通常情況下，每個域監聽器必須使用唯一的 IP 位址和埠號的組合。使用虛擬主機，無需使用非標準埠號，就可以在僅有唯一 IP 位址的系統上使用多個域。通過正確地配置虛擬主機，多個域可以共用相同的監聽器。該功能僅適用於當前許可證支援多域的情形。
+
+要組態域的虛擬主機，按一下<strong>添加</strong>按鈕並輸入域的虛擬主機名。虛擬主機名通常是用來連接域的全稱網域名稱，例如 "ftp.Serv-U.com"。
+
+使用者端連接所需虛擬主機的方式取決於連接 Serv-U 所用的協議。
+
+<strong>FTP</strong><br />
+FTP 使用者可使用兩種方式之一來連接特定虛擬主機。如果 FTP 使用者端支持 HOST 命令，則可在登錄前向 Serv-U 發佈該命令以標識虛擬主機。否則，可用以下格式提供虛擬主機及登入 ID：<em>虛擬_主機_名</em>|<em>登入 ID</em>。
+首先輸入虛擬主機名，後接豎線字元 ('|')，然後是登入 ID。
+
+<strong>SFTP</strong><br />
+希望連接到特定虛擬主機的 SFTP 用戶必須使用專門設計的登入 ID格式，如同以上 FTP 部分中所述。
+
+<strong>HTTP</strong><br />
+對於 HTTP 用戶，瀏覽器自動將訪問網站所用的主機名提供給 Serv-U，使得 Serv-U 可從輸入瀏覽器導航欄的全稱網域名稱中識別虛擬主機。
+::END
+
+
+
+$VIRTUAL_HOSTS_CASEFILE1_HEADER$=案例文檔&mdash;&mdash;虛擬主機
+
+$VIRTUAL_HOSTS_CASEFILE1_BODY$::
+多個域在同一個伺服器上進行組態，該伺服器有一個 IP 位址和兩個全稱網域名稱（FQDN）指向它。由於使用者必須使用埠 21 來連接到這兩個域，請在每個域上組態虛擬主機，以使 Serv-U 能區分對這兩個域的請求。在每個域上設定了相同的監聽器屬性後，請打開虛擬主機選項卡，按一下<strong>添加</strong>，然後輸入使用者端用於連接域的 FQDN（例如 ftp.Serv-U.com）。
+
+使用 FTP 連接伺服器後，使用者能發送 <strong>HOST ftp.Serv-U.com</strong> 命令以連接檔伺服器上相應的域。FTP 和 SFTP使用者也能通過其登入 ID <strong>ftp.Serv-U.com|登入 ID</strong> 來標識虛擬主機。如果使用 HTTP，使用者能通過訪問 http://ftp.Serv-U.com 連接該域。
+::END
+
+
+<!-- String table for Help-Directory-Access -->
+$DIRECTORY_ACCESS_HEADER$=目錄訪問規則
+
+$DIR_ACCESS_BASICS$::
+目錄訪問規則定義使用者帳號可以訪問的系統區域。與傳統的限制到使用者和組級別的方式不同，Serv-U 通過全局目錄訪問規則的創建，將目錄訪問規則的使用擴展到域和伺服器級別。在伺服器級別指定的目錄訪問規則可供檔伺服器中的所有使用者繼承。如果在域級別指定，則僅供該域內的使用者繼承。繼承的傳統應用規則為，在較低級別指定的規則（如使用者級別）可以覆蓋在較進階別（如伺服器級別）指定的衝突或重複的規則。  
+
+設定目錄訪問路徑時，可以使用 %USER%、%HOME% 和 %DOMAIN_HOME% 變數簡化這一過程。例如，可以使用 %HOME%/ftproot/ 創建目錄訪問規則，在使用者根目錄下指定 "ftproot" 資料夾。以這種方式指定的目錄訪問規則具有 "可攜性"，在實際的根目錄變更時，能夠保持原有的子目錄結構。這將減輕檔伺服器管理人的維護負擔。如果在路徑中指定了 %USER% 變數，該變數將被替換為使用者的登入 ID。變數在指定群組根目錄時非常有用，可以確保使用者繼承符合邏輯且唯一的根目錄。最後，標識使用者根目錄時還可使用 %DOMAIN_HOME% 巨集。例如，使用 %DOMAIN_HOME%\%USER% 將使用者及其根目錄置於公共目錄。
+
+目錄訪問規則按其列出的順序應用。Serv-U 碰到的清單中第一條符合使用者端路徑的規則，即應用於該規則的規則。換句話說，如果現有的規則拒絕訪問某個子目錄，但該規則列于授權訪問父目錄的規則<em>之下</em>，則使用者仍可以訪問該子目錄。目錄訪問清單右邊的箭頭用於重新排列規則應用的順序。
+
+以下是清單和每種可用的訪問許可權的描述。
+::END
+
+$FILE_PERMS_HEADER$=檔案許可權
+
+$FILE_PERMS_READ$=讀
+$FILE_PERMS_READ_TXT$::
+允許使用者讀取（即下載）檔。該許可權不允許使用者列出目錄內容，執行該作業需要<strong>清單</strong>許可權。
+::END
+
+$FILE_PERMS_WRITE$=寫
+$FILE_PERMS_WRITE_TXT$::
+允許使用者寫入（即上傳）檔。該許可權不允許使用者修改現有的檔，執行該作業需要<strong>追加</strong>許可權。
+::END
+
+$FILE_PERMS_APPEND$=追加
+$FILE_PERMS_APPEND_TXT$::
+允許使用者向現有檔中追加資料。該許可權通常用於使使用者能夠對部分上傳的檔進行續傳。
+::END
+
+$FILE_PERMS_RENAME$=重命名
+$FILE_PERMS_RENAME_TXT$::
+允許使用者重命名現有的檔。以前版本的 Serv-U 要重命名檔需要<strong>移除</strong>和<strong>寫</strong>許可權。從 7.0 版本開始，<strong>重命名</strong>成為明確的許可權。
+::END
+
+$FILE_PERMS_DELETE$=移除
+$FILE_PERMS_DELETE_TXT$::
+允許使用者移除檔。
+::END
+
+$FILE_PERMS_EXECUTE$=執行
+$FILE_PERMS_EXECUTE_TXT$::
+允許使用者遠端執行檔。執行訪問用於遠端啟動程式並通常應用於特定檔。這是非常強大的許可權，在將該許可權授予使用者時需格外謹慎。具有<strong>寫</strong>和<strong>執行</strong>許可權的使用者實際上能夠選擇在您的系統上安裝任何程式。
+::END
+
+$DIR_PERMS_HEADER$=目錄許可權
+
+$DIR_PERMS_LIST$=清單
+$DIR_PERMS_LIST_TXT$::
+允許使用者列出目錄中包含的檔。
+::END
+
+$DIR_PERMS_CREATE$=創建
+$DIR_PERMS_CREATE_TXT$::
+允許使用者在目錄中新建子目錄。
+::END
+
+$DIR_PERMS_RENAME$=重命名
+$DIR_PERMS_RENAME_TXT$::
+允許使用者在目錄中重命名現有子目錄。以前版本的 Serv-U 要重命名目錄需要<strong>移除</strong>和<strong>寫</strong>許可權。從 7.0 版本開始，<strong>重命名</strong>成為明確的許可權。
+::END
+
+$DIR_PERMS_DELETE$=移除
+$DIR_PERMS_DELETE_TXT$::
+允許使用者在目錄中移除現有子目錄。<strong>注意：</strong>  如果目錄包含檔，使用者要移除目錄還需要具有<strong>移除</strong>檔許可權。
+::END
+
+$SUBDIR_PERMS_HEADER$=子目錄許可權
+$SUBDIR_PERMS_INHERIT$=繼承
+$SUBDIR_PERMS_INHERIT_TXT$::
+允許所有子目錄繼承其父目錄具有的相同許可權。<strong>繼承</strong>許可權適用於大多數情況，但是如果訪問必須受限於子資料夾，例如實施強制訪問控制（Mandatory Access Control）時，則取消繼承並為資料夾逐一授予許可權。
+::END
+
+$WINDOWS_USER_ACCESS$=作為 Windows 使用者訪問
+$WINDOWS_USER_ACCESS_TXT$::
+由於種種原因，要將檔案和資料夾保存在外部伺服器上以便集中檔案存儲或提供額外的安全級別。在這種環境下，可以使用 UNC 路徑 (\\servername\folder\) 替代傳統的 "C:\ftproot\folder" 路徑來訪問檔案。不過，訪問跨網路存儲的資料夾別具挑戰 - 預設情況下，Windows 伺服器運行於“本地系統”帳號之下，沒有訪問網路資源的許可權。
+
+為使整個 Serv-U 避免這一問題，可以組態“Serv-U 檔案伺服器”服務運行於網路帳號之下。或者，當存在多個伺服器或出於安全原因 Serv-U 伺服器服務必須運行於“本地系統”之下時，可以組態目錄訪問規則以使用特定的 Windows 使用者訪問檔案。按一下“高級”按鈕可以為每個單獨的目錄訪問規則指定特定的 Windows 使用者。就如同在 Windows 驗證中目錄訪問取決於 NTFS 許可權一樣，在 Serv-U 中的檔案訪問也取決於所組態的許可權。
+::END
+
+$QUOTA_PERMS_HEADER$=配額許可權
+$QUOTA_PERMS_MAXSIZE$=目錄內容的最大尺寸
+$QUOTA_PERMS_MAXSIZE_TXT$::
+設定最大尺寸，動態地將目錄內容大小限制在指定的值以內。任何嘗試的檔傳輸如果使目錄內容超過這一限制值，則被拒絕。它作為傳統配額功能的替代功能，傳統功能依賴於追蹤所有的檔傳輸（上傳和移除）以計算目錄大小，且無法在使用者檔伺服器活動以外考慮對目錄內容的變更。
+::END
+
+$DIR_ACCESS_CASEFILE1_HEADER$=強制訪問控制
+$DIR_ACCESS_CASEFILE1_TXT$::
+當使用者需要訪問相同根目錄但不一定都能訪問其下的子目錄時，Serv-U 啟用強制訪問控制。要在目錄級別實施強制訪問控制，只需禁用 "繼承" 許可權，如下所示（假設該規則應用於 "D:\ftproot\"）：
+::END
+$DIR_ACCESS_CASEFILE1_TXT2$::
+現在，使用者可以訪問 "ftproot" 資料夾但不能訪問其下的子資料夾。必須為使用者需要訪問的子資料夾個別授予訪問許可權，從而在 Serv-U 檔伺服器中提供強制訪問控制的安全保護作用。
+::END
+
+$DIR_ACCESS_CASEFILE2_HEADER$=限制檔類型
+$DIR_ACCESS_CASEFILE2_TXT$::
+如果使用者使用 Serv-U 檔伺服器上的存儲空間保存與工作無關的檔，例如 MP3 音樂檔，通過組態目錄訪問規則並將其置於主目錄訪問規則<strong>之上</strong>（使用右邊的箭頭對規則重新排序）可以阻止傳輸 MP3 檔以杜絕上述作業，如下所示。在規則的文本條目中輸入 "*.mp3" 並使用下列許可權：
+::END
+
+$DIR_ACCESS_CASEFILE2_TXT2$::
+該規則拒絕傳輸任何以 .mp3 為副檔名的檔，並可作修改以顯示任何檔副檔名。同樣，如果會計部門的員工只需要傳輸以 .mdb 為副檔名的檔，則可組態一對規則以授予傳輸 .mdb 檔的許可權但拒絕對任何其他檔的訪問，如下所示。在第一條規則中輸入使用者根目錄或需要訪問的目錄的路徑，在第二條規則中輸入需要訪問的檔副檔名（例如 "*.mdb"）：
+::END
+
+$DIR_ACCESS_CASEFILE2_TXT3$::
+這些規則僅允許使用者訪問指定目錄中的 .mdb 檔案，也可改編為任何檔案副檔名或檔案副檔名組。
+::END
+
+
+<!-- String table for Help-Virtual-Paths -->
+$VIRTUAL_PATHS_HEADER$=虛擬路徑
+
+$VIR_PATHS$::
+虛擬路徑允許使用者訪問根目錄以外的檔和資料夾。虛擬路徑僅定義一種方式，將現有目錄映射到系統中的其他位置，使使用者能夠在其可訪問的目錄結構中看到該目錄。為了能夠訪問該映射的位置，使用者還是需要滿足對虛擬路徑物理路徑的目錄訪問規則。
+
+和 $LINK_HELP_DIRACCESS$ 一樣，虛擬路徑可以在伺服器、域、群組和使用者級別進行組態。在伺服器級別創建的虛擬路徑可供檔伺服器上的所有使用者使用。如果在域級別創建，則僅供該域內的使用者訪問。Serv-U 的粒狀檔訪問控制甚至允許為個別使用者或群組專門創建虛擬路徑。
+::END
+
+$VIRTUAL_PATHS_PHYSICAL$=物理路徑
+$VIRTUAL_PATHS_PHYSICAL_TXT$::
+物理路徑是系統或網路中的真實位置，可以置於可供使用者訪問的虛擬位置。如果物理路徑位於同一電腦上，應使用完整路徑，如 "D:\inetpub\ftp\public"。也可以使用 UNC 路徑，如 "\\Server\share\public"。為了使使用者能夠看到虛擬路徑，必須具有指定給物理路徑的目錄訪問規則。
+::END
+
+$VIRTUAL_PATHS_VIRTUAL$=虛擬路徑
+$VIRTUAL_PATHS_VIRTUAL_TXT$::
+虛擬路徑是應該向使用者顯示的物理路徑位置。通常在虛擬路徑中使用巨集 %HOME% 以將指定的物理路徑置於使用者根目錄中。指定虛擬路徑時，最後指定的目錄作為使用者目錄清單中顯示的名稱。例如，虛擬路徑 "%HOME%/public" 取代指定物理路徑中名稱為 "public" 的資料夾，該檔位於使用者的根目錄下。也可以使用不帶任何巨集的完整路徑。
+::END
+
+$VIRTUAL_PATHS_INCLUDE_IN_MAX_SIZE$=包括在"最大目錄尺寸"計算範圍內
+$VIRTUAL_PATHS_INCLUDE_IN_MAX_SIZE_TXT$::
+選中時，虛擬路徑包括在最大目錄尺寸計算範圍內。若未選中，虛擬路徑不包括在最大目錄尺寸計算範圍內。最大目錄尺寸限制了目錄大小，從而影響可上傳的資料量。
+::END
+
+$VIRTUAL_PATHS_CASEFILE1_HEADER$=案例檔 - 使用虛擬路徑
+
+$VIRTUAL_PATHS_CASEFILE1_BODY$::
+假如為了進行 Web 開發，授予一組 Web 開發者可以訪問目錄 "D:\ftproot\examplesite.com\" 的許可權。開發者還需要訪問位於 "D:\corpimages\" 的圖片庫。為了避免授予群組訪問 D 盤根目錄的許可權，必須組態虛擬路徑使圖片庫<em>看起來</em>包含在群組的根目錄中。在 Web 開發者群組中要添加虛擬路徑 "使使用者能夠訪問目錄"，可以將 "D:\corpimages\" 指定為<strong>物理路徑</strong>，同時將 "D:\ftproot\examplesite.com\corpimages" 指定為<strong>虛擬路徑</strong>。請確保也為 "D:\corpimages\" 添加了群組級的目錄訪問規則。開發者現在可以訪問圖片庫，同時也不需要折衷安全性或重新安排共用的資源。
+::END
+
+$VIRTUAL_PATHS_CASEFILE2_HEADER$=案例檔 - 創建相對虛擬路徑
+
+$VIRTUAL_PATHS_CASEFILE2_BODY$::
+繼續上面的例子，如果 Web 開發者群組的根目錄被重新安排到其他驅動器，則不僅需要更新其根目錄，還需要更新虛擬路徑以反映這一變更。要避免此問題，可以使用 %HOME% 巨集創建相對虛擬路徑位置，便無需在根目錄變更時更新虛擬路徑。和使用 "D:\ftproot\examplesite.com\corpimages" 作為<strong>虛擬路徑</strong>不同，可以使用 "%HOME%\corpimages"。這將告訴 Serv-U 將 "corpimages" 虛擬路徑置於群組根目錄中&mdash;&mdash;無論根目錄在什麼位置。如果之後根目錄有所變更，虛擬路徑將還出現在根目錄中原來的位置。
+::END
+
+
+<!-- String table for Help-Configure-Logs -->
+$DOMAIN_LOGS_HEADER$=組態域記錄檔
+
+$CONF_DOMAIN_LOGS$::
+Serv-U 檔伺服器允許大量定制作業用於將域事件和活動記入記錄檔。記錄檔記錄分為兩個部分：檔和螢幕。要啟用記錄檔選項，請選取檔或螢幕列中相應的核取方塊。從 "檔案" 列中選取選項時，如果選取<strong>啟用記錄記錄檔到檔</strong>，則相應的記錄檔資訊將保存到指定的記錄檔檔中。從 "螢幕" 列中選取選項時，從 Serv-U 管理控制臺將看到事件顯示在記錄檔中。記錄檔顯示內容的多少可以根據您的需要進行組態。組態好需要的記錄檔選項後，按一下<strong>保存</strong>按鈕以保存變更。
+::END
+
+$DOMAIN_LOG_FILE_SETTINGS$=記錄記錄檔到檔設定
+
+$DOMAIN_LOG_FILE$=記錄檔檔路徑
+$DOMAIN_LOG_FILE_TXT$::
+將資訊保存到檔之前，必須為記錄檔檔命名。可以使用<strong>瀏覽</strong>按鈕為記錄檔檔選擇已有的檔或目錄位置。記錄檔檔路徑支援以下列出的這些萬用字元。萬用字元字元表示記錄檔檔創建的日期。和<strong>自動迴圈更新記錄檔檔</strong>選項結合使用時，萬用字元能夠自動歸檔域活動用於審計，如 HIPAA 需要的活動記錄檔。可用的萬用字元字元包括：
+::END
+$DOMAIN_LOG_FILE_LIST$::
+%D - 每月的當前日期
+%M - 當前月份名稱
+%N - 當前月的數字值 (1-12)
+%Y - 當前年份的四位元數字值 (如 %COPYRIGHT_END_YEAR%)
+%X - 當前年份的兩位元數字值 (如用 %SHORT_COPYRIGHT_END_YEAR% 表示 %COPYRIGHT_END_YEAR%)
+%S - 活動記錄檔正被記錄的網域名稱
+::END
+
+$DOMAIN_LOG_ENABLE_FILE$=啟用記錄記錄檔到檔
+$DOMAIN_LOG_ENABLE_FILE_TXT$::
+選取該選擇框，Serv-U 將開始將記錄檔資訊保存到在<strong>記錄檔檔路徑</strong>中指定的檔。如果未選取該選項，Serv-U 不會將任何記錄檔記錄到檔，而不管在 "檔案" 列中選取了哪些個別選項。
+::END
+
+$DOMAIN_LOG_ROTATE$=自動迴圈更新記錄檔檔
+$DOMAIN_LOG_ROTATE_TXT$::
+要確保記錄檔檔維持可管理的尺寸，並且在審計時能夠輕鬆引用，Serv-U 支持每隔固定的時間自動迴圈更新記錄檔檔。通過指定<strong>記錄檔檔路徑</strong>時使用萬用字元表示當前日期，Serv-U 可以每日、每週、每月或每年迴圈更新記錄檔檔並創建唯一的檔案名。
+::END
+
+$DOMAIN_LOG_PURGE$=清除舊記錄檔
+$DOMAIN_LOG_PURGE_TXT$::
+Serv-U 支持自動清除舊記錄檔的功能，只要以 MB 為單位設定需保持的檔案最大數量和/或需限制的檔案最大尺寸即可。將這些選項設定為“0”表示該設定為無限，不套用限制。
+
+<strong>注意:</strong> 記錄檔僅基於當前記錄檔的路徑名稱進行清除。記錄檔變數將被替代成 Windows 萬用字元值，用於搜索匹配的檔案。例如：
+
+<strong>C:\Logs\%Y:%N:%D %S Log.txt</strong> 搜索自 <strong>C:\Logs\????:??:?? * Log.txt</strong><br />
+<strong>C:\Logs\%Y:%M:%D %S Log.txt</strong> 搜索自 <strong>C:\Logs\????:*:?? * Log.txt</strong><br />
+<strong>C:\Logs\%S\%Y:%M:%D Log.txt</strong> 搜索自 <strong>C:\Logs\--DomainName--\????:*:?? Log.txt</strong>
+
+日誌變數的萬用字元化如下所示：
+
+%D --&gt; ??<br />
+%N --&gt; ??<br />
+%M --&gt; *<br />
+%Y --&gt; ????<br />
+%X --&gt; ??<br />
+%S --&gt; *
+
+可以清除任何匹配萬用字元化路徑名稱的檔案。請謹慎使用；其最佳慣例是將記錄檔放置在單一目錄，以避免意外的檔案移除。
+::END
+
+$DOMAIN_LOG_NO_LOG$=不記入記錄檔的 IP
+$DOMAIN_LOG_NO_LOG_TXT$::
+Serv-U 支援指定 IP 位址，使其不被記入記錄檔的功能。來自這些 IP 位址的活動將不被記錄到規則指定的位置&mdash;&mdash;記錄到螢幕和/或檔。該功能能夠使管理人忽略一些 IP 位址，否則將生產大量記錄檔資訊，從而使域活動和其他常規使用者活動混淆。還可以用於節省記錄檔存儲空間並減少管理成本。只需按一下<strong>不記入記錄檔的 IP</strong>按鈕並根據需要添加 IP 位址。
+::END
+
+
+<!-- String table for Help-About-User-Accts -->
+$ABOUT_USERS_HEADER$=有關使用者帳號
+
+$ABOUT_USER_ACCTS$::
+要訪問檔伺服器，必須提供使用者帳號。在最基本的級別，使用者帳號定義登入資訊（如登入 ID和密碼）、根目錄和一套 $LINK_HELP_DIRACCESS$，用於定義系統中該使用者可以訪問的區域以及在這些區域內可以執行的作業。檔伺服器上每項活動連線期間都有相關聯的使用者帳號，便於管理人識別使用者端。
+
+在 Serv-U 檔伺服器中定義使用者帳號的方法有多種，包括：
+::END
+
+$ABOUT_USERS_LIST$::
+<em>域使用者</em> - 在域級別定義，域使用者只能登入創建該使用者的域。
+<em>全局使用者</em> - 在伺服器級別定義，全局使用者可以登入檔伺服器上的<strong>任何</strong>域。
+<em>資料庫使用者</em> - 可以在伺服器和域級別定義，資料庫使用者存儲在外部資料庫中，能夠通過 ODBC 訪問，是本地帳號資料庫的補充。
+<em>Windows 使用者</em> - 可以在域級別定義，Windows 使用者可以是位於本地系統也可通過網域控制器訪問的 Windows 帳號，它作為本地帳號資料庫的補充，允許使用者端使用 Windows 登入資訊登入到檔伺服器。
+::END
+
+$ABOUT_USER_ACCTS2$::
+由於可以在各種級別使用相同的登入 ID指定使用者帳號，因此 Serv-U 使用階層確定哪種帳號具有較高的優先順序。以上列出的帳號類型按其優先順序高低順序排列。如果在域和伺服器級別都指定了使用者帳號，則域級別帳號的優先順序總是高於伺服器級別指定的帳號。
+
+創建使用者時，考慮它們需要何種訪問類型，並相應選擇合適的使用者類型——在伺服器級別輸入設定節省了在域級別輸入多個使用者的時間和精力。
+
+在 Serv-U 企業版中，使用者帳號可以歸類到集合中從而使帳號管理更加合理和方便。這在管理一個部門或某個物理位置的所有使用者時非常有用。例如，財務部門的所有使用者可以歸入名稱為 "Accounting" 的集合中，或位於 Topeka 辦事處的所有使用者都可以歸入 Topeka Users" 集合中。
+
+要創建新集合，請在<strong>選擇使用者集合</strong>群組中，按一下位於 "使用者" 視窗中的<strong>添加</strong>按鈕。在新建對話方塊中，輸入集合的名稱並按一下<strong>保存</strong>按鈕。使用者現在便可以添加新的集合，只需選取集合並按一下使用者清單下的<strong>添加</strong>按鈕。要將使用者從一個集合移動到另一個集合，請按一下使用者清單下方的<strong>移動</strong>按鈕，然後選擇高亮顯示的使用者帳號要轉移到的目標集合。使用相應的按鈕還可以<strong>重命名</strong>或<strong>移除</strong>集合。
+
+<strong>注意：</strong> 移除集合時，該集合包含的所有使用者帳號也被移除。如果要保留使用者帳號，請確保在移除集合前將帳號轉移。
+
+默認情況下，所有使用者都在 "通用" 使用者集合中創建。
+::END
+
+
+$ABOUT_USER_WIZARD$=新建使用者嚮導
+$ABOUT_USER_WIZARD_TXT$::
+按一下<strong>嚮導</strong>按鈕，可以使用嚮導幫助您創建新的使用者帳號。新建使用者嚮導帶領您執行創建使用者帳號所需的四個步驟，只需要輸入最低需求的屬性。帳號一旦創建，可以對其進行編輯以組態更多的進階設定，如群組成員或其他目錄訪問規則。有關使用新建使用者嚮導的更多資訊，請參見<strong>創建第一個使用者帳號</strong>部分，位於 $LINK_HELP_GUIDE$ 中。
+::END
+
+$ABOUT_USER_TEMPLATE$=使用者範本
+$ABOUT_USER_TEMPLATE_TXT$::
+儘管新建使用者嚮導提供了一種快速創建使用者帳號的方式，且只需輸入最少的必須屬性，但大多數檔伺服器管理人希望所有使用者帳號都遵守一定的設定組合。群組是實現這一功能的最好途徑，但有時也並不是實現作業的最佳方式。
+
+Serv-U 使管理人能夠為新使用者帳號組態範本，只需按一下<strong>範本</strong>按鈕。打開後，除了登入 ID以外，可以像組態其他使用者帳號一樣組態範本使用者。將設定保存到範本後，所有手動創建的新使用者帳號將使用範本中的設定作為其默認設定。
+::END
+
+$ABOUT_USER_COPY$=複製使用者帳號
+$ABOUT_USER_COPY_TXT$::
+使用者範本提供一種方式以使用相同的設定創建大量使用者。在僅單個使用者的設定必須複製的場合或存在多使用者範本需求時，可以使用“複製”按鈕來創建僅缺少使用者名與密碼的使用者帳號副本。要複製使用者，請選取使用者帳號並選擇“複製”。
+::END
+
+$ABOUT_USER_PASS_RECOVERY$=恢復密碼
+$ABOUT_USER_PASS_RECOVERY_TXT$::
+Serv-U 支援通過管理控制臺與 Web 使用者端來恢復密碼。要啟用密碼恢復，必須組態伺服器或域的 SMTP 選項，使用者帳號也必須列出電子信件位址。要從管理控制臺使用密碼恢復，請選取使用者帳號並按一下“恢復密碼”按鈕。如果該密碼使用單向加密保存，將重置密碼並將新密碼發送至該使用者的電子信件位址。如果該密碼使用雙向加密或無加密保存，就會將原始密碼通過電子信件發送給使用者。
+
+要從 Web 使用者端恢復密碼，需要為使用者帳號啟用“允許使用者恢復密碼”限制。一旦啟用該選項，只要使用者使用 Serv-U 銀版或金版許可證，他們即可使用 Web 使用者端中的“恢復密碼”選項。其他方面的工作原理與從管理控制臺恢復密碼相同。
+::END
+
+$IMPORT_USER_ACCOUNTS$=匯入/匯出使用者帳號
+$IMPORT_USER_ACCOUNTS_TXT$::
+可以使用位於螢幕頂端的“匯入”與“匯出”按鈕匯入或匯出使用者帳號。“匯出”按鈕會將當前域/伺服器或當前集合中的所有使用者匯出到逗號分隔值檔（CSV 檔），該檔可在 Excel 中查看，也可使用資料庫引擎進行分析等等。此外，在匯出時使用相同的格式創建 CSV 檔，可以將 CSV 檔中的使用者清單匯入 Serv-U。
+::END
+
+
+<!-- String table for Help-User-Info -->
+$USER_INFO_HEADER$=使用者資訊
+
+$USER_INFO_TXT$::
+使用者帳號包括各種屬性和設定。使用者資訊選項包含該使用者帳號的一般資訊，如登入資訊、根目錄和帳號類型。關於每種屬性的詳細資訊請參見以下內容。
+::END
+
+$USER_INFO_USERNAME$=登入 ID
+$USER_INFO_USERNAME_TXT$::
+也稱為 "登入 ID"，使用者端提供登入 ID作為連接到檔伺服器連線期間驗證的一部分。除了登入 ID之外，使用者端還必須提供密碼以完成驗證。在某一級別指定的每個帳號必須使用唯一的登入 ID。登入 ID不得包含以下任一特殊字元： \ / &lt; &gt; | : ? *.
+
+<strong>注意</strong>：有兩種特殊登入 ID："Anonymous" 和 "FTP"。這兩個登入 ID含義相同，可供訪客訪問檔伺服器。這些使用者不需要密碼，因此密碼部分應該留空。雖然無需輸入密碼，但 Serv-U 會要求使用這些帳號登入的使用者提供其 email 位址以完成登入過程。
+::END
+
+$USER_INFO_PASSWORD$=密碼
+$USER_INFO_PASSWORD_TXT$::
+檔伺服器連線期間驗證所需的第二個專案是密碼。密碼應保密妥善保存，不應與除了帳號所有者之外的人共用。強密碼至少含有 6 個字元，包括大小寫字母和至少一個數位。可以在限制中對密碼的長度和複雜程度進行修改，制定限制。更多資訊，請參見幫助文檔中有關 $LINK_HELP_USER_LIMITS$ 的內容。
+::END
+
+$USER_INFO_PASSWORD_GEN_TXT$::
+此外, “密碼”欄位旁的“鎖定”圖示允許為使用者生成新的隨機密碼。該新密碼將遵循定義的密碼長度要求。預設情況下，所有密碼長度為 8 個字元，形式必須複雜。如果“最小密碼長度”等於或少於 4 個字元，該密碼長度將為 4 個字元 - 否則，生成的密碼將遵循指定的域值。
+::END
+
+$USER_INFO_ADMIN$=管理許可權
+$USER_INFO_ADMIN_TXT$::
+可以授予使用者帳號以下三種管理許可權之一：無許可權、系統管理人或域管理人。該屬性的值可以從群組成員繼承。
+
+無許可權的使用者帳號就是一般的使用者帳號，只能從檔伺服器上傳和下載檔。這些使用者帳號無法使用 Serv-U 管理控制臺。
+
+系統管理人可以執行任何的檔伺服器管理活動，包括創建和移除域、使用者帳號，甚至可以更新檔伺服器的許可證。通過 HTTP 遠端管理登入的具有系統管理人許可權的使用者帳號只要和電腦有物理連接，便能管理這台伺服器。
+
+與管理人只能管理其帳號所屬域中的事務。域管理人也無法執行可能影響其他域的和域相關的活動。域管理人<em>無法</em>執行的和域相關的活動包括組態域監聽器或組態域的 ODBC 資料庫訪問。
+::END
+
+$USER_INFO_ADMIN_READ_ONLY$::
+Serv-U 還支援唯讀帳號，允許管理人以域或伺服器級別登入與檢視組態選項，與外部人員工作時極其有助於遠端問題診斷。唯讀管理人許可權與其完全訪問相同，只是他們不能變更任何設定或創建/移除/編輯使用者帳號。
+::END
+
+$USER_INFO_ADMIN_NOTE$::
+<strong>注意:</strong> 使用管理人許可權組態使用者帳號時，請謹慎指定其根目錄。在組態檔案伺服器時，使用 "\"（根，鎖定於其根目錄中）以外的根目錄的管理人無法使用其根目錄外部的檔案路徑。
+::END
+
+$USER_INFO_TYPE$=帳號類型
+$USER_INFO_TYPE_TXT$::
+默認情況下所有帳號都是永久帳號，除非手動移除或禁用，將一直保留在檔伺服器上。可以組態使帳號在指定的日期被自動禁用或移除，只需組態<strong>帳號類型</strong>。選擇需要的類型後，將顯示<strong>帳號過期日期</strong>控制項。按一下行事曆或過期日期選擇將帳號禁用或移除的日期。
+::END
+
+$USER_INFO_WEB_CLIENT$=默認 Web 使用者端
+$USER_INFO_WEB_CLIENT_TXT$::
+如果您的 Serv-U 許可證可以使用 FTP Voyager JV，則通過 HTTP 連接到檔伺服器上的使用者可以選擇登入後使用哪種使用者端。如果不需要詢問使用者使用哪種使用者端，也可以使用默認使用者端。如果該選項變更，將覆蓋在伺服器或域級別指定的選項。還可以通過群組成員的使用者繼承。使用<strong>繼承預設值</strong>選項將其重新設定為相應的預設值。
+::END
+
+$USER_INFO_EMAIL_ADDRESS$=電子信件位址
+$USER_INFO_EMAIL_ADDRESS_TXT$::
+Serv-U 事件可以在向群組發送電子信件通知時使用“電子信件位址”欄位，並且使用 Web 使用者端的密碼恢復需要電子信件位址，以將恢復的密碼發送給使用者。在此處輸入電子信件位址以允許用於使用者帳號的電子信件通知或密碼恢復。
+::END
+
+$USER_INFO_ENABLE$=啟用帳號
+$USER_INFO_ENABLE_TXT$::
+取消選擇該對話方塊將禁用當前帳號。已禁用的帳號仍保留在檔伺服器上，但無法使用其進行登入。要重新啟用帳號，請再次選取<strong>啟用帳號</strong>選擇框。
+::END
+
+$USER_INFO_FULL_NAME$=全名
+$USER_INFO_FULL_NAME_TXT$::
+可以使用帳號的全名指定有關帳號的更多身份資訊。但不在使用者端登入時使用。
+::END
+
+$USER_INFO_PASS_TYPE$=密碼類型
+$USER_INFO_PASS_TYPE_TXT$::
+所有密碼存儲在一個加密的、無法反向作業的 Serv-U 組態檔中（除非通過 $LINK_HELP_USER_LIMITS$ 將檔伺服器組態為不加密存儲的密碼）。除了<strong>常規密碼</strong>選項，使用 FTP 協定的帳號還可以使用其他兩種密碼存儲類型：<strong>MD4</strong> 和 <strong>MD5</strong> OTP S/KEY 密碼。這種密碼設定類型允許使用者通過 FTP 登入且無需以純文本的格式向檔伺服器發送密碼。這些選項僅適用於 FTP 通訊協定。-設定該選項不影響使用者通過其他通訊協定登入的功能。
+::END
+
+$USER_INFO_HOMEDIR$=根目錄
+$USER_INFO_HOMEDIR_TXT$::
+使用者帳號的根目錄是使用者一旦登入到檔伺服器後所處的位置。必須為每個使用者指定其根目錄，如果使用者是群組的成員，也可以在群組級別指定其根目錄。必須指定根目錄的完整路徑，包括磁碟機代號或 UNC 共用名稱。如果找不到根目錄，可以組態 Serv-U 為使用者創建根目錄。
+
+當指定根目錄時，可以使用 %USER% 巨集將登入 ID插入到路徑中。這多數用於組態群組基本的默認根目錄或在新使用者的範本中使用，以保證所有使用者都有獨特的根目錄。當結合 %HOME% 的目錄訪問規則時，可以用最輕鬆的方式將新使用者組態為帶有獨特根目錄和對該位置恰當的訪問許可權。
+
+標識使用者根目錄時還可使用 %DOMAIN_HOME% 巨集。例如，使用 %DOMAIN_HOME%\%USER% 將使用者根目錄置於公共位置。
+
+可以將根目錄指定為 "\" (根) 使使用者獲得系統級別的訪問許可權，能夠訪問所有的系統驅動器。為了使其正確工作，必須將使用者鎖定在其根目錄。
+::END
+
+$USER_SSH_PUBLIC_PATH$=SSH 公共密鑰路徑
+$USER_SSH_PUBLIC_PATH_TXT$::
+公共密鑰可以用來驗證使用者何時登入 Serv-U 檔案伺服器。該公共密鑰路徑應該指向伺服器上安全目錄中的密鑰檔案。該路徑可以包含以下巨集：SSH
+
+%HOME% - 使用者帳號的根目錄<br /> 
+%USER% - 登入 ID，在公共密鑰將登入 ID 作為部分檔案名時使用<br />
+%DOMAIN_HOME% - 域的根目錄，在域詳細資訊 | 設定中進行設定，在密鑰位於與域的根目錄相關的中央檔夾時使用
+
+示例：
+
+%HOME%\SSHpublic.pub<br />
+%HOME%\%USER%.pub<br />
+%DOMAIN_HOME%\SSHKeys\%USER%.pub
+
+<a href="Help-SSH-Key-Pair.htm">按一下此處</a>獲得有關創建 SSH 密鑰對的資訊。
+::END
+
+$USER_INFO_LOCK_HOMEDIR$=鎖定使用者至根目錄
+$USER_INFO_LOCK_HOMEDIR_TXT$::
+被鎖定在根目錄的使用者無法訪問其根目錄以上的路徑。此外，根目錄的實際物理位址顯示為遮罩，Serv-U 總是將其顯示為 "/" (根)。該屬性的值可以從群組成員繼承。
+::END
+
+$USER_INFO_ALWAYS_LOGIN$=永遠允許登入
+$USER_INFO_ALWAYS_LOGIN_TXT$::
+啟用該選項表示總是允許該使用者帳號登入，無論檔伺服器級別設定的限制，如 IP 訪問規則或最大連線期間數。這是非常有用的故障-安全手段，以便確保關鍵的系統管理人帳號總是能夠在任何情況下遠端存取檔伺服器。由於該選項可以繞過任何訪問規則，因此使用時需格外謹慎。該屬性的值可以從群組成員繼承。
+::END
+
+$USER_INFO_DESCRIPTION$=說明
+$USER_INFO_DESCRIPTION_TXT$::
+說明可以為條目添加更多注釋，僅供管理人檢視。
+::END
+
+$LOGIN_AVAILABILITY$=可用性
+$LOGIN_AVAILABILITY_TXT$::
+該功能限制使用者何時可以連接該伺服器。可以基於時間或星期幾放置限制。當在指定的可用時間以外的時段登入時，會向使用者顯示該使用者帳號當前不可用的消息。
+::END
+
+
+<!-- String table for Help-User-Groups -->
+$USER_GROUPS_HEADER$=群組成員
+
+$USER_GROUPS_OLD$::
+一個使用者可以是多個群組的成員。群組提供了一種便捷的方式，將一組基本屬性和設定應用於多個使用者。有關組態群組的更多資訊，請參見幫助文檔，位於 $LINK_HELP_GROUPS$。
+
+由於使用者可以是多個群組的成員，因此顯示的所屬群組順序非常重要。使用者在 Serv-U 中的第一個群組成員使用的屬性值即為群組的屬性值。使用群組成員清單右邊的箭頭，根據需要重新排列群組成員的順序。
+
+使用<strong>添加</strong>和<strong>移除</strong>箭頭按鈕，分別可以為使用者添加更多群組或將使用者從選取的群組中移除。
+::END
+
+$USER_GROUPS$::
+一個使用者可以是多個群組的成員。群組提供了一種便捷的方式，將一組基本屬性和設定應用於多個使用者。有關組態群組的更多資訊，請參見幫助文檔，位於 $LINK_HELP_GROUPS$。
+
+由於使用者可以是多個群組的成員，因此顯示的所屬群組順序非常重要。使用者在 Serv-U 中的第一個群組成員使用的屬性值即為群組的屬性值。使用群組成員清單右邊的箭頭，根據需要重新排列群組成員的順序。
+
+使用<strong>向左</strong>和<strong>向右</strong>箭頭按鈕，分別可以為使用者添加更多群組或將使用者從選取的群組中移除。
+::END
+
+
+<!-- String table for Help-Welcome-Message -->
+$WELCOME_MESSAGE_HEADER$=歡迎消息
+
+$WELCOME_MESSAGE_BODY$::
+歡迎消息是使用者成功登入後，通常發送給 FTP 使用者端的消息。Serv-U 將這一功能擴展到 HTTP 連接，因此通過 Web 使用者端或 FTP Voyager JV 訪問檔伺服器的使用者也會收到歡迎消息。該功能不適用於通過 SSH2 的 SFTP 登入的使用者，因為該通訊協定無法定義將一般純文本資訊發送給使用者的方式。
+
+歡迎資訊包含有關伺服器的常規資訊、給使用者的特殊消息、免責聲明或其他法律聲明。組態歡迎消息的方式有兩種。第一種方式可以在<strong>消息檔路徑</strong>欄位中指定檔路徑，該檔中包含了需要的歡迎消息。可以使用<strong>瀏覽</strong>按鈕選擇系統中已有的檔。  
+
+要使用另一種方法，可以在提供的文本框中輸入歡迎消息，Serv-U 將使用其中的內容。要在使用者級別覆蓋指定的歡迎消息，必須首先選取<strong>覆蓋繼承的群組歡迎消息</strong>核取方塊。則系統會向使用者發送提供的文本，而不使用在<strong>消息檔路徑</strong>中指定的檔所包含的內容。
+
+還可以通過群組成員的使用者繼承這些值。
+
+也可在歡迎消息中使用系統變數。有關可用的系統變數的詳細資訊，請參見幫助文檔中有關 $LINK_HELP_SYSTEM_VARS$ 的內容。
+::END
+
+
+<!-- String table for Help-Quotas-Ratios -->
+$QR_HEADER$=傳輸率和配額管理
+
+$QR_TXT$::
+傳輸率和配額是在 Serv-U 檔伺服器上管理檔傳輸的眾多方式之一。有關這些選項的更多資訊，請繼續閱讀本文檔。
+::END
+
+$QR_RATIOS$=傳輸率
+$QR_RATIOS_TXT$::
+傳輸率是鼓勵在檔伺服器上共用檔的一種方便途徑。通過指定合適的傳輸率設定，您可以給使用者指定 "信用額度"，用於傳輸指定數量的位元組數或指定數量的完成檔。該方法通常用於使使用者每上傳 'y' 千百萬位元組的資料或檔，便能下載 'x' 千百萬位元組的資料或檔。
+
+要為當前使用者帳號啟用傳輸率，請選取標記為<strong>啟用傳輸率</strong>的選擇框。選擇合適類型的傳輸率應用於使用者帳號。傳輸率可以按千百萬位元組或完成的檔進行追蹤。還可以按每個建立的連線期間追蹤，或為該使用者帳號創建所有連線期間追蹤。
+
+要組態比率，可以在比率的<strong>上傳</strong>和<strong>下載</strong>兩邊都指定數值。例如，計算所有連線期間檔數的比率為 3/1 表示，使用者帳號要能夠下載一個檔，必須上傳三個檔。使用者帳號的當前信用量顯示在<strong>信用值</strong>欄位中。該值是當前值，可以將其初始化為非零的值以便授予使用者初始信用值。
+::END
+
+$QR_QUOTA$=配額
+$QR_QUOTA_TXT$::
+配額是另外一種限制使用者帳號資料傳輸量的方法。如果為使用者指定<strong>最大</strong>配額值，則該使用者無法使用大於該值的磁碟空間。<strong>當前</strong>欄位顯示使用者帳號當前已使用的磁碟空間。初次組態配額時，這兩個欄位都不得留空。設定後，Serv-U 將追蹤使用者的檔上傳和移除情況，並相應地更新<strong>當前</strong>欄位值。
+
+<strong>注意：</strong> 使用配額有個明顯的缺點，為了保持<strong>當前</strong>值的精確，不能對 Serv-U 以外的使用者帳號可以訪問的目錄內容進行變更。由於這些變更發生在檔伺服器連接之外，Serv-U 無法追蹤並更新當前的配額值。除了配額以外，還可以考慮在為使用者帳號指定目錄訪問規則時限制目錄內容的最大尺寸。有關該選項的更多資訊，請參見有關 $LINK_HELP_DIRACCESS$ 的幫助文檔。
+::END
+
+$QR_FREE_FILES$=傳輸率不限的檔案
+$QR_FREE_FILES_TXT$::
+位於傳輸率不限的檔清單中的檔不受任何傳輸率的限制。換句話說，如果使用者必須上傳檔以獲取下載檔所需的信用度，則使用者總是能夠下載位於該清單中的檔，即使他們沒有足夠的信用度。通常用於特殊檔，如 "讀我檔案" 或目錄資訊檔，總能供使用者訪問。
+
+指定傳輸率不限的檔時，可以使用萬用字元 '*' 和 '?'。使用 '*' 萬用字元可以指定任何長度的任意字元。例如，輸入 "*.txt" 可以自由下載任何尾碼名是 .txt 的檔，無論其實際的檔案名是什麼。'?' 可以用於指定檔案名或目錄中的單個字元。
+
+此外，設定傳輸率不限的檔條目時可以使用完整路徑或相對路徑。指定檔案名時如果使用完整路徑，則僅指定的檔不受傳輸率限制。如果使用相對路徑，如只輸入 "readme.txt"，則無論其目錄位於何處，該檔總是不受傳輸率限制。
+::END
+
+
+<!-- String table for Help-Windows-Auth -->
+$WINDOWS_AUTH_HEADER$=Windows 驗證
+
+$WINDOWS_AUTH_BASICS$::
+如果啟用 Windows 驗證，使用者可以使用其 Windows 登入資訊（由本地 Windows 帳號資料庫或指定的 Windows 域伺服器提供）登入 Serv-U。使用 Windows 帳號登入時，使用者將自動位於根目錄下，因為 Windows 帳號無需手動指定根目錄。
+
+要啟用 Windows 驗證，請選取標記為<strong>啟用 Windows 驗證</strong>的選擇框。如果 <strong>Windows 網域名稱</strong>欄位留空，Serv-U 將使用系統的本地 Windows 帳號資料庫驗證使用者登入。如果系統是 Windows 域的成員，可以在該欄位中輸入網域名稱，通過域伺服器驗證使用者登入。欄位變更後，按一下<strong>保存</strong>按鈕應用變更。
+::END
+
+$WINDOWS_AUTH_USE_GROUP_HOMEDIR$=使用 Windows使用者群組根目錄而不使用帳戶根目錄
+$WINDOWS_AUTH_USE_GROUP_HOMEDIR_TXT$::
+默認情況下，使用者端使用 Windows 使用者帳戶登入時，Serv-U 使用 Windows 帳戶的根目錄。啟用此選項導致 Serv-U 使用 Windows 使用者群組裏指定的根目錄。如果在群組級別沒有指定根目錄，則仍然使用該 Windows 使用者帳戶的根目錄。
+::END
+
+$WINDOWS_AUTH_GROUP$=組態 Windows 使用者群組
+$WINDOWS_AUTH_GROUP_TXT$::
+在 Serv-U 上無法分別檢視或組態 Windows 使用者。為了有助於為本地使用者帳號組態多項進階選項，所有 Windows 使用者帳號都是特殊 Windows 使用者群組的成員。按一下<strong>組態 Windows 使用者群組</strong>按鈕，則可以像組態普通群組一樣組態該群組。在此群組中組態的設定將由 Windows 使用者帳號繼承。可以使用該功能添加 IP 訪問規則，指定帶寬限制或添加更多目錄訪問規則。
+
+有關組態群組的更多資訊，請參見有關組態 $LINK_HELP_GROUPS$ 的幫助文檔。
+::END
+
+
+<!-- String table for Help-About-Groups -->
+$ABOUT_GROUPS_HEADER$=關於群組
+
+$ABOUT_GROUPS_TXT$::
+群組可以用來和多個使用者帳號共用相同的組態選項。組態群組的方法和組態使用者帳號類似。基本上用於使用者帳號的每個組態選項都可以在群組級別進行設定。使用者要繼承群組的設定，必須是該群組的成員。使用者從群組成員中繼承的許可權和屬性仍可以在使用者級別被覆蓋。一個使用者可以是多個群組的成員以便獲取多種許可權，如目錄或 IP 訪問規則。
+
+和使用者帳號一樣，群組也可在多個級別上創建，包括：
+::END
+
+$ABOUT_GROUPS_TYPES$::
+全局群組
+域群組
+資料庫群組 - 可以在伺服器和域級別使用
+::END
+
+$ABOUT_GROUPS_TXT2$::
+但是群組僅可用於在相同級別定義的使用者帳號。換句話說，全局使用者（即在伺服器級別定義的使用者）只能是全局群組的成員。以此類推，在特定域定義的使用者僅可能是也在相同域創建的群組的成員。這一限制還應用於在資料庫中創建的群組，僅在相同級別的資料庫中創建的使用者才能是這些群組的成員。
+
+使用<strong>添加</strong>、<strong>編輯</strong>和<strong>移除</strong>按鈕管理可用的群組。
+::END
+
+$ABOUT_GROUPS_TEMPLATE$=群組範本
+$ABOUT_GROUPS_TEMPLATE_TXT$::
+Serv-U 使管理人能夠為新群組組態範本，只需按一下<strong>範本</strong>按鈕。打開後，除了群組名稱以外，可以像組態其他群組一樣組態範本群組。將設定保存到範本後，所有手動創建的新群組將使用範本中的設定作為其默認設定。如果要將所有群組組態為默認使用一些基本設定，使用群組範本是一種在創建新群組時節省時間的好方法。
+::END
+
+$ABOUT_GROUPS_NTUSER$=組態 Windows 使用者群組
+$ABOUT_GROUPS_NTUSER_TXT$::
+管理人能夠允許使用者端使用本地 Windows 使用者資料庫或通過域伺服器能夠訪問的帳號登入到檔伺服器。這些帳號在本地 Serv-U 使用者資料庫中不存在，無法進行個別組態。為了有助於組態帳號，所有通過這種方法登入的使用者都屬於默認 Windows 使用者群組。按一下該按鈕可以像組態普通群組一樣組態該群組。但是，對該群組的變更將僅應用於 Windows 使用者帳號。
+::END
+
+
+<!-- String table for Help-Group-Information -->
+$GROUP_INFO_HEADER$=群組資訊
+
+$GROUP_INFO$::
+基本上用於使用者帳號的每個屬性都可以在群組級別進行組態。群組級別的設定由群組成員繼承，且可以在使用者級別被覆蓋。群組資訊選項卡包括群組的常規資訊，如群組成員的名稱、根目錄和默認管理許可權。關於每種屬性的詳細資訊請參見以下內容。
+::END
+
+$GROUP_INFO_NAME$=群組名稱
+$GROUP_INFO_NAME_TXT$::
+群組名稱是唯一的識別字，同一級別（伺服器或域級別）不能有重複的群組名稱。群組名不得包含以下任一特殊字元：\ / &lt; &gt; | : ? *.
+::END
+
+$GROUP_INFO_DIRACCESS$=首先應用群組目錄訪問規則
+$GROUP_INFO_DIRACCESS_TXT$::
+正如幫助文檔中有關 $LINK_HELP_DIRACCESS$ 部分所述，目錄訪問規則列出的順序對於確定使用者帳號可以訪問的資源有非常重要的作用。默認情況下，在群組級別指定的目錄訪問規則其優先順序高於在使用者級別指定的規則。但是，某些情況下您可能希望使用者級別的規則擁有更高的優先順序。取消該選擇框，可以將群組的目錄訪問規則排到使用者級別的規則<em>下面</em>。
+::END
+
+
+<!-- String table for Help-Group-Members -->
+$GROUP_MEMBERS_HEADER$=群組成員
+
+$GROUP_MEMBERS$::
+該選項卡中顯示當前所選群組中的成員使用者帳號。可以用於快速瀏覽這時哪些使用者繼承了群組的設定。當前狀態下，無法使用該介面在群組中添加或移除使用者。必須從相應的使用者帳號屬性視窗添加或移除群組成員關係。
+::END
+
+
+<!--  String table for Help-System-Variables.htm -->
+$SYSTEM_VARIABLES_HEADER$=系統變數
+$SYSTEM_VARIABLES_BODY1$::
+Serv-U 中的某些可組態的消息可以定制為包含各種變數，如以下清單中的變數。這些變數在運行時會替換為相應的值，可以為登入的使用者提供最新的統計和回饋。可以使用這些變數的地方包括定制的 FTP 命令回應，或歡迎消息。
+
+以下包含了所有可用的變數和每個變數的簡短描述。如果沒有另外指定，統計資訊自上次啟動 Serv-U 檔伺服器後開始計算。
+::END
+
+$SYS_VARS_SERVER_INFO$=伺服器資訊
+$SYS_VARS_SERVER_INFO_LIST$::
+$ServerName - 伺服器的完整名稱（如：Serv-U）
+$ServerVersionShort - Serv-U 檔伺服器當前版本的前兩位元數字（如 7.0）
+$ServerVersionLong - Serv-U 檔伺服器版本的完整數位（如 7.0.0.3）
+$OS - 作業系統的名稱（如：Windows XP）
+$OSVer - 作業系統的完整版本號（如：5.1.2600）
+::END
+
+$SYS_VARS_SERVER_INFO_LIST_FUTURE_FEATURE$::
+$ComputerName - 從作業系統檢索電腦名稱，通常與 Windows 網路上的 UNC 名稱相同（例如：WEB-SERVER-01）。
+$LogFilePath - 檢索記錄檔的路徑（僅記錄檔移除事件）
+::END
+
+$SYS_VARS_SERVER_STATS$=伺服器統計
+$SYS_VARS_SERVER_STATS_LIST$::
+$ServerDays - 伺服器連續上線的總天數
+$ServerHours - 伺服器上線的小時數，從 0 到 24 迴圈
+$ServerMins - 伺服器上線的分鐘數，從 0 到 60 迴圈
+$ServerSecs - 伺服器上線的秒數，從 0 到 60 迴圈
+$ServerKBup - 上傳的千位元組總數
+$ServerKBdown - 下載的千位元組總數
+$ServerFilesUp - 上傳的檔案總數
+$ServerFilesDown - 下載的檔案總數
+$ServerFilesTot - 傳輸的檔案總數，相當於 ($ServerFilesUp + $ServerFilesDown)
+$LoggedInAll - 已建立連線期間的總數
+$ServerUploadAvgKBps - 平均上傳速度，單位 KB/s
+$ServerDownloadAvgKBps - 平均下載速度，單位 KB/s
+$ServerAvg - 平均資料傳輸速度（上傳和下載），單位 KB/s
+$ServerUploadKBps - 當前上傳速率，單位 KB/s
+$ServerDownloadKBps - 當前下載速率，單位 KB/s
+$ServerKBps - 當前平均資料傳輸速率，單位 KB/s
+$ServerSessions24HPlusOne - 過去 24 小時內的連線期間總數再加一個連線期間
+$ServerSessions24H - 過去 24 小時內的連線期間總數
+::END
+
+$SYS_VARS_DOMAIN_STATS$=域統計
+$SYS_VARS_DOMAIN_STATS_LIST$::
+$DomainKBup - 已上傳的千位元組總數
+$DomainKBdown - 已下載的千位元組總數
+$DomainFilesUp - 已上傳的檔案總數
+$DomainFilesDown - 已下載的檔案總數
+$DomainFilesTot - 已傳輸的檔案總數，相當於 ($DomainFilesUp + $DomainFilesDown)
+$DomainLoggedIn - 當前已連接的連線期間總數
+$DomainUploadAvgKBps - 平均上傳速率，單位 KB/s
+$DomainDownloadAvgKBps - 平均下載速率，單位 KB/s
+$DomainAvg - 平均資料傳輸率總計（上傳和下載），單位 KB/s
+$DomainUploadKBps - 當前上傳傳輸率，單位 KB/s
+$DomainDownloadKBps - 當前下載傳輸率，單位 KB/s
+$DomainKBps - 當前資料傳輸率總計，單位 KB/s
+$DomainSessions24HPlusOne - 過去 24 小時內的連線期間總數再加一個連線期間
+$DomainSessions24H - 過去 24 小時內的連線期間總數
+::END
+
+$SYS_VARS_USER_STATS$=使用者統計 - 應用於使用者帳號附帶的所有連線期間
+$SYS_VARS_USER_STATS_LIST$::
+$UserKBUp - 已上傳的千位元組總數
+$UserKBDown - 已上傳的千位元組總數
+$UserKBTot - 已傳輸的千位元組總數
+$UserLoggedIn - 連線期間總數
+$UserUploadAvgKBps - 平均上傳速度，單位 KB/s
+$UserDownloadAvgKBps - 平均下載速度，單位 KB/s
+$UserAvg - 平均資料傳輸率總計（上傳和下載），單位 KB/s
+$UserUploadKBps - 當前上傳速度，單位 KB/s
+$UserDownloadKBps - 當前下載速度，單位 KB/s
+$UserKBps - 當前資料傳輸率總計，單位 KB/s
+$UserSessions24HPlusOne - 過去 24 小時內的連線期間總數再加一個連線期間
+$UserSessions24H - 過去 24 小時內的連線期間總數
+::END
+
+$SYS_VARS_LAST_TRANSFER_STATS$=上次傳輸統計 - 套用於最新完成的成功資料傳輸
+$SYS_VARS_LAST_TRANSFER_STATS_LIST$::
+$TransferBytesPerSecond - 有效的（已壓縮）傳輸速度，單位 bytes/s
+$TransferKBPerSecond - 有效的（已壓縮）傳輸速度，單位 KB/s
+$TransferBytes - 已傳輸的有效（已壓縮）位元組數，顯示格式，例如，32,164
+$NoFormatTransferBytes - 已傳輸的有效（已壓縮）位元組數，未格式化，例如，32164
+$TransferKB - 已傳輸的有效（已壓縮）千位元組數，顯示格式
+$ActualTransferBytesPerSecond - 實際（未壓縮）傳輸速度，單位 bytes/s
+$ActualTransferKBPerSecond - 實際（未壓縮）傳輸速度，單位 KB/s
+$ActualTransferBytes - 已傳輸的實際（未壓縮）位元組數，顯示格式，例如，32,164
+$NoFormatActualTransferBytes - 已傳輸的實際（未壓縮）位元組數，未格式化，例如，32164
+$ActualTransferKB - 已傳輸的實際（未壓縮）千位元組數，顯示格式
+$CompressionRatio - 傳輸壓縮比率表示為預期傳輸資料總量的百分比。例如，值 100.00 表示無法壓縮資料。值 200.00 表示該資料被壓縮為原來大小的一半。
+$CurrentCompressedTransferBytes - 已傳輸的當前有效（已壓縮）位元組數，未格式化，例如，32164 (僅 FTP)
+$CurrentUncompressedTransferBytes - 已傳輸的當前實際（未壓縮）位元組數，未格式化，例如，32164 (僅 FTP)
+::END
+
+$SYS_VARS_DATE$=日期/時間
+$SYS_VARS_DATE_LIST$::
+$Date - 根據 Serv-U 檔伺服器顯示的當前日期，使用系統本地日期格式
+$Time - 根據 Serv-U 檔伺服器顯示的當前時間，使用系統本地時間格式
+::END
+
+$SYS_VARS_SERVER_SETTINGS$=伺服器設定
+$SYS_VARS_SERVER_SETTINGS_LIST$::
+$MaxUsers - 允許登入的最大連線期間數，由許可證類型限制
+$MaxAnonymous - 允許登入的匿名使用者最大數量
+::END
+
+$SYS_VARS_USER_INFO$=連線期間資訊 - 應用到當前連線期間
+$SYS_VARS_USER_INFO_LIST$::
+$Name - 附屬使用者帳號的登入 ID
+$IP - 使用者端的 IP 地址
+$IPName - 通過反向 DNS 查詢 $IP 獲取的反向 DNS 名稱
+$Dir - 連線期間的當前目錄
+$Disk - 正被訪問的驅動器盤符
+$DFree - $Disk 上的可用空間，單位 MB
+$FUp -  上傳檔案總數
+$FDown - 下載檔案總數
+$FTot -  傳輸檔案總數，相當於 ($FUp + $FDown)
+$BUp -  上傳千位元組總數
+$Bdown -  下載千位元組總數
+$BTot -  傳輸的千位元組總數
+$TconM -  連線期間持續連接的分鐘總數
+$TconS -  連線期間連接的秒數，從 0 到 60 迴圈到 $TconM
+$RatioUp -  應用比率中 '上傳' 部分，如果不使用則為 "N/A"
+$RatioDown -  應用比率中 '下載' 部分，如果不使用則為 "N/A"
+$RatioType - 應用的比列類型，按每個連線期間或使用者
+$RatioCreditType - 授予傳輸的信用量比率類型，按每個位元組或完成的檔
+$RatioCredit -  應用比率的當前傳輸信用量，按千百萬位元組或完成的檔
+$QuotaUsed - 顯示當前已使用的磁碟空間配額，單位 MB，如果不使用配額則為 "不限"
+$QuotaLeft - 顯示還有多少可用的磁碟配額，單位 MB，如果不使用配額則為 "不限"
+$QuotaMax -  顯示可以使用的最大磁碟空間數，單位 MB，如果不使用配額則為 "不限"
+::END
+
+$SYS_VARS_USER_INFO_NOTE$::
+<strong>注意：</strong> 使用事件或登入消息內的 $IPName 變數會在檢索 $IP 的反向 DNS 資訊時造成輕微的延遲。
+::END
+
+$SYS_VARS_USER_INFO_8_0_LIST$::
+$Protocol - 當前使用的協定（FTP, FTPS, HTTP, HTTPS, 或 SFTP (SSH2)）
+$DomainName - 記錄連線期間的當前域
+$DomainDescription - 說明記錄連線期間的當前域
+$TimeRemaining - 阻止 IP 地址一段時間的剩餘時間（僅在事件通知中可用） 
+::END
+
+$SYS_VARS_USER_INFO_LIST_FUTURE$::
+$LocalHomeDirectory - 本地根目錄。它只能用於需要特定資訊的事件，例如使用者創建。
+$Password - 密碼與使用者帳號有關。它只能用於事件。它不應用於歡迎消息。
+$UserEmailAddress - 使用者的電子信件位址。
+$FullName - 使用者的全名就是在“全名”欄位為使用者帳號輸入的名稱。
+$SpaceFullName - 與 "$FullName" 相同，不過在使用者的全名之前多了一個空格。當使用者的全名為空時留空（無空格或名稱）。
+$FullNameSpace - 與 "$FullName" 相同，不過在使用者的全名之後多了一個空格。當使用者的全名為空時留空（無空格或名稱）。
+::END
+
+$SYS_VARS_FILE_INFO$=檔資訊 - 應用於最後遠端存取的檔，並不一定是最後傳輸的檔
+$SYS_VARS_FILE_INFO_LIST$::
+$PathName - 檢索完整的遠端路徑
+$FileName - 僅從 $PathName 檢索檔案名
+$FileSize - 檢索 $FileName 檔的大小，單位位元組
+::END
+
+$SYS_VARS_FILE_INFO_8_0_LIST$::
+$FileSizeFmt - 檔案大小的格式化版本，包括數千個分隔字元（逗號或句號，取決於電腦的區域設定）
+$FileSizeKB - 以 KB 表示檔案大小的格式化浮點值
+$LocalPathName - 檢索一個作業允許全稱的本地路徑名稱，因為它與 Windows 相關。例如用 "C:\Temp\File.fid" 替代 "/Temp/file.fid"
+$LocalFileName - 檢索檔案名，因為該檔案存儲在本地電腦上。要瞭解詳細資訊請參見 $LocalPathName
+$OldLocalPathName - 同 $LocalPathName 一樣，但包括重命名前的路徑
+$OldLocalFileName - 同 $LocalFileName 一樣，但包括重命名前的檔案名
+$OldPathName - 檢索重命名前的遠端路徑名稱
+$OldFileName - 檢索重命名前的遠端檔案名
+::END
+
+$SYS_VARS_USAGE_STATS$=當前活動
+$SYS_VARS_USAGE_STATS_LIST$::
+$UNow -  Serv-U 檔伺服器上的當前連線期間數
+$UAll -  從上次啟動後連接到 Serv-U 檔伺服器上的連線期間總數
+$U24h -  過去 24 小時內連接到 Serv-U 檔伺服器上的連線期間總數
+$UAnonAll - Serv-U 檔伺服器上當前匿名使用者的連線期間數
+$UAnonThisDomain  - 連接的域上當前匿名使用者的連線期間數
+$UNonAnonAll  - Serv-U 檔伺服器上當前非匿名使用者的連線期間數
+$UNonAnonThisDomain - 連接的域上當前非匿名使用者的連線期間數
+$UThisName - 連接使用者帳號的當前連線期間數
+::END

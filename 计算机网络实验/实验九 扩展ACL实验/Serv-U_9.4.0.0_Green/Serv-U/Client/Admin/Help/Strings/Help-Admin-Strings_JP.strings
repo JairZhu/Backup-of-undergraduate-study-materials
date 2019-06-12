@@ -1,0 +1,3157 @@
+﻿<!-- Help-Admin-Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+
+<!-- External links reused throughout the help documentation -->
+$LINK_PRODUCT_HOME$=<a href="http://www.Serv-U.com/" target="_blank">http://www.Serv-U.com/</a>
+$LINK_PRODUCT_SALES$=<a href="http://www.Serv-U.com/sales/" target="_blank">http://www.Serv-U.com/sales/</a>
+$LINK_PRODUCT_SUPPORT$=<a href="http://www.Serv-U.com/support/" target="_blank">http://www.Serv-U.com/support/</a>
+$LINK_PRODUCT_HELP_DESK$=<a href="http://www.Serv-U.com/prodsupport" target="_blank">Serv-U ヘルプデスク</a>
+$LINK_PRODUCT_KB$=<a href="http://www.Serv-U.com/kb/" target="_blank">http://www.Serv-U.com/kb/</a>
+$LINK_PRODUCT_PURCHASE$=<a href="http://www.Serv-U.com/purchase/" target="_blank">http://www.Serv-U.com/purchase/</a>
+$LINK_PRODUCT_PRICING$=<a href="http://www.Serv-U.com/pricing/" target="_blank">http://www.Serv-U.com/pricing/</a>
+$LINK_CUSTOMER_SERVICE$=<a href="http://www.RhinoSoft.com/customer/" target="_blank">RhinoSoft.com オンライン・カスタマー・サービス・センター</a>
+$LINK_DNS4ME$=<a href="http://www.DNS4Me.com/" target="_blank">DNS4Me</a>
+$RHINOSOFT_CONTACT_INFO$::
+<strong>RhinoSoft.com<br />
+P.O. Box 53<br />
+Helenville, WI 53137<br />
+U.S.A.<br />
+
+Sales: +1 (262) 560-9627<br />
+Phone: +1 (262) 560-9627<br />
+FAX: +1 (262) 560-9628<br />
+</strong>$LINK_PRODUCT_HOME$<br />
+$LINK_PRODUCT_SALES$<br />
+$LINK_PRODUCT_SUPPORT$<br />
+::END
+
+
+<!-- Macros for inserting links to other Help doc pages.  The text within these anchor tags needs to be translated. -->
+$LINK_HELP_EDITIONS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-ServU-Editions.htm">Serv-Uの種類</a>
+$LINK_HELP_UIC$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-UIC-Info.htm">ユーザ・インターフェースの変換</a>
+$LINK_HELP_RATIOS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-User-Quotas-Ratios.htm">転送率</a>
+$LINK_HELP_SYSTEM_VARS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-System-Variables.htm">システム変数</a>
+$LINK_HELP_LOG_SETTINGS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Configure-Logs.htm">ドメイン・ログ設定</a>
+$LINK_HELP_GUIDE$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Quick-Start.htm">クイック・スタート・ガイド</a>
+$LINK_HELP_VIRTUAL$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Virtual-Hosts.htm">仮想ホスト</a>
+$LINK_HELP_DIRACCESS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Directory-Access.htm">ディレクトリ・アクセス・ルール</a>
+$LINK_HELP_USER_LIMITS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-Limits-Settings-User.htm">パスワードの制限</a>
+$LINK_HELP_GROUPS$=<a href="/?InternalDir=Admin&InternalFile=Help/Help-About-Groups.htm">グループ</a>
+
+
+<!-- String table for Help-Overview -->
+$OVERVIEW_HEADER$=Serv-U ファイルサーバの概要
+
+$OVERVIEW1$::
+Serv-U ファイル・サーバへようこそ！
+
+Serv-U ファイル・サーバは、他のネットワークで接続されているコンピュータから様々な方法でファイルの送受信を可能とするマルチ・プロトコル・ファイル
+サーバーです。管理者はサーバのハード・ドライブ、または他の利用可能なネットワーク・リソース上の特定のファイルとフォルダへのアクセスを許可する
+ユーザ・アカウントを作成することができます。これらのアクセス許可は、ユーザが、どこで、どのように利用可能なリソースへアクセスすることができる
+かを定義します。Serv-Uのマルチ・プロトコル・サポートは、サーバへ接続可能な状態であるとき、ユーザが利用可能なアクセス方法を使用することができる
+ことを意味します。Serv-U ファイル・サーバは以下のプロトコルをサポートします:
+::END
+
+$OVERVIEW_PROTOCOLS$::
+FTP (File Transfer Protocol)
+HTTP (Hyper Text Transfer Protocol)
+FTPS (FTP over SSL)*
+HTTPS (HTTP over SSL)***
+SFTP using SSH2* (File Transfer over Secure Shell)***
+::END
+
+$OVERVIEW_EDITION_NOTE$::
+* - SSH2 requires Serv-U Gold or Silver Edition <br />
+*** - Requires Serv-U Gold Edition
+::END
+
+$OVERVIEW2$::
+Serv-Uは最もFTPクライアントのサポートに加えて、ブラウザ、またはSSHクライアントからの接続によるファイル転送をサポートします。また、FTPクライアントを所有して
+いないユーザのために、サーバ管理者はフル機能を持ったFTPクライアントであるFTP Voyager JVを提供することもできます。Javaが有効である場合、FTPクライアントはServ-U
+へログイン後にユーザへ配信されます。<a href="http://www.Serv-U.com/Web-FTP-Client.asp" target="_blank">FTP Voyager JV</a>を有効にすることに関する詳しい情報はこちらをクリックしてください。
+
+Serv-U ファイル・サーバは、Serv-Uの伝統的な機能を継承しつつ、以下の内容を可能とします。:
+::END
+
+$OVERVIEW_LIST$::
+どこからでものファイル・アクセス
+友人や家族、そしてクライアントとのファイル共有
+社員のためのファイルサーバ
+ユーザ作成と管理を能率化する完全なグループサポート
+帯域幅使用をを最小にするオンザフライ生成、サムネイル、スライドショーによる画像の表示
+ファイルへのアクセス／管理者はWebインターフェースにより行われます
+リアルタイムでのセッションログの表示、およびFTPクライアントとのチャット
+FTPコマンド応答のカスタマイズ
+サーバのリソース使用を細かく管理するための制限とルールの作成
+SSL/TLS、SSH2*を使用して安全な接続
+第三者機関によるデジタル証明書を使用したサーバ証明
+同一IP、ポートを使用した複数ドメインのホスト*
+同じドメインでの認証を行う場合の複数のソースを利用可能 (ローカルユーザデータベース、NT/SAM、ODBC)*
+ODBC認証で必要とされるテーブルの自動生成*
+...そして、もっと多くの機能を持ちます!
+::END
+
+$OVERVIEW3$::
+Serv-Uは30日間、試用版として機能制限を持たない「コーポレート版」として動作します。30日後に登録されない場合、Serv-Uは無償の「パーソナル版」となります。
+登録により1年間の無償ソフトウェアアップデート（アップグレード保証）と無料の電子メール技術サポートとの権利をご提供いたします。また、有償でライセンスも
+アップグレード保証期間を2年まで拡張することも可能です。
+::END
+
+
+<!-- String table for Help-ServU-Editions -->
+$SERVU_EDITIONS_HEADER$=Serv-Uの種類
+
+$SERVU_EDITION_INTRO$::
+Serv-U ファイル・サーバは、サーバ管理者の様々なご要望にお応えするため、3つの異なる種類をご用意しました。RhinoSoft.comは、核となるツールと機能を持つ
+<strong>ブロンズ・エディション</strong>、それにSSHのサポートを加えた<strong>シルバー・エディション</strong>、そして大規模な環境での使用に対する要求を満たす
+<strong>ゴールドバージョン</strong>を提供します。
+::END
+
+$SERVU_BRONZE_HEADER$=Serv-U ブロンズ・エディション
+
+$SERVU_BRONZE_BODY1$::
+ブロンズ・エディションは、管理とファイル転送のための基本的な機能一式を提供します。:
+::END
+
+$SERVU_BRONZE_LIST$::
+無制限のドメインと無制限の同時接続
+無制限のユーザアカウント
+暗号化されたFTPS接続をサポート
+仮想ディレクトリ・マッピングのサポート
+転送率とクォータのサポート 
+1カ所からの複数サーバのリモート管理をサポート 
+ユーザとグループアカウントのODBCデータベースへの保存をサポート
+NT-SAM / Active Directoryに基づくユーザアカウントのサポート
+::END
+
+$SERVU_SILVER_HEADER$=Serv-U シルバー・エディション
+
+$SERVU_SILVER_BODY$::
+Serv-Uシルバー・エディションは、ブロンズ・エディションに以下の機能が追加されます。:
+::END
+
+$SERVU_SILVER_LIST$::
+3つのドメインと100の同時接続
+250 ユーザアカウント
+暗号化FTPS接続のサポート
+仮想ホストのサポート
+HTTPログインページを経由したユーザパスワードの復元
+::END
+
+$SERVU_SILVER_LIST_OLD$::
+3つのドメインと100の同時接続
+250 ユーザアカウント
+暗号化FTPS接続のサポート
+仮想ホストのサポート
+::END
+
+$SERVU_GOLD_HEADER$=Serv-U ゴールド・バージョン
+
+$SERVU_GOLD_BODY$::
+Serv-Uゴールド・バージョンは、機能制限を持たない企業ファイルサーバーのご要望に応える機能を提供します。シルバー・バージョンのSSHサポートに加えて、
+Serv-Uゴールド・バージョンはWebクライアントの機能を追加します。Serv-Uゴールド・バージョンは、以下の追加機能を持ちます。:
+::END
+
+$SERVU_GOLD_LIST$::
+無制限ドメインと無制限同時接続
+無制限ユーザアカウント 
+FIPS 140-2 サポート, OpenSSLを通して公認されています (Certificate #1051)
+カスタムHTTPロゴのサポート
+ユーザ、グループ統計のサポート
+暗号化HTTPS接続のサポート
+SFTP using SSH2 (File Transfer over Secure Shell)
+シングルロケーションかｒなお複数サーバのリモート管理をサポート 
+ユーザとグループアカウントのDOBデータベースへの保存
+NT-SAM / Active Directory ベールのユーザアカウントのサポート
+電子メール、外部プログラム、バルーンチップイベントのサポート
+::END
+
+$SERVU_GOLD_LIST_OLD$::
+無制限ドメインと無制限同時接続
+無制限ユーザアカウント 
+カスタムHTTPロゴのサポート
+ユーザ、グループ統計のサポート
+暗号化HTTPS接続のサポート
+SFTP using SSH2 (File Transfer over Secure Shell)
+シングルロケーションかｒなお複数サーバのリモート管理をサポート 
+ユーザとグループアカウントのDOBデータベースへの保存
+NT-SAM / Active Directory ベールのユーザアカウントのサポート
+電子メール、外部プログラム、バルーンチップイベントのサポート
+::END
+
+$SERVU_EDITIONS_LINK_INFO$=<a href="http://www.Serv-U.com/" target="_blank">こちらをクリック</a>してServ-Uファイルサーバの3つの種類に関する詳細な情報をご覧ください。
+
+
+<!-- String table for Help-How-To-Purchase -->
+$HOW_TO_PURCHASE_HEADER$=Serv-Uの購入に関して
+
+$HOWTOPURCHASE$::
+Serv-Uは30日間、試用版として機能制限を持たない「コーポレート版」として動作します。30日後に登録されない場合、Serv-Uは無償の「パーソナル版」となります。完全な
+機能を持つ、Serv-Uを継続して使用するには、Serv-Uのライセンスをご購入いただく必要があります。
+
+$LINK_PRODUCT_PURCHASE$よりオンラインでライセンスを購入いただくことができます。必要とするServ-Uファイル・サーバ の種類と数量を選択してください。(複数購入に
+よる割引もございます。）ショッピングカートにFTP Voyager JVライセンスを追加する前に、適用したServ-Uファイル・サーバのライセンスが購入されている必要があります。
+また、FTP Voyager(弊社が販売するFTPクライアントソフトウェア)のライセンスの同時購入による割引が適用できる場合もあります。日本での販売に関しては、テクノブレスト
+株式会社までお問い合わせください。
+
+価格に関する情報は次のリンクをご参照ください: $LINK_PRODUCT_PRICING$.
+
+お客様が登録をIDを紛失されてしまった場合、次へアクセスしてください: $LINK_CUSTOMER_SERVICE$.
+
+ご購入をいただきますと、登録情報を含む詳細は電子メールで送信されます。もし、電子メールが届かない場合、弊社までご連絡ください。（場合によってはスパムフィルタ
+などで、弊社からの電子メールがフィルタに該当しているかもしれません。電子メールに添付される場合がある登録情報を含む.regインストールファイルはフィルタされる
+場合があります。
+::END
+
+$PO_ORDER_HEADER$=ご注文方法
+
+$ORDERING_BY_PO1$::
+次の３つの方法から１つを選びRhinoSoft.comへ注文してください。:
+::END
+
+$POORDERLIST1$::
+電子メールに注文書を添付して (PDF/JPG/GIF フォーマットを推奨) 次へお送りください： $LINK_PRODUCT_SALES$.
+FAXの場合 +1 (262) 560-9628
+RhinoSoft.comへ郵便の場合
+::END
+
+$RHINO_MAILING_ADDRESS$::
+<strong>RhinoSoft.com<br />
+P.O. Box 53<br />
+Helenville, WI 53137<br />
+U.S.A.</strong>
+::END
+
+
+<!-- String table for Help-Contact-Tech -->
+$TECHNICAL_SUPPORT_HEADER$=技術サポート
+
+$TS_INTRO$::
+RhinoSoft.comは、幾つかの技術サポートオプションをご用意しています。現在の製品サポート方針については、$LINK_PRODUCT_HELP_DESK$を参照してください。
+
+公式なRhinoSoft.comのリセラーからServ-Uのコピーを購入いただいた、お客様は、ご購入をいただきましたリセラーへお問い合わせください。電話技術サポートは
+利用可能です。$LINK_PRODUCT_HELP_DESK$より電話サポート料金を含む技術サポートに関する情報をご参照いただくことができます。また、プレミアム・サポートも利用可能
+です。これは優先的な電子メールサポートと５回の電話サポートインシデントを含みます。
+
+もし、お客様が登録IDを紛失された場合 $LINK_CUSTOMER_SERVICE$ を参照してください。
+::END
+
+$TS_FREE_EMAIL$=無償の電子メールサポート
+$TS_FREE_EMAIL_INFO$::
+無償の技術サポートは、電子メールに限り、すべてのユーザへ提供されます。RhinoSoft.comの技術サポートに関しては$LINK_PRODUCT_SUPPORT$をご参照ください。
+::END
+
+$TS_KNOWLEDGE_BASE$=知識ベース
+$TS_KNOWLEDGE_BASE_INFO$::
+我々の知識ベースは、お客様の疑問と問題を解決するのに役立つサポートツールです。我々の技術サポートチームに寄せられた多くの技術的な質問に対する回答が検索できます。
+
+$LINK_PRODUCT_KB$ をご参照ください。（現在は英語版のみの提供となります。）
+::END
+
+$TS_SALES_SUPPORT$=販売サポート
+$TS_SALES_SUPPORT_INFO$::
+Serv-U ファイルサーバの販売に関するご質問は以下までご連絡ください。$LINK_PRODUCT_SALES$また、 +1 (262) 560-9627へお電話いただくことによりRhinoSoft.comの販売担当者へ
+連絡することができます。
+
+技術サポートのオプションは予告なくRhinoSoft.comにより変更される場合があります。
+::END
+
+
+<!-- String table for Help-Contact -->
+$CONTACT_HEADER$=RhinoSoft.comへの連絡
+
+$CONTACT_INTRO$::
+お客様が登録IDを紛失された場合、$LINK_CUSTOMER_SERVICE$ を参照してください。
+
+普通郵便によるRhinoSoft.comへの連絡は:
+::END
+
+$CONTACT_SALES$::
+販売に関するお問い合わせ: $LINK_PRODUCT_SALES$.
+::END
+
+$CONTACT_PRODUCT_INFO$::
+その他 Serv-Uファイル・サーバに関する情報: $LINK_PRODUCT_HOME$.
+::END
+
+
+<!-- String table for Help-Quick-Start -->
+$QUICK_START_HEADER$=クイック・スタート・ガイド
+
+$QS_INTRODUCTION$::
+Serv-Uは、最良のセキュリティ下でのファイルを共有を構成するための柔軟性と管理を容易に行えるよう設計されています。クィックスタートガイドは、サーバをインス
+トール、最初のドメインを作成、新しいドメインへのユーザアカウント追加までをサポートします。これらの幾つかの手順を完了することにより、新しいファイルサーバー
+への接続とファイル転送を使用することができるでしょう。
+::END
+
+$QS_INSTALLATION$=インストール
+$QS_INSTALLATION_INFO$::
+初めてServ-Uをインストールする場合、インストーラーの指示に従い、インストールディレクトリを選択し、デスクトップのショットカットを構成してください。また、システ
+ムサービスとしてServ-Uをインストールすることを選択することができます。これはWindowsが開始されるとき、ユーザがログオンしていない状態でも、Serv-Uが自動的に開始
+されることを意味します。Serv-Uがシステムサービスとしてインストールされない場合、Windowsにログインした後で手動で解すする必要があります。
+
+既存のServ-Uインストールへ上書きインストールを行う場合、元のServ-Uインストールフォルダをバックアップしてください。Serv-Uは、既存のインストール上に上書きイン
+ストールすることができ、データファイルとバイナリへ必要なアップグレードを行いますが、アップグレード行う前に重要なコンポーネントのバックアップを行うことは重要
+です。バージョン7.0以前のServ-Uがインストールされている場合、バージョン6以降で適用された変更に対して、幾つかのダイアログが表示され、Serv-Uファイルサーバの
+管理への影響を促します。
+
+インストールが終了すると、Serv-U 管理コンソールが開始されます。選択によりServ-U 管理コンソールをインストール後に開始しない状態とすることもできます。システム
+トレイ上のServ-Uアイコンをダブルクリック、または右クリックから「管理コンソールの開始」を選択することにより、Serv-U 管理コンソールを開始することができます。
+::END
+
+$QS_FIRST_DOMAIN$=最初のドメインの作成
+$QS_FIRST_DOMAIN_INFO$::
+管理コンソールのロードが完了し、ドメインが何も構成されていない場合、新しいドメインを作成することを促されます。<strong>「はい」</strong>を選択することにより、
+ドメイン作成ウィザードが開始されます。管理コンソールの最初のページにある<strong>「新規ドメイン」</strong>ボタン、そして<strong>ドメイン変更</strong>ダイア
+ログによりいつでも、このウィザード開始することができます。新規ドメインをServ-Uファイル・サーバで作成するには３つの手順があります。
+
+最初の手順はユニーク（唯一）な名前をドメインに付与することです。そのユーザのいずれにおいても、ドメインの名前は目に見えません、そして、それはドメインが他のもの
+によってどうアクセスされるかに影響しません。また、名前は、Serv-Uがサーバ上の他のドメインと区別するためにユニークである必要があります。また、説明欄にドメインの
+ためコメントを記述することができます。デフォルトでは、ドメインは有効とされ、ユーザからアクセスされます。構成を行っている間、ユーザがドメインへアクセスさせる
+ことを望まない場合、<strong>ドメインを有効</strong>のチェックを外してください。<strong>「次へ」</strong>をクリックして、ドメインの作成を継続してください。
+
+新しいドメインを作成するために、次のステップは、ドメインが、どのドメインに属するユーザに対しアクセスを提供するために使用されるプロトコルを特定することです。
+標準ファイル共有プロトコルは21のデフォルトポートを使用するFTP(File Transfer Protocol)です。これらのポートは望む値へ変更することができます。デフォルト以外の
+ポート上でサーバを動作させる場合、1024以上のポートを使用するのは良いアイディアです。サポートされるプロトコルは、Serv-Uの種類により異なります。サポートされる
+プロトコルに関する詳しい情報については、Serv-Uの種類に関する記述をご参照ください。ドメインでサポートすることを望むプロトコルをチェックして、次へ進んでください。
+
+最後の手順は、このドメインへ接続するために使用される物理アドレスを指定することです。通常、これはユーザがインターネットでサーバへアクセスするために使用される
+IPアドレスです。このオプションを空白とすることもできます。空白の場合は、そのコンピュータで利用可能な、すべてのIPアドレスを使用します。（ご家庭で使用いただく
+ユーザは空白の状態でご使用いただけるかもしれません。）<strong>完了</strong>をクリックして、Serv-Uに最初のドメインを作成させてください。
+::END
+
+$QS_FIRST_DOMAIN_ENCRYPT$::
+4番目の、そして、最終的なステップはパスワードをこのドメインに保存するとき、どの暗号化モードを使用するかを決定することです。デフォルトで、すべてのパスワードが、
+強固なone-way暗号化(それがいったん保存されると、パスワードをロックします)を使用することで保存されます。しかしながら、ユーザがWEBクライアントの「パスワード復元」
+ユーティリティを利用すると予想される場合は、two-way暗号化を使用するのが望ましいかもしれないので、パスワード復元が要求されるとき、Serv-Uは彼らのパスワードをリセット
+する必要はありません。最後に、パスワードがクリアテキストで保存されるべきであるとき、Serv-Uはクリアテキストによる保存を許可します。これは推奨されませんが、
+レガシーシステム（データベースサポートを使用する場合など）と統合する場合には必要とされるかもしれません。
+::END
+
+$QS_FIRST_DOMAIN_DONE$::
+<strong>完了</strong>をクリックしてServ-Uの最初のドメインを作成してください。最初のドメインをオンラインにします。ドメインのために構成することができる
+追加機能があります。これらのオプションに関する詳しい情報に関しては、ドメイン設定に関するドキュメンテーションを見てください。このドメインを通してファイルを
+共有を開始するためにユーザアカウントを作成する必要があります。
+::END
+
+$QS_FIRST_USER$=最初のアカウントの作成
+$QS_FIRST_USER_INFO$::
+最初のドメインを作成した後、管理コンソールのユーザページが表示されるでしょう。そして、ウィザードと共に新規ユーザを作成するかをたずねるダイアログが表示されます。
+<strong>はい</strong>をクリックすると、新規アカウント・ウィザードが開始されます。ユーザアカウントページにある「ウィザード」ボタンをクリックすることにより、
+いつでもウィザードを開始することができます。新しいユーザアカウントを作成するには4つの手順があります。
+::END
+
+$QS_FIRST_USER_LOGIN_OLD$::
+最初の手順は、アカウントへユニーク（唯一）な、ログインIDを設定することです。このログインIDは、ドメインへ接続する際に、認証処理で使用されます。このドメインでは、
+ユーザ名が重複しないでしょう。しかし、サーバの他のドメインでは、同じユーザ名があるアカウントがあるかもしれません。匿名（anonymous）のアカウントを作成するには、
+ユーザ名に"anonymous"か"ftp"を指定してください。<strong>次へ</strong>をクリックして、ユーザアカウントの作成を続けてください。
+::END
+
+$QS_FIRST_USER_LOGIN$::
+最初の手順は、アカウントへユニーク（唯一）な、ログインIDを設定することです。このログインIDは、ドメインへ接続する際に、認証処理で使用されます。このドメインでは、
+ユーザ名が重複しないでしょう。しかし、サーバの他のドメインでは、同じユーザ名があるアカウントがあるかもしれません。匿名（anonymous）のアカウントを作成するには、
+ユーザ名に"anonymous"か"ftp"を指定してください。<strong>次へ</strong>をクリックして、ユーザアカウントの作成を続けてください。
+
+また、このとき、フルネームと電子メールのアドレスはユーザアカウントで指定されるかもしれません。フルネームはユーザアカウントを示す標準的な名前を提供します。
+そして、電子メールのアドレスは、Serv-U電子メール通知とパスワード復元をユーザアカウントに送信することを許可します。  
+<strong>次へ</strong>をクリックして、ユーザアカウントの作成を続けてください。
+::END
+
+$QS_FIRST_USER_PASSWORD$::
+ユニークなログインIDを指定した後に、アカウントのパスワードをしてする必要があります。パスワードは、そのユーザがドメインに接続する際に、ユーザを認証する
+ために必要とされる2つめの情報です。このドメインへ接続する第三者は、ログインIDとパスワードの両方の情報を知っている必要があります。パスワードを空白にする
+ことができます。しかし、この場合ログインIDのみで、ドメインへアクセスできることに注意してください。<strong>次へ</strong>をクリックして継続してください。
+
+第3ステップはアカウントののホームディレクトリを指定します。ホームディレクトリはサーバへのファイルの送受信を行う際に、ユーザアカウントへ使用させることを望む場所です。
+<strong>参照</strong>ボタンをクリックすると、ハードドライブ上で場所を参照することができます。または直接パスを入力してください。ユーザが指定されたホーム
+ディレクトリにロックされる場合、そのユーザはそれらのホームディレクトリのディレクトリ構造上のファイルかフォルダへしかアクセスすることができません。
+さらに、それらのホームディレクトリは、"/としてマスクをかけられて、表示されます。最後の手順へ進むために<strong>次へ</strong>ボタンをクリックしてください。
+
+最後の手順はユーザアカウントへのアクセス権の設定です。アクセス権はディレクトリを基準に与えられます。しかしながら、アクセス可能なディレクトリに含まれるすべての
+サブディレクトリに、そのアクセス権を継承させることができます。デフォルトアクセスはユーザがそれらのホームディレクトリにファイルとフォルダーをリストアップして、
+それらをダウンロードすることができるのを意味する「読み取りのみ」です。「読み取りのみ」は、ファイルのアップロード、新しいディレクトリの作成、ファイル/フォルダ
+の削除、ファイル/フォルダを改名を行うことができません。「フル・アクセス」が選択された場合、ユーザは、これらのすべてを行うことができます。ユーザが作成された後に、
+より詳細なアクセス権は、作成されたユーザの「ディレクトリアクセス」タブで設定することができます。ディレクトリ・アクセス権を選択した後、<strong>完了</strong>
+ボタンをクリックしてユーザ・アカウントを作成してください。
+
+Serv-Uファイル・サーバは共有するためのアクセス準備が整いました。お客様は、ファイルなどの共有を行うために多くのアカウントを作成することができます。各ユーザは、
+お客様と幾つかの人々と異なる共有を行うために、異なるホームディレクトリを持つことができます。アカウントがサーバへアクセスするための細かな調整を行うための
+オプションがあります。これらに関しては、ユーザアカウントに関する文書を参照してください。
+::END
+
+
+<!-- String table for Help-Serv-U-Concepts -->
+$SERVER_CONCEPTS_HEADER$=サーバの概要
+
+$SERVER_CONCEPTS_INTRO$::
+Serv-Uファイルサーバは、階層的な単位でファイルサーバを管理します。その構成をご理解いただくことは管理上の手助けをいたします。Serv-Uファイル・サーバを構成する
+4つのレベルを持ちます。:それは<strong>サーバ</strong>、<strong>ドメイン</strong>、<strong>グループ</strong>、<strong>ユーザ</strong>の４つです。
+<strong>グループ</strong>は任意ですが、他のレベルは必須です。各レベルに関する概要は以下をご参照ください。
+::END
+
+$SERVER_CONCEPTS_SERVER_HEADER$=サーバ
+$SERVER_CONCEPTS_SERVER_BODY$::
+サーバは、Serv-U ファイル・サーバの基本的な単位として、構成可能な最も高いレベルとなります。それは、全体でファイル・サーバを示し、すべてのドメイン、グループユーザ
+の動作を管理します。Serv-U ファイル・サーバは、各設定を元に上書きできるデフォルトオプションを持ちます。したがって、サーバはServ-Uを構成する階層構造のトップレベル
+にあります。ドメイン、グループ、ユーザは、サーバからのデフォルト設定を継承します。継承された設定は、それらの各レベルで上書きすることができます。しかしながら、
+PASVポート範囲など、いくつかの設定はサーバにより排他的に取り扱われます。
+::END
+
+$SERVER_CONCEPTS_DOMAIN_HEADER$=ドメイン
+$SERVER_CONCEPTS_DOMAIN_BODY$::
+サーバは、一つ以上のドメインを含むことができます。ドメインは、ユーザがファイル・サーバに接続し、特定のユーザ・アカウンへアクセスするためのインタフェースです。
+ドメインの設定はサーバから継承されます。また、サーバは、サーバに属するグループとユーザアカウントの、すべてが継承する設定のコレクションを定義します。サーバ設定が
+ドメインレベルで上書きされる場合、そのグループとユーザアカウントの、すべてがそれらのデフォルト値としてその値を継承します。
+::END
+
+$SERVER_CONCEPTS_GROUP_HEADER$=グループ
+$SERVER_CONCEPTS_GROUP_BODY$::
+グループは、同じ設定の共有するユーザ・アカウントの管理を容易にする任意なレベルの構成です。グループを使用することにより、管理者は個別に手動で各アカウントの設定を
+行う代わりに、1つ以上のユーザ・アカウントに同様の設定の変更を適用することができます。グループは、属するドメインから、そのデフォルト設定のすべてを継承します。
+それはグループのメンバーである、すべてのユーザによって継承された設定のコレクションを定義します。実際には、あらゆるユーザレベルの設定をグループレベルで構成するこ
+とができます。またはユーザレベルで上書きをすることができます。
+::END
+
+$SERVER_CONCEPTS_USER_HEADER$=ユーザ
+$SERVER_CONCEPTS_USER_BODY$::
+ユーザは階層構造の一番下に位置します。それは複数のグループ(それが一つ以上のグループのメンバーであるなら)、またはその親ドメインから、そのデフォルト設定を引き
+継ぐことができます。(それがグループのメンバーでない、またはグループでデフォルト設定が設定されていない場合)ユーザアカウントは、ファイルサーバへの物理接続を特
+定し、その接続のアクセス権と制限を設定します。ユーザレベルで上書きされる設定は、他の箇所で上書きすることができません。そして、常にそのユーザアカウントは認証
+される接続で適用されます。
+::END
+
+$SERVER_CONCEPTS_COLLECTION_HEADER$=ユーザ・コレクション
+$SERVER_CONCEPTS_COLLECTION_BODY$::
+ユーザ・コレクションは、それらが含むユーザアカウントへどんなレベルの構成も提供しません。代わりに、ユーザ・コレクションは、管理を容易にするために、コンテナへ
+ユーザを組織化する方法を提供します。例えば、グループ・メンバーシップに基づくユーザ・アカウントを整理するために、コレクションを作成することができます。しかし、
+ユーザアカウントがグループメンバーシップを変更する場合、それらは手動で管理されなければなりません。
+::END
+
+
+<!-- String table for Help-Nav-Serv-U -->
+$NAV_SERVU_HEADER1$=Serv-U管理コンソール
+$NAV_SERVU_INFO$::
+Serv-U 管理コンソールは、ファイルサーバの構成オプションへ簡単にアクセスできるよう設計されています。構成ページを参照するとき、左上部のServ-U ファイル・サー
+バロゴをクリックすることにより、いつでも管理コンソールのメインページを表示することができます。
+::END
+
+$NAV_LAYOUT$=管理コンソールのレイアウト
+$NAV_LAYOUT_INFO$::
+管理コンソールでは、コントロールパネルのスタイルでレイアウトされ、関連するオプションのカテゴリで配置されています。カテゴリのヘッダーをクリックすると、「ユーザ」
+のように、ユーザアカウント管理画面が表示されます。このスクリーンから、それぞれのサブカテゴリ構成オプションが利用できます。また、サブカテゴリは直接そのサブ
+カテゴリの構成ページを表示することをのを選択することができます。
+
+サーバ管理のために、管理コンソールは2つの欄で表示されます。右の欄はサーバ全体のオプションを構成することに関連したカテゴリと設定を表示します。左のカラムはアクティ
+ブなドメインを構成することに関連したカテゴリを表示します。アクティブなドメインを変更するために、管理コンソールの左上の<strong>ドメイン管理</strong>ボタンをクリッ
+クしてください。そして、管理するためのドメインを選択してください。同様に、<strong>ドメイン変更</strong>ボタンはフッターの右下で利用することができます。管理コンソー
+ルページからアクティブなドメインを変更するために、この方法を使うことができます。
+
+ドメイン管理者は、それらの適切なドメインのために設定を構成し、オプションを設定することができますが、システム管理者に表示されるサーバレベルカテゴリを設定することは
+できません。
+::END
+
+$NAV_MENU$=ナビゲーション・メニュー
+$NAV_MENU_INFO$::
+ナビゲーションメニューは、スクリーンの左下部にあり、Serv-Uの構成カテゴリへのダイレクトリンクを提供します。それは、現在選択されたカテゴリの構成オプションの
+拡張可能なリストと同様に、構成される(ドメイン、またはサーバ)に関連したカテゴリを表示します。
+::END
+
+$NAV_TABS$=タブによる構成ページ
+$NAV_TABS_INFO$::
+管理コンソールからカテゴリを開くと、すべての関連するサブカテゴリページは同じスクリーン上のタブに表示されます。これは関連する構成オプションの迅速なナビゲーションを
+許可します。
+::END
+
+$NAV_SERVU_WEB_CLIENT$=Webクライアントの開始
+$NAV_SERVU_WEB_CLIENT_INFO$::
+Serv-U ファイル・サーバを構成している間、下部のツールバーで適切な開始ボタンをクリックすることによって、いつでもHTTPセッションを開始することができます。
+<strong>Webクライアント</strong>は、いつも利用可能であり、ブラウザから実行できます。また、使用を認可する場合、<strong>FTP Voyager JV</strong>ボタンを
+クリックすることによってJava Runtime Environmentを使用したFTP Voyager JVを開始することができます。
+::END
+
+$NAV_SERVU_THEMES$=Serv-Uテーマの変更
+$NAV_SERVU_THEMES_INFO$::
+「テーマ」ボタンはテーマメニューを表示するために使用されます。（それは画面の右下にあります）メニューは、Serv-Uの外観を変更するため利用可能なテーマを表示します。
+ドロップダウン・コンボ・ボックスからテーマを選択してください。次に「OK」のボタンをクリックしてください。ページを更新しなくても、テーマはロードされます。
+::END
+
+
+<!-- String table for Help-UIC-Info -->
+$UIC_HEADER$=ユーザインターフェースの慣例
+$UIC_INTRO$::
+Serv-U ファイル・サーバは構成オプションを示す一貫した方法を使用します。それはその値がデフォルト(または、継承された)値でもあるかに関係なく、オプションの現在の値を
+伝えるだけではありません。スリーステート・チェックボックスと呼ばれる方法で、これが行われました。スリーステート・チェックボックスには、2つの主要な欠点があります。:
+::END
+$UIC_TRI_STATE_LIST$::
+デフォルトの状態は明確にオプションの現在の値を伝えません。Windowsのいくつかのバージョンでは、ボックスはグレーのバックグラウンドでチェックされます。（オプションが有効にされていない場合でも）
+それらはバイナリの値を表すのにそれらを使用することができるだけです。- オンかオフ
+::END
+$UIC_INTRO2$::
+Serv-U ファイル・サーバは、これらの欠点を解決する異る慣例を使用します。オプションが親からその値を引き継いでいるとき、オプションのテキストは通常のテキストで
+表示されます。表示される(それがテキスト値かチェックボックスであることにかかわらず)値は、項目が現在その値を引き継いでいるところで親に行われる変更を反映するため
+に変更することができます。
+
+しかしながら、値がデフォルトを上書きしている場合、値のテキストは<strong>太字</strong>で表示されます。現在表示されている値は、その親への変更ににかかわらず
+そのオプションの値です。
+::END
+
+$UIC_CASEFILE1_HEADER$=ユーザインターフェースの理解
+$UIC_CASEFILE1_BODY$::
+ユーザーインタフェースの慣例をよりよく例証するために以下のケースファイルを考慮してください。
+
+Acme Technology社は共有された法人のリソースへのグローバルなアクセスを彼らの技術者に提供するServ-U ファイル・サーバを維持するコンピュータ修理会社です。各技術者は
+ファイルサーバに、自身のアカウントを持っています。ユーザアカウントの簡単な管理を容易にするために、ファイルサーバ管理者は「技術者」というグループのメンバーにそれ
+ぞれのユーザアカウントを作りました。技術者はだれもファイルサーバの管理義務もないので、このグループの管理権限は<strong>権限なし</strong>に設定されました。
+::END
+$UIC_CASEFILE1_BODY2$::
+技術者はプロモーションを受けます。また、彼の現在の技術者職務に加えて、アカウントで他の技術者を補助することができるように、ファイルサーバ上の管理特権は彼に与えら
+れています。ファイルサーバ管理者は、単に技術者のユーザアカウントを編集して、管理権限を<strong>ドメイン管理者</strong>に変更することができます。このオプションの
+テキストはユーザアカウントがそのメンバーシップから「技術者」というグループへ継承されるデフォルト値(権限なし)を上書きしているために太字になります。
+::END
+$UIC_CASEFILE1_BODY3$::
+後日、デフォルト値に「技術者」というグループから「管理者権限」ドロップダウンボックスにおける<strong>継承デフォルト値</strong>オプションを選択することによって継承
+された状態で管理権限を元に戻すことができます。
+::END
+
+
+<!-- String table for Help-Server-Overview -->
+$SERVER_OVERVIEW_HEADER$=サーバの概要
+
+$SERVER_OVERVIEW$::
+Serv-U ファイル・サーバは、特定の設定がサーバ・レベルで構成されることを許可します。サーバ・レベルで構成された設定は、その下のレベルで上書きされない場合、設定は
+すべてのユーザ、グループ、ドメインで適用されます。サーバ・レベルで構成することができる設定は:ディレクトリ・アクセス・ルール、IPアクセス・ルール、帯域幅制限、
+グローバル・ユーザアカウント(どのServ-Uドメインへもログイン可能なユーザアカウント)、そしてその他の幾つかです。各設定とその構成方法に関する詳細な情報は以下の
+ヘルプページでリストアップされています。
+::END
+
+
+<!-- String table for Help-IP-ACL -->
+$IP_ACL_HEADER$=IPアクセス・ルール
+
+$IP_ACCESS_TXT$::
+IP アクセス・ルールは、特定のIPアドレス、IPアドレスの範囲、ドメイン名でのログインアクセスを制限するユーザ認証の追加フォームです。IPアクセス・ルールはサーバ、
+ドメイン、グループ、ユーザレベルで構成することができます。また、IPアクセスルールが指定されるレベルは、拒否をする前に接続の許可を定義します。サーバとドメインレ
+ベルのIPアクセス・ルールは、Welcomeメッセージが送られる前に適用されています。また、仮想ドメインに接続するためにHOSTコマンドに応じる際、ドメインレベルIPアクセス・
+ルールは適用されます。グループとユーザ・レベルのIPアクセス・ルールは、USERコマンドに対応してクライアントがサーバに身元を明らかにした際に適用されます。
+
+これらのルールを指定することのより、そのネットワーク上のクライアントのみがログインできることとなります。IPアクセス・ルールを構成するために、最初にログインを
+許可する、またはログインを許可しないクライアントを指定します。<strong>追加</strong>ボタンをクリックして、ルールの適用するIPアドレスかIPアドレスの範囲を指定
+してください。静的なIPアドレスを持たない$LINK_DNS4ME$などのダイナミックDNSサービスを使用している場合、IPアドレスに代わってドメイン名を指定することができます。
+また、リバースDNS名も許可されます。以下のような形式での範囲とワイルドカードの使用を許可されます。:
+::END
+
+$IP_ACCESS_RULE_EXACT$=xxx
+$IP_ACCESS_RULE_EXACT_TXT$=全て一致 <strong>192.168.1.1</strong>.
+
+$IP_ACCESS_RULE_RANGE$=xxx-xxx
+$IP_ACCESS_RULE_RANGE_TXT$=<strong>192.168.1.10-19</strong>のようなIPアドレスの範囲を指定します。
+
+$IP_ACCESS_RULE_STAR$=*
+$IP_ACCESS_RULE_STAR_TXT$=<strong>192.168.1.*</strong>のような場合、<strong>192.168.1.0-255</strong>に類似するなどのどんな有効なIPアドレス値です。
+
+$IP_ACCESS_RULE_QUESTION$=?
+$IP_ACCESS_RULE_QUESTION_TXT$=有効な文字です。<strong>server?.mydomain.com</strong>などのリバースDNS名を指定します。
+
+$IP_ACCESS_RULE_SLASH$=/
+$IP_ACCESS_RULE_SLASH_TXT$=スラッシュ分離記号は、どのIPアドレスが許可されるか、またはブロックされるかをCIDR表記の使用により指定することができます。共通のCIDRブロックは<strong>/8 (for 1.*.*.*)</strong>, <strong>/16 (for 1.2.*.*)</strong> と <strong>/24 (for 1.2.3.*)</strong>です。一つのIPアドレスを指定するの場合は、ブロック /32を使用することができます。
+
+$IP_ACCESS_ABOUT$::
+IPアクセス・ルールは表示されている順序で適用されます。一般的なルールの前に許可（拒否）ルールをリストの先頭に位置させることができます。リスト内のルールの
+位置を変更するには、右側の矢印を使用してください。
+::END
+
+$IP_ACCESS_APPROVED$::
+リスト内に既にある承認されたアドレスはanti-hammeringルールによって自動的にブロックされません。例：ローカルアイピーアドレス<strong>192.168.0.17</strong>は、Serv-Uが、IP`アドレスを
+禁止するためにanit-hammerルールに参加させます。<strong>192.168.0.17</strong>だけがリストで明らかに承認されて、<strong>192.168.0.17</strong>はanit-hammerルールによって自動的に
+ブロックされません。
+
+以下のIPアクセスルールを仮定します。:
+
++ 192.168.0.17<br />
++ *
+
+<strong>192.168.0.17</strong>から来るアクティビティがあるとき、しかし、ユーザはパスワードを誤りますが、そのIPアドレスが明確に有効とされているので、自動IPブロッキングは起こりません。
+(タイムアウト、anti-hammer、またはシステム管理者からのセッションアクティビティ)「*」という下部項目は、全員が皆が認可されているのを意味します。この値がなければ、<strong>1192.168.0.17</strong>だけが
+認可されるでしょう。：
+
+- 10.10.10.1<br />
++ 192.168.0.17<br />
++ *
+
+また、IPアドレスの全体のブロックが望まれているなら、これは説明されるように動作します。:
+
++ 192.168.0.1-255<br />
++ *
+
+anti-hammerが、これらのIPsのどれかで始まるなら、IPはブロックされません。ここのキーはワイルドカード "*"です。ここのキーはワイルドカード*です。また、Serv-Uは"*.*, *.*.*, *.*.*.*"がないかどうか「any」IPというアドレスであるとしてチェックします。
+::END
+
+$IP_ACCESS_SORT_HEADER$=ソートモードを有効
+
+$IP_ACCESS_SORT_INFO$::
+このオプションは、処理順序よりIP アクセスリストが数上で分類されるのを許可します。ソートモードによるIP アクセスリストを表示する場合、ルールが処理される順番は
+変化しないでしょう。--規則先行を見るには、このオプションを無効にしてください。ルールの優先順位を見るためには、このオプションを無効にしてください。
+エントリーが既に存在するかどうか決定するためにアクセスルールに関する長い一覧表を再検討するとき、IPアクセスリストを番号順に見るのは、便利なツールであるかもしれません。
+::END
+
+$IP_ACL_CASEFILE1_HEADER$=例 - 受託業者
+$IP_ACL_CASEFILE1_BODY$::
+受託業者は一時的な契約で雇用されました。そして、受託業者の雇用が完了するまで、Serv-U ファイル・サーバへのアクセスが必要です。彼は、アクセスを許可されますが、
+セキュリティ上の理由により、現地以外からのサーバアクセスを行うことができません。その現地では、IPアドレスが、192.168.10.2-192.168.10.254の範囲ですべてのオフィ
+ス・ワークステーションに割り当てられます。よって、以下のように許可アクセスルールは作成されます。:
+::END
+$IP_ACL_CASEFILE1_BODY2$::
+ルールは受託業者へオフィス内からのアクセスを許可することを示しています。アカウントが他のどこかで使用されるのを防ぐために「アクセスを許可」というルールを作成
+するのと同時に黙示的な「すべてお拒否」というルールがあります。
+::END
+
+$IP_ACL_CASEFILE2_HEADER$=例 - 売店
+$IP_ACL_CASEFILE2_BODY$::
+ユーザは、オフィスからサーバにアクセスする必要があります。しかし、ビルで営業しているPC売店からセキュリティ上の理由からログオンを許可しません。192.168.15.100-
+192.168.15.110の範囲のIPアドレスが売店に割り当てられています。したがって、192.168.15.100-192.168.15.110からのアクセスを拒否する拒否ルールを作成してください。
+「すべて拒否」というIPアクセス・ルールを使用するとき追加される暗示的ルールとなる「すべて許可」というルール「*.*.*.*」が他のすべてユーザのアクセスを許可するため
+にリストの最後に追加されていることを覚えておいてください。このルールは、他のすべてのIPアドレスからの接続を許可されます。
+::END
+
+$IP_ACL_CASEFILE3_HEADER$=例 - 名前によるアクセス
+$IP_ACL_CASEFILE3_BODY$::
+examplesite.comというドメインからのみ接続を受け付けると考えます。ドメインによる接続を制限を行う場合は、リバースルックアップとホスト名に基づくIPアクセス・ルールを
+実施してください。まず最初に、<strong>* .examplesite.com</strong>のアクセスを許可する新しいアクセスルールを作成してください。
+
+<strong>注意</strong>: このようなIPアクセスルールが働くためには、IPアドレスのPTRレコードは作成されたルールと一致している必要があります。また、通常ダイナミックIP
+アドレスはこの要件を満たしません。
+::END
+
+
+<!-- String table for Help-Database-Access -->
+$DATABASE_HEADER$=データベース・アクセス
+
+$DATABASE_ACCESS_BODY1$::
+Serv-U コーポレート版は、ドメインとサーバ・レベルの両方でグループとユーザアカウントのODBCデータベースへの保存、管理を行うことができます。ODBC接続は2つの
+ロケーションから構成できます:<strong>ドメイン | ドメインの詳細 | データベース</strong>、そして<strong>サーバ | サーバの詳細 | データベース</strong>Serv-Uは
+ユーザとグループをデータベースに保存するために必要なテーブルとカラムを自動的に作成することができます。Serv-Uは、その情報を保存するために1セットのテーブル名を
+使用するので、個々のODBC接続は詳細をデータベースに保存する各アイテムのために構成されなければなりません。言い換えれば、各ドメインと同様にサーバには、それら
+が別々に保存されるのを確実にするユニーク（唯一）なODBC接続がなければなりません。データベースを構成するには、以下の方法に従ってください。:
+::END
+
+$DATABASE_PREP_LIST1$::
+Serv-Uが使用するODBC接続を作成してください。RhinoSoft.comはMySQLを推薦いたしますが、Windows ODBCドライバが利用可能であるデータベースを利用することができます。Serv-Uがシステムサービスとして作動している場合、システムDSNを使用してください。ユーザDSNはServ-Uであるなら標準アプリ
+ケーションとして動作しています。Serv-U管理コンソールを開き、適切なドメイン、またはサーバのデータベース設定を参照してください。データソース名（DSN）、ログインID、そしてパスワードを入力し<strong>保存</strong>ボタンをクリックしてください。
+::END
+
+$DATABASE_ACCESS_BODY2$::
+データベース接続を初めて構成する場合、<strong>自動作成</strong>オプションをチェックしてください。このオプションがチェックされている場合、Serv-U ファイル・
+サーバは自動的にデータベーステーブルとカラムを作成します。
+::END
+
+$DB_SQL_TEMPLATES$=SQLテンプレート
+$DB_SQL_TEMPLATES_TXT$::
+Serv-Uは、ユーザとグループ情報を含むデータベースを管理するために複数クエリを使用します。これらのクエリはSQL言語規格に従います。しかしながら、使用されている
+データベースがServ-Uとの動働に問題を持っている場合、これらのクエリを変更する必要があるかもしれません。特に、SQLテンプレート・ダイアログから、Serv-Uによって
+使用された各クエリは、データベースによってサポートされる規格に従うために合わせることができます。
+
+<strong>注意:</strong> 誤ってSQLクエリを編集することはServ-UでのODBCサポートの動作を停止します。SQLステートメントを十分理解していない場合、これらのクエリを
+編集しないですください。
+::END
+
+$DB_TABLE_MAPPINGS$=ユーザとグループ・テーブルのマッピング
+$DB_TABLE_MAPPINGS_TXT$::
+デフォルトでは、Serv-Uは自動的にユーザとグループ情報をデータベースに保存するために必要なテーブルとカラムを作成して管理します。Serv-Uをこれらの情報を含む既存の
+データベースに接続することを望む場合、既存のデータベース構造にあわせるテーブルとカラム名をカスタム設計する必要があります。開始するために<strong>ユーザテーブル
+マッピング</strong>、または<strong>グループ・テーブル・マッピング</strong>をクリックしてください。
+
+Serv-Uはユーザ、またはグループの情報を10個の個別のテーブルに保存します。ユーザ/グループ情報テーブルとユーザ/グループ・ディレクトリテーブルだけが必要です。
+<strong>オブジェクト・テーブル</strong>・ドロップダウン・ボックスから現在のテーブルを変更することができます。<strong>属性</strong>カラムは現在のテーブルに保存
+される属性を記載します。<strong>マップされたデータベース値</strong>は属性がデータベースでマップされるカラムの名前を表示します。最初の列は、常に「テーブル名」を
+示し、テーブル名を変更するために使用することができます。
+
+エントリーに関する順序が意味を持っているあるテーブルは記載されているSortColumn属性を持っています。このカラムは、ルールが適用されているオーダーを保存するのに
+使用されます。
+
+<strong>編集</strong>ボタンをクリック、またはカラム名をダブルクリックして、値を編集してください。
+::END
+
+
+$DB_TABLE_MAPPINGS_TXT2$::
+有効にされた場合、テーブルは必要に応じてアクセスされます。特別な状況で、使用されていないテーブルは、ODBC(データベース)呼び出しの数を減少させるために無効されるかもしれません。
+例えば、レシオとクォータを使用する"User Ratio-Free Files", "Per User Files Ratio", "Per User Bytes Ratio", "Per Session Files Ratio", and "Per Session Bytes Ratio"テーブル
+は不要なODBC呼び出しを防ぐのにおいて無効であるかもしれません。テーブルを無効するとき、フィールドがダイアログに表示されますが、それらが保存、またはロードされないとき、警告を
+実行させてください。「ユーザインフォメーション」と「グループインフォメーション」テーブルは無効にすることができません。
+::END
+
+$DATABASE_ACCESS_CASEFILE1_HEADER1$=例 - ODBC認証
+$DATABASE_ACCESS_CASEFILE1_BODY1$::
+スクリプトされたアカウント管理とメンテナンスを許可するために、ODBCデータベースを通してServ-U ファイル・サーバにおける認証を扱うことができます。ODBC機能を利用するには、
+データベースを通してODBC認証に移動してください。設定に証明書をデータベースに保存することによってスクリプトされたデータベース・オペレーションを通してServ-U 管理コンソールの
+外からアカウントを管理することができます。DSNは最初に、コントロール・パネル、管理ツール、データ(ODBC)に作成されなければなりません。Serv-Uがサービスとして動作して
+いるなら、システムDSNを使用、または、Serv-Uがアプリケーションとして動作しているならユーザDNSを使用してください。適切なDSNが作成された後、Data Source Name、ログインID、
+およびパスワードを指定してください、そして、保存を選択してください。Serv-Uは透過的にテーブルとカラムを作成します。Serv-Uのデータベースユーザとデータベースグループ・
+セクションからデータベースユーザとグループを管理することができます。
+::END
+
+
+<!-- String table for Help-Events -->
+$EVENTS_HEADER$=Serv-U イベント
+
+$EVENTS_BODY1$::
+Serv-U コーポレート版は、選択されたイベントリストにより、発生する様々なアクションを実行することができる、イベントハンドリングを使用するこができます。以下は管理者が利用する
+ことができるアクションのリストです。:
+::END
+
+$EVENTS_SERVER$=サーバのイベント
+$EVENTS_LIST1$::
+$SUEVENT_ID_SERVER_START_TEXT$
+$SUEVENT_ID_SERVER_STOP_TEXT$
+::END
+
+$EVENTS_SERVER_DOMAIN$=サーバとドメインのイベント
+$EVENTS_LIST2$::
+$SUEVENT_ID_DOMAIN_START_TEXT$
+$SUEVENT_ID_DOMAIN_STOP_TEXT$
+$SUEVENT_ID_SESSION_CONNECT_TEXT$
+$SUEVENT_ID_SESSION_DISCONNECT_TEXT$
+$SUEVENT_ID_SESSION_CONNECT_FAILURE_TEXT$
+::END
+
+$EVENTS_LIST2_FUTURE_FEATURE$::
+$SUEVENT_ID_LOG_DELETED_TEXT$
+::END
+
+$EVENTS_ALL$=サーバ、ドメイン、ユーザ、グループのイベント
+$EVENTS_LIST3$::
+$SUEVENT_ID_USER_LOGIN_TEXT$
+$SUEVENT_ID_USER_LOGOUT_TEXT$
+$SUEVENT_ID_USER_LOGIN_FAILURE_TEXT$
+$SUEVENT_ID_USER_PASSWORD_CHANGE_TEXT$
+$SUEVENT_ID_USER_PASSWORD_CHANGE_FAILURE_TEXT$
+$SUEVENT_ID_USER_ENABLED_TEXT$
+$SUEVENT_ID_USER_DISABLED_TEXT$
+$SUEVENT_ID_USER_DELETED_TEXT$
+$SUEVENT_ID_USER_ADDED_TEXT$
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_SENT_TEXT$
+$SUEVENT_ID_USER_PASSWORD_RECOVERY_FAILED_TEXT$
+$SUEVENT_ID_IP_BLOCKED_TEXT$
+$SUEVENT_ID_IP_BLOCKED_TIME_TEXT$
+$SUEVENT_ID_TOO_MANY_SESSIONS_TEXT$
+$SUEVENT_ID_TOO_MANY_SESSIONS_ON_IP_TEXT$
+::END
+$EVENTS_LIST3_2$::
+$SUEVENT_ID_FILE_UPLOAD_TEXT$
+$SUEVENT_ID_FILE_UPLOAD_FAIL_TEXT$
+$SUEVENT_ID_FILE_DOWNLOAD_TEXT$
+$SUEVENT_ID_FILE_DOWNLOAD_FAIL_TEXT$
+$SUEVENT_ID_FILE_DELETE_TEXT$
+$SUEVENT_ID_FILE_MOVE_TEXT$
+$SUEVENT_ID_DIR_CREATE_TEXT$
+$SUEVENT_ID_DIR_DELETE_TEXT$
+$SUEVENT_ID_DIR_CHANGE_TEXT$
+$SUEVENT_ID_DIR_MOVE_TEXT$
+$SUEVENT_ID_QUOTA_OVERAGE_TEXT$
+$SUEVENT_ID_DISK_SPACE_OVERAGE_TEXT$
+::END
+
+$EVENTS_ACTIONS$=イベントのアクション
+$EVENTS_BODY2$::
+管理社はイベントが発生下債に実行される、３つの異なるアクションを選択することができます。以下のリストはこれらのアクションです：
+::END
+
+$EVENTS_LIST4$::
+$SUEVENT_ACTION_EMAIL_TEXT$
+$SUEVENT_ACTION_BALLOON_TIP_TEXT$ (サーバ管理者のみ)
+$SUEVENT_ACTION_EXEC_TEXT$ (サーバ管理者のみ)
+::END
+
+$EVENTS_EMAIL_ACTION$=Eメールのアクション
+$EVENTS_BODY3$::
+イベントが発生した際に、Eメールを送信するためのEメール・アクションを構成することができます。Eメール・アクションは、「宛先」、「件名」と「本文」
+パラメタを含みます。特定のデータにアクションを関係させるのために特別な変数は使用されるかもしれません。これらの変数に関して "<a href="Help-System-Variables.htm">システム変数</a>"を参照してください。
+::END
+$FUTURE_FEATURE_EVENTS_BODY3$::
+イベントが発生した際に、電子メールを複数アドレス、またはServ-Uのグループへ配信することができます。複数の電子メールアドレスを指定する際、Eメールのアドレスはコンマ、スペース(半角）、またはセミコロンで区切られている必要があります。
+電子メールアクションは宛先」、「件名」と「本文」パラメータを含んでいます。メールをServ-Uのグループに送信するには、「グループ」アイコンを使用するか、または発送先リストからServ-U グループを指定してください。
+特定のデータにイベントを関連させるために特別な変数は使用されるかもしれません。これらの変数に関しては"<a href="Help-System-Variables.htm">システム変数</a>"のリストを参照してください。
+::END
+
+$EVENTS_BALLOON_ACTION$=バルーン・ティップ・アクション
+$EVENTS_BODY4$::
+バルーンティップ・アクションはイベントが発生した際に、システムトレイに表示するバルーン・ティップの構成を行なうことができます。バルーンティップ・アクションは「バルーン・タイトル」と
+「バルーン・メッセージ」パラメタを含みます。特定のデータにアクションを関係させるのために特別な変数は使用されるかもしれません。これらの変数に関して "<a href="Help-System-Variables.htm">システム変数</a>"を参照してください。
+::END
+
+$EVENTS_EXEC_ACTION$=実行コマンド・アクション
+$EVENTS_BODY5$::
+コマンドの実行アクションはイベントが発生した際に、ファイルのコマンドを実行する構成ができます。コマンドの実行アクションは「実行パス」と「コマンドライン・パラメータ」を含みます。
+特定のデータにアクションを関係させるのために特別な変数は使用されるかもしれません。これらの変数に関して"<a href="Help-System-Variables.htm">システム変数</a>"を参照してください。
+::END
+
+$EVENTS_COMMON$=共通イベントの作成
+$EVENTS_COMMON_BODY$::
+Serv-Uは管理者に一般的なイベントのリストを自動的に生成させます。Eメール、バルーンティップ・アクションを使用して、これらの共通のイベント作成を選択することができます。単に「イベント」タブの「共通イベントの作成」ボタンを
+クリックしてください。望むアクションのための「Eメールの送信」、または「バルーン・ティップの表示」ラジオボタンを共通イベントを選択してください。また、「Eメールの送信」を選択した場合、イベントを送る「宛先:」を
+入力する必要があります。
+::END
+
+
+<!-- String table for Help-Events -->
+$SMTP_CONFIG_HEADER$=Serv-U SMTP構成
+
+$SMTP_CONFIG_BODY$::
+Serv-U コーポレート版は、Eメールアクションで使用されるイベント構成のために、Eメール送信のSMTP接続構成を管理者に許可します。サーバ、またはドメインレベルでSMTPを構成することができます。ドメインレベル
+でのSMTP構成は、サーバレベルから継承されます。SMTP構成ダイアログは、「ドメインの詳細」と「サーバの詳細」ページの「イベント」タブにあります。「SMTP構成」ボタンをクリックして、ダイアログを開いてください。
+::END
+
+$SMTP_CONFIG_SERVER_INFO$=SMTPサーバ情報
+$SMTP_CONFIG_SERVER_INPUT$::
+SMTPサーバ - SMTPサーバの名前、またはIPアドレス
+SMTPサーバ・ポート - SMTPサーバが使用するポート
+送信元電子メールアドレス - 送信される電子メールに使用される電子メールアドレス
+::END
+
+$SMTP_CONFIG_FROM_NAME$::
+送信者名 (オプション) - 送信される電子メールに使用される名前
+::END
+
+$SMTP_CONFIG_SERVER_AUTH$::
+サーバは認証が必要 - 認証を有効にするには、このボックスをチェックしてください。
+::END
+
+$SMTP_CONFIG_AUTH_INFO$=認証情報
+$SMTP_CONFIG_AUTH_BODY$::
+SMTPサーバが認証を必要とする場合、以下の情報を入力する必要があります。:
+::END
+$SMTP_CONFIG_AUTH_INPUT$::
+送信Eメールアドレス - 認証に使用するEメールアドレス
+安全なパスワード認証を使用 - パスワード認証を有効に場合は、このボックスをチェックしてください。
+::END
+
+<!-- String table for Help-License-Details -->
+$LICENSE_DETAILS_HEADER$=ライセンス情報
+
+$LICENSE_DETAILS_BODY1$::
+ライセンス情報はServ-U ファイル・サーバで現在、使用されている登録IDを含む情報を表示します。また、試用版としてインストールされている場合は、試用期間の残日数に関する
+情報が表示されます。このタブは以下の情報を含みます:
+::END
+
+$LICENSE_DETAILS_NAME$=名前
+$LICENSE_DETAILS_NAME_TXT$=現在のライセンスの名前が表示されます。
+
+$LICENSE_DETAILS_EMAIL$=電子メールアドレス
+$LICENSE_DETAILS_EMAIL_TXT$=現在のライセンスの電子メールアドレスが表示されます。
+
+$LICENSE_DETAILS_EDITION$=Serv-Uの種類
+$LICENSE_DETAILS_EDITION_TXT$=現在のライセンスで有効にされているSer-Uの種類が表示されます。種類に関する情報は$LINK_HELP_EDITIONS$をご覧ください。
+
+$LICENSE_DETAILS_COPIES$=コピー数
+$LICENSE_DETAILS_COPIES_TXT$=現在のライセンスにより許可される同時インストールの数
+
+$LICENSE_DETAILS_DATE$=発行日
+$LICENSE_DETAILS_DATE_TXT$=現在のライセンスが発行された日付
+
+$LICENSE_DETAILS_UPDATES$=アップデート
+$LICENSE_DETAILS_UPDATES_TXT$=現在のライセンスで最新版に無償でアップグレード可能な日付。試用版の場合は、試用期間の残日数が表示されます。
+
+$LICENSE_DETAILS_INFO$=種類情報
+$LICENSE_DETAILS_INFO_TXT$=登録されたライセンスのServ-Uの種類で有効な機能と制限が表示されます。
+
+$LICENSE_DETAILS_PRODUCTS$=追加製品
+$LICENSE_DETAILS_PRODUCTS_TXT$=Serv-Uの追加アドオンとそれらの有効状況。
+
+$LICENSE_DETAILS_REGISTER_HEADER1$=Serv-Uの登録
+$LICENSE_DETAILS_REGISTER_BODY1$::
+Serv-U ファイル・サーバのライセンス登録を行うには、<strong>登録</strong>ボタンをクリックしてください。そして、英数字の登録IDを入力してください。もし登録IDを紛失
+してしまった場合、<strong>IDの紛失</strong>ボタンをクリックしてください。登録IDを購入する場合、<strong>ご購入</strong>ボタンをクリックして、弊社ウェブサイトから
+IDを購入してください。
+::END
+
+
+<!-- String table for Help-Prog-Info -->
+$PROG_INFO_HEADER$=プログラム情報
+$PROG_INFO_BODY$::
+プログラム情報タブではサーバにインストールされているServ-Uの現在のバージョンなどを含む情報を表示します。:
+::END
+
+$PROG_INFO_BUILD$=作成日
+$PROG_INFO_BUILD_TXT$::
+現在インストールされているソフトウェアが作成された日付を表示します。
+::END
+
+$PROG_INFO_INSTALL$=インストール日
+$PROG_INFO_INSTALL_TXT$::
+コンピュータへ最初にServ-Uがインストールされた日付を表示します。
+::END
+
+$PROG_INFO_VERSION$=Serv-Uファイルサーバのバージョン番号
+$PROG_INFO_VERSION_TXT$::
+現在インストールされている詳細なバージョン番号です。
+::END
+
+$PROG_INFO_CONTACT$=お問い合わせ情報
+$PROG_INFO_CONTACT_TXT$::
+RhinoSoft.comへの問い合わせ情報です。英語以外の言語を使用している場合は、翻訳を担当したRhinoSoft.com公認のリセラーの情報も表示されます。
+::END
+
+$PROG_INFO_DEV$=開発情報
+$PROG_INFO_DEV_TXT$::
+Serv-U ファイル・サーバの開発とローカライズに関する情報です。
+::END
+
+$PROG_INFO_LEGAL$=法律に関して
+$PROG_INFO_LEGAL_TXT$::
+Serv-Uの法律に関する情報です。
+::END
+
+
+<!-- String table for Help-Limits-Settings-XXXXX -->
+$LIMITS_SETTINGS_HEADER$=制限と設定
+
+$LIMITS_SETTINGS_BASICS_BODY1$::
+Serv-Uは、全体での制限とカスタム設定を<strong>ユーザ</strong>、<strong>グループ</strong>、<strong>ドメイン</strong>、および<strong>サーバ</strong>へ適用する方法と
+同様に、どのように使用されるかをカスタム設計することができる詳細なオプションを提供します。制限は階層構造です。ユーザ設定はグループ設定より優先され、グループ設定は
+ドメイン設定より優先され、そしてドメイン設定はサーバ設定より優先されます。そして、制限は週の一日だけ適用することや常井適用することもできます。管理者への例外を不要
+することも可能です。特定のユーザの制限、そしてサーバのトータル管理を提供してください。Serv-Uの制限設定は5つのカテゴリに分類されています。:<strong>接続</strong>、
+<strong>パスワー</strong>ド、<strong>ディレクトリ・リスト</strong>、<strong>データ転送</strong>、<strong>詳細</strong>
+
+制限を適用するには、適切なカテゴリを選択し、<strong>追加</strong>ボタンをクリックしてください。そして制限を選択し、次に値を選択、または入力してください。例えば、
+ドメインで<strong>ユーザをホームディレクトリにロック</strong>を無効とするには以下の手順を行ってください。:
+::END
+
+$LIMITS_SETTINGS_BASICS_LIST1$::
+Serv-U管理コンソールからドメインの制限と設定リンクを選択してください。
+「制限の種類」ドロップダウンから<strong>ディレクトリ・リスト</strong>を選択してください。
+<strong>追加</strong>ボタンをクリックします。
+「制限」ドロップダウンから<strong>ユーザをホームディレクトリにロック</strong>を選択してください。
+オプションのチェックをはずします。
+<strong>保存</strong>ボタンをクリックします。
+::END
+
+$LIMITS_SETTINGS_BASICS_BODY2$::
+制限のリストはドメインへ適用されている制限を表示します。バックグラウンドが水色で表示されている制限はデフォルトの値です。白地の制限はデフォルトを上書きしている
+値です。上記の手順が完了すると<strong>ユーザをホームディレクトリにロック</strong>が「いいえ」の状態で、リスト内に表示されます。継承ルールにより、グループか
+ユーザレベルで優先されない場合、ドメイン内でこのオプションはすべてのユーザに適用されます。継承の方法に関する詳しい情報に関しては、ヘルプ文書の$LINK_HELP_UIC$
+セクションを参照してください。
+
+制限は対象となる制限を選択し、<strong>削除</strong>ボタンをクリックすることにより削除することができます。優先される値を編集する場合は、制限を選択して<strong>編集
+</strong>ボタンをクリックしてください。デフォルトで設定されているルールは編集、削除することはできません。新しい制限を作成しデフォルトの制限より優先させてください。
+
+制限を週の特定の時刻や曜日適用する場合は、制限の新規、または編集ダイアログで<strong>詳細</strong>ボタンをクリックしてください。追加オプションで<strong>「この時刻
+にだけ制限を適用」</strong>を選択し、開始時刻と終了時刻を設定してください。週の特定の曜日へ制限を制限するには、制限を適用する必要のない曜日横のチェックを外してく
+ださい。制限がこのように制限され、時刻か曜日の制限がこの制限にない場合、デフォルト値(または、他の制限の優先される値)が適用されています。
+::END
+
+$LIMITS_SETTINGS_SERVER$::
+以下はカテゴリによって整理された、利用可能な<strong>サーバ</strong>制限の一覧です。
+::END
+$LIMITS_SETTINGS_DOMAIN$::
+以下はカテゴリによって整理された、利用可能な<strong>ドメイン</strong>制限の一覧です。
+::END
+$LIMITS_SETTINGS_GROUP$::
+以下はカテゴリによって整理された、利用可能な<strong>グループ</strong>制限の一覧です。
+::END
+$LIMITS_SETTINGS_USER$::
+以下はカテゴリによって整理された、利用可能な<strong>ユーザ</strong>制限の一覧です。
+::END
+
+$CONNECTION_LS_HEADER$=接続
+$CONNECTION_LS_USER_GROUP_LIST_HEADER$=接続
+
+$CONNECTION_LS_HOMEDIR$=自動的にホームディレクトリを作成
+$CONNECTION_LS_HOMEDIR_TXT$::
+新しいユーザアカウントを作成する際に、ディレクトリが既に存在していないなら、自動的に指定されるホームディレクトリを作成するかどうかをServ-Uに指示します。
+::END
+
+$CONNECTION_LS_ANTI_TIMEOUT$=アンチタイムアウトスキームをブロック
+$CONNECTION_LS_ANTI_TIMEOUT_TXT$::
+一般的に長いファイル転送の間、FTP Command Channel接続を開くように保持する際やアクティブではない間に制御チャンネルで使用される"NOOP"などのコマンドをブロック
+します。これらがブロックされると、接続が指定された期間の間保留されるとServ-Uはクライアントを切断します。
+::END
+
+$CONNECTION_LS_IDLE$=自動的に接続タイムアウトを待機
+$CONNECTION_LS_IDLE_TXT$::
+クライアントの最終データ転送の後、待機し始めてから切断される前の時間を指定してください。
+::END
+
+$CONNECTION_LS_SERVER_SESSIONS$=サーバでのセッションの最大数
+$CONNECTION_LS_SERVER_SESSIONS_TXT$::
+サーバ全体で許可される同時接続の最大数を指定してください。
+::END
+
+$CONNECTION_LS_SERVER_IP_SESSIONS$=サーバでの各IPアドレスの最大セッション数
+$CONNECTION_LS_SERVER_IP_SESSIONS_TXT$::
+サーバ全体で開かれる、一つのIPアドレスからの同時セッションの最大数を指定してください。
+::END
+
+$CONNECTION_LS_USER_IP_SESSIONS$=ユーザアカウントの各IPアドレスの最大セッション
+$CONNECTION_LS_USER_IP_SESSIONS_TXT$::
+ユーザが一つのIPアドレスから開く、同時セッションの最大数を指定してください。
+::END
+
+$CONNECTION_LS_USER_SESSIONS$=ユーザアカウントのセッションの最大数
+$CONNECTION_LS_USER_SESSIONS_TXT$::
+一つのユーザアカウントから開かれる同時セッションの最大数を指定してください。
+::END
+
+$CONNECTION_LS_SECURE$=ログイン前にセキュア接続を要求
+$CONNECTION_LS_SECURE_TXT$::
+受け入れる前に安全な接続（FTPS,SFTP,HTTPS）などを必要とする。
+::END
+
+$CONNECTION_LS_TIMEOUT$=自動的にセッションをタイムアウト
+$CONNECTION_LS_TIMEOUT_TXT$::
+サーバにより切断される前にセッションが継続できる時間を指定してください。
+::END
+
+$CONNECTION_LS_BLOCK_IP_SESSION_TIMEOUT$=セッション・タイムアウトのIPアドレスをブロック
+$CONNECTION_LS_BLOCK_IP_SESSION_TIMEOUT_TXT$::
+セッション・タイムアウトのIPアドレスがブロックされる時間（分）を指定します。
+::END
+
+$CONNECTION_LS_ALLOW_XFORWARDED_FOR$=X-Forwarded-ForがHTTP接続IPアドレスアドレスを変更することを許可
+$CONNECTION_LS_ALLOW_XFORWARDED_FOR_TXT$::
+有効にした場合、"X-Forwarded-For"HTTPヘッダパラメタはServ-UのためにクライアントのIPアドレスを変更します。
+すべてのHTTP接続がプロキシサーバかロードバランサからくる場合、これは有用です。Proxyサーバとロードバランサは、HTTPサーバが実際のクライアントIPアドレスを
+特定して、必要に応じてセキュリティ規則を適用することができるように、このパラメタをHTTPヘッダに通常追加します。
+::END
+
+$CONNECTION_LS_REQUIRE_PTR$=リバースDNS名を要求
+$CONNECTION_LS_REQUIRE_PTR_TXT$::
+サーバに接続するユーザは、PTRレコードとして知られている有効なリバースDNS名を持つIPアドレスから接続されることが必要です。
+有効なPTRレコードの存在がないかどうかチェックしますが、その内容はチェックしません。
+::END
+
+$CONNECTION_LS_ALLOW_FTP_FTPS$=FTPとFTPS接続を許可s
+$CONNECTION_LS_ALLOW_FTP_FTPS_TXT$::
+ユーザがFTPとFTPSプロトコルを使用して接続することを許可します。FTPとFTPSプロトコルを無効にするには「FTPとFTPS接続を許可」のチェックを外してください。
+::END
+
+$CONNECTION_LS_ALLOW_SFTP$=SFTP接続を許可
+$CONNECTION_LS_ALLOW_SFTP_TXT$::
+ユーザがSFTPプロトコルを使用して接続することを許可します。SFTPプロトコルを無効にするには「SFTP接続を許可」のチェックを外してください。
+::END
+
+$CONNECTION_LS_ALLOW_HTTP_HTTPS$=HTTPとHTTPS接続を許可
+$CONNECTION_LS_ALLOW_HTTP_HTTPS_TXT$::
+ユーザがHTTPとHTTPSプロトコルを使用して接続することを許可します。HTTPとHTTPSプロトコルを無効にするには「HTTPとHTTPS接続を許可」のチェックを外してください。
+::END
+
+$CONNECTION_LS_DOMAIN_SESSIONS$=ドメインでのセッションの最大数
+$CONNECTION_LS_DOMAIN_SESSIONS_TXT$::
+現在のドメインで許可される同時接続の最大数を指定してください。
+::END
+
+$CONNECTION_LS_DOMAIN_IP_SESSIONS$=ドメインでの各IPアドレスの最大数
+$CONNECTION_LS_DOMAIN_IP_SESSIONS_TXT$::
+現在のドメインで開かれる、一つのIPアドレスからの同時セッションの最大数を指定してください。
+::END
+
+$CONNECTION_LS_GROUP_SESSIONS$=グループのセッション最大数
+$CONNECTION_LS_GROUP_SESSIONS_TXT$::
+グループのメンバであるすべてのユーザが許可される接続セッションの最大数を指定してください。
+::END
+
+$CONNECTION_LS_GROUP_IP_SESSIONS$=グループの各IPアドレスの最大セッション数
+$CONNECTION_LS_GROUP_IP_SESSIONS_TXT$::
+グループのメンバであるすべてのユーザが許可される一つのIPアドレスからの同時セッションの最大数を指定してください。
+::END
+
+$PASSWORD_LS_HEADER$=パスワード
+
+$PASSWORD_LS_ANON_PASS$=匿名（anonymous）パスワードをチェック
+$PASSWORD_LS_ANON_PASS_TXT$::
+Serv-Uが匿名ログインのパスワードとして使用されるEメールアドレスの有効性を確認するかを指定します。
+::END
+
+$PASSWORD_LS_ENCRYPT_PASS$=パスワード暗号化モード
+$PASSWORD_LS_ENCRYPT_PASS_TXT$::
+ユーザパスワードのパスワード暗号化レベルを指定します。オプションは以下の通りです。："One-way 暗号化 (より安全)"は、
+パスワードを完全にコード化して、可逆できません。"シンプルな two-way 暗号化 (安全ではない)"は、簡単な復元のための
+リバーシブルの形式でパスワードを暗号化します。そして、"暗号化なし （推奨しない）"は、パスワードをクリアテキストで
+保存します。この設定が変更されるとき、既存のパスワードは、新しい形式で保存されるためにアップデートされないで、
+再保存されていなければなりません。
+::END
+
+$PASSWORD_LS_USER_PASS_RECOVERY$=ユーザのパスワード復元を許可
+$PASSWORD_LS_USER_PASS_RECOVERY_TXT$::
+有効にされた場合、Webクライアントのログイン・ページでパスワード復元ユーティリティによるパスワードの復元をユーザへ許可します。
+::END
+
+$PASSWORD_LS_MASK_PASS$=ログで受信したパスワードを隠す
+$PASSWORD_LS_MASK_PASS_TXT$::
+ログ内で表示されるクライアントからのパスワード情報を隠します。このログファイルでのパスワードを隠す設定を無効とすることにより、接続に関する問題のデバッグやユーザアカウントのセキュリティを監査する際に役立つ場合があります。
+::END
+
+$PASSWORD_LS_MIN_PASS_LEN$=最小パスワード長
+$PASSWORD_LS_MIN_PASS_LEN_TXT$::
+ユーザアカウントのパスワードで必要とする文字数の最小値を指定してください。0文字を指定した場合は、最小値なしとなります。
+::END
+
+$PASSWORD_LS_CHANGE_PASS$=ユーザによるパスワード変更を許可
+$PASSWORD_LS_CHANGE_PASS_TXT$::
+ユーザが自身のパスワード変更を許可するか否かを指定してください。
+::END
+
+$PASSWORD_LS_EXPIRE_PASS$=パスワードを自動的に失効
+$PASSWORD_LS_EXPIRE_PASS_TXT$::
+変更されなければならない前に、パスワードが有効となる日数を指定してください。0が指定された場合、パスワードの期限切れがないことを意味します。
+::END
+
+$PASSWORD_LS_COMPLEX_PASS$=複雑なパスワードを要求
+$PASSWORD_LS_COMPLEX_PASS_TXT$::
+すべてのユーザアカウントパスワードで1つ以上の大文字とアルファベット以外の文字が含まれる必要であるかを指定しします。
+::END
+
+$PASSWORD_LS_SSH_AUTH_TYPE$=SSH 認証の種類
+$PASSWORD_LS_SSH_AUTH_TYPE_TXT$::
+SSH認証がどのように発生するかを指定します。オプションは以下を含みます:"パスワードとパブリックキー"--ログインのためにパスワードと
+パブリックキー(指定されると)の両方を必要とします。"パスワードかパブリックキー"--ログインのためにパスワードかパブリックキーを必要とします。
+"パブリックキーのみ"--ログインに成功するには提供されたパブリックキーが必要です。パスワードは許可されません。"パスワードのみ"--ログインに
+成功するには提供されたパスワードが必要です。パブリックキーは許可されません。
+::END
+
+$DIRECTORY_LISTING_LS_HEADER$=ディレクトリ・リスト
+
+$DIR_LIST_HIDE_HIDDEN$=リストで隠すとされているファイルを隠す
+$DIR_LIST_HIDE_HIDDEN_TXT$::
+Windowsで「隠す」システム属性を持つファイルとフォルダを隠します。
+::END
+
+$DIR_LIST_LOCK_HOMEDIR$=ユーザをホームディレクトリにロック
+$DIR_LIST_LOCK_HOMEDIR_TXT$::
+ユーザをユーザのホームディレクトリにロックし、そのフォルダの上の階層の参照を許可しません。ホームディレクトリは実際の物理的な位置で隠され"/"として表示されます。
+::END
+
+$DIR_LIST_USE_LOWER$=ファイル名とディレクトリで小文字を使用
+$DIR_LIST_USE_LOWER_TXT$::
+Serv-Uはファイル、またはディレクトリで使用されている、実際の大文字小文字にかかわらず、小文字を使用してすべてのファイル名とディレクトリを表示します。（半角英数のみ）
+::END
+
+$DIR_LIST_UNLOCK_ROOT$=ロックされていないユーザのリストされるドライブのルート("/")を許可
+$DIR_LIST_UNLOCK_ROOT_TXT$::
+ユーザへディレクトリをシステムルート("/") を変更し、コンピュータのすべてのドライブを表示することを許可します。それらのホームディレクトリへユーザがロックされて
+いない場合にのみ、このオプションは動作します。
+::END
+
+$DIR_LIST_TREAT_SHORTCUTS$=ターゲットとしてWindowsショートカットを扱う
+$DIR_LIST_TREAT_SHORTCUTS_TXT$::
+UNIXのシンボリックなリンクのように、すべての有効な.lnk(ショートカット)ファイルを扱うようにServ-Uに指示します。
+::END
+
+$DIR_LIST_SHORTCUT_LINKS$=Windowsショートカットをリンクとして読み取る
+$DIR_LIST_SHORTCUT_LINKS_TXT$::
+実際の目的地オブジェクトとして、すべての有効な.lnkファイルを扱うようにServ-Uに指示します。.lnkファイルが別のファイルを示すなら、目的のファイルはディレクトリが.lnkファイル
+自体の代わりにリストであることが示されます。
+::END
+
+$DIR_LIST_COMP_STATE$=ファイルとディレクトリの圧縮された状態を隠す。
+$DIR_LIST_COMP_STATE_TXT$::
+ユーザによって見られる、すべての圧縮されたファイルとディレクトリの圧縮された状態を隠します。
+::END
+
+
+$DIR_LIST_ENCRYPT_STATE$=ファイルとディレクトリの暗号化された状態を隠す。
+$DIR_LIST_ENCRYPT_STATE_TXT$::
+ユーザによって見られる、すべての暗号化されたファイルとディレクトリの暗号化された状態を隠します。
+::END
+
+$DATA_TRANSFER_LS_HEADER$=データ転送
+
+$DATA_TRANSFER_DELETE_PARTIAL$=一部だけがアップロードされたファイルを削除
+$DATA_TRANSFER_DELETE_PARTIAL_TXT$::
+一部分だけがアップロードされたファイルを削除するようにServ-Uに指示します。このオプションが有効とされた場合、ユーザはRESTを使用した、中断されたアップロードを再開することができません。(再開)
+FTP command.
+::END
+
+$DATA_TRANSFER_SERVER_MAX_DL$=サーバの最大ダウンロード速度
+$DATA_TRANSFER_SERVER_MAX_DL_TXT$::
+すべてのダウンロードで、サーバ全体で使用することができる最大の帯域幅を制限します。0KB/sの制限を設定した場合、帯域幅制限は無制限となります。
+::END
+
+$DATA_TRANSFER_SERVER_MAX_UL$=サーバの最大アップロード速度
+$DATA_TRANSFER_SERVER_MAX_UL_TXT$::
+すべてのアップロードで、サーバ全体で使用することができる最大の帯域幅を制限します。0KB/sの制限を設定した場合、帯域幅制限は無制限となります。
+::END
+
+$DATA_TRANSFER_MAX_SESSION_DL$=各セッションの最大ダウンロード速度
+$DATA_TRANSFER_MAX_SESSION_DL_TXT$::
+各セッションの最大のダウンロード帯域幅を制限します。0KB/sの制限を設定した場合、帯域幅制限は無制限となります。
+::END
+
+$DATA_TRANSFER_MAX_SESSION_UL$=各セッションの最大アップロード速度
+$DATA_TRANSFER_MAX_SESSION_UL_TXT$::
+各セッションの最大のアップロード帯域幅を制限します。0KB/sの制限を設定した場合、帯域幅制限は無制限となります。
+::END
+
+$DATA_TRANSFER_MAX_USER_DL$=ユーザアカウントの最大ダウンロード速度
+$DATA_TRANSFER_MAX_USER_DL_TXT$::
+個々のユーザアカウントに関連したすべてのセッションの最大ダウンロード帯域幅制限を設定します。0KB/sの制限を設定した場合、帯域幅制限は無制限となります。
+::END
+
+$DATA_TRANSFER_MAX_USER_UL$=ユーザアカウントの最大アップロード速度
+$DATA_TRANSFER_MAX_USER_UL_TXT$::
+個々のユーザアカウントに関連したすべてのセッションの最大ダアップロード帯域幅制限を設定します。0KB/sの制限を設定した場合、帯域幅制限は無制限となります。
+::END
+
+$DATA_TRANSFER_MAX_UL_SIZE$=最大アップロードファイルサイズ
+$DATA_TRANSFER_MAX_UL_SIZE_TXT$::
+ユーザがServ-Uにアップロードすることができる最大の単一ファイルサイズを制限します。キロバイトによるファイルサイズとなります。
+
+$DATA_TRANSFER_INTERPRET_LINE_FEED$=ASCIIモードの場合、新規行として改行バイトを読み取る
+$DATA_TRANSFER_INTERPRET_LINE_FEED_TXT$::
+ファイルのアップロードとダウンロードでASCIIモードが使用される際、Serv-Uは、&lt;LF&gt;キャラクタが&lt;CR&gt;&lt;LF&gt;行端マーカーと同じであると
+仮定するでしょう。ほとんどのWindowsアプリケーションが、&lt;CR&gt;&lt;LF&gt;がFTPプロトコルのように改行文字を表すと予想します。
+しかしながら改行文字系列の定義がWindowsで完全に定義されるというわけではないので、このオプションは &lt;LF&gt;が&lt;CR&gt;&lt;LF&gt;と同じであると
+Serv-Uを仮定させます。ASCIIモードでのアップロードの場合、スタンドアロンの&lt;LF>キャラクタはファイルに書く前に、&lt;CR&gt;&lt;LF&gt;に変えられます。
+ASCIIモードでダウンロードされる場合、スタンドアロンの &lt;LF>キャラクタはクライアントに発信する前に、&lt;CR&gt;&lt;LF&gt;に変えられます。
+::END
+
+$DATA_TRANSFER_DOMAIN_MAX_DL$=ドメインの最大ダウンロード速度
+$DATA_TRANSFER_DOMAIN_MAX_DL_TXT$::
+すべてのダウンロードで、ドメイン全体で使用することができる最大の帯域幅を制限します。0KB/sの制限を設定した場合、帯域幅制限は無制限となります。
+::END
+
+$DATA_TRANSFER_DOMAIN_MAX_UL$=ドメインの最大アップロード速度
+$DATA_TRANSFER_DOMAIN_MAX_UL_TXT$::
+すべてのアップロードで、ドメイン全体で使用することができる最大の帯域幅を制限します。0KB/sの制限を設定した場合、帯域幅制限は無制限となります。
+::END
+
+$DATA_TRANSFER_GROUP_MAX_DL$=すべてのグループの最大ダウンロード速度
+$DATA_TRANSFER_GROUP_MAX_DL_TXT$::
+グループのすべてのメンバがダウンロードに使用できる最大の最大の帯域幅を制限します。0KB/sの制限を設定した場合、帯域幅制限は無制限となります。
+::END
+
+$DATA_TRANSFER_GROUP_MAX_UL$=すべてのグループのアップロード最大速度
+$DATA_TRANSFER_GROUP_MAX_UL_TXT$::
+グループのすべてのメンバがアップロードに使用できる最大の最大の帯域幅を制限します。0KB/sの制限を設定した場合、帯域幅制限は無制限となります。
+::END
+
+$ADVANCED_LS_HEADER$=詳細
+
+$ADVANCED_CHECK_DIRSIZE$=アップロードの間、自動的にディレクトリサイズをチェック
+$ADVANCED_CHECK_DIRSIZE_TXT$::
+Serv-Uに指定された最大ディレクトリサイズにディレクトリのサイズが達していないかをチェックするように指示します。この属性は、Serv-Uが常に転送時間で、
+それらを計算しなければならない代わりに有効なディレクトリサイズをアップデートすることを確実にします。（それは多くの時間を必要とします。）
+::END
+
+$ADVANCED_URL_CHARS$=コマンドでURLキャラクタをASCIIに変換
+$ADVANCED_URL_CHARS_TXT$::
+コマンドパラメタにプレーンASCIIテキストに含まれる特殊文字を変換するようにServ-Uに指示します。特定のウェブ・ブラウザはFTPプロトコルを使用するときファイル名と
+ディレクトリに含まれる特殊文字を暗号化することができます。この属性はServ-Uにこれらの特殊文字を解読させます。
+::END
+
+$ADVANCED_RENAME_OVERWRITE$=名前の変更上書きを許可
+$ADVANCED_RENAME_OVERWRITE_TXT$::
+有効にされた場合、Serv-Uは、ファイルが目的場所に既に存在するファイルの名前に変更されることを許可します。無効にされた場合、ユーザはファイル、またはディレクトリを
+既に存在するパス名に変更することができません。（デフォルトは有効）
+::END
+
+$ADVANCED_WARN_OLD_BROWSER$=古いウェブブラウザを使用している場合の、エンドユーザへの警告
+$ADVANCED_WARN_OLD_BROWSER_TXT$::
+有効（デフォルト）にされた場合、Serv-Uは、古いブラウザを使用しているユーザに警告を表示します。
+::END
+
+$ADVANCED_DISABLE_NAGLE$=ネーグル・アルゴリズムの使用を無効
+$ADVANCED_DISABLE_NAGLE_TXT$::
+次のパケットを送る前にACK TCPハンドシェイクを待つことを無効とします。このオプションは衛星中継などの非常に大きい待ち時間との関係に通常使用されるだけです。
+::END
+
+$ADVANCED_INLINE_OOB$=帯域外のデータをインライン
+$ADVANCED_INLINE_OOB_TXT$::
+帯域外でのソケットデータを正常なデータのように扱うために、通常のTCPデータ・ストリーム中で解析します。このオプションは、多くのOOBデータを扱うことができない
+ソケットスタックにバンド外(OOB)に関するデータを多量に送るサービス不能攻撃に対抗するために役に立ちます。
+::END
+
+$ADVANCED_SEND_KEEPALIVE$=keep aliveパケットを送信して壊れた接続を検出
+$ADVANCED_SEND_KEEPALIVE_TXT$::
+ソケットがまだ接続されているかどうか判断するために、定期的にパケットをkeep-aliveを送信します。
+::END
+
+$ADVANCED_ADAPTIVE_TIMEOUT$=高速ファイルアップロードで適用タイムアウトを使用 
+$ADVANCED_ADAPTIVE_TIMEOUT_TXT$::
+高速転送のためにファイルアップロードの間、ゆっくりパケットタイムアウトを下ろしてください。転送が正しく完了しない場合、適応型のタイムアウトは、それをServ-U
+のアップロードが、よりはやく認識する再開により簡単にします。転送は全くとその結果、より早くファイルへのアクセスを許すことです。
+::END
+
+$ADVANCED_MAX_SFTP_VER$=サポートされる最大SFTPバージョン
+$ADVANCED_MAX_SFTP_VER_TXT$::
+SFTP接続で許可されるSFTPの最大バージョンを指定します。Serv-UはSFTPバージョン3～6をサポートします。
+::END
+
+<!-- String table for Help-Domain-Settings, Help-Server-Settings -->
+$DOMAIN_SETTINGS_HEADER$=設定
+
+$DOMAIN_SETTINGS_BASICS$::
+サーバ設定とドメイン設定タブでは、パフォーマンス、セキュリティ、ネットワーク接続に影響する、基本的なサーバ、またはドメイン設定を行うことができます。設定を構成
+するために、適切な箇所に要求値を入力し<strong>保存</strong>ボタンをクリックしてください。構成できる設定に関する詳細な情報は以下をご参照ください。
+::END
+
+$CONNECTION_SETTINGS_HEADER$=接続設定
+
+$CONNECTION_SETTINGS_ANTIHAMMER$=次の回数以上の接続をブロック 'x' 回以内 'y' 秒のうちに 'z' 分
+$CONNECTION_SETTINGS_ANTIHAMMER_TXT$::
+このオプションを有効にすることは、anti-hammeringとして知られる、総当りのパスワード推測システムで辞書スタイル攻撃を使用し、ユーザアカウントの有効なパスワードを
+推測使用する攻撃を防ぐひとつの方法です。強力で複雑なパスワードを使用しても、辞書攻撃によって破られるかもしれません。しかしながら、このオプションを有効にすること
+により、Serv-Uがこれらの不法なソースから時間の処理接続を無駄にしないことを確実にします。このオプションを構成するとき、ブロックされる前に誤ったパスワードを修正
+するために正しいユーザに利用可能ないくらかの余地を残すことを確実にしてください。
+
+有効にした場合、このオプションは'y'秒以内の'x'回の試行でログインできない場合、'z'分間の間、一時的にIPアドレスをブロックします。適切なIP アクセスルール・タブで
+ブロックされたIPアドレスを参照することができます。ログインに成功した場合は、試行されたログインの回数をがリセットされます。
+::END
+
+$CONNECTION_SETTINGS_HIDE_SSH_SERVER_ID$=SSHアイデンティティからサーバ情報を隠す
+$CONNECTION_SETTINGS_HIDE_SSH_SERVER_ID_TXT$::
+SSHログインに成功した後、、サーバは識別情報をクライアントに送信します。通常、この情報はサーバ名とバージョン番号を含みます。このオプションを有効にすると、
+情報がクライアントへ提供されることを防ぐことができます。
+::END
+
+$CONNECTION_SETTINGS_DEFAULT_CLIENT$=デフォルトWebクライアント
+$CONNECTION_SETTINGS_DEFAULT_CLIENT_TXT$::
+すべてのHTTPクライアントで、デフォルトではWebクライアントかFTP Voyager JVのどちらが使用されるかを指定します。3番目のオプション(デフォルト・オプション)は、
+クライアントへ望む方法を選択する方法となります。また、このオプションはグループとユーザレベルで利用可能です。
+::END
+
+$SUPPORT_LINK_HEADER$=クライアント・サポートリンク
+$SUPPORT_LINK_BODY1$::
+クライアント・サポート・リンクは、クライアントがサポートかアシスタントを必要とする場合に、連絡先をWebクライアントとFTP Voyager JVに挿入することができる
+機能ですこの機能で使用する基本的な構文は　protocol:pathといった構文です。このオプションは、非常に柔軟性を持ち、どんなネットワーク・ショートカットでも、以下の
+ように使用することができます。:
+::END
+$SUPPORT_LINK_LIST1$::
+<strong>http://www.website.com/support/
+
+mailto:service@website.com?subject=Serv-U ファイルサーバ・サポート
+
+aim:goim?screenname=ExampleAdminUser&message=Serv-Uファイルサーバのヘルプが必要です!</strong>
+::END
+$SUPPORT_LINK_BODY2$::
+クライアントのマシンが提供されたプロトコルを理解する限り、どんな形式も使用することができます。
+::END
+
+$CUSTOM_LOGO_SETTINGS_HEADER$=カスタム・ロゴ（ロゴの変更）設定
+$CUSTOM_LOGO_SETTINGS$=ログインとWebクライアントのページに指定したカスタム・ロゴを表示することができます。
+$CUSTOM_LOGO_SETTINGS_TXT$::
+カスタム・ロゴのサイズは、400ピクセル（幅）と100ピクセル（高さ）である必要がります。ロゴをを保存する際に、指定したロゴがこの基準を
+満たしていないとエラーメッセージが表示されます。  <strong>注意:</strong> RGBコード化の代わりにCMYKを使用するJPEGイメージはブラウザで、
+正しく表示されないかもしれません。使用するログ画像をテストして、ブラウザで正しく表示されるか確認してください。
+
+ロゴを追加するには、「カスタム・ロゴ」グループ・ボックスの「参照」ボタンをクリックしてください。そして、そのロゴファイルのパス選択してください。
+「保存」ボタンをクリックすると、ロゴは「カスタム・ロゴ・パス」の入力欄の下に表示されます。カスタム・ロゴを表示しないようにするには、「カスタム・ロゴ・パス」の
+入力欄に入力されているパスを削除し「保存」ボタンをクリックしてください。
+::END
+
+$PASSWORD_RECOVERY_EMAIL_HEADER$=パスワード復元の電子メールメッセージ
+$PASSWORD_RECOVERY_EMAIL$=この編集可能なパスワード復元メッセージを使用して、ユーザのログイン証明の電子メールメッセージを送信してください。
+$PASSWORD_RECOVERY_EMAIL_TXT$::
+パスワード復元電子メールメッセージには、ユーザのログインIDとパスワードを持つシンプルなデフォルトの件名とメッセージがあります。ユーザが有効なEメールのアドレスを
+Serv-Uに記録させると、このメッセージは送られるでしょう。ユーザはServ-Uログインページからこのメッセージを要求するかもしれません。 
+
+また、管理者は、管理コンソールでドメインユーザとグローバルユーザで「パスワードの復元」ボタンを使用することでこのメッセージをユーザに送ることができます。
+::END
+
+$INTEGRATION_DLL_HEADER$=DLL統合
+$INTEGRATION_DLL_TXT$::
+DLL統合の書き込みに関する情報は、Serv-Uインストールディレクトリ内の"Serv-U Integration Sample DLL"の"Serv-U Integration Sample DLL"を参照して
+ください。Integration APIはこのサンプルに記載されています。 
+::END		
+		
+$ADVANCED_SETTINGS_HEADER$=詳細設定
+
+$ADVANCED_SETTINGS_DIRMASK$=ディレクトリ・リンク・マスク
+$ADVANCED_SETTINGS_DIRMASK_TXT$::
+ファイル・パーミッション（権限）として、FTPクライアントに送られるテキストストリングを指定します。Windowsは、このオプションを主に表面的に、Unixのような伝統的な
+ファイル許容を支持しません。しかしながら、幾つかのクライアントが、正しく作動するためにあるマスクを必要とします。
+::END
+
+$ADVANCED_SETTINGS_MAX_THUMB$=最大同時サムネイル数
+$ADVANCED_SETTINGS_MAX_THUMB_TXT$::
+HTTPクライアントとFTP THUMBコマンドに対応してサムネイル画像を作成することに使用される、スレッドの最大数を指定します。サムネイルの生成は、CPUを使用します。
+この値を増加させるとは、Serv-Uは同時により多くのクライアントからのサムネイル要求を扱うことができますが、サムネイルの生成に多くの時間を必要とするかもしれません。
+::END
+
+$ADVANCED_SETTINGS_UPLOAD_ACCESS$=ファイルのアップロードアクセス
+$ADVANCED_SETTINGS_UPLOAD_ACCESS_TXT$::
+ファイルがクライアントから受信されている間にアップロードされたファイルが開かれる方法を指定します。デフォルトの<strong>読み取りアクセスを許可</strong>は、他の
+クライアントが、ファイルが受信されている間も、ファイルがダウンロードされるかもしれないことを意味します。<strong>フルアクセスを許可</strong>は、ファイルが転送
+されている間、ファイルに他のクライアントが読み込み、書き込み可能であることを許可します。他のクライアントが、ファイルが転送中である間、ファイルへのアクセスを防ぐ
+には<strong>アクセスなしを許可</strong>を選択してください。
+::END
+
+$ADVANCED_SETTINGS_DOWNLOAD_ACCESS$=ファイル・ダウンロード・アクセス
+$ADVANCED_SETTINGS_DOWNLOAD_ACCESS_TXT$::
+ファイルがクライアントへ送信されている間にダウンロードされたファイルが開かれる方法を指定します。デフォルトの<strong>読み取りアクセスを許可</strong>は、他の
+クライアントが、ファイルが送信されている間も、ファイルが読み込まれるかもしれないことを意味します。<strong>フルアクセスを許可</strong>は、ファイルが送信されて
+いる間、ファイルに他のクライアントが読み込み、書き込み可能であることを許可します。他のクライアントが、ファイルが送信中である間、ファイルへのアクセスを防ぐには
+<strong>アクセスなしを許可</strong>を選択してください。
+::END
+
+$NETWORK_SETTINGS_HEADER$=ネットワーク設定
+
+$NETWORK_SETTINGS_UPNP$=UPｎPを経由するファイアウォールの自動構成
+$NETWORK_SETTINGS_UPNP_TXT$::
+有効にした場合、ファイルサーバがネットワークの外からアクセスしやすいように、Serv-Uはお客様のUPnPに対応したネットワーク装置(通常の場合ルータです)で自動的に前方に
+必要なポートを構成します。これはPASVモードFTPデータ転送を有効にする際、特に役に立ちます。
+::END
+
+$NETWORK_SETTINGS_PACKET_TO$=パケット・タイムアウト
+$NETWORK_SETTINGS_PACKET_TO_TXT$::
+TCPパケット転送のタイムアウト（秒）を指定します。高いレベルの待ち時間を経験する非常に遅いネットワークだけが、デフォルト値の300秒から変更する必要があるかもしれません。
+::END
+
+$NETWORK_SETTINGS_PASV$=PASV ポートの範囲
+$NETWORK_SETTINGS_PASV_TXT$::
+Serv-UがPASVモードデータ転送に使用するべきである包括的なポートの範囲を指定します。PASVモードデータ転送のためにソケットを開く際、通常Serv-Uはオペレーティング
+システムに無作為のポートナンバーを割り当てさせます。この属性は、あらかじめServ-UのPASVポート範囲を知られている範囲に制限することによって特定の範囲のポートを知る
+必要性を持つルータかファイアウォールに適合します。最もビジーなファイルサーバでは、10のポートの範囲は十分です。
+
+<strong>注意:</strong> NATルータによっては、異なる動作により、より大きなポートの範囲を必要とするかもしれません。Serv-Uとクライアントがディレクトリのリストアップ、
+またはファイルの移動に問題を持つ場合は、ルータのポート範囲を増加させてみてください。
+::END
+
+$OTHER_SETTINGS_HEADER$=その他の設定
+
+$OTHER_SETTINGS_RATIO_FREE$=転送率制限を受けないファイル
+$OTHER_SETTINGS_RATIO_FREE_TXT$::
+<strong>転送率制限を受けないファイル</strong>ボタンにより開かれるウインドウにリストアップされているファイルは、ファイル転送の際に転送率制限が免除されます。
+サーバ、またはドメインで指定される転送率制限を受けないファイルは、それらのすべてのユーザアカウントへ継承されます。詳しくは、$LINK_ヘルプ、_RATIOS$のヘルプをご参照ください。
+::END
+
+$OTHER_SETTINGS_ADMIN_PASS$=管理パスワードの変更
+$OTHER_SETTINGS_ADMIN_PASS_TXT$::
+Serv-Uシステムトレイ・アイコンをダブルクリックすることで開始できるServ-U 管理コンソールを保護するパスワードです。管理コンソールがこの方法で実行されている場合に、
+パスワード変更オプションは利用可能になります。デフォルトでは管理パスワードは設定されていません。
+::END
+
+
+<!-- String table for Help-Custom-FTP-Strings -->
+$CUSTOM_FTP_HEADER$=FTP設定
+
+$CUSTOM_FTP_COMMANDS_BODY1$::
+Serv-U ファイル・サーバは、FTPコマンドの受信への応答などのFTPコマンドのカスタマイズを許可します。改造を考慮します。サーバ・レベルで。これらのオプションを
+構成した場合、すべてのドメインでこのカスタマイズが継承されます。特定のドメインでFTPの挙動をカスタマイズするために、適切なドメインを選択し、そしてドメインで
+<strong>FTPコマンド</strong>タブを開き、<strong>カスタム設定</strong>を使用ボタンをクリックしてください。ドメインでサーバのデフォルト設定に戻す必要がある場合は、
+いつでも<strong>デフォルト設定を使用</strong>ボタンにより元に戻すことができます。
+
+FTPプロトコルとその標準/拡張コマンドの詳細を理解している場合を除いて、このようにFTPの挙動をカスタマイズいただくことを推奨いたしません。
+set.
+::END
+
+$CUSTOM_FTP_GLOBAL_PROPS$=グローバル・プロパティ
+$CUSTOM_FTP_GLOBAL_PROPS_TXT$::
+グローバル設定を使用する際に、<strong>グローバル・プロパティ</strong>ボタンは利用することができます。
+::END
+
+$CUSTOM_FTP_GLOBAL_RESP$=グローバルFTP応答
+$CUSTOM_FTP_GLOBAL_RESP_TXT$::
+グローバルFTP応答は、ファイルが見つからない場合になどの送られるような、多くのFTPコマンドで共有される応答内容です。グローバルFTP応答をカスタマイズするのは、
+応答がそれぞれの個々のFTPコマンドのためにそれをカスタム設計しなければならないより他のすべてのFTPコマンドによってむしろ使用されるのを確実にします。FTPコマンド
+応答は応答に挿入されるリアルタイムのデータを許可する特別なマクロを含むことができます。詳しい情報に関しては $LINK_HELP_SYSTEM_VARS$のヘルプを参照してください。
+::END
+
+$CUSTOM_FTP_SERVER_MSG$=サーバ・メッセージファイル
+$CUSTOM_FTP_SERVER_MSG_TXT$::
+サーバwelcomeメッセージは、クライアントが最初に接続した際に、サーバからクライアントへ標準の「220 Welcome Message」に追加され送られます。<strong>メッセージファイルの
+テキストにレスポンスコードを含む</strong>ボックスがチェックされ場合、220応答コードは指定されたwelcomeメッセージの各行を開始しす。Welcomeメッセージをカスタム設計するには、
+<strong>メッセージ・ファイルのパス</strong>へテキストファイルのパスを入力してください。<strong>参照</strong>ボタンを使用して、コンピュータ内のファイルを選択することも
+できます。Serv-Uはこのファイルを開き、その内容を接続クライアントに送ります。
+::END
+
+$CUSTOM_FTP_ADVANCED$=詳細オプション
+$CUSTOM_FTP_GLOBAL_ADVANCED_TXT$::
+<em>"FTP_bounce" 攻撃とFXP（server-to-server transfers）をブロック</em> - この箱をチェックすると、コマンドチャンネルはIPアドレスにファイル転送を使用中に許可するのみで、このServ-U 
+ファイル・サーバにかかわるサーバからサーバへのすべてのファイル転送がブロックします。"FTP_bounce"攻撃に関する詳しい情報に関しては、CERTの顧問<a href="http://www.cert.org/advisories/CA-1997-27.html" target="_blank">
+CA-97.27</a>を参照してください。
+
+<em>複数応答のすべての行で応答コードを含む</em> - FTPプロトコルはFTPサーバによって複数応答を発行することができる2つの方法を定義します。幾つかのFTPクライアントの中には複数応答上に
+3ケタの応答コードを保管していない複数応答を分析するのにおい労力を必要とするかもしれません。クライアントがServ-Uから複数応答の問題を発生するFTPクライアントを使用している場合、
+このボックスをチェックしてください。
+
+<em>全ての送受信されたパスとファイル名にUTF-8エンコーディングを使用 </em>- デフォルトでは、Serv-Uは、すべてのファイル名とパスをUTF-8エンコードされた文字列で扱います。また、それはUTF-8
+エンコードされた文字列として、ディレクトリ・リストの送信の際のように、すべてのファイル名とパスを送ります。このオプションのチェックを外すと、Serv-Uはこれらの文字列をUTF-8エンコードしません。
+このオプションを無効とした場合、UTF8を含んでいない、サーバはUTF-8 エンコーディングを使用していないFEATコマンドレスポンスがクライアントへ示されます。
+::END
+
+$CUSTOM_FTP_EDIT$=Editing FTPコマンドと応答
+$CUSTOM_FTP_EDIT_TXT$::
+FTPコマンドを編集するには、編集するFTPコマンドを選択し、<strong>編集</strong>ボタンをクリックしてください。
+::END
+
+$CUSTOM_FTP_INFO$=情報
+$CUSTOM_FTP_INFO_TXT$::
+<strong>情報</strong>タブでは、コマンドに関する基本情報が、詳細な情報を記載した弊社ウェブサイトへのリンクと共に表示されます。また、<strong>コマンドを無効</strong>チェックボックスを
+チェックすることにより、それぞれのFTPコマンドを無効にすることができます。それらがクライアントから受け取られるとき、無効とされたコマンドは認識されていないコマンドとして扱われます。
+::END
+
+$CUSTOM_FTP_RESPONSES$=FTP応答
+$CUSTOM_FTP_RESPONSES_TXT$::
+<strong>FTP応答</strong>タブでは、サーバにより発行されるコマンドの各応答を<strong>編集</strong>ボタンをクリックすることによって、変更することができます。
+FTPコマンド応答は応答に挿入されるリアルタイムのデータを許可する特別なマクロを含むことができます。詳しい情報に関しては$LINK_HELP_SYSTEM_VARS$のヘルプを参照してください。
+::END
+
+$CUSTOM_FTP_MSGFILE$=メッセージファイル
+$CUSTOM_FTP_MSGFILE_TXT$::
+特定のFTPコマンドは、メッセージファイルがそれらに関連することを許可します。メッセージファイルの内容は標準のFTP応答と共に送られます。さらに、セカンダリ
+メッセージファイルパスは省略時のオプションとして利用可能です。これは、メッセージファイルが指定されるのを<strong>メッセージ・ファイル</strong>のユーザの
+ホームディレクトリに関連してパスを使用することで許可します。最初のメッセージファイルが見つけられないなら、Serv-Uは、代わりに<strong>セカンダリメッセージ
+ファイル</strong>を使用することを試みます。セカンダリロケーションで絶対的ファイルパスを指定することによって、各ユーザがメッセージファイルを受け取るのを
+保証することができます。
+
+以下はメッセージファイルの指定が許可される、すべてのFTPコマンドのリストです。:
+::END
+$CUSTOM_FTP_MSGFILE_LIST$::
+CDUP
+CWD
+QUIT
+::END
+
+$CUSTOM_FTP_COMMAND_ADVANCED_TXT$::
+いくつかのFTPコマンドがコマンドの挙動を構成する追加方法を提供する高度な構成オプションを含んでいます。利用できる場合、構成オプションは管理コンソールで
+詳細に説明されます。以下は高度な構成オプションを含むFTPコマンドのリストです:
+::END
+$CUSTOM_FTP_ADV_COMMAND_LIST$::
+LIST
+MDTM
+NLST
+::END
+
+
+$FTP_RESP_CASEFILE1_HEADER1$=例 - FTPコマンドレスポンスの変更
+$FTP_RESP_CASEFILE1_BODY1$::
+サーバに接続するユーザは、転送を終了したとき、与えられたフォルダでどのくらいのクォータスペースが利用可能であるかを把握する必要があります。これをするには、
+利用可能なスペースに関するレポートを含むSTORコマンドへの応答を編集してください。デフォルトで、STORコマンド(サーバのファイルを格納する)への226
+(command successful)応答は:
+
+"転送が完了しました。 $TransferBytes バイトが転送されました。 $TransferKBPerSecond KB/sec."
+
+これを変更して、拡張変数を追加します。:
+
+"転送が完了しました。 $TransferBytes バイトが転送されました $TransferKBPerSecond KB/sec. 保存スペースは次のサイズ残っています： $QuotaLeft"
+
+最後の文は、どのくらいの保存スペースが、それぞれのファイルアップロードの終了後に残されるかをユーザに示します。ユーザがファイルを削除するときはいつも、
+利用可能なスペースの増加を示すそれらのアップデートされた割当て値が表示されるので、DELEコマンドでも同様の事が可能です。
+::END
+
+
+<!-- String table for Help-Encryption -->
+$ENCYRPTION_HEADER$=暗号化
+
+$ENCRYPTION_BODY$::
+Serv-Uは、暗号化されたデータ転送の2つの方法をサポートします。-Secure Socket Layer(SSL)と Secure Shell 2(SSH2)です。SSLはFile Transfer Protocol (FTP)と
+Hypertext Transfer Protocol(HTTP)を安全にするために使用されています。SSH2は一般的にSFTPと呼ばれるファイル転送の方法をサポートするリモートシステムと対話
+する方法です。その名前にもかかわらず、SFTPはFTPプロトコル自体と共用して何も持っていません。
+
+暗号化が動作する、各方法のために、証明書、そして/又は、プライベートキーは供給される必要があります。SSLは両方の存在を要求しますが、SSH2はプライベートキーを
+必要とするだけです。これらの必要なファイルも所有していない場合、Serv-Uはそれらを作成することができます。
+
+サーバレベルで指定される暗号化オプションは、すべてのドメインへ自動的に継承されます。ドメイン・レベルで指定されたオプションは自動的に指定したどんな暗号化も
+対応するサーバ・レベルオプションより優先されます。特定の構成オプションはサーバでのみ利用可能です。
+::END
+
+$SSL_SETUP_HEADER$=FTPSとHTTPSのSSL構成
+
+$SSL_SETUP_NOTE$::
+Serv-UでSSL/TLS, SSH, HTTPS の暗号化されたドメインを作成するとき、暗号化されたドメインがリスナーを共有することができない事を知っておくことは重要です。
+SSL/TLS, SSH, HTTPS 暗号化がIPアドレスの間に送られるトラフィックを暗号化するのに基づくため、各ドメインには、適切に動作するための、ユニークなリスナーが
+ある必要があります。リスナーを共有する複数暗号化されたドメインが作成された場合、最初に作成されたドメインはは他の暗号化されたドメインを正しく機能させません。
+複数暗号化されたドメインを操作するには、それぞれがユニークなポートナンバーで構成するようにドメインのリスナーを変更してください。
+::END
+
+$SSL_SETUP_EXISTING$=既存の証明書の使用
+$SSL_SETUP_EXISTING_LIST$::
+認証機関からSSL証明書とプライベートキー・ファイルを入手してください。
+サーバでこれらのファイルを安全なディレクトリに置いてください。
+<strong>参照</strong>ボタンを使用して、適切な証明書とプライベートキー・ファイルの両方を選択してください。
+CA(認証機関)がPEMファイルを発行した場合、ファイルを入力、または参照してください。
+プライベートキー・ファイルを暗号化するために使用するパスワードを入力してください。
+<strong>保存</strong>ボタンをクリックしてください。
+::END
+
+$SSL_SETUP_EXISTING_TXT$::
+指定されたファイルパスとパスワードがすべて正しい場合、Serv-Uは、すぐに、指定された証明書を使用して、FTPSとHTTPSに接続を保証するのに証明書を使用
+し始めます。パスワードに誤りがある場合や、Serv-Uがどちらの提供されたファイルも見つけることができないなら、発生してるエラーについて説明するエラー
+メッセージは表示されます。
+::END
+
+$SSL_CREATE_CERT$=新規証明書の作成
+$SSL_CREATE_CERT_LIST$::
+<strong>証明書の作成</strong>ボタンをクリックして開始します。
+Serv-Uが作成するファイルの各名前に使用される<strong>証明書のセット名</strong>を指定してください。
+作成されたファイルが置かれる出力先パスを指定してください。多くの場合、インストールディレクトリは安全な位置です。 (i例 C:\Program Files\RhinoSoft.com\Serv-U\)
+サーバ、または会社が位置する市/町を指定してください。
+サーバ、または会社が位置する都道府県(該当する場合)を指定してください。
+サーバ、または会社が位置する国の2ケタの国名略号を指定してください。
+プライベートキーを保護するために使用されるパスワードを指定してください。
+すべての組織名を指定してください
+証明書の一般名を指定してください。ユーザが接続するのに使用するIPアドレスか完全修飾ドメイン名(FQDN)がここに記載されていなければなりません。<strong>注意</strong>:一般名称が接続するクライアントによって使用されたIPのアドレスまたFQDNでもない場合、証明書に対する警告がクライアントで表示されるかもしれません。
+サーバが存在する部署を指定してください。
+<strong>作成</strong>ボタンをクリックして、証明書の作成を完了してください。
+::END
+$SSL_CREATE_CERT_TXT$::
+Serv-Uは入力された情報を使用して3つのファイルを作成します:すぐにサーバで使用できる自己署名入りの証明書(.crt)（証明書認証機関によって承認されていません。）、
+認証のために認証機関で提出することができる証明書要求(.csr)、そして、両方の証明書ファイルを保護するために使用されるプライベートキーファイル(.key)です。
+プライベートキーが安全で保護された場所に保存することは非常に重要です。プライベートキーが漏洩した場合、悪意を持つ第三者は、お客様の証明書を使用する
+ことができます。
+::END
+
+$SSL_VIEW_CERT$=証明書の表示
+$SSL_VIEW_CERT_TXT$::
+証明書が作成された後にSSL証明書を参照するには、<strong>証明書の表示</strong>ボタンをクリックしてください。新しいダイアログに証明書の有効期限などを含む、
+証明書に関する特定されたすべての情報を表示します。
+::END
+
+$SSL_ADVANCED$=詳細SSLオプション
+$SSL_ADVANCED_TXT$::
+サーバ・レベルでのみ、これらの詳細SSLオプションを設定することができます。すべてのドメインが、これらの設定を引き継ぎます。(個別に、これらの設定を優先する
+設定を行うことはできません。）
+
+<em>低いセキュリティSSL暗号を有効</em> - このボックスをチェックすると、低いセキュリティSSL暗号の使用が有効となります。幾つかの古いクライアントは最良のSSL暗号を
+サポートしていないかも知れません。現在のコンピュータ使用の規格では、これらの暗号が安全ではないと考えられているため、Serv-Uはデフォルトでこれらの暗号を受け入れません。
+
+<em>SSLv2のサポートを無効</em> - Serv-UによってサポートされたSSLのいくつかの異なったバージョンがあります。古いバージョン(SSLv2)はSSLv3とTLSほど安全ではないセキュリ
+ティの脆弱性を記録しました。しかしながら、エクスポートされたクライアントや旧式のクライアントソフトウェアとの互換性のために、SSLv2をサポートする必要であるかもしれ
+ません。このボックスをチェックすると、より古いSSLv2プロトコルのサポートは無効にされます。
+::END
+
+$FIPS_MODE_HEADER$=FIPS オプション
+$FIPS_MODE_TXT$::
+<em>Enable FIPS 140-2 mode</em> - FIPS 140-2はNational Institute of Standards and Technology (NIST)によって設定された暗号化仕様です。
+FIPS 140-2に対応した公認暗号化アルゴリズムを使用し暗号化された接続でセキュリティを確保にします。
+::END
+
+$SFTP_SETUP_HEADER$=SFTP (Secure File Transfer over SSH2)
+
+$SFTP_SETUP_EXISTING$=既存のプライベートキーの使用
+$SFTP_SETUP_EXISTING_LIST$::
+プライベートキーファイルを入手してください。
+サーバの安全なディレクトリへプライベートキーファイルを置いてください。Serv-Uで<strong>参照</strong>ボタンを使用して、ファイルを選択してください。
+プライベートキーファイルのパスワードを入力してください。
+<strong>保存</strong>ボタンをクリックしてください。
+::END
+
+$SFTP_SETUP_CREATE$=プライベートキーの作成
+$SFTP_SETUP_CREATE_LIST$::
+<strong>プライベートキーの作成</strong>ボタンをクリックしてください。
+プライベートキーの名前（"MyDomain Key"など）を入力してください。これは保存されるファイル名としても使用されます。
+証明書の出力先パスを入力してください。 (例、 C:\Program Files\RhinoSoft.com\Serv-U\)
+キーの種類を選択してください （デフォルトのDSAが推奨されますが、RSAを利用することもできます。）
+キーの長さを選択してください。（1024ビットは最良のパフォーマンス、2048ビットはよりよい選択、4096は最良のセキュリティとなります。）
+プライベートキーファイルを保護するために使用するパスワードを入力してください。
+::END
+
+
+$SFTP_SETUP_CIPHER_MAC$=SSH暗号とMACs
+$SFTP_SETUP_CIPHER_MAC_TXT$::
+デフォルトでは、サーバにより使用するための、すべてのSSH暗号とMACs (Message Authentication Codes)は有効とされています。特定のセキュリティの必要性が、
+ある暗号かMACsしか使用することができないのを決定する場合、適切なボックスのチェックを外すことによって、個別に求められていない暗号とMACsを無効にすることができます。
+::END
+
+
+<!-- String table for Help-Domain-Server-Activity -->
+$SD_SESSIONS_HEADER$=サーバとドメインのセッション
+
+$SD_SESSIONS_TXT$::
+サーバとドメインのセッションタブでは、現在のファイル・サーバのセッション・アクティビティを表示します。サーバからセッションページを表示する場合、すべての
+ドメインのすべての接続セッションが表示されます。管理しているドメインで表示した場合、そのドメインの現在のセッションだけが表示されます。このページから、
+ファイル・サーバでの現在のアクティビティの全体像を参照することができます。さらに、それらの現在の状態、接続状態、および転送情報を含む、個々のセッションを
+参照することもできます。
+
+特定のセッションに関する詳細な情報を参照するには、セッションを選択してください。<strong>アクティブ・セッション情報</strong>のグループは強調されたセッションの
+詳細により投入されます。この情報は、そのセッション・アクティビティの最新のスナップを提供するために頻繁にアップデートされます。
+
+そのセッション(例、FTP、HTTP、またはSFTP)によって作られた接続のタイプにより、追加機能は利用可能です。
+::END
+
+$SD_SESSIONS_DISCONNECT$=切断
+$SD_SESSIONS_DISCONNECT_TXT$::
+切断ボタンをクリックすることにより、常にどんな種類のセッションも切断することができます。ボタンをクリックすると、切断をどのように行うかを確認するダイアログが
+表示されます。これは3種類の切断オプションをもちます。:
+::END
+$SD_SESSIONS_DISCONNECT_LIST$::
+<em>切断</em> - すぐにセッションは切断されます。切断されたクライアントはすぐに、別のセッションを確立することができます。また、これはユーザを"kicking"するとして知られています。
+<em>切断とIPを禁止</em> - すぐに、セッションは切断されます。そして、そのセッションのIPはすぐに再接続を行うことを防止するために、指定された時間（分）の間、禁止されます。
+<em>切断とIPを恒久的にブロック</em> - すぐにセッションを切断します。そして、同じIPからの再接続を恒久的に防止するために、IPアドレスを拒否するIPアクセスルールに追加します。
+::END
+$SD_SESSIONS_DISCONNECT_TXT2$::
+サーバセッション表示からセッションを切断する場合、<strong>IPルールへの適用</strong>と呼ばれる追加オプションが利用可能です。このコンボボックスは一時的、または恒久的なIPの禁止を、
+どこで適用するかを選択することができます。
+
+セッションを外すことに加えて<strong>ユーザアカウントを無効</strong>と書かれたボックスをチェックすることによって、セッショでのユーザアカウントを無効にすることができます。
+
+現在のセッションがFTPプロトコルを使用している場合、<strong>ユーザへメッセージ</strong>と書かれたボックスに入力することにより、入力内容をユーザが切断する前に、メッセージを送る
+ことができます。どちらのプロトコルもユーザと共にチャットするための方法を定義しない場合は、このオプションはHTTPかSFTPセッションで利用することはできません。
+::END
+
+$SD_SESSIONS_SPY$=監視とチャット
+$SD_SESSIONS_SPY_TXT$::
+<strong>監視とチャット</strong>ボタンをクリックするか、セッションのリストでセッションをダブルクリックすることにより、どんな種類のセッションでも監視することが
+できます。ユーザの監視では、通常セッションを強調することにより目に見えるすべての詳細な情報が表示されます。しかし、同じく最初にファイルサーバへ接続された
+時点からのセッションのログの完全なコピーを含んでいます。それは最初に、File Serverに接続しました。これは、管理者へのログの参照とセッションのユーザによって
+取られたすべてのアクションを表示します。
+
+セッションがFTPプロトコルを使用している場合、追加オプションはユーザとのチャットすることができます。<strong>チャット</strong>グループは、セッションが「監視」
+されてからの、セッションへ送られた、受信された、すべてのメッセージを表示します。セッションへメッセージを送るには、<strong>メッセージの内容</strong>と記載された
+ボックスにメッセージのテキストを入力し、<strong>送信</strong>ボタンをクリックしてください。メッセージがセッションから受信された場合、メッセージはは自動的に
+表示されます。
+
+<strong>注意:</strong> すべてのFTPクライアントが、システム管理者とのチャットをサポートするわけではありません。メッセージをサーバに送るために使用されるコマンドは
+SITE MSGです。クライアントがメッセージを受信するためにはクライアントアプリケーションはサーバから求められていない応答を受けることができなければなりません。
+(ただそれらを破棄することの代わりに)
+::END
+
+$SD_SESSIONS_BROADCAST$=一斉配信
+$SD_SESSIONS_BROADCAST_TXT$::
+
+<strong>一斉配信</strong>ボタンをクリックすることにより、すべての接続されているFTPセッションへメッセージを送信することができます。一斉配信を通してメッセージを
+送ることは、個々のFTPセッションで監視とチャットダイアログを開き、チャットメッセージを送信することと同じ動作となります。
+::END
+
+$SD_SESSIONS_ABORT$=中止
+$SD_SESSIONS_ABORT_TXT$::
+セッションがファイル転送を行っている場合、<strong>中止</strong>ボタンをクリックすることによりセッションを切断せずに、ファイル転送を終了することができます。Abort
+コマンドを確認した後に、そのセッションの現在のファイル転送はサーバにより終了されます。クライアント(特にFTPとSFTPクライアント)の中には自動的に中止された転送を
+再開するかもしれません。このような場合はセッションの<strong>切断</strong>をお試しください。
+::END
+
+
+<!-- String table for Help-Domain-Server-Stats -->
+$SD_STATS_HEADER$=サーバとドメインの統計
+
+$SD_STATS_TXT$::
+サーバとドメインの統計ページは、ベンチマークと記録保持の使用のためにサーバ使用における詳細な統計情報を表示します。サーバレベルで表示される統計は、サーバ上の
+すべてのドメインによって蓄積されたそれらの総計となります。個々のドメインで表示される統計は、そのドメインのみの統計となります。表示される情報は次の通りです:
+::END
+
+$SD_UP_TIME$=動作可能時間
+$SD_UP_TIME_TXT$::
+
+サーバの統計を参照した場合、ファイルサーバが開始されてから時間を表示します。ドメインの統計を参照いただいた場合には、ドメインがオンラインになってからの時刻を
+表示します。
+::END
+
+$SD_STATS_SESSION$=セッション統計
+
+$SD_STATS_SESSION_CURRENT$=現在のセッション
+$SD_STATS_SESSION_CURRENT_TXT$::
+現在接続されているセッション数です。
+::END
+
+$SD_STATS_SESSION_DAY$=24時間内のセッション
+$SD_STATS_SESSION_DAY_TXT$::
+過去24時間で接続されたセッション数です。
+::END
+
+$SD_STATS_SESSION_TOTAL$=セッション合計
+$SD_STATS_SESSION_TOTAL_TXT$::
+オンラインとされてから接続されたセッションの総数です。
+::END
+
+$SD_STATS_SESSION_MAX$=セッションの最高値
+$SD_STATS_SESSION_MAX_TXT$::
+オンラインとなってから記録された、同時セッションの最大数です。
+::END
+
+$SD_STATS_SESSION_AVG$=セッション長の平均
+$SD_STATS_SESSION_AVG_TXT$::
+接続されてからセッションが維持された時間の平均です。
+::END
+
+$SD_STATS_SESSION_LONGEST$=最長セッション
+$SD_STATS_SESSION_LONGEST_TXT$::
+セッションの最も長い記録された時間です。
+::END
+
+$SD_STATS_LOGIN$=ログイン統計
+$SD_STATS_LOGIN_TXT$::
+これらの統計はドメインか全体のサーバのどちらかに適用することができます。
+ログイン統計は、ログインに適用するので(提供されたログインIDとパスワード)、接続と切断と対照的にセッション統計と異なっています。
+::END
+
+$SD_STATS_LOGINS$=ログイン
+$SD_STATS_LOGINS_TXT$::
+成功したログインの合計数
+::END
+
+$SD_STATS_LOGOUTS$=ログアウト
+$SD_STATS_LOGOUTS_TXT$::
+ログアウトの合計数
+::END
+
+$SD_STATS_CURRENT_LOGINS$=現在のログイン
+$SD_STATS_CURRENT_LOGINS_TXT$::
+現在のセッションのログイン数
+::END
+
+$SD_STATS_MOST_LOGINS$=最大同時ログイン
+$SD_STATS_MOST_LOGINS_TXT$::
+セッションでの最大同時ログイン数
+::END
+
+$SD_STATS_LAST_LOGIN$=最終ログイン時間
+$SD_STATS_LAST_LOGIN_TXT$::
+記録された有効な最終ログイン時間（最後に接続された時間ではありません。）
+::END
+
+$SD_STATS_LAST_LOGOUT$=最終ログアウト時間
+$SD_STATS_LAST_LOGOUT_TXT$::
+記録された有効な最後のログアウト時間
+::END
+
+$SD_STATS_AVERAGE_LOGIN$=平均ログイン接続期間
+$SD_STATS_AVERAGE_LOGIN_TXT$::
+全てのセッションの平均ログイン時間
+::END
+
+$SD_STATS_LONGEST_LOGIN$=最長ログイン接続期間
+$SD_STATS_LONGEST_LOGIN_TXT$::
+ログインされた最長セッション時間
+::END
+
+$SD_STATS_SHORTEST_LOGIN$=最短ログイン接続期間
+$SD_STATS_SHORTEST_LOGIN_TXT$::
+ログインされた最短セッション時間
+::END
+
+$SD_STATS_TRANSFER$=転送統計
+
+$SD_STATS_TRANSFER_DL_SPEED$=ダウンロード速度
+$SD_STATS_TRANSFER_DL_SPEED_TXT$::
+現在使用されている累積ダウンロード帯域幅です。
+::END
+
+$SD_STATS_TRANSFER_UL_SPEED$=アップロード速度
+$SD_STATS_TRANSFER_UL_SPEED_TXT$::
+現在使用されている累積アップロード帯域幅です。
+::END
+
+$SD_STATS_TRANSFER_AVG_DL_SPEED$=平均ダウンロード速度
+$SD_STATS_TRANSFER_AVG_DL_SPEED_TXT$::
+オンラインとなってからの使用された平均ダウンロード帯域幅です。
+::END
+
+$SD_STATS_TRANSFER_AVG_UL_SPEED$=平均アップロード速度
+$SD_STATS_TRANSFER_AVG_UL_SPEED_TXT$::
+オンラインとなってからの使用された平均アップロード帯域幅です。
+::END
+
+$SD_STATS_TRANSFER_DL$=ダウンロード
+$SD_STATS_TRANSFER_DL_TXT$::
+オンラインとなってからのダウンロードされたファイル数、データの総計
+::END
+
+$SD_STATS_TRANSFER_UL$=アップロード
+$SD_STATS_TRANSFER_UL_TXT$::
+オンラインとなってからのアップロードされたファイル数、データの総計
+::END
+
+$SD_STATS_SAVE$=統計を保存
+$SD_STATS_SAVE_TXT$::
+解析のためのCSVファイルにユーザとグループ統計を保存することができます。ファイルに統計を保存するには、最初に生成される保存する統計の
+ユーザかグループを選択してください。そして、次に「統計を保存」というボタンをクリックしてください。
+::END
+
+
+<!-- String table for Help-User-Group-Stats -->
+$UG_STATS_HEADER$=ユーザとグループ統計
+
+$UG_STATS_TXT$::
+ユーザとグループ統計ページは個々のユーザ、またはグループのアクティビティに基づく詳細な統計を表示します。ユーザ、またはグループ統計表示はユーザ、または
+グループのみのためだけです。表示される情報は以下を含みます。:
+::END
+
+$UG_STATS_SESSION$=セッション統計
+
+$UG_STATS_SESSION_CURRENT$=現在のセッション
+$UG_STATS_SESSION_CURRENT_TXT$::
+現在接続されているセッション数
+::END
+
+$UG_STATS_SESSION_DAY$=24時間でのセッション
+$UG_STATS_SESSION_DAY_TXT$::
+過去２４時間で接続されたセッション数
+::END
+
+$UG_STATS_SESSION_TOTAL$=セッション合計
+$UG_STATS_SESSION_TOTAL_TXT$::
+オンライン担ってからの接続されたセッションの合計数
+::END
+
+$UG_STATS_SESSION_MAX$=最高セッション数
+$UG_STATS_SESSION_MAX_TXT$::
+オンラインになってから記録された、同時セッションの最高値
+::END
+
+$UG_STATS_SESSION_AVG$=平均セッション期間
+$UG_STATS_SESSION_AVG_TXT$::
+セッションが接続されてから残りの平均期間（時間）
+::END
+
+$UG_STATS_SESSION_LONGEST$=最長セッション
+$UG_STATS_SESSION_LONGEST_TXT$::
+記録された最長セッション
+::END
+
+$UG_STATS_LOGIN$=ログイン統計
+$UG_STATS_LOGIN_TXT$::
+これらの統計は現在参照できる統計に信頼されるユーザかグループユーザーのどちらかに適用することができます。ログイン統計は、
+ログインに適用するので(ログインIDとパスワードを提供して)、接続と断線と対照的にセッション統計と異なっています。
+::END
+
+$UG_STATS_LOGINS$=ログイン
+$UG_STATS_LOGINS_TXT$::
+ログインに成功した合計数
+::END
+
+$UG_STATS_LOGOUTS$=ログアウト
+$UG_STATS_LOGOUTS_TXT$::
+ログアウトの合計数
+::END
+
+$UG_STATS_CURRENT_LOGINS$=現在のログイン
+$UG_STATS_CURRENT_LOGINS_TXT$::
+現在ログインしている合計数
+::END
+
+$UG_STATS_MOST_LOGINS$=最大同時ログイン
+$UG_STATS_MOST_LOGINS_TXT$::
+セッションでの最高同時ログイン数
+::END
+
+$UG_STATS_LAST_LOGIN$=最終ログイン時間
+$UG_STATS_LAST_LOGIN_TXT$::
+最後に記録された有効なログイン時間（接続が作成された最終時間ではありません。）
+::END
+
+$UG_STATS_LAST_LOGOUT$=最終ログアウト時間
+$UG_STATS_LAST_LOGOUT_TXT$::
+記録された有効な最終ログアウト時間
+::END
+
+$UG_STATS_AVERAGE_LOGIN$=平均接続期間
+$UG_STATS_AVERAGE_LOGIN_TXT$::
+全てのセッションの平均ログイン時間
+::END
+
+$UG_STATS_LONGEST_LOGIN$=最長ログイン接続期間
+$UG_STATS_LONGEST_LOGIN_TXT$::
+セッションの最長ログイン時間
+::END
+
+$UG_STATS_SHORTEST_LOGIN$=最短ログイン接続期間
+$UG_STATS_SHORTEST_LOGIN_TXT$::
+セッションの最短ログイン時間
+::END
+
+$UG_STATS_TRANSFER$=転送統計
+
+$UG_STATS_TRANSFER_DL_SPEED$=ダウンロード速度
+$UG_STATS_TRANSFER_DL_SPEED_TXT$::
+現在使用されている累積ダウンロード帯域幅
+::END
+
+$UG_STATS_TRANSFER_UL_SPEED$=アップロード速度
+$UG_STATS_TRANSFER_UL_SPEED_TXT$::
+現在使用されている累積アップロード帯域幅
+::END
+
+$UG_STATS_TRANSFER_AVG_DL_SPEED$=平均ダウンロード速度
+$UG_STATS_TRANSFER_AVG_DL_SPEED_TXT$::
+オンラインになってからの平均ダウンロード帯域幅
+::END
+
+$UG_STATS_TRANSFER_AVG_UL_SPEED$=平均アップロード速度
+$UG_STATS_TRANSFER_AVG_UL_SPEED_TXT$::
+オンラインになってからの平均アップロード帯域幅
+::END
+
+$UG_STATS_TRANSFER_DL$=ダウンロード
+$UG_STATS_TRANSFER_DL_TXT$::
+オンラインになってからダウンロードされたデータ合計、ファイル数
+::END
+
+$UG_STATS_TRANSFER_UL$=アップロード
+$UG_STATS_TRANSFER_UL_TXT$::
+オンラインになってからアップロードされたデータ合計、ファイル数
+::END
+
+
+<!-- String table for Help-Domain-Server-Log -->
+$SD_LOG$=サーバとドメインログ
+
+$SD_LOG_TXT$::
+サーバとドメインログのタブはサーと、またはドメインのアクティビティのログを表示します。
+
+サーバログは開始、構成、シャットダウン情報を表示します。それはドメイン・アクティビティ・ログには表示されません。アクティビティログは、目的のドメインログを参照して
+ください。追加の状態情報として、サーバが開始された際にライブラリ、ライセンス、現在のビルドが記録されます。またサーバログは、すべてのドメインのリスナー状態、
+ユニバーサル・プラグ・アンド・プレイ(UPnP)の状態情報、およびPASVポート範囲状態に関する情報を含みます。また、サーバログに含まれる情報は、インストールディレクトリ
+にある<strong>Serv-U-StartupLog.txt</strong>というテキストファイルに保存されます。Serv-U ファイル・サーバが開始される都度、このファイルは置き換えられます。
+
+ドメインログは、現在管理されているドメインの情報とアクティビティに関連しする内容のみを含みます。これはドメイン・リスナーの状態と構成されたアクティビティログ情報を
+含みます。ドメインログに記録される、アクティビティ情報の種類に関する詳しい情報は$LINK_HELP_LOG_SETTINGS$を参照してください。
+
+ログの必要な部分の上でマウスカーソルをクリックして、ドラッギングすることによって、ログに含まれる情報は強調することができます。強調されると、選択された部分をクリップ
+ボードにコピーすることができます。
+::END
+
+$SD_LOG_FREEZE$=一時停止
+$SD_LOG_FREEZE_TXT$::
+ログの更新を一時的に停止する場合は、このボックスをチェックしてください。これは、頻繁に更新されるログから目的のログを強調する場合などに便利です。ボックスのチェックを外すと、
+ログの自動更新は再開されます。
+::END
+
+$SD_LOG_SELECT_ALL$=すべてを選択
+$SD_LOG_SELECT_ALL_TXT$::
+このボタンをクリックすると、ログは自動的に一時停止され現在のログ情報をクリップボードにコピーできるように、すべてのログを強調表示します。
+::END
+
+$SD_LOG_CLEAR$=ログをクリア
+$SD_LOG_CLEAR_TXT$::
+ログが参照できないくらい膨大になった場合などに、このボタンをクリックして、現在表示されたログ情報を消してください。ボタンをクリックした後に
+受け取られたログ情報だけが表示されます。
+::END
+
+$SD_LOG_LEGEND$=ログの例
+$SD_LOG_LEGEND_TXT$::
+ログの種類を見分けやすいように、それぞれのログメッセージは種類によって色分けされています。ここをクリックすると凡例がダイアログで表示されます。
+::END
+
+$SD_LOG_FILTER$=ログのフィルタ
+$SD_LOG_FILTER_TXT$::
+すぐにログの特定のセクションを見つけるるために、検索する文字に基づいてフィルタすることができます。このボタンをクリックすると、フィルタダイアログが表示されます。
+検索する文字を入力して、<strong>フィルタ</strong>ボタンをクリックすると、ログは検索で指定した文字を含むログ情報を表示します。再度、全体のログ情報を参照するには、
+ログのフィルタ・ダイアログを開き、<strong>リセット</strong>ボタンをクリックしてください。
+::END
+
+$SD_LOG_DOWNLOAD$=ログのダウンロード
+$SD_LOG_DOWNLOAD_TXT$::
+Serv-Uから完全なログファイルをダウンロードするには、「ログのダウンロード」ボタンをクリックしてください。ファイルをダウンロードする許可がある場合、ウェブブラウザは、
+ファイルを保存する場所を選択するように求めるか、自動的にファイルのダウンロードを開始するでしょう。
+::END
+
+
+<!-- String table for Help-Domain-Overview -->
+$DOMAIN_OVERVIEW_HEADER$=ドメインの概要
+
+$DOMAIN_OVERVIEW$::
+Serv-U ファイル・サーバの中心に、Serv-Uドメインがあります。最も基本的なレベルでは、Serv-Uドメインは、ユーザをファイルとフォルダにアクセスするためにサーバにに接続
+させるユーザアカウントとリスナーのセットします。また、Serv-UドメインをIPアドレスに基づくアクセスを制限、帯域幅使用の制限、転送割当てなどの構成を行うことができます。
+実際にはあらゆるサーバレベルで利用可能な設定を個々のドメイン設定で優先させることができます。
+
+Serv-Uはファイルサーバ上でいくつものドメインをサポートすることができます。ドメインはリスナーを共有することができます。または、システムが複数のIPアドレスを持つ場合、
+ユニークなIPアドレスでそれぞれのドメインをホストすることができます。しかしながら、作成できるドメインの最大数はライセンスの種類により異なります。Serv-Uの種類に関する
+情報は、$LINK_HELP_EDITIONS$をご参照ください。
+
+初めて新しくインストールしたServ-U ファイル・サーバを開始する際には、新規ドメインウィザードを使用して、最初のドメインを作成するように促されます。ウィザードの各ページの
+指示に沿って、最初のドメインを作成してください。詳しくは、$LINK_HELP_GUIDE$を参照してください。
+::END
+
+$DOMAIN_MANAGING$=ドメインの管理
+$DOMAIN_MANAGING_TXT$::
+現在管理されているドメインは、それぞれのページの上部に位置する「管理」の横で表示されています。アクティブなドメインを変更する方法が幾つかあります。Serv-U 管理
+コンソールのコンソールページで、<strong>ドメインの管理</strong>ボタンをクリックするとファイル・サーバで利用可能なドメインのリストを表示します。ドメインをダブル
+クリック、またはひとつを強調して、<strong>選択</strong>ボタンをクリックすると、そのドメインをアクティブにできます。また、ドメインリストはページのフッター部分に
+表示されている<strong>ドメインの変更</strong>ボタンをクリックすることにより、どのドメイン構成ページからも利用することができます。
+
+
+お客様のライセンスがサポートしている場合、<strong>新規ドメイン</strong>ボタンをクリックすることにより、いつでも他の別の新しいドメインをコンソールページで作成する
+ことができます。また、このボタンは利用可能なドメインのリストを含むドメインダイアログからも直接利用することができます。アクティブなドメインを変更した後、現在の
+ページに、新しいアクティブなドメインの設定を反映するために自動的に更新されます。
+
+ドメイン・リスト・ダイアログにある<strong>削除</strong>ボタンは、すぐにドメインとそのドメインのユーザとグループをすべてを削除します。削除を行った後、元に戻すことはできません。
+::END
+
+
+<!-- String table for Help-Domain-Name-Description -->
+$DOMAIN_NAME_DESCRIPTION_HEADER$=ドメイン名と説明
+
+$EDITING_NAME_DESCRIPTION$::
+
+各ドメインはユニーク（唯一）な<strong>ドメイン名</strong>で識別されている必要があります。もし設定された名前がユニークな名前ではない場合、各ドメインでユニークな
+名前を設定するように警告するエラーメッセージが表示されます。<strong>ドメイン名</strong>は、管理目的にしようされ、ユーザからは見えずアクセスすることができません。
+
+さらに、各ドメインは<strong>説明</strong>欄に、そのドメインに関連した追加情報を持つことができます。また、<strong>ドメイン名</strong>のように、<strong>説明</strong>の
+内容は管理アクセスのユーザで利用可能です。この欄はドメインの内容や、ファイルサーバのドメインによって利用されるリソースなどを記述しておくのに便利です。
+
+<strong>ドメインを有効</strong>のチェックを外すことにより、一時的にドメインを無効にすることができます。無効にされている間は、ドメインはすべてのユーザから利用できません。
+ドメインはファイルサーバで保持され、すべての設定も保持されます。そして、無効されているままでも管理することができます。ドメインを有効にし、ユーザからの接続を再会させる
+場合は<strong>ドメインを有効</strong>のチェックをしてください。
+
+ドメインの変更を設定にした場合、<strong>保存</strong>ボタンをクリックして、変更を適用してください。
+::END
+
+$DOMAIN_INFO_HOMEDIR$=ドメイン・ホーム・ディレクトリ
+$DOMAIN_INFO_HOMEDIR_TXT$::
+システム管理者はドメインのためのホーム・ディレクトリを構成し、最大サイズを指定することにより、ドメインで利用可能なディスクスペースを制限することができます。
+ドメインのホーム・ディレクトリはユーザ・ディレクトリアクセスルールに影響しません。そして、それは何らかの方法で利用可能なパスをユーザに制限しません。しかしながら、
+ドメインで使用中のディスクスペース量について計算するために、Serv-Uはそれが、すべてのドメインのファイルが保存されると予想するルートディレクトリを知る必要があります。
+
+<strong>ドメイン・ホーム・ディレクトリ</strong>を指定するには、ドメイン・ホームディレクトリとラベルされる場所でパスを入力してください。また、パスを選択するために
+<strong>参照</strong>ボタンを使用することもできます。このドメインのためにドメイン管理者アカウントを作成する際、それらのホームディレクトリが同じであることが提案
+されます。(ドメインのすべてのユーザがドメインのホーム・ディレクトリに関するサブディレクトリに置かれることを確実にします)。<strong>最大サイズ</strong>の欄へドメイン
+で利用可能なディスクスペースをメガバイト(MB)で入力してください。この欄を空白、または "0" とした場合、ドメインに最大サイズが課されません。制限が課される場合、
+この最大サイズを超えるどんなアップロードもサーバにより拒否されます。
+
+変更を適用するには<strong>保存</strong>ボタンをクリックしてください。
+
+<strong>ご注意:</strong> ドメインで使用されているディスクスペース量について計算することは、ディレクトリ構造に依存する時間がかかる操作であるかもしれません。
+::END
+
+
+<!-- String table for Help-Domain-Listeners -->
+$DOMAIN_LISTENERS_HEADER$=ドメイン・リスナー
+
+$DOMAIN_LISTENERS$::
+Serv-U ファイル・サーバはドメインでの異なるファイル共有プロトコルを有効にするために、高度な構成可能なインタフェースを提供します。リスナーは、適切な
+ボタンを使用することで追加、編集、削除することができます。リスナーが希望するIPアドレスとポートでバインドすることにより、各ドメインは複数のポートと
+IPアドレス上で使用することができます。また、リスナーのために、これらの接続属性を選択することに加えて、ファイル共有プロトコルを選択する必要があります。
+以下はServ-Uファイルサーバによって、ファイル共有でサポートされるプロトコルのリストと簡単な説明です。
+::END
+
+$LISTENER_FTP$=FTP - ファイル転送プロトコル（File Transfer Protocol）
+$LISTENER_FTP_TXT$::
+FTPは、インターネット上でファイルを転送するための伝統的なプロトコルです。通常、それはデフォルトポート21を使用します。伝統的に、FTPはプレーンテキストで
+扱われます。しかし、SSL接続はAUTHコマンドの使用でサポートされます。
+::END
+
+$LISTENER_FTPS$=FTPS - SSLを使用したファイル転送プロトコル（File Transfer Protocol using SSL）
+$LISTENER_FTPS_TXT$::
+FTPSはFTPと同一です。しかしながら、FTPSのために構成されたリスナーに接続するには、どんなプロトコル・コミュニケーションが実行される前にSSL接続を必要とすることを
+意味します。これは一般的に絶対的FTPS（Implicit FTPS）と呼ばれます。(通常、Implicit FTPSはデフォルトポート990で行われます)。
+::END
+
+$LISTENER_SFTP$=SFTP - SSH2を使用したセキュア・ファイル転送（Secure File Transfer Using SSH2）
+$LISTENER_SFTP_TXT$::
+SFTPは安全なシェルセッションでファイルを転送する安全な方法です。それは、FTPを使用するとき一般的に必要であるファイアウォールの複数ポートの開く必要性を排除しながら、
+同じポート上で、すべてのプロトコルコミュニケーションとデータ転送を実行します。SFTPセッションは常に暗号化されます。SFTPはデフォルトポート22を使用します。
+::END
+
+$LISTENER_HTTP$=HTTP - ハイパーテキスト転送プロトコル（Hypertext Transfer Protocol）
+$LISTENER_HTTP_TXT$::
+HTTPはウェブサイトをブラウズするために使用されるプロトコルです。また、ファイルのダウンロードと転送をおこなう簡単な方法です。ドメインにHTTPリスナーを追加することは、
+Webクライアントが利用できることを意味します。Webクライアントはスタンドアロンの専用クライアントを必要とせずに、ユーザへファイルサーバからの
+ファイル転送をユーザを許可します。HTTPはポート80を伝統的に使用します。
+::END
+
+$LISTENER_HTTPS$=HTTPS - SSLを使用したハイパーテキスト転送プロトコル（Hypertext Transfer Protocol Security）
+$LISTENER_HTTPS_TXT$::
+コミュニケーションがSSLを使用することで安全とされることを除き、HTTPSはHTTPと同様です。HTTPSプロトコルを使用しているリスナーに接続する際、FTPSのように安全な接続は
+暗示されます。HTTPSのためのデフォルトポートは443です。
+::END
+
+$LISTENER_ADDING$=リスナーの追加
+$LISTENER_ADDING_TXT$::
+<strong>追加</strong>ボタンをクリックすると、リスナー構成のダイアログが表示されます。それぞれのリスナーオプションを構成し、<strong>保存</strong>ボタンを
+クリックして、ドメインへリスナーを追加してください。
+::END
+
+$LISTENER_TYPE$=種類
+$LISTENER_TYPE_TXT$::
+このリスナーによってサポートする必要とされるファイル共有プロトコルを選択してください。各リスナーは一つのプロトコルをサポートします。ドメインへ多くのファイル共有
+プロトコルを追加するには、各プロトコルのために新しいリスナーを作成してください。
+::END
+
+$LISTENER_IP_ADDRESS$=IPアドレス
+$LISTENER_IP_ADDRESS_TXT$::
+IPアドレスの欄にIPアドレスを入力をすることにより、そのIPアドレスにのみリスナーを限定することができます。ファイルサーバが外部IPアドレスを持たない場合（ルータの
+背後にある場合など）、この欄は空白としてください。空白とした場合、Serv-Uはすべての利用可能なIPアドレスを使用します。
+::END
+
+$LISTENER_PASV_IP$=PASV IPアドレス、またはドメイン名(FTPのみ)
+$LISTENER_PASV_IP_TXT$::
+もしリスナーがFTPプロトコルをサポートする場合、この追加欄はPASVモードデータ転送で使用される個々のIPアドレスを指定するのに使用することができます。ここにIPアドレスを
+入力することは、PASVモードが非安全と安全な接続の両方で適切に動作することを確保します。ファイルサーバが外部IPアドレスを持たない場合、このフィールドに$LINK_DNS4ME$を
+使用した、DNS4Meドメイン名を入力してください。Serv-Uは、PASVコマンド応答のための適切な外部のIPアドレスがいつもあるのを確実にするためにDNS4Meドメイン名を解決します。
+::END
+
+$LISTENER_SSL_ONLY$=SSL接続のみを使用
+$LISTENER_SSL_ONLY_TXT$::
+このオプションは、PASV IPアドレスを接続クライアントに提供するのがいつも必要であるところにPASV IPアドレスsかドメイン名がSSL接続に使用されるだけであるのを許可します。
+このオプションが有効であるとき、PASVモードに指定されるIPアドレスは、非SSL FTPを通して接続するクライアントに提供されないでしょう。
+::END
+
+$LISTENER_USE_LAN$=LAN接続で使用
+$LISTENER_USE_LAN_TXT$::
+通常、Serv-Uはローカル・エリア・ネットワーク(Serv-Uと同じネットワークのコンピュータ)から来る接続にPASV IPアドレスを使用しません。また、このオプションが有効である場合、
+PASV IPアドレスはLAN接続に使用されます
+::END
+
+$LISTENER_PORT$=ポート
+$LISTENER_PORT_TXT$::
+選択されたプロトコルで使用される一般的なデフォルトポートは自動的に提供されます。しかしながら、目的に合わせて1～65535の範囲のどのポートを設定することができます。
+標準的ではないポートを使用する場合、ドメインに接続を試みるクライアントは、そのポートを知っている必要があります。標準的ではないポートを使用する際、私どもは潜在的な
+競合を防ぐために1024より上のポート値を使用いただくことをお勧めいたします。また、Serv-U以外のアプリケーションが使用するポートとの競合にもご注意ください。
+::END
+
+$LISTENER_ENABLE$=リスナーを有効
+$LISTENER_ENABLE_TXT$::
+このボックスのチェックを外すと、一時的にリスナーを無効にすることができます。無効にされている間、リスナーはリスト中で異なるアイコンで表示されます。
+::END
+
+$LISTENER_PURE_VIRTUAL$=純粋な仮想ドメイン
+$LISTENER_PURE_VIRTUAL_TXT$::
+Serv-Uは複数のドメインがが同じリスナーを「共有」することをサポートします。一つのドメインが最初のドメインの他のドメイン「piggybacks」である間、必要なリスナー構成を
+持つことができます。このように、セカンドドメインは仮想として存在しています。既存のドメインリスナー構成でドメインにDomain「piggybacks」を持つには、リスナーリストを
+空白な状態としてください。"piggybacking"ドメインは、それのために少なくとも一つの$LINK_HELP_VIRTUAL$を定義させる必要があります。
+
+この"piggybacking"の方法は、接続が確立された後に必要なホストを特定するための方法を指定するFTPとHTTPプロトコルの2つでのみ利用できます。FTP接続のために、クライアントは
+必要なドメインを特定するHOSTコマンドを発行しなければなりません。HTTP接続では、ブラウザは自動的にHTTP接続を確立するために、Serv-Uへの必要なホストヘッダーがドメイン名に
+基づいた提供を処理します。
+::END
+
+
+<!-- String table for Help-Virtual-Hosts -->
+$VIRTUAL_HOSTS_HEADER$=仮想ホスト
+
+$VIRTUAL_HOSTS$::
+仮想ホストは、複数のドメインが同じIPとリスナー・ポート番号を共有する方法を提供します。通常、それぞれのドメインリスナーはユニーク（唯一）なIPアドレスとポート番号の
+組み合わせを使用しなければなりません。仮想ホストでは、標準的でないポートナンバーを使用する必要はなく、1つのユニークなIPアドレスを持っているだけで、ホストの複数
+ドメインがシステの上で可能となります。ドメインは仮想ホストの適切な実装により、同じリスナーを共有することができます。ライセンスが、複数ドメインをサポートする
+場合のみ、この既往を利用することができます。
+
+ドメインのために仮想ホストを構成するには、<strong>追加</strong>ボタンをクリックしてください。そして、ドメインのために仮想ホスト名を入力してください。通常、仮想ホスト名は
+「ftp.Serv-U.com」などのようにドメインに接続するのに使用される完全ドメイン名となります。
+
+仮想ホストは、複数のドメインが同じIPとリスナー・ポート番号を共有する方法を提供します。通常、それぞれのドメインリスナーはユニーク（唯一）なIPアドレスとポート番号の
+組み合わせを使用しなければなりません。仮想ホストでは、標準的でないポートナンバーを使用する必要はなく、1つのユニークなIPアドレスを持っているだけで、ホストの複数
+ドメインがシステの上で可能となります。ドメインは仮想ホストの適切な実装により、同じリスナーを共有することができます。ライセンスが、複数ドメインをサポートする
+場合のみ、この既往を利用することができます。
+
+ドメインのために仮想ホストを構成するには、<strong>追加</strong>ボタンをクリックしてください。そして、ドメインのために仮想ホスト名を入力してください。通常、仮想ホスト名は
+「ftp.Serv-U.com」などのようにドメインに接続するのに使用される完全ドメイン名となります。
+
+必要な仮想ホストに接続するために、クライアントによって使用される方法は、Serv-Uに接続するために使用されるプロトコルにより異なります。
+
+<strong>FTP</strong><br />
+FTPユーザは特定の仮想ホストに接続する2つの方法から1つを使用することができます。FTPクライアントによってサポートされている場合、ログイン前に仮想ホストを特定するために、
+Serv-UへHOSTコマンドを発行することができます。さもなければ、以下の形式でログインIDを仮想ホストに提供することができます:<em>virtual_host_name</em><em>username</em>
+仮想ホスト名は最初に入力され、次に、たて区切り('|')文字、そしてログインIDとなります。
+
+<strong>SFTP</strong><br />
+特定の仮想ホストに接続するFTPユーザは上記のFTPで説明されるように特に、作成されたログインID形式を使用しなければなりません。
+
+<strong>HTTP</strong><br />
+HTTPユーザは、ブラウザにより自動的にサイトに接続するために使用されるServ-Uにブラウザのナビゲーションバーに入れられた完全に適切なドメイン名から仮想ホストを特定させる
+ホスト名をServ-Uに提供します。
+::END
+
+$VIRTUAL_HOSTS_CASEFILE1_HEADER$=例 - 仮想ホスト
+
+$VIRTUAL_HOSTS_CASEFILE1_BODY$::
+複数ドメインは1つのIPアドレスと2角完全修飾ドメイン名(FQDN)を持つ同じサーバでで構成されています。両方のドメインに接続するユーザが接続にポート21を使用しなければならないので、
+Serv-Uが2つのドメインへの要求を区別できるよう、各ドメイン上の仮想ホストを構成してください。各ドメインに同じリスナーのプロパティをセットアップした後に、仮想ホスト・タブを開き、
+<strong>追加</strong>をクリックしてください。<strong>追加</strong>をクリックし、そして、次にクライアントがドメイン(ftp.Serv-U.comなど)へ接続するのに使用するべきFQDNを入力
+してください。
+
+FTPでサーバへ接続した後、ユーザは、ファイルサーバ上の適切なドメインに接続するために<strong>HOST ftp.Serv-U.com</strong>コマンドを送ることができます。また、FTPとSFTPユーザは、
+<strong>ftp.Serv-U.comusername</strong>を通して仮想ホストを特定することができます。HTTPを通して接続する場合、ユーザは <strong>http://ftp.Serv-U.com</strong> によって、
+このドメインへ接続することができます。
+::END
+
+
+<!-- String table for Help-Directory-Access -->
+$DIRECTORY_ACCESS_HEADER$=ディレクトリ・アクセス・ルール
+
+$DIR_ACCESS_BASICS$::
+ディレクトリ・アクセス・ルールはシステムのユーザアカウントにアクセス可能な領域を定義します。伝統的にはユーザとグループレベルで制限されていましたが、Serv-Uは
+グローバル・ディレクトリ・アクセス・ルールの作成でディレクトリ・アクセス・ルールの使用をドメインとサーバ・レベルの両方に拡張しました。サーバ・レベルで指定
+されるディレクトリ・アクセス・ルールはファイルサーバのすべてのユーザへ継承されます。ドメイン・レベルで指定された場合は、それらはそのドメインに属するユーザへ
+継承されるのみです。継承の伝統的なルールは、より下のレベル(例えば、ユーザレベル)で指定されるルールが、より高いレベル(例えば、Serverレベル)で指定した競合、
+または重複より優先されます。 
+
+例えば、%HOME%/ftproot/を使用して、ユーザのホームディレクトリで"ftproot"フォルダーを指定するディレクトリ・アクセス・ルールを作成してください。この様に指定
+されるディレクトリ・アクセス・ルールはイベントで「移植可能」です。（同じサブディレクトリ構造である場合、実際のホームディレクトリは変化します。）これはファイル
+サーバ管理者によって管理の手間を省きます。%USER%変数がパスで指定される場合、それはユーザのログインIDが代入されます。この変数はユーザが論理的でユニークなホーム
+ディレクトリを引き継ぐのを確実にするためにグループのホームディレクトリを指定する際に役に立ちます。また、最終的に、%DOMAIN_HOME%マクロは、ユーザのホームディレ
+クトリを特定するのに使用されるかもしれません。例えば、ユーザとユーザのホームディレクトリを共通のディレクトリに置くのに、%DOMAIN_HOME%\%USER%を使用してください。
+
+ディレクトリ・アクセス・ルールは記載されている順序で適用されます。Serv-Uがクライアント要求のパスに一致するリスト内で適合する最初のルールはが適用されます。
+言い換えれば、特定のサブディレクトリへのアクセスを拒否するが、親ディレクトリへのアクセスを与える規則の下に記載されている規則が存在している場合、ユーザはまだ
+問題のサブディレクトリにアクセスする手段を持っています。ディレクトリ・アクセス・リストの右側の矢印は、ルールが適用されている順番を入れ替えるために使用されます。
+
+それぞれの利用可能なディレクトリ・アクセス権のリストと記述は続きます。
+::END
+
+$FILE_PERMS_HEADER$=ファイル権限
+
+$FILE_PERMS_READ$=リード
+$FILE_PERMS_READ_TXT$::
+ユーザがファイルを読み込むこと(ダウンロード)を許可します。この権限はユーザにディレクトリの内容をリストする許可を与えません（それは<strong>リスト</strong>権限
+により与えられます。）
+::END
+
+$FILE_PERMS_WRITE$=書き込み
+$FILE_PERMS_WRITE_TXT$::
+ユーザがファイルを書き込むこと(アップロード)を許可します。この権限はユーザに既存のファイルを変更させません。（それは<strong>付加</strong>権限により与えられます。）
+::END
+
+$FILE_PERMS_APPEND$=付加
+$FILE_PERMS_APPEND_TXT$::
+ユーザがデータを既存のファイルに追加することを許可します。通常、この権限は、部分的にアップロードされたファイル転送を再開（レジューム）する機能をユーザに与えるために
+使用されます。
+::END
+
+$FILE_PERMS_RENAME$=リネーム（名前の変更）
+$FILE_PERMS_RENAME_TXT$::
+ユーザが既存のファイルの名前を変更することを許可します。Serv-Uの旧バージョンは、ファイル名を変更するために<strong>削除</strong>と<strong>書き込み</strong>権限を
+必要としました。バージョン7.0では、<strong>リネーム</strong>は明確な権限です。
+::END
+
+$FILE_PERMS_DELETE$=削除
+$FILE_PERMS_DELETE_TXT$::
+ユーザにファイルの削除を許可します。
+::END
+
+$FILE_PERMS_EXECUTE$=実行
+$FILE_PERMS_EXECUTE_TXT$::
+ユーザがファイルをリモートから実行することを許可します。実行アクセスは、プログラムをリモートで開始できることを意味します。そしてこれは通常特定のファイルに
+適用されます。これは非常に強力な権限ですので、ユーザにこの権限を与える場合は十分注意してください。<strong>実行</strong>と<strong>書き込み</strong>権限を持つ
+ユーザは、基本的にそのユーザがお客様のシステムに選択した、如何なるプログラムをインストールすることもできます。
+::END
+
+$DIR_PERMS_HEADER$=ディレクトリ権限
+
+$DIR_PERMS_LIST$=リスト
+$DIR_PERMS_LIST_TXT$::
+ユーザにディレクトリに含まれるファイルをリストすることを許可します。
+::END
+
+$DIR_PERMS_CREATE$=作成
+$DIR_PERMS_CREATE_TXT$::
+ユーザがディレクトリ内で新しいディレクトリを作成することを許可します。
+::END
+
+$DIR_PERMS_RENAME$=リネーム（名前の変更）
+$DIR_PERMS_RENAME_TXT$::
+ユーザが既存のディレクトリの名前を変更することを許可します。Serv-Uの旧バージョンは、ディレクトリ名を変更するために<strong>削除</strong>と<strong>書き込み</strong>権限を
+必要としました。バージョン7.0では、<strong>リネーム</strong>は明確な権限です。
+::END
+
+$DIR_PERMS_DELETE$=削除
+$DIR_PERMS_DELETE_TXT$::
+ユーザがディレクトリ内の既存のディレクトリを削除することを許可します。<strong>注意：</strong> ディレクトリがファイルを含む場合、ユーザはディレクトリを削除するためにファイルの
+<strong>削除</strong> 権限を持つ必要があります。
+::END
+
+$SUBDIR_PERMS_HEADER$=サブディレクトリ権限
+$SUBDIR_PERMS_INHERIT$=継承
+$SUBDIR_PERMS_INHERIT_TXT$::
+すべてのサブディレクトリが親ディレクトリと同じ権限を継承することを許可します。ほとんどの場合において、<strong>継承</strong>権限は適切です。しかし、
+アクセスがサブフォルダに制限されなければならない場合(強制アクセス制御を実行する場合など)、特にフォルダで継承と付加権限のチェックを外してください。
+::END
+
+$WINDOWS_USER_ACCESS$=WindowsユーザとしてアクセスAccess as Windows User
+$WINDOWS_USER_ACCESS_TXT$::
+さまざまな理由で、ファイルとフォルダは、ファイルストレージが集中、または追加のセキュリティを提供するために外部のサーバに保存されるかもしれません。この環境で、
+一般的な"C:\ftproot\folder"パスの代わりにUNCパス(\\servername\folder\)はファイルへのアクセスを可能にします。しかしネットワーク越しのフォルダアクセスは、
+追加の設定が必要です。Windowsサービスはデフォルトで、"Local System"アカウントで実行されており、こではネットワークリソースに近づく手段を持っていません。
+
+Serv-Uで、この問題を軽減するために、ネットワークアカウントで実行されるために「Serv-U File Server」サービスを構成することができます。代替手段としては、多くのサーバが
+存在するとき、または「Serv-U File Server service」が、セキュリティ上の理由から"Local System"で実行される必要がある場合、ファイルアクセスのために特定のWindowsユーザの
+ディレクトリアクセスルールを使用する構成が推奨されます。「詳細」ボタンをクリックすることによって、個々のディレクトリ・アクセス・ルールに特定のWindowsユーザを指定する
+ことができます。Windows認証などでは、ディレクトリアクセスはNTFS許容を条件としています。
+::END
+
+$QUOTA_PERMS_HEADER$=クォータ権限
+$QUOTA_PERMS_MAXSIZE$=ディレクトリ要領の最大サイズ
+$QUOTA_PERMS_MAXSIZE_TXT$::
+ディレクトリ要領の最大サイズを設定した場合、ディレクトリコンテンツのサイズは指定された値に制限されます。ディレクトリコンテンツで、この値を超えるファイル
+転送が試行された場合、それは拒否されます。この機能は、ディレクトリサイズについて計算するために、すべてのファイル転送(アップロードと削除)を追跡し、変化が
+ユーザのファイルサーバアクティビティ外でコンテンツをディレクトリにしたと考えることができない伝統的な割クォータ機能に代わる手段として役立ちます。
+::END
+
+$DIR_ACCESS_CASEFILE1_HEADER$=強制アクセス制御
+$DIR_ACCESS_CASEFILE1_TXT$::
+Serv-Uはユーザが同じホームディレクトリへのアクセスを許可することが必要であるが、必ずその下のサブディレクトリにアクセスさせるべきであるというわけではない
+場合などの強制アクセス管理の使用を可能にします。ディレクトリレベルで強制アクセス管理を実行するには、以下に示されるように、単に「継承」という権限を無効に
+してください(ルールが"D:\ftproot\"に適用されると仮定して):
+::END
+$DIR_ACCESS_CASEFILE1_TXT2$::
+ユーザは"ftproot"フォルダにアクセスしています。しかしその下にはフォルダはありません。権限はServ-U ファイル・サーバでの、強制アクセス管理のセキュリティを
+提供するのに、ユーザが、アクセスする必要がある個々のサブフォルダに与えられなければなりません。
+::END
+
+$DIR_ACCESS_CASEFILE2_HEADER$=ファイル種類の制限
+$DIR_ACCESS_CASEFILE2_TXT$::
+ユーザがMP3など音楽ファイルなど行に関連しないようなファイルを保存するためにServ-U ファイル・サーバの保存スペースを使用している場合、MP3ファイルが転送される
+ことを防ぐために既存のディレクトリ・アクセス・ルールの<strong>上</strong>に次のディレクトリ・アクセス・ルールを構成してください。（アクセスルールの順序を
+変更するためには右側の矢印を使用してください。）ルール欄に"* .mp3"と入力し、以下のように権限を設定してください。：
+::END
+
+$DIR_ACCESS_CASEFILE2_TXT2$::
+このルールでは.mp3の拡張子を持ったファイル転送を許可しないようになりますが、このルールはどのような拡張子にも応用することができます。たとえば.mdbの拡張子を
+持つファイルのみ許可し、他のすべてのファイルを拒否する場合は以下のルールを設定してください。最初のルールとしてアクセスさせるホームディレクトリのパスを
+設定してください、次にアクセスさせるべき拡張子（"*.mdb"など）を入力してください。
+::END
+
+$DIR_ACCESS_CASEFILE2_TXT3$::
+これらの規則はユーザを指定されたディレクトリ内の.mdbファイルへだけアクセスさせます。
+::END
+
+
+<!-- String table for Help-Virtual-Paths -->
+$VIRTUAL_PATHS_HEADER$=仮想パス
+
+$VIR_PATHS$::
+仮想パスは、ユーザに、ユーザ自身のホームディレクトリ外のファイルとフォルダへのアクセスを得させます。仮想パスは、システム上で既存のディレクトリを、もう1つの
+ロケーションにマップすると、ユーザのアクセスできるディレクトリ構造内で現れるようにする方法を定義するだけです。実際にマップしているロケーションにアクセス
+する手段を持つために、ユーザはディレクトリ・アクセス・ルールをまだ仮想パスの物理的なパスにに指定させなければなりません。
+
+$LINK_HELP_DIRACCESS$のように、サーバ、ドメイン、グループ、およびユーザレベルで仮想パスをを構成することができます。サーバ・レベルで作成された仮想パスは、
+ファイルサーバのすべてのユーザで使用されることができます。ドメイン・レベルで作成された場合、それらは単にそのドメインに属するユーザでアクセス可能となります。
+Serv-Uの詳細なファイルアクセス管理は、特に個々のユーザかグループのために作成された仮想パスを許可することもできます。
+::END
+
+$VIRTUAL_PATHS_PHYSICAL$=仮想パス
+$VIRTUAL_PATHS_PHYSICAL_TXT$::
+物理パスは、ユーザがアクセスディル仮想のロケーションに位置するシステム、またはネットワークの実際の場所です。物理パスが同じコンピュータに位置する場合、
+"D:\inetpub\ftp\public"のようなフルパスを使用してください。"\\Server\share\public"のようなUNCパスを使用することもできます。仮想パスがユーザに現れるように、
+ディレクトリ・アクセス・ルールを物理パスに指定させなければなりません。
+::END
+
+$VIRTUAL_PATHS_VIRTUAL$=仮想パス
+$VIRTUAL_PATHS_VIRTUAL_TXT$::
+仮想パスは物理パスがユーザへ見せるべき位置です。%HOME%マクロは、一般的にユーザのホームディレクトリに指定された物理パスの中に仮想パスをおく場合に使用されます。
+例えば、"%HOME%/public"の仮想パスはユーザのホームディレクトリの中に"public"というフォルダという指定された物理パスを置きます。また、マクロを含まないフルパスを
+使用することができます。
+::END
+
+$VIRTUAL_PATHS_INCLUDE_IN_MAX_SIZE$="最大ディレクトリサイズ" 計算を含む
+$VIRTUAL_PATHS_INCLUDE_IN_MAX_SIZE_TXT$::
+有効にした場合、仮想パスは最大ディレクトリサイズの計算に含まれます。無効とされた場合は、仮想パスは最大ディレクトリサイズの計算に含まれません。最大ディレクトリ
+サイズは、どのくらいのデータをアップロード可能にするのかに影響を与えるディレクトリのサイズを制限します。
+::END
+
+$VIRTUAL_PATHS_CASEFILE1_HEADER$=例 - 仮想パスの使用
+
+$VIRTUAL_PATHS_CASEFILE1_BODY$::
+ウェブ開発目的のため「D: \ftproot\examplesite.com\」というディレクトリへのアクセスがウェブ開発者グループに与えられました。また、開発者は「D: \corpimages\」で
+見つけられたイメージ収納場所へのアクセスを必要とします。root Dドライブへのグループアクセスを与えるのを避けるために、仮想パス が構成されなければならないので、
+イメージ収納場所はそれらのホームディレクトリ内に含まれるように<em>現れます</em>。ウェブ開発者のグループの中で<strong>物理パス</strong>として「D: \corpimages\」を
+指定することによって、ディレクトリをユーザに持ってきて、そして、<strong>仮想パス</strong>としての「D: \ftproot\examplesite.com\corpimages」を追加します。また、
+必ず「D: \corpimages\」でグループ・レベル・ディレクトリ・アクセス・ルールを追加してください。セキュリティで妥協することなく、そして共用資源を移動させないで、
+開発者は現在、イメージ収納場所へ近づく手段を持っています。
+::END
+
+$VIRTUAL_PATHS_CASEFILE2_HEADER$=例 - 関係者への仮想パスの作成
+
+$VIRTUAL_PATHS_CASEFILE2_BODY$::
+上の例からの続きです。ウェブ開発者のグループホームディレクトリが別のドライブに移動される場合、ホームディレクトリはアップデートされなければなりません。しかし、
+仮想パスは、この変更を反映するためにアップデートされる必要があります。相対的な仮想パスの位置を作成するのに%HOME%マクロを使用することによって、これを避けること
+ができます。（ホームディレクトリが変更される場合、それはパスをアップデートする必要性を排除します。）仮想のパスとして"D:\ftproot\examplesite.com\corpimages"を
+使用する代わりに、"%HOME%\corpimages"を使用してください。これは、それが何であってもグループのホームディレクトリの中に"corpimages"仮想パスを置くようにServ-Uに
+指示します。ホームディレクトリが、再度変更されても、仮想パスはまだそこに表示されます。
+::END
+
+
+<!-- String table for Help-Configure-Logs -->
+$DOMAIN_LOGS_HEADER$=ドメインログの構成
+
+$CONF_DOMAIN_LOGS$::
+Serv-U ファイル・サーバはドメインのイベントとアクティビティをロギングするためのカスタマイズを許可します。ロギングはファイルと画面の２つの構成から成り立っています。
+ロギング・オプションを有効にするには、適切なファイか画面のボックスをチェックしてください。「ファイル」カラムでオプションがチェックされ、<strong>ファイルへのログを有効</strong>が
+チェックされている場合、適切なロギング情報は指定されたログファイルに保存されます。「スクリーン」カラムでオプションがチェックされた場合、Serv-U管理コンソールでイベントログの
+内容が表示されます。ログは望むように多くの/最小の情報を表示するよう構成することができます。必要なロギング・オプションを構成した後、<strong>保存</strong>ボタンをクリックして、
+変更を適用してください。
+::END
+
+$DOMAIN_LOG_FILE_SETTINGS$=ファイルへのロギング設定
+
+$DOMAIN_LOG_FILE$=Log file path
+$DOMAIN_LOG_FILE_TXT$::
+ファイルに情報を保存するまえに前に、ログファイル名を指定する必要があります。ログファイルとすする既存のファイルかディレクトリの場所を選択するために<strong>参照</strong>
+ボタンを使用することができます。ログファイルのパスは以下のワイルドカード文字をサポートします。ワイルドカード文字により日付を持ったログファイルを作成することなどが
+できます。<strong>ログファイルを自動的にローテーション</strong>と共に使用された場合、、ワイルドカードはHIPAAによって必要とされる監査で必要とされるドメイン・アクティビティを
+保存する方法と自動的に提供します。利用可能なワイルドカードは以下の通りです。:
+::END
+$DOMAIN_LOG_FILE_LIST$::
+%D - 現在の日付（月）
+%M - 現在の月
+%N - 数値による現在の月 (1-12)
+%Y - ４桁による現在の年 (例 %COPYRIGHT_END_YEAR%)
+%X - ２桁による現在の年 (例 %COPYRIGHT_END_YEAR%年は %SHORT_COPYRIGHT_END_YEAR%)
+%S - ログされるドメインの名前
+::END
+
+$DOMAIN_LOG_ENABLE_FILE$=ファイルへのログを有効
+$DOMAIN_LOG_ENABLE_FILE_TXT$::
+このボックスをチェックして、Serv-Uで<strong>ログファイル・パス</strong>で指定されるファイルにログ情報を保存してください。このオプションがチェックされていない場合、
+ファイル・カラムでオプションがチェックされていても、Serv-Uはファイルに何も情報を記録しません。
+::END
+
+$DOMAIN_LOG_ROTATE$=ログファイルを自動的にローテーション
+$DOMAIN_LOG_ROTATE_TXT$::
+ログファイルを処理しやすいサイズとし、監査でファイルを容易に参照できるようにすすために、Serv-Uはログファイルを定期的に自動でローテーションすることができます。
+現在の日付を参照するワイルドカードを含む<strong>ログファイルパス</strong>を指定することにより、Serv-Uはログファイルをローテーションし、日次、週次、月次、年次の
+ユニークなファイル名を作成することができます。
+::END
+
+$DOMAIN_LOG_PURGE$=古いログファイルの消去
+$DOMAIN_LOG_PURGE_TXT$::
+Serv-Uは、ファイルの最大数、またはMBによる最大数によって古いログファイルを自動的に消去する機能を持ちます。"0"は、制限がなく、何も制限されていないことを意味します。
+
+<strong>注意:</strong> :ログファイルは現在のログファイルパス名だけに基づいた状態で消去されます。ログファイル変数は一致するファイルを検索するために使用されるWindows
+ワイルドカード値に置き換えられます。例：
+
+<strong>C:\Logs\%Y:%N:%D %S Log.txt</strong> は、次として検索されます： <strong>C:\Logs\????:??:?? * Log.txt</strong><br />
+<strong>C:\Logs\%Y:%M:%D %S Log.txt</strong> は、次として検索されます： <strong>C:\Logs\????:*:?? * Log.txt</strong><br />
+<strong>C:\Logs\%S\%Y:%M:%D Log.txt</strong> は、次として検索されます： <strong>C:\Logs\--DomainName--\????:*:?? Log.txt</strong>
+
+ログ変数はこのようにワイルドカードされます。:
+
+%D --&gt; ??<br />
+%N --&gt; ??<br />
+%M --&gt; *<br />
+%Y --&gt; ????<br />
+%X --&gt; ??<br />
+%S --&gt; *
+
+ワイルドカードパス名に一致するいずれの消去することができます。用心してください;予期されないファイル削除を避けるためにログファイルを単一ディレクトリに置くのは、
+ベストプラクティスです。
+::END
+
+$DOMAIN_LOG_NO_LOG$=ログしないIP
+$DOMAIN_LOG_NO_LOG_TXT$::
+Serv-Uはログに記録されないIPアドレスを指定する機能を持っています。これらのIPアドレスからのアクティビティはルールによって指定されたロケーションをログしません。
+--画面、ファイル、または両方で。これは、管理者にとって不必要なな情報をログに記録しないことを必要とする場合に役立ちます。<strong>ログしないIP</strong>ボタンを
+クリックして、そして、必要に応じたIPアドレスを追加してください。
+::END
+
+
+<!-- String table for Help-About-User-Accts -->
+$ABOUT_USERS_HEADER$=ユーザ・アカウントに関して
+
+$ABOUT_USER_ACCTS$::
+ユーザアカウントは、ファイルサーバへのアクセスを提供するためにhつ用途なります。その最も基本的なレベルでユーザアカウントはログイン信用証明(例えば、ログインIDとパスワード)、
+ユーザにアクセスを可能とするステムの領域を定義するホームディレクトリ、および$LINK_HELP_DIRACCESS$の設定、そして、ユーザがそれらの位置で実行することができる動作を
+定義します。ファイルサーバに関するそれぞれのアクティブなセッションには、管理者にクライアントを特定する、それに関連したユーザアカウントがあります。
+
+Serv-U ファイル・サーバで様々な方法でユーザアカウントを定義することができます。：
+::END
+
+$ABOUT_USERS_LIST$::
+<em>ドメイン・ユーザ</em> - ドメイン・レベルで定義されます。ドメインユーザは、ユーザが作成されたドメインへログインすることができるだけです。
+<em>グローバル・ユーザ</em> - サーバ・レベルで定義されます。グローバル・ユーザはファイル・サーバ上の<strong>どんな</strong>ドメインにもログインすることができるアカウントです。
+<em>データベース・ユーザ</em> - サーバとドメインの両方のレベルで利用することができます。データベースユーザは、ODBCを通してアクセス可能な外部のデータベースに保存され、ローカルのアカウントデータベースを補います。
+<em>Windowsユーザ</em> - ドメイン・レベルで利用可能です。Windowsユーザはローカル・システム、またはアクセス可能なドメインコントローラを通じたWindowsアカウントです。それは、それらのWindowsログイン信用証明を使用することでローカルのアカウントデータベースを補い、クライアントがファイルサーバににログインすることを許可します。
+::END
+
+$ABOUT_USER_ACCTS2$::
+同じログインIDを様々なレベルのユーザアカウントで割り当てることができるので、階層構造はどのアカウントが優先権を取るかを決定するのにServ-Uによって使用されます。
+上に記載されたユーザアカウントタイプは優先権に関するオーダーにリストされています。ドメインとサーバ・レベルの両方でユーザアカウントを指定することができるところでは、
+ドメイン・レベルのアカウントはいつもサーバより優先されます。
+
+ユーザを作成するとき、彼らがどういうアクセスを必要とするかを検討してください。そして、ユーザアカウントに応じて、適切なロケーションを選択してください。ドメイン・レベルで
+複数ユーザアカウントの必要性を削除するくために、サーバレベルでの設定を行うことにより、時間と労力を節約することができます。
+
+Serv-U コーポレートでは、ユーザアカウントのアカウント管理をよりロジカルにするようにコレクションにで組織化することができます。部署や物理的な場所からすべてのユーザを
+管理を行う際に、これは便利な場合があります。例えば、経理課のすべてのユーザを「経理」というコレクションに置くことができます。または、大阪オフィスのすべてのユーザを「
+大阪」というコレクションに置くことができます。
+
+コレクションを作成するには、<strong>ユーザコレクションの選択</strong>グループ内の「ユーザ」ウインドウで<strong>追加</strong>ボタンをクリックしてください。新しいダイアログで、
+コレクション名を入力し、<strong>保存</strong>ボタンをクリックしてください。ユーザは、作成したコレクションを選択することによって、その新しいコレクションへユーザリストの
+下にある<strong>追加</strong>ボタンをクリックすることにより追加することができます。一つのコレクションから別のコレクションへユーザを移動するには、ユーザリストの下の
+<strong>移動</strong>ボタンをクリックし、強調されたユーザアカウントの移動先となるコレクションを選択してください。また、コレクションはそれぞれのボタンにより<strong>名前の変更</strong>、
+および<strong>削除</strong>することができます。
+
+<strong>注意:</strong> コレクションをを削除すると、そのコレクションに含まれるすべてのユーザアカウントが削除されます。ユーザアカウントを保持したい場合、コレクションを削除する前に、
+必ずアカウントを移動してください。
+
+デフォルトでは、すべてのユーザが「全般」ユーザ・コレクションで作成されます。	
+::END
+
+$ABOUT_USER_WIZARD$=新規ユーザのウィザード
+$ABOUT_USER_WIZARD_TXT$::
+ウィザードは<strong>ウィザード</strong>ボタンをクリックすることで、新しいユーザアカウントを作成するための補助として利用することができます。新規ユーザ・ウィザードは、
+最小の４つの手順を通じて、ユーザアカウントを作成するために必要な手順を示します。作成後に、グループ・メンバーシップや追加ディレクトリ・アクセス・ルールなどの、
+より詳細な設定を行うためにユーザを編集することができます。新規ユーザ・ウィザードの使用に関する詳細な情報は、$LINK_HELP_GUIDE$の<strong>最初のユーザ・アカウントの
+作成</strong>をご参照ください。
+::END
+
+$ABOUT_USER_TEMPLATE$=ユーザ・テンプレート
+$ABOUT_USER_TEMPLATE_TXT$::
+新規ユーザ・ウィザードは最小の手順ですぐに、ユーザアカウントを作成する方法を提供しますが、ほとんどのファイル・サーバは、すべてのユーザアカウントで持つべき設定内容を
+持つでしょう。このような場合、グループを使用することはよい方法です。しかしながらそれらは管理者が望む動作ではないかもしれません。
+
+Serv-Uは、管理者へ新しいユーザアカウントのために<strong>テンプレート</strong>ボタンをクリックすることによって、テンプレートを構成することを許可します。ログインIDを除き、
+いかなる他のユーザアカウントのようにもテンプレートユーザを構成することができます。これらの設定がテンプレートに保存された後に、他のアカウントをテンプレートに
+設定された内容で作成することができます。
+::END
+
+$ABOUT_USER_COPY$=ユーザアカウントのコピー
+$ABOUT_USER_COPY_TXT$::
+ユーザテンプレートは、ユーザを同じ設定で作成する方法を提供します。シングルユーザーの設定だけがコピーされなければならない、さもなければ、複数ユーザテンプレートの必要が
+ある場合、ユーザ名とパスワードだけを除くユーザアカウントのコピーを作成するのに「コピー」ボタンを使用することができます。ユーザをコピーするために、ユーザアカウントを
+選択してください、そして、「コピー」を選んでください。
+::END
+
+$ABOUT_USER_PASS_RECOVERY$=パスワードの復元
+$ABOUT_USER_PASS_RECOVERY_TXT$::
+Serv-Uは管理コンソールとWEBクライアントを通る両方でパスワードの復元をサポートします。パスワードの復元が利用可能でるために、サーバかドメインでSMTPオプションが構成されて
+いる必要があります。そして、ユーザアカウントには、リストアップされている電子メールアドレスがなければなりません。管理コンソールからパスワードの復元を使用するために、
+ユーザアカウントを選択してください。そして、「パスワードの復元」ボタンをクリックしてください。パスワードがone-way暗号化を使用することで保存されてると、パスワードは、
+リセットされユーザの電子メールのアドレスに送られた新しいパスワードになるでしょう。パスワードがtwo-way暗号化を使用する、または暗号化なしで保存されると、オリジナルの
+パスワードは電子メールで送られるでしょう。 
+
+WEBクライアントからのパスワードの復元は、「ユーザにパスワードの復元を許可」がユーザアカウントで有効に「されている必要がります。このオプションが有効にされると、
+Serv-Uシルバー、またはゴールド版ライセンスを使用している場合に、ユーザは「パスワードの復元」というWEBクライアントオプションを使用することができます。そうでなければ、
+WEBクライアントからのパスワードの復元は管理コンソールと同様に動作します。 
+::END
+
+$IMPORT_USER_ACCOUNTS$=ユーザアカウントのインポート／エクスポート
+$IMPORT_USER_ACCOUNTS_TXT$::
+スクリーンの上部にある「インポート」と「エクスポート」ボタンを使用することでユーザアカウントをインポート、エクスポートすることができます。「エクスポート」ボタンはコンマ
+区切りのCSV形式で現在のコレクションのユーザをエクスポートするでしょう。さらに、エクスポートと同じ形式を使用することでCSVファイルを作成することによって、CSVファイルから
+ユーザのリストをServ-Uにインポートすることができます。
+::END
+
+
+<!-- String table for Help-User-Info -->
+$USER_INFO_HEADER$=ユーザ情報
+
+$USER_INFO_TXT$::
+ユーザアカウントは多くの属性と設定から定義されています。ユーザ情報タブはログイン信用証明を含むホームディレクトリ、アカウントの種類などのユーザアカウントに
+関する一般情報を含んでいます。利用できる各属性に関する詳細な情報は以下を参照してください。
+::END
+
+$USER_INFO_USERNAME$=ログインID
+$USER_INFO_USERNAME_TXT$::
+これは「ログインID」としても知られています。ログインIDはファイル・サーバにセッションを認証する一部としてクライアントによって提供されます。ログインIDに加えて、クライアントは、
+認証を終了するためにパスワードを提供しなければなりません。そのレベルで指定される各アカウントで、ログインIDはユニーク（唯一）である必要があります。ログインIDは以下の
+特殊文字を含むことができません。： \ / < > | : ? *
+
+<strong>注意</strong>: "Anonymous"と"FTP"という、2つの特別なログインIDがあります:これらのログインIDは、それぞれ同意語であり、ゲストがファイルサーバを使用することができます。
+そして、これらのユーザはパスワードを必要としません。(それは、この場合空白なままとされるべきです)代わりに、Serv-Uは、これらのアカウントの1つでログオンするユーザがログイン処理を
+完了するために、それらのEメールのアドレスを提供するのを必要とします。
+::END
+
+$USER_INFO_PASSWORD$=パスワード
+$USER_INFO_PASSWORD_TXT$::
+パスワードはセッションがファイルサーバで認証されるために必要とされる２番目の項目です。パスワードは、秘密にされ、アカウントを所有している人物以外の誰とも共有される
+べきではありません。強いパスワードは６文字以上で大文字と小文字、そして一文字以上の数字を含む必要があります。パスワードの長さと複雑さに関する制限を設定することが
+できます。詳しい情報に関しては$LINK_HELP_USER_LIMITS$を参照してください。
+::END
+
+$USER_INFO_PASSWORD_GEN_TXT$::
+さらに、「パスワード」フィールドの横の「錠」アイコンはユーザのために新しい無作為のパスワードを生成します。この新しいパスワードは定義されたパスワード長さの要件を
+満たすでしょう。デフォルトで、すべてのパスワードが、8文字であり、複雑にされます。「最小のパスワード長」が4より等しいか少ない文字数であるなら、パスワードは4文字
+になるでしょう--さもなければ、生成されるパスワードは指定されたドメイン値に続くでしょう。
+::END
+
+
+$USER_INFO_ADMIN$=管理者権限
+$USER_INFO_ADMIN_TXT$::
+３種類（権限なし、システム管理者、ドメイン管理者）の管理者権限から1つをユーザアカウントに設定することができます。グループ・メンバーシップを通じて、この属性の値を
+継承することができます。
+
+権限なしを持つユーザアカウントは、ファイルサーバへログインし、ファイル転送を行うことだけができる通常のアカウントです。Serv-U 管理コンソールは、この権限のユーザ
+アカウントからは利用することができません。
+
+システム管理者は、ドメイン、ユーザアカウントの作成、削除、またはファイルサーバのライセンスのアップデートなども可能となる、すべてのファイルサーバ管理アクティビティを
+実行する能力を持ちます。マシンに物理的なアクセスを持っている場合、システム管理者権限を持つユーザアカウントは、HTTPのリモート管理を通じて原則的にはサーバを管理する
+ことができます。
+
+ドメイン管理者は、それらが属するドメインの管理のみを行うことができます。また、ドメイン管理者は、ドメイン関連のアクティビティを実行するので制限されます。（それは他の
+ドメインへ影響するかもしれません。）ドメイン管理者によって実行されないかもしれない、ドメイン関連のアクティビティは、ドメインリスナー、またはドメインのODBCデータ
+ベースアクセスを構成することから定義されます。
+::END
+
+$USER_INFO_ADMIN_READ_ONLY$::
+また、Serv-Uは管理者をログインさせることができる書き込み禁止管理者アカウントをサポートします。そして、外部のパーティーと共に実行されている場合、リモート問題診断を
+サポートし、ドメインかサーバレベルで構成オプションを参照できます。どんな設定も変更できない、またはユーザアカウントの作成、削除、編集することができないのを除いて、
+書き込み禁止管理者特権はそれらの完全なアクセス同等物と同じです。
+::END
+
+$USER_INFO_ADMIN_NOTE$::
+<strong>注意:</strong> 管理者権限でユーザアカウントを構成するとき、それらのホームディレクトリを指定する際に、注意してください。ファイルサーバーを構成するとき、
+それらのホームディレクトリがロックされる"\" (root) を除いたホームディレクトリをもっている管理者はそれらのホームディレクトリの外でファイルパスを使用しないかもしれません。
+::END
+
+$USER_INFO_TYPE$=アカウントの種類
+$USER_INFO_TYPE_TXT$::
+デフォルトでは、すべてのアカウントが、手動で削除されるか、または無効にされるまでは継続的であり、ファイルサーバに存在しています。<strong>アカウントの種類</strong>を
+構成することにより、アカウントを自動的に無効とする、または特定の日に削除することができます。適切な種類を選択した後に、<strong>アカウント有効期限</strong>コントロールが
+表示されます。カレンダーをクリック、または有効期限を選択肢、アカウントがいつ無効にされるべきであるか、または削除されるべきであるかを選択してください。
+::END
+
+$USER_INFO_WEB_CLIENT$=デフォルトWebクライアント
+$USER_INFO_WEB_CLIENT_TXT$::
+Serv-UライセンスがFTP Voyager JVを使用できる場合、HTTPを通してファイルサーバへ接続するユーザが、ログインした後にどのクライアントを使用するかを選択することができます。
+また、どのクライアントを使用するかをユーザに選択させる代わりに、デフォルトクライアントを指定することができます。このオプションが変更される場合、それはサーバ、または
+ドメイン・レベルで指定されるオプションより優先されます。また、グループ・メンバーシップを通じてユーザによってそれを継承させることができます。<strong>継承デフォルト値</strong>
+オプションを使用して、適切なデフォルト値にリセットしてください。
+::END
+
+$USER_INFO_EMAIL_ADDRESS$=電子メールアドレス
+$USER_INFO_EMAIL_ADDRESS_TXT$::
+電子メール通知をグループに送信する際、Serv-Uイベントは「電子メールアドレス」フィールドを使用することができます。そして、WEBクライアントを使用するパスワード復元は復元
+したパスワードをユーザに送るために電子メールアドレスを必要とします。ここに電子メールアドレスを入力し、ユーザアカウントの電子メール通知かパスワード復元を許可してください。
+::END
+
+$USER_INFO_ENABLE$=アカウントを有効
+$USER_INFO_ENABLE_TXT$::
+このボックスのチェックを外すと、そのアカウント無効にできます。アカウントを無効となりますが、アカウントはファイルサーバに残り、ログインすることができません。アカウントを
+再び有効にするには、<strong>アカウントを有効</strong>をチェックしてください。
+::END
+
+$USER_INFO_FULL_NAME$=フルネーム
+$USER_INFO_FULL_NAME_TXT$::
+アカウントのフルネームはアカウントの追加情報として指定することができます。ログインする際に、フルネームの情報はクライアントによって使用されません。
+::END
+
+$USER_INFO_PASS_TYPE$=パスワードの種類
+$USER_INFO_PASS_TYPE_TXT$::
+すべてのパスワードはServ-Uの構成ファイルに暗号化され可逆されない状態で保存されます。(ファイルサーバが$LINK_HELP_USER_LIMITS$を通じて保存されたパスワードを暗号化
+しないように構成されない場合を除く)通常のパスワード・オプションに加えて、FTPプロトコルを使用するアカウントのための、パスワード保存の２つの追加オプションがあります。
+:<strong>MD4</strong>と<strong>MD5</strong> OTP S/KEYパスワードです。このタイプのパスワード設定はFTPプレーンテキストとしてパスワードをファイルサーバに送らないで
+ユーザをログインさせます。これらのオプションはFTPプロトコルだけで適用されます。このオプションを設定する場合、他のプロトコルを通してログインするユーザの能力に影響しません。
+::END
+
+$USER_INFO_HOMEDIR$=ホームディレクトリ
+$USER_INFO_HOMEDIR_TXT$::
+ユーザアカウントのホームディレクトリは、ユーザがファイルサーバへログインした直後にユーザが位置する場所です。各ユーザはホームディレクトリをアカウントで割り当てなければなりません。
+（ユーザがグループのメンバーであるならグループレベルでそれを指定することができます。）ホームディレクトリは、ドライブ名かUNCシェア名を含むフルパスを使用することで
+指定される必要があります。ホームディレクトリが見つけられないなら、それを作成するためにServ-Uを構成することができます。
+
+ホームディレクトリを指定するとき、ログインIDをパスに挿入するために%USER%マクロを使用することができます。これは、ほとんどグループレベルでデフォルトホームディレクトリを構成する、
+または、それを確実にするために、新しいユーザテンプレートの中では、すべての新しいユーザがユニークなホームディレクトリを持っています。%HOME%のディレクトリ・アクセス・ルールに
+結合されると、ユニークなホームディレクトリと適切なアクセス権は新しいユーザをその位置に構成することができます。
+
+また、%DOMAIN_HOME%マクロは、ユーザのホームディレクトリを特定するのに使用されるかもしれません。例えば、ユーザのホームディレクトリを共通の位置に置くには、%DOMAIN_HOME%\%USER%を
+使用してください。
+
+ユーザへのシステムレベルアクセスを与えるために「\」(root)としてホームディレクトリを指定することができます。（すべてのシステムドライブにアクセスする能力を許可します。）
+これが適切に動作するように、ユーザにそれらのホームディレクトリをロックされていなければなりません。
+::END
+
+$USER_SSH_PUBLIC_PATH$=SSHパブリックキー・パス
+$USER_SSH_PUBLIC_PATH_TXT$::
+Serv-Uファイルサーバへログインする際に、ユーザ認証にSSHパブリックキーを使用することができます。パブリックキー・パスはキーファイルをサーバの安全なディレクトリを示すべきです。
+このパスは以下のマクロを含むことができます:
+
+%HOME% - ユーザアカウントのホームディレクトリ<br />
+%USER% - ログインID、使用される場合、パブリックキーには、ログインIDがファイル名の一部としてあるでしょう。<br />
+%DOMAIN_HOME% - ホームディレクトリはドメインの詳細、設定でで設定されるドメインです。使用された場合、キーは中央フォルダのドメインホームディレクトリに関連するでしょう。
+
+例:
+
+%HOME%\SSHpublic.pub<br />
+%HOME%\%USER%.pub<br />
+%DOMAIN_HOME%\SSHKeys\%USER%.pub
+
+<a href="Help-SSH-Key-Pair.htm">こちらをクリック</a>してSSHキーペアに関する詳細をご覧ください。
+::END
+
+$USER_INFO_LOCK_HOMEDIR$=ユーザをホームディレクトリにロック
+$USER_INFO_LOCK_HOMEDIR_TXT$::
+ユーザはそれらのホームディレクトリが閉じ込められる場合それらのホームディレクトリの上の経路にアクセスしないかもしれないということです。さらにホームディレクトリの実際の物理的な位置は、
+Serv-Uが"/" (root)として常にレポートされるため隠されます。グループ・メンバーシップを通じて、この属性の値を継承することができます。
+::END
+
+$USER_INFO_ALWAYS_LOGIN$=常にログインを許可
+$USER_INFO_ALWAYS_LOGIN_TXT$::
+このオプションを有効にすることは、IPアクセスルール、セッションの最大数などのファイルサーバで設定された制限にかかわらず、常にユーザアカウントがログインすることを許可
+されることを意味します。これは、クリティカル・システム管理者アカウントが、すべての条件のもとでファイルサーバにリモートからアクセスすることができるのためフェール
+セイフとして役に立ちます。このオプションはアクセスルールを免除されることを意味します。グループ・メンバー・シップを通じてこの属性値を継承することができます。
+::END
+
+$USER_INFO_DESCRIPTION$=説明
+$USER_INFO_DESCRIPTION_TXT$::
+説明は管理者がそのアカウントを管理し泰暢、アカウントに対するメモを入力することを許可します。
+::END
+
+$LOGIN_AVAILABILITY$=利用内容
+$LOGIN_AVAILABILITY_TXT$::
+ユーザがこのサーバに接続することができる内容の制限を設定できます。制限は曜日と時刻で設定できます。指定された利用可能な時間外でログインするとき、ユーザアカウントが現在利用可能でないことを示すメッセージがユーザに提示されます。
+::END
+
+
+<!-- String table for Help-User-Groups -->
+$USER_GROUPS_HEADER$=グループ・メンバーシップ
+
+$USER_GROUPS_OLD$::
+ユーザは様々なグループのメンバーであるかもしれません。グループはユーザ属性と設定の基本設定を複数のユーザに適用する便利な方法を提供します。グループを構成する
+ための詳細な情報に関しては、$LINK_HELP_GROUPS$をご参照ください。
+
+ユーザが複数のグループのメンバーである可能性があるため、グループ・メンバーシップの順序は非常に重要です。グループ・メンバーシップの右側で矢印を使用して、
+グループ・メンバーシップの順番を変更してください。
+
+<strong>追加</strong>と<strong>削除</strong>ボタンを使用して、ユーザにをグループメンバー・シップに追加、または選択されたグループからユーザをそれぞれ削除
+してください。.
+::END
+
+$USER_GROUPS$::
+ユーザは様々なグループのメンバーであるかもしれません。グループはユーザ属性と設定の基本設定を複数のユーザに適用する便利な方法を提供します。グループを構成する
+ための詳細な情報に関しては、$LINK_HELP_GROUPS$をご参照ください。
+
+ユーザが複数のグループのメンバーである可能性があるため、グループ・メンバーシップの順序は非常に重要です。グループ・メンバーシップの右側で矢印を使用して、
+グループ・メンバーシップの順番を変更してください。
+
+<strong>左右</strong>の矢印ボタンを使用して、ユーザに追加のグループメンバーシップを加えるか、または選択されたグループからユーザを削除してください。
+::END
+
+
+<!-- String table for Help-Welcome-Message -->
+$WELCOME_MESSAGE_HEADER$=Welcomeメッセージ
+
+$WELCOME_MESSAGE_BODY$::
+Welcomeメッセージはユーザログインへ成功した間、FTPクライアントに送られるメッセージです。Serv-UがHTTPへの、この機能の適応を拡張しているので、Webクライアント、
+またはFTP Voyager JVを通じてファイル・サーバにアクセスするユーザはがWelcomeメッセージを受け取ります。この機能はプロトコルは送られる一般的なテキスト情報の
+ための方法をユーザへ定義しないので、SSH2上のSFTPを通してログインされるユーザでは利用することができません。
+
+Welcomeメッセージは、サーバの状態、ユーザへの特別なメッセージ、注意事項、法律に関する注意などの一般情報を含むことができます。Welcomeメッセージを構成する2つの方法が
+あります。最初の方法は、<strong>メッセージ・ファイル・パス</strong>の欄に、Welcomeメッセージを保存しているパスを指定する方法です。システム内の既存のファイルを
+選択するのに<strong>参照</strong>ボタンを使用することができます。 
+
+もう一つの方法は、提供されるスペースでWelcomeメッセージのテキストをServ-Uに提供する方法です。ユーザレベルでWelcomeメッセージを優先するにためには、<strong>カスタム
+Welcomeメッセージを持つグループWelcomeメッセージを上書き継承</strong>ボックスがチェックされる必要があります。そして、<strong>メッセージ・ファイルのパス</strong>欄で
+ファイルのコンテンツの代わりにユーザに指定されたテキストは送られます。
+
+グループ・メンバー・シップを通じてユーザによってこれらの値を継承することができます。
+
+また、Welcomeメッセージでシステム変数を使用いただくことができます。利用可能なシステム変数の一覧に関しては、$LINK_HELP_SYSTEM_VARS$をご参照ください。
+::END
+
+
+<!-- String table for Help-Quotas-Ratios -->
+$QR_HEADER$=転送率とクォータ管理
+
+$QR_TXT$::
+転送率とクォータは、ファイル転送がServ-U ファイル・サーバで管理される多くの方法の1つです。これらのオプションに関する詳しい情報は以下をご参照ください。
+::END
+
+$QR_RATIOS$=転送率
+$QR_RATIOS_TXT$::
+転送率はファイルサーバ上のファイル共有にとって便利な設定です。適切な転送比率設定を指定することによって、指定されたバイト数か完全なファイルを移すために
+「クレジット」をユーザに与えることができます。これは、データのダウンロード'x'メガバイト、またはアップロードするあらゆる'y'メガバイトのデータかファイルの
+ためのファイルへの能力をユーザに与えるのに一般的に使用されます。
+
+そのユーザアカウントで転送率を有効ににするには、<strong>転送率を有効</strong>のボックスをチェックしてください。ユーザアカウントに与える適切なタイプの比率を
+選択してください。メガバイト、または完了したファイルで比率を追跡することができます。また、ユーザアカウントによって確立されるか、またはすべてのセッションの
+ために確立されるセッション単位でそれらを追跡することができます。
+
+転送率は、数値を<strong>アップロード</strong>と<strong>ダウンロード</strong>側の両方に割当てることによって構成されます。例えば、すべてのセッションの間にファイルを
+カウントする3/1転送率は、ユーザアカウントが1個のファイルをダウンロードする能力を持つために3個のファイルをアップロードしなければならないのを意味します。
+ユーザアカウントの現在クレジットは<strong>クレジット</strong>欄に表示されます。この値は、現在の値であり、ユーザの初期のクレジットを与えるために非ゼロ値に初期化する
+ことができます。
+::END
+
+$QR_QUOTA$=クォータ
+$QR_QUOTA_TXT$::
+クォータてはユーザアカウントによって転送されるデータ量を制限する別の方法です。<strong>最大</strong>割り当て値がユーザへ割当てられると、ユーザはその値より多くの
+ディスクスペースを使用することができません。<strong>現在</strong>の欄は、ユーザが現在どのくらいのディスクスペースを使用しているかを示します。初めに割当てを構成する際、
+両方の欄が記入される必要があります。そのポイントから、Serv-Uはユーザによって行われるファイルアップロードと削除を追跡し、<strong>現在</strong>の値を適宜アップデート
+します。
+
+<strong>注意:</strong> クォータを使用する1つの欠点は<strong>現在</strong>の値が正確なまま残るよう、変更をServ-Uの外部でユーザアカウントによってアクセス可能なディレクトリの
+コンテンツにしてはいけないということです。これらの変更がファイルサーバ接続の外部であるために、Serv-Uはそれらを追跡し、現在のクォータ値をアップデートすることができません。
+クォータに代わる手段として、ユーザアカウントにディレクトリ・アクセス・ルールで、ディレクトリの最大サイズを設定する方法があります。このオプションに関する詳しい情報に関しては、
+$LINK_HELP_DIRACCESS$をご参照ください。
+::END
+
+$QR_FREE_FILES$=転送率制限を受けないファイル
+$QR_FREE_FILES_TXT$::
+転送率制限を受けないファイルのリストにリストアップされたファイルは、どんな転送率制限からも除外されます。これは"read me"やディレクトリ情報ファイルなど、ユーザに
+よって常にアクセスさせるファイルなどに使用することができます。
+
+転送率制限を受けないファイルを指定する際に、'*'と'?'ワイルドカード文字を使用することができます。'*'を使用すると、どんな種類の文字列と長さのワイルドカードにより
+指定されます。例えば、"*.txt"と設定した場合、.txt拡張子を持つすべてのファイルが実際のファイル名にかかわらず転送率制限を受けないファイルとなります。'?'は、
+ファイル名かディレクトリ内で単独の文字列を指定するために使用することができます。
+
+さらに入力を行う際に、完全、または相対パスが使用されるかもしれません。ファイル名を指定する際、フルパスが使用されているなら、その特定のファイルだけが転送率から
+除外されます。相対パスで"readme.txt"のように指定される場合、提供されたファイルはそれが位置するディレクトリにかかわらず転送率から除外されます。
+::END
+
+
+<!-- String table for Help-Windows-Auth -->
+$WINDOWS_AUTH_HEADER$=Windows認証
+
+$WINDOWS_AUTH_BASICS$::
+Windows認証はServ-Uコーポレート版のみで利用できます。Windows認証を有効にすることによってユーザは、ローカルのWindowsアカウントデータベース、または特定のWindows
+ドメイン・サーバによって提供される、Windowsログイン信用を使用すしてServ-Uにログインすることができます。それらのWindowsアカウントを使用してログインする際、ユーザは
+手動でホームディレクトリを指定する必要がないよう、それらのWindowsアカウントで指定されたホームディレクトリに置かれます。
+
+Windows認証を有効にするには、<strong>Windows認証を有効</strong>のボックスをチェックしてください。<strong>Windowsドメイン名</strong>の欄が空白である場合、Serv-Uは、
+ユーザログインを認可するために、システムのローカルWindowsアカウントデータベースを使用します。システムがWindowsドメインのメンバーであるなら、ドメイン・サーバに
+ユーザログインを認可させるよう、このフィールドにドメイン名を入力してください。この欄を変更した後に、<strong>保存</strong>ボタンをクリックして、変更を適用してください。
+::END
+
+$WINDOWS_AUTH_USE_GROUP_HOMEDIR$=アカウントのホームディレクトリの代わりにWindowsユーザ・グループ・ホームディレクトリを使用
+$WINDOWS_AUTH_USE_GROUP_HOMEDIR_TXT$::
+クライアントがWindowsユーザアカウントを使用してログインする際、デフォルトでは、Serv-UはWindowsアカウントのホームディレクトリを使用します。このオプションを有効にすると
+Serv-Uは、代わりにWindowsユーザグループで指定されるホームディレクトリを使用させます。ホームディレクトリがグループレベルで指定されない場合、Windowsユーザ・アカウントの
+ホームディレクトリが使用されます。
+::END
+
+$WINDOWS_AUTH_GROUP$=Windowsユーザグループの構成
+$WINDOWS_AUTH_GROUP_TXT$::
+Windowsユーザアカウントは、Serv-Uで参照することができません。そしてServ-U内で構成することができません。Windowsユーザローカル・ユーザアカウントの多くの高度なオプションを
+構成する際に支援するために、すべてのWindowsユーザアカウントが特別なWindowsユーザグループのメンバーです。<strong>Windowsユーザグループの構成</strong>ボタンをクリックする
+ことにより、このグループが通常のグループのように構成されることを許可します。このグループで構成されるすべての設定がWindowsユーザアカウントによって継承されます。この機能は
+ホームディレクトリの上書き、帯域幅制限の指定、または追加ディレクトリ・アクセス・ルールで使用することができます。
+
+詳細に関しては$LINK_HELP_GROUPS$の構成に関するヘルプを参照してください。
+::END
+
+
+<!-- String table for Help-About-Groups -->
+$ABOUT_GROUPS_HEADER$=グループに関して
+
+$ABOUT_GROUPS_TXT$::
+グループは複数のユーザアカウントで共通の構成オプションを共有する方法です。グループの構成は、ユーザアカウントの構成とほぼ同等です。グループ・レベルでユーザ
+アカウントに利用可能な、多くの構成オプションを設定することができます。ユーザがグループの設定を継承するように、ユーザはグループのメンバーでなければなりません。
+ユーザレベルで、グループ・メンバー・シップを通じてユーザによって継承される許可と属性は上書きすることができます。ユーザは、ディレクトリやIPアクセスルールのように
+権限の複数コレクションを取得する複数のグループのメンバーであるかもしれません。
+
+ユーザアカウントのように、複数の異なったレベルでグループを作成することができます。以下を含みます。::
+::END
+
+$ABOUT_GROUPS_TYPES$::
+グローバル・グループ
+ドメイン・グループ
+データベース・グループ - サーバとドメイン・レベルの両方で利用できます。
+::END
+
+$ABOUT_GROUPS_TXT2$::
+しかしながら、グループは単に同じレベルで定義されるユーザアカウントで利用可能です。言い換えれば、グローバル・ユーザ(例えばサーバ・レベルで定義されたユーザ)は
+グローバル・グループのメンバーであるにすぎないかもしれません。同様に、特定のドメインで定義されたユーザはまた、そのドメインのために作成されたグループの
+メンバーであるにすぎないかもしれません。また、この制限はデータベース内で、同じレベルで作成されたユニーク（唯一）なユーザが、それらのグループのメンバーであるかも
+しれないため、データベースで作成されたグループに適用されます。
+
+<strong>追加</strong>、<strong>編集</strong>、<strong>削除</strong>ボタンを使用して、利用可能なグループを管理してください。
+::END
+
+$ABOUT_GROUPS_TEMPLATE$=グループ・テンプレート
+$ABOUT_GROUPS_TEMPLATE_TXT$::
+Serv-Uは管理者のために<strong>テンプレート</strong>ボタンをクリックすることにより、新しいグループを作成するためのテンプレートを構成させます。テンプレートを開くと、
+それは他のグループ・オブジェクトのように、テンプレートグループを構成することができます。（名前を除く）これらの設定がテンプレートに保存されると、それらへのそれらの
+デフォルト設定セットがテンプレートの中に見つけられている状態で、すべての新しいグループが作成されます。
+::END
+
+$ABOUT_GROUPS_NTUSER$=Windowsユーザ・グループの構成
+$ABOUT_GROUPS_NTUSER_TXT$::
+Serv-Uコーポレート版では、管理者はクライアントがFファイルサーバにログインするためにローカルのWindowsユーザデータベース、またはアクセス可能な一つのドメイン・サーバを
+使用することができます。これらのユーザアカウントは、ローカルのServ-Uユーザデータベースに存在せず、個々に構成することができません。これらのアカウントを構成を支援する
+ために、この方法でログインされるすべてのユーザがデフォルトWindowsユーザグループとなります。このボタンをクリックすることは、このグループが通常のように構成されることを
+許可します。しかしながら、このグループにされる変更はWindowsユーザアカウントに適用されるだけです。
+::END
+
+$ABOUT_GROUPS_WIN$=Windowsグループ
+$ABOUT_GROUPS_WIN_TXT$::
+WindowsグループはWindows Organizational Units(OU)のための設定を表示します。WindowsグループはドメインのActive Directory構成で使用される同じ名前を使用することで、
+レイアウトがWindows OUに一致しなければなりません。 
+::END
+
+
+<!-- String table for Help-Group-Information -->
+$GROUP_INFO_HEADER$=グループ情報
+
+$GROUP_INFO$::
+グループでユーザアカウントに利用可能な実際にはあらゆる属性を構成することができます。グループレベル設定をグループメンバーが引き継いで、ユーザレベルで上書きすることができます。
+グループ情報タブは、グループメンバーのための名前、ホームディレクトリ、デフォルト管理権限などの全般的な情報を含みます。それぞれの利用可能な設定に関しては以下をご参照ください。
+::END
+
+$GROUP_INFO_NAME$=グループ名
+$GROUP_INFO_NAME_TXT$::
+グループ名は、そのレベル(サーバ、またはドメイン)で指定される各グループに、ユニーク（唯一）である必要があります。グループ名は以下の特殊文字を含むことができません。
+:\ / < > | : ? *
+::END
+
+$GROUP_INFO_DIRACCESS$=最初にグループ・ディレクトリ・アクセス・ルールを適用
+$GROUP_INFO_DIRACCESS_TXT$::
+$LINK_HELP_DIRACCESS$のヘルプで説明されるように、ディレクトリ・アクセス・ルールが記載されている順番は利用可能なリソースをユーザアカウントに決定する際に意味を持っています。
+デフォルトで、グループレベルで指定されるディレクトリ・アクセス・ルールはユーザレベルで指定されるものより優先されます。このボックスのチェックを外すと、グループのディレクトリ・
+アクセス・ルールはユーザのルールの<em>下</em>に置かれます。
+::END
+
+
+<!-- String table for Help-Group-Members -->
+$GROUP_MEMBERS_HEADER$=グループ・メンバー
+
+$GROUP_MEMBERS$::
+選択されたグループのメンバーであるユーザアカウントは、このタブに表示されます。現在ユーザの内容を確認するためこのタブを使用することができます。グループで、このインタフェースを
+使用することにより、ユーザを追加、削除することはできません。グループ・メンバーシップへの追加、削除は、ユーザ・アカウント・プロパティ・ウインドウから行われる必要があります。
+::END
+
+
+<!--  String table for Help-System-Variables.htm -->
+$SYSTEM_VARIABLES_HEADER$=システム変数
+$SYSTEM_VARIABLES_BODY1$::
+以下のリストの中で説明されるように変数の範囲を含むように、Serv-Uの特定のメッセージをカスタム設計することができます。これらの変数はランタイムのときに最新の統計と
+フィードバックがログインされたユーザに提供されるのを許可する適切な値に入れ替えられます。これらの変数を使用することができる場所のいくつかは、カスタム設計された
+FTPにコマンド応答、またはWelcomeメッセージを含んでいます。
+
+すべての利用可能な変数と、各説明は以下に含まれています。他の方法で指定されない場合、統計情報は計算されて、Serv-U ファイル・サーバが最後に始められたということです。
+::END
+
+$SYS_VARS_SERVER_INFO$=サーバ情報
+$SYS_VARS_SERVER_INFO_LIST$::
+$ServerName - サーバのフルネーム（例　Serv-U）
+$ServerVersionShort - Serv-U ファイル・サーバの現在のバージョンの最初の2桁 (例 7.0)
+$ServerVersionLong - Serv-U ファイル・サーバの現在のバージョンのすべての情報 (例 7.0.0.3)
+$OS - オペレーション・システムの名前（例 Windows XP）
+$OSVer - オペレーションシステムの全てのバージョン番号（例 5.1.2600）
+::END
+
+$SYS_VARS_SERVER_INFO_LIST_FUTURE_FEATURE$::
+$ComputerName - オペレーティングシステムから検索されたWindowsネットワークでのUNC名と同じコンピュータ名 (例, WEB-SERVER-01)
+$LogFilePath - ログファイルのパスを検索（ログファイル削除イベントのみ）
+::END
+
+$SYS_VARS_SERVER_STATS$=サーバ統計
+$SYS_VARS_SERVER_STATS_LIST$::
+$ServerDays - サーバがオンラインとなってからの合計日数
+$ServerHours - サーバがオンラインとなってからの0から24まで時間、$ServerDaysへの繰越
+$ServerMins - サーバがオンラインとなってからの0から60の分、$ServerHoursへの繰越
+$ServerSecs - サーバがオンラインとなってからの0から60の秒、$ServerMinsへの繰越
+$ServerKBup - アップロードされた合計キロバイト数
+$ServerKBdown - ダウンロードされた合計キロバイト数
+$ServerFilesUp - アップロードされたファイルの合計数
+$ServerFilesDown - ダウンロードされたファイルの合計数
+$ServerFilesTot - 転送されたファイルの合計、基本的には ($ServerFilesUp + $ServerFilesDown)
+$LoggedInAll - 確立されたセッションの合計数
+$ServerUploadAvgKBps - KB/秒によるアップロード率の平均
+$ServerDownloadAvgKBps - KB/秒によるダウンロード率の平均
+$ServerAvg - KB/秒によるデータ転送率の平均 (アップロードとダウンロード)
+$ServerUploadKBps - KB/秒による現在のアップロード転送率
+$ServerDownloadKBps - KB/秒による現在のダウンロード転送率
+$ServerKBps - KB/秒による現在のデータ転送率の総計
+$ServerSessions24HPlusOne - 過去２４時間と一つの追加セッションのセッション総数
+$ServerSessions24H - 過去２４時間でのセッションの総数
+::END
+
+$SYS_VARS_DOMAIN_STATS$=ドメイン統計
+$SYS_VARS_DOMAIN_STATS_LIST$::
+$DomainKBup - アップロードされた合計キロバイト数
+$DomainKBdown - ダウンロードされた合計キロバイト数
+$DomainFilesUp - アップロードされたファイルの合計数
+$DomainFilesDown - ダウンロードされたファイルの合計数
+$DomainFilesTot - 転送されたファイルの合計、基本的にはKB/秒による ($DomainFilesUp + $DomainFilesDown)
+$DomainLoggedIn - 現在接続されたセッションの合計数
+$DomainUploadAvgKBps - KB/秒によるアップロード率の平均
+$DomainDownloadAvgKBps - KB/秒によるダウンロード率の平均
+$DomainAvg - KB/秒によるデータ転送率の平均 (アップロードとダウンロード)
+$DomainUploadKBps - KB/秒による現在のアップロード転送率
+$DomainDownloadKBps - KB/秒による現在のダウンロード転送率
+$DomainKBps - KB/秒による現在のデータ転送率の総計
+$DomainSessions24HPlusOne - 過去２４時間と一つの追加セッションのセッション総数
+$DomainSessions24H - 過去２４時間でのセッションの総数
+::END
+
+$SYS_VARS_USER_STATS$=ユーザ統計 - ユーザアカウントへ付加されたすべてのセッションに適用
+$SYS_VARS_USER_STATS_LIST$::
+$UserKBUp - アップロードされた合計キロバイト数
+$UserKBDown - ダウンロードされた合計キロバイト数
+$UserKBTot - 転送されたキロバイト数の総計
+$UserLoggedIn - セッションの合計数
+$UserUploadAvgKBps - KB/秒によるアップロード率の平均
+$UserDownloadAvgKBps - KB/秒によるダウンロード率の平均
+$UserAvg - KB/秒によるデータ転送率の平均 (アップロードとダウンロード) 
+$UserUploadKBps - KB/秒による現在のアップロード転送率
+$UserDownloadKBps - KB/秒による現在のダウンロード転送率
+$UserKBps - KB/秒による現在のデータ転送率の総計
+$UserSessions24HPlusOne - 過去２４時間と一つの追加セッションのセッション総数
+$UserSessions24H - 過去２４時間でのセッションの総数
+::END
+
+$SYS_VARS_LAST_TRANSFER_STATS$=前回の転送統計 - 直近の最後に完了したデータ転送を適用します。
+$SYS_VARS_LAST_TRANSFER_STATS_LIST$::
+$TransferBytesPerSecond - バイト/秒による有効な（圧縮された）転送レート
+$TransferKBPerSecond -  KB/秒による有効な（圧縮された）転送レート
+$TransferBytes - フォーマットされた有効な（圧縮された）転送されたバイト数、例, 32,164
+$NoFormatTransferBytes - フォーマットされていない有効な（圧縮された）転送されたバイト数、例, 32164
+$TransferKB - フォーマットされた有用な（圧縮された）キロバイト転送数
+$ActualTransferBytesPerSecond - バイト/秒による実際の（解凍されない）転送レート
+$ActualTransferKBPerSecond - KB/秒による実際の（解凍されない）転送レート
+$ActualTransferBytes - フォーマットされた実際の（解凍されない）転送されたバイト数、例, 32,164
+$NoFormatActualTransferBytes - フォーマットされていない実際の（解凍されない）転送されたバイト数、例, 32164
+$ActualTransferKB - フォーマットされた実際の（解凍されない）キロバイト転送数
+$CompressionRatio - 転送の圧縮比率は予想の割合として転送されたデータの量を表しました。例えば、100.00の値は、データを圧縮することができなかったのを意味します。200.00の値は、データが半分に圧縮されたことを意味します。
+$CurrentCompressedTransferBytes - 今までのところ転送された現在の有効な(圧縮された)バイト数、非フォーマット、例, 32164 (FTPのみ)
+$CurrentUncompressedTransferBytes - 今までのところ転送された現在の実際(解凍された)バイト数、 非フォーマット、例, 32164 (FTPのみ)
+::END
+
+$SYS_VARS_DATE$=日付／時刻
+$SYS_VARS_DATE_LIST$::
+$Date - システムのローカル日付フォーマットによる、Serv-Uファイルサーバに準じた現在の日付
+$Time - システムのローカル日付フォーマットによる、Serv-Uファイルサーバに準じた現在の時刻
+::END
+
+$SYS_VARS_SERVER_SETTINGS$=サーバ設定
+$SYS_VARS_SERVER_SETTINGS_LIST$::
+$MaxUsers - ログインが許可されいたセッションの最大数(ライセンスにりセッションを制限することができました)
+$MaxAnonymous - ログインすることができた匿名（anonymous）ログインの最大数
+::END
+
+$SYS_VARS_USER_INFO$=セッション情報 - 現在のセッションへ適用
+$SYS_VARS_USER_INFO_LIST$::
+$Name - 付加されたユーザアカウントのログインID
+$IP - クライアントIPアドレス
+$IPName - $IPにリバースDNSルックアップを行うことにより得られるリバースDNS名
+$Dir - セッションの現在のディレクトリ
+$Disk - アクセスされるローカルドライブ文字
+$DFree - MBによる$Diskの空きスペース
+$FUp -  ファイルアップロードの合計数
+$FDown -  ファイルダウンロードの合計数
+$FTot -  転送されたファイルの合計数。基本的には ($FUp + $FDown)
+$BUp -  アップロードされたキロバイト数の合計 
+$Bdown -  ダウンロードされたキロバイト数の合計
+$BTot -  転送されたキロバイト数の合計
+$TconM -  セッションが接続されてからの合計時間（分）
+$TconS -  セッションが接続されてからの0から60での秒数、$TconMへの繰越
+$RatioUp -  適用されている転送率のアップロード部分、使用されていない場合は"N/A"
+$RatioDown -  適用されている転送率のダウンロード部分、使用されていない場合は"N/A"
+$RatioType - セッションかユーザ単位で適用される転送率の種類
+$RatioCreditType - 転送のために与えられる転送率クレジットのタイプ（バイトか完全なファイル単位）
+$RatioCredit -  適用された転送率(メガバイトか完全なファイルのどちらか)のための現在の転送クレジット
+$QuotaUsed - MBによる現在どのくらいのディスククォータが使用されているかの表示。クォータが使用されていない場合は"Unlimited"
+$QuotaLeft - MBによる現在どのくらいのディスククォータが利用可能であるかの表示。クォータが使用されていない場合は"Unlimited"
+$QuotaMax -  MBによる使用可能なディスクスペースの最大値の表示。クォータが使用されていない場合は"Unlimited"
+::END
+
+$SYS_VARS_USER_INFO_NOTE$::
+<strong>注意:</strong> イベントかサインオン・メッセージの$IPName可変内部を使用すると、$IPのためのリバースDNS情報が検索されている間、
+わずかな遅延が発生する場合があります。
+::END
+
+$SYS_VARS_USER_INFO_8_0_LIST$::
+$Protocol - 現在、使用されているプロトコル (FTP, FTPS, HTTP, HTTPS, または SFTP (SSH2))
+$DomainName - セッションがログインされている現在のドメイン
+$DomainDescription - セッションがログインされている現在のドメインの説明
+$TimeRemaining - IPアドレスをブロックする残り時間 (イベントのみ)
+::END
+
+$SYS_VARS_USER_INFO_LIST_FUTURE$::
+$LocalHomeDirectory - ローカル・ホームディレクトリ、それはユーザ作成など、この特定の情報を必要とするイベントのみに使用されるべきです。
+$Password -  ユーザアカウントに関連したパスワードです。それはイベントのためだけに意図されます。それはWelcomeメッセージに使用されるべきではありません。
+$UserEmailAddress - ユーザの電子メールアドレス
+$FullName - ユーザアカウントの「フルネーム」フィールドに入力さられるユーザのフルネーム。
+$SpaceFullName - ユーザのフルネームの前にスペースの追加された"$FullName"と同じです。
+$FullNameSpace - ユーザのフルネームの後にスペースが挿入される以外は"$FullName"と同じです。ユーザのフルネームが空である場合は空白です。
+::END
+
+
+$SYS_VARS_FILE_INFO$=ファイル情報 - 最後に遠隔でアクセスされたファイルに適用（必ず最後に転送されたファイルであるというわけではありません。）
+$SYS_VARS_FILE_INFO_LIST$::
+$PathName - フルリモートパスの読み出し
+$FileName - $PathNameからのファイル名だけの読み出し
+$FileSize - $FileNameからのファイルのサイズ（バイト）の読み出し
+::END
+
+$SYS_VARS_FILE_INFO_8_0_LIST$::
+$FileSizeFmt - 千での桁区切りを含むファイルサイズのフォーマットされたバージョン（コンピュータの設定に依存したカンマ、またはピリオド）
+$FileSizeKB - フォーマットされた浮動小数点値にによって表されるKBでのファイルサイズ
+$LocalPathName - Windowsに関連した、オペレーションのための完全なローカルパス名を検索します。たとえば"/Temp/file.fid"の代わりに"C:\Temp\File.fid"
+$LocalFileName - ローカルコンピュータに保存される際の、ファイルの名前を検索します。詳細に関して$LocalPathNameを参照してください。
+$OldLocalPathName - $LocalPathNameと同じように、名前の変更の前にパスを含みます。
+$OldLocalFileName - $LocalFileNameと同じように、名前の変更の前にファイル名を含みます。
+$OldPathName - 名前の変更をしながら、リモートパス名を検索します。
+$OldFileName - 名前の変更をしながら、リモートファイル名を検索します。
+::END
+
+$SYS_VARS_USAGE_STATS$=現在のアクティビティ
+$SYS_VARS_USAGE_STATS_LIST$::
+$UNow -  Serv-Uファイルサーバでの現在のセッション数
+$UAll -  最後に開始されてからのServ-U ファイル・サーバに接続されたセッションの総数
+$U24h -  直近の24時間でServ-U ファイル・サーバに接続されたセッションの総数
+$UAnonAll - 現在のServ-U ファイル・サーバで匿名ユーザ考えられるセッション数
+$UAnonThisDomain  - 接続されたドメインの匿名ユーザ考えられるセッション数
+$UNonAnonAll  - 接続されたドメインの匿名ユーザとして考えられないセッション数
+$UNonAnonThisDomain - 接続されたドメインの匿名ユーザ考えられないセッション数
+$UThisName - ユーザアカウントの接続と考えられるセッション数
+::END

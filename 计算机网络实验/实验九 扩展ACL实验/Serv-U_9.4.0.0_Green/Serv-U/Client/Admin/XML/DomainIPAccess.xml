@@ -1,0 +1,18 @@
+%PRIV_DOMAIN_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<rules>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <rule listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% <IP>%CIPAccess.%LIST_ID%.IP%</IP>
+%ADD_LIST_STRING% <Allow>%CIPAccess.%LIST_ID%.Allow%</Allow>
+%ADD_LIST_STRING% <Expires>%CIPAccess.%LIST_ID%.ExpiresSeconds%</Expires>
+%ADD_LIST_STRING% <Description>%CIPAccess.%LIST_ID%.Description%</Description>
+%ADD_LIST_STRING% <ResolvedIP>%CIPAccess.%LIST_ID%.ResolvedIP%</ResolvedIP>
+%ADD_LIST_STRING% <ResolvedName>%CIPAccess.%LIST_ID%.ResolvedName%</ResolvedName>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING% </rule>
+%CDomain.%ID%.IPAccess.List%
+</rules>
+<listresult>%LIST_RESULT%</listresult>
+</response>

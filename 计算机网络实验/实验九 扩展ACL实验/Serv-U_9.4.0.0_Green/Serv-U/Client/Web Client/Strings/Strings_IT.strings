@@ -1,0 +1,198 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Web Client\Include\ -->
+
+<!-- General -->
+$CLICK_HERE_CURRENT_DIR$=<a href="%FILE%ListDir.htm?Dir=%CURRENT_DIR%">Clicca qui per visualizzare la tua home directory.</a>
+$WARN_IMAGE$=<img src="%FILE%Images\warn.gif" style="float:left;">
+$DELETE$=Elimina
+$OPEN$=Apri
+$CURRENTLY_LOCATED$=Attualmente posizionato in
+$USE_INHERITED$=Eredita valore predefinito
+$NO_SCRIPT_TEXT$=Sembra che il tuo browser non abbia JavaScript abilitato.  Questa pagina richiede che JavaScript sia abilitato.
+$PLEASE_ENTER_USER_NAME$=Per favore inserisci un ID di accesso.
+
+
+<!-- Login -->
+$LOGIN_TITLE$=Serv-U from RhinoSoft.com
+$LANGUAGE$=Lingua
+$PASSWORD$=Password
+$LOGIN$=Accedi
+$CHANGE_PASSWORD$=Cambia Password
+$REMEMBER_USER$=Rimani sempre autenticato
+$RELOAD$=Ricarica
+$JSCRIPT_DISABLED_WARN$=JavaScript &egrave; disabilitato nelle impostazioni del tuo browser.  Per utilizzare il file server Serv-U, javascript deve essere abilitato. <br /><br />Clicca su "$RELOAD$" qui sotto dopo aver abilitato javascript nelle impostazioni del browser.
+$IE_NOT_COMPATIBLE_WARN$=Stai usando una versione di Internet Explorer incompatibile. Per favore aggiorna Internet Explorer alla versione 6.0 o superiore per utilizzare Serv-U.
+$BROWSER_NOT_COMPATIBLE_WARN$=Il browser che stai utilizzando non &egrave; compatibile con la versione corrente di Serv-U.  Per favore utilizza Internet Explorer 6.0+, Firefox 1.0+, Safari 3+ o Opera 9+.
+
+<!-- Languages -->
+$ENGLISH$=English (Inglese)
+$GERMAN$=Deutsch (Tedesco)
+$ITALIAN$=Italiano
+$FRENCH$=Français (Francese)
+$SPANISH$=Español (Spagnolo)
+$PORTUGUESE$=Português (Portoghese)
+$SWEDISH$=Svenska (Svedese)
+$FINISH$=Suomi (Finlandese)
+$NORWEGIAN$=Norsk (Norvegese)
+$DANISH$=Dansk (Danese)
+$RUSSIAN$=Русский (Russo)
+$TRADITIONAL_CHINESE$=繁體中文 (Cinese tradizionale)
+$SIMPLIFIED_CHINESE$=简体中文 (Cinese semplificato)
+$JAPANESE$=日本語 (Giapponese)
+
+
+<!-- Logout -->
+$LOGOUT_TITLE$=Disconnesso
+$LOGOUT_DESC$=Sei stato disconnesso.  <a href="%LOGIN%">Clicca qui per effettuare l&#8217;accesso.</a>
+$LOGGED_OUT_MSG$=Sei stato disconnesso.
+
+
+<!-- Login Change Password -->
+$PASSWORD_EXPIRED_TITLE$=Password Scaduta - Cambia Password
+$PASSWORD_EXPIRED_DESC$=La tua password &egrave; scaduta, per favore cambia la password prima di continuare.
+
+
+<!-- Session Not Found -->
+$SESSION_NOT_FOUND_TITLE$=Non autorizzato - Sessione non trovata
+$SESSION_NOT_FOUND_HEAD$=401 Non autorizzato, la sessione specificata non esiste
+$SESSION_NOT_FOUND_DESC$=La sessione specificata non esiste.  Questo potrebbe essere dovuto a un lungo periodo di inattivit&agrave;. Prova ad effettuare nuovamente l&#8217;accesso.
+
+
+<!-- Not Logged In -->
+$NOT_LOGGED_IN_TITLE$=Non autorizzato - Accesso non effettuato
+$NOT_LOGGED_IN_HEAD$=401 non autorizzato, non hai effettuato l&#8217;accesso
+$NOT_LOGGED_IN_DESC$=Non sei autorizzato ad eseguire l&#8217;operazione richiesta.  <a href="%LOGIN%">Per favore accedi prima di tentare di eseguire questa operazione.</a>
+
+
+<!-- Permission Denied -->
+$PERMISSION_DENIED_TITLE$=Permesso negato
+$PERMISSION_DENIED_DESC$=Permesso negato
+
+
+<!-- Listing -->
+$CURR_DIR_HOST$=%HOST%
+$CURR_DIR_NAME$=%CURRENT_DIR_NAME%
+$MOD_TIME$=Ora
+$ATTRS$=Attributi
+$THUMBNAIL_LIST$=Anteprime
+$UPLOAD_ACTION$=Carica File
+$UPLOAD$=Carica
+$UPLOAD_ALT$=Carica
+$THUMBNAILS_ALT$=Anteprime
+$DETAILS_ALT$=Dettagli
+$CREATE_DIR_ALT$=Crea cartella
+$FILETOOLS$=Strumenti
+$DOWNLOAD$=Scarica
+$THUMBNAIL_SIZE$=Dimensione anteprima
+$SELECT_THUMBNAIL_SIZE$=Seleziona dimensione
+$PREVIEW_IMAGE$=Anteprima immagine
+$CHANGE_PASSWORD_BUTTON$=Cambia password
+$FILE_PATH$=Percorso file
+$PLAY_MEDIA$=Esegui Elemento multimediale
+$PLAY_LIST$=Esegui lista
+$AUDIO_PLAY_LIST$=Lista di esecuzione Audio
+$PLAYLIST_SIZE$=Dimensioni lista di esecuzione
+$SHUFFLE_PLAYLIST$=Mescola lista di esecuzione
+$NEXT_MEDIA_FILE$=File multimediale successivo
+$PREVIOUS_MEDIA_FILE$=File multimediale precedente
+$HOME$=Principale
+$FOLDER_EMPTY$=La cartella &egrave; vuota
+$BACK$=Indietro
+$FORWARD$=Avanti
+$HISTORY_LIST$=Lista Cronologia
+$SEARCH_ACTION$=Cerca
+$NO_FILES_FOUND$=Nessun file trovato.
+
+
+<!-- Thumbnail Listing -->
+$DETAIL_LIST$=Dettagli
+
+
+<!-- STOR File Uploaded -->
+$STOR_FILE_UPLOADED_TITLE$=File Caricato
+$STOR_FILE_UPLOADED_DESC$=Il file &egrave; stato caricato con successo.<br><br>$CLICK_HERE_CURRENT_DIR$
+
+
+<!-- Rename -->
+$RENAME_TITLE$=Rinomina
+$RENAME_DESC$=Inserisci il nuovo nome:
+$NEW_NAME$=Nuovo nome
+$RENAME$=Rinomina
+
+
+<!-- Delete -->
+$DELETE_DIR$=Sei sicuro di voler eliminare la cartella selzionata?
+$DELETE_FILE$=Sei sicuro di voler eliminare il file selezionato?
+
+
+<!-- Style Swap Properties -->
+$BOX_WIDTH_SMALL$=boxwidth300
+
+
+<!-- Overwrite file on upload -->
+$OVERWRITE_FILE$=Sei sicuro di voler sovrascrivere questo file?
+
+<!-- Search -->
+$FILE_SEARCH_DESC$=Tutto il nome del file o una sua parte
+$FILE_SEARCH_TITLE$=Cerca File
+$SEARCH_SAMPLES$=Esempi di ricerca
+$SEARCH_RESULTS$=Risultati ricerca
+
+<!-- **************** ImagePreviewDialog.htm **************** -->
+$IMAGE_DIALOG_TITLE$=Anteprima immagine
+$PREVIOUS_IMAGE$=Immagine precedente
+$PAUSE_SLIDESHOW$=Metti in pausa la sequenza
+$PLAY_SLIDESHOW$=Visualizza in sequenza
+$NEXT_IMAGE$=Prossima immagine
+$OF$=di
+$IMAGES$=Immagini
+$SLIDE_SHOW$=Sequenza
+$SLIDE_SHOW_SPEED$=Velocit&agrave; sequenza
+$FAST$=Veloce
+$SLOW$=Lenta
+$THUMBNAIL_SCROLL$=Scorrimento Anteprime
+
+<!-- **************** AlertDialog.htm **************** -->
+$SELECT_FILE_DELETE$=Per favore prima seleziona una cartella da eliminare.
+$SELECT_FILE_RENAME$=Per favore prima seleziona una cartella da rinominare.
+$RECOMMEND_IE_UPGRADE_1$=Stai usando una vecchia versione di Microsoft Internet Explorer. Internet Explorer 8.0 e superiori includono molti miglioramenti nelle funzionalit&agrave e nelle prestazioni.
+$RECOMMEND_IE_UPGRADE_2$=<a class="links" href="http://www.microsoft.com/ie" target="_blank">Clicca qui</a> per scaricare l&#39;ultima versione di Internet Explorer.
+
+
+<!-- **************** AskUserPlacementDialog.htm **************** -->
+$ASK_USER_TITLE$=Opzioni del client
+$CLIENT_SELECTION$=Selezione del client
+$USER_PLACEMENT_DESC1$=Per favore seleziona come vuoi accedere al tuo account.  Il client Web &egrave; un&#8217;interfaccia basata sul browser e facile da utilizzare.
+$USER_PLACEMENT_DESC2$=FTP Voyager JV &egrave; un client FTP ricco di funzioni che utilizza Java nel browser.
+$BASIC_WEB_CLIENT$=Web Client
+$FVJV$=FTP Voyager JV
+
+
+<!-- **************** LoggedInDialog.htm **************** -->
+$LOGGED_IN_DIALOG_TITLE$=Adesso sei connesso.
+$LOGGED_IN_DESC$=Adesso sei connesso. Fai click su &quot;OK&quot; per riavviare la tua sessione.
+
+
+<!-- **************** FVJVLoggedInDialog.htm **************** -->
+$FVJV_LOGGED_IN_DESC$=Accesso Effettuato.
+$FVJV_LOGGED_IN_ACTION$=Fai click qui per riavviare la tua sessione ed effettuare l&#39;accesso.
+
+
+<!-- **************** UploadProgressDialog.htm **************** -->
+$UPLOAD_PROGRESS$=Avanzamento del caricamento
+$TRANSFER_RATE$=Velocit&agrave; di trasferimento
+$WRITTEN$=Scritto
+$REMAINING$=Rimanente
+$TIME_REMAINING$=Tempo rimasto
+$DESTINATION$=Destinazione
+$KB_SEC_LABEL$=KB/sec
+$PLEASE_SELECT_FILE_UPLOAD$=Per favore seleziona un file da caricare usando il pulsante Sfoglia.
+$UPLOADING$=Caricamento
+$LARGE_FILE_UPLOAD_WARN$=Lo stato di caricamento di files pi&ugrave; grandi di 2GB pu&ograve; essere incompleto o poco accurato a causa del tuo browser web.
+$MOZ_LARGE_FILE_UPLOAD_WARN$=I browser della famiglia Mozilla non permettono l&#8217;invio di file pi&ugrave; grandi di 2GB.
+$UNABLE_TO_UPLOAD$=Il browser web non &egrave; stao in grado di caricare il file. Il file potrebbe essere troppo grande per il browser che stai utilizzando.  $MOZ_LARGE_FILE_UPLOAD_WARN$
+<!-- **************** PasswordRecoveryDialog.htm **************** -->
+$RECOVER_PASSWORD_TITLE$=Recupera password
+$PASSWORD_RECOVERED$=Il recupero password &egrave; riuscito.  La password &egrave; stata inviata via email.
+$PASSWORD_RECOVER_FAILURE_ERROR$=Recupero password fallito.  Per favore contatta il tuo amministratore per assistenza. 

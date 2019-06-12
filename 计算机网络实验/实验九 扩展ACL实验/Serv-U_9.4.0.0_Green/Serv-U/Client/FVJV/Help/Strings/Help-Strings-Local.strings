@@ -1,0 +1,1782 @@
+﻿<!--#include "Help-Strings-Images.strings"-->
+<!-- File:		Help-Strings-Local.strings																					-->
+<!-- Language:	English																										-->
+<!-- Purpose:	Provides translated strings for FTP Voyager JV's Help documentation.										-->
+<!-- Notes:		- Comment blocks are useful.  To place a comment, use the HTML tags at the beginning and end of this line	-->
+<!--			- Any text following a "$=" should be translated															-->
+<!--			- Any text between a "$::" through "::END" should be translated												-->
+<!--			- HTML tags should not be translated (Example:  "<strong>")													-->
+
+<!-- Reused HTML links throughout the help docs.  The text within these links may need to be translated. -->
+$LINK_FTP_VOYAGER$=<a href="http://www.ftpvoyager.com/" target="_blank">FTP Voyager&reg;</a>
+$LINK_SERVU$=<a href="http://www.Serv-U.com/" target="_blank">Serv-U File Server</a>
+$LINK_RHINOSOFT$=<a href="http://www.rhinosoft.com/" target="_blank">RhinoSoft.com</a>
+$LINK_JAVA_RUNTIME$=<a href="http://www.java.com/download/java/" target="_blank">Java Runtime</a>
+
+<!-- Reused HTML links for other help documentation pages.  The text within these links must be translated. -->
+
+$LINK_LOCAL_REMOTE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">Local/Remote Pane</a>
+$LINK_LOCAL_REMOTE_PANES$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">Local/Remote Panes</a>
+$LINK_LOCAL_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">Local Pane</a>
+$LINK_REMOTE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">Remote Pane</a>
+$LINK_TREE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Tree-Overview.htm">Tree Pane</a>
+$LINK_PREVIEW_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Preview-Overview.htm">Preview Pane</a>
+$LINK_LIST_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-List-Overview.htm">List Pane</a>
+$LINK_TRANSFER_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Transfer-Overview.htm">Transfer Pane</a>
+$LINK_STATUS_BAR$=<a href="%FVJV_FILE%Help/Help-Layout-StatusBar-Overview.htm">Status Bar</a>
+$LINK_SEARCH_BAR$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Search-Overview.htm">Search Bar</a>
+
+$LINK_MAIN_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Overview.htm">Main Menu</a>
+$LINK_FILE_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm">File Menu</a>
+$LINK_EDIT_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Edit.htm">Edit Menu</a>
+$LINK_VIEW_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-View.htm">View Menu</a>
+$LINK_WINDOWS_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm">Windows Menu</a>
+$LINK_HELP_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Help.htm">Help Menu</a>
+
+
+$LINK_LOCAL_REMOTE_TOOLBAR$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Overview.htm">Local/Remote Toolbar</a>
+$LINK_CRUMB_BAR$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Overview.htm">Navigation Bar</a>
+
+$LINK_CRUMB$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">Crumb</a>
+$LINK_CRUMB_HISTORY$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">History</a>
+$LINK_ABSOLUTE_PATH_MODE$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">Absolute Path Mode</a>
+
+$LINK_STOP_AFTER_FILE_COMPLETES$=<a href="%FVJV_FILE%Help/Help-Tbar-Transfer-Actions.htm#StopAfterFileCompletes">Stop After File Completes</a>
+$LINK_PAUSE$=<a href="%FVJV_FILE%Help/Help-Tbar-Transfer-Actions.htm#Pause">Pause</a>
+
+
+$LINK_FRAME_LIST$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm#FrameList">Frame List</a>
+$LINK_AUTO_HIDE$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm#AutoHide" style="color:Black">Auto Hide</a>
+$LINK_ACTIVATE_WINDOW$=<a href="%FVJV_FILE%Help/Help-Dlg-ActivateWindow.htm">Activate Window</a>
+
+$LINK_PREFERENCES$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-General.htm">Preferences</a>
+$LINK_PREF_PAGE_GENERAL$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-General.htm">General</a>
+$LINK_PREF_PAGE_TOOLBARS$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-Toolbars.htm">Toolbars</a>
+
+$LINK_THUMB_SIZES_HERE$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-View.htm#ThumbSize">here</a>
+
+$LINK_SYNC_FOLDERS$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders.htm">Synchronize Folders</a>
+$LINK_SAVE_LOGIN$=<a href="%FVJV_FILE%Help/Help-Dlg-SaveLogin.htm">Save Login</a>
+$LINK_CHANGE_PASSWORD$=<a href="%FVJV_FILE%Help/Help-Dlg-ChangePassword.htm">Change Password</a>
+
+$LINK_ACTIVE_PANE$=<a href="%FVJV_FILE%Help/Help-OtherInfo-ActivePane-Overview.htm">Active Pane</a>
+$LINK_LOCAL_LIST_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm#ListPane">Local-List Pane</a>
+$LINK_DOCKING_FRAMEWORK$=<a href="%FVJV_FILE%Help/Help-OtherInfo-DockingFramework-Overview.htm">Docking Framework</a>
+
+$LINK_DOWNLOAD_BTN$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm#Download">Download button</a>
+$LINK_UPLOAD_BTN$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm#Upload">Upload button</a>
+
+$BOLD_NOTE$=<strong>Note</strong>
+
+<!-- Help-Dlg-SyncFolders... -->
+$LINK_SYNC_FOLDERS_LOCAL_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results.htm">Local-Results Pane</a>
+$LINK_SYNC_FOLDERS_REMOTE_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results.htm">Remote-Results Pane</a>
+$LINK_SYNC_FOLDERS_OPTIONS_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Options.htm">Options Pane</a>
+
+$LINK_SYNC_FOLDERS_RESULTS_TBAR$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results-Tbar.htm">Toolbar</a>
+$LINK_SYNC_FOLDERS_RESULTS_LIST$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results-List.htm">List</a>
+
+
+<!-- Help-Overview.htm -->
+$OVERVIEW_MAIN_HEADER$=FTP Voyager JV Overview
+
+$OVERVIEW_BODY$::
+Welcome to FTP Voyager JV!
+
+FTP Voyager JV is a full-featured, Java-based transfer client based on the award-winning $LINK_FTP_VOYAGER$ product from $LINK_RHINOSOFT$.
+It is distributed by a licensed $LINK_SERVU$ to provide a familiar, powerful way to transfer files for all users of the File Server.
+
+Some important features of FTP Voyager JV include:
+::END
+
+$OVERVIEW_FEATURES$::
+No installation required - FTP Voyager JV only requires the Java Runtime Environment.
+Operates using the HTTP protocol for easy firewall configuration.
+Supports SSL encrypted communications using HTTPS.
+Thumbnail view of remote images that minimizes bandwidth usage.
+Maintains timestamps of transferred files.
+Easy drag and drop file transfers between local and remote panes.
+Multiple concurrent transfers for fast delivery of files.
+Customizable appearance, giving users a sense of familiarity between applications.
+Easily manage transfers through a Transfer Queue.
+Ability to RESUME transfers.
+View different parts of the same file system simultaneously by utilizing the "docking framework".
+User customizable workspaces.
+Preview image files (JPG, PNG, GIF, and many more).
+::END
+
+$OVERVIEW_FEATURES_NEW$::
+No installation required - FTP Voyager JV only requires the Java Runtime Environment.
+Operates using the HTTP protocol for easy firewall configuration.
+Supports SSL encrypted communications using HTTPS.
+Thumbnail view of remote images that minimizes bandwidth usage.
+Maintains timestamps of transferred files.
+Easy drag and drop file transfers between local and remote panes.
+Multiple concurrent transfers for fast delivery of files.
+Customizable appearance, giving users a sense of familiarity between applications.
+Easily manage transfers through a Transfer Queue.
+Ability to RESUME transfers.
+View different parts of the same file system simultaneously by utilizing the "docking framework".
+User customizable workspaces.
+Preview image files (JPG, PNG, GIF, and many more).
+Store login files to disk for easier launching.
+Search for files and directories.
+::END
+
+
+<!-- Help-Layout-Main-Overview.htm -->
+$HEAD_LAYOUT_MAIN$=Application Overview
+
+$DESC_LAYOUT_MAIN$::
+The user interface of FTP Voyager JV makes it easier than ever to navigate a file system.  By using a familiar and simple layout
+users can quickly begin to navigate through their file system.  A significant addition to the layout is the introduction of the
+"$LINK_DOCKING_FRAMEWORK$".  The "docking framework" allows the user to look at two different parts of the same file system.  Users can also change the location of "dockable frames and/or toolbars" to create a customizable workspace.  This creates a very simple
+intuitive file transfer client tailored to each user of Serv-U.
+::END
+
+$HEAD_LAYOUT_INITIAL$=Initial Layout
+
+$DESC_LAYOUT_INITIAL_1$::
+FTP Voyager JV initially starts up with a layout similar to the one shown below:
+::END
+$LI_LAYOUT_INTIIAL_1$=:  Initially located at the top of the application window.  It contains all the actions that FTP Voyager JV can perform.
+$LI_LAYOUT_INTIIAL_2$=:  Initially located at the top-left side of the application window.  It shows the client's local file system.
+$LI_LAYOUT_INTIIAL_3$=:  Initially located at the top-right side of the application window.  It shows the server's remote file system.
+$LI_LAYOUT_INTIIAL_4$=:  Initially located at the bottom of the application window.  It shows the transfers between the client and server.
+$LI_LAYOUT_INTIIAL_5$=:  Located at the bottom of the application window.  It shows dynamic descriptions of buttons and actions of FTP Voyager JV, as well as Local/Remote listing information like number of files/folders and number of selected files/folders.
+
+$NOTE_CONTENT_REMOVED$=$BOLD_NOTE$:  The content has been removed in order to help with visualization of the location of each component.
+
+
+<!-- Help-Layout-Browser-Overview.htm -->
+$HEAD_PANE_LOCAL_REMOTE$=Local Pane & Remote Pane Overview
+
+$DESC_PANE_LOCAL_REMOTE$::
+The local and remote panes allow the user to quickly navigate through a file system.  Each pane has a similar layout which eases
+the user into a comfortable transition between the two file systems.  The panes also inherit the functionality of the
+"$LINK_DOCKING_FRAMEWORK$", which allows the user to customize the layout of each pane.  Each local panel shows the contents of
+the client's local file system and each remote panel shows the contents of the server's remote file system.
+::END
+
+$HEAD_LOCAL_PANE$=Local Pane
+$DESC_LOCAL_PANE$::
+The local pane is initially located in the upper-left panel of the main application window. Its viewport shows the contents of the client's
+local file system.
+::END
+
+$HEAD_REMOTE_PANE$=Remote Pane
+$DESC_REMOTE_PANE$::
+The remote pane is initially located in the upper-right panel of the main application window.  Its viewport shows the contents of the server's
+remote file system.
+::END
+
+$DESC_FUNCTIONALITY$=From these panes, it is possible to:
+$LI_FUNCTIONALITY_1$=Navigate through directories, viewing their contents
+$LI_FUNCTIONALITY_2$=Create new directories
+$LI_FUNCTIONALITY_3$=Delete directories and files
+$LI_FUNCTIONALITY_4$=Rename directories and files
+$LI_FUNCTIONALITY_5$=View detailed properties of directories and files
+$LI_FUNCTIONALITY_6$=Copy or Move files from one directory to another
+$LI_FUNCTIONALITY_7$=Transfer files between the Local and Remote file systems
+$LI_FUNCTIONALITY_8$=Display thumbnail images of supported file types
+$LI_FUNCTIONALITY_9$=Preview the contents of supported file types
+$LI_FUNCTIONALITY_10$=Search for files and/or folders
+
+$HEAD_BROWSER_PANE_LAYOUT$=Initial Layout
+$DESC_BROWSER_PANE_LAYOUT$::
+The panes initially consist of the components listed below:
+::END
+$LI_BROWSER_PANE_LAYOUT_1$=: Shows the current working directory using a "crumb" to represent each directory in the path.  The user can also type in an absolute path to navigate to from within this toolbar.
+$LI_BROWSER_PANE_LAYOUT_2$=: Shows the actions that can be performed on directories and/or files.  The toolbar can be customized by right-clicking and toggling the visible state of each button.
+$LI_BROWSER_PANE_LAYOUT_3$=: Shows the folders of the corresponding file system as a tree structure.
+$LI_BROWSER_PANE_LAYOUT_4$=: Shows a preview of the file selected from the listing.
+$LI_BROWSER_PANE_LAYOUT_5$=: Shows the file listing of the current working directory.
+$LI_BROWSER_PANE_LAYOUT_6$=: Shows the controls needed to perform a search through the current working directory.
+
+
+<!-- Help-Layout-Browser-Tree-Overview.htm -->
+$HEAD_TREE_PANE$=Tree Pane Overview
+$DESC_TREE_PANE$::
+The Tree Pane is initially located in the upper-left corner of the $LINK_LOCAL_REMOTE_PANE$ just above the $LINK_PREVIEW_PANE$.
+It displays the folders of the corresponding file system as a hierarchy.  This makes it very easy to understand how the file system is laid out.
+
+The Tree Pane has many features that can be used to easily manage the underlying file system.  These are listed below:
+::END
+$LI_TREE_PANE_FEATURE_1$=Creating a new directory
+$LI_TREE_PANE_FEATURE_2$=Deleting a directory
+$LI_TREE_PANE_FEATURE_3$=Renaming a directory
+$LI_TREE_PANE_FEATURE_4$=Opening a directory to view its contents
+$LI_TREE_PANE_FEATURE_5$=Viewing the properties of a directory
+$LI_TREE_PANE_FEATURE_6$=Copying or Moving a directory to another location
+$LI_TREE_PANE_FEATURE_7$=Transferring a directory to the other file system
+
+$HEAD_EXAMPLE_PATH$=The above screenshot uses the sample path "C:\Downloads\RhinoSoft.com" to show how the tree breaks down the folder structure:
+$DESC_EXAMPLE_PATH_1$=Desktop
+$DESC_EXAMPLE_PATH_2$=Computer
+$DESC_EXAMPLE_PATH_3$=C:
+$DESC_EXAMPLE_PATH_4$=Downloads
+$DESC_EXAMPLE_PATH_5$=RhinoSoft.com
+
+
+<!-- Help-Layout-Browser-Preview-Overview.htm -->
+$HEAD_PREVIEW_PANE$=Preview Pane Overview
+$DESC_PREVIEW_PANE$::
+The Preview Pane is initially located in the lower-left corner of the $LINK_LOCAL_REMOTE_PANE$ just below the $LINK_TREE_PANE$.
+It displays a preview of the file that is selected from within the $LINK_LIST_PANE$.  This is very useful when it is more efficient to
+preview an image file without downloading the original.  When the Preview Pane is undocked from the interface, its size can be adjusted.
+Resizing the Preview Pane also adjusts the size of the image being previewed.
+
+The Preview Pane supports the file types listed below:
+::END
+$LI_PREVIEW_TYPES_SUPPORTED$::
+JPG/JPEG
+GIF
+PNG
+::END
+
+
+<!-- Help-Layout-Browser-List-Overview.htm -->
+$HEAD_LIST_PANE_OVERVIEW$=List Pane Overview
+$DESC_LIST_PANE_OVERVIEW$::
+The List Pane is initially located on the right side of the $LINK_LOCAL_REMOTE_PANE$.  It displays all the files and directories
+of the current working directory.  The List Pane has many features that can be used to easily manage the underlying file system.
+
+These features are listed below:
+::END
+$LI_LIST_PANE_FEATURE_1$=Creating a new directory
+$LI_LIST_PANE_FEATURE_2$=Deleting directories and files
+$LI_LIST_PANE_FEATURE_3$=Renaming a directory or file
+$LI_LIST_PANE_FEATURE_4$=Opening a directory to view its contents
+$LI_LIST_PANE_FEATURE_5$=Opening a file
+$LI_LIST_PANE_FEATURE_6$=Viewing the properties of directories and files
+$LI_LIST_PANE_FEATURE_7$=Copying or Moving directories and files to another location
+$LI_LIST_PANE_FEATURE_8$=Transferring directories and files to another file system
+
+$DESC_LIST_PANE_VIEW_MODES$=The List Pane can show the directory contents using one of five supported views:
+$LI_LIST_PANE_VIEW_1$=<strong>Large Icons</strong> - Displays the filenames along with an appropriate large icon determined by the file type.
+$LI_LIST_PANE_VIEW_2$=<strong>Small Icons</strong> - Displays the same information as Large Icons, except using a smaller icon.
+$LI_LIST_PANE_VIEW_3$=<strong>List</strong> - Displays the same information as Small Icons, but scrolling horizontally to display additional files.
+$LI_LIST_PANE_VIEW_4$=<strong>Details</strong> - The traditional view used by Windows Explorer to display additional information about each file.
+$LI_LIST_PANE_VIEW_5$=<strong>Thumbnails</strong> - Displays the filenames along with a preview of supported image types.
+
+$DESC_LIST_PANE_DETAILS$::
+The Details view has four columns that display important information about each file.  These columns are described below:
+::END
+$LI_LIST_PANE_DETAILS_1$=Name
+$LI_LIST_PANE_DETAILS_2$=Size
+$LI_LIST_PANE_DETAILS_3$=Type
+$LI_LIST_PANE_DETAILS_4$=Modified
+$LI_LIST_PANE_DETAILS_1_1$=:  Shows the display name of the file or directory
+$LI_LIST_PANE_DETAILS_2_1$=:  Shows the size of the file or directory
+$LI_LIST_PANE_DETAILS_3_1$=:  Identifies the file type as registered with the client's operating system
+$LI_LIST_PANE_DETAILS_4_1$=:  Shows the last date that the file was modified
+$DESC_LIST_PANE_THUMBS$::
+Thumbnail view can display each file as a thumbnail representation of itself.  If the file does not produce an image of itself,
+then the "Large Icon" is used instead.  For information on the different sizes available for thumbnails,
+please click $LINK_THUMB_SIZES_HERE$.
+::END
+
+
+<!-- Help-Layout-Transfer-Overview.htm -->
+$HEAD_TRANSFER_PANE_OVERVIEW$=Transfer Pane Overview
+$DESC_TRANSFER_PANE_OVERVIEW$::
+The Transfer Pane is initially located at the bottom of the application window.  The Transfer Pane shows
+status information for all file transfers.  By default, transfers are removed from this pane if they are completed, cancelled,
+or interrupted.  However, FTP Voyager JV can be configured to leave entries in the transfer pane until they are removed manually.
+The Transfer Pane has several features that can be used to easily manage each transfer.
+
+These features are listed below:
+::END
+$LI_TRANSFER_PANE_FEATURE_1$=Stop the selected transfer after the current file is complete.
+$LI_TRANSFER_PANE_FEATURE_2$=Move onto the next file for the selected transfer.
+$LI_TRANSFER_PANE_FEATURE_3$=Pause the selected transfer.
+$LI_TRANSFER_PANE_FEATURE_4$=Resume the selected transfer.
+$LI_TRANSFER_PANE_FEATURE_5$=Cancel the transfer.
+$LI_TRANSFER_PANE_FEATURE_6$=Remove the transfer from the list.
+$LI_TRANSFER_PANE_FEATURE_7$=Cancel all transfers that are in the list.
+$LI_TRANSFER_PANE_FEATURE_8$=Remove all transfers from the list.
+
+$DESC_TRANSFER_COLUMNS$::
+The Transfer Pane contains columns showing important information about the transfer.  These columns are listed below:
+::END
+
+$HEAD_COL_OPERATING_STATUS$=Operation
+$DESC_COL_OPERATING_STATUS$::
+Displays the current state of the transfer.  At any time, the state of the transfer can change.  The states are listed below:
+::END
+$LI_COL_OPERATING_STATUS_1$=<strong>Running</strong>:  The transfer is in progress.
+$LI_COL_OPERATING_STATUS_2$=<strong>Stopped</strong>:  The transfer has been stopped.  This could be a result of selecting the $LINK_STOP_AFTER_FILE_COMPLETES$ option.
+$LI_COL_OPERATING_STATUS_3$=<strong>Paused</strong>: The transfer has been paused.  This could be a result of selecting the $LINK_PAUSE$ option.
+$LI_COL_OPERATING_STATUS_4$=<strong>Cancelled</strong>: The transfer has been cancelled.
+$LI_COL_OPERATING_STATUS_5$=<strong>Error</strong>: The transfer has encountered an error.  The transfer could continue after the error has been acknowledged by the user.
+
+$HEAD_COL_NAME$=Name
+$DESC_COL_NAME$::
+The name of the file currently being transferred is shown in this column.  If an entire directory or multiple files are being transferred,
+the name displayed in this column changes as files are completed.
+::END
+
+$HEAD_COL_STATUS$=Status
+$DESC_COL_STATUS$::
+This column displays the progress for the current file being transferred.  It displays the total size of the file as well as how much of
+the file has already been transferred in actual bytes as well as a percentage with a visual progress indicator.
+::END
+
+$HEAD_COL_COMPLETION$=Completion
+$DESC_COL_COMPLETION$::
+The Completion column shows the transfer rate and the estimated amount of time until transfer completion.  The estimated time is displayed in the
+format of HH:MM:SS where "HH" represents hours, "MM" represents minutes, and "SS" represents seconds.  The transfer also displays one of two icons
+to indicate whether the transfer is an upload or download:
+::END
+$LI_COL_COMPLETION_1$=Uploading
+$LI_COL_COMPLETION_2$=Downloading
+
+$HEAD_COL_OVERALL$=Overall
+$DESC_COL_OVERALL$::
+Displays the overall number of bytes transferred for the all the files that are part of this particular transfer.  This has a progress indicator that
+updates at certain intervals to show the approximate percentage of the number of bytes transferred.
+::END
+
+$HEAD_COL_PATH_FROM$=Source Path
+$DESC_COL_PATH_FROM$::
+This column displays the complete path for the "source" file that is currently being transferred.
+::END
+
+$HEAD_COL_PATH_TO$=Destination Path
+$DESC_COL_PATH_TO$::
+This column displays the complete path for the "destination" file that is currently being transferred.
+::END
+
+
+<!-- Help-Layout-StatusBar-Overview.htm -->
+$HEAD_LAYOUT_STATUS_BAR$=Status Bar Overview
+
+$DESC_LAYOUT_STATUS_BAR$::
+The Status Bar is located at the bottom of the main application window.  It can show descriptions for various actions of
+FTP Voyager JV, the name of the currently connected user account, secure connection identifier, and elapsed time for this session.
+::END
+
+$LI_STATUS_BAR_AREA_1_1$=Status Area: 
+$LI_STATUS_BAR_USER_2_1$=User: 
+$LI_STATUS_BAR_CONNECTION_3_1$=Secure Connection: 
+$LI_STATUS_BAR_USER_4_1$=Duration: 
+
+$LI_STATUS_BAR_AREA_1_2$::
+Dynamically updates to show extended information about buttons and actions.  Also shows the number of files and number of
+selected files in the active Local/Remote Pane.
+::END
+$LI_STATUS_BAR_USER_2_2$=Shows which user account is active in FTP Voyager JV.
+$LI_STATUS_BAR_CONNECTION_3_2$=Shows an icon and text if FTP Voyager JV is using a secure connection to Serv-U.
+$LI_STATUS_BAR_USER_4_2$=Displays the elapsed time for this session of FTP Voyager JV.
+
+
+<!-- Help-Menus-Main-Overview.htm -->
+$HEAD_MENU_MAIN_OVERVIEW$=Main Menu Overview
+$DESC_MENU_MAIN_OVERVIEW$::
+The Main Menu is located at the top of the application window.  It allows quick access to all of the operations and features of FTP Voyager JV.
+Some operations can also be performed using keyboard shortcuts.  If an operation supports a keyboard shortcut, it is displayed at the end of
+corresponding menu entry.
+::END
+$DESC_MENU_MAIN_FEATURES$=The Main Menu is divided into the categories listed below:
+
+
+<!-- Help-Menus-Main-Items-File.htm -->
+$HEAD_MENU_FILE$=File Menu
+
+$HEAD_ACTION_NEW_LOCAL_BROWSER$=New Local Browser
+$DESC_ACTION_NEW_LOCAL_BROWSER$::
+Creates a new dockable frame that is associated with the Local File System.
+::END
+
+$HEAD_ACTION_NEW_REMOTE_BROWSER$=New Remote Browser
+$DESC_ACTION_NEW_REMOTE_BROWSER$::
+Creates a new dockable frame that is associated with the Remote File System.
+::END
+
+$HEAD_ACTION_NEW_DIR$=New Folder
+$DESC_ACTION_NEW_DIR$::
+Creates a new directory under the current working directory of the $LINK_ACTIVE_PANE$.
+::END
+
+$HEAD_ACTION_OPEN$=Open
+$DESC_ACTION_OPEN$::
+Opens the directory in the $LINK_ACTIVE_PANE$ or attempts to open the file with the system's default program for the file
+extension.
+::END
+
+$NOTE_ACTION_DELETE$::
+$BOLD_NOTE$:  Depending on your FTP Voyager JV settings, it may request confirm of the action before the
+deletion occurs.
+::END
+
+$HEAD_ACTION_RENAME$=Rename
+$DESC_ACTION_RENAME$::
+Allows file and folder names to be edited in the $LINK_ACTIVE_PANE$.
+::END
+
+$HEAD_ACTION_PROPERTIES$=Properties
+$DESC_ACTION_PROPERTIES$::
+Launches a dialog that shows the properties of the selected items of the $LINK_ACTIVE_PANE$.
+::END
+
+$HEAD_ACTION_FILE_UPLOAD$=Upload Files...
+$DESC_ACTION_FILE_UPLOAD$::
+The upload command initiates a file transfer that copies the selected items in the active Local Pane to the File Server.
+If more than one Remote Browser window is currently open, a dialog is displayed that allows the proper destination to be
+chosen.
+::END
+$NOTE_ACTION_UPLOAD$::
+$BOLD_NOTE$:  The server retains the directory tree structure of any client files that may be directories.
+::END
+
+$HEAD_ACTION_FILE_DOWNLOAD$=Download Files...
+$DESC_ACTION_FILE_DOWNLOAD$::
+The download command initiates a file transfer that copies the selected items in the active Remote Pane to the local file
+system.  If more than one Local Browser window is currently open, a dialog is displayed that allows the proper destination to be
+chosen.
+::END
+$NOTE_ACTION_DOWNLOAD$::
+$BOLD_NOTE$:  The client retains the directory tree structure of any server files that may be directories.
+::END
+
+$HEAD_ACTION_STOP_REMOTE_DIR_LISTING$=Stop Remote Directory Listing
+$DESC_ACTION_STOP_REMOTE_DIR_LISTING$::
+If a directory listing is pending on the server, this option terminates the listing without waiting for it to finish.
+::END
+$NOTE_ACTION_STOP_REMOTE_DIR_LISTING$::
+$BOLD_NOTE$:  This action is only available while a remote directory listing is in progress.  Remote directory listings may take
+a long time to complete (especially if the File Server is accessing resources across a network).  Certain commands cannot be
+executed until FTP Voyager JV receives a remote directory listing or the directory listing has been cancelled.
+::END
+
+$HEAD_ACTION_SYNC_FOLDERS$=Synchronize Folders
+$DESC_ACTION_SYNC_FOLDERS$::
+Launches the $LINK_SYNC_FOLDERS$ dialog, allowing the user to view inconsistencies between two directories whose files should match.
+::END
+
+$HEAD_ACTION_SAVE_LOGIN$=Save Login
+$DESC_ACTION_SAVE_LOGIN$::
+Launches the $LINK_SAVE_LOGIN$ dialog, allowing the user to save a file with their login credentials to the client machine.
+Once saved, the user can login to this server by opening that file.
+::END
+$NOTE_ACTION_SAVE_LOGIN$::
+$BOLD_NOTE$:  Saving passwords to files could pose as a security risk.
+::END
+
+$HEAD_ACTION_CHANGE_PASSWORD$=Change Password
+$DESC_ACTION_CHANGE_PASSWORD$::
+Launches the $LINK_CHANGE_PASSWORD$ dialog, allowing the user to change the password for their user account.
+::END
+$NOTE_ACTION_CHANGE_PASSWORD$::
+$BOLD_NOTE$:  This option is only available if the administrator allows users to change their password.
+::END
+
+$HEAD_ACTION_EXIT$=Exit
+$DESC_ACTION_EXIT$::
+Closes FTP Voyager JV and (optionally) logs out the current user account from Serv-U.
+::END
+$NOTE_ACTION_EXIT$::
+$BOLD_NOTE$:  If logged into FTP Voyager JV using an administrator account, logging out of Serv-U may not be recommended.
+Logging out will also log out the instance of the Management Console, requiring another login before returning to the
+Management Console from within the browser.
+::END
+
+
+<!-- Help-Menus-Main-Items-Edit.htm -->
+$HEAD_MENU_EDIT$=Edit Menu
+
+$HEAD_ACTION_PREFERENCES$=Preferences
+$DESC_ACTION_PREFERENCES$::
+Launches the $LINK_PREFERENCES$ dialog allowing configure various options in FTP Voyager JV to be configured.
+The $LINK_PREFERENCES$ dialog has several options that can be changed to suit individual needs.
+
+The Preferences dialog is made of up these pages:
+::END
+$LI_PREF_PAGE_TBAR_MAIN$=Main Toolbar
+$LI_PREF_PAGE_TBAR_LOCAL$=Local Toolbars
+$LI_PREF_PAGE_TBAR_REMOTE$=Remote Toolbars
+$LI_PREF_PAGE_TBAR_TRANSFER$=Transfer Toolbar
+
+$HEAD_ACTION_SELECT_ALL$=Select All
+$DESC_ACTION_SELECT_ALL$::
+Selects all rows of the active $LINK_LIST_PANE$.
+::END
+
+$HEAD_ACTION_INVERT_SELECTION$=Invert Selection
+$DESC_ACTION_INVERT_SELECTION$::
+Reverses each row's selection state of the active $LINK_LIST_PANE$.  Therefore, any rows not selected become selected and
+any rows selected become de-selected.
+::END
+
+
+<!-- Help-Menus-Main-Items-View.htm -->
+$HEAD_MENU_VIEW$=View Menu
+
+$MENU_STYLE$=Style
+$DESC_STYLE$::
+Provides alternate skins that can be applied to FTP Voyager JV.  There are many custom styles available, as well as
+a style that reflects the operating system that FTP Voyager JV is running on.
+::END
+
+$MENU_TBARS$=Toolbars
+$DESC_TBARS$::
+Toggles the visibility of the various toolbars that are located throughout the application.
+::END
+
+$MENU_PANES$=Panes
+$DESC_PANES$::
+Toggles the visibility of the Dockable Panes that are located on the $LINK_LOCAL_REMOTE_PANES$.
+::END
+
+$MENU_VIEW_LARGE_ICONS$=Large Icons
+$DESC_VIEW_LARGE_ICONS$::
+Selecting this item changes the view to display large icons of the files and folders in the active pane.
+::END
+
+$MENU_VIEW_SMALL_ICONS$=Small Icons
+$DESC_VIEW_SMALL_ICONS$::
+Selecting this item changes the view to display small icons of the files and folders in the active pane.
+::END
+
+$MENU_VIEW_LIST$=List
+$DESC_VIEW_LIST$::
+Selecting this item changes the view to display a simple list of all the files and folders in the active pane.
+::END
+
+$MENU_VIEW_DETAILS$=Details
+$DESC_VIEW_DETAILS$::
+Selecting this item changes the view to display detailed information of all the files and folders in the active pane.  In
+addition to showing the filename, detailed listings also show the file size, file type, and modification date and time.
+::END
+
+$MENU_VIEW_THUMBS$=Thumbnails
+$DESC_VIEW_THUMBS$::
+Thumbnails are displayed in the $LINK_LIST_PANE$.  The size of the thumbnails can be changed by selecting a pre-defined
+size that is listed here.  Thumbnails are only retrieved and displayed for recognized image types.  Otherwise, a large icon
+is displayed for the item.
+
+The pre-defined sizes are listed below:
+::END
+$LI_VIEW_THUMBS_075$=75x75
+$LI_VIEW_THUMBS_100$=100x100 (Default)
+$LI_VIEW_THUMBS_150$=150x150
+$LI_VIEW_THUMBS_200$=200x200
+$LI_VIEW_THUMBS_250$=250x250
+
+$MENU_BACK$=Back
+$DESC_BACK$::
+The back command navigates back one entry in the navigation history of the active pane.
+::END
+
+$MENU_FORWARD$=Forward
+$DESC_FORWARD$::
+The forward command navigates forward one entry in the navigation history of the active pane.
+::END
+
+$MENU_UP_DIR$=Up One Level
+$DESC_UP_DIR$::
+This command navigates to the parent directory of the current directory in the active pane.
+::END
+
+$MENU_REFRESH$=Refresh
+$DESC_REFRESH$::
+The refresh command forces FTP Voyager JV to retrieve an updated directory listing for the active pane.
+::END
+
+
+<!-- Help-Menus-Main-Items-Windows.htm -->
+$HEAD_MENU_WINDOWS$=Windows Menu
+
+$HEAD_MENU_WINDOWS_CLOSE$=Close
+$DESC_MENU_WINDOWS_CLOSE$::
+Closes the $LINK_ACTIVE_PANE$.  $BOLD_NOTE$:  Closing the $LINK_ACTIVE_PANE$ updates the $LINK_FRAME_LIST$.
+::END
+
+$HEAD_MENU_WINDOWS_AUTO_HIDE$=Auto Hide
+$DESC_MENU_WINDOWS_AUTO_HIDE$::
+Changes the state of the $LINK_ACTIVE_PANE$ to become a hidden panel attached to the application window.  The hidden panel
+can be shown by hovering the mouse over the tab assigned to the frame.
+::END
+
+$HEAD_MENU_WINDOWS_DOCKABLE$=Dockable
+$DESC_MENU_WINDOWS_DOCKABLE$::
+Changes the state of the $LINK_ACTIVE_PANE$ to a dockable frame that is attached to the application window.  This is the
+default state of window panes in FTP Voyager JV.
+::END
+
+$HEAD_MENU_WINDOWS_FLOATING$=Floating
+$DESC_MENU_WINDOWS_FLOATING$::
+Changes the state of the $LINK_ACTIVE_PANE$ to a floating frame that is detached from the application window.
+::END
+
+$HEAD_MENU_WINDOWS_AUTO_HIDE_ALL$=Auto Hide All
+$DESC_MENU_WINDOWS_AUTO_HIDE_ALL$::
+Changes all frames to an $LINK_AUTO_HIDE$ state.
+::END
+
+$HEAD_MENU_WINDOWS_CLOSE_ALL$=Close All Frames
+$DESC_MENU_WINDOWS_CLOSE_ALL$::
+Closes all frames for the application.
+::END
+
+$HEAD_MENU_WINDOWS_TREE_PANE$=Tree Pane
+$DESC_MENU_WINDOWS_TREE_PANE$::
+Toggles the visibility of the $LINK_TREE_PANE$.
+::END
+
+$HEAD_MENU_WINDOWS_PREVIEW_PANE$=Preview Pane
+$DESC_MENU_WINDOWS_PREVIEW_PANE$::
+Toggles the visibility of the $LINK_PREVIEW_PANE$.
+::END
+
+$HEAD_MENU_WINDOWS_FRAME_LIST$=Frame List
+$DESC_MENU_WINDOWS_FRAME_LIST$::
+This section contains all the frames that are active for this session.  The menus dynamically update in accordance with the
+frames that have been created and destroyed.  Selecting a frame from this list makes it active in the application.
+::END
+
+$HEAD_MENU_WINDOWS_ACTIVATE_DLG$=Windows...
+$DESC_MENU_WINDOWS_ACTIVATE_DLG$::
+Launches the $LINK_ACTIVATE_WINDOW$ dialog that allows frames to be activated within the application.
+::END
+
+
+<!-- Help-Menus-Main-Items-Help.htm -->
+$HEAD_MENU_HELP$=Help Menu
+
+$HEAD_ACTION_HELP_TOPICS$=Help Topics
+$DESC_ACTION_HELP_TOPICS$::
+Launches the default web browser directly to FTP Voyager JV's context-sensitive help document.
+::END
+
+$HEAD_ACTION_HELP_OVERVIEW$=Overview
+$DESC_ACTION_HELP_OVERVIEW$::
+Launches the default web browser directly to FTP Voyager JV's "Overview" help document.
+::END
+
+$HEAD_ACTION_HELP_TECH_SUPPORT$=Technical Support
+$DESC_ACTION_HELP_TECH_SUPPORT$::
+Launches the default web browser directly to a page that provides information on how to contact technical support for
+the active server.
+
+$BOLD_NOTE$:  This option is only available if a support link is provided by the Serv-U administrator.
+::END
+
+$HEAD_ACTION_HELP_ABOUT$=About Dialog
+$DESC_ACTION_HELP_ABOUT$::
+Launches FTP Voyager JV's About Dialog.  The About Dialog contains important product information.
+
+It has two pages which are listed below:
+::END
+$LI_ABOUT_PAGE_1$=Program Information
+$LI_ABOUT_PAGE_1_1$=:  This page contains information about the FTP Voyager JV version, build date, and contact information.
+$LI_ABOUT_PAGE_2$=Computer Information
+$LI_ABOUT_PAGE_2_1$::
+:  This dialog contains information about the computer's operating system and Java installation, which can be copied to the
+clipboard for submission to technical support by clicking the <strong>Copy to clipboard</strong> button.
+::END
+
+
+<!-- Help-Tbar-Main-Overview.htm -->
+$HEAD_TOOLBAR_MAIN_OVERVIEW$=Main Toolbar Overview
+$DESC_TOOLBAR_MAIN_OVERVIEW$::
+The Main Toolbar gives the user a quick way to execute common actions for the application.  The Main Toolbar is initially
+located directly below the Main Menu.  It is hidden by default.  To show the toolbar, go to "View | Toolbars" and select
+the "Main" option from the Main Menu.
+::END
+
+
+<!-- Help-Tbar-Main-Actions.htm -->
+$HEAD_TOOLBAR_MAIN_ACTIONS$=Main Toolbar Actions
+$DESC_TOOLBAR_MAIN_ACTIONS$::
+Listed below are all the actions that the Main Toolbar can perform.
+::END
+
+
+<!-- Help-Tbar-Browser-Crumbbar-Overview.htm -->
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$=Local/Remote Navigation Bar Overview
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$::
+The Local/Remote Navigation Bars are initially located at the top of each Local/Remote pane.  The Navigation Bar has various ways to 
+change the current working directory.  To change the current working directory, follow one of the steps below:
+::END
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_1$=Use a crumb button or crumb button's drop-down.
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_2$=Specify an absolute path for the file system.
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_3$=Select a previous path from the drop-down history list.
+
+
+<!-- Help-Tbar-Browser-Crumbbar-Actions.htm -->
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$=Local/Remote Navigation Bar Actions
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$::
+The Navigation Bar can perform various actions to navigate to a directory on the corresponding file system.  The Navigation Bar's
+functionality is listed below:
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_1$=Crumb buttons
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_1$::
+Each crumb represents a directory.  To change the working directory to the corresponding crumb, click on the crumb.  Clicking
+on the crumb's drop-down arrow brings up a list of the sub-directories of that crumb location.  Clicking on one of these
+sub-directories also changes the working directory.
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_6$=Absolute Path Mode
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_6$::
+Click within this area to change the Navigation Bar to an edit field.  The edit field initially displays the current working directory
+as an absolute path.  This string can be replaced with a different absolute path that points to a valid directory on the file system.
+Pressing the [ENTER] key sets the working directory to the specified path.
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_7$=History
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_7$::
+Click this button to show a drop-down list of previous working directories.  Selecting a path from this list changes the current working directory.
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_8$=$MENU_REFRESH$
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_8$=$DESC_REFRESH$
+
+$LIST_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$::
+<strong>Crumbs</strong>: Each crumb represents a directory.  User can also specify an absolute path to navigate to from within this toolbar.
+<strong>(2) $LINK_HELP_TOOLBAR_BROWSER_TOOLBAR$</strong>: Shows the actions that can be performed on directories and/or files.  The toolbar can be customized by right-clicking and toggling the visible state of each button.
+::END
+
+
+<!-- Help-Tbar-Browser-Overview.htm -->
+$HEAD_TOOLBAR_BROWSER_OVERVIEW$=Local/Remote Toolbars Overview
+$DESC_TOOLBAR_BROWSER_OVERVIEW$::
+The Local/Remote Toolbars allow the user to quickly execute common actions for selected directories and/or files.
+::END
+
+
+<!-- Help-Tbar-Browser-Search-Overview.htm -->
+$HEAD_TOOLBAR_BROWSER_SEARCH_OVERVIEW$=Local/Remote Search Bar Overview
+$DESC_TOOLBAR_BROWSER_SEARCH_OVERVIEW$::
+The Local/Remote Search Bar allows the user to quickly find files and folders using common keywords: '*', '?', etc.
+::END
+
+
+<!-- Help-Tbar-Browser-Search-Actions.htm -->
+$HEAD_TOOLBAR_BROWSER_SEARCH_ACTIONS$=Local/Remote Search Bar Actions
+$DESC_TOOLBAR_BROWSER_SEARCH_ACTIONS$::
+Listed below are all the options the Search Bar can perform.
+::END
+
+$HEAD_TOOLBAR_SEARCH_FIELD$=Search Field
+$DESC_TOOLBAR_SEARCH_FIELD$::
+The Search Field allows entry of search criteria, including file and folder names.  Standard wildcards can also be used to search for
+files, populating the listing with all file names that match the search criteria.  The wildcards are listed below:
+::END
+$LI_SEARCH_WILDCARD_1_1$='*'
+$LI_SEARCH_WILDCARD_1_2$::
+The '*' character means any characters will produce a match.  Example:  "*" or "*.*" will result in all files and folders
+being returned in the listing.
+::END
+$LI_SEARCH_WILDCARD_2_1$='?'
+$LI_SEARCH_WILDCARD_2_2$::
+The '?' character is known as a character mask, and will match to any individual character at the position specified.  Example:
+"Betty.???" will return all files that start with "Betty." and end with a three character extension. As an additional example,
+"LogFile??2009.txt" would return all files that start with "LogFile" contain two characters in the middle, and end in "2009.txt",
+as might be the case with monthly log files.
+::END
+
+$HEAD_TOOLBAR_SEARCH_BTN$=Search Button
+$DESC_TOOLBAR_SEARCH_BTN$::
+The Search button starts the search process.  Processing is done in another thread which allows interaction with the GUI.
+::END
+
+$HEAD_TOOLBAR_SEARCH_DROP_BTN$=Search Drop-Button
+$DESC_TOOLBAR_SEARCH_DROP_BTN$::
+The Search drop-button provides more options to configure the search criteria.  Here specific Date ranges and file sizes
+can be included in the search algorithm.
+::END
+
+
+<!-- Help-Tbar-Browser-Actions.htm -->
+$HEAD_TOOLBAR_BROWSER_ACTIONS$=Local/Remote Toolbar Actions
+$DESC_TOOLBAR_BROWSER_ACTIONS$::
+Listed below are all the actions that the Local/Remote Toolbars can perform.
+::END
+
+$HEAD_ACTION_BACK$=Back
+$DESC_ACTION_BACK$::
+The back command navigates back one entry in the navigation history of the active pane.
+::END
+
+$HEAD_ACTION_FORWARD$=Forward
+$DESC_ACTION_FORWARD$::
+The forward command navigates forward one entry in the navigation history of the active pane.
+::END
+$NOTE_ACTION_FORWARD_TOOLBAR$::
+<strong>Note (2*):</strong>  The drop-down button shows a history of the directories browsed to by using the Back and Forward mechanism.
+::END
+
+$HEAD_ACTION_UPDIR$=Up Directory
+$DESC_ACTION_UPDIR$::
+This command navigates to the parent directory of the current directory in the active pane.
+::END
+
+$HEAD_ACTION_UPLOAD$=Upload
+$DESC_ACTION_UPLOAD$::
+The upload command initiates a file transfer that copies the selected items to the File Server.
+If more than one Remote Browser window is currently open, a dialog is displayed that allows the proper destination to be
+chosen.
+::END
+$NOTE_ACTION_UPLOAD_TOOLBAR$::
+<strong>Note (4*):</strong>  Only a Local Pane's Toolbar can show the Upload button.
+::END
+
+$HEAD_ACTION_DOWNLOAD$=Download
+$DESC_ACTION_DOWNLOAD$::
+The download command initiates a file transfer that copies the selected items to the local file
+system.  If more than one Local Browser window is currently open, a dialog is displayed that allows the proper destination to be
+chosen.
+::END
+$NOTE_ACTION_DOWNLOAD_TOOLBAR$::
+<strong>Note (5*):</strong>  Only a Remote Pane's Toolbar can show the Download button.
+::END
+
+$HEAD_ACTION_NEW_FOLDER$=New Folder
+$DESC_ACTION_NEW_FOLDER$::
+Creates a new directory under the current working directory.
+::END
+
+$HEAD_ACTION_DELETE$=Delete
+$DESC_ACTION_DELETE$::
+The delete command permanently deletes the selected items in the $LINK_ACTIVE_PANE$.
+::END
+
+$HEAD_ACTION_VIEW$=Views
+$DESC_ACTION_VIEW$::
+Allows the user to cycle through the various views available to the List Pane.
+::END
+$NOTE_ACTION_VIEW_TOOLBAR$::
+<strong>Note (8*):</strong>  From here, quickly select the appropriate view for the List Pane from the drop-down button.  The available views for the List Pane are:
+::END
+
+
+<!-- Help-Tbar-Transfer-Overview.htm -->
+$HEAD_TOOLBAR_TRANSFER_OVERVIEW$=Transfer Toolbar Overview
+$DESC_TOOLBAR_TRANSFER_OVERVIEW$::
+The Transfer Toolbar gives the user a quick way to execute common actions for transfers that are occurring between the client
+and server.  The Transfer Toolbar is initially located at the top of the Transfer Pane.
+::END
+
+
+<!-- Help-Tbar-Transfer-Actions.htm -->
+$HEAD_TOOLBAR_TRANSFER_ACTIONS$=Transfer Toolbar Actions
+$DESC_TOOLBAR_TRANSFER_ACTIONS$::
+Listed below are all the actions that the Transfer Toolbar can perform.
+::END
+
+$HEAD_ACTION_TRANSFER_STOP_AFTER_FILE$=Stop After File Completes
+$DESC_ACTION_TRANSFER_STOP_AFTER_FILE$::
+Selecting this option instructs FTP Voyager JV to stop transferring additional files in the item's transfer queue once the
+file currently being transferred is complete.
+::END
+$NOTE_ACTION_TRANSFER_STOP_AFTER_FILE$::
+$BOLD_NOTE$:  This option is only available when the transfer has more than one item to process.
+::END
+
+$HEAD_ACTION_TRANSFER_SKIP_FILE$=Skip File
+$DESC_ACTION_TRANSFER_SKIP_FILE$::
+The skip file command instructs FTP Voyager JV to abort the transfer of the current file but to continue transferring any
+remaining files in the item's transfer queue.
+::END
+
+$HEAD_ACTION_TRANSFER_PAUSE$=Pause
+$DESC_ACTION_TRANSFER_PAUSE$::
+Allows the user to "pause" a transfer.  This stops FTP Voyager JV from sending or receiving any data for this particular transfer
+until it is resumed.
+::END
+
+$HEAD_ACTION_TRANSFER_RESUME$=Resume
+$DESC_ACTION_TRANSFER_RESUME$::
+Allows the user to "resume" a transfer.  Resuming a transfer has many advantages.  If the user "paused" the transfer, or the
+connection was lost momentarily, the user can "resume" the transfer.  This allows FTP Voyager JV and Serv-U to pick up where
+they left off during the transfer.  This saves time and resources because the user is not forced to transfer the entire
+file's contents again.
+::END
+
+$HEAD_ACTION_TRANSFER_CANCEL$=Cancel
+$DESC_ACTION_TRANSFER_CANCEL$::
+The cancel action immediately aborts the transfer.  This action is only available when a transfer is in progress.
+::END
+
+$HEAD_ACTION_TRANSFER_REMOVE$=Remove
+$DESC_ACTION_TRANSFER_REMOVE$::
+Selecting this option removes the entry from the transfer pane.  This action is only available when the transfer is
+complete or has been cancelled.
+::END
+$NOTE_ACTION_TRANSFER_REMOVE_TOOLBAR$::
+$BOLD_NOTE$:  By default, completed or cancelled transfers are automatically removed from the transfer pane.
+To make this option available for manual removal of transfer items, see the Help documentation on $LINK_PREF_PAGE_GENERAL$
+preferences.
+::END
+
+
+<!-- Help-Dlg-About-ProgramInfo.htm -->
+$HEAD_DLG_ABOUT_PROGRAM_INFO$=About Box - Program Information
+$DESC_DLG_ABOUT_PROGRAM_INFO$::
+The Program Information page contains useful information about FTP Voyager JV.
+The page is split up into sections which are described below:
+::END
+$LI_DLG_ABOUT_PROG_INFO_1$=Product Information
+$LI_DLG_ABOUT_PROG_INFO_2$=Contact Information
+$LI_DLG_ABOUT_PROG_INFO_3$=Development Information
+$LI_DLG_ABOUT_PROG_INFO_4$=Legal Information
+$LI_DLG_ABOUT_PROG_INFO_1_1$=:  Contains the version number and build date of FTP Voyager JV.
+$LI_DLG_ABOUT_PROG_INFO_2_1$=:  Lists all parties involved in the distribution of the product.
+$LI_DLG_ABOUT_PROG_INFO_3_1$=:  Lists all parties involved in the development of the product.
+$LI_DLG_ABOUT_PROG_INFO_4_1$=:  Contains information about copyright law applicable to the product.
+
+
+<!-- Help-Dlg-About-ComputerInfo.htm -->
+$HEAD_DLG_ABOUT_COMPUTER_INFO$=About Box - Computer Information
+$DESC_DLG_ABOUT_COMPUTER_INFO$::
+The Computer Information page contains useful information about the configuration of the client machine.
+The page is split up into sections which are described below:
+::END
+$LI_DLG_ABOUT_COMP_INFO_1$=Operating System Information
+$LI_DLG_ABOUT_COMP_INFO_2$=Java Runtime Information
+$LI_DLG_ABOUT_COMP_INFO_1_1$=:  Displays information about the operating system of the client machine.
+$LI_DLG_ABOUT_COMP_INFO_2_1$=:  Displays information about the Java Runtime Environment that is installed on the client machine.
+
+$DESC_COPY_TO_CLIPBOARD$::
+The Computer Information page also has a "Copy to clipboard" button that copies more in-depth details about the client
+operating system and Java Runtime Environment.  This information is useful for technical support issues related to
+FTP Voyager JV.
+::END
+
+<!-- Help-Dlg-Prefs-General.htm -->
+$HEAD_DLG_PREFS_GENERAL$=Preferences - General
+$DESC_DLG_PREFS_GENERAL$::
+The General page has items that pertain to several features of FTP Voyager JV.
+These items are described below:
+::END
+
+$HEAD_REMOVE_TRANSFER_FILES$=Remove files from Transfer Pane after completion
+$DESC_REMOVE_TRANSFER_FILES$::
+When this option is selected, transfers are automatically removed from the transfer pane when they are completed or cancelled.
+Otherwise, the transfer remains in the transfer pane until it has been manually removed.
+::END
+
+$HEAD_ADJUST_DST$=Automatically adjust timestamps for Daylight Saving Time
+$DESC_ADJUST_DST$::
+Enabling this option causes FTP Voyager JV to automatically adjust file dates and times by one hour when
+Daylight Savings Time is in effect.
+::END
+
+$HEAD_DATE_FMT$=Use Custom Date Formatting
+$DESC_DATE_FMT$::
+If selected, all timestamps are displayed with the syntax that's in the edit box. The syntax can be changed.  Syntax
+and formatting options are listed below.
+::END
+
+<!-- ROW_COL -->
+$OPTIONS_UI_TABLE_TEXT$=Text
+$OPTIONS_UI_TABLE_YEAR$=Year
+$OPTIONS_UI_TABLE_MONTH$=Month
+$OPTIONS_UI_TABLE_NUMBER$=Number
+$OPTIONS_UI_TABLE_0_0$=Letter
+$OPTIONS_UI_TABLE_0_1$=Date or Time Component
+$OPTIONS_UI_TABLE_0_2$=Presentation
+$OPTIONS_UI_TABLE_0_3$=Examples
+$OPTIONS_UI_TABLE_1_1$=Era designator
+$OPTIONS_UI_TABLE_1_3$=AD
+$OPTIONS_UI_TABLE_2_3$=1996; 96
+$OPTIONS_UI_TABLE_3_1$=Month in year
+$OPTIONS_UI_TABLE_3_3$=July; Jul; 07
+$OPTIONS_UI_TABLE_4_1$=Week in year
+$OPTIONS_UI_TABLE_5_1$=Week in month
+$OPTIONS_UI_TABLE_6_1$=Day in year
+$OPTIONS_UI_TABLE_7_1$=Day in month
+$OPTIONS_UI_TABLE_8_1$=Day of week in month
+$OPTIONS_UI_TABLE_9_1$=Day in week
+$OPTIONS_UI_TABLE_9_3$=Tuesday; Tue
+$OPTIONS_UI_TABLE_10_1$=Am/pm marker
+$OPTIONS_UI_TABLE_10_3$=PM
+$OPTIONS_UI_TABLE_11_1$=Hour in day
+$OPTIONS_UI_TABLE_12_1$=$OPTIONS_UI_TABLE_11_1$
+$OPTIONS_UI_TABLE_13_1$=Hour in am/pm
+$OPTIONS_UI_TABLE_14_1$=$OPTIONS_UI_TABLE_13_1$
+$OPTIONS_UI_TABLE_15_1$=Minute in hour
+$OPTIONS_UI_TABLE_16_1$=Second in minute
+$OPTIONS_UI_TABLE_17_1$=Millisecond
+$OPTIONS_UI_TABLE_18_1$=Time zone
+$OPTIONS_UI_TABLE_18_3$=Pacific Standard Time; PST; GMT-08:00
+$OPTIONS_UI_TABLE_19_1$=$OPTIONS_UI_TABLE_18_1$
+
+$OPTIONS_UI_NUMBER$=number
+$OPTIONS_UI_TEXT$=text
+$OPTIONS_UI_DIGIT$=Digit
+
+$OPTIONS_UI_BODY_4_1$=Pattern letters are usually repeated, as their number determines the exact presentation:
+
+$OPTIONS_UI_BODY_5_1$=Text:
+$OPTIONS_UI_BODY_5_2$::
+For formatting, if the number of pattern letters is 4 or more, the full form is used; otherwise a short or
+abbreviated form is used if available. For parsing, both forms are accepted, independent of the number of
+pattern letters.
+::END
+
+$OPTIONS_UI_BODY_6_1$=Number:
+$OPTIONS_UI_BODY_6_2$::
+For formatting, the number of pattern letters is the minimum number of digits, and shorter numbers are
+zero-padded to this amount.  For parsing, the number of pattern letters is ignored unless it's needed to
+separate two adjacent fields.
+::END
+
+$OPTIONS_UI_BODY_7_1$=Year:
+$OPTIONS_UI_BODY_7_2$::
+For formatting, if the number of pattern letters is 2, the year is truncated to 2 digits; otherwise it is
+interpreted as a
+::END
+
+$OPTIONS_UI_BODY_8$::
+For parsing, if the number of pattern letters is more than 2, the year is interpreted literally, regardless
+of the number of digits. So using the pattern "MM/dd/yyyy", "01/11/12" parses to Jan 11, 12 A.D.
+::END
+
+$OPTIONS_UI_BODY_9_1$=Month:
+$OPTIONS_UI_BODY_9_2$=If the number of pattern letters is 3 or more, the month is interpreted as
+$OPTIONS_UI_BODY_9_3$=; otherwise, it is interpreted as a
+
+$OPTIONS_UI_BODY_10_1$=General time zone:
+$OPTIONS_UI_BODY_10_2$=Time zones are interpreted as
+$OPTIONS_UI_BODY_10_3$::
+if they have names. For time zones representing a GMT offset value, the following syntax is used:
+::END
+
+$OPTIONS_UI_BODY_11_1$=GMTOffsetTimeZone:
+
+$OPTIONS_UI_BODY_12_1$=GMT
+$OPTIONS_UI_BODY_12_2$=Sign
+$OPTIONS_UI_BODY_12_3$=Hours
+$OPTIONS_UI_BODY_12_4$=Minutes
+
+$OPTIONS_UI_BODY_13_1$=Sign:
+$OPTIONS_UI_BODY_13_2$=one of
+
+$OPTIONS_UI_BODY_14_1$=Hours:
+
+$OPTIONS_UI_BODY_15_1$=Minutes:
+
+$OPTIONS_UI_BODY_16_1$=Digit:
+
+$OPTIONS_UI_BODY_17_1$=must be between 0 and 23, and
+$OPTIONS_UI_BODY_17_2$::
+must be between 00 and 59. The format is locale independent and digits must be taken
+from the Basic Latin block of the Unicode standard.
+::END
+$OPTIONS_UI_BODY_18_1$=For parsing,
+$OPTIONS_UI_BODY_18_2$=RFC 822 time zones
+$OPTIONS_UI_BODY_18_3$=are also accepted.
+
+$OPTIONS_UI_BODY_19_1$=RFC 822 time zone:
+$OPTIONS_UI_BODY_19_2$=For formatting, the RFC 822 4-digit time zone format is used:
+
+$OPTIONS_UI_RFC_1$=RFC822TimeZone:
+$OPTIONS_UI_RFC_2$=Sign
+$OPTIONS_UI_RFC_3$=TwoDigitHours
+$OPTIONS_UI_RFC_4$=Minutes
+$OPTIONS_UI_RFC_5$=TwoDigitHours:
+$OPTIONS_UI_RFC_6$=Digit Digit
+
+$OPTIONS_UI_RFC_7$=TwoDigitHours
+$OPTIONS_UI_RFC_8$=must be between 00 and 23. Other definitions are as for
+$OPTIONS_UI_RFC_9$=general time zones
+$OPTIONS_UI_RFC_10$=For parsing,
+$OPTIONS_UI_RFC_11$=general time zones
+$OPTIONS_UI_RFC_12$=are also accepted.
+
+$OPTIONS_UI_EXAMPLES_1_1$=Examples
+$OPTIONS_UI_EXAMPLES_1_2$::
+The following examples show how date and time patterns are interpreted in the U.S. locale. The
+given date and time are 2001-07-04 12:08:56 local time in the U.S. Pacific Time time zone.
+::END
+
+$OPTIONS_UI_EXAMPLE_TBL_0_0$=Date and Time Pattern
+$OPTIONS_UI_EXAMPLE_TBL_0_1$=Result
+$OPTIONS_UI_EXAMPLE_TBL_2_1$=Wed, Jul 4, '01
+$OPTIONS_UI_EXAMPLE_TBL_3_1$=12:08 PM
+$OPTIONS_UI_EXAMPLE_TBL_4_1$=PM, Pacific Daylight Time
+$OPTIONS_UI_EXAMPLE_TBL_5_1$=PM, PDT
+$OPTIONS_UI_EXAMPLE_TBL_6_1$=02001.July.04 AD 12:08 PM
+$OPTIONS_UI_EXAMPLE_TBL_7_1$=Wed, 4 Jul 2001 12:08:56 -0700
+
+$HEAD_UPLOAD_OVERWRITE$=Confirm Upload Overwrite and 'resume'
+$DESC_UPLOAD_OVERWRITE$::
+If selected, FTP Voyager JV asks for confirmation before attempting to overwrite a file when uploading.
+::END
+
+$HEAD_DOWNLOAD_OVERWRITE$=Confirm Download Overwrite and 'resume'
+$DESC_DOWNLOAD_OVERWRITE$::
+If selected, FTP Voyager JV asks for confirmation before attempting to overwrite a file when downloading.
+::END
+
+$HEAD_FILE_DELETE$=Confirm File Delete
+$DESC_FILE_DELETE$::
+If selected, FTP Voyager JV asks for confirmation before attempting to delete a file.
+::END
+
+$HEAD_FOLDER_DELETE$=Confirm Folder Delete
+$DESC_FOLDER_DELETE$::
+If selected, FTP Voyager JV asks for confirmation before attempting to delete a folder / directory.
+::END
+
+$HEAD_CONFIRM_LOGOUT$=Confirm Logout when Exiting Application
+$DESC_CONFIRM_LOGOUT$::
+If selected, FTP Voyager JV asks whether or not it is desirable to logout of Serv-U when it is closed.  If a logout is requested 
+when closing FTP Voyager JV, it will not be possible to return to the Management Console or restart FTP Voyager JV without first
+logging in to Serv-U again.  If this option is disabled, FTP Voyager JV automatically performs the last action given in response
+to the confirmation dialog.  If this confirmation has never been asked, FTP Voyager JV does not logout of Serv-U when it is closed.
+::END
+
+
+<!-- Help-Dlg-Prefs-Toolbars.htm -->
+$HEAD_DLG_PREFS_TBARS$=Preferences - Toolbars
+$DESC_DLG_PREFS_TBARS$::
+The Toolbar pages of the Preferences dialog show the available buttons that can be displayed on the corresponding toolbar.
+The layout of the toolbar can be changed by reordering the list.
+Use the buttons below to reorder the list:
+::END
+$LI_DLG_PREFS_TBARS_MOVE_TO_TOP$=Move to Top
+$LI_DLG_PREFS_TBARS_MOVE_UP$=Move Up
+$LI_DLG_PREFS_TBARS_MOVE_DOWN$=Move Down
+$LI_DLG_PREFS_TBARS_MOVE_TO_BTM$=Move to Bottom
+$LI_DLG_PREFS_TBARS_MOVE_TO_TOP_1$=:  Moves the button to the top of the list.
+$LI_DLG_PREFS_TBARS_MOVE_UP_1$=:  Moves the button up one position in the list.
+$LI_DLG_PREFS_TBARS_MOVE_DOWN_1$=:  Moves the button down one position in the list.
+$LI_DLG_PREFS_TBARS_MOVE_TO_BTM_1$=:  Moves the button to the bottom of the list.
+$DESC_DLG_PREFS_TBARS_ENABLED$=The "Enabled" checkbox can be used to toggle the visibility of each button.
+
+
+<!-- Help-Dlg-SyncFolders.htm -->
+$HEAD_SYNC_FOLDERS$=Synchronize Folders - Overview
+$DESC_SYNC_FOLDERS$::
+Synchronize Folders allows directories and files to be fully synchronized, or "mirrored", between the client and server
+and vice-versa.  This is a powerful utility that helps maintain a master set of files and directories.
+
+This feature is especially useful for updating web sites. It allows you to quickly add, remove, and update files; all with
+the push of one button.
+::END
+
+$DESC_SYNC_FOLDERS_LAYOUT$::
+Synchronize Folders is intially laid out in the order below:
+::END
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_1$=:  The Local Frame shows the information of what needs to be replaced, in order to mirror what the Remote Frame has.
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_2$=:  The Remote Frame shows the information of what needs to be replaces, in order to mirror what the Local Frame has.
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_3$=:  Contains certain options to configure and execute the comparison and operations of the sychronization process.
+
+
+<!-- Help-Dlg-SyncFolders-Results.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS$=Synchronize Folders - Results Pane(s)
+$DESC_SYNC_FOLDERS_RESULTS$::
+The Results Panes show the files and/or directories that need to be updated in order for one file system to match the other.
+Thus, the Local-Result Pane shows the files and/or folders that need to be updated in order to match
+the Remote File System and the Remote-Result Pane shows the files and/or folders that need to be updated in order to match the
+Local File System.
+
+The initial layout of these panes is described below:
+::END
+
+$LI_SYNC_FOLDERS_RESULTS_1$=:  The Toolbar has buttons for common actions that can be performed.
+$LI_SYNC_FOLDERS_RESULTS_2$=:  The Listing shows the files and/or folders that need to be updated to match the opposite file system.
+
+
+<!-- Help-Dlg-SyncFolders-Tbar.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS_TBAR$=Synchronize Folders - Results Pane - Toolbar
+$DESC_SYNC_FOLDERS_RESULTS_TBAR$::
+The Results Toolbar has certain actions that can be performed for the particular Result Pane.
+::END
+
+$DESC_SYNC_FOLDERS_RESULTS_TBAR_1$::
+These actions are described below:
+::END
+
+$HEAD_ACTION_SYNC_FOLDERS_REMOVE$=Remove
+$DESC_ACTION_SYNC_FOLDERS_REMOVE$::
+Removes the selected files and directories from the listing.  This is useful if you want to exclude these files and/or directories
+from the sychronization process.
+::END
+
+$HEAD_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS_DOWNLOAD$=Execute These Actions (Download)
+$HEAD_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS_UPLOAD$=Execute These Actions (Upload)
+$DESC_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS$::
+Starts the synchronization process.  The process takes each file and directory of the corresponding listing and executes the action
+associated for that item.
+::END
+
+
+<!-- Help-Dlg-SyncFolders-List.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS_LIST$=Synchronize Folders - Results Pane - List
+$DESC_SYNC_FOLDERS_RESULTS_LIST$::
+The Results List shows the files and directories that need to be updated in order to match the master copy of the root directories
+that are being compared.
+::END
+
+$DESC_SYNC_FOLDERS_RESULTS_LIST_COLUMNS$::
+The columns are described below:
+::END
+
+$HEAD_SYNC_COL_FILE_NAME$=File or Folder
+$DESC_SYNC_COL_FILE_NAME$::
+Shows the "relative file name" of the file or folder that will be updated.  The relative file name is based on the root comparison
+directory that was specified.
+::END
+$DESC_SYNC_COL_FILE_NAME_2$::
+$BOLD_NOTE$:  Listed below are certain conditions that may present themselves when comparing directories:
+::END
+
+$LI_SYNC_COL_FILE_NAME_DONE_1$::
+The comparison root directories are already synchronized.  This means that the comparison rountines could not find any files or
+folders that differ from the comparison options specified.
+::END
+
+$LI_SYNC_COL_FILE_NAME_ERROR_2$::
+An error occurred during the comparison rountines.  There are numerous reasons why this operation could fail, please contact your
+system administrator if you seek more information for the failure code.
+::END
+
+$HEAD_SYNC_COL_RESULTS$=Results
+$DESC_SYNC_COL_RESULTS$::
+Displays the results of the comparison.  The results are based on certain criteria
+::END
+
+$LI_SYNC_COL_RESULTS_1$=Not on Local
+$LI_SYNC_COL_RESULTS_2$=Not on Remote
+$LI_SYNC_COL_RESULTS_3$=Older
+$LI_SYNC_COL_RESULTS_4$=Newer
+$LI_SYNC_COL_RESULTS_5$=Synchronized
+$LI_SYNC_COL_RESULTS_6$=Error
+
+$HEAD_SYNC_COL_ACTION$=Action
+$DESC_SYNC_COL_ACTION$::
+Displays what action will be taken on the file, once the synchronize process is executed.
+::END
+
+$LI_SYNC_COL_ACTION_1$=Delete
+$LI_SYNC_COL_ACTION_2$=Upload
+$LI_SYNC_COL_ACTION_3$=Download
+
+$HEAD_SYNC_COL_LOCAL_SIZE$=Local Size
+$DESC_SYNC_COL_LOCAL_SIZE$::
+Displays the Local files or folders size.
+::END
+
+$HEAD_SYNC_COL_REMOTE_SIZE$=Remote Size
+$DESC_SYNC_COL_REMOTE_SIZE$::
+Displays the Remote files or folders size.
+::END
+
+$HEAD_SYNC_COL_LOCAL_DATE_MODIFIED$=Local Date Modified
+$DESC_SYNC_COL_LOCAL_DATE_MODIFIED$::
+Shows the timestamp of when the Local file or folder was modified.
+::END
+
+$HEAD_SYNC_COL_REMOTE_DATE_MODIFIED$=Remote Date Modified
+$DESC_SYNC_COL_REMOTE_DATE_MODIFIED$::
+Shows the timestamp of when the Remote file or folder was modified.
+::END
+
+$DESC_SYNC_NOTE_COL_POS$::
+$BOLD_NOTE$:  Column (4), (5), (6), and (7) could be initially swapped depending on which Result Pane you're viewing.
+For example, for the Remote-Result Pane, initially column (4) is Remote Size, column (5) is Local Size, column (6) is
+Remote Date Modified, and column 7 is Local Date Modified.
+::END
+
+
+<!-- Help-Dlg-SyncFolders-Options.htm -->
+$HEAD_SYNC_FOLDERS_OPTIONS$=Synchronize Folders - Options Pane
+$DESC_SYNC_FOLDERS_OPTIONS$::
+The Options Pane has different settings that can be adjusted to produce different comparison results and adjust
+certain synchronization operations.
+::END
+
+$DESC_SYNC_FOLDERS_OPTIONS_2$=The Options are described below:
+
+$HEAD_SYNC_OPTION_COMPARE_SIZE$=Compare Size:  
+$DESC_SYNC_OPTION_COMPARE_SIZE$::
+Setting this flag adds any files or folders that differ in size to the comparison list.
+::END
+
+$HEAD_SYNC_OPTION_COMPARE_DATE_MODIFIED$=Compare Time:  
+$DESC_SYNC_OPTION_COMPARE_DATE_MODIFIED$::
+Setting this flag adds any files or folders where the Date Modified timestamps differ to the comparison list.
+::END
+
+$HEAD_SYNC_OPTION_INCLUDE_SUBFOLDERS$=Include Subfolders:  
+$DESC_SYNC_OPTION_INCLUDE_SUBFOLDERS$::
+Setting this flag adds any nested folders or any files of nested folders that match the above criteria to the comparison list.
+::END
+
+$HEAD_SYNC_OPTION_DELETE$=Delete:  
+$DESC_SYNC_OPTION_DELETE$::
+Setting this flag adds any files or folders that require a deletion in order to match the opposite root directory.
+::END
+
+$HEAD_SYNC_OPTION_PROMPT_FOR_OVERWRITE$=Prompt for Overwrite Confirmations:  
+$DESC_SYNC_OPTION_PROMPT_FOR_OVERWRITE$::
+Setting this flag shows a prompt for any overwrites that may occur during the synchronization process.
+::END
+
+$HEAD_SYNC_OPTION_PROMPT_FOR_DELETE$=Prompt for Delete Confirmations:  
+$DESC_SYNC_OPTION_PROMPT_FOR_DELETE$::
+Setting this flag shows a prompt for any deletions that may occur during the synchronization process.
+::END
+
+$HEAD_SYNC_OPTION_COMPARE_BTN$=Compare Button:  
+$DESC_SYNC_OPTION_COMPARE_BTN$::
+Manually refreshes the comparison listing.
+::END
+$DESC_SYNC_OPTION_COMPARE_BTN_2$::
+$BOLD_NOTE$:  Changing an option above will activate an automatic refresh of the comparison listing.
+::END
+
+
+<!-- Help-Dlg-SaveLogin.htm -->
+$HEAD_SAVE_LOGIN$=Save Login Dialog
+$DESC_SAVE_LOGIN$::
+The Save Login feature allows a file to be saved on the client machine that when opened, directly connects to the
+server.  This eliminates the need for the user to log into the server through a web browser in order to launch
+FTP Voyager JV.
+::END
+
+$DESC_SAVE_LOGIN_LAYOUT$::
+The dialog layout is described below:
+::END
+
+$LI_SAVE_LOGIN_ITEM_1_1$=Server:  
+$LI_SAVE_LOGIN_ITEM_1_2$=Specifies the server that you would like to connect to.
+
+$LI_SAVE_LOGIN_ITEM_2_1$=Port:  
+$LI_SAVE_LOGIN_ITEM_2_2$=Specifies the "public" port that the server is listening on.  
+$LI_SAVE_LOGIN_ITEM_2_3$::
+$BOLD_NOTE$:  The "public" port could be different
+than the port that the server is listening on.  For instance, a router could map the public port of 8080 to the private port
+of 80 that the server is listening on.
+::END
+
+$LI_SAVE_LOGIN_ITEM_3_1$=Language:  
+$LI_SAVE_LOGIN_ITEM_3_2$=Specifies the language you would like to use when logging into the server.
+
+$LI_SAVE_LOGIN_ITEM_4_1$=Secure:  
+$LI_SAVE_LOGIN_ITEM_4_2$=Specifies if the connection used is secure; HTTP versus HTTPS protocols.
+$LI_SAVE_LOGIN_ITEM_4_3$::
+$BOLD_NOTE$:  When toggling this flag, verify that the port is correct.  Otherwise, you could encounter a
+connection error when attempting to login.
+::END
+
+$LI_SAVE_LOGIN_ITEM_5_1$=User:  
+$LI_SAVE_LOGIN_ITEM_5_2$=Specifies the User ID you would like to use when attempting to login to the server.
+
+$LI_SAVE_LOGIN_ITEM_6_1$=Password (Optional):  
+$LI_SAVE_LOGIN_ITEM_6_2$=Specifies the password to use for the User ID that is specified above.
+$LI_SAVE_LOGIN_ITEM_6_3$::
+$BOLD_NOTE$:  If this field is empty, you will be prompted for a password before entering FTP Voyager JV.
+::END
+
+$LI_SAVE_LOGIN_ITEM_7_1$=Verify Password:  
+$LI_SAVE_LOGIN_ITEM_7_2$=This field verifies your password is correct.
+
+$LI_SAVE_LOGIN_ITEM_8_1$=Destination Path:  
+$LI_SAVE_LOGIN_ITEM_8_2$=Specifies the "absolute" file name for this launch file.  
+$LI_SAVE_LOGIN_ITEM_8_3$::
+$BOLD_NOTE$:  The file name has to have "jnlp" as the file extension.  Otherwise, the Java Runtime will
+not recognize this as a Java Webstart File.
+::END
+
+$LI_SAVE_LOGIN_ITEM_9_1$=Browse:  
+$LI_SAVE_LOGIN_ITEM_9_2$::
+Clicking this button launches a dialog that allows you the specify a local folder where the launch file will be created.
+::END
+
+$LI_SAVE_LOGIN_ITEM_10_1$=Create:  
+$LI_SAVE_LOGIN_ITEM_10_2$=When clicked, a "JNLP" file is created at the "Destination Path" with the file name that was specified.
+$LI_SAVE_LOGIN_ITEM_10_3$::
+$BOLD_NOTE$:  The file extension has to be "jnlp".  This is a requirement for the Java Runtime to properly open the file.
+::END
+
+$LI_SAVE_LOGIN_ITEM_11_1$=Cancel:  
+$LI_SAVE_LOGIN_ITEM_11_2$=Cancels and closes the dialog.
+
+
+<!-- Help-Dlg-ChangePassword.htm -->
+$HEAD_CHANGE_PASSWORD$=Change Password Dialog
+$DESC_CHANGE_PASSWORD$::
+The File Server administrator may configure whether or not users are allowed to change their own passwords.  If your administrator
+allows it, the password may be changed from within FTP Voyager JV.  It's a good idea to change passwords frequently to maintain
+security for the server.  The administrator may also place certain requirements on the content of passwords.  In case of trouble
+changing your password, please contact the Serv-U administrator.
+::END
+
+$LIST_CHANGE_PWORD$=Please follow the steps below to change your password:
+$LIST_CHANGE_PWRORD_TXT$::
+Click the $IMG_BTN_CHANGE_PASSWORD$ <strong>Change password</strong> entry found under the <strong>File</strong> menu.  If this entry is unavailable, then your administrator does not allow password changes by users.
+Enter your old password.
+Enter your new password.
+Enter your new password again to ensure accuracy.
+Press the <strong>OK</strong> button to complete the password change.
+::END
+
+$DESC_CHANGE_PASSWORD_ERRORS$::
+If the password change is not successful, a detailed error message is shown to explain why the new password does not meet the
+administrator's security requirements.
+::END
+
+
+<!-- Help-Dlg-ActivateWindow.htm -->
+$HEAD_DLG_ACTIVATE_WINDOW$=Activate Window Dialog
+$DESC_DLG_ACTIVATE_WINDOW$::
+The Activate Window Dialog has a list of all the panes that are available to FTP Voyager JV.  It includes all
+$LINK_LOCAL_REMOTE_PANES$ and the $LINK_TRANSFER_PANE$. Select the frame to activate and press the "OK" button.
+This frame is moved to the front of FTP Voyager JV's main window and becomes the $LINK_ACTIVE_PANE$.
+::END
+
+
+<!-- Help-OtherInfo-ActivePane-Overview.htm -->
+$HEAD_ACTIVE_PANE_OVERVIEW$=Active Pane Overview
+$DESC_ACTIVE_PANE_OVERVIEW$::
+The Active Pane is identified by having a different color surrounding it.  It receives all menu and keyboard input.
+
+In the example below, the $LINK_LOCAL_LIST_PANE$ is the Active Pane.
+::END
+
+
+<!-- Help-OtherInfo-DockingFramework-Overview.htm -->
+$HEAD_DOCKING_FRAMEWORK_OVERVIEW$=Docking Framework Overview
+$DESC_DOCKING_FRAMEWORK_OVERVIEW$::
+The Docking Framework provides the flexibility to change the entire look and feel of the application.  With all this
+customization, the application can be tailored to meet your needs.  This helps create a familiar layout that is easy to 
+understand and intuitive to each user.  The Docking Framework also grants access to view other parts of the same
+file system by utilizing multiple frames.  The frames can be laid out in a tabbed interface, floated, docked, or auto-hidden.
+The skin of the application may also be changed.   This can be done by selecting a different style under the
+Main Menu.
+::END
+
+$DESC_DOCK_DRAG_SPOTS$::
+The image below displays the areas that are can be dragged to change the layout of the frame.
+::END
+
+
+<!-- Help-OtherInfo-NavigatingDirs.htm -->
+$HEAD_NAVIGATING_DIRS$=Navigating Directories
+$DESC_NAVIGATING_DIRS$::
+FTP Voyager JV supports multiple methods for navigating the local and remote file systems to find the files and directories
+to transfer.  Listed below are the most common directory navigation methods.
+::END
+
+$HEAD_NAV_MOUSE_KEY$=Mouse & Keyboard Navigation
+$DESC_NAV_MOUSE_KEY$::
+The current directory can be changed using the mouse or keyboard.  Simply use one of the following methods:
+::END
+$DESC_NAV_MOUSE_KEY_LIST_1$=From the $LINK_LIST_PANE$:
+$LI_NAV_MOUSE_KEY_LIST_1$::
+Use the keyboard to select the desired folder.  Then press the <strong>Enter Key</strong>.
+Left-click to select the desired folder using the mouse.  Then press the <strong>Enter Key</strong>.
+Double-click the desired folder using the mouse.
+Right-click the desired folder using the mouse and select the <strong>Open</strong> option.
+::END
+$DESC_NAV_MOUSE_KEY_TREE_1$=From the $LINK_TREE_PANE$:
+$LI_NAV_MOUSE_KEY_TREE_1$::
+Use the keyboard to select the desired folder.
+Left-click to select the desired folder using the mouse.
+Right-click the desired folder using the mouse.  $BOLD_NOTE$:  This automatically opens the selected folder.
+::END
+
+$HEAD_OI_CRUMB_BAR$=Navigation Bar
+$DESC_OI_CRUMB_BAR$::
+The $LINK_CRUMB_BAR$ has many methods of opening a directory.  Simply use one of the following methods:
+::END
+$LI_OI_CRUMB_BAR_1$::
+Click on a "$LINK_CRUMB$" button.
+Click on the drop-down next to each "$LINK_CRUMB$" button to display the contents of that particular directory.  Then select a folder from the drop-down.
+Click between the "$LINK_CRUMB$" buttons and the "$LINK_CRUMB_HISTORY$" button to enter into $LINK_ABSOLUTE_PATH_MODE$.  Then type a full path into the edit field and press the "Enter" key.
+Click on the $LINK_CRUMB_HISTORY$ button to show a drop-down of previous working directories and select one of them from the list.
+::END
+
+$HEAD_NAV_HISTORY$=Navigation History
+$DESC_NAV_HISTORY$::
+Both the local and remote panes have an independent Navigation History that makes moving back and forth between multiple locations
+quick and easy.  There are two toolbar buttons available for the Navigation History that provide sequential access to previously
+browsed locations:
+::END
+$DESC_NAV_HISTORY_LIST$::
+Clicking the $IMG_BTN_BACK$ <strong>Back</strong> button changes the current directory of the active pane to the previous location in the Navigation History.
+Clicking the $IMG_BTN_FORWARD$ <strong>Forward</strong> button changes the current directory of the active pane to the next location in the Navigation History.
+::END
+$DESC_NAV_HISTORY_CONTD$::
+Both buttons contain an arrow on the right side that displays a list of all previously visited directories when clicked to allow
+direct navigation to a specific directory.  If there are no previous or next locations in the Navigation History, the appropriate
+button is disabled.
+::END
+
+$HEAD_NAV_UP_DIR$=Up Directory
+$DESC_NAV_UP_DIR$::
+Clicking the <strong>Up Dir</strong> button on the toolbar changes the current directory of the active pane to the immediate parent
+directory.  If the parent directory is not accessible, this option is disabled.
+::END
+
+
+<!-- Help-OtherInfo-ManagingDirs.htm -->
+$HEAD_MANAGING_DIRS_AND_FILES$=Managing Directories and Files
+$DESC_MANAGING_DIRS_AND_FILES$::
+Directories are folders that can be used to store files and other folders.  Creating a directory makes it possible to store similar
+files in one place while deleting a directory removes it from the file system along with all of its contents.  Directories can also be
+renamed when necessary.  To manage directories and files in FTP Voyager JV, use the following instructions:
+::END
+
+$HEAD_CREATE_DIRS$=Creating Directories
+$DESC_CREATE_DIRS$::
+Create new directories by clicking the <strong>New Dir</strong> button in the appropriate pane's toolbar.  An
+option for creating directories is also available from the <strong>File</strong> menu or the right-click menu.
+
+When creating a new folder in the local pane, a new entry is added to the directory listing immediately.  A default name is provided,
+which can be edited by simply typing the new name and pressing <strong>Enter</strong> or clicking outside the edit box.
+
+Creating a new folder in the remote pane brings up a new dialog where the desired folder name can be entered.  After providing the
+name for the new folder, click <strong>OK</strong> or press <strong>Enter</strong> to create it on the remote file system.
+::END
+
+$HEAD_DEL_DIRS_AND_FILES$=Deleting Directories and/or Files
+$DESC_DEL_DIRS_AND_FILES$::
+Multiple files and directories can be deleted at once by first selecting the desired items using the keyboard or mouse.  Once completed,
+choose the <strong>Delete</strong> option in the appropriate toolbar, <strong>File</strong> menu, or right-click
+menu.  The <strong>Delete</strong> key on the keyboard may also be used.
+
+Depending on your $LINK_PREF_PAGE_GENERAL$ preferences, a confirmation prompt may be displayed.  Use caution when deleting items
+as this action cannot be undone.
+::END
+
+$HEAD_RENAME_DIR_OR_FILE$=Renaming a Directory or File
+$DESC_RENAME_DIR_OR_FILE$::
+To rename a file or directory, first select the desired item using the keyboard or mouse.  Then select the <strong>Rename</strong> option
+from the right-click menu, <strong>File</strong> menu, or by pressing <strong>F2</strong> on your keyboard.  The name of the selected
+item then becomes an edit box.  Once the new name is entered, press <strong>Enter</strong> on the keyboard or left click outside
+the edit field to complete the rename operation.  Use the <strong>Escape</strong> key to cancel a rename operation.
+::END
+
+$HEAD_REFRESH_DIR$=Refreshing a Directory Listing
+$DESC_REFRESH_DIR$::
+If the contents of the current local or remote working directory are changed from outside FTP Voyager JV, it is necessary to manually
+refresh the directory listing to see the changes.  This can be easily done by selecting the <strong>Refresh</strong> button on the
+appropriate toolbar, from the <strong>View</strong> or right-click menus, or by pressing the <strong>F5</strong> key.
+::END
+
+$HEAD_PROPERTIES_DIRS_AND_FILES$=Viewing Detailed Information of the Directories and/or Files
+$DESC_PROPERTIES_DIRS_AND_FILES$::
+Detailed information about directories and files can be accessed through FTP Voyager JV.  For detailed information about the selected items,
+click the <strong>Properties</strong> option from the <strong>File</strong> or right-click menus, or by pressing <strong>Alt+Enter</strong>
+on your keyboard.
+::END
+
+$HEAD_OI_COPY_MOVE_FILES$=Copying or Moving Directories and Files
+$DESC_OI_COPY_MOVE_FILES$::
+Files and directories can be copied to other locations on the same file system.  Select the directories and/or files to copy or move.
+Then click and drag the selected files into the same file system's $LINK_LIST_PANE$ or $LINK_TREE_PANE$.  Release the mouse button
+over the target directory to complete the operation.  $BOLD_NOTE$:  Left-click drag initiates a COPY operation.  Right-click drag
+displays popup menu options after releasing the mouse button.
+::END
+
+
+<!-- Help-OtherInfo-TransferringFiles.htm -->
+$HEAD_TRANSFERRING_FILES$=Transferring Files
+$DESC_TRANSFERRING_FILES$::
+FTP Voyager JV can simultaneously download and upload files to and from a Serv-U File Server.  Transfers are performed in the
+background allowing the user to continue interacting with the User Interface while transfers are in progress.
+
+There are numerous ways that the user can initiate a transfer between the client and server.  Some methods are listed below:
+::END
+
+$DESC_OI_NOTE_DND_VARIATIONS$=See the <strong>Drag and Drop Variations</strong> for more information.
+
+$HEAD_OI_DOWNLOADING$=Downloading Files and Directories
+$DESC_OI_DOWNLOADING$::
+To download files from the server, please follow the instructions below:
+::END
+$LI_OI_DOWNLOADING_1$::
+Select the files or directories to transfer from the server to the client.  This can be done by following
+one of the steps below:
+::END
+$LI_OI_DOWNLOADING_1_1$::
+Highlighting the files and/or directories from a "Remote - $LINK_LIST_PANE$".
+::END
+$LI_OI_DOWNLOADING_1_2$::
+Highlighting a directory from a "Remote - $LINK_TREE_PANE$".
+::END
+$LI_OI_DOWNLOADING_2$::
+Initiate the transfer.
+::END
+$LI_OI_DOWNLOADING_2_1$::
+Click and drag the files and/or directories to a "Local - $LINK_LIST_PANE$" or a "Local - $LINK_TREE_PANE$" and 
+drop them into a destination directory.  The destination directory is identified by a highlight when the mouse
+hovers over it.
+::END
+$LI_OI_DOWNLOADING_2_2$::
+Click the $LINK_DOWNLOAD_BTN$ to transfer the files to a "Local - $LINK_LIST_PANE$" working directory.
+::END
+
+$HEAD_OI_UPLOADING$=Uploading Files and Directories
+$DESC_OI_UPLOADING$::
+To upload files from the client to the server, please follow the instructions below:
+::END
+$LI_OI_UPLOADING_1$::
+Select the files or directories to transfer from the client to server.  This can be done by following
+one of the steps below:
+::END
+$LI_OI_UPLOADING_1_1$::
+Highlighting the files and/or directories from a "Local - $LINK_LIST_PANE$".
+::END
+$LI_OI_UPLOADING_1_2$::
+Highlighting a directory from a "Local - $LINK_TREE_PANE$".
+::END
+$LI_OI_UPLOADING_2$::
+Initiate the transfer.
+::END
+$LI_OI_UPLOADING_2_1$::
+Click and drag the files and/or directories to a "Remote - $LINK_LIST_PANE$" or a "Remote - $LINK_TREE_PANE$" and 
+drop them into a destination directory.  The destination directory is identified by a highlight when the mouse
+hovers over it.
+::END
+$LI_OI_UPLOADING_2_2$::
+Click the $LINK_UPLOAD_BTN$ to transfer the files to a "Remote - $LINK_LIST_PANE$" working directory.
+::END
+
+$HEAD_DRAG_DROP_VARIATIONS$=Drag and Drop Variations
+$DESC_DRAG_DROP_VARIATIONS$::
+There are different variations of drag and drop.  Please be aware of the variations below:
+::END
+$LI_DND_VARIATION_1$=Left-clicking and dragging
+$LI_DND_VARIATION_1_1$=:  Copies the source files and directories to the target directory.
+$LI_DND_VARIATION_2$=Right-clicking and dragging
+$LI_DND_VARIATION_2_1$=:  Once the source files are dropped into a destination directory, a popup menu appears with two options:
+$LI_DND_VARIATION_2_1_1$=Move Files
+$LI_DND_VARIATION_2_1_2$=Copy Files
+$LI_DND_VARIATION_2_1_1_1$::
+:  Moves the source files and directories to the target directory.  This is done by copying the source files to the destination,
+then deleting them from the source location.
+::END
+$LI_DND_VARIATION_2_1_2_1$=:  Copies the source files and directories to the target directory.
+
+
+<!-- Help-OtherInfo-ManagingTransfers.htm -->
+$HEAD_MANAGE_TRANSFERS$=Managing Transfers
+$DESC_MANAGE_TRANSFERS$::
+Once a transfer has been initiated, it is placed in the transfer pane where detailed information
+on the status of the transfer can be viewed.  Certain actions can be performed while the transfer is in progress, including:
+::END
+
+
+<!-- Help-OtherInfo-Searching.htm -->
+$HEAD_SEARCHING_OVERVIEW$=Search for files and/or folders
+$DESC_SEARCHING_OVERVIEW$::
+It is easy to search for files and folders in the current working directory.  There are several methods for searching, each intuitive.
+::END
+
+
+<!-- Help-OtherInfo-FAQs.htm -->
+$OTHER_INFO_FAQS_MAIN_HEADER$=Frequently Asked Questions
+
+$QUESTION_WEL_MSG_DLG$=Why does a Welcome Message appear after I login with my web browser?
+$ANSWER_WEL_MSG_DLG$::
+User accounts in Serv-U can be configured to receive Welcome Messages.  If your user account is setup with one, it is
+received after successfully logging on to the File Server.
+::END
+
+$QUESTION_NEED_JRT$::
+Why do I need the Java Runtime installed to use FTP Voyager JV?
+::END
+$ANSWER_NEED_JRT$::
+FTP Voyager JV was written with the Java programming language.  Because Java is an interpreted language, the Java Runtime
+is necessary for it to run.  The latest version of the JRE is available $LINK_JAVA_RUNTIME$ here.
+::END
+
+$QUESTION_CERTIFICATE$::
+Why do I have to accept a certificate in order to run FTP Voyager JV?
+::END
+$ANSWER_CERTIFICATE$::
+FTP Voyager JV needs full access to the local file system in order to upload and download files to Serv-U.  Java applications
+that request these permissions must be digitally signed with a certificate.  FTP Voyager JV is signed using Rhino Software, Inc.'s
+developer certificate provided by Comodo, a trusted certification authority.  This guarantees that FTP Voyager JV is a genuine
+product of Rhino Software, Inc. and it is safe to allow it to access your system for the purpose of transferring data with
+Serv-U.
+::END
+
+$QUESTION_PREFERRED_CLIENT_1$::
+Is there a way to automatically launch FTP Voyager JV after I login?
+::END
+$ANSWER_PREFERRED_CLIENT_1$::
+Yes.  Please contact the Serv-U administrator and ask them to setup your account with FTP Voyager JV as the <strong>Default Web
+Client</strong>.
+::END
+
+$QUESTION_PREFERRED_CLIENT_2$::
+Is there a way I can go back to selecting which web client I would like to use after I login?
+::END
+$ANSWER_PREFERRED_CLIENT_2$::
+Yes.  Please contact the Serv-U administrator and ask them to setup your account to prompt for a web client instead of using
+a <strong>Default Web Client</strong>.
+::END
+
+$QUESTION_LIST_DIR_FAILED$::
+Why does the remote directory listing fail?
+::END
+$ANSWER_LIST_DIR_FAILED$::
+There could be various reasons why FTP Voyager JV cannot perform a remote directory listing.  Some possible reasons are listed below:
+::END
+$ANSWER_LIST_DIR_FAILED_LIST$::
+The Serv-U File Server is not running.
+The Serv-U File Server is not online.
+The session between FTP Voyager JV and the Serv-U File Server may have been disconnected.
+The user account may not have permission to view the remote directory.
+::END
+$ANSWER_LIST_DIR_FAILED_CONTD$::
+Try closing FTP Voyager JV and logging in to Serv-U again.  If remote directory listings still fail, contact your
+Serv-U administrator to confirm your permissions to the directory in question.
+::END
+
+$QUESTION_PERMISSIONS$::
+Why can't I create a directory, rename a directory, delete a directory, upload files, or download files?
+::END
+$ANSWER_PERMISSIONS$::
+The Serv-U administrator has the capability to assign specific privileges to each user.  The scope of operations for any particular
+user account is limited by these privileges.  If errors are displayed trying to perform one of the operations listed above, the dialog
+should indicate that the user account logged in does not have the corresponding privilege to perform that action.  If this is in error,
+please contact your Serv-U administrator.
+::END
+
+$QUESTION_BROWSER_FAIL_ON_LOGOUT$::
+Why does the browser fail to communicate with Serv-U when I logout of FTP Voyager JV?
+::END
+$ANSWER_BROWSER_FAIL_ON_LOGOUT$::
+FTP Voyager JV and the browser it was launched from share the same session ID that Serv-U uses to communicate to the
+corresponding client. Therefore, after logging out of FTP Voyager JV, the browser it was launched from no longer has a valid
+connection to Serv-U.  It is necessary to login again through the browser to establish a new connection to Serv-U.
+::END
+
+$QUESTION_CAN_NOT_LOGOUT$::
+Why can't I logout of Serv-U?
+::END
+$ANSWER_CAN_NOT_LOGOUT$::
+FTP Voyager JV can logout of Serv-U.  There's an option in the <strong>Preferences</strong> dialog under the $LINK_PREF_PAGE_GENERAL$
+tab that allows automatic logout from Serv-U when FTP Voyager JV closes.
+::END
+
+$QUESTION_JRT_NETWORK_SETTINGS$::
+If I have multiple browsers on my machine, can I use both to launch FTP Voyager JV?
+::END
+$ANSWER_JRT_NETWORK_SETTINGS$::
+Yes.  Both browsers can be used to simultaneously launch FTP Voyager JV.  However, use caution: because the Java Runtime only uses
+the proxy settings of the "default" browser, FTP Voyager JV may use the wrong proxy settings.  For instance, if your default browser
+is Internet Explorer, which is setup to use a proxy server, then FTP Voyager JV also uses these proxy settings even if it was launched
+by Mozilla Firefox.
+::END
+
+<!-- ONLY the English file should have the lines below.																		-->
+<!-- If the same key is found in a translated file, then the translation is displayed instead of the English string.		-->
+<!--#include de "Help-Strings-Local_DE.strings"-->
+<!--#include fr "Help-Strings-Local_FR.strings"-->
+<!--#include it "Help-Strings-Local_IT.strings"-->
+<!--#include es "Help-Strings-Local_ES.strings"-->
+<!--#include jp "Help-Strings-Local_JP.strings"-->
+<!--#include ru "Help-Strings-Local_RU.strings"-->
+<!--#include zh,TW "Help-Strings-Local_TW.strings"-->
+<!--#include zh,CN "Help-Strings-Local_CN.strings"-->

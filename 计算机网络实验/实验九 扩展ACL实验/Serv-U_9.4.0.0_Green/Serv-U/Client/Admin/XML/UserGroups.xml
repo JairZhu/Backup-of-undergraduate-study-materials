@@ -1,0 +1,13 @@
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<groups>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING% <group listitem="%LIST_ITEM%">
+%ADD_LIST_STRING% <Name>%CGroupName.%LIST_ID%.GroupName%</Name>
+%ADD_LIST_STRING% <ID>%LIST_ID%</ID>
+%ADD_LIST_STRING% </group>
+%CUser.%ID%.GroupName.List%
+</groups>
+<listresult>%LIST_RESULT%</listresult>
+</response>

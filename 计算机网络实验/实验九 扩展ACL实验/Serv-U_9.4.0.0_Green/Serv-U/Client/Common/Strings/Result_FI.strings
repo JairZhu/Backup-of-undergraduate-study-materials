@@ -1,0 +1,191 @@
+<!-- Result.strings - For ease of localization, strings have been separated into this file.  This has result strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- ******************** RESULT CODE TEXT ******************** -->
+<!-- NOTE: This file should contain all result codes and only	-->
+<!--	   result codes, all other strings should be placed		-->
+<!--	   in other string files.								-->
+
+<!-- shared result strings -->
+$OR_CONTACT_SYSTEM_ADMIN$=tai pyydä apua järjestelmänvalvojaltasi.
+$CONTACT_SYSTEM_ADMIN$=Ota yhteys järjestelmänvalvojaan.
+
+<!-- global results -->
+$SESS_OKAY_STR$=Toiminto onnistui.
+$SESS_FAIL_STR$=VIRHE: Toimintoa ei voida suorittaa.
+$SESS_PENDING_STR$=Virhe: Toimintoa suoritetaan vielä.
+$SESS_PERMISSION_DENIED_STR$=VIRHE: Sinulla ei ole tarvittavia käyttöoikeuksia haluamasi tiedoston tai hakemiston avaamiseen.
+$SESS_INVALID_PARAMETER_STR$=VIRHE: Toiminto epäonnistui, virheellinen parametri.
+$SESS_BAD_SEQUENCE_OF_COMMANDS_STR$=Virhe: Komentojono ei kelpaa.
+$SESS_NOT_FOUND_STR$=VIRHE: Määritettyä tiedostoa tai hakemistoa ei löydy.
+$SESS_PATH_IS_PORT_STR$=VIRHE: Määritetty tiedostopolku on Windows-käyttöjärjestelmän PORTTI, eikä toimintoa voida suorittaa.
+$SESS_LOGIN_TOO_MANY_INVALID_TRIES_STR$=Kirjautumisyritysten sallittu lukumäärä on ylitetty.
+<!-- !!!!! $SESS_COMMAND_PENDING_STR$= -- PLEASE TRANSLATE -- -->
+$SESS_COMMAND_ABORTED_STR$=VIRHE: Toiminto epäonnistui, komento keskeytettiin.
+$SESS_INTERNAL_ERROR_STR$=VIRHE: Toimintoa ei voida suorittaa, tapahtui sisäinen virhe.
+$SESS_ALREADY_EXISTS_STR$=VIRHE: Tiedosto tai kansio on jo olemassa.
+$SESS_FILE_IS_DIR_STR$=VIRHE: Toimintoa ei voida suorittaa, määritetty tiedostopolku osoittaa hakemistoon eikä tiedostoon.
+$SESS_DIR_IS_FILE_STR$=VIRHE: Toimintoa ei voida suorittaa, määritetty tiedostopolku on tiedosto eikä hakemisto.
+$SESS_CANT_REST_EMPTY_FILE_STR$=$SESS_FAIL_STR$
+$SESS_CANT_REST_BEYOND_EOF_STR$=$SESS_FAIL_STR$
+$SESS_CANT_SET_FILE_POS_STR$=$SESS_FAIL_STR$
+<!-- $SESS_COMPRESSED_TRANSFER_COMPLETE_STR$= -- placeholder -- -->
+$SESS_UNAUTHORIZED_IP_STR$=VIRHE: IP-osoite ei ole sallittu.
+$SESS_TIME_OUT_STR$=VIRHE: Istunto päättyi aikakatkaisun vuoksi.
+$SESS_EXCEEDED_MAX_SESSION_TIME_STR$=VIRHE: Tämän tilin suurin istuntoaika on ylitetty.
+$SESS_TOO_MANY_SESSIONS_IP_STR$=VIRHE: IP:tä käyttävien istuntojen lukumäärä on liian suuri.
+$SESS_TOO_MANY_SESSIONS_STR$=VIRHE: Istuntojen lukumäärä on liian suuri.
+$SESS_BLOCKED_STR$=Käyttösi on estetty.  Yritä uudelleen myöhemmin, $OR_CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_DATA_SOCKET_CONNECT_STR$= -- placeholder -- -->
+<!-- $SESS_DATA_SOCKET_CLOSED_STR$= -- placeholder -- -->
+<!-- $SESS_DECR_USER_QUOTA_STR$= -- placeholder -- -->
+$SESS_NO_FILES_FOUND_STR$=VIRHE: Tiedostoja ei löytynyt.
+<!-- $SESS_LOCK_CONFLICT_STR$= -- placeholder -- -->
+$SESS_ADMIN_ABORTED_STR$=VIRHE: Toiminto keskeytettiin järjestelmänvalvojan toimesta.
+$SESS_UNAUTHORIZED_STR$=VIRHE: Et ole sisäänkirjautuneena tai järjestelmänvalvoja on katkaissut yhteyden.
+$SESS_CANT_DELETE_SESSION_DOMAIN_STR$=VIRHE: Kirjautuneena olevan käyttäjätilin sisältävää toimialuetta ei voida poistaa.
+$SESS_NO_SUCH_PATH_STR$=Pyydettyä tiedostopolkua ei ole olemassa, tämä tarkoittaa yleensä, että ylähakemistoa ei ole luotu.  Luo ylähakemisto ennen tämän toiminnon yrittämistä.
+<!-- !!!!! $SESS_INVALID_PATH_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SESS_PROTOCOL_NOT_ALLOWED_FOR_USER_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SESS_PERMISSION_DENIED_READ_ONLY_ADMIN_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SESS_CANT_DELETE_SELF_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- CheckUser() results -->
+$SESS_USER_OKAY_NEED_PWD_STR$=Virhe: Käyttäjällä on oltava salasana.
+$SESS_USER_NOT_FOUND_STR$=Virhe: Käyttäjää ei löytynyt.
+$SESS_USER_OKAY_NEED_EMAIL_STR$=Virhe: Käyttäjällä on oltava sähköpostiosoite.
+$SESS_USER_NO_ANONYMOUS_STR$=Virhe: Nimetön käyttö on estetty.
+$SESS_USER_NEED_SECURE_CONNECTION_STR$=Vain salatut yhteydet sallitaan.  $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_USER_OKAY_NEED_SKEY_PWD_STR$= -- placeholder -- -->
+
+<!-- CheckPassword() results -->
+$SESS_PASSWORD_CANT_FIND_HOME_STR$=Virhe: Tälle tilille ei ole määritetty kotihakemistoa.
+$SESS_PASSWORD_USE_REAL_EMAIL_ADDR_STR$=Käytä oikeata sähköpostiosoitettasi sisäänkirjautuessasi.
+$SESS_PASSWORD_EXPIRED_CHANGE_STR$=Salasana on vanhentunut.  Ennen jatkamista sinun on muutettava salasanaasi.
+
+<!-- ChangePassword() results -->
+$SESS_CHG_PASSWORD_NO_OLD_PASSWORD_MATCH_STR$=Vanha salasana on virheellinen.
+$SESS_CHG_PASSWORD_TOO_SHORT_STR$=VIRHE: Määritetty salasana on liian lyhyt.
+$SESS_CHG_PASSWORD_NOT_COMPLEX_STR$=VIRHE: Määritetty salasana ei ole riittävän monimutkainen.
+$SESS_CHG_PASSWORD_OLD_NEW_MATCH_STR$=Uusi salasana ei saa olla samanlainen kuin vanha salasana.
+$SESS_CHG_PASSWORD_CANT_CHANGE_ANONYMOUS_STR$=Ei voida muuttaa nimettömäksi.
+
+<!-- Xcrc() results -->
+<!-- !!!!! $SESS_XCRC_CANNOT_READ_FROM_FILE_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- List() results -->
+<!-- $SESS_LIST_START_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_END_DIR_STR$= -- placeholder -- -->
+<!-- $SESS_LIST_FILE_STR$= -- placeholder -- -->
+
+<!-- Retrieve() & Store() results -->
+<!-- $SESS_RETR_DATA_STR$= -- placeholder -- -->
+$SESS_CANT_LOAD_GDI_PLUS_STR$=Sisäinen virhe: Kohteen GDI+ lataaminen epäonnistui toimintoa suoritettaessa.  $CONTACT_SYSTEM_ADMIN$
+$SESS_CANT_CREATE_THUMBNAIL_STR$=Sisäinen virhe: Pienoiskuvan luominen epäonnistui.
+$SESS_CANT_SAVE_THUMBNAIL_STR$=Sisäinen virhe: Väliaikaisen pienoiskuvan tallentaminen epäonnistui.  Palvelimen levytila saattaa olla lopussa.
+<!-- $SESS_FILE_OPENED_STR$= -- placeholder -- -->
+$SESS_CANT_WRITE_STR$=Sisäinen virhe: Kirjoittaminen palvelimen kiintolevylle epäonnistui.  Palvelimen levytila saattaa olla lopussa.  $CONTACT_SYSTEM_ADMIN$
+$SESS_SERVER_STOP_PENDING_STR$=Toiminto ei ole käytettävissä, palvelinta ajetaan alas.
+$SESS_RETR_INSUFFICIENT_CREDIT_STR$=Sinun on ensin ladattava tiedosto palvelimelle, ennen kuin voit ladata tiedoston palvelimelta.  Lataa tiedosto palvelimelle ja yritä sitten ladata tiedosto palvelimelta.
+$SESS_STOR_INSUFFICIENT_DISK_QUOTA_STR$=Levykiintiösi ei riitä.  Poista tiedostoja ja yritä latausta uudelleen.
+$SESS_STOR_INSUFFICIENT_DISK_SPACE_STR$=Käytössäsi oleva levytila ei riitä.  Poista tiedostoja ja yritä latausta uudelleen, $OR_CONTACT_SYSTEM_ADMIN$
+$SESS_STOR_FILE_TOO_LARGE_STR$=Tiedostokoko on liian suuri.  Sinun on vapautettava levytilaa ja yritettävä latausta uudelleen, tai käytössäsi ei ole riittävästi levytilaa.  $CONTACT_SYSTEM_ADMIN$
+<!-- $SESS_STOR_DATA_WRITTEN_STR$= -- placeholder -- -->
+<!-- !!!!! $SESS_APPE_CANT_RESTART_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- GetUniqueFileName() results -->
+<!-- !!!!! $SESS_STOU_CANT_CREATE_UNIQUE_NAME_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- SetLastWriteTime() results -->
+$SESS_FUTURE_TIME_STR$=$SESS_FAIL_STR$
+
+<!-- HTTP attribute list results -->
+<!-- $SESS_LIST_NO_CHANGE_STR$= -- placeholder -- -->
+
+<!-- SSL certificate creation results -->
+$SESS_SSL_CANT_CREATE_KEY_FILE_STR$=SSL-virhe: Avaintiedoston luominen epäonnistui.
+$SESS_SSL_CANT_WRITE_KEY_FILE_STR$=SSL-virhe: Avaintiedoston kirjoitus epäonnistui.
+$SESS_SSL_CANT_CREATE_CERT_FILE_STR$=SSL-virhe: Sertifikaattitiedoston luominen epäonnistui.
+$SESS_SSL_CANT_WRITE_CERT_FILE_STR$=SSL-virhe: Sertifikaattitiedoston kirjoitus epäonnistui.
+$SESS_SSL_CANT_CREATE_CERT_REQUEST_FILE_STR$=SSL-virhe: Sertifikaattipyyntötiedoston luominen epäonnistui.
+
+<!-- licensing results -->
+$SESS_ID_INVALID_STR$=Määritetty rekisteröinti-ID ei kelpaa.  Syötä kelvollinen rekisteröinti-ID.
+$SESS_ID_EXPIRED_STR$=Määritetty rekisteröinti-ID on vanhentunut, eikä se kelpaa käytettäväksi tämän Serv-U -version kanssa.  Syötä uudempi rekisteröinti-ID.
+$SESS_LIC_TOO_MANY_DOMAINS_STR$=Lisenssin sallima toimialueiden suurin lukumäärä on saavutettu.  Jos haluat luoda uuden toimialueen, sinun on ostettava päivitetty lisenssi.
+$SESS_LIC_TOO_MANY_USERS_STR$=Lisenssin sallima käyttäjien suurin lukumäärä on saavutettu.  Jos haluat luoda uuden käyttäjätilin, sinun on ostettava päivitetty lisenssi.
+$SESS_LIC_TOO_MANY_SESSIONS_STR$=Lisenssin sallima samanaikaisten istuntojen suurin lukumäärä on saavutettu.  Jos haluat kasvattaa samanaikaisten istuntojen lukumäärää, sinun on ostettava päivitetty lisenssi.
+$SESS_LIC_NO_REMOTE_ADMIN_STR$=Käytössäsi oleva lisenssi ei salli palvelimen etähallintaa.  Jos haluat ottaa käyttöön palvelimen etähallinnan, sinun on ostettava päivitetty lisenssi.
+$SESS_LIC_NO_FVJV_STR$=FTP Voyager JV ei ole käytettävissä tällä lisenssillä.
+<!-- !!!!! $SESS_LIC_NO_WEB_CLIENT_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SESS_LIC_NO_PASSWORD_RECOVERY_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- password recovery -->
+<!-- !!!!! $SESS_PASSWORD_RECOVERY_DISABLED_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SESS_PASSWORD_RECOVERY_CHANGE_DENIED_STR$= -- PLEASE TRANSLATE -- -->
+
+<!-- Port() results -->
+<!-- $FTPSESS_PORT_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PORT_INVALID_PORT_NUMBER$= -- placeholder -- -->
+
+<!-- Pasv() results -->
+<!-- $FTPSESS_PASV_UNABLE_TOSETUP_LISTEN_SOCK$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_ONLY_CLIENT_IP_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_PASV_TOO_MANY_PASV_REQUESTS$= -- placeholder -- -->
+
+<!-- Mlsd() results  -->
+<!-- $FTPSESS_MLSD_WILDCARDS_NOT_ALLOWED$= -- placeholder -- -->
+<!-- $FTPSESS_MLSD_PATHNAME_NOT_DIRECTORY$= -- placeholder -- -->
+
+<!-- data connection -->
+<!-- $FTPSESS_DATACHAN_IN_USE$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_OUT_OF_NETWORK_SOCKETS$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CANNOT_OPEN$= -- placeholder -- -->
+<!-- $FTPSESS_DATACHAN_CLOSED_ABORTED$= -- placeholder -- -->
+
+<!-- validation results -->
+$SU_VALID_USER_EXISTS_STR$=VIRHE: Järjestelmässä on jo käyttäjätili, jolla on sama ID.
+$SU_VALID_GROUP_EXISTS_STR$=VIRHE: Järjestelmässä on jo ryhmä, jolla on sama nimi.
+$SU_VALID_ATTR_LESS_THAN_MIN_STR$=VIRHE: Määritetty arvo on liian pieni.  Anna suurempi arvo.
+$SU_VALID_ATTR_GREATER_THAN_MAX_STR$=VIRHE: Määritetty arvo on liian suuri.  Anna pienempi arvo.
+$SU_VALID_INVALID_RESPONSE_CODE_FORMATTING_STR$=VIRHE: Tämä FTP-komento edellyttää erityisiä muotoilumääreitä.  Säilytä muotoilumääreet, kun muokkaat vastaustekstiä.
+$SU_VALID_PATH_CONTAINS_WILDCARD_CHARS_STR$=$SESS_FAIL_STR$
+$SU_VALID_EMPTY_PHYSICAL_PATH_STR$=VIRHE: Määritä fyysinen tiedostopolku.
+$SU_VALID_EMPTY_VIRTUAL_PATH_STR$=VIRHE: Määritä virtuaalinen tiedostopolku.
+$SU_VALID_LOGIN_ID_EMPTY_STR$=VIRHE: Anna käyttäjälle yksilöivä ID-tunnus kirjautumista varten.
+$SU_VALID_GROUP_NAME_EMPTY_STR$=VIRHE: Anna ryhmälle yksilöivä nimi.
+$SU_VALID_DOMAIN_EXISTS_STR$=VIRHE: Järjestelmässä on jo toimialue, jolla on sama nimi.
+$SU_VALID_ORGANIZATION_EXISTS_STR$=VIRHE: Järjestelmässä on jo käyttäjäorganisaatio, jolla on sama nimi.
+$SU_VALID_PERMISSION_DENIED_STR$=VIRHE: Käyttö estetty.
+<!-- !!!!! $SU_VALID_UNABLE_TO_CREATE_SSL_METHOD_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_UNABLE_TO_CREATE_SSL_CONTEXT_STR$= -- PLEASE TRANSLATE -- -->
+$SU_VALID_CERT_PATH_IS_EMPTY_STR$=VIRHE: Määritä todellinen polku sertifikaattitiedostolle.
+$SU_VALID_UNABLE_TO_LOAD_CERT_FILE_STR$=VIRHE: Sertifikaatin lataus epäonnistui.  Varmista, että määritetty polku on oikea.
+$SU_VALID_UNABLE_TO_LOAD_PRIVATE_KEY_FILE_STR$=VIRHE: Henkilökohtaisen avaintiedoston lataaminen epäonnistui.  Varmista, että henkilökohtaisen avaimen polku ja salasana ovat oikeat.
+<!-- !!!!! $SU_VALID_UNABLE_TO_LOAD_OPENSSL_STR$= -- PLEASE TRANSLATE -- -->
+$SU_VALID_PHYSICAL_PATH_INVALID_STR$=VIRHE: Määritetty fyysinen polku on virheellinen.
+$SU_VALID_VIRTUAL_PATH_INVALID_STR$=VIRHE: Määritetty virtuaalinen polku on virheellinen.
+$SU_VALID_HOST_NAME_EXISTS_STR$=VIRHE: Annettu virtuaalipalvelimen nimi on jo käytössä.
+$SU_VALID_FTP_RESP_REQUIRES_COMMAND_RESULT_STR$=VIRHE: FTP-komennon vastauksessa on oltava makro $CommandResult, että se toimii oikein.
+$SU_VALID_FTP_RESP_READ_ONLY_STR$=VIRHE: Valittu FTP-komennon vastaus on vain luku -muotoinen eikä sitä voida muokata.
+$SU_VALID_USER_CANNOT_BE_ADMIN_STR$=VIRHE: Toimialueen järjestelmänvalvoja ei voi luoda toista järjestelmänvalvojaa.
+$SU_VALID_GROUP_CANNOT_BE_ADMIN_STR$=VIRHE: Toimialueen järjestelmänvalvoja ei voi luoda järjestelmänvalvojaryhmää.
+$SU_VALID_HOME_DIR_CANNOT_CONTAIN_HOME_VAR_STR$=VIRHE: Kotihakemisto ei saa sisältää makroa %HOME%.
+<!-- !!!!! $SU_VALID_CANNOT_LOAD_GDI_PLUS_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_NOT_AN_IMAGE_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_INVALID_IMAGE_SIZE_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_NOT_FOUND_STR$= -- PLEASE TRANLSATE -- -->
+<!-- !!!!! $SU_VALID_EV_SUBJECT_EMPTY_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_BODY_EMPTY_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_TO_ADDRESS_EMPTY_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_INVALID_EMAIL_ADDRESS_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_BALLON_TIP_TITLE_TOO_LARGE_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_BALLON_TIP_MESSAGE_TOO_LARGE_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_BALLON_TIP_EMPTY_STR$= -- PLEASE TRANSLATE -- -->
+<!-- !!!!! $SU_VALID_EV_EXE_PATH_EMPTY_STR$= -- PLEASE TRANSALTE -- -->
+<!-- !!!!! $SU_VALID_EV_EXE_PARAMETERS_CONTAIN_CR_LF_STR$= -- PLEASE TRANSALTE -- -->
+<!-- !!!!! $SU_VALID_EV_INVALID_VAR_FOR_ADMIN_STR$= -- PLEASE TRANSALTE -- -->
+<!-- !!!!! $SU_VALID_INVALID_SMTP_EMAIL_ADDRESS_STR$= -- PLEASE TRANSALTE -- -->
+<!-- !!!!! $SU_VALID_INVALID_EMAIL_ADDRESS_STR$= -- PLEASE TRANSALTE -- -->
+<!-- !!!!! $SU_VALID_EV_INVALID_EMAIL_ADDRESS_BCC_STR$= -- PLEASE TRANSALTE -- -->

@@ -1,0 +1,203 @@
+
+18-RSR20-1>
+18-RSR20-1>en 14
+
+Password:
+18-RSR20-1#config
+Enter configuration commands, one per line.  End with CNTL/Z.
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           down                   down     
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.2.2/24       no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           down                   down     
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.2.2/24       no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#int Serial 2/0
+18-RSR20-1(config-if-Serial 2/0)#ip addr 192.168.3.1 255.255.255.0
+18-RSR20-1(config-if-Serial 2/0)#no shutdown
+18-RSR20-1(config-if-Serial 2/0)#exit
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           down                   down     
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.2.2/24       no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#int gi 0/0
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ip addr 192.168.2.1 255.255.255.0
+18-RSR20-1(config-if-GigabitEthernet 0/0)#no shutdown
+18-RSR20-1(config-if-GigabitEthernet 0/0)#exit
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           down                   down     
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.2.1/24       no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#*Apr 26 13:35:48: %LINK-3-UPDOWN: Interface Serial 2/0, changed state to up.
+*Apr 26 13:35:48: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial 2/0, changed state to up.
+
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     up       
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.2.1/24       no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#*Apr 26 13:36:15: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial 2/0, changed state to down.
+              
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     down     
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.2.1/24       no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#int gi 0/1    
+18-RSR20-1(config-if-GigabitEthernet 0/1)#ip addr 192.168.2.1 255.255.255.0
+Primary IP address conflict with "GigabitEthernet 0/0".
+18-RSR20-1(config-if-GigabitEthernet 0/1)#exit
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     down     
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.2.1/24       no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     down     
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.2.1/24       no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#int gi 0/0
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ip ?    
+  access-group        ACL applied on interface
+  accounting          Ip accounting
+  address             Set the IP address of an interface
+  broadcast-address   Set the broadcast address of an interface
+  dhcp                Dhcp config
+  directed-broadcast  Enable forwarding of directed broadcasts
+  dvmrp               DVMRP interface commands
+  flow                Ipfix related commands
+  helper-address      Specify a destination address for UDP broadcasts
+  igmp                IGMP interface commands
+  ingress-filter      Network ingress filter
+  inspect             Apply inspect name
+  list                List
+  mask-reply          Enable sending ICMP Mask Reply messages
+  mtu                 Set IP Maximum Transmission Unit
+  multicast           IP multicast interface commands
+  nat                 NAT interface commands
+  ospf                OSPF interface commands
+  pim                 PIM interface commands
+  policy              Enable IP policy routing
+  proxy-arp           Enable proxy ARP
+  rate-control        Per-user rate control
+  redirects           Enable sending ICMP Redirect messages
+  reverse-path        Enable reverse path limite
+  rip                 Router Information Protocol
+  router              IP router interface commands
+  rtp                 RTP parameters
+  sdg                 Sdg policy
+  tcp                 Configure ip tcp parameters
+  tcp-intercept       TCP SYN proxy
+  unnumbered          Enable IP processing without an explicit address
+  unreachables        Enable sending ICMP Unreachable messages
+  url_filter          URL filter
+          
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ip addr ?
+  A.B.C.D  IP address
+  dhcp     IP Address via DHCP
+
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ip addr 
+% Incomplete command.
+
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ip addr no address 
+                                                  ^
+% Invalid input detected at '^' marker.
+
+18-RSR20-1(config-if-GigabitEthernet 0/0)#ip addr 192.168.16.10 255.255.255.0
+18-RSR20-1(config-if-GigabitEthernet 0/0)#no shutdown
+18-RSR20-1(config-if-GigabitEthernet 0/0)#exit
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     down     
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.16.10/24     no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#int Serial 2/0
+18-RSR20-1(config-if-Serial 2/0)#no shutdown
+18-RSR20-1(config-if-Serial 2/0)#exit
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     down     
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.16.10/24     no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#int Serial 2/0
+18-RSR20-1(config-if-Serial 2/0)#ip addr 192.168.3.1 255.255.255.0
+18-RSR20-1(config-if-Serial 2/0)#no shutdown
+18-RSR20-1(config-if-Serial 2/0)#exit
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     down     
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.16.10/24     no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#int gi 0/1    
+18-RSR20-1(config-if-GigabitEthernet 0/1)#ip addr 192.168.*Apr 26 13:43:05: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial 2/0, changed state to up.
+ 
+                                                          ^
+% Invalid input detected at '^' marker.
+
+18-RSR20-1(config-if-GigabitEthernet 0/1)#exit
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     up       
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.16.10/24     no address           down                   down     
+GigabitEthernet 0/1              172.16.18.10/24      no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#int gi 0/1    
+18-RSR20-1(config-if-GigabitEthernet 0/1)#ip addr 192.168.2.1 255.255.255.0
+18-RSR20-1(config-if-GigabitEthernet 0/1)#no shutdown
+18-RSR20-1(config-if-GigabitEthernet 0/1)#exit
+18-RSR20-1(config)#show ip int br
+Interface                        IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+Serial 2/0                       192.168.3.1/24       no address           up                     up       
+SIC-3G-WCDMA 3/0                 no address           no address           up                     down     
+GigabitEthernet 0/0              192.168.16.10/24     no address           down                   down     
+GigabitEthernet 0/1              192.168.2.1/24       no address           up                     up       
+VLAN 1                           no address           no address           up                     down     
+18-RSR20-1(config)#ip route 192.168.4.0 255.255.255.0 192.168.3.2
+18-RSR20-1(config)#exit
+18-RSR20-1#*Apr 26 13:44:54: %SYS-5-CONFIG_I: Configured from console by console
+
+18-RSR20-1#show ip route
+
+Codes:  C - connected, S - static, R - RIP, B - BGP
+        O - OSPF, IA - OSPF inter area
+        N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+        E1 - OSPF external type 1, E2 - OSPF external type 2
+        i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+        ia - IS-IS inter area, * - candidate default
+
+Gateway of last resort is no set
+C    192.168.2.0/24 is directly connected, GigabitEthernet 0/1
+C    192.168.2.1/32 is local host. 
+C    192.168.3.0/24 is directly connected, Serial 2/0
+C    192.168.3.1/32 is local host. 
+S    192.168.4.0/24 [1/0] via 192.168.3.2
+18-RSR20-1#

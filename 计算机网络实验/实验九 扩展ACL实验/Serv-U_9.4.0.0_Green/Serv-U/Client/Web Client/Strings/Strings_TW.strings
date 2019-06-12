@@ -1,0 +1,203 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Web Client\Include\ -->
+
+<!-- General -->
+$CLICK_HERE_CURRENT_DIR$=<a href="%FILE%ListDir.htm?Dir=%CURRENT_DIR%">按一下此處列出您的當前目錄。</a>
+$WARN_IMAGE$=<img src="%FILE%Images\warn.gif" style="float:left;">
+$DELETE$=移除
+$OPEN$=打開
+$CURRENTLY_LOCATED$=當前位於
+$USE_INHERITED$=繼承預設值
+$NO_SCRIPT_TEXT$=您的瀏覽器可能不支持 JavaScript 運行。該頁要求啟用 JavaScript。
+$PLEASE_ENTER_USER_NAME$=請輸入登入 ID。
+$FOLDER_SIZE$=檔夾大小
+$DIR_PROPERTIES$=目錄屬性
+$MODIFIED_TIME$=已修改
+$CREATED_TIME$=已創建
+$LAST_ACCESSED_TIME$=上次訪問
+
+<!-- Login -->
+$LOGIN_TITLE$=由 RhinoSoft.com 開發的 Serv-U
+$LANGUAGE$=語言
+$PASSWORD$=密碼
+$LOGIN$=登入
+$CHANGE_PASSWORD$=變更密碼
+$REMEMBER_USER$=記住密碼
+$RELOAD$=重新載入
+$JSCRIPT_DISABLED_WARN$=瀏覽器設定中禁用了 Javascript。要使用 Serv-U 檔伺服器必須啟用 javascript。<br /><br />瀏覽器設定中啟用了 javascript 後點擊下麵的 "重新載入" 按鈕。
+$IE_NOT_COMPATIBLE_WARN$=您使用的 Internet Explorer 與 Serv-U 不相容。要使用 Sev-U，請升級到 Internet Explorer 6.0　或更高版本。
+$BROWSER_NOT_COMPATIBLE_WARN$=您使用的瀏覽器與當前版本的 Serv-U 不相容。請使用 Internet Explorer 6.0+ 或 Firefox 1.0+ 或 Safari 3+ 或 Opera 9+。
+
+<!-- Languages -->
+$ENGLISH$=English (英語)
+$GERMAN$=Deutsch (德語)
+$ITALIAN$=Italiano (義大利語)
+$FRENCH$=Français (法語)
+$SPANISH$=Español (西班牙語)
+$PORTUGUESE$=Português (葡萄牙語)
+$SWEDISH$=Svenska (瑞典語)
+$FINISH$=Suomi (芬蘭語)
+$NORWEGIAN$=Norsk (挪威語)
+$DANISH$=Dansk (丹麥語)
+$RUSSIAN$=Русский (俄語)
+$TRADITIONAL_CHINESE$=繁體中文
+$SIMPLIFIED_CHINESE$=简体中文
+$JAPANESE$=日本語 (日語)
+
+
+<!-- Logout -->
+$LOGOUT_TITLE$=登出
+$LOGOUT_DESC$=您已登出。<a href="%LOGIN%">按一下此處再次登入。</a>
+$LOGGED_OUT_MSG$=您已登出。
+
+
+<!-- Login Change Password -->
+$PASSWORD_EXPIRED_TITLE$=密碼已過期 - 變更密碼
+$PASSWORD_EXPIRED_DESC$=您的密碼已過期，請在繼續使用前變更密碼。
+
+
+<!-- Session Not Found -->
+$SESSION_NOT_FOUND_TITLE$=未授權 - 找不到連線期間
+$SESSION_NOT_FOUND_HEAD$=401 未授權，指定的連線期間不存在
+$SESSION_NOT_FOUND_DESC$=指定的連線期間不存在。可能由於不活動的時間太長。請嘗試再次登入。
+
+
+<!-- Not Logged In -->
+$NOT_LOGGED_IN_TITLE$=未授權 - 沒有登入
+$NOT_LOGGED_IN_HEAD$=401 未授權，您尚未登入
+$NOT_LOGGED_IN_DESC$=您未經授權以執行要求的作業。<a href="%LOGIN%">請在嘗試該作業前先登入。</a>
+
+
+<!-- Permission Denied -->
+$PERMISSION_DENIED_TITLE$=許可權被拒絕
+$PERMISSION_DENIED_DESC$=許可權被拒絕
+
+
+<!-- Listing -->
+$CURR_DIR_HOST$=%HOST%
+$CURR_DIR_NAME$=%CURRENT_DIR_NAME%
+$MOD_TIME$=時間
+$ATTRS$=屬性
+$THUMBNAIL_LIST$=縮略圖
+$UPLOAD_ACTION$=上傳
+$UPLOAD$=上傳
+$UPLOAD_ALT$=上傳
+$THUMBNAILS_ALT$=縮略圖
+$DETAILS_ALT$=詳細資訊
+$CREATE_DIR_ALT$=創建目錄
+$FILETOOLS$=工具
+$DOWNLOAD$=下載
+$THUMBNAIL_SIZE$=縮略圖大小
+$SELECT_THUMBNAIL_SIZE$=選擇大小
+$PREVIEW_IMAGE$=預覽圖像
+$CHANGE_PASSWORD_BUTTON$=變更密碼
+$FILE_PATH$=檔路徑
+$PLAY_MEDIA$=媒體播放
+$PLAY_LIST$=播放清單
+$AUDIO_PLAY_LIST$=音頻播放清單
+$PLAYLIST_SIZE$=播放清單大小
+$SHUFFLE_PLAYLIST$=隨機播放清單
+$NEXT_MEDIA_FILE$=下一個媒體檔
+$PREVIOUS_MEDIA_FILE$=上一個媒體檔
+$HOME$=首頁
+$FOLDER_EMPTY$=資料夾為空
+$BACK$=後退
+$FORWARD$=前進
+$HISTORY_LIST$=歷史記錄清單
+$SEARCH_ACTION$=搜索
+$NO_FILES_FOUND$=未找到檔案。
+
+
+<!-- Thumbnail Listing -->
+$DETAIL_LIST$=詳細資訊
+
+
+<!-- STOR File Uploaded -->
+$STOR_FILE_UPLOADED_TITLE$=檔案已上傳
+$STOR_FILE_UPLOADED_DESC$=檔已成功上傳。<br><br>$CLICK_HERE_CURRENT_DIR$
+
+
+<!-- Rename -->
+$RENAME_TITLE$=重命名
+$RENAME_DESC$=輸入新名稱：
+$NEW_NAME$=新名稱
+$RENAME$=重命名
+
+
+<!-- Delete -->
+$DELETE_DIR$=您確定要移除選取的目錄嗎？
+$DELETE_FILE$=您確定要移除選取的檔嗎？
+
+
+<!-- Style Swap Properties -->
+$BOX_WIDTH_SMALL$=boxwidth300
+
+
+<!-- Overwrite file on upload -->
+$OVERWRITE_FILE$=您確定要覆蓋此檔嗎？
+
+<!-- Search -->
+$FILE_SEARCH_DESC$=完整或部分檔案名
+$FILE_SEARCH_TITLE$=檔案搜索
+$SEARCH_SAMPLES$=搜索示例
+$SEARCH_RESULTS$=搜索結果
+
+
+<!-- **************** ImagePreviewDialog.htm **************** -->
+$IMAGE_DIALOG_TITLE$=預覽圖像
+$PREVIOUS_IMAGE$=上一圖像
+$PAUSE_SLIDESHOW$=暫停幻燈片
+$PLAY_SLIDESHOW$=播放幻燈片
+$NEXT_IMAGE$=下一圖像
+$OF$=共
+$IMAGES$=張圖像
+$SLIDE_SHOW$=幻燈片播放
+$SLIDE_SHOW_SPEED$=幻燈片播放速度
+$FAST$=快
+$SLOW$=慢
+$THUMBNAIL_SCROLL$=縮圖滾動
+
+<!-- **************** AlertDialog.htm **************** -->
+$SELECT_FILE_DELETE$=請先選擇要移除的檔或目錄。
+$SELECT_FILE_RENAME$=請先選擇要重命名的檔或目錄。
+$RECOMMEND_IE_UPGRADE_1$=您正在使用較舊版本的 Microsoft Internet Explorer。Internet Explorer 8.0 及更高版本包含許多增強的性能與功能，從而提升您的體驗。
+$RECOMMEND_IE_UPGRADE_2$=<a class="links" href="http://www.microsoft.com/ie" target="_blank">按一下此處</a>以下載最新版本的 Internet Explorer。
+
+
+<!-- **************** AskUserPlacementDialog.htm **************** -->
+$ASK_USER_TITLE$=使用者端選項
+$CLIENT_SELECTION$=使用者端選擇：
+$USER_PLACEMENT_DESC1$=請選擇訪問帳號的方式。Web 使用者端是簡單易用的基於瀏覽器的介面。
+$USER_PLACEMENT_DESC2$=FTP Voyager JV 是一款在瀏覽器中使用 Java 的功能全面的 FTP 使用者端。
+$BASIC_WEB_CLIENT$=Web 使用者端
+$FVJV$=FTP Voyager JV
+
+
+<!-- **************** LoggedInDialog.htm **************** -->
+$LOGGED_IN_DIALOG_TITLE$=當前已登入
+$LOGGED_IN_DESC$=您當前已登入。按一下確定重啟連線期間並登入。
+
+
+<!-- **************** FVJVLoggedInDialog.htm **************** -->
+$FVJV_LOGGED_IN_DESC$=您當前已登入。
+$FVJV_LOGGED_IN_ACTION$=按一下此處重啟連線期間並登入。
+
+
+<!-- **************** UploadProgressDialog.htm **************** -->
+$UPLOAD_PROGRESS$=上傳進度
+$TRANSFER_RATE$=傳輸率
+$WRITTEN$=已上傳
+$REMAINING$=剩餘
+$TIME_REMAINING$=剩餘時間
+$DESTINATION$=目標
+$KB_SEC_LABEL$=千位元組/秒
+$PLEASE_SELECT_FILE_UPLOAD$=請使用瀏覽按鈕選擇要上傳的檔。
+$UPLOADING$=正在上傳
+$LARGE_FILE_UPLOAD_WARN$=由於 Web 瀏覽器的緣故，大於 2GB 檔的上傳狀態可能不完整和/或不準確。
+$MOZ_LARGE_FILE_UPLOAD_WARN$=Mozilla 瀏覽器不允許上傳大於 2GB 的檔。
+$UNABLE_TO_UPLOAD$=Web 瀏覽器不能上傳該檔。該檔對於您使用的 Web 瀏覽器來說可能太大。 $MOZ_LARGE_FILE_UPLOAD_WARN$
+<!-- **************** PasswordRecoveryDialog.htm **************** -->
+$RECOVER_PASSWORD_TITLE$=恢復密碼
+$PASSWORD_RECOVERED$=密碼恢復成功。已使用電子信件發送該密碼。
+$PASSWORD_RECOVER_FAILURE_ERROR$=密碼恢復失敗。請接洽您的管理人請求幫助。

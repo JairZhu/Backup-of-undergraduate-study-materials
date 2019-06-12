@@ -1,0 +1,235 @@
+﻿// Rhino_RU.str - contains Russian string definitions for the RhinoRES resource files
+//
+// Strings entered in this file must be one per line and in the format of:
+// $RSIDS_SOME_STRING_NAME$=Some string value
+
+/////////////////////////////////////////////////////////////////////////////
+// dialog
+
+// about strings
+$RSIDS_ABOUT_TITLE$=О программе %s
+$RSIDS_ABOUT_CATEGORY$=Category:
+$RSIDS_ABOUT_OK$=OK
+$RSIDS_ABOUT_CANCEL$=Отмена
+$RSIDS_ABOUT_HELP$=&Помощь
+
+// program info strings
+$RSIDS_PROGRAMINFO_TITLE$=Информация о программе
+$RSIDS_PROGRAMINFO_VERSION$=Версия
+$RSIDS_PROGRAMINFO_WRITTEN_BY$=RhinoSoft.com
+$RSIDS_PROGRAMINFO_TRANSLATION_BY$=Перевод:
+$RSIDS_PROGRAMINFO_COPYRIGHT$=Авторское право © 1995-%d, Rhino Software, Inc.
+$RSIDS_PROGRAMINFO_DEVELOPED_BY$=Разработчик
+// NOTE: leading and trailing spaces intentional
+$RSIDS_PROGRAMINFO_DEVELOPMENT$= Разработка 
+// NOTE: leading and trailing spaces intentional
+$RSIDS_PROGRAMINFO_CONTACT_INFO$= Контактная информация 
+$RSIDS_PROGRAMINFO_RHINO_ADDRESS$=RhinoSoft.com\nP.O. Box 53\nHelenville, WI  53137
+$RSIDS_PROGRAMINFO_RHINO_HOME$=www.RhinoSoft.com
+// NOTE: leading and trailing spaces intentional
+$RSIDS_PROGRAMINFO_LEGAL$= Официоз 
+$RSIDS_PROGRAMINFO_BUILD_DATE$=Дата сборки:
+$RSIDS_PROGRAMINFO_INSTALLED_ON$=Дата установки:
+// NOTE: fill in the following strings with your distributor and translator information
+//		 if you do not wish to display one of these, leave them blank
+// EX:	 "$RSIDS_PROGRAMINFO_DISTRIBUTOR_ADDRESS$=ExampleSoftWerkz.com\n123 Example St.\nExampleville 012345"
+$RSIDS_PROGRAMINFO_DISTRIBUTOR_ADDRESS$=
+// EX:	 "$RSIDS_PROGRAMINFO_DISTRIBUTOR_HOME$=www.ExampleSoftWerkz.com"
+$RSIDS_PROGRAMINFO_DISTRIBUTOR_HOME$=
+// EX:	 "$RSIDS_PROGRAMINFO_TRANSLATOR$=ExampleSoftWerkz.com" or "$RSIDS_PROGRAMINFO_TRANSLATOR$=John Example"
+$RSIDS_PROGRAMINFO_TRANSLATOR$=Grigory Egorov
+
+// eula strings
+$RSIDS_EULA_TITLE$=Лицензионное Соглашение
+
+// reggie strings
+$RSIDS_REGGIE_TITLE$=Регистрационный ID
+// NOTE: leading and trailing spaces intentional
+$RSIDS_REGGIE_REGISTRATION_ID$= &Регистрационный ID 
+$RSIDS_REGGIE_LOST_ID$=&Найти потерянный ID...
+$RSIDS_REGGIE_HELP_REGISTERING$=Помо&щь в регистрации...
+$RSIDS_REGGIE_PURCHASE$=&Покупка...
+$RSIDS_REGGIE_NAME$=Имя:
+$RSIDS_REGGIE_EMAIL$=E-mail:
+$RSIDS_REGGIE_COPIES$=Копий:
+$RSIDS_REGGIE_LICENSE_TYPE$=Тип Лицензии:
+$RSIDS_REGGIE_USERS$=Пользователей:
+$RSIDS_REGGIE_PURCHASE_DATE$=Дата покупки:
+$RSIDS_REGGIE_UPDATES$=Обновление:
+// NOTE: leading and trailing spaces intentional
+$RSIDS_REGGIE_REGISTERED_TO$= Регистрационные данные 
+$RSIDS_REGGIE_DESC$=Регистрация разрешает вам неограниченно пользоваться %s и получать обновления в течении определенного периода.  Ниже приводится информация о вашем ID.
+
+// thanks for purchase strings
+$RSIDS_THANKS_TITLE$=Спасибо за покупку %s
+$RSIDS_THANKS_CLOSE$=Закрыть
+$RSIDS_THANKS_PRIMARY$=&Основной сервер покупки...
+$RSIDS_THANKS_SECONDARY$=&Дополнительный сервер покупки...
+$RSIDS_THANKS_FAX$=&ФАКС...
+$RSIDS_THANKS_PURCHASE_INSTRUCTIONS$=Вы можете купить %s через Интернет.  Должен запуститься браузер по умолчанию и открыться страница:\n%s/purchase.htm
+$RSIDS_THANKS_PURCHASE_PRIMARY_ERROR$=Если невозможно подключиться к основному \nсерверу, попробуйте зайти на: http://www.RhinoSoft.com/purchase
+$RSIDS_THANKS_PURCHASE_SECONDARY_ERROR$=Если не удалось подключится даже к доп. серверу,  заполните следующую форму и пошлите по ФАКСУ на номер +1 (262) 560-9628 или позвоните по номеру +1 (262) 560-9627
+$RSIDS_THANKS_PURCHASE_COMPLETE$=Если вы завершили покупку, то большое спасибо.\r\nЕсли вы не можете подключиться к основному серверу, ознакомтесь с информацией ниже
+
+// reggie violation strings
+$RSIDS_VIOLATION_TITLE$=Нарушение Лицензии %s
+$RSIDS_VIOLATION_CLOSE$=Закрыть
+$RSIDS_VIOLATION_VIEW_LICENSE$=&Лицензионное Соглашение
+$RSIDS_VIOLATION_UNINSTALL$=&Удаление
+$RSIDS_VIOLATION_DETECTED$=Обнаружено нарушение Лицензии. Используемый на этом компьютере ID разрешает одновременную установку на %d компьютер(ов) одновременно.  Для установки на большее число компов необходимы дополнительные Лицензии.
+$RSIDS_VIOLATION_PURCHASE_MORE$=&Купить Дополнительные Лицензии
+$RSIDS_VIOLATION_LICENSE_ERROR$=Если вы получили это сообщение по ошибке, немедленно свяжитесь с  RhinoSoft.com чтобы откорректировать или изменить Лицензию.
+$RSIDS_VIOLATION_COMPUTER_LIST$=Ниже отображается список компьютеров в вашей сети, использующих то же регистрационный ID, что и у вас .  Либо удалите программу из этих компьютеров для работы программы на вашем, либо купите дополнительные лицензии.
+// NOTE: leading and trailing spaces intentional
+$RSIDS_VIOLATION_COMPUTERS$= &Компы и юзеры, использующие эту лицензию 
+
+// nag for money strings
+$RSIDS_NAG_TITLE$=Зарегистрируйте пожалуйста %s
+$RSIDS_NAG_PURCHASE$=&Покупка...
+$RSIDS_NAG_PRICING$=Ц&ены...
+$RSIDS_NAG_REGISTER$=&Регистрация...
+$RSIDS_NAG_CLOSE$=Закрыть
+$RSIDS_NAG_USING_FOR$=%s установлен на этом компьютере %ld дней.  Рекомендуем приобрести программу
+$RSIDS_NAG_ORDER_HELP$=Для выяснения цен и правил заказа, щелкните кнопку "Цены".  Для покупки электронно щелкните "Покупка".
+$RSIDS_NAG_BENEFITS$=Регистрация программы позволит вам отключить эти окна и получать инфу о доступных обновлениях.  Как дополнение, мы сможем продолжать предлагать вам недорогой и качественный софт.
+$RSIDS_NAG_DISABLED$=Это сообщение будет появляться еще %d дней\n\nНЕКОТОРЫЕ ФУНКЦИИ БУДУЬ ОТКЛЮЧЕНЫ ПОСЛЕ ПРОБНОГО ПЕРИОДА. После регистрации они будут снова включены.
+
+// initial nag strings
+$RSIDS_INITIALNAG_TITLE$=Пробная версия %s
+$RSIDS_INITIALNAG_PURCHASE$=&Купить...
+$RSIDS_INITIALNAG_PRICING$=Ц&ены...
+$RSIDS_INITIALNAG_KNOWLEDGE_BASE$=&База Знаний...
+$RSIDS_INITIALNAG_SUPPORT$=&Поддержка...
+$RSIDS_INITIALNAG_TUTORIAL$=&Обучение онлайн...
+$RSIDS_INITIALNAG_CLOSE$=Закрыть
+$RSIDS_INITIALNAG_THANK_YOU$=Благодарим за использование  %s.
+$RSIDS_INITIALNAG_PURCHASE_NOW$=Купите СЕЙЧАС и вы получите БЕСПЛАТНЫЕ обновления на год.
+$RSIDS_INITIALNAG_TRIAL_STATUS$=T%s день из 30-дневного пробного периода.\r\n\n%s станет нерабочей через %s дней.
+$RSIDS_INITIALNAG_CONSIDER_PURCHASE$=Спланируйте покупку  %s сейчас  для гарнтированно неограниченного использования.  После покупки %s вы больше  не увидете это сообщение.
+
+// tip of the day strings
+$RSIDS_TOD_TITLE$=Совет Дня
+$RSIDS_TOD_CLOSE$=&Закрыть
+$RSIDS_TOD_PREVTIP$=&Предыдущий
+$RSIDS_TOD_NEXTTIP$=&Следующий
+$RSIDS_TOD_STARTUP_TIPS$=&Показывать при запуске
+
+// inno setup strings
+$RSIDS_INNO_TITLE$=Dialog
+$RSIDS_INNO_NEXT$=&Далее >
+$RSIDS_INNO_CANCEL$=Отмена
+
+// other products strings
+$RSIDS_OTHERPRODUCTS_TITLE$=Другие ПродуктыRhinoSoft.com
+$RSIDS_OTHERPRODUCTS_MORE_PRODUCTS$=Спасибо за установку %s.  Мы искренне надеемся, что программа будет полезна для вас.  Взгляните на на следующие продукты, которые помогут вам поднять мощность Интернета.  Щелкните по любой иконке для доп. инфы и БЕСПЛАТНОЙ загрузки.
+
+// network info strings
+$RSIDS_NETINFO_TITLE$=Информация о Сети
+$RSIDS_NETINFO_NETDESC$=Данная иформация описывает сетевые настройки компьютера. Эта инфа может использоваться техподдержкой RhinoSoft.com при решении проблем с соединением.
+// NOTE: leading and trailing spaces intentional
+$RSIDS_NETINFO_NETINFO$= Информация о Сети 
+$RSIDS_NETINFO_ADAPTER$=&Адаптер:
+$RSIDS_NETINFO_IPCONFIG$=&Конфигурация IP в Windows:
+$RSIDS_NETINFO_SUPPORT$=&Поддержка...
+
+// splash strings
+$RSIDS_SPLASH_COPYRIGHT$=Авторское право © 1995-%d, Rhino Software, Inc.
+$RSIDS_SPLASH_VERSION$=Версия
+$RSIDS_SPLASH_RHINOADDRESS1$=RhinoSoft.com
+$RSIDS_SPLASH_RHINOADDRESS2$=P.O. Box 53
+$RSIDS_SPLASH_RHINOADDRESS3$=Helenville, WI  53137
+$RSIDS_SPLASH_RHINOADDRESS4$=+1 (262) 560-9627
+$RSIDS_SPLASH_WARN1$=%s нельзя повторно распространять
+$RSIDS_SPLASH_WARN2$=ни в какой форме без особого разрешения
+$RSIDS_SPLASH_WARN3$=издателя, RhinoSoft.com
+$RSIDS_SPLASH_STATUS$=Состояние
+
+// new version strings
+$RSIDS_NEWVERSION_TITLE$=Проверка обновлений
+$RSIDS_NEWVERSION_DESC$=RhinoSoft.com регулярно выпускает новые версии программ, улучшеные и с новыми возможностями.  Ознакомьтесь с отчетом ниже чтобы удостовериться, что у вас установлена последняя версия %s.
+// NOTE: leading and trailing spaces intentional
+$RSIDS_NEWVERSION_SUMMARY$= Сведения 
+$RSIDS_NEWVERSION_CURRENTLY_INSTALLED$=Текущая версия:
+$RSIDS_NEWVERSION_AUTO_CHECK$=&Автоматически проверять обновления
+$RSIDS_NEWVERSION_BUTTON$=Button
+$RSIDS_NEWVERSION_DOWNLOAD$=&&Загрузить...
+// NOTE: leading and trailing spaces intentional
+$RSIDS_NEWVERSION_WHATS_NEW$= &Что нового 
+$RSIDS_NEWVERSION_CURRENTLY_RELEASED$=Текущая версия релиза:
+$RSIDS_NEWVERSION_WEB_UPDATE$=Проверка обновлений на  www.RhinoSoft.com
+
+
+/////////////////////////////////////////////////////////////////////////////
+// string table
+
+RSIDS_FILE_MISSING_FMT=невозможно найти "%s".
+RSIDS_WARNING=Предупреждение: данная программа защищена международным законом об авторских правах. Незаконное копирование и распространение будет преследоваться по всей строгости закона и может привести к административной или уголовной ответственности.
+RSIDS_VERSION_FMT=Версия %s
+RSIDS_REGGIE_FROM_CLIPBOARD=Ваша регистрационная информация скопирована из\nБуфера Обмена. Теперь вы зарегистрированы.\n\nБлагодарим за использование %s.
+RSIDS_STANDARD=Стандартная
+RSIDS_TEMPORARY=ВРЕМЕННАЯ (истекает через 30 дней)
+RSIDS_ENTERPRISE=Корпоративная
+RSIDS_SITE_LICENSE=Рабочая
+
+RSIDS_FIXES=Исправления
+RSIDS_RETRIEVING_RELEASE_NOTES=Получение замечаний по релиз...
+RSIDS_CONTACTING_UPDATE_SERVER=Соединение с сервером обновлений...
+RSIDS_UNLIMITED=НЕОГРАНИЧЕНО
+
+RSIDS_DEPARTMENT=Отдел
+RSIDS_SECURE=Secure
+RSIDS_PROFESSIONAL=Профессиональная
+RSIDS_CORPORATE=Корпоративная
+RSIDS_BRONZE=Бронзовая
+RSIDS_SILVER=Серебрянная
+RSIDS_GOLD=Золотая
+RSIDS_UPDATE=&Обновить...
+RSIDS_UPDATE_PERIOD_FMT=Истекает %s, осталось %s дней
+RSIDS_TRIAL=ПРОБНАЯ
+RSIDS_TRIAL_DAYS_REMAINING_FMT=Пробная версия истекает %s, осталось %s дней
+RSIDS_TRIAL_EXPIRED=Пробный период ЗАКОНЧИЛСЯ
+RSIDS_CUSTOMER_NAME_EMPTY_FMT=Удаление регистрационного ID приведет к тому, что %s  станет незарегистрированным.\n\nВы уверены что хотите удалить регистрационную информацию?
+RSIDS_INVALID_CUSTOMER_ID=Неверный регистрационный ID.\n\nЕсли вы ввели информацию о регистрации из письма от RhinoSoft.com,\nудостоверьтесь, что вы ввели все ТОЧНО так, как написано в письме.\n\nДля получения регистрационного ID свяжитесь с нами на сайте  http://www.RhinoSoft.com/sales
+RSIDS_USERID=ID Пользователя
+RSIDS_COMPUTER=Компьютер
+RSIDS_USER_NAME=Имя пользователя
+RSIDS_DIDYOUKNOW=Знаете ли вы...
+RSIDS_TIP_FILE_MISSING=Файл подсказок отсутствует:\r\n\r\n%s
+
+RSIDS_WELCOME=Добро пожаловать
+// NOTE: replace this text with the english word for the translated language
+RSIDS_LANGUAGE=Russian
+// NOTE: replace this text with your distributor home page or leave it as is
+RSIDS_DISTRIBUTOR_HOME=www.RhinoSoft.com
+RSIDS_FV_DESC=FTP Voyager - делает передачу файлов легче как для экспертов, так и для новичков. Возможность перетаскивания файлов позволит легко и быстро осуществить передачу файлов. Множество полезныз функций, таких как передача от сервера к серверу, Планировщик и Возобновление передачи.
+RSIDS_D4_DESC=DNS4Me - Откройте Интернет-потенциал вашего компьютера с помощью службы динамического  DNS.  Используйте ваш IP адрес для хостинга собственного  FTP сервера, веб-сайта или другого Интернет-сервиса используя доменное имя на ваш выбор.
+RSIDS_AS_DESC=AllegroSurf - Использование Интернета на работе или дома - это большая ответственность.  Интернет предлагает вам любую тербуемую информацию.  AllegroSurf позволит вам разделить ваше Интернет-соединение и в то же время предоставлять именно ту информацию, которую вы считаете нужным предоставить.
+RSIDS_SU_DESC=Serv-U FTP Server - Один из самых популярных FTP серверов, предлагающий непревзойденную защиту и прстоту в использовании по лучшим ценам на рынке.  Serv-U гарантирует безошибочный контроль вашего FTP сервера.
+RSIDS_INNOSETUP_CLOSE=&Закрыть
+RSIDS_INNOSETUP_EXIT_CAPTION=Выйти из установки
+RSIDS_INNOSETUP_EXIT_TEXT=Установка не завершена. Если вы закончите сейчас, программа не будет установлена.\n\nВы можете запустить установку в другое время.\n\nВыйти из установки?
+RSIDS_OTHER_PRODUCTS_HEADER=Попробуйте другие Продукты RhinoSoft.com
+RSIDS_OTHER_PRODUCTS_COMMENT=Попробуйте один из наших других Продуктов для дополнения  вашей копии %s
+RSIDS_NETWORK_INFO=Параметры Сети
+RSIDS_NETWORK_INFO_DATA=Значение
+
+RSIDS_IP4_ADDRESS_FMT=IPv4 Адрес %d
+RSIDS_IP6_ADDRESS_FMT=IPv6 Адрес %d
+RSIDS_SUBNET_MASK_FMT=Маска подсети %d
+RSIDS_NO_ADAPTERS_FOUND=*** адаптеров не найдено ***
+RSIDS_MAC_ADDRESS=Физический адрес
+RSIDS_YES=Да
+RSIDS_NO=Нет
+RSIDS_IP4_DEFAULT_GATEWAY_FMT=Основной IPv4 шлюз %d
+RSIDS_IP6_DEFAULT_GATEWAY_FMT=Основной IPv6 шлюз %d
+RSIDS_HOST_NAME=Имя Хоста
+RSIDS_DNS_SUFFIX=Основной суффикс DNS
+RSIDS_IP_ROUTING_ENABLED=Включена маршрутизация IP
+RSIDS_DNS_SERVER_FMT=DNS сервер %d
+RSIDS_DHCP_ENABLED=DHCP Активен
+RSIDS_NETWORK_INFO_CLIPBOARD=Информация о Сети скопирована в Буфер Обмена.
+RSIDS_NEW_VERSION=Доступна новая версия.
+RSIDS_CURRENT_VERSION=У вас установлена последняя версия.
+RSIDS_RELEASE_NOTES=Нажмите кнопку "Загрузить" для загрузки последней версии  и просмотра замечаний по релизу.
+RSIDS_IP4_DHCP_SERVER_FMT=IPv4 DHCP Сервер
+RSIDS_IP6_DHCP_SERVER_FMT=IPv6 DHCP Сервер

@@ -1,0 +1,31 @@
+<!--#include "..\Common\Strings\Result.strings"-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+<files>
+%LIST_MIDDLE_START%<file>
+<FileName>%FILE_NAME%</FileName>
+<FileSize>%FILE_SIZE%</FileSize>
+<FileDate>%FILE_MDATETIME%</FileDate>
+<FilePath>%FILE_PATH%</FilePath>
+<FileIsDir>%FILE_IS_DIR%</FileIsDir>
+<FileIsImage>%FILE_IS_IMAGE%</FileIsImage>
+<FileDriveLabel>%FILE_DRIVE_LABEL%</FileDriveLabel>
+<FileIsDrive>%FILE_IS_DRIVE%</FileIsDrive>
+<FileDriveType>%FILE_DRIVE_TYPE%</FileDriveType>
+<FileIsDeleted>0</FileIsDeleted>
+<FileIsAudio>%FILE_IS_AUDIO%</FileIsAudio>
+<FileIsVideo>%FILE_IS_VIDEO%</FileIsVideo>
+</file>
+%LIST_MIDDLE_END%</files>
+<hidden>
+<ErrorResponse>%RESULT%</ErrorResponse>
+<ResultText>%RESULT_TEXT%</ResultText>
+<CurrentDir>%CURRENT_DIR%</CurrentDir>
+<CurrentDirIsDrive>%CURRENT_DIR_IS_DRIVE%</CurrentDirIsDrive>
+<CurrentDirDriveType>%CURRENT_DIR_DRIVE_TYPE%</CurrentDirDriveType>
+<CurrentDirDriveLabel>%CURRENT_DIR_DRIVE_LABEL%</CurrentDirDriveLabel>
+<CurrentDirCanUpload>%CURRENT_DIR_CAN_UPLOAD%</CurrentDirCanUpload>
+<CurrentDirIsHome>%CURRENT_DIR_IS_HOME%</CurrentDirIsHome>
+<CurrentDirCanCreate>%CURRENT_DIR_CAN_CREATE_DIR%</CurrentDirCanCreate>
+</hidden>
+</response>

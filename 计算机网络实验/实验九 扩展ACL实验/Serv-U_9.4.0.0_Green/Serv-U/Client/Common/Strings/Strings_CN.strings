@@ -1,0 +1,218 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file. This has strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- ---------------------------------------------------------------- -->
+<!-- NOTE TO TRANSLATORS: DO NOT CHANGE THE INFORMATION IN THIS BLOCK -->
+<!-- Stylesheet font override  -->
+$FONT_OVERRIDE$=font-family:SimSun !important;font-size:9pt;
+<!-- ---------------------------------------------------------------- -->
+
+<!-- image name for the transparent distributors logo -->
+$DISTRIBUTOR_LOGO_IMAGE$=QAST-Logo.png
+
+<!-- The following 4 macros should be set to your reseller company contact information so they can be displayed in the program information page. -->
+$LOCALIZE_NAME$=QAST China 
+$LOCALIZE_STREET$=电话：021-52400198
+$LOCALIZE_CITY_ETC$=传真：021-52400179
+$LOCALIZE_URL$=www.RhinoSoft.com.cn
+
+<!-- ******************* SESSION ERRORS ******************* -->
+<!-- **************** GetResultText.htm **************** -->
+<!-- GetResultText() -->
+$LOGIN_FAIL_STR$=错误：登录不成功。
+$UNKNOWN_ERROR$=错误：操作失败，发生未知错误。会话已超时。请尝试重新登录。
+$AJAX_NOT_SUPPORTED$=浏览器不支持 AJAX。
+$ERROR_TITLE$=发生错误
+$SESS_ORG_HAS_NO_USERS$=该集合不包含用户。
+$SESS_CANNOT_CREATE_DIR1_STR$=创建目录失败，无法创建目录：
+$SESS_CANNOT_CREATE_DIR2_STR$=您没有权限在此创建目录。
+$SESS_CANNOT_RENAMEDIR1_STR$=重命名目录失败，无法重命名目录：
+$SESS_CANNOT_RENAMEFILE1_STR$=重命名文件失败，无法重命名文件：
+$SESS_CANNOT_RENAMEDIR2_STR$=您没有权限重命名该目录。
+$SESS_CANNOT_RENAMEFILE2_STR$=您没有权限重命名该文件。
+$SU_VALID_OPENSSL_GENERIC_ERROR_STR$=错误：加载加密库时出现错误。请尝试重新安装应用程序。
+$SECURITY_ERROR_TITLE$=安全警告
+$SECURITY_ERROR_DESC1$=<strong>安全错误</strong>: Serv-U 应用程序安全检查失败。请重新安装 Serv-U 来修复此错误。
+$SECURITY_ERROR_DESC2$=有关如何修复此错误的更多信息，请联系<a href="http://www.Serv-U.com/support" target="_blank">RhinoSoft.com support</a>。
+
+
+<!-- Common Strings -->
+$FILES$=文件
+$DIRECTORIES$=目录
+$SIZE$=大小
+$DIRECTORY_SIZE$=目录大小
+$AVAILABLE_SIZE$=可用大小
+$LOGGING_IN_DIALOG_TITLE$=登录
+$HELP$=帮助
+$LOGOUT$=注销
+$NAME$=名称
+$USER$=用户
+$LOGINID$=登录 ID
+$MANAGEMENT_CONSOLE$=管理控制台
+$SUPPORT$=支持
+$FVJV_LICENSE_INFO$=当前许可证不支持 FTP Voyager JV。若想使用　FTP Voyager JV，请购买支持该功能的许可证。<br /><br /> 您想了解关于购买 FTP Voyager JV　的更多信息吗？
+$WEB_CLIENT_LICENSE_INFO$=当前许可证不支持 Web 客户端。若想使用 Web 客户端，请购买支持该功能的许可证。<br /><br /> 您想了解关于购买 Web 客户端的更多信息吗?
+$FS_ABBREV_GIGABYTE$=GB
+$FS_ABBREV_MEGABYTE$=MB
+$FS_ABBREV_KILOBYTE$=KB
+$FS_BYTES$=字节
+$DID_YOU_KNOW_BALLOON_TITLE$=你知道吗？
+<!-- Buttons -->
+$YES_BUTTON$=是
+$NO_BUTTON$=否
+$OK_BUTTON$=确定
+$CLOSE_BUTTON$=关闭
+$SEND_BUTTON$=发送
+$HELP_BUTTON$=帮助
+$SAVE_BUTTON$=保存
+$ADD_BUTTON$=添加
+$EDIT_BUTTON$=编辑
+$DELETE_BUTTON$=删除
+$RENAME_BUTTON$=重命名
+$CANCEL_BUTTON$=取消
+$SELECT_BUTTON$=选择
+$CLOSE_CANCEL$=关闭/取消
+$DEFAULT_BUTTON$=默认
+$CREATE_BUTTON$=创建
+$BROWSE$=浏览
+$WIZARD_BUTTON$=向导
+$PARENT_DIR$=父目录
+$REFRESH$=刷新
+$UP_ONE_DIRECTORY$=上一级目录
+$REFRESH_ALT$=刷新
+$NEW_DIR_NAME_LABEL$=新建目录
+$CREATE_DIR$=创建目录
+$PLEASE_ENABLE_COOKIES$=必须启用 Cookie 以使用 Serv-U。
+$GO$=转到
+$IMPORT_BUTTON$=导入
+$EXPORT_BUTTON$=导出
+$DOWNLOAD_LOG_BUTTON$=下载日志
+$RECOVER_PASSWORD_BUTTON$=恢复密码
+$PASSWORD_RECOVER_SENT$=密码恢复成功。已将密码邮寄给用户。
+$NO_SUB_DIRS$=无子目录
+$CLEAR_FILTER_BUTTON$=清除过滤器
+
+<!-- **************** BusyDialog.htm **************** -->
+$BUSY_DIALOG_TITLE$=繁忙
+$SAVING_DIALOG_TITLE$=正在保存
+$LOADING_DIALOG_TITLE$=正在加载
+$DELETING_DIALOG_TITLE$=正在删除
+
+
+<!-- **************** ChangePasswordDialog.htm **************** -->
+$OLD_PASSWORD$=原密码
+$NEW_PASSWORD$=新密码
+$USER_CHANGE_PASSWORD_TITLE$=更改密码
+$VERIFY_PASSWORD$=验证密码
+$PASSWORDS_DONT_MATCH$=新密码与验证密码不匹配。
+$PASSWORD_CHANGED$=您的密码已更改。
+
+
+<!-- **************** FVJVLoggedIn.htm **************** -->
+$FVJV_REQUIRE_JAVA_VERSION$=<strong>Java 1.6 Runtime</strong>
+$FVJV_NO_JAVA_WARNING$=无法在这台计算机上检测到 Java 运行时环境（JRE）。请遵照以下步骤运行 FTP Voyager JV。
+$FVJV_NO_JRE_STEP_1$=FTP Voyager JV 至少需要 $FVJV_REQUIRE_JAVA_VERSION$ 环境。请下载并安装由 Sun Microsystems 最新发布的 Java 版本。
+$FVJV_STEP_1$=步骤 1
+$FVJV_STEP_2$=步骤 2
+$FVJV_OVERRIDE_NO_JAVA_1$=<strong>警告：</strong>如果 "Java Web Start Launcher" 不是用于打开 "JNLP 文件" 的默认程序，请查看我们的 
+$FVJV_OVERRIDE_NO_JAVA_2$=获得更多说明。
+$FVJV_KB_OPEN_JNLP_FILES$=知识库文章 #1883
+$FVJV_DL_JAVA_LINK$=立即下载 Java
+$FVJV_JAVA_RESTART$=安装好 Java 后，单击此处重新加载 FTP Voyager JV：
+$FVJV_JAVA_RESTART_LINK$=重新加载 FTP Voyager JV。
+$FVJV_IE_CONSIDERATIONS$=在 Internet Explorer 中使用 FTP Voyager JV
+$FVJV_IE_DL_FILE$=Internet Explorer 可能显示类似以下内容的消息，说明为了保护您的安全已经阻止了文件的下载。要加载 FTP Voyager JV，必须下载该文件。如果您收到消息，请单击 Internet Explorer 显示的横条并选择 &quot;下载文件...&quot; 选项。
+$FVJV_MOZILLA_CONSIDERATIONS$=在 Mozilla Firefox 中使用 FTP Voyager JV
+$FVJV_MOZ_RUN_FILE$=Mozilla Firefox 可能显示类似以下内容的信息，询问 Firefox 应如何打开 FTP Voyager JV 启动文件。使用 &quot;Java Web Start Launcher&quot;（默认操作）打开以运行 FTP Voyager JV。选中 &quot;对今后类似文件自动执行该操作&quot;（Do this automatically for files like this from now on）选项，将不会再次提示您进行该操作。
+$FVJV_MOZ_RUN_FILE_APPLE$=Mozilla Firefox 可能显示类似于下面的信息，询问 Firefox 该如何打开 FTP Voyager JV 启动文件。请用 "Java Web Start Launcher"（默认操作）打开该文件以运行 FTP Voyager JV。
+$FVJV_SAFARI_CONSIDERATIONS$=在 Safari 中使用 FTP Voyager JV
+$FVJV_SAFARI_RUN_FILE$=Safari 可能显示类似于以下内容的一则消息，询问浏览器打开 FTP Voyager JV 启动文件的方式。单击“打开”启动 FTP Voyager JV。
+$FVJV_CHROME_CONSIDERATIONS$=在 Google Chrome 中使用 FTP Voyager JV 
+$FVJV_CHROME_RUN_FILE$=Google Chrome 会在其下载栏上显示一个按钮，表示已下载 "jnlp" 文件。点击该按钮或点击下拉菜单并选择“打开”启动 FTP Voyager JV。
+$FVJV_OPERA_CONSIDERATIONS$=在 Opera 中使用 FTP Voyager JV
+$FVJV_OPERA_RUN_FILE$=Opera 可能显示类似于以下内容的一则消息，询问浏览器打开 FTP Voyager JV 启动文件的方式。单击“打开”启动 FTP Voyager JV。
+$FVJV_CLOSING$=正在关闭 FTP Voyager JV
+$FVJV_SESSION_INFO$=使用完毕后可以关闭 FTP Voyager JV。
+$FVJV_RELOGIN_INFO$=要再次登录 Serv-U 文件服务器，请使用以下链接：
+$FVJV_RETURN_CONSOLE$=要返回管理控制台，使用以下链接：
+$FVJV_RELOGIN$=使用 FTP Voyager JV 完毕后单击此处。
+$FVJV_RESTART$=重新启动 FTP Voyager JV
+$FVJV_RESTART_LINK$=单击此处重新启动 FTP Voyager JV。
+$FVJV_JAVA_WARNING$=Java 安全警告
+$FVJV_JAVA_WARNING_INFO$=Java 可能显示类似以下的安全警告消息，询问您是否确认要加载该应用程序。单击 &quot;运行&quot; 按钮继续加载 FTP Voyager JV。
+$FVJV_JAVA_WARNING_INFO_APPLE$=Java 可能显示类似于下面的安全警告消息，要求确认希望启动该应用程序。请单击 "信任" 按钮继续加载 FTP Voyager JV。
+$FVJV_APPLE_DETECTED$=Serv-U 检测到您正在运行 Apple Mac OS X。请注意 FTP Voyager JV 需要 $FVJV_REQUIRE_JAVA_VERSION$ 才能运行。
+$FVJV_TROUBLESHOOTING$=疑难解答
+$FVJV_OPERA_FAILED_TO_OPEN1$=<strong>Opera</strong> 无法打开“jnlp”文件。
+$FVJV_OPERA_FAILED_TO_OPEN2$=展开这部分以获得为默认程序设置文件关联的指南。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_1$=从 Opera 的主菜单，选择“工具”，再选择“首选项”。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2$=从“首选项”对话框：
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_1$=(1) 选择“高级”选项卡
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_2$=(2) 选择“下载”部分
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_3$=(3) 取消勾选“隐藏使用 Opera 打开的文件类型”
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_4$=(4) 搜索 MIME 类型“应用程序/x-java-jnlp-文件”或“jnlp”文件扩展名
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_5$=(5) 若找到，选中它并点击“编辑”按钮。否则请点击“添加”按钮。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3$=从“文件类型”对话框：
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_1$=(1) 将“MIME 类型”设置为“应用程序/x-java-jnlp-文件”。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_2$=(2) 将“文件扩展名”字段设置为“jnlp”。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_3$=(3) 将“操作”选项设置为“使用默认的应用程序打开”或“显示下载对话框”。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_4$=(4) 点击“确定”按钮并保存更改。
+$FVJV_OPERA_NO_FILE_ASSOCIATION_4$=重新加载该页面再次启动 FTP Voyager JV。
+$FVJV_SAFARI_FAILED_TO_OPEN1$=Safari 已下载 "jnlp" 文件，但无法"打开"它。
+$FVJV_SAFARI_FAILED_TO_OPEN2$=展开这部分以获得为默认程序设置文件关联的指南。
+$FVJV_MAC_FAILED_TO_OPEN_BUG_1$=<strong>注意：</strong>在某些情况下，Java 更新版 1.6_13 无法重置文件关联。请按照以下步骤操作
+$FVJV_MAC_FAILED_TO_OPEN_BUG_KB$=知识库文章 #1792.
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_TITLE$=Safari 用户:
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_1$=从 Safari 的下载管理器，选择已下载的"jnlp" 文件，然后单击定位器按钮。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2$=从定位器：
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_1$=(1) 选择该 "jnlp" 文件。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_2$=(2) 单击“属性”按钮。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_3$=(3) 选择“获取信息”项。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3$=从“信息”页面：
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3_1$=(1) 在“打开方式：”下选择 "Java Web Start.app"。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3_2$=(2) 单击“全部更改...”按钮。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_4$=从确认对话框选择“继续”。
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_5$=通过重新加载该页再次启动 FTP Voyager JV。
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_TITLE$=FireFox 用户：
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_1$=打开 FireFox 的“首选项”对话框。
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_2$=从“应用程序”选项卡中选择“JNLP”。
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_3$=将该操作更改为“Java Web 启动”。<strong>注意：</strong>您必须导航至“/System/Library/CoreServices/Java Web Start”以选择此项。
+$FVJV_APPLE_WRONG_JRE1$=FTP Voyager JV 需要 Java 运行环境 (JRE) 1.6。
+$FVJV_APPLE_WRONG_JRE2$=展开该部分可获得如何查看已安装 JRE 版本的说明。
+$FVJV_JRE_CHECK_1$=从主菜单选择“执行 | 实用程序”，打开“新定位器窗口”。
+$FVJV_JRE_CHECK_2_1$=(1) 找到 "Java" 目录并选择 "Java Preferences.app"。
+$FVJV_JRE_CHECK_2_2$=(2) 单击“属性”按钮。
+$FVJV_JRE_CHECK_2_3$=(3) 选择“打开”以打开 "Java Preferences.app"。 
+$FVJV_JRE_CHECK_3$=在“Java 应用程序运行设置”下，确保 "Java SE 6" 在列表顶部。
+$FVJV_OTHER_ALTERNATIVES$=其他选项
+$FVJV_SUPPORTED_BROWSERS$=可尝试用其他浏览器启动 FTP Voyager JV。以下列表为支持 FTP Voyager JV 和 Web 客户端的浏览器：
+$LI_FVJV_SUPPORTED_BROWSER_IE$=Internet Explorer
+$LI_FVJV_SUPPORTED_BROWSER_FF$=Mozilla Firefox
+$LI_FVJV_SUPPORTED_BROWSER_SAFARI$=Safari
+$LI_FVJV_SUPPORTED_BROWSER_CHROME$=Google Chrome
+$LI_FVJV_SUPPORTED_BROWSER_OPERA$=Opera
+$FVJV_LAUNCH_BWC$=启动 Web 客户端
+
+
+<!-- **************** FVJV Launch.jnlp **************** -->
+$FVJV_LAUNCH_TITLE$=FTP Voyager JV，开发者：RhinoSoft.com
+$FVJV_TITLE$=FTP Voyager JV
+$FVJV_VENDOR$=Rhino Software, Inc.
+
+
+<!-- **************** GoToDialog.htm **************** -->
+$GO_TO_DIRECTORY$=转到目录
+$GO_TO_PATH$=路径
+
+
+<!-- **************** ChangeThemesDialog.htm **************** -->
+$CHANGE_THEMES_DESCR$=从以下列表中选择一个主题来更改 Serv-U 的外观
+$CHANGE_THEME_TITLE$=Serv-U 主题
+$CLASSIC_THEME$=Windows 经典
+$XP_THEME$=Windows XP 
+$VISTA_THEME$=Windows Vista
+$AQUA_THEME$=Mac Aqua
+$SYSTEM_THEME$=系统
+$SU_THEME$=Serv-U 经典
+$CHANGE_THEMES_BUTTON$=主题

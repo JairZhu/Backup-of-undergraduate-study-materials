@@ -1,0 +1,14 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<diraccess>
+<var name="ObjectID" val="%ID%" />
+<var name="Dir" val="%CDirAccess.%ID%.Dir%" />
+<var name="Access" val="%CDirAccess.%ID%.Access%" />
+<var name="MaxSize" val="%CDirAccess.%ID%.MaxSize%" />
+<var name="NTUser" val="%CDirAccess.%ID%.NTUser%" />
+<var name="NTDomain" val="%CDirAccess.%ID%.NTDomain%" />
+<var name="NTPassword" val="%CDirAccess.%ID%.NTPassword%" />
+<var name="Result" val="%RESULT%"/>
+<var name="ResultText" val="%RESULT_TEXT%"/>
+</diraccess>

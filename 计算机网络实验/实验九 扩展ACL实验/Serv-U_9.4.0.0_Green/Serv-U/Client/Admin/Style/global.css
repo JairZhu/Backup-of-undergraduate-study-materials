@@ -1,0 +1,332 @@
+/*
+#contentwrapper{
+float: left;
+width: 100%;
+}
+
+#contentcolumn{
+margin-left: 16px; 
+}
+
+#leftcolumn{
+float: left;
+margin-left: -100%;
+height:350px;
+}*/
+
+.TreeButtonContainer #tree-img{
+cursor:pointer;
+}
+.TreeOuterContainer{	
+	width:0px;
+	visibility:hidden;
+	height:0px;
+	overflow:hidden;
+	position:relative;
+
+}
+.TreeInnerContent{
+	position:relative;
+	height:350px;
+	/*border:1px solid black;*/
+	overflow:auto;
+}
+
+BODY{
+	background: #818181;
+}
+BODY, TABLE{
+	/*font-family: Arial, Helvetica, "sans-serif";
+	font-size: 8pt; */
+	border: 0px;
+	padding: 0px;
+	margin:0px;	
+	cursor: default;
+	-moz-user-select: none;	
+}
+FORM, INPUT, TEXTAREA, SELECT{
+	display:inline;
+	-moz-user-select: text;
+	/*font-family: Arial, Helvetica, "sans-serif";*/
+}
+.maincontent, .consolecontent{
+	/*background: url(/Common/Images/Top-Bar.png) repeat-x top left;*/
+	background:#ffffff url(/Common/Images/bg-SU.png) repeat-x top left;
+}
+.maincontent2, .consolecontent2{
+	padding:10px 10px 5px 10px;
+	/*background: url(/Common/Images/Top-Bar.png) repeat-x top left;*/
+	background:#ffffff url(/Common/Images/bg-SU.png) repeat-x top left;
+}
+.aw-xp .maincontent,.aw-xp .maincontent2 /*,.aw-xp #leftcolumn*/{
+	/*background-color: #ece9d8;*/
+	background:#ece9d8 url(/Common/Images/bg-xp.png) repeat-x top left;	
+}
+.aw-classic .maincontent,.aw-classic .maincontent2 /*, .aw-classic #leftcolumn*/{
+	/*background-color: #d4d0c8;*/
+	background:#d4d0c8 url(/Common/Images/bg-classic.png) repeat-x top left;	
+}
+.aw-aqua .maincontent, .aw-aqua .maincontent2 /*, .aw-aqua #leftcolumn*/{
+	/*background-color: #a9a9a9;*/
+	background:#a9a9a9 url(/Common/Images/bg-aqua.png) repeat-x top left;	
+}
+.aw-vista .maincontent, .aw-vista .maincontent2 /*, .aw-vista #leftcolumn*/{
+	/*background: #f0f0f0;*/
+	background:#f0f0f0 url(/Common/Images/bg-vista.png) repeat-x top left;
+}
+.aw-su .maincontent, .aw-su .maincontent2 /*,.aw-su #leftcolumn*/{
+	/*background-color: #ffffff;*/
+	background:#ffffff url(/Common/Images/bg-SU.png) repeat-x top left;
+}
+
+/* Tree Backgrounds*/
+.aw-xp #Tree-Background {
+	background:#ece9d8 url(/Common/Images/bg-xp-reversed.png) repeat-x bottom left;	
+}
+.aw-classic #Tree-Background {
+	background:#d4d0c8 url(/Common/Images/bg-classic-reversed.png) repeat-x bottom left;	
+}
+.aw-aqua #Tree-Background {
+	background:#a9a9a9 url(/Common/Images/bg-aqua-reversed.png) repeat-x bottom left;	
+}
+.aw-vista #Tree-Background {
+	background:#f0f0f0 url(/Common/Images/bg-vista-reversed.png) repeat-x bottom left;
+}
+.aw-su  #Tree-Background{
+	background:#ffffff url(/Common/Images/bg-SU-reversed.png) repeat-x bottom left;
+}
+#container{
+	border:2px solid #000;	
+	width:100%;
+	background: #fff;
+}
+.aw-ie6 #TabsContent{
+	position:relative;	
+}
+.aw-ie6 .ie6positionfix{
+	position:relative;zoom:1;	
+}
+.WhitespaceFix{
+	height:2px;overflow:hidden;
+}
+.aw-ff3 .WhitespaceFix{
+	height:8px;overflow:hidden;
+}
+.aw-xp #TabsContent, .aw-xp div.tabs-content{
+	/*background: #d4d0c8;
+	background: url(/Common/Images/Dialog-fade-bg.gif) repeat-x bottom left;*/
+	background:#f4f3ee url(/Common/Images/dialog-bg-xp.png) repeat-x top left;
+}
+.aw-vista #TabsContent, .aw-vista div.tabs-content{
+	/*background: #d4d0c8;
+	background: url(/Common/Images/Dialog-fade-bg.gif) repeat-x bottom left;*/
+	background:#cbc9ca url(/Common/Images/dialog-bg-vista.png) repeat-x top left;
+}
+.aw-su #TabsContent, .aw-su div.tabs-content{
+	/*background: #d4d0c8;
+	background: url(/Common/Images/Dialog-fade-bg.gif) repeat-x bottom left;
+	background: #c7c7c7;*/
+	background: #d4d0c8; /*Original*/
+}
+.aw-classic #TabsContent, .aw-classic div.tabs-content{
+	/*background: #d4d0c8;
+	background: url(/Common/Images/Dialog-fade-bg.gif) repeat-x bottom left;*/
+	background: threedface;
+}
+.aw-aqua #TabsContent, .aw-aqua div.tabs-content{
+	/*background: #d4d0c8;
+	background: url(/Common/Images/Dialog-fade-bg.gif) repeat-x bottom left;*/
+	background: #eeeeee;
+}
+.aw-vista div.tabs-content{
+	border: 1px solid #aaa;
+}
+.aw-xp div.tabs-content{
+	border: 1px solid #aaa;	
+}
+.aw-su div.tabs-content{
+	/*border: 1px solid #aaa;	*/
+	
+	border: 1px solid #aaa; /*Original*/
+	padding: 10px;/*Original*/
+}
+.aw-classic div.tabs-content{
+	border: 1px solid #fff;	
+}
+.aw-aqua div.tabs-content{
+	border: 1px solid #aaa;	
+}
+
+input.txtfield {
+	position:static;
+}
+.LinkBox a {
+	color:#0000FF;
+	text-decoration: none;
+}
+.LinkBox a:hover {
+	text-decoration:none;
+	color:#FF0000;
+}
+.LinkBox{
+	text-align:right;
+	padding:1px 2px; 
+}
+#logwindow,.SpyLogScroll {
+	overflow: auto;
+	background:#fff;
+	white-space:nowrap;
+	width:100%;
+	border:1px solid #808080;
+	padding-left:5px;
+}
+.SpyLogScroll{
+	height:	230px;
+}
+#logwindow{
+	height: 400px;
+}
+.checkboxlink{
+	text-decoration:none;
+	color:#000;
+	cursor:default;
+}
+.head-box{
+	float:right;
+	display:inline;
+}
+.navItem{
+	color:#000!important;
+	text-decoration:none;
+	padding: 3px 0 4px 5px; 
+}
+img.tab-header{
+	float:left;
+	margin:0 10px 5px 0;
+}
+div.tabs-content{
+	padding: 10px;
+	-moz-user-select:none;
+}
+
+textarea.aw-border{
+	border: 1px solid #7f9db9;
+}
+fieldset {
+	/*border-color:#ffffff;*/
+}
+.ExpiresTextBox{
+	cursor:pointer;
+	background-color:#d4d0c8;
+	border:1px solid #7f9db9;
+	line-height:20px;
+	padding:2px 5px 2px 5px;
+	font-size:100%;
+	font-family:Tahoma;
+}
+.header-icon{
+	float:left;
+	margin:0 10px 0 0;
+}
+#EditionLabels div{
+	border-bottom:1px solid #6c6b6b;padding-right:5px;
+}
+#EditionData-Current div, #EditionData-Bronze div, #EditionData-Silver div, #EditionData-Gold div{
+	border-bottom:1px solid #6c6b6b;font-weight:bold;
+}
+
+/********* Console.htm Specific ************/
+
+.uBorder{
+	font-size:12px;
+	border-bottom: 1px solid #D9D9D9;
+	margin:0 10px 10px 10px;
+	font-weight:bold;
+	padding-bottom:8px;
+	vertical-align:bottom;
+	/*white-space: nowrap; */
+}
+.uborder2{
+	font-size:12px;
+	border-bottom: 1px solid #D9D9D9;
+	margin:0 10px 10px 10px;
+	font-weight:bold;
+	line-height:30px;
+	vertical-align:bottom;
+	padding:0px 0 0 5px;
+}
+.category{
+	margin:0 10px 10px 10px;padding:0 0 5px 5px;
+}
+.category-bottom{
+	margin:0 10px 0 10px;padding:0 0 0 5px;
+}
+.category{
+	border-bottom:1px solid #D9D9D9;
+}
+.currdomain{
+	margin:0 10px 10px 10px;padding-left:5px;
+}
+.cat-list{
+	margin:5px 0 0 45px;
+}
+.category a,.category-bottom a{
+	font-weight:bold;
+	color:#0000FF;
+	text-decoration: none;
+}
+.category a:hover,.category-bottom a:hover{
+	color:#ff0000;
+}
+a.console-bullet-link{
+	text-decoration: none;
+	font-weight:normal;
+	color:#000;
+}
+#CurrentDomainName{
+	font-weight:bold;
+	font-size:12px;
+}
+#CurrentDomainName a{
+	color:#ff0000;
+	text-decoration: none;	
+}
+.bullet-table td{
+	vertical-align:top;
+	padding:0px;
+	margin:0px;
+}
+.bullet-table{
+	padding:0px;
+	margin:0px;
+}
+.StatInfo{
+	font-weight:bold;
+	white-space:nowrap;
+}
+div.UpgradeLicenseMsg, div.UpgradeLicenseMsgNoMargin, div.UpgradeLicenseMsgNoAutoMargin{
+	display:none;
+	padding:15px 15px 15px 15px;
+	width:350px;
+	border:ridge 2px black;
+	overflow:hidden;
+	background-color:White;
+	text-align:left;
+}
+div.UpgradeLicenseMsg{
+	margin:50px auto 50px auto;
+}
+div.UpgradeLicenseMsg{
+	margin:50px auto 50px auto;
+}
+div.UpgradeLicenseMsgNoAutoMargin{
+	margin:0px;
+}
+
+img.UpgradeLicenseImg{
+	float:left;
+	margin:0 5px 0 5px;
+}
+#PageTabs { 
+  width: 100%;
+}

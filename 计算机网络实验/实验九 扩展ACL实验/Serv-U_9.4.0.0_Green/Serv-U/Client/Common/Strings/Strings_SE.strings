@@ -1,0 +1,204 @@
+﻿<!-- Strings.strings - For ease of localization, strings have been separated into this file. This has strings common to all SU apps.  Place all localizable strings here. -->
+<!-- NOTE: assignments require left justification and the assignment to appear as "$=" without whitespace between the $ and =. -->
+<!-- File location: <<Install>>\Client\Common\ -->
+
+<!-- image name for the transparent distributors logo -->
+$DISTRIBUTOR_LOGO_IMAGE$=Upstream-Logo.png
+
+<!-- The following 4 macros should be set to your reseller company contact information so they can be displayed in the program information page. -->
+$LOCALIZE_NAME$=RhinoSoft.com
+$LOCALIZE_STREET$=P.O. Box 53
+$LOCALIZE_CITY_ETC$=Helenville, WI 53137
+$LOCALIZE_URL$=www.upstream.se
+
+<!-- ******************* SESSION ERRORS ******************* -->
+<!-- **************** GetResultText.htm **************** -->
+<!-- GetResultText() -->
+$LOGIN_FAIL_STR$=FEL: Inloggningen misslyckades.
+$UNKNOWN_ERROR$=FEL: Åtgärden misslyckades, ett okänt fel har inträffat.
+$AJAX_NOT_SUPPORTED$=Din webbläsare stöder inte AJAX.
+$ERROR_TITLE$=Fel har inträffat
+$SESS_ORG_HAS_NO_USERS$=Den här samlingen innehåller inga användare.
+$SESS_CANNOT_CREATE_DIR1_STR$=Skapandet av mapp misslyckades, kunde inte skapa mappen:
+$SESS_CANNOT_CREATE_DIR2_STR$=Du har inte rättigheter att skapa en mapp här.
+$SESS_CANNOT_RENAMEDIR1_STR$=Namnbytet av mapp misslyckades, kunde inte döpa om mappen:
+$SESS_CANNOT_RENAMEFILE1_STR$=Namnbytet av fil misslyckades, kunde inte döpa om filen:
+$SESS_CANNOT_RENAMEDIR2_STR$=Du har inte rättigheter att döpa om mappen.
+$SESS_CANNOT_RENAMEFILE2_STR$=Du har inte rättigheter att döpa om filen.
+$SU_VALID_OPENSSL_GENERIC_ERROR_STR$=FEL: Det uppstod ett problem när krypterings-arkivet laddades.  Installera om programmet.
+$SECURITY_ERROR_TITLE$=Säkerhetsvarning
+$SECURITY_ERROR_DESC1$=<strong>SÄKERHETSVARNING</strong>: Säkerhetskontrollen av Serv-U misslyckades. Du måste installera om Serv-U för att åtgärda felet.
+$SECURITY_ERROR_DESC2$=För mer information om hur du åtgärdar felet kan du kontakta <a href="http://www.Serv-U.com/support" target="_blank">RhinoSoft.com support</a>.
+
+<!-- Common Strings -->
+$FILES$=Filer
+$DIRECTORIES$=Mappar
+$SIZE$=Storlek
+$LOGGING_IN_DIALOG_TITLE$=Loggar in
+$HELP$=Hjälp
+$LOGOUT$=Logga ut
+$NAME$=Namn
+$USER$=Användarnamn
+$LOGINID$=Login ID
+$MANAGEMENT_CONSOLE$=Administratörskonsollen
+$SUPPORT$=Support
+$FVJV_LICENSE_INFO$=FTP Voyager JV är inte tillgänglig med den aktuella licensen.  Om du vill använda FTP Voyager JV måste du köpa en licens. <br /><br /> Vill du ha mer information om att köpa FTP Voyager JV?
+$WEB_CLIENT_LICENSE_INFO$=Webbklienten är inte tillgänglig med den licens som du använder.  Om du vill använda webbklienten så måste du köpa en licens för att aktivera funktionerna. <br /><br /> Vill du ha mer information om att köpa en licens för att aktivera webbklienten?
+$FS_ABBREV_GIGABYTE$=GB
+$FS_ABBREV_MEGABYTE$=MB
+$FS_ABBREV_KILOBYTE$=KB
+$FS_BYTES$=bytes
+$DID_YOU_KNOW_BALLOON_TITLE$=Visste du?
+<!-- Buttons -->
+$YES_BUTTON$=Ja
+$NO_BUTTON$=Nej
+$OK_BUTTON$=OK
+$CLOSE_BUTTON$=Stäng
+$SEND_BUTTON$=Skicka
+$HELP_BUTTON$=Hjälp
+$SAVE_BUTTON$=Spara
+$ADD_BUTTON$=Lägg till
+$EDIT_BUTTON$=Ändra
+$DELETE_BUTTON$=Ta bort
+$RENAME_BUTTON$=Byt namn
+$CANCEL_BUTTON$=Avbryt
+$SELECT_BUTTON$=Markera
+$CLOSE_CANCEL$=Stäng/Avbryt
+$DEFAULT_BUTTON$=Standard
+$CREATE_BUTTON$=Skapa
+$BROWSE$=Bläddra
+$WIZARD_BUTTON$=Installationsguiden
+$PARENT_DIR$=Upp en nivå
+$REFRESH$=Uppdatera
+$UP_ONE_DIRECTORY$=Upp en mappnivå
+$REFRESH_ALT$=Uppdatera
+$NEW_DIR_NAME_LABEL$=Skriv in ett namn för den nya mappen
+$CREATE_DIR$=Skapa mapp
+$PLEASE_ENABLE_COOKIES$=Cookies måste vara tillåtna för att använda Serv-U.
+$GO$=Gå till
+$DOWNLOAD_LOG_BUTTON$=Nedladdningshistorik
+$EXPORT_BUTTON$=Exportera
+$IMPORT_BUTTON$=Importera
+$RECOVER_PASSWORD_BUTTON$=Återställ lösenord
+$NO_SUB_DIRS$=Inga undermappar
+$PASSWORD_RECOVER_SENT$=Återställningen av lösenordet lyckades.Lösenordet har skickats till användaren med e-post.
+$CLEAR_FILTER_BUTTON$=Rensa filter
+
+
+<!-- **************** BusyDialog.htm **************** -->
+$BUSY_DIALOG_TITLE$=Upptagen
+$SAVING_DIALOG_TITLE$=Sparar
+$LOADING_DIALOG_TITLE$=Laddar
+$DELETING_DIALOG_TITLE$=Tar bort
+
+
+<!-- **************** ChangePasswordDialog.htm **************** -->
+$OLD_PASSWORD$=Gammalt lösenord
+$NEW_PASSWORD$=Nytt lösenord
+$USER_CHANGE_PASSWORD_TITLE$=Byt lösenord
+$VERIFY_PASSWORD$=Upprepa lösenord
+$PASSWORDS_DONT_MATCH$=Det upprepade lösenordet måste vara samma som lösenordet.
+$PASSWORD_CHANGED$=Ditt lösenord är bytt.
+
+
+<!-- **************** FVJVLoggedIn.htm **************** -->
+$FVJV_REQUIRE_JAVA_VERSION$=<strong>Java 1.6 Runtime</strong>
+$FVJV_NO_JAVA_WARNING$=Java runtime kunde inte hittas på den här datorn. FTP Voyager JV kräver att Java är installerat. Använd följande länk för att ladda ner och installera den senaste versionen av Java från Sun Microsystems.
+$FVJV_DL_JAVA_LINK$=Ladda ner Java nu
+$FVJV_JAVA_RESTART$=När Java har installerats, använd följande länk för att ladda FTP Voyager JV på nytt:
+$FVJV_JAVA_RESTART_LINK$=Ladda om FTP Voyager JV.
+$FVJV_IE_CONSIDERATIONS$=Använder FTP Voyager JV i Internet Explorer
+$FVJV_IE_DL_FILE$=Internet Explorer kan visa ett meddelande som säger att det har blockerat en fil från att ha laddats ner för att skydda ditt system. Den här filen måste laddas ner för att kunna köra FTP Voyager JV. Om du får det här meddelandet, klicka på listen som visas i Internet Explorer och välj "Ladda ner..."
+$FVJV_MOZILLA_CONSIDERATIONS$=Använder FTP Voyager JV i Mozilla Firefox
+$FVJV_MOZ_RUN_FILE$=Mozilla Firefox kan visa ett meddelande som frågar hur Firefox ska öppna FTP Voyager JV filen.  Välj att öppna den med "Java Web Start Launcher" (standardvalet) för att köra FTP Voyager JV.  Genom att markera "Gör det här automatiskt för dessa filer" så kommer du inte behöva välja detta igen.
+$FVJV_CLOSING$=Stänger FTP Voyager JV
+$FVJV_SESSION_INFO$=FTP Voyager JV kan stängas ner när du arbetat färdigt.
+$FVJV_RELOGIN_INFO$=För att logga in igen till Serv-U filservern, använd följande länk:
+$FVJV_RETURN_CONSOLE$=För att komma tillbaka till Kontrollpanelen, använd följande länk:
+$FVJV_RELOGIN$=Klicka här när du är klar med FTP Voyager JV
+$FVJV_RESTART$=Starta om FTP Voyager JV
+$FVJV_RESTART_LINK$=Klicka här för att starta om FTP Voyager JV.
+$FVJV_JAVA_WARNING$=Java säkerhetsvarning
+$FVJV_JAVA_WARNING_INFO$=Java kan visa ett säkerhetsmeddelande som ber dig bekräfta att du vill köra programmet. Klicka på "Kör" knappen för att fortsätta ladda FTP Voyager JV.
+$FVJV_LAUNCH_BWC$=Starta webbklienten
+$FVJV_APPLE_DETECTED$=Serv-U har identifierat att du kör Apple Mac OS X.  Notera att FTP Voyager JV kräver Java SE 6 för att fungera.
+$FVJV_JAVA_WARNING_INFO_APPLE$=Java kan visa en säkerhetsvarning liknande meddelandet nedan som frågar dig om du vill starta applikationen.  Klicka knappen för "Trust" för att fortsätta ladda FTP Voyager JV.
+$FVJV_MOZ_RUN_FILE_APPLE$=Mozilla Firefox kan visa ett meddelande liknande detta nedan som frågar dig hur Firefox skall öppna startfilen för FTP Voyager JV.  Öppna den med "Java Web Start Launcher" (standardalternativet) för att starta FTP Voyager JV.
+$FVJV_OTHER_ALTERNATIVES$=Andra alternativ
+$FVJV_SAFARI_CONSIDERATIONS$=Använder FTP Voyager JV i Safari
+$FVJV_SAFARI_RUN_FILE$=Safari kan visa ett meddelande likannde det nedan som frågar dig hur webbläsaren skall öppna startfilen för FTP Voyager JV.  Klicka "Open" för att starta FTP Voyager JV.  Om FTP Voyager JV inte startas gå till den nedladdade filen "jnlp" och öppna den med programmet "Java Web Start Launcher".
+$FVJV_SUPPORTED_BROWSERS$=Du kan försöka starta FTP Voyager JV med en annan webbläsare.  Nedan finner du en lista över webbläsare som stöds av FTP Voyager JV och webbklienten:
+$LI_FVJV_SUPPORTED_BROWSER_IE$=Internet Explorer
+$LI_FVJV_SUPPORTED_BROWSER_FF$=Mozilla Firefox
+$LI_FVJV_SUPPORTED_BROWSER_SAFARI$=Safari
+$FVJV_APPLE_WRONG_JRE1$=Java Runtime Environment (JRE) 1.6 krävs för FTP Voyager JV.
+$FVJV_APPLE_WRONG_JRE2$=Expandera sektionen för instruktioner om hur du ser vilken version av JRE som är installerad.
+$FVJV_TROUBLESHOOTING$=Felsökning
+$FVJV_JRE_CHECK_1$=Öppna "New Finder Window" genom att gå in på "Go | Utilities" från huvudmenyn.
+$FVJV_JRE_CHECK_2_1$=(1) Gå in i mappen "Java" och markera filen "Java Preferences.app".
+$FVJV_JRE_CHECK_2_2$=(2) Klicka på "Properties" -knappen.
+$FVJV_JRE_CHECK_2_3$=(3) Öppna "Java Preferences.app" genom att klicka på "Open".
+$FVJV_JRE_CHECK_3$=Under "Java Application Runtime Settings", Kontrollera att "Java SE 6" är högst upp på listan.
+$FVJV_SAFARI_FAILED_TO_OPEN1$=Safari laddade ner filen "jnlp", men kunde inte öppna den.
+$FVJV_SAFARI_FAILED_TO_OPEN2$=Expandera sektionen för instruktioner om hur du associerar en filtyp med ett program.
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_1$=Från Safaris 'Download Manager', klicka på den nedladdade "jnlp" filen, klicka sedan på Finder -knappen.
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2$=Från Finder:
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_1$=(1) Markera filen "jnlp".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_2$=(2) Klicka på knappen "properties".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_2_3$=(3) Markera "Get Info".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3$=Från "Info" -sidan:
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3_1$=(1) Under "Open with:" markera "Java Web Start.app".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_3_2$=(2) Klicka på knappen "Change All...".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_4$=Från bekräftelsen, markera "Continue".
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_5$=Starta FTP Voyager JV igen genom att uppdatera den här sidan.
+$FVJV_CHROME_CONSIDERATIONS$=Använda FTP Voyager JV i Google Chrome
+$FVJV_CHROME_RUN_FILE$=Google Chrome kan visa att filen jnlp har laddats ner. Klicka på den knappen eller klicka på menyn och välj öppna för att starta FTP Voyager JV.
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_1$=Öppna FireFox-fliken inställningar.
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_2$=Välj JNLP från program-fliken.
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_3$=Ändra åtgärden till "Java Web Start".  <strong>INFORMATION:</strong> Du kan behöva öppna den genom att gå till "/System/Library/CoreServices/Java Web Start".
+$FVJV_FIREFOX_NO_FILE_ASSOCIATION_TITLE$=FireFox användare:
+$FVJV_MAC_FAILED_TO_OPEN_BUG_1$=<strong>INFORMATION:</strong>  I vissa fall klarar inte Java uppdateringen att ställa in filassocieringen.  Följ stegen nedan eller i 
+$FVJV_MAC_FAILED_TO_OPEN_BUG_KB$=Knowledge-base artikeln #1792.
+$FVJV_OPERA_CONSIDERATIONS$=Använda FTP Voyager JV i Opera
+$FVJV_OPERA_FAILED_TO_OPEN1$=<strong>Opera</strong> kunde inte öppna filen jnlp.
+$FVJV_OPERA_FAILED_TO_OPEN2$=Expandera den här sektionen för anvisningar om hur du sätter upp en filassociering för ett standardprogram.
+$FVJV_OPERA_NO_FILE_ASSOCIATION_1$=Från Operas huvudmenu, välj "Verktyg" sedan "Inställningar".
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2$=Från fliken "Inställningar":
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_1$=(1) Markera fliken "Avancerat"
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_2$=(2) Markera sektionen "Nedladdningar"
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_3$=(3) Avmarkera "Dölj filtyper som öppnas med Opera
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_4$=(4) Sök efter MIME-typen "application/x-java-jnlp-file" eller filändelsen "jnlp"
+$FVJV_OPERA_NO_FILE_ASSOCIATION_2_5$=(5) Om sökresultat visas, markera det i listan och välj "Ändra".  I annat fall, klicka på knappen "Lägg till".
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3$=Från dialogen "Filtyp":
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_1$=(1) Sätt "MIME type" fältet till "application/x-java-jnlp-file".
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_2$=(2) Sätt "Filändelsen" -fältet till "jnlp".
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_3$=(3) Sätt alternativet "Åtgärd" till "Öppna med standardprogrammet" eller "Visa nedladdningsfönster".
+$FVJV_OPERA_NO_FILE_ASSOCIATION_3_4$=(4) Klicka på knappen "OK" för att spara ändringarna.
+$FVJV_OPERA_NO_FILE_ASSOCIATION_4$=Starta FTP Voyager JV igen genom att ladda om den här sidan.
+$FVJV_OPERA_RUN_FILE$=Opera kan visa ett meddelande som liknar det nedan som frågar hur webbläsaren ska öppna FTP Voyager JV.  Klicka "Öppna" för att starta FTP Voyager JV.
+$FVJV_SAFARI_NO_FILE_ASSOCIATION_TITLE$=Safari användare:
+$LI_FVJV_SUPPORTED_BROWSER_CHROME$=Google Chrome
+$LI_FVJV_SUPPORTED_BROWSER_OPERA$=Opera
+
+
+<!-- **************** FVJV Launch.jnlp **************** -->
+$FVJV_LAUNCH_TITLE$=FTP Voyager JV från RhinoSoft.com
+$FVJV_TITLE$=FTP Voyager JV
+$FVJV_VENDOR$=Rhino Software, Inc.
+
+
+<!-- **************** GoToDialog.htm **************** -->
+$GO_TO_DIRECTORY$=Gå till mapp
+$GO_TO_PATH$=Sökväg
+
+
+<!-- **************** ChangeThemesDialog.htm **************** -->
+$CHANGE_THEMES_DESCR$=Ändra hur Serv-U ser ut genom att välja ett tema i listan nedan.
+$CHANGE_THEME_TITLE$=Serv-U Teman
+$CLASSIC_THEME$=Windows Classic
+$XP_THEME$=Windows XP
+$VISTA_THEME$=Windows Vista
+$AQUA_THEME$=Mac Aqua
+$SYSTEM_THEME$=System
+$SU_THEME$=Serv-U Classic
+$CHANGE_THEMES_BUTTON$=Tema

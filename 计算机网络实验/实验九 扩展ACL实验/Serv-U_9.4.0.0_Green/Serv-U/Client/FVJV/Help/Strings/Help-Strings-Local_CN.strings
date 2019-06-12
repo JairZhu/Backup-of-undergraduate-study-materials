@@ -1,0 +1,1492 @@
+﻿<!--#include "Help-Strings-Images.strings"-->
+<!-- File:		Help-Strings-Local_CN.strings																				-->
+<!-- Language:	Simplified Chinese																							-->
+<!-- Encoding:	UTF-8																										-->
+<!-- Purpose:	Provides translated strings for FTP Voyager JV's Help documentation.										-->
+<!-- Notes:		- Comment blocks are useful.  To place a comment, use the HTML tags at the beginning and end of this line	-->
+<!--			- Any text following a "$=" should be translated															-->
+<!--			- Any text between a "$::" through "::END" should be translated												-->
+<!--			- HTML tags should not be translated (Example:  "<strong>")													-->
+
+<!-- Reused HTML links throughout the help docs.  The text within these links may need to be translated. -->
+$LINK_FTP_VOYAGER$=<a href="http://www.ftpvoyager.com/" target="_blank">FTP Voyager&reg;</a>
+$LINK_SERVU$=<a href="http://www.Serv-U.com/" target="_blank">Serv-U 文件服务器</a>
+$LINK_RHINOSOFT$=<a href="http://www.rhinosoft.com/" target="_blank">RhinoSoft.com</a>
+$LINK_JAVA_RUNTIME$=<a href="http://www.java.com/download/java/" target="_blank">Java 运行环境</a>
+
+$LINK_LOCAL_REMOTE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">本地/远程窗格</a>
+$LINK_LOCAL_REMOTE_PANES$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">本地/远程窗格</a>
+$LINK_LOCAL_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">本地窗格</a>
+$LINK_REMOTE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm">远程窗格</a>
+$LINK_TREE_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Tree-Overview.htm">树型窗格</a>
+$LINK_PREVIEW_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Preview-Overview.htm">预览窗格</a>
+$LINK_LIST_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-List-Overview.htm">列表窗格</a>
+$LINK_TRANSFER_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Transfer-Overview.htm">传输窗格</a>
+
+$LINK_MAIN_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Overview.htm">主菜单</a>
+$LINK_FILE_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm">文件菜单</a>
+$LINK_EDIT_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Edit.htm">编辑菜单</a>
+$LINK_VIEW_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-View.htm">查看菜单</a>
+$LINK_WINDOWS_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm">窗口菜单</a>
+$LINK_HELP_MENU$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Help.htm">帮助菜单</a>
+
+
+$LINK_LOCAL_REMOTE_TOOLBAR$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Overview.htm">本地/远程工具栏</a>
+$LINK_CRUMB_BAR$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Overview.htm">导航栏</a>
+
+$LINK_CRUMB$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">屑粒</a>
+$LINK_CRUMB_HISTORY$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">历史记录</a>
+$LINK_ABSOLUTE_PATH_MODE$=<a href="%FVJV_FILE%Help/Help-Tbar-Browser-Crumbbar-Actions.htm">绝对路径模式</a>
+
+$LINK_STOP_AFTER_FILE_COMPLETES$=<a href="%FVJV_FILE%Help/Help-Tbar-Transfer-Actions.htm#StopAfterFileCompletes">文件传输完成后停止</a>
+$LINK_PAUSE$=<a href="%FVJV_FILE%Help/Help-Tbar-Transfer-Actions.htm#Pause">暂停</a>
+
+
+$LINK_FRAME_LIST$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm#FrameList">框架列表</a>
+$LINK_AUTO_HIDE$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-Windows.htm#AutoHide" style="color:Black">自动隐藏</a>
+$LINK_ACTIVATE_WINDOW$=<a href="%FVJV_FILE%Help/Help-Dlg-ActivateWindow.htm">激活窗口</a>
+
+$LINK_PREFERENCES$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-General.htm">首选项</a>
+$LINK_PREF_PAGE_GENERAL$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-General.htm">常规</a>
+$LINK_PREF_PAGE_TOOLBARS$=<a href="%FVJV_FILE%Help/Help-Dlg-Prefs-Toolbars.htm">工具栏</a>
+
+$LINK_THUMB_SIZES_HERE$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-View.htm#ThumbSize">此处</a>
+
+$LINK_CHANGE_PASSWORD$=<a href="%FVJV_FILE%Help/Help-Dlg-ChangePassword.htm">更改密码</a>
+
+$LINK_ACTIVE_PANE$=<a href="%FVJV_FILE%Help/Help-OtherInfo-ActivePane-Overview.htm">激活窗格</a>
+$LINK_LOCAL_LIST_PANE$=<a href="%FVJV_FILE%Help/Help-Layout-Browser-Overview.htm#ListPane">本地列表窗格</a>
+$LINK_DOCKING_FRAMEWORK$=<a href="%FVJV_FILE%Help/Help-OtherInfo-DockingFramework-Overview.htm">停靠框架</a>
+
+$LINK_DOWNLOAD_BTN$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm#Download">下载按钮</a>
+$LINK_UPLOAD_BTN$=<a href="%FVJV_FILE%Help/Help-Menus-Main-Items-File.htm#Upload">上传按钮</a>
+
+$BOLD_NOTE$=<strong>注意</strong>
+
+<!-- Help-Dlg-SyncFolders... -->
+$LINK_SYNC_FOLDERS_LOCAL_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results.htm">本地结果窗格</a>
+$LINK_SYNC_FOLDERS_REMOTE_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results.htm">远程结果窗格</a>
+$LINK_SYNC_FOLDERS_OPTIONS_FRAME$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Options.htm">选项窗格</a>
+
+$LINK_SYNC_FOLDERS_RESULTS_TBAR$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results-Tbar.htm">工具栏</a>
+$LINK_SYNC_FOLDERS_RESULTS_LIST$=<a href="%FVJV_FILE%Help/Help-Dlg-SyncFolders-Results-List.htm">列表</a>
+
+
+<!-- Help-Overview.htm -->
+$OVERVIEW_MAIN_HEADER$=FTP Voyager JV 概述
+
+$OVERVIEW_BODY$::
+欢迎使用 FTP Voyager JV!
+
+FTP Voyager JV 是一款功能完备、基于 Java 的传输客户端产品，其开发基于 $LINK_RHINOSOFT$ 屡获殊荣的 $LINK_FTP_VOYAGER$ 产品。其由获得授权的 $LINK_SERVU$ 广为分发以为所有文件服务器的用户提供一种亲切而强健的文件传输方法。
+
+FTP Voyager JV 的重要功能包括：
+::END
+
+$OVERVIEW_FEATURES$::
+无需安装 - FTP Voyager JV 仅需处于 Java 运行环境。
+使用 HTTP 协议的操作易于防火墙配置。
+支持使用 HTTPS 的 SSL 加密通信。
+远程图像的缩略图视图最小化带宽占用量。 
+维护已传输文件的时间戳。
+简便地在本地与远程窗格间拖放文件传输。
+多个并发传输以加快文件传输。
+可定制外观，为用户提供应用程序间的亲切感。
+使用传输队列易于管理传输。
+能够恢复传输。
+使用“停靠框架”同时查看相同文件系统的不同部分。
+用户可定制的工作区域。
+预览图像文件（JPG, PNG, GIF 等等）。
+::END
+
+
+<!-- Help-Layout-Main-Overview.htm -->
+$HEAD_LAYOUT_MAIN$=应用程序概述
+
+$DESC_LAYOUT_MAIN$::
+FTP Voyager JV 的用户界面比以往更易于导航文件系统。通过使用亲切而简便的布局，用户可以迅速地在他们的文件系统中导航。布局中新增的重要功能是"$LINK_DOCKING_FRAMEWORK$"。“停靠框架”帮助用户查看相同文件系统的两个不同部分。用户还可以更改“可停靠框架和/或工具栏”的位置来创建可定制的工作区域。这创建了适用于每位 Serv-U 用户的非常简便而直观的文件传输客户端。
+::END
+
+$HEAD_LAYOUT_INITIAL$=初始布局
+
+$DESC_LAYOUT_INITIAL_1$::
+初次启动 FTP Voyager JV 所显示的布局与以下所述类似：
+::END
+$LI_LAYOUT_INTIIAL_1$=:  初始化时位于应用程序窗口的顶部。它包含所有 FTP Voyager JV 可以执行的操作。
+$LI_LAYOUT_INTIIAL_2$=:  初始化时位于应用程序窗口的顶部左边。它显示了客户端的本地文件系统。
+$LI_LAYOUT_INTIIAL_3$=:  初始化时位于应用程序窗口的顶部右边。它显示了服务器的远程文件系统。
+$LI_LAYOUT_INTIIAL_4$=:  初始化时位于应用程序窗口的底部。它显示了客户端与服务器间的传输。
+
+$NOTE_CONTENT_REMOVED$=$BOLD_NOTE$:  已删除了内容以帮助您查看各个组件的位置。
+
+
+<!-- Help-Layout-Browser-Overview.htm -->
+$HEAD_PANE_LOCAL_REMOTE$=本地窗格 & 远程窗格概述
+
+$DESC_PANE_LOCAL_REMOTE$::
+本地与远程窗格帮助用户迅速在文件系统中导航。每个窗格都拥有类似的布局，便于用户在两个文件系统间进行轻松的过渡。这些窗格还继承了"$LINK_DOCKING_FRAMEWORK$"的功能，帮助用户为每个窗格定制布局。每个本地窗格显示了客户端本地文件系统的内容，而每个远程窗格显示了服务器远程文件系统的内容。
+::END
+
+$HEAD_LOCAL_PANE$=本地窗格
+$DESC_LOCAL_PANE$::
+初始化时本地窗格位于主应用程序窗口的左上面板中。其视口显示了客户端本地文件系统的内容。
+::END
+
+$HEAD_REMOTE_PANE$=远程窗格
+$DESC_REMOTE_PANE$::
+初始化时远程窗格位于主应用程序窗口的右上面板中。其视口显示了服务器远程文件系统的内容。
+::END
+
+$DESC_FUNCTIONALITY$=从这些窗格，您可以：
+$LI_FUNCTIONALITY_1$=在目录中导航，查看其内容
+$LI_FUNCTIONALITY_2$=新建目录
+$LI_FUNCTIONALITY_3$=删除目录和文件
+$LI_FUNCTIONALITY_4$=重命名目录和文件
+$LI_FUNCTIONALITY_5$=查看目录及文件的属性详情
+$LI_FUNCTIONALITY_6$=将一个目录中的文件复制或移动到另一个目录
+$LI_FUNCTIONALITY_7$=在本地与远程文件系统间传输文件
+$LI_FUNCTIONALITY_8$=显示所支持文件类型的缩略图图像
+$LI_FUNCTIONALITY_9$=预览所支持文件类型的内容
+
+$HEAD_BROWSER_PANE_LAYOUT$=初始布局
+$DESC_BROWSER_PANE_LAYOUT$::
+初始化时这些窗格由以下列出的部件组成：
+::END
+$LI_BROWSER_PANE_LAYOUT_1$=: 使用“屑粒”显示当前工作目录以表现路径中的每个目录。用户还可以在该工具栏内输入绝对路径进行导航。
+$LI_BROWSER_PANE_LAYOUT_2$=: 显示可以在目录和/或文件上执行的操作。可以通过右键单击并切换每个按钮的可视状态来定制该工具栏。
+$LI_BROWSER_PANE_LAYOUT_3$=: 以树型结构显示相应文件系统的文件夹。
+$LI_BROWSER_PANE_LAYOUT_4$=: 显示列表中选定文件的预览情况。
+$LI_BROWSER_PANE_LAYOUT_5$=: 显示罗列当前工作目录的文件。
+
+
+<!-- Help-Layout-Browser-Tree-Overview.htm -->
+$HEAD_TREE_PANE$=树型窗格概述
+$DESC_TREE_PANE$::
+初始化时树型窗格位于 $LINK_PREVIEW_PANE$ 上方的 $LINK_LOCAL_REMOTE_PANE$ 的左上角。它以层次结构显示了相应文件系统的文件夹。便于用户理解文件系统的布局方式。
+
+树型窗格拥有许多功能，您可以使用它们来轻松地管理深层文件系统。这些功能罗列如下： 
+::END
+$LI_TREE_PANE_FEATURE_1$=新建目录
+$LI_TREE_PANE_FEATURE_2$=删除目录
+$LI_TREE_PANE_FEATURE_3$=重命名目录
+$LI_TREE_PANE_FEATURE_4$=打开目录以查看其内容
+$LI_TREE_PANE_FEATURE_5$=查看目录属性
+$LI_TREE_PANE_FEATURE_6$=复制或移动目录到另一个位置
+$LI_TREE_PANE_FEATURE_7$=传输目录到其它文件系统
+
+$HEAD_EXAMPLE_PATH$=以上屏幕截图使用样本路径 "C:\Downloads\RhinoSoft.com" 以显示树型如何分解文件夹结构：
+$DESC_EXAMPLE_PATH_1$=桌面
+$DESC_EXAMPLE_PATH_2$=计算机
+$DESC_EXAMPLE_PATH_3$=C:
+$DESC_EXAMPLE_PATH_4$=下载
+$DESC_EXAMPLE_PATH_5$=RhinoSoft.com
+
+
+<!-- Help-Layout-Browser-Preview-Overview.htm -->
+$HEAD_PREVIEW_PANE$=预览窗格概述
+$DESC_PREVIEW_PANE$::
+初始化时预览窗格位于 $LINK_TREE_PANE$ 下方的 $LINK_LOCAL_REMOTE_PANE$ 的左下角。它显示了在 $LINK_LIST_PANE$ 中选定文件的预览情况。这在您不希望下载原文件就可直接预览图像文件时非常有用。在界面中的预览窗格处于非停靠状态时，可以调整其大小。重新调整预览窗格的大小也会调整正在预览的图像大小。
+
+预览窗格支持的文件类型罗列如下：
+::END
+$LI_PREVIEW_TYPES_SUPPORTED$::
+JPG/JPEG
+GIF
+PNG
+::END
+
+
+<!-- Help-Layout-Browser-List-Overview.htm -->
+$HEAD_LIST_PANE_OVERVIEW$=列表窗格概述
+$DESC_LIST_PANE_OVERVIEW$::
+初始化时列表窗格位于 $LINK_LOCAL_REMOTE_PANE$ 的右边。它显示了当前工作目录所有的文件和目录。列表窗格拥有许多功能，您可以使用它们来轻松地管理深层文件系统。
+
+这些功能罗列如下：
+::END
+$LI_LIST_PANE_FEATURE_1$=新建目录
+$LI_LIST_PANE_FEATURE_2$=删除目录和文件
+$LI_LIST_PANE_FEATURE_3$=重命名目录或文件
+$LI_LIST_PANE_FEATURE_4$=打开目录以查看其内容
+$LI_LIST_PANE_FEATURE_5$=打开文件
+$LI_LIST_PANE_FEATURE_6$=查看目录和文件的属性
+$LI_LIST_PANE_FEATURE_7$=复制或移动目录和文件到另一个位置
+$LI_LIST_PANE_FEATURE_8$=传输目录和文件到另一个文件系统
+
+$DESC_LIST_PANE_VIEW_MODES$=列表窗格可以使用五种所支持的视图中的一种来显示目录内容：
+$LI_LIST_PANE_VIEW_1$=<strong>大图标</strong> - 显示文件名和由文件类型决定的合适的大图标。
+$LI_LIST_PANE_VIEW_2$=<strong>小图标</strong> - 使用较小的图标显示与大图标相同的信息。
+$LI_LIST_PANE_VIEW_3$=<strong>列表</strong> - 显示与小图标相同的信息，但以水平滚动方式来显示其它文件。
+$LI_LIST_PANE_VIEW_4$=<strong>详细信息</strong> - Windows 资源管理器所使用的传统视图，以显示每个文件的其它信息。
+$LI_LIST_PANE_VIEW_5$=<strong>缩略图</strong> - 显示文件名以及所支持的图像类型的预览。
+
+$DESC_LIST_PANE_DETAILS$::
+详细信息视图拥有四列，分别显示每个文件的重要信息。这些列的说明如下：
+::END
+$LI_LIST_PANE_DETAILS_1$=名称
+$LI_LIST_PANE_DETAILS_2$=大小
+$LI_LIST_PANE_DETAILS_3$=类型
+$LI_LIST_PANE_DETAILS_4$=修改日期
+$LI_LIST_PANE_DETAILS_1_1$=:  显示文件或目录呈现的名称
+$LI_LIST_PANE_DETAILS_2_1$=:  显示文件或目录的大小
+$LI_LIST_PANE_DETAILS_3_1$=:  标识文件类型，与使用客户端操作系统进行注册的文件类型相同。
+$LI_LIST_PANE_DETAILS_4_1$=:  显示文件上次修改的日期
+$DESC_LIST_PANE_THUMBS$::
+缩略图视图能够以每个文件自身缩略图的表现形式显示。如果该文件无法生成自身的图像，就会使用“大图标”代替。要了解您可以选择的缩略图不同大小的详细信息，请点击 $LINK_THUMB_SIZES_HERE$。
+::END
+
+
+<!-- Help-Layout-Transfer-Overview.htm -->
+$HEAD_TRANSFER_PANE_OVERVIEW$=传输窗格概述
+$DESC_TRANSFER_PANE_OVERVIEW$::
+初始化时传输窗格位于应用程序窗口的底部。传输窗格显示了所有文件传输的状态信息。默认情况下，如果传输完成或取消，就会将其从该窗格中移除。不过，FTP Voyager JV 可以被配置为将这些条目保留在传输窗格中，直到手动将其删除。传输窗格拥有若干功能，您可以使用它们来轻松地管理各个传输。
+
+这些功能罗列如下：
+::END
+$LI_TRANSFER_PANE_FEATURE_1$=当前文件完成传输后停止选定的传输。
+$LI_TRANSFER_PANE_FEATURE_2$=将下一文件作为选定的传输。
+$LI_TRANSFER_PANE_FEATURE_3$=暂停选定的传输。
+$LI_TRANSFER_PANE_FEATURE_4$=恢复选定的传输。
+$LI_TRANSFER_PANE_FEATURE_5$=取消传输。
+$LI_TRANSFER_PANE_FEATURE_6$=删除列表中的传输。
+$LI_TRANSFER_PANE_FEATURE_7$=取消列表中所有的传输。
+$LI_TRANSFER_PANE_FEATURE_8$=删除列表中所有的传输。
+
+$DESC_TRANSFER_COLUMNS$::
+传输窗格包含列，显示关于传输的重要信息。这些列罗列如下： 
+::END
+
+$HEAD_COL_OPERATING_STATUS$=操作
+$DESC_COL_OPERATING_STATUS$::
+显示传输的当前状态。传输状态可以随时更改。这些状态罗列如下：
+::END
+$LI_COL_OPERATING_STATUS_1$=<strong>运行</strong>:  传输进行中。
+$LI_COL_OPERATING_STATUS_2$=<strong>停止</strong>:  传输已停止。这可以是选择  $LINK_STOP_AFTER_FILE_COMPLETES$ 选项的结果。 
+$LI_COL_OPERATING_STATUS_3$=<strong>暂停</strong>: 传输已暂停。这可以是选择 $LINK_PAUSE$ 选项的结果。
+$LI_COL_OPERATING_STATUS_4$=<strong>取消</strong>: 传输已取消。
+$LI_COL_OPERATING_STATUS_5$=<strong>错误</strong>: 传输发生错误。在用户确认错误以后可以继续进行传输。
+
+$HEAD_COL_NAME$=名称
+$DESC_COL_NAME$::
+该列显示了当前正在传输的文件的名称。如果正在传输一个完整的目录或多个文件，该列中显示的名称会在文件传输完成后更改。
+::END
+
+$HEAD_COL_STATUS$=状态
+$DESC_COL_STATUS$::
+该列显示了正在传输的当前文件的完成进度。它显示了该文件的总大小、已传输的字节数量以及以百分比形式显示的进度指示器。
+::END
+
+$HEAD_COL_COMPLETION$=完成
+$DESC_COL_COMPLETION$::
+完成列显示了传输比率以及传输完成前的预估时间。预估用时以 HH:MM:SS 的格式显示，其中“HH”表示小时，“MM”表示分钟，而“SS”表示秒。传输还显示了两种图标之一以指示该传输是上传还是下载：
+::END
+$LI_COL_COMPLETION_1$=上传
+$LI_COL_COMPLETION_2$=下载
+
+$HEAD_COL_OVERALL$=总体
+$DESC_COL_OVERALL$::
+显示传输中所包括的所有文件已传输的字节总量。该列有一个指示器，会定时更新以显示已传输字节数量的近似百分比。
+::END
+
+$HEAD_COL_PATH_FROM$=源路径
+$DESC_COL_PATH_FROM$::
+该列显示了当前正在传输的“源”文件的完整路径。
+::END
+
+$HEAD_COL_PATH_TO$=目标路径
+$DESC_COL_PATH_TO$::
+该列显示了当前正在传输的“目标”文件的完整路径。
+::END
+
+<!-- Help-Menus-Main-Overview.htm -->
+$HEAD_MENU_MAIN_OVERVIEW$=主菜单概述
+$DESC_MENU_MAIN_OVERVIEW$::
+主菜单位于应用程序窗口的顶部。帮助用户迅速访问 FTP Voyager JV 的所有操作和功能。某些操作还可以使用键盘快捷键来执行。如果某操作支持键盘快捷键，会在相应菜单条目的末尾显示。
+::END
+$DESC_MENU_MAIN_FEATURES$=主菜单由以下罗列的几部分组成：
+
+
+<!-- Help-Menus-Main-Items-File.htm -->
+$HEAD_MENU_FILE$=文件菜单
+
+$HEAD_ACTION_NEW_LOCAL_BROWSER$=新建本地浏览器
+$DESC_ACTION_NEW_LOCAL_BROWSER$::
+新建一个与本地文件系统相关联的可停靠框架。
+::END
+
+$HEAD_ACTION_NEW_REMOTE_BROWSER$=新建远程浏览器
+$DESC_ACTION_NEW_REMOTE_BROWSER$::
+新建一个与远程文件系统相关联的可停靠框架。
+::END
+
+$HEAD_ACTION_NEW_DIR$=新建文件夹
+$DESC_ACTION_NEW_DIR$::
+新建一个位于 $LINK_ACTIVE_PANE$ 当前工作目录之下的目录。
+::END
+
+$HEAD_ACTION_OPEN$=打开
+$DESC_ACTION_OPEN$::
+打开 $LINK_ACTIVE_PANE$ 中的目录或尝试使用针对文件扩展名所采用的系统默认程序来打开该文件。
+::END
+
+$NOTE_ACTION_DELETE$::
+$BOLD_NOTE$:  取决于您的 FTP Voyager JV 设置，在执行删除操作前会提示您进行确认。
+::END
+
+$HEAD_ACTION_RENAME$=重命名
+$DESC_ACTION_RENAME$::
+允许您编辑 $LINK_ACTIVE_PANE$ 选定文件或文件夹的名称。
+::END
+
+$HEAD_ACTION_PROPERTIES$=属性
+$DESC_ACTION_PROPERTIES$::
+启动对话框，该对话框显示 $LINK_ACTIVE_PANE$ 选定项目的属性。
+::END
+
+$HEAD_ACTION_FILE_UPLOAD$=上传文件...
+$DESC_ACTION_FILE_UPLOAD$::
+上传命令启动一个文件传输，将活动的本地窗格中的选定项目复制到文件服务器。如果当前打开了多个远程浏览器窗口，会显示对话框供您选择合适的目标。
+::END
+$NOTE_ACTION_UPLOAD$::
+$BOLD_NOTE$:  服务器保留任何可能是目录的客户端文件的目录树型结构。
+::END
+
+$HEAD_ACTION_FILE_DOWNLOAD$=下载文件...
+$DESC_ACTION_FILE_DOWNLOAD$::
+下载命令启动一个文件传输，将活动的远程窗格中的选定项目复制到本地文件系统。如果当前打开了多个本地浏览器窗口，会显示对话框供您选择合适的目标。
+::END
+$NOTE_ACTION_DOWNLOAD$::
+$BOLD_NOTE$:  客户端保留任何可能是目录的服务器文件的目录树型结构。
+::END
+
+$HEAD_ACTION_STOP_REMOTE_DIR_LISTING$=停止远程目录列表
+$DESC_ACTION_STOP_REMOTE_DIR_LISTING$::
+如果在服务器上待处理目录列表，该选项直接终止列表，无需等待其完成。
+::END
+$NOTE_ACTION_STOP_REMOTE_DIR_LISTING$::
+$BOLD_NOTE$:  该操作仅在远程目录列表的进行期间可用。远程目录列表可能会花很长时间才得以完成（特别是在文件服务器通过网络访问资源的时候）。某些命令只有在 FTP Voyager JV 检索了远程目录列表或已取消目录列表时才能执行。 
+::END
+
+$HEAD_ACTION_CHANGE_PASSWORD$=更改密码
+$DESC_ACTION_CHANGE_PASSWORD$::
+启动 $LINK_CHANGE_PASSWORD$ 对话框帮助用户为其用户帐户更改密码。
+::END
+$NOTE_ACTION_CHANGE_PASSWORD$::
+$BOLD_NOTE$:  该选项仅在管理员允许用户更改其密码时可用。
+::END
+
+$HEAD_ACTION_EXIT$=退出
+$DESC_ACTION_EXIT$::
+关闭 FTP Voyager JV 以及（可选）注销 Serv-U 的当前用户帐户。
+::END
+$NOTE_ACTION_EXIT$::
+$BOLD_NOTE$:  如果您使用管理员帐户登录 FTP Voyager JV，您可能不愿注销 Serv-U。如果您确实要注销，从您浏览器内返回到管理控制台之前，您必须重新登录。
+::END
+
+
+<!-- Help-Menus-Main-Items-Edit.htm -->
+$HEAD_MENU_EDIT$=编辑菜单
+
+$HEAD_ACTION_PREFERENCES$=首选项
+$DESC_ACTION_PREFERENCES$::
+启动 $LINK_PREFERENCES$ 对话框帮助您配置 FTP Voyager JV 中的各种选项。$LINK_PREFERENCES$ 对话框拥有若干选项，您可以使用它们来更改设置以满足您个人的需要。
+
+首选项对话框由这些页面组成：
+::END
+$LI_PREF_PAGE_TBAR_MAIN$=主工具栏
+$LI_PREF_PAGE_TBAR_LOCAL$=本地工具栏
+$LI_PREF_PAGE_TBAR_REMOTE$=远程工具栏
+$LI_PREF_PAGE_TBAR_TRANSFER$=传输工具栏
+
+$HEAD_ACTION_SELECT_ALL$=全部选择
+$DESC_ACTION_SELECT_ALL$::
+选择活动 $LINK_LIST_PANE$ 的所有行。
+::END
+
+$HEAD_ACTION_INVERT_SELECTION$=反选
+$DESC_ACTION_INVERT_SELECTION$::
+颠倒活动 $LINK_LIST_PANE$ 每行的选择状态。即选中任何没有选取的行，并取消选中任何已经选取的行。 
+::END
+
+
+<!-- Help-Menus-Main-Items-View.htm -->
+$HEAD_MENU_VIEW$=查看菜单
+
+$MENU_STYLE$=样式
+$DESC_STYLE$::
+提供可以应用于 FTP Voyager JVP 的备选皮肤。有多种可用的定制样式，以及反映 FTP Voyager JV 运行于何种操作系统的样式。
+::END
+
+$MENU_TBARS$=工具栏
+$DESC_TBARS$::
+切换遍布此应用程序中各种工具栏的可视状态。
+::END
+
+$MENU_VIEW_LARGE_ICONS$=大图标
+$DESC_VIEW_LARGE_ICONS$::
+选择该项目将更改视图，使用活动窗格中文件与文件夹的大图标来显示。
+::END
+
+$MENU_VIEW_SMALL_ICONS$=小图标
+$DESC_VIEW_SMALL_ICONS$::
+选择该项目将更改视图，使用活动窗格中文件与文件夹的小图标来显示。
+::END
+
+$MENU_VIEW_LIST$=列表
+$DESC_VIEW_LIST$::
+选择该项目将更改视图，使用活动窗格中所有文件与文件夹的简单列表形式来显示。
+::END
+
+$MENU_VIEW_DETAILS$=详细信息
+$DESC_VIEW_DETAILS$::
+选择该项目将更改视图，使用活动窗格中所有文件与文件夹的详细信息来显示。除了显示文件名，详细信息还会列出文件大小，文件类型，修改日期与时间。
+::END
+
+$MENU_VIEW_THUMBS$=缩略图
+$DESC_VIEW_THUMBS$::
+在 $LINK_LIST_PANE$ 中显示缩略图。您可以通过选择此处列出的预定义大小来更改缩略图的大小。缩略图的显示仅适用于能够识别的图像类型。否则，将以大图标显示该项目。
+
+预定义大小罗列如下：
+::END
+$LI_VIEW_THUMBS_075$=75x75
+$LI_VIEW_THUMBS_100$=100x100（默认）
+$LI_VIEW_THUMBS_150$=150x150
+$LI_VIEW_THUMBS_200$=200x200
+$LI_VIEW_THUMBS_250$=250x250
+
+$MENU_BACK$=后退
+$DESC_BACK$::
+后退命令后退到活动窗格导航历史记录中的上一条目。
+::END
+
+$MENU_FORWARD$=前进
+$DESC_FORWARD$::
+前进命令前进到活动窗格导航历史记录中的下一条目。
+::END
+
+$MENU_UP_DIR$=向上一级
+$DESC_UP_DIR$::
+该命令前进至活动窗格当前目录的父目录。
+::END
+
+$MENU_REFRESH$=刷新
+$DESC_REFRESH$::
+刷新命令强制 FTP Voyager JV 检索活动窗格更新的目录列表。
+::END
+
+
+<!-- Help-Menus-Main-Items-Windows.htm -->
+$HEAD_MENU_WINDOWS$=窗口菜单
+
+$HEAD_MENU_WINDOWS_CLOSE$=关闭
+$DESC_MENU_WINDOWS_CLOSE$::
+关闭 $LINK_ACTIVE_PANE$。$BOLD_NOTE$:  关闭 $LINK_ACTIVE_PANE$ 将更新 $LINK_FRAME_LIST$。
+::END
+
+$HEAD_MENU_WINDOWS_AUTO_HIDE$=自动隐藏
+$DESC_MENU_WINDOWS_AUTO_HIDE$::
+将 $LINK_ACTIVE_PANE$ 的状态更改为依附于应用程序窗口的隐藏面板。该隐藏面板可以通过将鼠标悬停于指向该框架的标签来显示。
+::END
+
+$HEAD_MENU_WINDOWS_DOCKABLE$=可停靠
+$DESC_MENU_WINDOWS_DOCKABLE$::
+将 $LINK_ACTIVE_PANE$ 的状态更改为与应用程序窗口分离的可停靠框架。这是 FTP Voyager JV 中默认的窗口状态。
+::END
+
+$HEAD_MENU_WINDOWS_FLOATING$=浮动
+$DESC_MENU_WINDOWS_FLOATING$::
+将 $LINK_ACTIVE_PANE$ 的状态更改为与应用程序窗口分离的浮动框架。
+::END
+
+$HEAD_MENU_WINDOWS_AUTO_HIDE_ALL$=全部自动隐藏
+$DESC_MENU_WINDOWS_AUTO_HIDE_ALL$::
+将所有框架更改为 $LINK_AUTO_HIDE$ 状态。
+::END
+
+$HEAD_MENU_WINDOWS_CLOSE_ALL$=关闭所有框架
+$DESC_MENU_WINDOWS_CLOSE_ALL$::
+关闭所有该应用程序的框架。
+::END
+
+$HEAD_MENU_WINDOWS_TREE_PANE$=树型窗格
+$DESC_MENU_WINDOWS_TREE_PANE$::
+切换 $LINK_TREE_PANE$ 的可视状态。
+::END
+
+$HEAD_MENU_WINDOWS_PREVIEW_PANE$=预览窗格
+$DESC_MENU_WINDOWS_PREVIEW_PANE$::
+切换 $LINK_PREVIEW_PANE$ 的可视状态。
+::END
+
+$HEAD_MENU_WINDOWS_FRAME_LIST$=框架列表
+$DESC_MENU_WINDOWS_FRAME_LIST$::
+该部分包含所有用于此对话的活动框架。该菜单根据已创建与已破坏的框架进行相应的动态更新。选择该列表中的框架可以使其在该应用程序中处于激活状态。
+::END
+
+$HEAD_MENU_WINDOWS_ACTIVATE_DLG$=窗口...
+$DESC_MENU_WINDOWS_ACTIVATE_DLG$::
+启动 $LINK_ACTIVATE_WINDOW$ 对话框，帮助您激活应用程序中的框架。
+::END
+
+
+<!-- Help-Menus-Main-Items-Help.htm -->
+$HEAD_MENU_HELP$=帮助菜单
+
+$HEAD_ACTION_HELP_TOPICS$=帮助主题
+$DESC_ACTION_HELP_TOPICS$::
+启动默认的 web 浏览器直接访问 FTP Voyager JV 的上下文相关帮助文档。
+::END
+
+$HEAD_ACTION_HELP_OVERVIEW$=概述
+$DESC_ACTION_HELP_OVERVIEW$::
+启动默认的 web 浏览器直接访问 FTP Voyager JV 的“概述”帮助文档。
+::END
+
+$HEAD_ACTION_HELP_TECH_SUPPORT$=技术支持
+$DESC_ACTION_HELP_TECH_SUPPORT$::
+启动默认的 web 浏览器直接访问针对您连接到的服务器，如何联系技术支持的信息页面。 
+
+$BOLD_NOTE$:  该选项仅在某支持链接由 Serv-U 管理员提供时可用。
+::END
+
+$HEAD_ACTION_HELP_ABOUT$=关于对话框
+$DESC_ACTION_HELP_ABOUT$::
+启动 FTP Voyager JV 的关于对话框。关于对话框包含重要的产品信息。 
+
+它有两个页面，罗列如下：
+::END
+$LI_ABOUT_PAGE_1$=程序信息
+$LI_ABOUT_PAGE_1_1$=:  该页面包含关于 FTP Voyager JV 版本，版本日期以及联系信息的信息。
+$LI_ABOUT_PAGE_2$=计算机信息
+$LI_ABOUT_PAGE_2_1$::
+:  该对话框包含关于计算机的操作系统与 Java 安装的信息，可以点击<strong>复制到剪贴板</strong>按钮将这些信息复制到剪贴板，以提交给技术支持。
+::END
+
+
+<!-- Help-Tbar-Main-Overview.htm -->
+$HEAD_TOOLBAR_MAIN_OVERVIEW$=主工具栏概述
+$DESC_TOOLBAR_MAIN_OVERVIEW$::
+主工具栏为用户提供一个迅速的方法来执行该应用程序的常用操作。初始化时主工具栏位于主菜单的正下方。默认情况下处于隐藏状态。要显示工具栏，点击“查看 | 工具栏”并从主菜单中选择“主”选项。
+::END
+
+
+<!-- Help-Tbar-Main-Actions.htm -->
+$HEAD_TOOLBAR_MAIN_ACTIONS$=主工具栏概述
+$DESC_TOOLBAR_MAIN_ACTIONS$::
+主工具栏可以执行的所有操作罗列如下。
+::END
+
+
+<!-- Help-Tbar-Browser-Crumbbar-Overview.htm -->
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$=本地/远程导航栏概述
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW$::
+初始化时本地/远程导航栏位于每个本地/远程窗格的顶部。导航栏拥有各种更改当前工作目录的方法。要更改当前工作目录，请遵照以下某一步骤： 
+::END
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_1$=使用屑粒按钮或导航栏按钮的下拉菜单。
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_2$=指定文件系统的绝对路径。
+$LI_TOOLBAR_BROWSER_CRUMBBAR_OVERVIEW_3$=选择历史记录下拉列表中先前的路径。
+
+
+<!-- Help-Tbar-Browser-Crumbbar-Actions.htm -->
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$=本地/远程导航栏操作
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$::
+导航栏可以执行各种操作以导航至相应文件系统中的目录。导航栏的功能罗列如下：
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_1$=屑粒按钮
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_1$::
+每个屑粒表示一个目录。要将工作目录更改为相应的屑粒，请点击屑粒。点击屑粒的下拉箭头会显示该屑粒位置的子目录列表。点击其中一个子目录也可以更改工作目录。
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_6$=绝对路径模式
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_6$::
+在该区域内点击以将导航栏更改为编辑字段。初始化时编辑字段将当前工作区域显示为绝对路径。您可以使用您自己指向文件系统上有效目录的绝对路径替换该字符串。
+按下 [回车] 键将工作目录设置为指定路径。
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_7$=历史记录
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_7$::
+点击该按钮以显示先前工作目录的下拉列表。选择该列表中的路径以更改当前工作目录。
+::END
+
+$HEAD_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_8$=$MENU_REFRESH$
+$DESC_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS_8$=$DESC_REFRESH$
+
+$LIST_TOOLBAR_BROWSER_CRUMBBAR_ACTIONS$::
+<strong>屑粒</strong>: 每个屑粒表示一个目录。用户也可以在该工具栏内指定要导航的绝对路径。 
+<strong>(2) $LINK_HELP_TOOLBAR_BROWSER_TOOLBAR$</strong>: 显示可以在目录和/或文件上执行的操作。可以通过右键单击并切换每个按钮的可视状态来定制该工具栏。
+::END
+
+
+<!-- Help-Tlbar-Browser-Overview.htm -->
+$HEAD_TOOLBAR_BROWSER_OVERVIEW$=本地/远程工具栏概述
+$DESC_TOOLBAR_BROWSER_OVERVIEW$::
+本地/远程工具栏帮助用户为选定的目录和/或文件迅速地执行常用操作。
+::END
+
+
+<!-- Help-Tbar-Browser-Actions.htm -->
+$HEAD_TOOLBAR_BROWSER_ACTIONS$=本地/远程工具栏操作
+$DESC_TOOLBAR_BROWSER_ACTIONS$::
+本地/远程工具栏可以执行的所有操作罗列如下。
+::END
+
+$HEAD_ACTION_BACK$=后退
+$DESC_ACTION_BACK$::
+后退命令后退到活动窗格导航历史记录中的上一条目。
+::END
+
+$HEAD_ACTION_FORWARD$=前进
+$DESC_ACTION_FORWARD$::
+前进命令前进到活动窗格导航历史记录中的下一条目。
+::END
+$NOTE_ACTION_FORWARD_TOOLBAR$::
+<strong>注意 (2*):</strong>  下拉按钮显示了使用后退与前进功能来浏览的目录的历史记录。
+::END
+
+$HEAD_ACTION_UPDIR$=上一级目录
+$DESC_ACTION_UPDIR$::
+该命令前进至活动窗格当前目录的父目录。
+::END
+
+$HEAD_ACTION_UPLOAD$=上传
+$DESC_ACTION_UPLOAD$::
+上传命令启动一个文件传输，将活动的本地窗格中的选定项目复制到文件服务器。如果当前打开了多个远程浏览器窗口，会显示对话框供您选择合适的目标。
+::END
+$NOTE_ACTION_UPLOAD_TOOLBAR$::
+<strong>注意 (4*):</strong>  只有本地窗格的工具栏可以显示上传按钮。
+::END
+
+$HEAD_ACTION_DOWNLOAD$=下载
+$DESC_ACTION_DOWNLOAD$::
+下载命令启动一个文件传输，将活动的远程窗格中的选定项目复制到本地文件系统。如果当前打开了多个本地浏览器窗口，会显示对话框供您选择合适的目标。
+::END
+$NOTE_ACTION_DOWNLOAD_TOOLBAR$::
+<strong>注意 (5*):</strong>  只有远程窗格的工具栏可以显示下载按钮。
+::END
+
+$HEAD_ACTION_NEW_FOLDER$=新建文件夹
+$DESC_ACTION_NEW_FOLDER$::
+新建位于当前工作目录之下的目录。
+::END
+
+$HEAD_ACTION_DELETE$=删除
+$DESC_ACTION_DELETE$::
+删除命令永久删除 $LINK_ACTIVE_PANE$ 中选定的项目。
+::END
+
+$HEAD_ACTION_VIEW$=查看
+$DESC_ACTION_VIEW$::
+允许用户循环使用列表窗格中各种可用的视图。
+::END
+$NOTE_ACTION_VIEW_TOOLBAR$::
+<strong>注意 (8*):</strong>  您可以从下拉按钮为列表窗格迅速地选择合适的视图。列表窗格可用的视图有：
+::END
+
+
+<!-- Help-Tbar-Transfer-Overview.htm -->
+$HEAD_TOOLBAR_TRANSFER_OVERVIEW$=传输工具栏概述
+$DESC_TOOLBAR_TRANSFER_OVERVIEW$::
+传输工具栏为用户提供一种迅速的方法来为客户端与服务器之间的传输执行常用操作。初始化时传输工具栏位于传输窗格的顶部。
+::END
+
+
+<!-- Help-Tbar-Transfer-Actions.htm -->
+$HEAD_TOOLBAR_TRANSFER_ACTIONS$=传输工具栏操作
+$DESC_TOOLBAR_TRANSFER_ACTIONS$::
+传输工具栏可以执行的所有操作罗列如下。
+::END
+
+$HEAD_ACTION_TRANSFER_STOP_AFTER_FILE$=文件完成传输后停止
+$DESC_ACTION_TRANSFER_STOP_AFTER_FILE$::
+选择该选项指示 FTP Voyager JV 在当前文件完成传输后停止传输位于该项目传输队列中的其它文件。
+::END
+$NOTE_ACTION_TRANSFER_STOP_AFTER_FILE$::
+$BOLD_NOTE$:  该选项仅在拥有多个传输项目时可用。
+::END
+
+$HEAD_ACTION_TRANSFER_SKIP_FILE$=跳过文件
+$DESC_ACTION_TRANSFER_SKIP_FILE$::
+挑过文件命令指示 FTP Voyager JV 终止当前文件的传输，但继续传输该项目传输队列中的其余文件。
+::END
+
+$HEAD_ACTION_TRANSFER_PAUSE$=暂停
+$DESC_ACTION_TRANSFER_PAUSE$::
+允许用户“暂停”传输。这在传输恢复前停止 FTP Voyager JV 为该传输发送或接收任何数据的行为。
+::END
+
+$HEAD_ACTION_TRANSFER_RESUME$=恢复
+$DESC_ACTION_TRANSFER_RESUME$::
+允许用户“恢复”传输。恢复传输拥有许多优点。如果用户“暂停”传输，或连接临时断开，用户可以“恢复”该传输。这允许 FTP Voyager JV 与 Serv-U 于传输断开处重新进行传输。由于不必强制用户重新传输整个文件内容，这节省了时间与资源。
+::END
+
+$HEAD_ACTION_TRANSFER_CANCEL$=取消
+$DESC_ACTION_TRANSFER_CANCEL$::
+取消操作立即终止传输。该操作仅在传输进行时可用。
+::END
+
+$HEAD_ACTION_TRANSFER_REMOVE$=删除
+$DESC_ACTION_TRANSFER_REMOVE$::
+选择该操作将删除传输窗格中的条目。该操作仅在传输完成或已被取消时可用。
+::END
+$NOTE_ACTION_TRANSFER_REMOVE_TOOLBAR$::
+$BOLD_NOTE$:  默认情况下，会自动删除传输窗格中已完成或已取消的传输。要使该选项实现手动删除传输项目的功能，请参见 $LINK_PREF_PAGE_GENERAL$ 首选项中的帮助文档。
+::END
+
+$HEAD_ACTION_TRANSFER_CANCEL_ALL$=全部取消
+$DESC_ACTION_TRANSFER_CANCEL_ALL$::
+只要点击该选项就能取消所有当前传输。
+::END
+
+$HEAD_ACTION_TRANSFER_REMOVE_ALL$=全部删除
+$DESC_ACTION_TRANSFER_REMOVE_ALL$::
+只要点击该选项就能删除传输窗格中所有已完成或已取消的传输。
+::END
+
+
+<!-- Help-Dlg-About-ProgramInfo.htm -->
+$HEAD_DLG_ABOUT_PROGRAM_INFO$=关于对话框 - 程序信息
+$DESC_DLG_ABOUT_PROGRAM_INFO$::
+程序信息页面包含关于 FTP Voyager JV 的有用信息。该页面由以下部分组成：
+::END
+$LI_DLG_ABOUT_PROG_INFO_1$=产品信息
+$LI_DLG_ABOUT_PROG_INFO_2$=联系信息
+$LI_DLG_ABOUT_PROG_INFO_3$=开发信息
+$LI_DLG_ABOUT_PROG_INFO_4$=法律信息
+$LI_DLG_ABOUT_PROG_INFO_1_1$=:  包含 FTP Voyager JV 的版本号与版本日期。
+$LI_DLG_ABOUT_PROG_INFO_2_1$=:  列出所有分发此产品的参与方。
+$LI_DLG_ABOUT_PROG_INFO_3_1$=:  列出所有开发此产品的参与方。
+$LI_DLG_ABOUT_PROG_INFO_4_1$=:  包含关于保护该产品的版权法的信息。
+
+
+<!-- Help-Dlg-About-ComputerInfo.htm -->
+$HEAD_DLG_ABOUT_COMPUTER_INFO$=关于对话框 - 计算机信息
+$DESC_DLG_ABOUT_COMPUTER_INFO$::
+计算机信息页面包含关于客户端机器配置的有用信息。该页面由以下几部分组成：
+::END
+$LI_DLG_ABOUT_COMP_INFO_1$=操作系统信息
+$LI_DLG_ABOUT_COMP_INFO_2$=Java 运行环境信息
+$LI_DLG_ABOUT_COMP_INFO_1_1$=:  显示关于客户端机器操作系统的信息。
+$LI_DLG_ABOUT_COMP_INFO_2_1$=:  显示关于安装于该客户端机器上的 Java 运行环境的信息。
+
+$DESC_COPY_TO_CLIPBOARD$::
+计算机信息页面还具有“复制到剪贴板”按钮，可以复制关于客户端操作系统和 Java 运行环境的更深层的详细信息。该信息对于相关于 FTP Voyager JV 的技术支持问题非常有用。
+::END
+
+<!-- Help-Dlg-Prefs-General.htm -->
+$HEAD_DLG_PREFS_GENERAL$=首选项 - 常规
+$DESC_DLG_PREFS_GENERAL$::
+常规页面具有关于 FTP Voyager JV 若干功能的项目。这些项目说明如下：
+::END
+
+$HEAD_REMOVE_TRANSFER_FILES$=传输完成后删除传输窗格中的文件
+$DESC_REMOVE_TRANSFER_FILES$::
+选中该选项时，在传输完成或取消时会自动将其从传输窗格中删除。否则，传输在手动删除前，会一直保留在传输窗格中。
+::END
+
+$HEAD_ADJUST_DST$=自动调整夏令时的时间戳
+$DESC_ADJUST_DST$::
+启用该选项指示 FTP Voyager JV 在夏令时情况下按小时来自动调整文件日期和时间。
+::END
+
+$HEAD_DATE_FMT$=使用定制日期格式化
+$DESC_DATE_FMT$::
+若选中该选项，会使用编辑框中的语法来显示所有时间戳。可以更改语法。语法与格式选项罗列如下：
+::END
+
+<!-- ROW_COL -->
+$OPTIONS_UI_TABLE_TEXT$=文本
+$OPTIONS_UI_TABLE_YEAR$=年
+$OPTIONS_UI_TABLE_MONTH$=月
+$OPTIONS_UI_TABLE_NUMBER$=数字
+$OPTIONS_UI_TABLE_0_0$=字母
+$OPTIONS_UI_TABLE_0_1$=日期或时间构成
+$OPTIONS_UI_TABLE_0_2$=表示法
+$OPTIONS_UI_TABLE_0_3$=示例
+$OPTIONS_UI_TABLE_1_1$=纪元标志符
+$OPTIONS_UI_TABLE_1_3$=公元
+$OPTIONS_UI_TABLE_2_3$=1996; 96
+$OPTIONS_UI_TABLE_3_1$=何年何月
+$OPTIONS_UI_TABLE_3_3$=七月份; 七月; 07
+$OPTIONS_UI_TABLE_4_1$=一年中的第几周
+$OPTIONS_UI_TABLE_5_1$=一月中的第几周
+$OPTIONS_UI_TABLE_6_1$=一年中的第几天
+$OPTIONS_UI_TABLE_7_1$=一月中的第几天
+$OPTIONS_UI_TABLE_8_1$=何月第几个星期几
+$OPTIONS_UI_TABLE_9_1$=星期几
+$OPTIONS_UI_TABLE_9_3$=星期二; 周二
+$OPTIONS_UI_TABLE_10_1$=上午/下午标记
+$OPTIONS_UI_TABLE_10_3$=下午
+$OPTIONS_UI_TABLE_11_1$=24 小时制
+$OPTIONS_UI_TABLE_12_1$=$OPTIONS_UI_TABLE_11_1$
+$OPTIONS_UI_TABLE_13_1$=上午/下午 12 小时制
+$OPTIONS_UI_TABLE_14_1$=$OPTIONS_UI_TABLE_13_1$
+$OPTIONS_UI_TABLE_15_1$=分钟
+$OPTIONS_UI_TABLE_16_1$=秒
+$OPTIONS_UI_TABLE_17_1$=毫秒
+$OPTIONS_UI_TABLE_18_1$=时区
+$OPTIONS_UI_TABLE_18_3$=太平洋标准时间; PST; GMT-08:00
+$OPTIONS_UI_TABLE_19_1$=$OPTIONS_UI_TABLE_18_1$
+
+$OPTIONS_UI_NUMBER$=数字
+$OPTIONS_UI_TEXT$=文本
+$OPTIONS_UI_DIGIT$=数位
+
+$OPTIONS_UI_BODY_4_1$=模式字母通常会重复，其数字表示了精确的日期和时间。
+
+$OPTIONS_UI_BODY_5_1$=文本：
+$OPTIONS_UI_BODY_5_2$::
+格式化时, 如果模式字母的计数大于等于 4，会使用完整形式；否则会使用可用的简略或缩写形式。解析时，接受上述两种形式，与模式字母的计数无关。
+::END
+
+$OPTIONS_UI_BODY_6_1$=数字：
+$OPTIONS_UI_BODY_6_2$::
+格式化时, 模式字母的计数为最小数位。解析时会忽略模式字母的计数，除非需要将两个相邻字段分开。
+::END
+
+$OPTIONS_UI_BODY_7_1$=年：
+$OPTIONS_UI_BODY_7_2$::
+格式化时，如果模式字母的计数为 2，就会将年份的数位缩减至两位；否则会将其解释为
+::END
+
+$OPTIONS_UI_BODY_8$::
+解析时，如果模式字母的计数大于 2，就不考虑数位，逐字表示年份。所以会将使用 "MM/dd/yyyy" 模式的 "01/11/12" 解析为公元 12 年 1 月 11 日（Jan 11, 12 A.D.）。
+::END
+
+$OPTIONS_UI_BODY_9_1$=月：
+$OPTIONS_UI_BODY_9_2$=如果模式字母的计数大于等于 3，会将月份解释为 
+$OPTIONS_UI_BODY_9_3$=；否则，将其解释为
+
+$OPTIONS_UI_BODY_10_1$=常规时区:
+$OPTIONS_UI_BODY_10_2$=将时区解释为
+$OPTIONS_UI_BODY_10_3$::
+如果它们有名字。对于使用 GMT 偏移值表示的时区，会使用以下语法：
+::END
+
+$OPTIONS_UI_BODY_11_1$=GMTOffsetTimeZone:
+
+$OPTIONS_UI_BODY_12_1$=GMT
+$OPTIONS_UI_BODY_12_2$=标记
+$OPTIONS_UI_BODY_12_3$=小时
+$OPTIONS_UI_BODY_12_4$=分钟
+
+$OPTIONS_UI_BODY_13_1$=标记：
+$OPTIONS_UI_BODY_13_2$=之一
+
+$OPTIONS_UI_BODY_14_1$=小时
+
+$OPTIONS_UI_BODY_15_1$=分钟：
+
+$OPTIONS_UI_BODY_16_1$=数字：
+
+$OPTIONS_UI_BODY_17_1$=必须位于 0 与 23 之间，以及
+$OPTIONS_UI_BODY_17_2$::
+必须位于 00 与 59 之间。该格式是本地独立的，并且必须采用 Unicode 标准的基本拉丁字符块（Basic Latin block ）。
+::END
+$OPTIONS_UI_BODY_18_1$=解析时，
+$OPTIONS_UI_BODY_18_2$=RFC 822 时区
+$OPTIONS_UI_BODY_18_3$=同样接受。
+
+$OPTIONS_UI_BODY_19_1$=RFC 822 时区:
+$OPTIONS_UI_BODY_19_2$=格式化时，使用 RFC 822 4-位时区格式：
+
+$OPTIONS_UI_RFC_1$=RFC822TimeZone:
+$OPTIONS_UI_RFC_2$=标记
+$OPTIONS_UI_RFC_3$=TwoDigitHours
+$OPTIONS_UI_RFC_4$=分钟
+$OPTIONS_UI_RFC_5$=TwoDigitHours:
+$OPTIONS_UI_RFC_6$=数字数字
+
+$OPTIONS_UI_RFC_7$=TwoDigitHours
+$OPTIONS_UI_RFC_8$=必须位于 00 与 23 之间，其它定义为
+$OPTIONS_UI_RFC_9$=常规时区
+$OPTIONS_UI_RFC_10$=解析时，
+$OPTIONS_UI_RFC_11$=常规时区
+$OPTIONS_UI_RFC_12$=同样接受。
+
+$OPTIONS_UI_EXAMPLES_1_1$=示例
+$OPTIONS_UI_EXAMPLES_1_2$::
+以下示例显示了日期与时间模式如何在美国本地显示的。指定的日期与时间为位于美国太平洋时间时区的本地时间：2001-07-04 12:08:56。
+::END
+
+$OPTIONS_UI_EXAMPLE_TBL_0_0$=日期和时间模式
+$OPTIONS_UI_EXAMPLE_TBL_0_1$=结果
+$OPTIONS_UI_EXAMPLE_TBL_2_1$=01 年 7 月 4 日星期三
+$OPTIONS_UI_EXAMPLE_TBL_3_1$=下午 12:08
+$OPTIONS_UI_EXAMPLE_TBL_4_1$=下午，太平洋夏令时 
+$OPTIONS_UI_EXAMPLE_TBL_5_1$=下午，PDT
+$OPTIONS_UI_EXAMPLE_TBL_6_1$=公元 02001 年 7 月 4 日下午 12:08。
+$OPTIONS_UI_EXAMPLE_TBL_7_1$=2001 年 7 月 4 日星期三 12:08:56 -0700
+
+$HEAD_UPLOAD_OVERWRITE$=确认上传覆盖和“恢复”
+$DESC_UPLOAD_OVERWRITE$::
+若选中该功能，FTP Voyager JV 会在上传期间尝试覆盖文件前征询您的确认。
+::END
+
+$HEAD_DOWNLOAD_OVERWRITE$=确认下载覆盖和“恢复”
+$DESC_DOWNLOAD_OVERWRITE$::
+若选中该功能，FTP Voyager JV 会在下载期间尝试覆盖文件前征询您的确认。
+::END
+
+$HEAD_FILE_DELETE$=确认文件删除
+$DESC_FILE_DELETE$::
+若选中该功能，FTP Voyager JV 会在尝试删除文件前征询您的确认。
+::END
+
+$HEAD_FOLDER_DELETE$=确认文件夹删除
+$DESC_FOLDER_DELETE$::
+若选中该功能，FTP Voyager JV 会在尝试删除文件夹/目录前征询您的确认。
+::END
+
+$HEAD_CONFIRM_LOGOUT$=退出应用程序时确认注销
+$DESC_CONFIRM_LOGOUT$::
+若选中该功能，FTP Voyager JV 会在其关闭时询问您是否要注销 Serv-U。如果您在关闭 FTP Voyager JV 时注销了 Serv-U，如果不再重新登录 Serv-U，您将无法返回到管理控制台或重启 FTP Voyager JV。如果禁用该选项，FTP Voyager JV 会自动执行上次响应确认对话框时指定的操作。如果从没有显示该确认对话框进行征询，FTP Voyager JV 不会在其关闭时注销 Serv-U。
+::END
+
+
+<!-- Help-Dlg-Prefs-Toolbars.htm -->
+$HEAD_DLG_PREFS_TBARS$=首选项 - 工具栏
+$DESC_DLG_PREFS_TBARS$::
+首选项的工具栏页面显示了能够在相应工具栏上显示的可用按钮。您可以重新调整该列表的顺序来更改工具栏的布局。使用以下按钮来重新调整该列表的顺序：
+::END
+$LI_DLG_PREFS_TBARS_MOVE_TO_TOP$=移至顶部
+$LI_DLG_PREFS_TBARS_MOVE_UP$=向上移
+$LI_DLG_PREFS_TBARS_MOVE_DOWN$=向下移
+$LI_DLG_PREFS_TBARS_MOVE_TO_BTM$=移至底部
+$LI_DLG_PREFS_TBARS_MOVE_TO_TOP_1$=:  将按钮移至列表顶部。
+$LI_DLG_PREFS_TBARS_MOVE_UP_1$=:  将列表中的按钮上移一个位置。
+$LI_DLG_PREFS_TBARS_MOVE_DOWN_1$=:  将列表中的按钮下移一个位置。
+$LI_DLG_PREFS_TBARS_MOVE_TO_BTM_1$=: 将按钮移至列表底部。
+$DESC_DLG_PREFS_TBARS_ENABLED$=您还可以使用“启用”选择框来切换每个按钮的可视状态。
+
+
+<!-- Help-Dlg-SyncFolders.htm -->
+$HEAD_SYNC_FOLDERS$=同步文件夹——概述
+$DESC_SYNC_FOLDERS$::
+同步文件夹允许目录和文件在客户端与服务器间完全同步或“镜像”，反之亦然。这个功能强大的工具帮助您管理文件和目录。
+
+此功能尤其适用于更新网站。帮助您快速添加、删除与更新文件；完成所有这些操作只需推动一个按钮即可。
+::END
+
+$DESC_SYNC_FOLDERS_LAYOUT$::
+同步文件夹以以下顺序初始化布局：
+::END
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_1$=:  本地框架显示需要被替换的信息，以镜像远程框架拥有的内容。
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_2$=:  远程框架显示需要被替换的信息，以镜像本地框架拥有的内容。
+$LI_SYNC_FOLDERS_FRAME_LAYOUT_3$=:  包含某些选项以配置与执行同步过程的比较与操作。
+
+<!-- Help-Dlg-SyncFolders-Results.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS$=同步文件夹——结果窗格
+$DESC_SYNC_FOLDERS_RESULTS$::
+结果窗格显示需要更新的文件和/或目录，以便某个文件系统匹配另一个文件系统。因此，本地结果窗格显示需要更新的文件和/或文件夹，以便匹配远程文件系统，而远程结果窗格显示需要更新的文件和/或文件夹，以便匹配本地文件系统。
+
+这些窗格的初始布局如下所述：
+::END
+
+$LI_SYNC_FOLDERS_RESULTS_1$=:  工具栏拥有可以执行常规操作的按钮。
+$LI_SYNC_FOLDERS_RESULTS_2$=:  列表显示需要更新的文件和/或文件夹，以便匹配相对的文件系统。
+
+
+<!-- Help-Dlg-SyncFolders-Tbar.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS_TBAR$=同步文件夹——结果窗格——工具栏
+$DESC_SYNC_FOLDERS_RESULTS_TBAR$::
+结果工具栏提供某些用于结果窗格的操作。
+::END
+
+$DESC_SYNC_FOLDERS_RESULTS_TBAR_1$::
+这些操作如下所述:
+::END
+
+$HEAD_ACTION_SYNC_FOLDERS_REMOVE$=删除
+$DESC_ACTION_SYNC_FOLDERS_REMOVE$::
+删除列表中选定的文件和目录。如果您希望将这些文件和/或目录从同步过程中排除，这十分有用。
+::END
+
+$HEAD_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS_DOWNLOAD$=执行这些操作（下载）
+$HEAD_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS_UPLOAD$=执行这些操作（上传）
+$DESC_ACTION_SYNC_FOLDERS_EXECUTE_ACTIONS$::
+启动同步过程。该过程获取相应列表的每个文件和目录并执行与此项目关联的操作。
+::END
+
+
+<!-- Help-Dlg-SyncFolders-List.htm -->
+$HEAD_SYNC_FOLDERS_RESULTS_LIST$=同步文件夹——结果窗格——列表
+$DESC_SYNC_FOLDERS_RESULTS_LIST$::
+结果列表显示需要更新的文件与目录，以便匹配正在进行对比的根目录副本。
+::END
+
+$DESC_SYNC_FOLDERS_RESULTS_LIST_COLUMNS$::
+这些列如下所述:
+::END
+
+$HEAD_SYNC_COL_FILE_NAME$=文件或文件夹
+$DESC_SYNC_COL_FILE_NAME$::
+显示将要更新的文件或文件夹的“相对文件名”。相对文件名基于指定的进行比较的根目录。
+::END
+$DESC_SYNC_COL_FILE_NAME_2$::
+$BOLD_NOTE$:  以下列出的是比较目录时显示的某些条件。
+::END
+
+$LI_SYNC_COL_FILE_NAME_DONE_1$::
+已同步相比较的根目录。这表示比较例程已无法再发现任何与所指定的比较选项不同的文件或文件夹。
+::END
+
+$LI_SYNC_COL_FILE_NAME_ERROR_2$::
+比较例程中发生错误。有多种原因导致操作失败，如果您希望获得失败代码的更多信息，请联系您的系统管理员。
+::END
+
+$HEAD_SYNC_COL_RESULTS$=结果
+$DESC_SYNC_COL_RESULTS$::
+显示比较结果。此结果基于某些条件。
+::END
+
+$LI_SYNC_COL_RESULTS_1$=不在本地
+$LI_SYNC_COL_RESULTS_2$=不在远程
+$LI_SYNC_COL_RESULTS_3$=更旧
+$LI_SYNC_COL_RESULTS_4$=更新
+$LI_SYNC_COL_RESULTS_5$=已同步
+$LI_SYNC_COL_RESULTS_6$=错误
+
+$HEAD_SYNC_COL_ACTION$=操作
+$DESC_SYNC_COL_ACTION$::
+显示一旦执行同步过程，文件将执行的操作。
+::END
+
+$LI_SYNC_COL_ACTION_1$=删除
+$LI_SYNC_COL_ACTION_2$=上传
+$LI_SYNC_COL_ACTION_3$=下载
+
+$HEAD_SYNC_COL_LOCAL_SIZE$=本地大小
+$DESC_SYNC_COL_LOCAL_SIZE$::
+显示本地文件或文件夹的大小。
+::END
+
+$HEAD_SYNC_COL_REMOTE_SIZE$=远程大小
+$DESC_SYNC_COL_REMOTE_SIZE$::
+显示远程文件或文件夹的大小。
+::END
+
+$HEAD_SYNC_COL_LOCAL_DATE_MODIFIED$=已修改的本地日期
+$DESC_SYNC_COL_LOCAL_DATE_MODIFIED$::
+显示本地文件或文件夹何时进行修改的时间戳。
+::END
+
+$HEAD_SYNC_COL_REMOTE_DATE_MODIFIED$=已修改的远程日期
+$DESC_SYNC_COL_REMOTE_DATE_MODIFIED$::
+显示远程文件或文件夹何时进行修改的时间戳。
+::END
+
+$DESC_SYNC_NOTE_COL_POS$::
+$BOLD_NOTE$:  取决于您正在查看的结果窗格类型，初始化时可以交换列 (4), (5), (6), 与 (7) 。例如，对于远程结果窗格而言，初始化时列 (4)是“远程大小”，列 (5)是“本地大小”，列 (6)是“已修改的远程日期”，列 (7)是“已修改的本地日期”。
+::END
+
+
+<!-- Help-Dlg-SyncFolders-Options.htm -->
+$HEAD_SYNC_FOLDERS_OPTIONS$=同步文件夹——选项窗格
+$DESC_SYNC_FOLDERS_OPTIONS$::
+选项窗格拥有不同的设置，可以进行调整以生成不同的比较结果并调整某些同步化操作。
+::END
+
+$DESC_SYNC_FOLDERS_OPTIONS_2$=这些选项如下所述:
+
+$HEAD_SYNC_OPTION_COMPARE_SIZE$=比较大小:  
+$DESC_SYNC_OPTION_COMPARE_SIZE$::
+设置此标记将任何大小不同的文件或文件夹添加到比较列表。
+::END
+
+$HEAD_SYNC_OPTION_COMPARE_DATE_MODIFIED$=比较时间:  
+$DESC_SYNC_OPTION_COMPARE_DATE_MODIFIED$::
+设置此标记将任何修改日期时间戳不同的文件或文件夹添加到比较列表。
+::END
+
+$HEAD_SYNC_OPTION_INCLUDE_SUBFOLDERS$=包括子文件夹:  
+$DESC_SYNC_OPTION_INCLUDE_SUBFOLDERS$::
+设置此标记将匹配以上条件的任何嵌套式文件夹或嵌套式文件夹中的任何文件添加到比较列表。
+::END
+
+$HEAD_SYNC_OPTION_DELETE$=删除:  
+$DESC_SYNC_OPTION_DELETE$::
+设置此标记添加任何需要删除的文件或文件夹以匹配相对的根目录。
+::END
+
+$HEAD_SYNC_OPTION_PROMPT_FOR_OVERWRITE$=提示覆盖确认:  
+$DESC_SYNC_OPTION_PROMPT_FOR_OVERWRITE$::
+设置此标记为同步化过程期间可能发生的任何覆盖显示提示。
+::END
+
+$HEAD_SYNC_OPTION_PROMPT_FOR_DELETE$=提示删除确认:  
+$DESC_SYNC_OPTION_PROMPT_FOR_DELETE$::
+设置此标记为同步化过程期间可能发生的任何删除显示提示。
+::END
+
+$HEAD_SYNC_OPTION_COMPARE_BTN$=比较按钮:  
+$DESC_SYNC_OPTION_COMPARE_BTN$::
+手动刷新比较列表。
+::END
+$DESC_SYNC_OPTION_COMPARE_BTN_2$::
+$BOLD_NOTE$:  更改上述某一选项将自动刷新比较列表。
+::END
+
+
+<!-- Help-Dlg-SaveLogin.htm -->
+$HEAD_SAVE_LOGIN$=保存登录对话框
+$DESC_SAVE_LOGIN$::
+保存登录功能允许用户将文件保存在直接连接到服务器上处于运行状态的客户端上。这样用户就无需通过 web 浏览器登录服务器以启动 FTP Voyager JV 了。
+::END
+
+$DESC_SAVE_LOGIN_LAYOUT$::
+对话框布局如下所述:
+::END
+
+$LI_SAVE_LOGIN_ITEM_1_1$=服务器:  
+$LI_SAVE_LOGIN_ITEM_1_2$=指定您希望连接的服务器。
+
+$LI_SAVE_LOGIN_ITEM_2_1$=端口:  
+$LI_SAVE_LOGIN_ITEM_2_2$=指定服务器正在监听的“公共”端口。
+$LI_SAVE_LOGIN_ITEM_2_3$::
+$BOLD_NOTE$:  "公共" 端口可以不同于服务器正在监听的端口。例如，路由器可以将公共端口 8080 映射到服务器正在监听的私人端口 80。 
+::END
+
+$LI_SAVE_LOGIN_ITEM_3_1$=语言:  
+$LI_SAVE_LOGIN_ITEM_3_2$=指定登录到服务器时您希望使用的语言。
+
+$LI_SAVE_LOGIN_ITEM_4_1$=安全:  
+$LI_SAVE_LOGIN_ITEM_4_2$=指定是否使用安全连接; 使用 HTTP 协议还是使用 HTTPS 协议。
+$LI_SAVE_LOGIN_ITEM_4_3$::
+$BOLD_NOTE$:  切换此标记时，请验证端口是正确的。否则您将在尝试登录时碰到连接错误。
+::END
+
+$LI_SAVE_LOGIN_ITEM_5_1$=用户:  
+$LI_SAVE_LOGIN_ITEM_5_2$=指定在您尝试登录服务器时希望使用的用户 ID。
+
+$LI_SAVE_LOGIN_ITEM_6_1$=密码（可选）:  
+$LI_SAVE_LOGIN_ITEM_6_2$=为上述指定的用户 ID 指定要使用的密码。
+$LI_SAVE_LOGIN_ITEM_6_3$::
+$BOLD_NOTE$:  如果此字段留空，会在您进入 FTP Voyager JV 前提示密码。
+::END
+
+$LI_SAVE_LOGIN_ITEM_7_1$=验证密码:  
+$LI_SAVE_LOGIN_ITEM_7_2$=此字段验证您的密码是否正确。
+
+$LI_SAVE_LOGIN_ITEM_8_1$=目标路径:  
+$LI_SAVE_LOGIN_ITEM_8_2$=指定启动文件的“绝对”文件名。
+$LI_SAVE_LOGIN_ITEM_8_3$::
+$BOLD_NOTE$:  此文件名必须使用 "jnlp" 作为文件扩展名。否则，Java 运行时将无法将此文件识别为 Java Webstart File。
+::END
+
+$LI_SAVE_LOGIN_ITEM_9_1$=浏览:  
+$LI_SAVE_LOGIN_ITEM_9_2$::
+点击此按钮启动一个对话框，允许您指定将被创建的启动文件所位于的本地文件夹。
+::END
+
+$LI_SAVE_LOGIN_ITEM_10_1$=创建:  
+$LI_SAVE_LOGIN_ITEM_10_2$=点击此按钮时，会使用指定的文件名在“目标路径”创建一个 "JNLP" 文件。 
+$LI_SAVE_LOGIN_ITEM_10_3$::
+$BOLD_NOTE$:  文件扩展名必须为 "jnlp"。Java 运行时需要此扩展名来正确地打开文件。
+::END
+
+$LI_SAVE_LOGIN_ITEM_11_1$=取消:  
+$LI_SAVE_LOGIN_ITEM_11_2$=取消并关闭对话框。
+
+
+<!-- Help-Dlg-ChangePassword.htm -->
+$HEAD_CHANGE_PASSWORD$=更改密码对话框
+$DESC_CHANGE_PASSWORD$::
+文件服务器管理员可以对用户是否有权更改他们自己的密码进行配置。如果您的管理员允许您这么做，您可以在 FTP Voyager JV 中更改您的密码。频繁地更改密码是维护服务器安全的良策。管理员还可以对密码的内容设置某些要求。如果您无法更改您的密码，请联系您的 Serv-U 管理员。
+::END
+
+$LIST_CHANGE_PWORD$=请遵照以下步骤来更改您的密码：
+$LIST_CHANGE_PWRORD_TXT$::
+点击位于<strong>文件</strong>菜单下方的 $IMG_BTN_CHANGE_PASSWORD$ <strong>更改密码</strong>条目。如果该条目不可用，那就是您的管理员不允许您更改密码。
+输入您的旧密码。
+输入您的新密码。
+再次输入您的新密码以确保准确性。
+按下<strong>确认</strong>按钮以完成密码更改。
+::END
+
+$DESC_CHANGE_PASSWORD_ERRORS$::
+如果密码没有更改成功，会显示详细的错误消息以告知您该新密码在哪些方面没有满足管理员的安全要求。 
+::END
+
+
+<!-- Help-Dlg-ActivateWindow.htm -->
+$HEAD_DLG_ACTIVATE_WINDOW$=激活窗口对话框
+$DESC_DLG_ACTIVATE_WINDOW$::
+激活窗口对话框拥有一张列表，罗列所有 FTP Voyager JV 可用的窗格。它包括所有 $LINK_LOCAL_REMOTE_PANES$ 与 $LINK_TRANSFER_PANE$。选择您要激活的框架并按下“确认”按钮。会将该框架移至 FTP Voyager JV 主窗口的前部并成为 $LINK_ACTIVE_PANE$。
+::END
+
+
+<!-- Help-OtherInfo-ActivePane-Overview.htm -->
+$HEAD_ACTIVE_PANE_OVERVIEW$=活动窗格概述
+$DESC_ACTIVE_PANE_OVERVIEW$::
+通过在窗格四周以不同颜色标识来定义活动窗格。它接收所有菜单与键盘输入。
+
+在以下示例中，$LINK_LOCAL_LIST_PANE$ 就是活动窗格。
+::END
+
+
+<!-- Help-OtherInfo-DockingFramework-Overview.htm -->
+$HEAD_DOCKING_FRAMEWORK_OVERVIEW$=停靠框架概述
+$DESC_DOCKING_FRAMEWORK_OVERVIEW$::
+停靠框架为您提供极强的灵活性来更改应用程序的整体外观和风格。通过使用全部的定制功能，您可以根据自己的需要定制应用程序。这有助于创建一个亲切而直观的布局，便于每位用户理解。停靠框架还允许您通过使用多个框架来查看相同文件系统的其它部分。这些框架可以以标签界面，浮动，停靠或自动隐藏来进行布局。您还可以更改应用程序的皮肤。只要在主菜单下选择不同的样式即可。
+::END
+
+$DESC_DOCK_DRAG_SPOTS$::
+以下图像显示了可以通过拖动来更改框架布局的区域。
+::END
+
+
+<!-- Help-OtherInfo-NavigatingDirs.htm -->
+$HEAD_NAVIGATING_DIRS$=导航目录
+$DESC_NAVIGATING_DIRS$::
+FTP Voyager JV 支持多种导航本地与远程文件系统的方法来找到您要传输的文件和目录。最常用的目录导航方法罗列如下。 
+::END
+
+$HEAD_NAV_MOUSE_KEY$=鼠标与键盘导航
+$DESC_NAV_MOUSE_KEY$::
+使用鼠标或键盘来更改当前目录。只需使用以下一种方法中即可：
+::END
+$DESC_NAV_MOUSE_KEY_LIST_1$=从 $LINK_LIST_PANE$:
+$LI_NAV_MOUSE_KEY_LIST_1$::
+使用键盘来选择所需文件夹。然后按下<strong>回车键</strong>。
+使用鼠标左键单击来选择所需文件夹。然后按下<strong>回车键</strong>。
+使用鼠标双击所需文件夹。
+使用鼠标右键单击所需文件夹并选择<strong>打开</strong>选项。
+::END
+$DESC_NAV_MOUSE_KEY_TREE_1$=从 $LINK_TREE_PANE$:
+$LI_NAV_MOUSE_KEY_TREE_1$::
+使用键盘来选择所需文件夹。
+使用鼠标左键单击所需文件夹。
+使用鼠标右键单击所需文件夹。$BOLD_NOTE$:这会自动打开所需文件夹。
+::END
+
+$HEAD_OI_CRUMB_BAR$=导航栏
+$DESC_OI_CRUMB_BAR$::
+$LINK_CRUMB_BAR$ 拥有许多打开目录的方法。只需使用以下一种方法即可：
+::END
+$LI_OI_CRUMB_BAR_1$::
+点击 "$LINK_CRUMB$" 按钮。
+在每个 "$LINK_CRUMB$" 按钮旁点击下拉列表以显示该特定目录的内容。然后从下拉列表选择一个文件夹。
+在 "$LINK_CRUMB$" 按钮与 "$LINK_CRUMB_HISTORY$" 按钮间点击并输入 $LINK_ABSOLUTE_PATH_MODE$。然后在编辑字段中输入完整路径并按下“回车”键。
+点击 $LINK_CRUMB_HISTORY$ 按钮以显示先前工作目录的下拉列表并从中选择一个目录。
+::END
+
+$HEAD_NAV_HISTORY$=导航历史记录
+$DESC_NAV_HISTORY$::
+本地与远程窗格都有独立的导航历史记录，便于迅速地在多个位置间前进与后退。导航历史记录有两个可用的工具栏按钮，为您提供对先前浏览过位置的依次访问记录：
+::END
+$DESC_NAV_HISTORY_LIST$::
+点击 $IMG_BTN_BACK$ <strong>后退</strong>按钮以将活动窗格的当前目录更改成导航目录中的前一位置。
+点击 $IMG_BTN_FORWARD$ <strong>前进</strong>按钮以将活动窗格的当前目录更改成导航目录中的下一位置。 
+::END
+$DESC_NAV_HISTORY_CONTD$::
+这两个按钮的右边都含有一个箭头，点击该箭头以直接导航至特定的目录时会显示一张所有先前访问过的目录列表。如果导航目录中没有前后位置，会禁用此按钮。
+::END
+
+$HEAD_NAV_UP_DIR$=上级目录
+$DESC_NAV_UP_DIR$::
+点击工具栏上的<strong>上级目录</strong>按钮以将活动窗格的当前目录更改成上级父目录。如果父目录不可访问，会禁用该选项。
+::END
+
+
+<!-- Help-OtherInfo-ManagingDirs.htm -->
+$HEAD_MANAGING_DIRS_AND_FILES$=管理目录和文件
+$DESC_MANAGING_DIRS_AND_FILES$::
+目录和文件夹可以用来存储文件和其它文件夹。创建目录能够实现在删除目录并将该目录与其全部内容从文件系统移除时在某个位置存储相似的文件。必要时还可以重命名目录。要在 FTP Voyager JV 中管理目录和文件，请使用以下指示：
+::END
+
+$HEAD_CREATE_DIRS$=创建目录
+$DESC_CREATE_DIRS$::
+在适当窗格的工具栏中点击<strong>新建目录</strong>按钮来创建新目录。<strong>文件</strong>菜单或右键单击菜单中也有可用的创建目录选项。
+
+在本地窗格中新建目录时，会立即在目录列表中添加新条目。 所提供的默认名称可以通过输入新名称并按下<strong>回车</strong>或在编辑框外点击来进行编辑。
+
+在远程窗格中创建新文件夹时，会在输入所需文件夹名称处弹出新对话框。为新文件夹输入名称后，点击<strong>确认</strong>或按下<strong>回车</strong>以在远程文件系统中创建新文件夹。 
+::END
+
+$HEAD_DEL_DIRS_AND_FILES$=删除目录和/或文件
+$DESC_DEL_DIRS_AND_FILES$::
+可以一次性删除多个文件和目录。只需使用键盘或鼠标先选中所需项目，完成后在适当的工具栏、<strong>文件</strong>菜单或右键单击菜单中选择<strong>删除</strong>选项即可。您还可以在您键盘上按下<strong>删除</strong>键。
+
+取决于您的 $LINK_PREF_PAGE_GENERAL$ 首选项，会在删除操作前要求您进行确认。因为删除操作无法撤消，请在删除项目时保持谨慎。
+::END
+
+$HEAD_RENAME_DIR_OR_FILE$=重命名目录或文件
+$DESC_RENAME_DIR_OR_FILE$::
+要重命名文件或目录，使用键盘或鼠标先选中所需项目。然后从右键单击菜单或<strong>文件</strong>菜单选择<strong>重命名</strong>选项、或者在您键盘上按下<strong>F2</strong>即可。所选项目的名称就会变成编辑框。一旦您输入了新名称，在您键盘上按下<strong>回车</strong>或在该编辑字段外部点击以完成重命名操作。使用<strong>退出</strong>键来取消重命名操作。
+::END
+
+$HEAD_REFRESH_DIR$=刷新目录列表
+$DESC_REFRESH_DIR$::
+如果从 FTP Voyager JV 外部更改本地或远程当前工作目录的内容，必须手动刷新目录列表才能查看变化。只要从适当的工具栏、<strong>查看</strong>或右键单击菜单中选择<strong>刷新</strong>按钮，或按下<strong>F5</strong>键即可轻松完成。
+::END
+
+$HEAD_PROPERTIES_DIRS_AND_FILES$=查看目录和/或文件的详细信息
+$DESC_PROPERTIES_DIRS_AND_FILES$::
+可以通过 FTP Voyager JV 访问目录与文件的详细信息。选定项目的详细信息，可以通过点击<strong>文件</strong>或右键单击菜单中的<strong>属性</strong>选项，或者在您键盘上按下<strong>Alt+Enter</strong>键获得。
+::END
+
+$HEAD_OI_COPY_MOVE_FILES$=复制或移动目录与文件
+$DESC_OI_COPY_MOVE_FILES$::
+您可以复制或移动目录和文件到相同文件系统的另一位置。选择您要复制或移动的目录和/或文件。然后点击并拖动所选文件至相同文件系统的 $LINK_LIST_PANE$ 或 $LINK_TREE_PANE$。在目标目录上释放鼠标按钮来完成该操作。$BOLD_NOTE$:  左键单击拖动启动复制操作。右键单击拖动会在您释放鼠标按钮后提供弹出菜单选项。
+::END
+
+
+<!-- Help-OtherInfo-TransferringFiles.htm -->
+$HEAD_TRANSFERRING_FILES$=传输文件
+$DESC_TRANSFERRING_FILES$::
+FTP Voyager JV 可以同时将文件上传至或下载自 Serv-U 文件服务器。在后台执行传输，允许用户在传输过程中继续与用户界面进行互动。
+
+用户可以使用多种方法在客户端和服务器间启动传输。某些方法罗列如下：
+::END
+
+$DESC_OI_NOTE_DND_VARIATIONS$=请参见<strong>拖放变量</strong>以获得更多信息。
+
+$HEAD_OI_DOWNLOADING$=下载文件和目录
+$DESC_OI_DOWNLOADING$::
+要从服务器下载文件，请遵照以下指示：
+::END
+$LI_OI_DOWNLOADING_1$::
+选择您要从服务器传输到客户端的文件或目录。只要遵照以下一个步骤即可：
+::END
+$LI_OI_DOWNLOADING_1_1$::
+亮显"远程 - $LINK_LIST_PANE$"中的文件和/或目录。
+::END
+$LI_OI_DOWNLOADING_1_2$::
+亮显"远程 - $LINK_TREE_PANE$"中的目录。
+::END
+$LI_OI_DOWNLOADING_2$::
+启动传输。
+::END
+$LI_OI_DOWNLOADING_2_1$::
+点击并拖动文件和/或目录至"本地 - $LINK_LIST_PANE$" 或"本地 - $LINK_TREE_PANE$"并将它们放入目标目录。当鼠标悬停于目标目录时，会以亮显来标识。 
+::END
+$LI_OI_DOWNLOADING_2_2$::
+点击 $LINK_DOWNLOAD_BTN$ 以将文件传输到"本地 - $LINK_LIST_PANE$"工作目录。
+::END
+
+$HEAD_OI_UPLOADING$=上传文件和目录
+$DESC_OI_UPLOADING$::
+要将文件从客户端上传至服务器，请遵照以下指示：
+::END
+$LI_OI_UPLOADING_1$::
+选择您要从客户端传输到服务器的文件或目录。只要遵照以下一个步骤即可：
+::END
+$LI_OI_UPLOADING_1_1$::
+亮显"本地 - $LINK_LIST_PANE$"中的文件和/或目录。
+::END
+$LI_OI_UPLOADING_1_2$::
+亮显"本地 - $LINK_TREE_PANE$"中的目录。
+::END
+$LI_OI_UPLOADING_2$::
+启动传输。
+::END
+$LI_OI_UPLOADING_2_1$::
+点击并拖动文件和/或目录到"远程 - $LINK_LIST_PANE$"或"远程 - $LINK_TREE_PANE$"并将它们放入目标目录。当鼠标悬停于目标目录时，会以亮显来标识。
+::END
+$LI_OI_UPLOADING_2_2$::
+点击 $LINK_UPLOAD_BTN$ 以将文件传输到"远程 - $LINK_LIST_PANE$"工作目录。
+::END
+
+$HEAD_DRAG_DROP_VARIATIONS$=拖放变量
+$DESC_DRAG_DROP_VARIATIONS$::
+有各种不同的拖放变量。请注意以下变量：
+::END
+$LI_DND_VARIATION_1$=左键单击并拖动
+$LI_DND_VARIATION_1_1$=:  复制源文件和目录到目标目录。
+$LI_DND_VARIATION_2$=右键单击并拖动
+$LI_DND_VARIATION_2_1$=:  一旦将源文件放入目标目录，会出现弹出菜单提供两个选项：
+$LI_DND_VARIATION_2_1_1$=移动文件
+$LI_DND_VARIATION_2_1_2$=复制文件
+$LI_DND_VARIATION_2_1_1_1$::
+:  将源文件和目录移动到目标目录。只要将该源文件复制到目标位置，并将它们从源位置删除即可。
+::END
+$LI_DND_VARIATION_2_1_2_1$=:  复制源文件和目录到目标目录。
+
+
+<!-- Help-OtherInfo-ManagingTransfers.htm -->
+$HEAD_MANAGE_TRANSFERS$=管理传输
+$DESC_MANAGE_TRANSFERS$::
+一旦启动传输，会将其置于传输窗格，您可以于此查看该传输状态的详细信息。在传输过程中您可以执行某些操作，包括：
+::END
+
+
+<!-- Help-OtherInfo-FAQs.htm -->
+$OTHER_INFO_FAQS_MAIN_HEADER$=常见问题解答
+
+$QUESTION_WEL_MSG_DLG$=为什么在我使用我的 Web 浏览器进行登录后会出现欢迎消息？
+$ANSWER_WEL_MSG_DLG$::
+可以对 Serv-U 的用户帐户进行配置以让他们收到欢迎消息。如果您的用户帐户被设置为收到欢迎消息，会在您成功登录到文件服务器后收到此消息。
+::END
+
+$QUESTION_NEED_JRT$::
+为什么我要安装 Java 运行环境来使用 FTP Voyager JV？
+::END
+$ANSWER_NEED_JRT$::
+FTP Voyager JV 是用 Java 编程语言编写的。因为 Java 是解释语言，所以必须在 Java 运行环境下运行。您可于此处获得最新版的 $LINK_JAVA_RUNTIME$。
+::END
+
+$QUESTION_CERTIFICATE$::
+为什么我必须接受证书来运行 FTP Voyager JV？
+::END
+$ANSWER_CERTIFICATE$::
+FTP Voyager JV 需要完全访问本地文件系统来将文件上传至或下载自 Serv-U。需要这些权限的 Java 应用程序必须使用证书进行数字签名。FTP Voyager JV 使用由 Comodo 可信证书颁发机构提供的 Rhino Software, Inc. 的开发者证书进行签名。这确保了您所使用的 FTP Voyager JV 是 Rhino Software, Inc. 货真价实的产品并且保证了其访问您系统的安全性以使用 Serv-U 来传输数据。
+::END
+
+$QUESTION_PREFERRED_CLIENT_1$::
+有没有方法可以在我登录后自动启动 FTP Voyager JV？
+::END
+$ANSWER_PREFERRED_CLIENT_1$::
+有。请联系 Serv-U 管理员并请求他们使用 FTP Voyager JV 将您的帐户设置为<strong>默认 Web
+客户端</strong>。
+::END
+
+$QUESTION_PREFERRED_CLIENT_2$::
+有没有方法可以在我登录后重新选择我要使用的 web 客户端？ 
+::END
+$ANSWER_PREFERRED_CLIENT_2$::
+有。请联系 Serv-U 管理员并请求他们将您的帐户设置为提示您使用 web 客户端而非<strong>默认 Web 客户端</strong>。
+::END
+
+$QUESTION_LIST_DIR_FAILED$::
+为什么远程目录列表失败？
+::END
+$ANSWER_LIST_DIR_FAILED$::
+FTP Voyager JV 无法执行远程目录列表的失败原因有多种。可能的原因罗列如下：
+::END
+$ANSWER_LIST_DIR_FAILED_LIST$::
+没有运行 Serv-U 文件服务器。
+Serv-U 文件服务器没有联机。 
+可能已断开 FTP Voyager JV 与 Serv-U 文件服务器之间的会话。
+用户帐户没有查看远程目录的权限。 
+::END
+$ANSWER_LIST_DIR_FAILED_CONTD$::
+尝试关闭 FTP Voyager JV 并再次登录到 Serv-U。如果您仍然无法执行远程目录列表，请联系您的 Serv-U 管理员以确认您访问该问题目录的权限。
+::END
+
+$QUESTION_PERMISSIONS$::
+为什么我无法新建目录，重命名目录，删除目录，上传文件或下载文件？
+::END
+$ANSWER_PERMISSIONS$::
+Serv-U 管理员可以指定每位用户的权限。任何特定用户帐户的操作范围将受到这些权限的限制。如果您在尝试执行某些以上列出的操作时发生错误，您应该会收到错误对话框，告之您没有相应的权限来执行该操作。如果您必须执行该操作，请联系您的 Serv-U 管理员。
+::END
+
+$QUESTION_BROWSER_FAIL_ON_LOGOUT$::
+为什么在我注销 FTP Voyager JV 时，浏览器无法与 Serv-U 通信？
+::END
+$ANSWER_BROWSER_FAIL_ON_LOGOUT$::
+FTP Voyager JV 与自其启动的浏览器共享相同的会话 ID，而 Serv-U 正是使用此 ID 与相应的客户端进行通信的。因此，如果您注销 FTP Voyager JV，自 FTP Voyager JV 启动的浏览器就不再与 Serv-U 保持有效的连接。您必须通过浏览器重新登录，以与 Serv-U 创建一个新的连接。
+::END
+
+$QUESTION_CAN_NOT_LOGOUT$::
+为什么我无法注销 Serv-U？
+::END
+$ANSWER_CAN_NOT_LOGOUT$::
+FTP Voyager JV 可以注销 Serv-U。<strong>首选项</strong>对话框中位于 $LINK_PREF_PAGE_GENERAL$ 标签之下的一个选项允许您在 FTP Voyager JV 关闭时注销 Serv-U。
+::END
+
+$QUESTION_JRT_NETWORK_SETTINGS$::
+如果我的机器上有多个浏览器，我能使用两个浏览器来启动 FTP Voyager JV 吗？
+::END
+$ANSWER_JRT_NETWORK_SETTINGS$::
+可以。您可以同时使用两个浏览器来启动 FTP Voyager JV。不过需要注意的是，Java 运行环境只使用“默认”浏览器的代理设置。例如，如果您的默认浏览器是 Internet Explorer，并被设置为使用代理服务器，那么即使是用 Mozilla Firefox 启动 FTP Voyager JV，它也会使用这些代理设置。
+::END

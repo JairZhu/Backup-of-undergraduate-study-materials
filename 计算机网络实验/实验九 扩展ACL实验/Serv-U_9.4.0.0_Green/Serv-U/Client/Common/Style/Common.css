@@ -1,0 +1,713 @@
+.taskbar{
+	clear:both;
+	width:100%;
+	/*background: url(/Common/Images/DividerFill.png) ;*/
+	background: url(/Common/Images/Taskbar-bg.png) 0px -59px repeat-x;
+	overflow: hidden;
+	font-family:Arial,sans-serif;
+	font-size:11px;
+}
+.dividerline{
+	background: url(/Common/Images/Taskbar-bg.png) -2px -33px no-repeat;
+	height:26px;
+	line-height:26px;
+}
+.spandivider{
+	height:26px;
+	line-height:26px;
+}
+.user-info-box,.user-info-box-left{
+	white-space:nowrap;	
+	height:26px;
+	text-align:left;	
+}
+.user-info-box{
+	float:right;	
+}
+.user-info-box-left,.leftdivider
+{
+	background: url(/Common/Images/Taskbar-bg.png) -2px -2px no-repeat;
+	/*background-position: center left;
+	background-image: url(/Common/Images/CommonBorders-bg.png);
+	background-repeat: no-repeat;*/
+}
+a.highlightbuttonbox-head-fff,a.highlightbuttonbox,a.highlightbuttonbox-head,a.highlightlinkbox,.offnavlinkbox,div.highlightbuttonbox,.imgprevbutton-off,a.highlightbuttonbox-trans,a.highlightbuttonbox-path {
+	color:#000;
+	text-decoration:none;
+	padding:1px 2px 1px 2px;
+	line-height:26px;
+}
+a.highlightbuttonbox,a.highlightlinkbox,.offnavlinkbox,div.highlightbuttonbox,.imgprevbutton-off {
+	border:1px solid #dddddd;
+}
+a.highlightbuttonbox-path {
+	color:#0000ff;
+}
+a.highlightbuttonbox-trans,a.highlightbuttonbox-path {
+	border:1px solid #e9e9e6;
+}
+a.highlightbuttonbox-head{
+	border:1px solid #e8e8e5;
+}
+a.highlightbuttonbox-head-fff{
+	border:1px solid #fff;
+}
+a.highlightbuttonbox-head-fff:hover,a.highlightbuttonbox:hover,a.highlightbuttonbox-head:hover,a.highlightlinkbox:hover,.onnavlinkbox,div.highlightbuttonbox:hover,.imgprevbutton-on,a.highlightbuttonbox-trans:hover,a.highlightbuttonbox-path:hover{
+	background:#b6bdd2 ;
+	border:1px solid black;
+	color:#000!important;
+	text-decoration:none;
+	padding:1px 2px 1px 2px;	
+	cursor:pointer;
+	line-height:26px;
+}
+div.highlightbuttonbox,div.highlightbuttonbox:hover,.imgprevbutton-on,.imgprevbutton-off{
+	height:16px;
+	line-height:16px;
+}
+#logo{
+
+	background: #e9e9e6;
+	height: 39px;
+	position: relative;
+	width:100%;
+	vertical-align:top;
+	overflow: hidden;
+}
+.footer{
+	text-align:center;
+	clear:both;
+	padding-bottom:10px;
+	background: #ffffff url(/Common/Images/top-bottom-bar-bg.png) 0px 0px repeat-x ;
+}
+.busylist{
+	text-align:center;
+	padding:100px 0 100px 0;
+}
+
+div.contextmenu, div.contextmenu-ru,div.contextmenu-wide,div.CrumbBarMenu,div.HistoryBarMenu,div.HistoryBarMenu-ie{ 
+	background-color: #f9f8f7; 
+	border: 2px solid; 
+	border-color: #000 #909090 #909090 #000;	
+	border-top:1px solid;
+	border-left:1px solid;
+	left: 0px; 
+	padding: 0px 1px 1px 0px; 
+	position: absolute; 
+	top: 0px; 
+	visibility: hidden; 
+	z-index: 16000;	
+	cursor: pointer; 
+} 
+div.contextmenu,div.CrumbBarMenu
+{
+	width:205px;
+} 
+div.contextmenu-ru,div.contextmenu-wide
+{
+	width:235px;
+} 
+div.HistoryBarMenu-ie
+{
+	width:400px;
+}
+div.CrumbBarMenu,div.HistoryBarMenu
+{
+	height:60px;
+	overflow-x:hidden;
+	overflow-y:auto;
+} 
+
+div.HistoryBarMenu-ie
+{
+	height:60px;
+	overflow-x:auto;
+	overflow-y:auto;
+} 
+div.contextmenu a.menuItem, div.CrumbBarMenu a.menuItem,div.HistoryBarMenu a.menuItem,div.HistoryBarMenu-ie a.menuItem{ 
+	color: #000000; 
+	cursor: pointer;
+	display: block; 
+	padding: 3px 0 4px 5px; 
+	text-decoration: none; 
+	white-space: nowrap; 
+	border:1px solid #f9f8f7;	
+} 
+div.contextmenu a.menuItem:hover, div.menu a.menuItemHighlight, div.CrumbBarMenu a.menuItem:hover,div.HistoryBarMenu a.menuItem:hover, div.HistoryBarMenu-ie a.menuItem:hover{ 
+	background-color: #b6bed3; 
+	color: #000;
+	border:1px solid black; 
+	cursor: pointer; 
+	padding: 3px 0 4px 5px; 
+	text-decoration: none; 
+	white-space: nowrap; 
+}
+
+.offnavlinkrow,.aw-subnav-item  { 
+	color: #000000; 
+	cursor: pointer;
+	padding: 3px 0 4px 5px; 
+	white-space: nowrap; 
+	border:1px solid #f9f8f7;	
+	margin:2px;
+} 
+.onnavlinkrow { 
+	background-color: #b6bed3; 
+	color: #000;
+	border-top:1px solid #000; 
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+	border-left:1px solid #000;
+	cursor: pointer;
+	padding: 3px 0 4px 5px; 
+	white-space: nowrap; 
+	margin:2px;
+} 
+div.contextmenu .menuItemSep, div.CrumbBarMenu .menuItemSep,div.HistoryBarMenu .menuItemSep,div.HistoryBarMenu-ie .menuItemSep{ 
+	border-top: 1px solid #909090;
+	margin:2px;
+	height:2px;
+} 
+.menuItemSep { 
+	border-top: 1px solid #909090;
+	margin:2px;
+	height:2px;
+} 
+.iconcell-Home{
+	background: url(/Common/Images/menuicons.png) -273px 2px no-repeat;
+}
+.iconcell-Domain{
+	background: url(/Common/Images/menuicons.png) -226px 2px no-repeat;
+}
+.iconcell-User{
+	background: url(/Common/Images/menuicons.png) -21px 3px no-repeat;
+}
+.iconcell-Users{
+	background: url(/Common/Images/menuicons.png) -203px 2px no-repeat;
+}
+.iconcell-Folders{
+	background: url(/Common/Images/menuicons.png) -86px 2px no-repeat;
+}
+.iconcell-Rules{
+	background: url(/Common/Images/menuicons.png) -342px 2px no-repeat;
+}
+.iconcell-Log{
+	background: url(/Common/Images/menuicons.png) -319px 2px no-repeat;
+}
+.iconcell-Settings{
+	background: url(/Common/Images/menuicons.png) -63px 2px no-repeat;
+}
+.iconcell-Limits{
+	background: url(/Common/Images/menuicons.png) -264px -19px no-repeat;
+}
+.iconcell-Encryption{
+	background: url(/Common/Images/menuicons.png) -241px -19px no-repeat;
+}
+.iconcell-Nic{
+	background: url(/Common/Images/menuicons.png) -43px 2px no-repeat;
+}
+.iconcell-IPAccess{
+	background: url(/Common/Images/menuicons.png) -297px 2px no-repeat;
+}
+.iconcell-VirtualHosts{
+	background: url(/Common/Images/menuicons.png) -289px -19px no-repeat;
+}
+.iconcell-DirAccess{
+	background: url(/Common/Images/menuicons.png) -110px 2px no-repeat;
+}
+.iconcell-VirtualPaths{
+	background: url(/Common/Images/menuicons.png) -133px 2px no-repeat;
+}
+.iconcell-UsersEdit{
+	background: url(/Common/Images/menuicons.png) 1px 2px no-repeat;
+}
+.iconcell-Logging{
+	background: url(/Common/Images/menuicons.png) -181px 2px no-repeat;
+}
+.iconcell-Disconnect{
+	background: url(/Common/Images/menuicons.png) 1px -18px no-repeat;
+}
+.iconcell-Chat{
+	background: url(/Common/Images/menuicons.png) -20px -18px no-repeat;
+}
+.iconcell-Abort{
+	background: url(/Common/Images/menuicons.png) -45px -20px no-repeat;
+}
+.iconcell-FileDelete{
+	background: url(/Common/Images/menuicons.png) -68px -20px no-repeat;
+}
+.iconcell-FileOpen{
+	background: url(/Common/Images/menuicons.png) -88px -20px no-repeat;
+}
+.iconcell-FileRename{
+	background: url(/Common/Images/menuicons.png) -110px -20px no-repeat;
+}
+.iconcell-Download{
+	background: url(/Common/Images/menuicons.png) -130px -19px no-repeat;
+}
+.iconcell-Stats{
+	background: url(/Common/Images/menuicons.png) -151px -19px no-repeat;
+}
+.iconcell-Server{
+	background: url(/Common/Images/menuicons.png) -175px -21px no-repeat;
+}
+.iconcell-WindowsAuth{
+	background: url(/Common/Images/menuicons.png) -196px -19px no-repeat;
+}
+.iconcell-DomainUsers{
+	background: url(/Common/Images/menuicons.png) -218px -19px no-repeat;
+}
+.iconcell-CommandEnable{
+	background: url(/Common/Images/menuicons.png) -309px -20px no-repeat;
+}
+.iconcell-Command,.iconcell-Events{
+	background: url(/Common/Images/menuicons.png) -329px -19px no-repeat;
+}
+.iconcell-ImagePreview{
+	background: url(/Common/Images/menuicons.png) -350px -19px no-repeat;
+}
+.iconcell-Edit{
+	background: url(/Common/Images/menuicons.png) -17px -40px no-repeat;
+}
+.iconcell-New{
+	background: url(/Common/Images/menuicons.png) 1px -40px no-repeat;
+}
+.iconcell-Copy{
+	background: url(/Common/Images/menuicons.png) -224px -40px no-repeat;
+}
+.iconcell-Move{
+	background: url(/Common/Images/menuicons.png) -248px -40px no-repeat;
+}
+.iconcell-Database{
+	background: url(/Common/Images/menuicons.png) -38px -40px no-repeat;
+}
+.iconcell-DomainGroups{
+	background: url(/Common/Images/menuicons.png) -58px -40px no-repeat;
+}
+.iconcell-MediaPreview{
+	background: url(/Common/Images/menuicons.png) -84px -40px no-repeat;
+}
+.iconcell-UserStats{
+	background: url(/Common/Images/menuicons.png) -108px -40px no-repeat;
+}
+.iconcell-GroupStats{
+	background: url(/Common/Images/menuicons.png) -131px -40px no-repeat;
+}
+.iconcell-License{
+	background: url(/Common/Images/menuicons.png) -178px -40px no-repeat;
+}
+.iconcell-ProgramInfo{
+	background: url(/Common/Images/menuicons.png) -201px -40px no-repeat;
+}
+.iconcell-DirShortcut {background:url(/Web%20Client/ThumbnailIcons/directory.gif) 3px -0px no-repeat}
+
+.iconcell-pointer-arrow {background:url(/Common/Images/Green-Right-Arrow.png) 5px 2px no-repeat}
+
+.iconcell,.iconcell-Home,.iconcell-Domain,.iconcell-User,.iconcell-Users,.iconcell-Folders,.iconcell-Rules,.iconcell-Log,
+.iconcell-Limits,.iconcell-Nic,.iconcell-IPAccess,.iconcell-DirAccess,.iconcell-VirtualPaths,.iconcell-UsersEdit,
+.iconcell-Logging,.iconcell-Disconnect,.iconcell-Chat,.iconcell-Abort,.iconcell-FileOpen,.iconcell-FileRename,
+.iconcell-FileDelete,.iconcell-Download,.iconcell-Stats,.iconcell-Server,.iconcell-WindowsAuth,.iconcell-DomainUsers,
+.iconcell-Settings,.iconcell-Encryption,.iconcell-VirtualHosts,.iconcell-CommandEnable,.iconcell-Command,.iconcell-ImagePreview,
+.iconcell-New,.iconcell-Edit,.iconcell-Database,.iconcell-DomainGroups,.iconcell-MediaPreview,.iconcell-GroupStats,.iconcell-UserStats,
+.iconcell-Events,.iconcell-License,.iconcell-ProgramInfo, .iconcell-DirShortcut,.iconcell-DRIVE_UNKNOWN, .iconcell-DRIVE_NO_ROOT_DIR , 
+.iconcell-DRIVE_REMOVABLE,.iconcell-DRIVE_FIXED, .iconcell-DRIVE_REMOTE, .iconcell-DRIVE_CDROM, .iconcell-DRIVE_RAMDISK,
+.iconcell-DRIVE_REMOVABLE_OTHER, .iconcell-DirShortcut,.iconcell-pointer-arrow,.iconcell-Copy,.iconcell-Move {
+	text-align:center;
+	width:24px;	
+	cursor: pointer;
+	background-color:#dad7d0;
+	background-repeat: no-repeat;
+	height:18px;overflow:hidden;
+	/*border:1px solid black;*/
+}
+.iconcell-divider{
+	text-align:center;
+	width:24px;	
+	cursor: pointer;
+	background-color:#dad7d0;
+	background-repeat: no-repeat;
+	height:1px;overflow:hidden;
+	/*border:1px solid black;*/
+}
+.iconcolumn
+{
+	text-align:center;
+	width:24px;	
+	cursor: pointer;
+	background-color:#dad7d0;
+	background-repeat: no-repeat;
+}
+.totals{
+	padding:5px;
+}
+.aw-image-backarrow{
+	background: url(/Common/Images/Previous_Image.png) no-repeat  center center;
+	margin-left:5px;
+}
+.aw-image-nextarrow{
+	background: url(/Common/Images/Next_Image.png) no-repeat center center;
+	margin-left:5px;
+}
+.aw-image-toparrow{
+	background: url(/Admin/Images/TopArrow16.png) -2px -0px no-repeat;
+	margin:0 auto 0 auto;
+}
+.aw-image-uparrow{
+	background: url(/Admin/Images/UpArrow16.png) -2px -0px no-repeat;
+	margin:0 auto 0 auto;
+}
+.aw-image-downarrow{
+	background: url(/Admin/Images/DownArrow16.png) -2px -0px no-repeat;
+	margin:0 auto 0 auto;
+}
+.aw-image-bottomarrow{
+	background: url(/Admin/Images/BottomArrow16.png) -2px -0px no-repeat;
+	margin:0 auto 0 auto;
+}
+.aw-ui-button-arrow { 
+    background: url(/Common/Scripts/Images/button.png) 100% 0px no-repeat; 
+    padding:0 3px 0 0px; 
+} 
+.aw-ui-button-arrow .aw-item-box {
+    padding: 0px 0 0px 9px; 
+    background: url(/Common/Scripts/Images/button.png) 0px -50px no-repeat;
+}
+.aw-ui-button-imagearrow { 
+    background: url(/Common/Scripts/Images/button.png) 100% 0px no-repeat; 
+    padding:0 3px 0 0; 
+} 
+.aw-ui-button-imagearrow .aw-item-box {
+    padding: 0 0 0 9px; 
+    background: url(/Common/Scripts/Images/button.png) 0px -50px no-repeat;
+} 
+
+a {
+	color: #0000FF;
+	text-decoration: none;
+}
+
+a.screens {
+	color: #FFFFFF;
+}
+
+a:hover {
+	color: #FF0000;
+}
+.loglegend {
+	background-color:#fff;border:1px solid black;margin:5px;padding:5px;
+}
+/* Moved from aw.css for easier conversion of newer versions*/
+
+.aw-image-HomeDirIco {background:url(/Common/Images/Computer16.png) 0px 5px no-repeat}
+.aw-image-DirExt {background:url(/Web%20Client/ThumbnailIcons/directory.gif) no-repeat}
+.aw-image-DriveExt {background:url(/Web%20Client/ThumbnailIcons/drive.gif) no-repeat}
+.aw-image-HeaderDirExt {background:url(/Web%20Client/ThumbnailIcons/directory.gif) 0px 5px no-repeat}
+.aw-image-DefaultExt {background:url(/Web%20Client/ThumbnailIcons/default.gif) no-repeat}
+.aw-image-Browse {background:url(/Common/Images/Browse-16.png) no-repeat;margin:-6px -3 -8px -2px}
+
+
+.aw-image-Import {background:url(/Common/Images/Import.png) 0px 2px no-repeat;}
+.aw-image-Export {background:url(/Common/Images/Export.png) 0px 2px no-repeat;}
+.aw-image-ImportDB {background:url(/Common/Images/Import.png) 0px 1px no-repeat;}
+.aw-image-ExportDB {background:url(/Common/Images/Export.png) 0px 1px no-repeat;}
+
+.aw-ie .aw-image-Import {background:url(/Common/Images/Import.png) 0px 1px no-repeat;}
+.aw-ie .aw-image-Export {background:url(/Common/Images/Export.png) 0px 1px no-repeat;}
+.aw-ie .aw-image-ImportDB {background:url(/Common/Images/Import.png) 0px 1px no-repeat;}
+.aw-ie .aw-image-ExportDB {background:url(/Common/Images/Export.png) 0px 1px no-repeat;}
+/* File Icons*/
+.aw-image-AVIExt {background:url(/Web%20Client/ThumbnailIcons/avi.gif) no-repeat}
+.aw-image-BATExt {background:url(/Web%20Client/ThumbnailIcons/bat.gif) no-repeat}
+.aw-image-BMPExt {background:url(/Web%20Client/ThumbnailIcons/bmp.gif) no-repeat}
+.aw-image-CExt {background:url(/Web%20Client/ThumbnailIcons/c.gif) no-repeat}
+.aw-image-CABExt {background:url(/Web%20Client/ThumbnailIcons/cab.gif) no-repeat}
+.aw-image-CHMExt {background:url(/Web%20Client/ThumbnailIcons/chm.gif) no-repeat}
+.aw-image-CNTExt {background:url(/Web%20Client/ThumbnailIcons/cnt.gif) no-repeat}
+.aw-image-CPPExt {background:url(/Web%20Client/ThumbnailIcons/cpp.gif) no-repeat}
+.aw-image-CRTExt {background:url(/Web%20Client/ThumbnailIcons/crt.gif) no-repeat}
+.aw-image-CSVExt {background:url(/Web%20Client/ThumbnailIcons/csv.gif) no-repeat}
+.aw-image-DEFExt {background:url(/Web%20Client/ThumbnailIcons/def.gif) no-repeat}
+.aw-image-DLLExt {background:url(/Web%20Client/ThumbnailIcons/dLL.gif) no-repeat}
+.aw-image-DOCExt,.aw-image-RTFExt,.aw-image-RTXExt {background:url(/Web%20Client/ThumbnailIcons/doc.gif) no-repeat}
+.aw-image-DOTExt {background:url(/Web%20Client/ThumbnailIcons/dot.gif) no-repeat}
+.aw-image-DSPExt {background:url(/Web%20Client/ThumbnailIcons/dsp.gif) no-repeat}
+.aw-image-DSWExt {background:url(/Web%20Client/ThumbnailIcons/dsw.gif) no-repeat}
+.aw-image-EXEExt {background:url(/Web%20Client/ThumbnailIcons/exe.gif) no-repeat}
+.aw-image-GIFExt {background:url(/Web%20Client/ThumbnailIcons/gif.gif) no-repeat}
+.aw-image-HExt {background:url(/Web%20Client/ThumbnailIcons/h.gif) no-repeat}
+.aw-image-ANIExt {background:url(/Web%20Client/ThumbnailIcons/ani.gif) no-repeat}
+.aw-image-HTMLExt {background:url(/Web%20Client/ThumbnailIcons/html.gif) no-repeat}
+.aw-image-HTMExt {background:url(/Web%20Client/ThumbnailIcons/html.gif) no-repeat}
+.aw-image-HXCExt {background:url(/Web%20Client/ThumbnailIcons/hxc.gif) no-repeat}
+.aw-image-HXIExt {background:url(/Web%20Client/ThumbnailIcons/hxi.gif) no-repeat}
+.aw-image-HXKExt {background:url(/Web%20Client/ThumbnailIcons/hxk.gif) no-repeat}
+.aw-image-HXSExt {background:url(/Web%20Client/ThumbnailIcons/hxs.gif) no-repeat}
+.aw-image-HXTExt {background:url(/Web%20Client/ThumbnailIcons/hxt.gif) no-repeat}
+.aw-image-INIExt {background:url(/Web%20Client/ThumbnailIcons/ini.gif) no-repeat}
+.aw-image-ISOExt {background:url(/Web%20Client/ThumbnailIcons/iso.gif) no-repeat}
+.aw-image-JPGExt {background:url(/Web%20Client/ThumbnailIcons/jpg.gif) no-repeat}
+.aw-image-JSExt {background:url(/Web%20Client/ThumbnailIcons/js.gif) no-repeat}
+.aw-image-MAKExt {background:url(/Web%20Client/ThumbnailIcons/mak.gif) no-repeat}
+.aw-image-MDBExt {background:url(/Web%20Client/ThumbnailIcons/mdb.gif) no-repeat}
+.aw-image-MDEExt {background:url(/Web%20Client/ThumbnailIcons/mde.gif) no-repeat}
+.aw-image-MDWExt {background:url(/Web%20Client/ThumbnailIcons/mdw.gif) no-repeat}
+.aw-image-MDZExt {background:url(/Web%20Client/ThumbnailIcons/mdz.gif) no-repeat}
+.aw-image-MIDExt {background:url(/Web%20Client/ThumbnailIcons/mid.gif) no-repeat}
+.aw-image-MPGExt {background:url(/Web%20Client/ThumbnailIcons/mpg.gif) no-repeat}
+.aw-image-MP3Ext, .aw-image-WMAExt {background:url(/Web%20Client/ThumbnailIcons/mp3.gif) no-repeat}
+.aw-image-MSIExt {background:url(/Web%20Client/ThumbnailIcons/msi.gif) no-repeat}
+.aw-image-PPTExt {background:url(/Web%20Client/ThumbnailIcons/ppt.gif) no-repeat}
+.aw-image-PNGExt {background:url(/Web%20Client/ThumbnailIcons/png.gif) no-repeat}
+.aw-image-PDFExt {background:url(/Web%20Client/ThumbnailIcons/pdf.gif) no-repeat}
+.aw-image-POTExt {background:url(/Web%20Client/ThumbnailIcons/pot.gif) no-repeat}
+.aw-image-RCExt {background:url(/Web%20Client/ThumbnailIcons/rc.gif) no-repeat}
+.aw-image-REGExt {background:url(/Web%20Client/ThumbnailIcons/reg.gif) no-repeat}
+.aw-image-SCTExt {background:url(/Web%20Client/ThumbnailIcons/sct.gif) no-repeat}
+.aw-image-SAFARIExt {background:url(/Web%20Client/ThumbnailIcons/safari.gif) no-repeat}
+.aw-image-FIREFOXExt {background:url(/Web%20Client/ThumbnailIcons/FireFox.gif) no-repeat}
+.aw-image-SLNExt {background:url(/Web%20Client/ThumbnailIcons/sln.gif) no-repeat}
+.aw-image-HLPExt {background:url(/Web%20Client/ThumbnailIcons/hlp.gif) no-repeat}
+.aw-image-TTFExt {background:url(/Web%20Client/ThumbnailIcons/ttf.gif) no-repeat}
+.aw-image-TXTExt,.aw-image-LOGExt {background:url(/Web%20Client/ThumbnailIcons/txt.gif) no-repeat}
+.aw-image-URLExt {background:url(/Web%20Client/ThumbnailIcons/url.gif) no-repeat}
+.aw-image-VBSExt {background:url(/Web%20Client/ThumbnailIcons/vbs.gif) no-repeat}
+.aw-image-VCPROJExt {background:url(/Web%20Client/ThumbnailIcons/vcproj.gif) no-repeat}
+.aw-image-VSSSCCExt {background:url(/Web%20Client/ThumbnailIcons/vssscc.gif) no-repeat}
+.aw-image-XMLExt {background:url(/Web%20Client/ThumbnailIcons/xml.gif) no-repeat}
+.aw-image-WAVExt {background:url(/Web%20Client/ThumbnailIcons/wav.gif) no-repeat}
+.aw-image-WMAExt {background:url(/Web%20Client/ThumbnailIcons/wma.gif) no-repeat}
+.aw-image-WMVExt {background:url(/Web%20Client/ThumbnailIcons/wmv.gif) no-repeat}
+.aw-image-WMZExt {background:url(/Web%20Client/ThumbnailIcons/wmz.gif) no-repeat}
+.aw-image-WRIExt {background:url(/Web%20Client/ThumbnailIcons/wri.gif) no-repeat}
+.aw-image-XLSExt {background:url(/Web%20Client/ThumbnailIcons/xls.gif) no-repeat}
+.aw-image-ZIPExt {background:url(/Web%20Client/ThumbnailIcons/zip.gif) no-repeat}
+.aw-image-MOVExt {background:url(/Web%20Client/ThumbnailIcons/mov.gif) no-repeat}
+.aw-image-PSDExt {background:url(/Web%20Client/ThumbnailIcons/psd.gif) no-repeat}
+.aw-image-AIExt {background:url(/Web%20Client/ThumbnailIcons/ai.gif) no-repeat}
+.aw-image-INDDExt {background:url(/Web%20Client/ThumbnailIcons/indd.gif) no-repeat}
+ 
+/* Drive Icon Images */
+.aw-image-DRIVE_UNKNOWN{background: url(/Common/Images/DriveIcons.png) -50px 2px no-repeat;}
+.aw-image-DRIVE_NO_ROOT_DIR{background: url(/Common/Images/DriveIcons.png) -128px 2px no-repeat;}
+.aw-image-DRIVE_REMOVABLE{background: url(/Common/Images/DriveIcons.png) -153px 2px no-repeat;}
+.aw-image-DRIVE_FIXED{background: url(/Common/Images/DriveIcons.png) -103px 2px no-repeat;}
+.aw-image-DRIVE_REMOTE{background: url(/Common/Images/DriveIcons.png) -25px 2px no-repeat;}
+.aw-image-DRIVE_CDROM{background: url(/Common/Images/DriveIcons.png) -3px 2px no-repeat;}
+.aw-image-DRIVE_RAMDISK{background: url(/Common/Images/DriveIcons.png) -75px 2px no-repeat;}
+.aw-image-DRIVE_REMOVABLE_OTHER{background: url(/Common/Images/DriveIcons.png) -177px 2px no-repeat;}
+
+.iconcell-DRIVE_UNKNOWN {background: url(/Common/Images/DriveIcons.png) -47px 2px no-repeat;}
+.iconcell-DRIVE_NO_ROOT_DIR{background: url(/Common/Images/DriveIcons.png) -125px 2px no-repeat;}
+.iconcell-DRIVE_REMOVABLE {background: url(/Common/Images/DriveIcons.png) -150px 2px no-repeat;}
+.iconcell-DRIVE_FIXED {background: url(/Common/Images/DriveIcons.png) -100px 2px no-repeat;}
+.iconcell-DRIVE_REMOTE {background: url(/Common/Images/DriveIcons.png) -22px 2px no-repeat;}
+.iconcell-DRIVE_CDROM{background: url(/Common/Images/DriveIcons.png) -0px 2px no-repeat;}
+.iconcell-DRIVE_RAMDISK{background: url(/Common/Images/DriveIcons.png) -72px 2px no-repeat;}
+.iconcell-DRIVE_REMOVABLE_OTHER {background: url(/Common/Images/DriveIcons.png) -174px 2px no-repeat;}
+/* Activity Images */
+.aw-image-Session {background:url(/Admin/Images/ActivityIcons.png) 0px 0px no-repeat}
+.aw-image-SessionSecure {background:url(/Admin/Images/ActivityIcons.png) -17px 0px no-repeat}
+.aw-image-SessionMsg {background:url(/Admin/Images/ActivityIcons.png) -34px 0px no-repeat}
+
+/* Listener Images */
+.aw-image-Listener {background:url(/Admin/Images/ListenerIcons.png) 0px 0px no-repeat}
+.aw-image-ListenerDisabled {background:url(/Admin/Images/ListenerIcons.png) -17px 0px no-repeat}
+.aw-image-ListenerDenied {background:url(/Admin/Images/ListenerIcons.png) -34px 0px no-repeat}
+
+/* Rules Images */
+.aw-image-RuleAllow {background:url(/Admin/Images/RulesIcons.png) 0px 0px no-repeat}
+.aw-image-RuleDeny {background:url(/Admin/Images/RulesIcons.png) -18px 0px no-repeat}
+
+/* Domain images */
+.aw-image-Domain {background:url(/Admin/Images/DomainIcons.png) 0px 0px no-repeat}
+.aw-image-DomainDisabled {background:url(/Admin/Images/DomainIcons.png) -17px 0px no-repeat}
+
+/* User images */
+.aw-image-UserDisabled {background:url(/Admin/Images/UserIcons.png) 0px 0px no-repeat}
+.aw-image-UserTemp {background:url(/Admin/Images/UserIcons.png) -17px 0px no-repeat}
+.aw-image-User {background:url(/Admin/Images/UserIcons.png) -34px 0px no-repeat}
+.aw-image-UserWarn {background:url(/Admin/Images/UserIcons.png) -51px 0px no-repeat}
+.aw-image-UserAutoDisabled {background:url(/Admin/Images/UserIcons.png) -69px 0px no-repeat}
+
+/* Sys Admin */
+.aw-image-UserDisabled-Sys {background:url(/Admin/Images/UserIcons.png) -178px 0px no-repeat}
+.aw-image-UserTemp-Sys {background:url(/Admin/Images/UserIcons.png) -199px 0px no-repeat}
+.aw-image-User-Sys {background:url(/Admin/Images/UserIcons.png) -216px 0px no-repeat}
+.aw-image-UserWarn-Sys {background:url(/Admin/Images/UserIcons.png) -233px 0px no-repeat}
+.aw-image-UserAutoDisabled-Sys {background:url(/Admin/Images/UserIcons.png) -251px 0px no-repeat}
+
+/* Sys Admin RO */
+.aw-image-UserDisabled-SysRO {background:url(/Admin/Images/UserIcons.png) -360px 0px no-repeat}
+.aw-image-UserTemp-SysRO {background:url(/Admin/Images/UserIcons.png) -381px 0px no-repeat}
+.aw-image-User-SysRO {background:url(/Admin/Images/UserIcons.png) -398px 0px no-repeat}
+.aw-image-UserWarn-SysRO {background:url(/Admin/Images/UserIcons.png) -415px 0px no-repeat}
+.aw-image-UserAutoDisabled-SysRO {background:url(/Admin/Images/UserIcons.png) -433px 0px no-repeat}
+
+
+/* Domain Admin */
+.aw-image-UserDisabled-Domain {background:url(/Admin/Images/UserIcons.png) -89px 0px no-repeat}
+.aw-image-UserTemp-Domain {background:url(/Admin/Images/UserIcons.png) -107px 0px no-repeat}
+.aw-image-User-Domain {background:url(/Admin/Images/UserIcons.png) -124px 0px no-repeat}
+.aw-image-UserWarn-Domain {background:url(/Admin/Images/UserIcons.png) -139px 0px no-repeat}
+.aw-image-UserAutoDisabled-Domain {background:url(/Admin/Images/UserIcons.png) -159px 0px no-repeat}
+/* Domain Admin RO*/
+.aw-image-UserDisabled-DomainRO {background:url(/Admin/Images/UserIcons.png) -271px 0px no-repeat}
+.aw-image-UserTemp-DomainRO {background:url(/Admin/Images/UserIcons.png) -289px 0px no-repeat}
+.aw-image-User-DomainRO {background:url(/Admin/Images/UserIcons.png) -306px 0px no-repeat}
+.aw-image-UserWarn-DomainRO {background:url(/Admin/Images/UserIcons.png) -321px 0px no-repeat}
+.aw-image-UserAutoDisabled-DomainRO {background:url(/Admin/Images/UserIcons.png) -341px 0px no-repeat}
+
+/* Group Admin */
+.aw-image-UserDisabled-Group {background:url(/Admin/Images/UserIcons.png) -453px 0px no-repeat}
+.aw-image-UserTemp-Group {background:url(/Admin/Images/UserIcons.png) -473px 0px no-repeat}
+.aw-image-User-Group {background:url(/Admin/Images/UserIcons.png) -493px 0px no-repeat}
+.aw-image-UserWarn-Group {background:url(/Admin/Images/UserIcons.png) -513px 0px no-repeat}
+.aw-image-UserAutoDisabled-Group {background:url(/Admin/Images/UserIcons.png) -533px 0px no-repeat}
+/* Group Admin RO*/
+.aw-image-UserDisabled-GroupRO {background:url(/Admin/Images/UserIcons.png) -553px 0px no-repeat}
+.aw-image-UserTemp-GroupRO {background:url(/Admin/Images/UserIcons.png) -573px 0px no-repeat}
+.aw-image-User-GroupRO {background:url(/Admin/Images/UserIcons.png) -593px 0px no-repeat}
+.aw-image-UserWarn-GroupRO {background:url(/Admin/Images/UserIcons.png) -613px 0px no-repeat}
+.aw-image-UserAutoDisabled-GroupRO {background:url(/Admin/Images/UserIcons.png) -633px 0px no-repeat}
+
+/* Event images */
+.aw-image-Email-Action-Enabled {background:url(/Admin/Images/EventIcons.png) -41px 0px no-repeat}
+.aw-image-Email-Action-Disabled {background:url(/Admin/Images/EventIcons.png) -157px 0px no-repeat}
+.aw-image-Email-Action-NoFire {background:url(/Admin/Images/EventIcons.png) -64px 0px no-repeat}
+.aw-image-Balloon-Action-Enabled {background:url(/Admin/Images/EventIcons.png) -2px 0px no-repeat}
+.aw-image-Balloon-Action-Disabled {background:url(/Admin/Images/EventIcons.png) -135px 0px no-repeat}
+.aw-image-Balloon-Action-NoFire {background:url(/Admin/Images/EventIcons.png) -21px 0px no-repeat}
+.aw-image-Exec-Action-Enabled {background:url(/Admin/Images/EventIcons.png) -86px 0px no-repeat}
+.aw-image-Exec-Action-Disabled {background:url(/Admin/Images/EventIcons.png) -177px 0px no-repeat}
+.aw-image-Exec-Action-NoFire {background:url(/Admin/Images/EventIcons.png) -111px 0px no-repeat}
+
+/* FTP Command images */
+.aw-image-FTPCmd {background:url(/Admin/Images/CommandIcons.png) 0px 0px no-repeat}
+.aw-image-FTPCmdDisabled {background:url(/Admin/Images/CommandIcons.png) -17px 0px no-repeat}
+.aw-image-FTPCmdSuperfluous {background:url(/Admin/Images/CommandIcons.png) -34px 0px no-repeat}
+.aw-image-FTPCmdSuperfluousDisabled {background:url(/Admin/Images/CommandIcons.png) -51px 0px no-repeat}
+.aw-image-FTPCmdParentDisabled {background:url(/Admin/Images/CommandIcons.png) -68px 0px no-repeat}
+
+/* Group images */
+.aw-image-Group {background:url(/Admin/Images/GroupIcons.png) -20px 0px no-repeat}
+.aw-image-Group-Disabled {background:url(/Admin/Images/GroupIcons.png) -0px 0px no-repeat}
+.aw-image-User16 {background:url(/Common/Images/User16.png) no-repeat}
+
+
+/* Limits images */
+.aw-image-Limit {background:url(/Common/Images/Limits16.png) no-repeat}
+.aw-image-LoginLimit {background:url(/Common/Images/LoginLimit16.png) no-repeat;margin:-6px 1px -8px -2px;}
+
+/* Database Table Images */
+.aw-image-table-enabled {background:url(/Common/Images/Database16.png) no-repeat}
+.aw-image-table-disabled {background:url(/Common/Images/database16-disabled.png) no-repeat}
+
+/* Filter Images */
+.aw-image-Filter-enabled {background:url(/Common/Images/Filter16-enabled.png) no-repeat}
+.aw-image-Filter-disabled {background:url(/Common/Images/Filter16-disabled.png) no-repeat}
+
+
+ /* General Images */
+ .aw-image-Basic_Client_Icon {background:url(/Common/Images/su16x16.png) 0px 0px  no-repeat}
+ .aw-image-FTP_Voyager_Icon {background:url(/Common/Images/fv16.png) 0px 0px  no-repeat}
+ .aw-image-Wizard_Wand_Icon {background:url(/Common/Images/Wizard-Wand16-8bit.png) 0px 0px  no-repeat}
+ .aw-image-SMTP_Icon {background:url(/Common/Images/Email16.png) 0px 0px  no-repeat}
+ .aw-image-User_Template_Icon {background:url(/Common/Images/UserTemplate16.png) 0px 0px  no-repeat}
+ .aw-image-Group_Template_Icon {background:url(/Common/Images/GroupTemplate16.png) 0px 0px  no-repeat}
+ .aw-image-Ask_Basic_Client_Icon {background:url(/Common/Images/fvjv_su_icons.png) -24px 0px  no-repeat}
+ .aw-image-Ask_FTP_Voyager_Icon {background:url(/Common/Images/fvjv_su_icons.png) -1px 0px  no-repeat}
+ .aw-image-log {background:url(/Common/Images/Log16-8bit.png)  0px 2px no-repeat}
+ .aw-image-GroupEmail {background:url(/Common/Images/GroupEmail16.png)  no-repeat;margin:-6px -2 -8px -1px}
+ .aw-image-GreenRightArrow {background:url(/Common/Images/Green-Right-Arrow.png)  no-repeat;margin:-6px -2 -8px -1px}
+ .aw-image-GreenLeftArrow {background:url(/Common/Images/Green-Left-Arrow.png)  no-repeat;margin:-6px -2 -8px -1px}
+ .aw-image-RecoverPasswordIcon {background:url(/Common/Images/RecoverPassword-16-8bit.png) 0px 0px  no-repeat;margin:-6px 3px -8px 0px}
+ .aw-image-PasswordGenIcon {background:url(/Common/Images/Change_Password16.png) no-repeat;margin:-6px -5px -8px -3px}
+ .aw-ie .aw-image-PasswordGenIcon {background:url(/Common/Images/Change_Password16.png) no-repeat;margin:-6px -3 -8px -2px}
+
+ /* Tree Images */
+
+ .aw-image-Server-Tree {background:url(/Common/Images/ServerTreeIcon.png) 0px 0px  no-repeat}
+ .aw-image-ServerInfo-Tree {background:url(/Common/Images/Information-16.png) 0px 0px  no-repeat}
+ .aw-image-Domain-Tree {background:url(/Common/Images/ChangeDomain.png) 0px 0px  no-repeat}
+ .aw-image-User-Tree {background:url(/Common/Images/User16.png) 0px 0px  no-repeat}
+ .aw-image-Group-Tree {background:url(/Common/Images/Groups16.png) 0px 0px  no-repeat}
+ .aw-image-Folders-Tree {background:url(/Common/Images/Folders16.png) 0px 0px  no-repeat}
+ .aw-image-Rules-Tree {background:url(/Common/Images/Rules16.png) 0px 0px  no-repeat}
+ .aw-image-Log-Tree {background:url(/Common/Images/Logging16.png) 0px 0px  no-repeat}
+ 
+ .aw-image-Settings-Tree {background:url(/Common/Images/Settings16.png) 0px 0px  no-repeat}
+ .aw-image-NIC-Tree {background:url(/Common/Images/Listener-16.png) 0px 0px  no-repeat}
+ .aw-image-VirtualHosts-Tree {background:url(/Common/Images/VirtualHosts16.png) 0px 0px  no-repeat}
+ .aw-image-IPAccess-Tree {background:url(/Common/Images/IpAccess16.png) 0px 0px  no-repeat}
+ .aw-image-Database-Tree {background:url(/Common/Images/Database16.png) 0px 0px  no-repeat}
+ .aw-image-Events-Tree,  .aw-image-Command-Tree {background:url(/Common/Images/cmd-16.png) 0px 0px  no-repeat}
+ .aw-image-DomainUsers-Tree {background:url(/Common/Images/UsersEdit16.png) 0px 0px  no-repeat}
+ .aw-image-WindowsAuth-Tree {background:url(/Common/Images/WinAuth16.png) 0px 0px  no-repeat}
+ .aw-image-DomainGroups-Tree {background:url(/Common/Images/GroupsColl16.png) 0px 0px  no-repeat}
+ .aw-image-DirAccess-Tree {background:url(/Common/Images/DirAccess16.png) 0px 0px  no-repeat}
+ .aw-image-VirtualPaths-Tree {background:url(/Common/Images/VirtualPaths16.png) 0px 0px  no-repeat}
+ .aw-image-Limits-Tree {background:url(/Common/Images/Limits16.png) 0px 0px  no-repeat}
+ .aw-image-Encryption-Tree {background:url(/Common/Images/Encryption16.png) 0px 0px  no-repeat}
+ .aw-image-Sessions-Tree {background:url(/Common/Images/Sessions16.png) 0px 0px  no-repeat}
+ .aw-image-Stats-Tree {background:url(/Common/Images/Stats16.png) 0px 0px  no-repeat}
+ .aw-image-GroupStats-Tree {background:url(/Common/Images/UserGroupStats16.png) 0px 0px  no-repeat}
+ .aw-image-Logging-Tree {background:url(/Common/Images/Log16.png) 0px 0px  no-repeat}
+ /* IE 6 Images */
+ .aw-ie6 .aw-image-Server-Tree {background:url(/Common/Images/ServerTreeIcon-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-User-Tree {background:url(/Common/Images/User16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-Folders-Tree {background:url(/Common/Images/Folders16-8bit.png) 0px 0px  no-repeat}
+ 
+ .aw-ie6 .aw-image-Settings-Tree {background:url(/Common/Images/Settings16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-NIC-Tree {background:url(/Common/Images/Listener-16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-VirtualHosts-Tree {background:url(/Common/Images/VirtualHosts16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-IPAccess-Tree {background:url(/Common/Images/IpAccess16-8bit.png) 0px 0px  no-repeat}
+ .aw-image-Events-Tree,  .aw-ie6 .aw-image-Command-Tree {background:url(/Common/Images/cmd-16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-DomainUsers-Tree {background:url(/Common/Images/UsersEdit16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-WindowsAuth-Tree {background:url(/Common/Images/WinAuth16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-DomainGroups-Tree {background:url(/Common/Images/GroupsColl16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-DirAccess-Tree {background:url(/Common/Images/DirAccess16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-VirtualPaths-Tree {background:url(/Common/Images/VirtualPaths16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-Sessions-Tree {background:url(/Common/Images/Sessions16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-Logging-Tree {background:url(/Common/Images/Log16-8bit.png) 0px 0px  no-repeat}
+ .aw-ie6 .aw-image-GroupStats-Tree {background:url(/Common/Images/UserGroupStats16-8bit.png) 0px 0px  no-repeat}
+ 
+ 
+/* fix Firefox oninput event bug */
+.aw-gecko .aw-edit-control .aw-item-box {
+    overflow: hidden;
+}
+.aw-xp .headcontainer SPAN,.aw-classic .headcontainer SPAN
+{
+	color:#fff !important;
+}
+.aw-xp .aw-grid-control{
+	background: #fff;
+}
+.aw-classic .aw-grid-control{
+	background: #fff;	
+}
+.aw-aqua .aw-grid-control{
+	background: #fff;
+}
+.aw-vista .aw-grid-control{
+	background: #fff;
+}
+.aw-ie .MainHeaderInfo{
+height:32px;
+}
+.FVJVContent{
+	padding:10px 10px 5px 10px;
+	/*background: url(/Common/Images/Top-Bar.png) repeat-x top left;*/
+	background:#ffffff url(/Common/Images/bg-SU.png) repeat-x top left;
+}
+
+.CrumbNav {
+background-image:url(/Common/Images/subnav-down.gif);
+background-repeat:no-repeat;
+background-position:0 7;
+padding:3px;
+}
+.aw-frame-template .aw-items-selected { 
+    color: #fff; 
+    background: #316ac5; 
+} 

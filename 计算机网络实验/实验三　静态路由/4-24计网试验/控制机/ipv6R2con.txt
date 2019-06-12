@@ -1,0 +1,96 @@
+18-RSR20-2>
+18-RSR20-2>en 14
+
+Password:
+18-RSR20-2#config
+Enter configuration commands, one per line.  End with CNTL/Z.
+18-RSR20-2(config)#int gi 0/1
+18-RSR20-2(config-if-GigabitEthernet 0/1)#ipv6 add 2::1/64
+18-RSR20-2(config-if-GigabitEthernet 0/1)#ipv6 enable
+18-RSR20-2(config-if-GigabitEthernet 0/1)#no shutdown
+18-RSR20-2(config-if-GigabitEthernet 0/1)#exit
+18-RSR20-2(config)#int ser 2/0
+18-RSR20-2(config-if-Serial 2/0)#ipv6 add 5::2/64
+18-RSR20-2(config-if-Serial 2/0)#ipv6 enable
+18-RSR20-2(config-if-Serial 2/0)#no shutdown
+18-RSR20-2(config-if-Serial 2/0)#no ipv6 nd suppress-ra
+18-RSR20-2(config-if-Serial 2/0)#exit
+18-RSR20-2(config)#show ipv6 int
+
+interface Serial 2/0 is Up, ifindex: 2, vrf_id 0
+  address(es):
+    Mac Address: N/A
+    INET6: 5::2 , subnet is 5::/64
+    INET6: FE80::5A69:6CFF:FE27:C31D , subnet is FE80::/64
+  Joined group address(es):
+    FF01::1
+    FF02::1
+    FF02::2
+    FF02::1:FF00:2
+    FF02::1:FF27:C31D
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds
+  ND advertised reachable time is 0 milliseconds
+  ND retransmit interval is 1000 milliseconds
+  ND advertised retransmit interval is 0 milliseconds
+  ND router advertisements are sent every 200 seconds<160--240>
+  ND router advertisements live for 600 seconds
+
+interface GigabitEthernet 0/1 is Up, ifindex: 5, vrf_id 0
+  address(es):
+    Mac Address: 58:69:6c:27:c3:1e
+    INET6: 2::1 , subnet is 2::/64
+    INET6: FE80::5A69:6CFF:FE27:C31E , subnet is FE80::/64
+  Joined group address(es):
+    FF01::1
+    FF02::1
+    FF02::2
+    FF02::1:FF00:1
+    FF02::1:FF27:C31E
+  MTU is 1500 bytes
+  ICMP error messages limited to one every 100 milliseconds
+  ICMP redirects are enabled
+  ND DAD is enabled, number of DAD attempts: 1
+  ND reachable time is 30000 milliseconds
+  ND advertised reachable time is 0 milliseconds
+  ND retransmit interval is 1000 milliseconds
+  ND advertised retransmit interval is 0 milliseconds
+  ND router advertisements are sent every 200 seconds<160--240>
+  ND router advertisements live for 600 seconds
+18-RSR20-2(config)#
+18-RSR20-2(config)#
+18-RSR20-2(config)#
+18-RSR20-2(config)#
+18-RSR20-2(config)#show ipv6 int br
+
+Serial 2/0                    [up/up]
+        5::2
+        FE80::5A69:6CFF:FE27:C31D
+GigabitEthernet 0/1           [up/up]
+        2::1
+        FE80::5A69:6CFF:FE27:C31E
+18-RSR20-2(config)#ipv6 route 1::/64 ser 2/0 5::1
+18-RSR20-2(config)#end
+18-RSR20-2#*Apr 23 14:18:57: %SYS-5-CONFIG_I: Configured from console by console
+
+18-RSR20-2#show ipv6 route
+IPv6 routing table name is - Default - 11 entries
+Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP
+       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary 
+       O - OSPF intra area, OI - OSPF inter area,  OE1 - OSPF external type 1, OE2 - OSPF external type 2
+       ON1 - OSPF NSSA external type 1, ON2 - OSPF NSSA external type 2
+L      ::1/128 via Loopback, local host
+S      1::/64 [1/0] via 5::1, Serial 2/0
+C      2::/64 via GigabitEthernet 0/1, directly connected
+L      2::1/128 via GigabitEthernet 0/1, local host
+C      5::/64 via Serial 2/0, directly connected
+L      5::2/128 via Serial 2/0, local host
+L      FE80::/10 via ::1, Null0
+C      FE80::/64 via Serial 2/0, directly connected
+L      FE80::5A69:6CFF:FE27:C31D/128 via Serial 2/0, local host
+C      FE80::/64 via GigabitEthernet 0/1, directly connected
+L      FE80::5A69:6CFF:FE27:C31E/128 via GigabitEthernet 0/1, local host
+18-RSR20-2#

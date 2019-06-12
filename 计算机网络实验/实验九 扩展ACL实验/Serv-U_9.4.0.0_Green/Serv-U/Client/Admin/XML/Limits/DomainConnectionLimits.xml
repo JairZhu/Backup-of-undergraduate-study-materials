@@ -1,0 +1,75 @@
+%PRIV_DOMAIN_ADMIN%
+<limits>
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxDomainSessions" val="%CRhinoAttr.%LIST_ID%.Value%" type="3" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" admintype="1" />
+%CDomain.%ID%.MaxDomainSessions.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxDomainSessions" val="%CRhinoAttr.%LIST_ID%.Value%" type="3" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" admintype="1" />
+%CDomain.%ID%.MaxDomainSessions.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxDomainSessionsIP" val="%CRhinoAttr.%LIST_ID%.Value%" type="3" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.MaxDomainSessionsIP.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxDomainSessionsIP" val="%CRhinoAttr.%LIST_ID%.Value%" type="3" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.MaxDomainSessionsIP.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxSessionsPerUser" val="%CRhinoAttr.%LIST_ID%.Value%" type="3" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.MaxSessionsPerUser.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxSessionsPerUser" val="%CRhinoAttr.%LIST_ID%.Value%" type="3" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.MaxSessionsPerUser.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxSessionsIPPerUser" val="%CRhinoAttr.%LIST_ID%.Value%" type="3" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.MaxSessionsIPPerUser.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="MaxSessionsIPPerUser" val="%CRhinoAttr.%LIST_ID%.Value%" type="3" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.MaxSessionsIPPerUser.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="RequireSecure" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.RequireSecure.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="RequireSecure" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.RequireSecure.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="IdleTimeSeconds" val="%CRhinoAttr.%LIST_ID%.Value%" type="2" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" scale="60" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.IdleTimeSeconds.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="IdleTimeSeconds" val="%CRhinoAttr.%LIST_ID%.Value%" type="2" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" scale="60" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.IdleTimeSeconds.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="SessTimeoutSeconds" val="%CRhinoAttr.%LIST_ID%.Value%" type="2" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" scale="60" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.SessTimeoutSeconds.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="SessTimeoutSeconds" val="%CRhinoAttr.%LIST_ID%.Value%" type="2" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" scale="60" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.SessTimeoutSeconds.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="BlockAntiTimeout" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.BlockAntiTimeout.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="BlockAntiTimeout" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.BlockAntiTimeout.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="AutoCreateHomeDir" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.AutoCreateHomeDir.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="AutoCreateHomeDir" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.AutoCreateHomeDir.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="TimeoutBlockIPSeconds" val="%CRhinoAttr.%LIST_ID%.Value%" type="2" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" scale="60" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.TimeoutBlockIPSeconds.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="TimeoutBlockIPSeconds" val="%CRhinoAttr.%LIST_ID%.Value%" type="2" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" scale="60" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.TimeoutBlockIPSeconds.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="AllowXForwardedFor" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" scale="60" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.AllowXForwardedFor.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="AllowXForwardedFor" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" scale="60" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.AllowXForwardedFor.ListDefaults%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="RequireReverseDNSName" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="0" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.RequireReverseDNSName.List%
+%DELETE_LIST_STRINGS%
+%ADD_LIST_STRING%	<var name="RequireReverseDNSName" val="%CRhinoAttr.%LIST_ID%.Value%" type="0" todLimit="%CRhinoAttr.%LIST_ID%.LimitToTimeOfDay%" todStart="%CRhinoAttr.%LIST_ID%.StartTime%" todEnd="%CRhinoAttr.%LIST_ID%.EndTime%" todDays="%CRhinoAttr.%LIST_ID%.TODDays%" inherited="1" ID="%LIST_ID%" admintype="0" />
+%CDomain.%ID%.RequireReverseDNSName.ListDefaults%
+</limits>

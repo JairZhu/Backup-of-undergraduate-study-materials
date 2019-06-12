@@ -1,0 +1,1 @@
+var mqhb=undefined;var qvl=undefined;var vft=new xvg.Pane("logwindow");function yxrb(){mqhb=qmc(mpj+"Log",ppz,xbpb);}function xbpb(){if(mqhb!=undefined){var ksm=kkm(mqhb,vft,"log");if(ksm==1)mqhb=undefined;}}function xtjb(){frw("log","Init"+mpj+"Log",ppz);}function fd(){if(mqhb==undefined)yxrb();}function vhr(lbv){if(lbv)clearInterval(qvl);else qvl=setInterval(fd,500);}
