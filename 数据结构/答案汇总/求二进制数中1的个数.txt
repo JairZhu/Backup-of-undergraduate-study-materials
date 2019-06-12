@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+ int count = 0;
+ int target = 0;
+ cin >> target;
+ while(target)
+ {
+  target &= (target - 1);
+  count++;
+ }
+ cout << count;
+ return 0;
+}

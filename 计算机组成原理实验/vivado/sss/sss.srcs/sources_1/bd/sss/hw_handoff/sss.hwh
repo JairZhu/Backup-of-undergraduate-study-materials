@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 22 18:03:29 2017" VIVADOVERSION="2016.4">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="sss" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="LT_n" SIGIS="undef" SIGNAME="External_Ports_LT_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="LT_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="RBI_n" SIGIS="undef" SIGNAME="External_Ports_RBI_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="RBI_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BCD_D" SIGIS="undef" SIGNAME="External_Ports_BCD_D">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="BCD_D"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BCD_C" SIGIS="undef" SIGNAME="External_Ports_BCD_C">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="BCD_C"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BCD_B" SIGIS="undef" SIGNAME="External_Ports_BCD_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="BCD_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="BCD_A" SIGIS="undef" SIGNAME="External_Ports_BCD_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="BCD_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_a">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xup_inv_1" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="a_1" SIGIS="undef" SIGNAME="External_Ports_a_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xup_inv_2" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="a_2" SIGIS="undef" SIGNAME="External_Ports_a_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xup_inv_3" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="a_3" SIGIS="undef" SIGNAME="External_Ports_a_3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xup_inv_4" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="y_1" SIGIS="undef" SIGNAME="xup_inv_1_y">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xup_inv_1" PORT="y"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="y_2" SIGIS="undef" SIGNAME="xup_inv_2_y">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xup_inv_2" PORT="y"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="y_3" SIGIS="undef" SIGNAME="xup_inv_3_y">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xup_inv_3" PORT="y"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="y_4" SIGIS="undef" SIGNAME="xup_inv_4_y">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xup_inv_4" PORT="y"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="a_4" SIGIS="undef" SIGNAME="BCD2SEG7_0_a">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="b" SIGIS="undef" SIGNAME="BCD2SEG7_0_b">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="b"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c" SIGIS="undef" SIGNAME="BCD2SEG7_0_c">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="c"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="d" SIGIS="undef" SIGNAME="BCD2SEG7_0_d">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="d"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="e" SIGIS="undef" SIGNAME="BCD2SEG7_0_e">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="e"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="f" SIGIS="undef" SIGNAME="BCD2SEG7_0_f">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="f"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="g" SIGIS="undef" SIGNAME="BCD2SEG7_0_g">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="g"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="BI_RBO_n" SIGIS="undef" SIGNAME="External_Ports_BI_RBO_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BCD2SEG7_0" PORT="BI_RBO_n"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/BCD2SEG7_0" HWVERSION="1.0" INSTANCE="BCD2SEG7_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BCD2SEG7" VLNV="xilinx.com:xup:BCD2SEG7:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="sss_BCD2SEG7_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="LT_n" SIGIS="undef" SIGNAME="External_Ports_LT_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LT_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RBI_n" SIGIS="undef" SIGNAME="External_Ports_RBI_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RBI_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BCD_D" SIGIS="undef" SIGNAME="External_Ports_BCD_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BCD_D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BCD_C" SIGIS="undef" SIGNAME="External_Ports_BCD_C">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BCD_C"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BCD_B" SIGIS="undef" SIGNAME="External_Ports_BCD_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BCD_B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BCD_A" SIGIS="undef" SIGNAME="External_Ports_BCD_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BCD_A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="a" SIGIS="undef" SIGNAME="BCD2SEG7_0_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="b" SIGIS="undef" SIGNAME="BCD2SEG7_0_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c" SIGIS="undef" SIGNAME="BCD2SEG7_0_c">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="d" SIGIS="undef" SIGNAME="BCD2SEG7_0_d">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="d"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="e" SIGIS="undef" SIGNAME="BCD2SEG7_0_e">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="e"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="f" SIGIS="undef" SIGNAME="BCD2SEG7_0_f">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="f"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="g" SIGIS="undef" SIGNAME="BCD2SEG7_0_g">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="g"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" NAME="BI_RBO_n" SIGIS="undef" SIGNAME="External_Ports_BI_RBO_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BI_RBO_n"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_inv_1" HWVERSION="1.0" INSTANCE="xup_inv_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_inv" VLNV="xilinx.com:xup:xup_inv:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sss_xup_inv_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_inv_1_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="y_1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_inv_2" HWVERSION="1.0" INSTANCE="xup_inv_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_inv" VLNV="xilinx.com:xup:xup_inv:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sss_xup_inv_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_a_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_inv_2_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="y_2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_inv_3" HWVERSION="1.0" INSTANCE="xup_inv_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_inv" VLNV="xilinx.com:xup:xup_inv:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sss_xup_inv_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_a_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_inv_3_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="y_3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_inv_4" HWVERSION="1.0" INSTANCE="xup_inv_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_inv" VLNV="xilinx.com:xup:xup_inv:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sss_xup_inv_0_4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_a_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_inv_4_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="y_4"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

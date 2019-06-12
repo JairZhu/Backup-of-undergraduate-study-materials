@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x0" bd:device="xc7a35tcpg236-1" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.1" bd:top="clock_test" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>clock_test</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>CLK.CLK</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>clk</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>100000000</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>RST.RESET</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>reset</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters/>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="clock_test_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>clk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>reset</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>clr</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>set_hour</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>set_min</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>change</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>a_to_g</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>6</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>an</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>clock_test_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>x7seg_msg_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="x7seg_msg" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">clock_test_x7seg_msg_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>clk_1s_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="clk_1s" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">clock_test_clk_1s_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>clkdiv_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="clkdiv" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">clock_test_clkdiv_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>hour_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="hour" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">clock_test_hour_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>sec_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="sec" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">clock_test_sec_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>min_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="min" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">clock_test_min_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>select_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="select" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">clock_test_select_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>reset_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="clk_1s_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="sec_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="hour_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="min_0" spirit:portRef="reset"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_1s_0_clk_1s</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_1s_0" spirit:portRef="clk_1s"/>
+        <spirit:internalPortReference spirit:componentRef="hour_0" spirit:portRef="clk_1s"/>
+        <spirit:internalPortReference spirit:componentRef="min_0" spirit:portRef="clk_1s"/>
+        <spirit:internalPortReference spirit:componentRef="sec_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>set_hour_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="set_hour"/>
+        <spirit:internalPortReference spirit:componentRef="hour_0" spirit:portRef="set_hour"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>set_min_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="set_min"/>
+        <spirit:internalPortReference spirit:componentRef="min_0" spirit:portRef="set_min"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clkdiv_0_clk190</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clkdiv_0" spirit:portRef="clk190"/>
+        <spirit:internalPortReference spirit:componentRef="x7seg_msg_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sec_0_carry</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sec_0" spirit:portRef="carry"/>
+        <spirit:internalPortReference spirit:componentRef="min_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>min_0_carry</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="min_0" spirit:portRef="carry"/>
+        <spirit:internalPortReference spirit:componentRef="hour_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clr_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clr"/>
+        <spirit:internalPortReference spirit:componentRef="x7seg_msg_0" spirit:portRef="clr"/>
+        <spirit:internalPortReference spirit:componentRef="clkdiv_0" spirit:portRef="clr"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="clkdiv_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="clk_1s_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>change_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="change"/>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="change"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hour_0_hour_high</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hour_0" spirit:portRef="hour_high"/>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="hour_high"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hour_0_hour_low</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hour_0" spirit:portRef="hour_low"/>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="hour_low"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>min_0_min_high</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="min_0" spirit:portRef="min_high"/>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="min_high"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>min_0_min_low</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="min_0" spirit:portRef="min_low"/>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="min_low"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sec_0_sec_high</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sec_0" spirit:portRef="sec_high"/>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="sec_high"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sec_0_sec_low</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="sec_0" spirit:portRef="sec_low"/>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="sec_low"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>select_0_digit3</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="digit3"/>
+        <spirit:internalPortReference spirit:componentRef="x7seg_msg_0" spirit:portRef="digit3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>select_0_digit2</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="digit2"/>
+        <spirit:internalPortReference spirit:componentRef="x7seg_msg_0" spirit:portRef="digit2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>select_0_digit1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="digit1"/>
+        <spirit:internalPortReference spirit:componentRef="x7seg_msg_0" spirit:portRef="digit1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>select_0_digit0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="select_0" spirit:portRef="digit0"/>
+        <spirit:internalPortReference spirit:componentRef="x7seg_msg_0" spirit:portRef="digit0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>x7seg_msg_0_a_to_g</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="x7seg_msg_0" spirit:portRef="a_to_g"/>
+        <spirit:externalPortReference spirit:portRef="a_to_g"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>x7seg_msg_0_an</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="x7seg_msg_0" spirit:portRef="an"/>
+        <spirit:externalPortReference spirit:portRef="an"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>

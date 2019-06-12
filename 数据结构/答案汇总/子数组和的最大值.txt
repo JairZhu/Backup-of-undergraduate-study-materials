@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include<limits.h>
+using namespace std;
+int MaxSum(const vector<int> &v, int n)
+{
+	int maximum = INT_MIN;
+	int sum;
+	for (int i = 0; i < n; ++i)
+	{
+		sum = 0;
+		for (int j = i; j < n; ++j)
+		{
+			sum += v[j];
+			if (sum > maximum)
+			{
+				maximum = sum;
+			}
+		}
+	}
+	return maximum;
+}
+int main()
+{
+	int n;
+	cin >> n;
+	vector<int> v(n);
+	for (int i = 0; i < n; ++i)
+	{
+		cin >> v[i];
+	}
+	cout << MaxSum(v, n);
+	return 0;
+}

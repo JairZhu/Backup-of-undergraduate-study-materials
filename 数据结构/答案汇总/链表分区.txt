@@ -1,0 +1,20 @@
+#include "ListNode.h"
+ListNode *partList(ListNode *head, int x) {
+        ListNode *leftHead = (ListNode*)malloc(sizeof(ListNode));
+        ListNode *rightHead = (ListNode*)malloc(sizeof(ListNode));
+        ListNode *lpre = leftHead,*rpre = rightHead;
+        while(head != NULL){
+            if(head->val < x){
+                lpre->next = head;
+                lpre = head;
+            }
+            else{
+                rpre->next = head;
+                rpre = head;
+            }
+            head = head->next;
+        }
+        rpre->next = NULL;
+        lpre->next = rightHead->next;
+        return leftHead->next;
+    }

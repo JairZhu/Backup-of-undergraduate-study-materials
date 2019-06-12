@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1497260964">
+  <File Type="PWROPT-DRC" Name="sss_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="sss_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="sss_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="sss_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="sss.tcl"/>
+  <File Type="OPT-HWDEF" Name="sss.hwdef"/>
+  <File Type="RDI-RDI" Name="sss.vdi"/>
+  <File Type="OPT-DCP" Name="sss_opt.dcp"/>
+  <File Type="OPT-DRC" Name="sss_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="sss_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="sss_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="sss_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="sss_placed.dcp"/>
+  <File Type="PLACE-IO" Name="sss_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="sss_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="sss_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="sss_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="sss_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="sss_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="sss_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="sss_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="sss_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="sss_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="sss_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="sss_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="sss_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="sss_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="sss_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="sss_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="sss_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="sss_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="sss.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="sss_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="sss.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="sss_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="sss.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="sss_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="sss.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="sss_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="sss_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="sss_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="sss_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="sss_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="sss_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="sss_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="sss_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="sss_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="sss_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="sss_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="sss_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="sss_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="sss_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="sss_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="sss.bit"/>
+  <File Type="BITSTR-RBT" Name="sss.rbt"/>
+  <File Type="BITSTR-NKY" Name="sss.nky"/>
+  <File Type="BITSTR-BMM" Name="sss_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="sss.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="sss.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/sss/sss.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="sss"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/sss.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/sss.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,44 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port clr -pg 1 -y -330 -defaultsOSRD
+preplace port set_min -pg 1 -y -290 -defaultsOSRD
+preplace port set_hour -pg 1 -y -310 -defaultsOSRD
+preplace port clk -pg 1 -y -370 -defaultsOSRD
+preplace port change -pg 1 -y -270 -defaultsOSRD
+preplace port reset -pg 1 -y -350 -defaultsOSRD
+preplace portBus a_to_g -pg 1 -y -190 -defaultsOSRD
+preplace portBus an -pg 1 -y -170 -defaultsOSRD
+preplace inst select_0 -pg 1 -lvl 3 -y -200 -defaultsOSRD
+preplace inst min_0 -pg 1 -lvl 2 -y -210 -defaultsOSRD
+preplace inst sec_0 -pg 1 -lvl 2 -y -350 -defaultsOSRD
+preplace inst clkdiv_0 -pg 1 -lvl 1 -y -250 -defaultsOSRD
+preplace inst hour_0 -pg 1 -lvl 2 -y -60 -defaultsOSRD
+preplace inst clk_1s_0 -pg 1 -lvl 1 -y -100 -defaultsOSRD
+preplace inst x7seg_msg_0 -pg 1 -lvl 4 -y -180 -defaultsOSRD
+preplace netloc clr_1 1 0 4 -70J -460 N -460 N -460 1120
+preplace netloc select_0_digit0 1 3 1 1070
+preplace netloc sec_0_sec_low 1 2 1 670
+preplace netloc select_0_digit1 1 3 1 1080
+preplace netloc min_0_carry 1 1 2 330 -450 650
+preplace netloc select_0_digit2 1 3 1 1090
+preplace netloc select_0_digit3 1 3 1 1100
+preplace netloc sec_0_sec_high 1 2 1 690
+preplace netloc x7seg_msg_0_an 1 4 1 N
+preplace netloc sec_0_carry 1 1 2 340 -440 640
+preplace netloc min_0_min_high 1 2 1 680
+preplace netloc hour_0_hour_low 1 2 1 710
+preplace netloc clk_1 1 0 1 -80
+preplace netloc clk_1s_0_clk_1s 1 1 1 320
+preplace netloc min_0_min_low 1 2 1 660
+preplace netloc set_min_1 1 0 2 -60J -330 310J
+preplace netloc set_hour_1 1 0 2 NJ -310 280J
+preplace netloc hour_0_hour_high 1 2 1 700
+preplace netloc change_1 1 0 3 -90J -480 N -480 710
+preplace netloc clkdiv_0_clk190 1 1 3 300 -420 700 -320 1110
+preplace netloc x7seg_msg_0_a_to_g 1 4 1 N
+preplace netloc reset_1 1 0 2 -100 -340 290J
+levelinfo -pg 1 -120 200 530 950 1270 1500 -top -510 -bot 200
+",
+}
+

@@ -1,0 +1,37 @@
+#include "ListNode.h"
+#include <vector>
+#include <map>
+#include <set>
+using namespace std;
+ListNode* mergeKLists(vector<ListNode*>& lists) {
+	ListNode * res = NULL;
+	int len = lists.size();
+	if (len == 0) return res;
+	ListNode * p = new ListNode(0);
+	res = p;
+	map <int, int> record_times;
+	set <int> element;
+	for (int i = 0; i < len; i++)
+	{
+		while (lists[i])
+		{
+			int temp = lists[i]->val;
+			element.insert(temp);
+			pair <map<int, int>::iterator, bool> b = record_times.insert(pair<int, int>(temp, 1));
+			if (!b.second) record_times[temp]++;
+			lists[i] = lists[i]->next;
+		}
+	}
+	for (set<int>::iterator it_set = element.begin(); it_set != element.end(); ++it_set)
+	{
+		int for_insert = *it_set;
+		map<int, int>::iterator it_map = record_times.find(for_insert);
+		int nums = it_map->second;
+		for (int i = 0; i < nums; i++)
+		{
+			p->next = new ListNode(for_insert);
+			p = p->next;
+		}
+	}
+	return res->next;
+}

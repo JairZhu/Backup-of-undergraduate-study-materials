@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+    double r,h;
+    double pi=3.14;
+    cin>>r>>h;
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
+    double v = 4*pi*r*r*r/3;
+    cout<<pi*r*r<<endl;
+    cout<<pi*r*r*h<<endl;
+    cout<<v<<endl;
+    return 0;
+}

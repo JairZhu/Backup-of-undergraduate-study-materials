@@ -1,0 +1,404 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon May 01 17:38:31 2017
+# Process ID: 4180
+# Current directory: C:/Users/73974/Documents/vivado/ALU/ALU.runs/synth_1
+# Command line: vivado.exe -log ALU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU.tcl
+# Log file: C:/Users/73974/Documents/vivado/ALU/ALU.runs/synth_1/ALU.vds
+# Journal file: C:/Users/73974/Documents/vivado/ALU/ALU.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ALU.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/73974/Documents/vivado/数电学习资料（库）/74IP/XUP_74LS00_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/73974/Documents/vivado/数电学习资料（库）/74IP'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/73974/Documents/vivado/数电学习资料（库）'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+Command: synth_design -top ALU -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2396 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 341.852 ; gain = 131.648
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/hdl/ALU.v:13]
+INFO: [Synth 8-638] synthesizing module 'ALU_decode138_0_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_decode138_0_0/synth/ALU_decode138_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'decode138' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/0ebb/decode138.v:23]
+INFO: [Synth 8-256] done synthesizing module 'decode138' (1#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/0ebb/decode138.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ALU_decode138_0_0' (2#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_decode138_0_0/synth/ALU_decode138_0_0.v:57]
+WARNING: [Synth 8-350] instance 'decode138_0' of module 'ALU_decode138_0_0' requires 14 connections, but only 13 given [C:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/hdl/ALU.v:98]
+INFO: [Synth 8-638] synthesizing module 'ALU_mux_8_to_1_0_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_mux_8_to_1_0_0/synth/ALU_mux_8_to_1_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'mux_8_to_1' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/2bc6/mux_8_to_1.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mux_8_to_1' (3#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/2bc6/mux_8_to_1.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ALU_mux_8_to_1_0_0' (4#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_mux_8_to_1_0_0/synth/ALU_mux_8_to_1_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_and2_0_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_and2_0_0/synth/ALU_xup_and2_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xup_and2' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/778c/xup_and2.srcs/sources_1/new/xup_and2.v:5]
+	Parameter DELAY bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xup_and2' (5#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/778c/xup_and2.srcs/sources_1/new/xup_and2.v:5]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_and2_0_0' (6#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_and2_0_0/synth/ALU_xup_and2_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_inv_0_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_inv_0_0/synth/ALU_xup_inv_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xup_inv' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/e3e7/xup_inv.srcs/sources_1/new/xup_inv.v:5]
+	Parameter DELAY bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xup_inv' (7#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/e3e7/xup_inv.srcs/sources_1/new/xup_inv.v:5]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_inv_0_0' (8#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_inv_0_0/synth/ALU_xup_inv_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_inv_0_1' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_inv_0_1/synth/ALU_xup_inv_0_1.v:57]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_inv_0_1' (9#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_inv_0_1/synth/ALU_xup_inv_0_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_inv_0_2' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_inv_0_2/synth/ALU_xup_inv_0_2.v:57]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_inv_0_2' (10#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_inv_0_2/synth/ALU_xup_inv_0_2.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_inv_0_3' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_inv_0_3/synth/ALU_xup_inv_0_3.v:57]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_inv_0_3' (11#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_inv_0_3/synth/ALU_xup_inv_0_3.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_inv_4_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_inv_4_0/synth/ALU_xup_inv_4_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_inv_4_0' (12#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_inv_4_0/synth/ALU_xup_inv_4_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_nand2_1_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand2_1_0/synth/ALU_xup_nand2_1_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xup_nand2' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/35a3/xup_nand2.srcs/sources_1/new/xup_nand2.v:5]
+	Parameter DELAY bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xup_nand2' (13#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/35a3/xup_nand2.srcs/sources_1/new/xup_nand2.v:5]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_nand2_1_0' (14#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand2_1_0/synth/ALU_xup_nand2_1_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_nand3_0_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand3_0_0/synth/ALU_xup_nand3_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xup_nand3' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/f5b3/xup_nand3.srcs/sources_1/new/xup_nand3.v:5]
+	Parameter DELAY bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xup_nand3' (15#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/f5b3/xup_nand3.srcs/sources_1/new/xup_nand3.v:5]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_nand3_0_0' (16#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand3_0_0/synth/ALU_xup_nand3_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_nand4_0_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_0_0/synth/ALU_xup_nand4_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xup_nand4' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/35c5/xup_nand4.srcs/sources_1/new/xup_nand4.v:5]
+	Parameter DELAY bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xup_nand4' (17#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/35c5/xup_nand4.srcs/sources_1/new/xup_nand4.v:5]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_nand4_0_0' (18#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_0_0/synth/ALU_xup_nand4_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_nand4_0_1' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_0_1/synth/ALU_xup_nand4_0_1.v:57]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_nand4_0_1' (19#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_0_1/synth/ALU_xup_nand4_0_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_nand4_0_2' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_0_2/synth/ALU_xup_nand4_0_2.v:57]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_nand4_0_2' (20#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_0_2/synth/ALU_xup_nand4_0_2.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_nand4_1_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_1_0/synth/ALU_xup_nand4_1_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_nand4_1_0' (21#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_1_0/synth/ALU_xup_nand4_1_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_nand4_1_1' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_1_1/synth/ALU_xup_nand4_1_1.v:57]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_nand4_1_1' (22#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_1_1/synth/ALU_xup_nand4_1_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_nand4_5_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_5_0/synth/ALU_xup_nand4_5_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_nand4_5_0' (23#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand4_5_0/synth/ALU_xup_nand4_5_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_nand5_0_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand5_0_0/synth/ALU_xup_nand5_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xup_nand5' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/f5d5/xup_nand5.srcs/sources_1/new/xup_nand5.v:5]
+	Parameter DELAY bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xup_nand5' (24#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/f5d5/xup_nand5.srcs/sources_1/new/xup_nand5.v:5]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_nand5_0_0' (25#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_nand5_0_0/synth/ALU_xup_nand5_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_or2_0_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_or2_0_0/synth/ALU_xup_or2_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xup_or2' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/1ec9/xup_or2.srcs/sources_1/new/xup_or2.v:5]
+	Parameter DELAY bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xup_or2' (26#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/1ec9/xup_or2.srcs/sources_1/new/xup_or2.v:5]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_or2_0_0' (27#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_or2_0_0/synth/ALU_xup_or2_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'ALU_xup_xor2_0_0' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_xor2_0_0/synth/ALU_xup_xor2_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xup_xor2' [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/7bd1/xup_xor2.srcs/sources_1/new/xup_xor2.v:5]
+	Parameter DELAY bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xup_xor2' (28#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ipshared/7bd1/xup_xor2.srcs/sources_1/new/xup_xor2.v:5]
+INFO: [Synth 8-256] done synthesizing module 'ALU_xup_xor2_0_0' (29#1) [c:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/ip/ALU_xup_xor2_0_0/synth/ALU_xup_xor2_0_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (30#1) [C:/Users/73974/Documents/vivado/ALU/ALU.srcs/sources_1/bd/ALU/hdl/ALU.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 379.219 ; gain = 169.016
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 379.219 ; gain = 169.016
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/73974/Documents/vivado/ALU/ALU.srcs/constrs_1/new/ALU.xdc]
+Finished Parsing XDC File [C:/Users/73974/Documents/vivado/ALU/ALU.srcs/constrs_1/new/ALU.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/73974/Documents/vivado/ALU/ALU.srcs/constrs_1/new/ALU.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ALU_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ALU_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/73974/Documents/vivado/ALU/ALU.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/73974/Documents/vivado/ALU/ALU.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 657.027 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for decode138_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mux_8_to_1_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_and2_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_inv_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_inv_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_inv_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_inv_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_inv_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_nand2_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_nand3_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_nand4_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_nand4_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_nand4_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_nand4_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_nand4_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_nand4_5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_nand5_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_or2_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for xup_xor2_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module decode138 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+Module xup_xor2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "inst/y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inst/y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inst/y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inst/y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inst/y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inst/y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inst/y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inst/y" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     5|
+|2     |LUT2 |     4|
+|3     |LUT3 |     1|
+|4     |LUT4 |     8|
+|5     |LUT5 |     1|
+|6     |LUT6 |    10|
+|7     |IBUF |     8|
+|8     |OBUF |     8|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------------+-------------------+------+
+|      |Instance       |Module             |Cells |
++------+---------------+-------------------+------+
+|1     |top            |                   |    45|
+|2     |  decode138_0  |ALU_decode138_0_0  |     8|
+|3     |    inst       |decode138          |     8|
+|4     |  mux_8_to_1_0 |ALU_mux_8_to_1_0_0 |     4|
+|5     |  xup_and2_0   |ALU_xup_and2_0_0   |     1|
+|6     |  xup_inv_0    |ALU_xup_inv_0_0    |     1|
+|7     |  xup_inv_1    |ALU_xup_inv_0_1    |     1|
+|8     |  xup_inv_2    |ALU_xup_inv_0_2    |     1|
+|9     |  xup_inv_3    |ALU_xup_inv_0_3    |     1|
+|10    |  xup_inv_4    |ALU_xup_inv_4_0    |     1|
+|11    |  xup_nand2_1  |ALU_xup_nand2_1_0  |     1|
+|12    |  xup_nand3_0  |ALU_xup_nand3_0_0  |     1|
+|13    |    inst       |xup_nand3          |     1|
+|14    |  xup_nand4_0  |ALU_xup_nand4_0_0  |     1|
+|15    |    inst       |xup_nand4_4        |     1|
+|16    |  xup_nand4_1  |ALU_xup_nand4_0_1  |     1|
+|17    |    inst       |xup_nand4_3        |     1|
+|18    |  xup_nand4_2  |ALU_xup_nand4_0_2  |     1|
+|19    |    inst       |xup_nand4_2        |     1|
+|20    |  xup_nand4_3  |ALU_xup_nand4_1_0  |     1|
+|21    |    inst       |xup_nand4_1        |     1|
+|22    |  xup_nand4_4  |ALU_xup_nand4_1_1  |     1|
+|23    |    inst       |xup_nand4_0        |     1|
+|24    |  xup_nand4_5  |ALU_xup_nand4_5_0  |     1|
+|25    |    inst       |xup_nand4          |     1|
+|26    |  xup_nand5_0  |ALU_xup_nand5_0_0  |     1|
+|27    |    inst       |xup_nand5          |     1|
+|28    |  xup_or2_0    |ALU_xup_or2_0_0    |     1|
+|29    |  xup_xor2_0   |ALU_xup_xor2_0_0   |     1|
++------+---------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 657.027 ; gain = 446.824
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 657.027 ; gain = 113.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 657.027 ; gain = 446.824
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+92 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 657.027 ; gain = 392.813
+INFO: [Common 17-1381] The checkpoint 'C:/Users/73974/Documents/vivado/ALU/ALU.runs/synth_1/ALU.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 657.027 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May 01 17:39:08 2017...

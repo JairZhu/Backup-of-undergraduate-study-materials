@@ -1,0 +1,24 @@
+#include <iostream> 
+#include <vector>
+#include <cstdio>
+using namespace std; 
+
+int main()
+{
+    int t,m,n;
+    cin>>t;
+    while(t--)
+    {
+        scanf("%d",&m);
+        scanf("%d",&n);
+        while(m!=n)
+        {
+            if(m>n) m/=2;
+            else if(m<n) n/=2;
+        }
+        printf("%d",m);
+        printf("\n");
+    }
+    //system("pause");
+    return 0 ;
+}

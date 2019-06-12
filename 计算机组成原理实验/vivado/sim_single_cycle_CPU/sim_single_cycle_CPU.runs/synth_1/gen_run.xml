@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1511339877">
+  <File Type="PA-TCL" Name="TOP_CPU.tcl"/>
+  <File Type="REPORTS-TCL" Name="TOP_CPU_reports.tcl"/>
+  <File Type="RDS-RDS" Name="TOP_CPU.vds"/>
+  <File Type="RDS-UTIL" Name="TOP_CPU_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="TOP_CPU_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="TOP_CPU.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/ALU32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/ALU32.v"/>
+        <Attr Name="ImportTime" Val="1511144990"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/AvoidShake.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/AvoidShake.v"/>
+        <Attr Name="ImportTime" Val="1511148716"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Button_In.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/Button_In.v"/>
+        <Attr Name="ImportTime" Val="1511160405"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/CLKDIV.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/CLKDIV.v"/>
+        <Attr Name="ImportTime" Val="1510881105"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/CLKDIV_40.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/CLKDIV_40.v"/>
+        <Attr Name="ImportTime" Val="1511160418"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Control_Unit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/Control_Unit.v"/>
+        <Attr Name="ImportTime" Val="1511143670"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Data_Mem.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/Data_Mem.v"/>
+        <Attr Name="ImportTime" Val="1510579005"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/Display.v"/>
+        <Attr Name="ImportTime" Val="1511267062"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Ins_Mem.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/Ins_Mem.v"/>
+        <Attr Name="ImportTime" Val="1511076945"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Jump_Address.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/Jump_Address.v"/>
+        <Attr Name="ImportTime" Val="1511089787"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/MUX32_ALUSrcA.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/MUX32_ALUSrcA.v"/>
+        <Attr Name="ImportTime" Val="1510579053"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/MUX32_ALUSrcB.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/MUX32_ALUSrcB.v"/>
+        <Attr Name="ImportTime" Val="1510579058"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/MUX32_DBDataSrc.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/MUX32_DBDataSrc.v"/>
+        <Attr Name="ImportTime" Val="1510579064"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/MUX4to1_PCSrc.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/MUX4to1_PCSrc.v"/>
+        <Attr Name="ImportTime" Val="1510579070"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/MUX5.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/MUX5.v"/>
+        <Attr Name="ImportTime" Val="1510579076"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/PC.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/PC.v"/>
+        <Attr Name="ImportTime" Val="1510579082"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/PC4_add_imm.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/PC4_add_imm.v"/>
+        <Attr Name="ImportTime" Val="1510579090"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/PC_add_4.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/PC_add_4.v"/>
+        <Attr Name="ImportTime" Val="1510579096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/RegFile.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/RegFile.v"/>
+        <Attr Name="ImportTime" Val="1510579102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/SegLED.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/SegLED.v"/>
+        <Attr Name="ImportTime" Val="1511159714"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/sign_zero_extend.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/sign_zero_extend.v"/>
+        <Attr Name="ImportTime" Val="1510579109"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/single_cycle_CPU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/single_cycle_CPU.v"/>
+        <Attr Name="ImportTime" Val="1511161705"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/TOP_CPU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/sources_1/new/TOP_CPU.v"/>
+        <Attr Name="ImportTime" Val="1511163330"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="TOP_CPU"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/new/port.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../single_cycle_CPU/single_cycle_CPU.srcs/constrs_1/new/port.xdc"/>
+        <Attr Name="ImportTime" Val="1511284489"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

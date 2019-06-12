@@ -1,0 +1,23 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    int len=5;
+    bool exist=false;
+    int *n=new int[len];
+    for(int i=0;i<len;i++){
+        cin>>n[i];
+    }
+    int key;
+    cin>>key;
+    for(int j=0;j<len;j++){
+        if(n[j]==key){
+            exist=true;
+            cout<<j<<endl;
+        }
+    }
+    if(!exist){
+        cout<<-1<<endl;
+    }
+    return 0;
+}

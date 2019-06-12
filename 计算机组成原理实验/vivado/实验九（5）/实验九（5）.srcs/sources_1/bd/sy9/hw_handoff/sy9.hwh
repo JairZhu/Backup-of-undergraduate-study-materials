@@ -1,0 +1,1058 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May 30 20:03:34 2017" VIVADOVERSION="2016.4">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="sy9" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="J1" SIGIS="undef" SIGNAME="External_Ports_J1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xup_nand2_0" PORT="b"/>
+        <CONNECTION INSTANCE="xup_inv_0" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="CLK1" SIGIS="undef" SIGNAME="External_Ports_CLK1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="CLK1"/>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="CLK2"/>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="CLK1"/>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="CLK2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="PR1_n" SIGIS="undef" SIGNAME="External_Ports_PR1_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="PR1_n"/>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="PR2_n"/>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="PR1_n"/>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="PR2_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="CLR1_n" SIGIS="undef" SIGNAME="External_Ports_CLR1_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="CLR1_n"/>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="CLR2_n"/>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="CLR1_n"/>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="CLR2_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="D" SIGIS="undef" SIGNAME="External_Ports_D">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xup_xor2_0" PORT="a"/>
+        <CONNECTION INSTANCE="xup_inv_3" PORT="a"/>
+        <CONNECTION INSTANCE="xup_nand3_2" PORT="a"/>
+        <CONNECTION INSTANCE="xup_nand3_3" PORT="a"/>
+        <CONNECTION INSTANCE="xup_nand4_1" PORT="a"/>
+        <CONNECTION INSTANCE="xup_nand4_2" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Q1" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Q2" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Q3" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Q4" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q2"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/D_FlipFlop_Set_Reset_0" HWVERSION="1.0" INSTANCE="D_FlipFlop_Set_Reset_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="D_FlipFlop_Set_Reset" VLNV="xilinx.com:XUP:D_FlipFlop_Set_Reset:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_D_FlipFlop_Set_Reset_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK1" SIGIS="undef" SIGNAME="External_Ports_CLK1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="PR1_n" SIGIS="undef" SIGNAME="External_Ports_PR1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PR1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CLR1_n" SIGIS="undef" SIGNAME="External_Ports_CLR1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLR1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="D1" SIGIS="undef" SIGNAME="xup_nand2_1_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_1" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CLK2" SIGIS="undef" SIGNAME="External_Ports_CLK1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="PR2_n" SIGIS="undef" SIGNAME="External_Ports_PR1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PR1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CLR2_n" SIGIS="undef" SIGNAME="External_Ports_CLR1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLR1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="D2" SIGIS="undef" SIGNAME="xup_nand2_3_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_3" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Q1" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_2" PORT="b"/>
+            <CONNECTION INSTANCE="xup_xor2_0" PORT="b"/>
+            <CONNECTION INSTANCE="xup_nand3_1" PORT="b"/>
+            <CONNECTION INSTANCE="xup_nand4_0" PORT="b"/>
+            <CONNECTION INSTANCE="xup_nand4_1" PORT="b"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Q1_n" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_0" PORT="a"/>
+            <CONNECTION INSTANCE="xup_nand3_2" PORT="b"/>
+            <CONNECTION INSTANCE="xup_nand3_5" PORT="b"/>
+            <CONNECTION INSTANCE="xup_nand4_2" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Q2" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_5" PORT="a"/>
+            <CONNECTION INSTANCE="xup_nand3_1" PORT="c"/>
+            <CONNECTION INSTANCE="xup_nand4_0" PORT="c"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Q2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Q2_n" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_4" PORT="a"/>
+            <CONNECTION INSTANCE="xup_nand3_2" PORT="c"/>
+            <CONNECTION INSTANCE="xup_nand3_3" PORT="b"/>
+            <CONNECTION INSTANCE="xup_nand4_1" PORT="c"/>
+            <CONNECTION INSTANCE="xup_nand4_2" PORT="c"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/D_FlipFlop_Set_Reset_1" HWVERSION="1.0" INSTANCE="D_FlipFlop_Set_Reset_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="D_FlipFlop_Set_Reset" VLNV="xilinx.com:XUP:D_FlipFlop_Set_Reset:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_D_FlipFlop_Set_Reset_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK1" SIGIS="undef" SIGNAME="External_Ports_CLK1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="PR1_n" SIGIS="undef" SIGNAME="External_Ports_PR1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PR1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CLR1_n" SIGIS="undef" SIGNAME="External_Ports_CLR1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLR1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="D1" SIGIS="undef" SIGNAME="xup_nand2_7_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_7" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CLK2" SIGIS="undef" SIGNAME="External_Ports_CLK1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="PR2_n" SIGIS="undef" SIGNAME="External_Ports_PR1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PR1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CLR2_n" SIGIS="undef" SIGNAME="External_Ports_CLR1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLR1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="D2" SIGIS="undef" SIGNAME="xup_nand2_10_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_10" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Q1" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_8" PORT="b"/>
+            <CONNECTION INSTANCE="xup_nand2_9" PORT="a"/>
+            <CONNECTION INSTANCE="xup_nand4_0" PORT="d"/>
+            <CONNECTION INSTANCE="xup_nand3_5" PORT="c"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Q3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Q1_n" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_6" PORT="a"/>
+            <CONNECTION INSTANCE="xup_nand4_1" PORT="d"/>
+            <CONNECTION INSTANCE="xup_nand4_2" PORT="d"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Q2" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_9" PORT="b"/>
+            <CONNECTION INSTANCE="xup_nand2_12" PORT="b"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Q4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Q2_n" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q2_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_3" PORT="c"/>
+            <CONNECTION INSTANCE="xup_nand2_11" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_inv_0" HWVERSION="1.0" INSTANCE="xup_inv_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_inv" VLNV="xilinx.com:xup:xup_inv:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_inv_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_J1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="J1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_inv_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_2" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_inv_1" HWVERSION="1.0" INSTANCE="xup_inv_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_inv" VLNV="xilinx.com:xup:xup_inv:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_inv_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_xor2_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_xor2_0" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_inv_1_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_5" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_inv_2" HWVERSION="1.0" INSTANCE="xup_inv_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_inv" VLNV="xilinx.com:xup:xup_inv:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_inv_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_nand3_4_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_4" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_inv_2_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_8" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_inv_3" HWVERSION="1.0" INSTANCE="xup_inv_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_inv" VLNV="xilinx.com:xup:xup_inv:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_inv_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_inv_3_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_1" PORT="a"/>
+            <CONNECTION INSTANCE="xup_nand4_0" PORT="a"/>
+            <CONNECTION INSTANCE="xup_nand3_5" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_inv_4" HWVERSION="1.0" INSTANCE="xup_inv_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_inv" VLNV="xilinx.com:xup:xup_inv:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_inv_2_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_nand2_14_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_14" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_inv_4_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_12" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_0" HWVERSION="1.0" INSTANCE="xup_nand2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="External_Ports_J1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="J1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_1" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_1" HWVERSION="1.0" INSTANCE="xup_nand2_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_nand2_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_0" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_nand2_2_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_2" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_1_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="D1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_10" HWVERSION="1.0" INSTANCE="xup_nand2_10" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_7_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_nand2_11_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_11" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_nand2_12_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_12" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_10_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="D2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_11" HWVERSION="1.0" INSTANCE="xup_nand2_11" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_7_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q2_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q2_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_nand2_13_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_13" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_11_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_10" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_12" HWVERSION="1.0" INSTANCE="xup_nand2_12" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_7_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_inv_4_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_inv_4" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_12_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_10" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_13" HWVERSION="1.0" INSTANCE="xup_nand2_13" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_10_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_nand4_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand4_0" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_nand4_1_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand4_1" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_13_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_11" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_14" HWVERSION="1.0" INSTANCE="xup_nand2_14" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_13_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_nand3_5_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_5" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_nand4_2_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand4_2" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_14_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_inv_4" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_2" HWVERSION="1.0" INSTANCE="xup_nand2_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_0_4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_inv_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_inv_0" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_2_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_1" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_3" HWVERSION="1.0" INSTANCE="xup_nand2_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_nand2_4_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_4" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_nand2_5_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_5" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_3_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="D2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_4" HWVERSION="1.0" INSTANCE="xup_nand2_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_1_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q2_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_xor2_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_xor2_0" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_4_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_3" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_5" HWVERSION="1.0" INSTANCE="xup_nand2_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_1_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_inv_1_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_inv_1" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_5_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_3" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_6" HWVERSION="1.0" INSTANCE="xup_nand2_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_1_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_nand3_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_0" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_6_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_7" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_7" HWVERSION="1.0" INSTANCE="xup_nand2_7" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_1_4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_nand2_6_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_6" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_nand2_8_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_8" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_7_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="D1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_8" HWVERSION="1.0" INSTANCE="xup_nand2_8" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_1_5"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_inv_2_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_inv_2" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_8_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_7" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand2_9" HWVERSION="1.0" INSTANCE="xup_nand2_9" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand2" VLNV="xilinx.com:xup:xup_nand2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand2_8_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand2_9_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_4" PORT="c"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand3_0" HWVERSION="1.0" INSTANCE="xup_nand3_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand3" VLNV="xilinx.com:xup:xup_nand3:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand3_0_4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_nand3_1_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_1" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_nand3_2_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_2" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="xup_nand3_3_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_3" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand3_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_6" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand3_1" HWVERSION="1.0" INSTANCE="xup_nand3_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand3" VLNV="xilinx.com:xup:xup_nand3:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand3_0_5"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_inv_3_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_inv_3" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand3_1_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_0" PORT="a"/>
+            <CONNECTION INSTANCE="xup_nand3_4" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand3_2" HWVERSION="1.0" INSTANCE="xup_nand3_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand3" VLNV="xilinx.com:xup:xup_nand3:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand3_0_6"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q2_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand3_2_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_0" PORT="b"/>
+            <CONNECTION INSTANCE="xup_nand3_4" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand3_3" HWVERSION="1.0" INSTANCE="xup_nand3_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand3" VLNV="xilinx.com:xup:xup_nand3:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand3_0_7"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q2_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q2_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q2_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand3_3_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_0" PORT="c"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand3_4" HWVERSION="1.0" INSTANCE="xup_nand3_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand3" VLNV="xilinx.com:xup:xup_nand3:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand3_0_8"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_nand3_1_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_1" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="xup_nand3_2_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand3_2" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="xup_nand2_9_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_9" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand3_4_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_inv_2" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand3_5" HWVERSION="1.0" INSTANCE="xup_nand3_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand3" VLNV="xilinx.com:xup:xup_nand3:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand3_3_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_inv_3_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_inv_3" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand3_5_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_14" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand4_0" HWVERSION="1.0" INSTANCE="xup_nand4_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand4" VLNV="xilinx.com:xup:xup_nand4:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand4_0_10"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="xup_inv_3_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_inv_3" PORT="y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="d" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand4_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_13" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand4_1" HWVERSION="1.0" INSTANCE="xup_nand4_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand4" VLNV="xilinx.com:xup:xup_nand4:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand4_0_11"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q2_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="d" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand4_1_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_13" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_nand4_2" HWVERSION="1.0" INSTANCE="xup_nand4_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_nand4" VLNV="xilinx.com:xup:xup_nand4:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_nand4_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q2_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q2_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="d" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_1_Q1_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_1" PORT="Q1_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_nand4_2_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_nand2_14" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/xup_xor2_0" HWVERSION="1.0" INSTANCE="xup_xor2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xup_xor2" VLNV="xilinx.com:xup:xup_xor2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DELAY" VALUE="3"/>
+        <PARAMETER NAME="Component_Name" VALUE="sy9_xup_xor2_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="External_Ports_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="b" SIGIS="undef" SIGNAME="D_FlipFlop_Set_Reset_0_Q1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="D_FlipFlop_Set_Reset_0" PORT="Q1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="y" SIGIS="undef" SIGNAME="xup_xor2_0_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xup_inv_1" PORT="a"/>
+            <CONNECTION INSTANCE="xup_nand2_4" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

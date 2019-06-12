@@ -1,0 +1,66 @@
+// Problem#: 4376
+// Submission#: 1077265
+// The source code is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+// URI: http://creativecommons.org/licenses/by-nc-sa/3.0/
+// All Copyright reserved by Informatic Lab of Sun Yat-sen University
+#include <iostream>
+#include <algorithm>
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
+#include <queue>
+using namespace std;
+
+vector<int> graph[1005];
+int dist[1005];
+int vis[1005];
+
+void bfs(int pp)
+{
+    memset(vis,0,sizeof(vis));
+    memset(dist,-1,sizeof(dist));
+    queue<int> q;
+    q.push(pp);
+    vis[pp]=1;
+    while(!q.empty())
+    {
+        int u=q.front();
+        q.pop();
+        for(int i=0;i<graph[u].size();++i)
+        {
+            if(vis[graph[u][i]]==1) continue;
+            else 
+            {
+                dist[graph[u][i]]=dist[u]+1;
+                q.push(graph[u][i]);
+                vis[graph[u][i]]=1;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int n,m,a,b;
+    while(scanf("%d%d",&n,&m)!=EOF)
+    {
+        for(int i=0;i<1005;++i)
+            graph[i].clear();
+        for(int i=0;i<m;++i)
+        {
+            scanf("%d%d",&a,&b);
+            graph[a].push_back(b);
+            graph[b].push_back(a);
+        }
+        bfs(1); 
+        printf("0 ");
+        for(int i=2;i<=n;++i)
+        {
+            if(dist[i]==-1) printf("%d ",dist[i]);
+            else printf("%d ",dist[i]+1);
+        }
+        printf("\n");
+    }
+    //system("pause");
+    return 0;
+}

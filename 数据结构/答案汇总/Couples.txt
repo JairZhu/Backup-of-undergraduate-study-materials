@@ -1,0 +1,36 @@
+// Problem#: 3407
+// Submission#: 871026
+// The source code is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+// URI: http://creativecommons.org/licenses/by-nc-sa/3.0/
+// All Copyright reserved by Informatic Lab of Sun Yat-sen University
+#include <iostream>
+#include <stack>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int t,n,x,y;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        int q=0;
+        vector<int> v(2*n+1,-1);
+        for(int i=0;i<n;++i)
+        {
+            cin>>x>>y;
+            v[x]=v[y]=q++;
+        }
+        
+        stack<int> s;
+        for(int i=1;i<=2*n;++i)
+        {
+            if(!s.empty()&&v[i]==v[s.top()]) s.pop();
+            else s.push(i);
+        }
+        if(s.empty()) cout<<"Yes"<<endl;
+        else cout<<"No"<<endl;
+    }           
+    return 0;
+}

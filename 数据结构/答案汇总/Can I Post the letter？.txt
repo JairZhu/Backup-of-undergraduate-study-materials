@@ -1,0 +1,59 @@
+// Problem#: 3871
+// Submission#: 1074511
+// The source code is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+// URI: http://creativecommons.org/licenses/by-nc-sa/3.0/
+// All Copyright reserved by Informatic Lab of Sun Yat-sen University
+#include <iostream>
+#include <algorithm>
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
+#include <queue>
+using namespace std;
+
+vector<int> graph[205];
+int vis[205];
+
+bool bfs(int pp,int ww)
+{
+    memset(vis,0,sizeof(vis));
+    queue<int> q;
+    q.push(pp);
+    vis[pp]=1;
+    while(!q.empty())
+    {
+        int u=q.front();
+        q.pop();
+        for(int i=0;i<graph[u].size();++i)
+        {
+            if(vis[graph[u][i]]==1) continue;
+            else 
+            {
+                if(graph[u][i]==ww) return true;
+                q.push(graph[u][i]);
+                vis[graph[u][i]]=1;
+            }
+        }
+    }
+    return false;
+}
+
+int main()
+{
+    int n,m,a,b;
+    while(cin>>n&&n!=0)
+    {
+        for(int i=0;i<205;++i)
+            graph[i].clear();
+        scanf("%d",&m);
+        for(int i=0;i<m;++i)
+        {
+            scanf("%d%d",&a,&b);
+            graph[a].push_back(b);
+        }
+        if(bfs(0,n-1)) printf("I can post the letter\n");
+        else printf("I can't post the letter\n");
+    }
+    //system("pause");
+    return 0;
+}
