@@ -1,0 +1,31 @@
+osV0.6-+---doc-----+---bootflp.dsk    软盘映像盘
+       +           +---report.doc     实验报告DOC格式
+       +           +---report.pdf     实验报告PDF格式
+       +---boot----+---boot.asm       引导扇区程序汇编源码
+       +           +---boot.bin       引导扇区程序二进制格式 
+       +           +---make.bat       引导扇区程序编译链接命令批处理脚本
+	   +---kernal--+---kernal.asm     内核主入口汇编模块
+	   +           +---kernal.c       内核主入口c模块
+	   +           +---kernallib.asm  内核汇编子程序库汇编模块
+	   +           +---kernal.bin     内核程序二进制格式
+	   +           +---make.bat       内核程序编译链接命令批处理脚本
+	   +---tools---+---makeboot--+---makeboot.com(生成bootflp.dsk,可选)
+	   +           +             +---makeboot.asm
+	   +           +---testcom---+---tsyscno1.com(测试系统调用功能1)
+	   +           +             +---tsyscno1.c
+	   +           +             +---tsyscno2.com(测试系统调用功能2)
+	   +           +             +---tsyscno2.c
+	   +           +             +---tsyscno3.com(测试系统调用功能3)
+	   +           +             +---tsyscno3.c
+	   +           +             +---tsyscno4.com(测试系统调用功能4)
+	   +           +             +---tsyscno4.c
+	   +           +             +---tsyscall.com(测试系统调用所有功能)
+	   +           +             +---tsyscall.c
+	   +           +             +---user1.com(屏幕1/4区运动字符)
+	   +           +             +---user1.asm
+	   +           +             +---user2.com(屏幕2/4运动字符)
+	   +           +             +---user2.asm
+	   +           +             +---user3.com(屏幕3/4区运动字符)
+	   +           +             +---user3.asm
+	   +           +             +---user4.com(屏幕4/4区运动字符)
+	   +           +             +---user4.asm

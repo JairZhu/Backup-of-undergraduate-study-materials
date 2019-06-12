@@ -1,0 +1,489 @@
+/*
+1. save to file
+2. find by keywords
+3. input a diary
+*/
+
+
+/*
+#include <iostream>
+
+using namespace std;
+
+#include <cstring>
+
+
+
+struct Diary
+{
+
+	char weather[100];
+
+	char date[100];
+
+	char text[10000];
+
+};
+
+
+//save to file
+
+bool saveToFile(const char filename[], Diary diaries[], int length) {
+
+	ofstream output(filename);
+
+	if (output.fail()) {
+		cout << "Cannot open file '" << filename << "' for write.";
+
+		return false;
+
+	}
+
+	for (int i = 0; i < length; ++ i) {
+
+		output << diaries[i].weather << endl;
+
+		output << diaries[i].date << endl;
+
+		output << diaries[i].text << endl;
+
+		output << "[end]" << endl;
+
+	}
+
+	output.close();
+
+	return true;
+
+}
+
+
+//load from file
+
+int loadFromFile(const char filename[], Diary diaries[], int maxLength) {
+
+	ifstream input(filename);
+
+	if (input.fail()) return 0;
+
+	
+int length;
+
+	input >> length;
+
+	for (int i = 0; i < length; ++ i) {
+
+		Diary diary;
+
+		//cout << "Please input a diary\n";
+
+		//cout << "Firstly, please input today's weather:";
+
+		input.getline(diary.weather, sizeof(diary.weather));
+
+		//cout << "Secondly, please input today's date:";
+
+		input.getline(diary.date, sizeof(diary.date));
+
+		//cout << "Lastly, please input text (end by [end])\n";
+
+		diary.text[0] = 0;
+
+		while (true) {
+
+			char buffer[1000];
+
+			input.getline(buffer, sizeof(buffer));
+
+			if (strcmp(buffer, "[end]") == 0) break;
+
+			strcat(diary.text, buffer);
+
+			strcat(diary.text, "\n");
+
+		}
+
+		diaries[i] = diary; 
+
+	}
+
+	input.close();
+
+	return length;
+
+}
+
+
+//input a diary
+
+Diary inputADiary() {
+
+	Diary diary;
+
+	cout << "Please input a diary\n";
+
+	cout << "Firstly, please input today's weather:";
+
+	cin.getline(diary.weather, sizeof(diary.weather));
+
+	cout << "Secondly, please input today's date:";
+
+	cin.getline(diary.date, sizeof(diary.date));
+
+	cout << "Lastly, please input text (end by [end])\n";
+
+	diary.text[0] = 0;
+
+	while (true) {
+
+		char buffer[1000];
+
+		cin.getline(buffer, sizeof(buffer));
+
+		if (strcmp(buffer, "[end]") == 0) break;
+
+		strcat(diary.text, buffer);
+
+		strcat(diary.text, "\n");
+
+	}
+
+	return diary;
+
+}
+
+
+//print a diary
+
+void printADiary(diary) {
+
+	cout << "Weather:" << diary.weather << endl;
+	// ...
+
+}
+
+
+//find by keywords
+
+bool find(const char text[], const char keyword[]) {
+
+	int len1 = strlen(text);
+
+	int len2 = strlen(keyword);
+
+	if (len1 < len2) return false;
+
+	for (int i = 0; i < len1 - len2 + 1; ++ i) {
+
+		if (strncmp(keyword, &text[i]) == 0, len2) return true; 
+
+	}
+
+	return false;
+
+}
+
+
+bool findByKeyword(Diary diary, const char keyword[]) {
+
+	return find(diary.text, keyword);
+
+}
+
+
+void findAndPrint(Diary diary[], int length) {
+
+	char keyword[100];
+
+	cout << "Please give me a keyword:";
+
+	cin >> keyword;
+
+	for (int i = 0; i < length; ++ i) {
+
+		if (findByKeyword(diary[i], keyword)) {
+
+			printADiary(diary[i]);
+
+		}
+
+	}
+
+}
+
+
+////////
+
+
+int main2() {
+
+	Diary diaries[10000];
+
+	int diaryCount = loadFromFile("diary.txt", diareis, 10000);
+
+	while (true) {
+
+		cout << "What do you want to do:\n";
+
+		cout << "1. input a diary\n";
+
+		cout << "2. find diaries\n";
+
+		cout << "3. bye\n";
+
+		int command;
+
+		cin >> command;
+
+		if (command == 1) {
+
+			Diary diary = inputADiary();
+
+			diaries[diaryCount] = diary;
+
+			++ diaryCount;
+
+		}
+
+		else if (command == 2) {
+
+			findAndPrint(diaries, diaryCount);
+
+		}
+
+		else if (command == 3) break;
+
+	}
+
+	saveToFile(diaries, diaryCount);
+
+}
+
+*/		
+
+/*
+A=
+1 2 3
+2 3 4
+4 5 6
+7 8 9
+
+
+B=
+5 6 7 8
+2 3 4 5
+3 4 5 6
+
+
+C=B'
+
+
+A*B =
+D
+
+D[i][j] = <A[i],C[i]>
+*/
+
+
+// 7.20
+
+
+int innerProd(int vector1[], int vector2[], int len) {
+
+	int prod = 0;
+
+	for (int i = 0; i < len; ++ i) {
+
+		prod = vector1[i] * vector2[i];
+
+	}
+
+	return prod;
+
+}
+
+
+void transpose(int matrix[][20], int k, int n, int result[][20]) {
+
+	for (int i = 0; i < k; ++ i) {
+		for (int j = 0; j < n; ++ j) {
+
+			result[j][i] = matrix[i][j];
+
+		}
+
+	}
+
+}
+
+
+void mul(int m, int k, int n, int matrix1[][20], int matrix2[][20], int result[][20]) {
+	int matrix3[20][20];
+
+	transpose(matrix2, k, n, matrix3);
+
+	for (int i = 0; i < m; ++ i) {
+
+		for (int j = 0; j < n; ++ j) {
+
+			result[i][j] = innerProd(matrix1[i], matrix3[j], k);
+
+		}
+
+	}
+
+}
+//7.12
+
+
+bool isLarger(int a, int b) {
+
+	bool aIsEven = (a % 2 == 0);
+
+	bool bIsEven = (b % 2 == 0);
+
+	if (aIsEven && ! bIsEven) return true;
+  
+	if (! aIsEven && bIsEven) return false;
+  
+	return a > b;
+
+}
+
+
+int findIndexOfMax(int array[], int length) {
+
+	int maxIndex = 0;
+
+	for (int i = 0; i < length; ++ i) {
+
+		if (isLarger(array[i], array[maxIndex])) {
+
+			maxIndex = i;
+
+		}
+
+	}
+
+	return maxIndex;
+
+}
+
+
+void selectionSort(int array[], int length) {
+
+	for (int i = 0; i < length - 1; ++ i) {
+
+		int index = findIndexOfMax(array, length - i);		// index <-> length - i - 1
+
+		int temp = array[index];
+
+		array[index] = array[length - i - 1];
+
+		array[length - i - 1] = temp;
+
+	}
+
+}
+
+
+
+
+//7.9
+
+
+#include <iostream>
+
+using namespace std;
+
+#include <cstring>
+
+
+bool isDigit(char c) {
+}
+
+int atoi(char text[], int base) {
+}
+
+
+int skipSpaces(char line[]) {
+
+	for (int i = 0; ; ++ i) {
+	
+	if (line[i] != ' ') return i;
+
+	}
+
+}
+
+
+int skipDigits(char line[]) {
+
+	for (int i = 0; ; ++ i) {
+
+		if (! isDigit(line[i])) return i;
+
+	}
+
+}
+
+
+int find(int array[], int len, int number) {
+
+	for (int i = 0; i < len; ++ i) {
+
+		if (array[i] == number) return i;
+	}
+
+	return -1;
+
+}
+
+
+bool addNumber(int number, int array[], int len) {
+
+	if (find(array, len, number) != -1) return false;
+
+	array[len] = number;
+
+	return true;
+
+}
+
+
+int readLineDistinct(int array[], int max) {
+
+	char line[1001];
+
+	cin.getline(line, 1001);
+
+	int start = 0;
+
+	int len = strlen(line);
+
+	int numberCount = 0;
+
+	while (start >= len) {
+
+		int spaces = skipSpaces(&line[start]);
+
+		start += spaces;
+
+		if (start >= len) break;
+
+		int number = atoi2(&line[start], 10);
+
+		if (addNumber(number, array, numberCount))
+			 ++ numberCount;
+
+		int digits = skipDigits(&line[start]);
+
+		start += digits;
+
+	}
+
+	return numberCount;
+
+}
+
+

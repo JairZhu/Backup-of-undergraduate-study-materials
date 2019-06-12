@@ -1,0 +1,1 @@
+tlink /3 /t MYOS.obj KERNAL.OBJ, OS.com

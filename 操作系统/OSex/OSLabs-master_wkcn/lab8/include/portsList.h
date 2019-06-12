@@ -1,0 +1,11 @@
+#ifndef _PORTSLIST
+#define _PORTSLIST
+
+enum PORTS_LIST{
+	READYPROG_PORT = 3,
+	RUNPROGRETN_PORT = 4,
+	TALK_PORT = 5,
+	SHELLMODE_PORT = 6
+};
+
+#endif
