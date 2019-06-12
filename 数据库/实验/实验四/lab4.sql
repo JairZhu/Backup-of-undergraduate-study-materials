@@ -1,0 +1,121 @@
+--CREATE TRIGGER TRI_Lineitem_Price_UPDATE
+--ON Lineitem
+--AFTER UPDATE
+--AS
+--    IF (UPDATE(extendedprice) OR UPDATE(discount) OR UPDATE(tax))
+--    BEGIN
+--        DECLARE @L_valuediff REAL, @new_extendedprice REAL, @new_discount REAL, @new_tax REAL, @new_orderkey INT, @old_extendedprice REAL, @old_discount REAL, @old_tax REAL;
+--        SELECT @new_extendedprice = extendedprice, @new_discount = discount, @new_tax = tax, @new_orderkey = orderkey 
+--        FROM inserted;
+--        SELECT @old_discount = discount, @old_extendedprice = extendedprice, @old_tax = tax 
+--        FROM deleted;
+--        SELECT @L_valuediff = @new_extendedprice * (1 - @new_discount) * (1 + @new_tax) - @old_extendedprice * (1 - @old_discount) * (1 + @old_tax);
+--        UPDATE Orders SET totalprice = totalprice + @L_valuediff
+--        WHERE orderkey = @new_orderkey;
+--    END
+
+--CREATE TRIGGER TRI_Lineitem_Price_INSERT
+--ON Lineitem
+--AFTER INSERT
+--AS
+--    DECLARE @L_valuediff REAL, @new_extendedprice REAL, @new_discount REAL, @new_tax REAL, @new_orderkey INT;
+--    SELECT @new_discount = discount, @new_extendedprice = extendedprice, @new_tax = tax, @new_orderkey = orderkey 
+--    FROM inserted;
+--    SELECT @L_valuediff = @new_extendedprice * (1 - @new_discount) * (1 + @new_tax);
+--    UPDATE Orders SET totalprice = totalprice + @L_valuediff 
+--    WHERE orderkey = @new_orderkey;
+
+--CREATE TRIGGER TRI_Lineitem_Price_DELETE
+--ON Lineitem
+--AFTER DELETE
+--AS
+--    DECLARE @L_valuediff REAL, @old_extendedprice REAL, @old_discount REAL, @old_tax REAL, @old_orderkey INT;
+--    SELECT @old_discount = discount, @old_extendedprice = extendedprice, @old_tax = tax, @old_orderkey = orderkey 
+--    FROM deleted;
+--    SELECT @L_valuediff = - @old_extendedprice * (1 - @old_discount) * (1 + @old_tax);
+--    UPDATE Orders SET totalprice = totalprice + @L_valuediff 
+--    WHERE orderkey = @old_orderkey;
+
+--SELECT totalprice
+--FROM Orders 
+--WHERE orderkey = 154;
+
+--UPDATE Lineitem SET tax = tax + 0.005
+--WHERE orderkey = 154;
+
+--SELECT totalprice
+--FROM Orders
+--WHERE orderkey = 154;
+
+--CREATE TRIGGER TRI_Lineitem_Quanity_UPDATE
+--ON Lineitem
+--INSTEAD OF UPDATE
+--AS
+--	IF (UPDATE(quantity))
+--	BEGIN
+--		DECLARE @L_valuediff INT, @L_availqty INT, @new_quantity INT, @old_quantity INT, @new_partkey INT, @new_suppkey INT;
+--		SELECT @new_quantity = quantity, @new_partkey = partkey, @new_suppkey = suppkey
+--		FROM inserted;
+--		SELECT @old_quantity = quantity
+--		FROM deleted;
+--		SELECT @L_valuediff = @new_quantity - @old_quantity;
+--		SELECT @L_availqty = availqty
+--		FROM PartSupp
+--		WHERE partkey = @new_partkey AND suppkey = @new_suppkey;
+--		IF (@L_availqty - @L_valuediff >= 0)
+--		BEGIN
+--			PRINT 'Available quantity is ENOUGH';
+--			UPDATE PartSupp
+--			SET availqty = availqty - @L_valuediff
+--			WHERE partkey = @new_partkey AND suppkey = @new_suppkey;
+--		END
+--		ELSE
+--			RAISERROR('Available quantity is NOT ENOUGH', 16, 11);
+--	END
+
+--CREATE TRIGGER TRI_Lineitem_Quanity_INSERT
+--ON Lineitem
+--INSTEAD OF INSERT
+--AS
+--    DECLARE @L_valuediff INT, @L_availqty INT, @new_quantity INT, @new_partkey INT, @new_suppkey INT;
+--    SELECT @new_quantity = quantity, @new_partkey = partkey, @new_suppkey = suppkey
+--    FROM inserted;
+--    SELECT @L_valuediff = @new_quantity;
+--    SELECT @L_availqty = availqty
+--    FROM PartSupp
+--    WHERE partkey = @new_partkey AND suppkey = @new_suppkey;
+--    IF (@L_availqty - @L_valuediff >= 0)
+--    BEGIN
+--        PRINT 'Available quantity is ENOUGH';
+--        UPDATE PartSupp
+--        SET availqty = availqty - @L_valuediff
+--        WHERE partkey = @new_partkey AND suppkey = @new_suppkey;
+--    END
+--    ELSE
+--        RAISERROR('Available quantity is NOT ENOUGH', 16, 11);
+
+--CREATE TRIGGER TRI_Lineitem_Quanity_DELETE
+--ON Lineitem
+--INSTEAD OF DELETE
+--AS
+--    DECLARE @L_valuediff INT, @old_quantity INT, @old_partkey INT, @old_suppkey INT;
+--    SELECT @old_quantity = quantity, @old_partkey = partkey, @old_suppkey = suppkey
+--    FROM deleted;
+--    SELECT @L_valuediff = - @old_quantity;
+--    UPDATE PartSupp
+--    SET availqty = availqty - @L_valuediff
+--    WHERE partkey = @old_partkey AND suppkey = @old_suppkey;
+
+--SELECT L.partkey, L.suppkey, L.quantity, PS.availqty
+--FROM Lineitem L, PartSupp PS 
+--WHERE L.partkey = PS.partkey AND L.suppkey = PS.suppkey AND L.orderkey = 154;
+
+--UPDATE Lineitem
+--SET quantity = quantity + 1000
+--WHERE orderkey = 154;
+
+--SELECT L.partkey, L.suppkey, L.quantity, PS.availqty
+--FROM Lineitem L, PartSupp PS 
+--WHERE L.partkey = PS.partkey AND L.suppkey = PS.suppkey AND L.orderkey = 154;
+
+--DROP TRIGGER TRI_Lineitem_Price_UPDATE;
