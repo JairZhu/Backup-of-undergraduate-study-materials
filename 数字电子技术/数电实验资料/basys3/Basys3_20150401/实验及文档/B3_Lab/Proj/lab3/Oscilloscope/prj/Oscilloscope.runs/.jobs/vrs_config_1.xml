@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="clock_synth_1" LaunchDir="d:/Xilinx_Proj_Mar/B3_Lab/Lab3/Oscilloscope/Src/prj/Oscilloscope.runs/clock_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="d:/Xilinx_Proj_Mar/B3_Lab/Lab3/Oscilloscope/Src/prj/Oscilloscope.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="clock_synth_1"/>
+	</Run>
+</Runs>
+

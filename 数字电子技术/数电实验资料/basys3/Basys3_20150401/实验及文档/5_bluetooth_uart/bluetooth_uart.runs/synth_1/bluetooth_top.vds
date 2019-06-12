@@ -1,0 +1,358 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Sat Oct 11 22:31:58 2014
+# Process ID: 2628
+# Log file: C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/bluetooth_top.vds
+# Journal file: C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source bluetooth_top.tcl
+# set_param gui.test TreeTableDev
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7a100tcsg324-1
+# set_property target_language Verilog [current_project]
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_property default_lib xil_defaultlib [current_project]
+# set_property ip_repo_paths C:/Users/hongyuc/Desktop/digital_base_IP [current_fileset]
+# add_files -quiet C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/UART_0_synth_1/UART_0.dcp
+# set_property used_in_implementation false [get_files C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/UART_0_synth_1/UART_0.dcp]
+# read_verilog -library xil_defaultlib {
+#   C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/seg7.v
+#   C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/display.v
+#   C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/binbcd8.v
+#   C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/new/bluetooth_top.v
+# }
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/seg7.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/display.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/binbcd8.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/new/bluetooth_top.v]
+# read_xdc C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc
+# set_property used_in_implementation false [get_files C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc]
+# read_xdc dont_buffer.xdc
+# set_property used_in_implementation false [get_files dont_buffer.xdc]
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.cache/wt [current_project]
+# set_property parent.project_dir C:/xilinx_workspace/bluetooth_uart [current_project]
+# catch { write_hwdef -file bluetooth_top.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top bluetooth_top -part xc7a100tcsg324-1
+Command: synth_design -top bluetooth_top -part xc7a100tcsg324-1
+
+Starting synthesis...
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 226.484 ; gain = 97.395
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'bluetooth_top' [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/new/bluetooth_top.v:9]
+INFO: [Synth 8-638] synthesizing module 'UART_0' [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/.Xil/Vivado-2628-xshxup31/realtime/UART_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'UART_0' (1#1) [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/.Xil/Vivado-2628-xshxup31/realtime/UART_0_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'binbcd8' [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/binbcd8.v:8]
+INFO: [Synth 8-256] done synthesizing module 'binbcd8' (2#1) [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/binbcd8.v:8]
+INFO: [Synth 8-638] synthesizing module 'display' [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/display.v:8]
+INFO: [Synth 8-638] synthesizing module 'seg7' [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/seg7.v:8]
+INFO: [Synth 8-256] done synthesizing module 'seg7' (3#1) [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/seg7.v:8]
+INFO: [Synth 8-256] done synthesizing module 'display' (4#1) [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/imports/new/display.v:8]
+WARNING: [Synth 8-3848] Net tx_start in module/entity bluetooth_top does not have driver. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/new/bluetooth_top.v:20]
+WARNING: [Synth 8-3848] Net data_in in module/entity bluetooth_top does not have driver. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/new/bluetooth_top.v:21]
+INFO: [Synth 8-256] done synthesizing module 'bluetooth_top' (5#1) [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/new/bluetooth_top.v:9]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 259.480 ; gain = 130.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+Loading clock regions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.2/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/ConfigModes.xml
+
+Processing XDC Constraints
+Parsing XDC File [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc]
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc:2]
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc:4]
+WARNING: [Vivado 12-584] No ports matched 'TMP_SCL'. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'TMP_SDA'. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc:30]
+Finished Parsing XDC File [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/constrs_1/new/bluetooth_uart.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/bluetooth_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Parsing XDC File [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc]
+Finished Parsing XDC File [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 464.031 ; gain = 334.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property BUFFER_TYPE = NONE for clk. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for reset. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for rx. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for tx. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for rx_done. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for tx_done. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for data_out[7]. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for data_out[6]. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for data_out[5]. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for data_out[4]. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for data_out[3]. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for data_out[2]. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for data_out[1]. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for data_out[0]. (constraint file  C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/synth_1/dont_buffer.xdc, line 4).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 464.031 ; gain = 334.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 464.031 ; gain = 334.941
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3848] Net tx_start in module/entity bluetooth_top does not have driver. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/new/bluetooth_top.v:20]
+WARNING: [Synth 8-3848] Net data_in in module/entity bluetooth_top does not have driver. [C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/imports/sources_1/new/bluetooth_top.v:21]
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 18    
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	  11 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module bluetooth_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module binbcd8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 9     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 7     
+Module seg7 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      7 Bit        Muxes := 1     
+Module display 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 467.648 ; gain = 338.559
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 467.648 ; gain = 338.559
+---------------------------------------------------------------------------------
+Finished Parallel Reinfer  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 467.648 ; gain = 338.559
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U3/ans_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (\max_reg[7] ) is unused and will be removed from module bluetooth_top.
+WARNING: [Synth 8-3332] Sequential element (\max_reg[6] ) is unused and will be removed from module bluetooth_top.
+WARNING: [Synth 8-3332] Sequential element (\max_reg[5] ) is unused and will be removed from module bluetooth_top.
+WARNING: [Synth 8-3332] Sequential element (\max_reg[4] ) is unused and will be removed from module bluetooth_top.
+WARNING: [Synth 8-3332] Sequential element (\max_reg[3] ) is unused and will be removed from module bluetooth_top.
+WARNING: [Synth 8-3332] Sequential element (\max_reg[2] ) is unused and will be removed from module bluetooth_top.
+WARNING: [Synth 8-3332] Sequential element (\max_reg[1] ) is unused and will be removed from module bluetooth_top.
+WARNING: [Synth 8-3332] Sequential element (\max_reg[0] ) is unused and will be removed from module bluetooth_top.
+WARNING: [Synth 8-3332] Sequential element (\U3/ans_reg[3] ) is unused and will be removed from module bluetooth_top.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 493.824 ; gain = 364.734
+---------------------------------------------------------------------------------
+Finished Parallel Area Opt  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 493.824 ; gain = 364.734
+Finished Parallel Section  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 493.824 ; gain = 364.734
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:54 . Memory (MB): peak = 542.098 ; gain = 413.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:54 . Memory (MB): peak = 542.098 ; gain = 413.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 554.586 ; gain = 425.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module UART has unconnected pin tx_btn
+CRITICAL WARNING: [Synth 8-4442] BlackBox module UART has unconnected pin data_in[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module UART has unconnected pin data_in[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module UART has unconnected pin data_in[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module UART has unconnected pin data_in[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module UART has unconnected pin data_in[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module UART has unconnected pin data_in[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module UART has unconnected pin data_in[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module UART has unconnected pin data_in[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 554.586 ; gain = 425.496
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 554.586 ; gain = 425.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 554.586 ; gain = 425.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |UART_0        |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |UART_0 |     1|
+|2     |CARRY4 |     5|
+|3     |INV    |     1|
+|4     |LUT1   |    20|
+|5     |LUT2   |     3|
+|6     |LUT3   |     3|
+|7     |LUT4   |    10|
+|8     |LUT5   |     5|
+|9     |LUT6   |    17|
+|10    |FDCE   |    29|
+|11    |FDRE   |    23|
+|12    |OBUF   |    12|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------+------+
+|      |Instance |Module  |Cells |
++------+---------+--------+------+
+|1     |top      |        |   139|
+|2     |  U3     |display |    83|
+|3     |    U4   |seg7    |     7|
++------+---------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 554.586 ; gain = 425.496
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 9 critical warnings and 11 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 554.586 ; gain = 425.496
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 9 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 20 Warnings, 9 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 554.617 ; gain = 372.457
+# write_checkpoint bluetooth_top.dcp
+# report_utilization -file bluetooth_top_utilization_synth.rpt -pb bluetooth_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 554.617 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 11 22:32:55 2014...

@@ -1,0 +1,148 @@
+2012079150013
+//编写时钟分频模块
+// 52：时钟分频器
+module clkdiv (
+input wire mclk,
+input wire clr,
+output wire clk190,
+output wire clk48
+)
+;
+reg [24:0] q;
+// 25 位计数器
+always @ (posedge mclk or posedge clr)
+begin
+if (clr == 1)
+q <= 0;
+else
+q <= q + 1;
+end
+assign clk190 = q[17]; // 190 Hz,用于数码管的扫描显示
+assign clk48 = q[19]; // 47.7 Hz，用于数码管的滚动
+endmodule
+
+//编写移位寄存器模块
+//msg_array保存了64位十六进制数，作为预置数值，在时钟的触发边缘进行移位
+//例 58: shift_array
+module shift_array (
+input wire clk,
+input wire clr,
+output wire [15:0] x
+)
+;
+reg [0:63] msg_array;
+parameter PHONE_NO = 64'h248D656D1490FFFF;//F设定为空白
+always @ (posedge clk or posedge clr)
+begin
+if (clr == 1)
+begin
+msg_array <= PHONE_NO;
+end
+else
+begin
+msg_array[0:59] <= msg_array[4:63];
+msg_array[60:63] <= msg_array[0:3];
+end
+end
+assign x = msg_array[0:15];
+endmodule
+
+//编写数码管滚动显示模块
+//例 58: x7seg_msg – 显示滚动信息
+//输入 cclk 必须为 190 Hz
+module x7seg_msg(
+input wire [15:0] x,
+input wire cclk,
+input wire clr,
+output reg [6:0] a_to_g,
+output reg [3:0] an,
+output wire dp
+);
+reg [1:0] s;
+reg [3:0] digit;
+wire [3:0] aen;
+assign dp = 1;//小数点不显示
+assign aen = 4'b1111; // all digits on四个位选信号都有效
+
+//数码管显示模块
+// Quad 4 选 1 MUX： mux44
+always @ ( * )
+case (s)
+0: digit = x[3:0];
+1: digit = x[7:4];
+2: digit = x[11:8];
+3: digit = x[15:12];
+default: digit = x[3:0];
+endcase
+// 7 段解码器：hex7seg
+always @ ( * )
+case (digit)
+0: a_to_g = 7'b0000001;
+1: a_to_g = 7'b1001111;
+2: a_to_g = 7'b0010010;
+3: a_to_g = 7'b0000110;
+4: a_to_g = 7'b1001100;
+5: a_to_g = 7'b0100100;
+6: a_to_g = 7'b0100000;
+7: a_to_g = 7'b0001111;
+8: a_to_g = 7'b0000000;
+9: a_to_g = 7'b0000100;
+'hA: a_to_g = 7'b0001000;
+'hB: a_to_g = 7'b1100000;
+'hC: a_to_g = 7'b0110001;
+'hD: a_to_g = 7'b1111110;// - 划线
+'hE: a_to_g = 7'b0110000;
+'hF: a_to_g = 7'b1111111;// 空白
+default: a_to_g = 7'b1111111; // 空白
+endcase
+
+//数码管显示模块
+// 数字选择
+always @ ( * )
+begin
+an = 4'b1111;
+if (aen[s] == 1)
+an[s] = 0;
+end
+// 2 位计数器
+always @ (posedge cclk or posedge clr)
+begin
+if (clr ==1)
+s <= 0;
+else
+s<=s+1;
+end
+endmodule
+
+//编写top文件对上述模块进行综合
+//利用clkdiv模块对预设50Mhz和3hz分频并用于移位寄存器和数码管显示模块
+// 例 58: 在 7 段显示管中滚动显示电话号码：BASYS-2 开发板
+module scroll_top(
+input wire mclk,
+input wire [3:3] btn,
+output wire [6:0] a_to_g,
+output wire [3:0] an,
+output wire dp
+);
+wire clr, clk190, clk3;
+wire [15:0] x;
+assign clr = btn[3];
+clkdiv U1 ( .mclk(mclk),
+.clr(clr),
+.clk3(clk3),
+.clk190(clk190)
+);
+shift_array U2 ( 
+.clk (clk3),
+.clr(clr),
+.x(x)
+);
+x7seg_msg U3 (
+.x(x),
+.cclk(clk190),
+.clr(clr),
+.a_to_g(a_to_g),
+.an(an),
+.dp(dp)
+);
+endmodule

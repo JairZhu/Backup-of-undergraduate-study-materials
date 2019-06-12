@@ -1,0 +1,359 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Sun Oct 12 01:57:04 2014
+# Process ID: 5820
+# Log file: C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/UART_0_synth_1/UART_0.vds
+# Journal file: C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/UART_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source UART_0.tcl
+# set_param gui.test TreeTableDev
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7a35tcpg236-1
+# set_property target_language Verilog [current_project]
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_property default_lib xil_defaultlib [current_project]
+# set_property ip_repo_paths C:/Users/hongyuc/Desktop/digital_base_IP [current_fileset]
+# read_ip C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/UART_0.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hongyuc/Desktop/digital_base_IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'UART_0' generated file not found 'c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/UART_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'UART_0' generated file not found 'c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/UART_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'UART_0' generated file not found 'c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/UART_0_stub.vhdl'. Please regenerate to continue.
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property is_locked true [get_files C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/UART_0.xci]
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.cache/wt [current_project]
+# set_property parent.project_dir C:/xilinx_workspace/bluetooth_uart [current_project]
+# catch { write_hwdef -file UART_0.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top UART_0 -part xc7a35tcpg236-1 -mode out_of_context
+Command: synth_design -top UART_0 -part xc7a35tcpg236-1 -mode out_of_context
+
+Starting synthesis...
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 231.684 ; gain = 102.824
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'UART_0' [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/synth/UART_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'uart_top' [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_top.v:9]
+	Parameter DVSR bound to: 651 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'clk' [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/clk.v:7]
+	Parameter DVSR bound to: 651 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clk' (1#1) [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/clk.v:7]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_rx.v:7]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+	Parameter idle bound to: 2'b00 
+	Parameter start bound to: 2'b01 
+	Parameter data bound to: 2'b10 
+	Parameter stop bound to: 2'b11 
+WARNING: [Synth 8-567] referenced signal 's' should be on the sensitivity list [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_rx.v:42]
+WARNING: [Synth 8-567] referenced signal 'n' should be on the sensitivity list [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_rx.v:42]
+WARNING: [Synth 8-567] referenced signal 'rx_reg' should be on the sensitivity list [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_rx.v:42]
+WARNING: [Synth 8-567] referenced signal 'rx_done' should be on the sensitivity list [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_rx.v:42]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (2#1) [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_rx.v:7]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_tx.v:9]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+	Parameter idle bound to: 2'b00 
+	Parameter start bound to: 2'b01 
+	Parameter data bound to: 2'b10 
+	Parameter stop bound to: 2'b11 
+WARNING: [Synth 8-567] referenced signal 'tx' should be on the sensitivity list [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_tx.v:46]
+WARNING: [Synth 8-567] referenced signal 's' should be on the sensitivity list [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_tx.v:46]
+WARNING: [Synth 8-567] referenced signal 'n' should be on the sensitivity list [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_tx.v:46]
+WARNING: [Synth 8-567] referenced signal 'tx_done' should be on the sensitivity list [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_tx.v:46]
+WARNING: [Synth 8-567] referenced signal 'data_reg' should be on the sensitivity list [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_tx.v:46]
+WARNING: [Synth 8-567] referenced signal 'din' should be on the sensitivity list [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_tx.v:46]
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (3#1) [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_tx.v:9]
+INFO: [Synth 8-256] done synthesizing module 'uart_top' (4#1) [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/uart_top.v:9]
+INFO: [Synth 8-256] done synthesizing module 'UART_0' (5#1) [c:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/synth/UART_0.v:57]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 265.496 ; gain = 136.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 265.496 ; gain = 136.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 265.496 ; gain = 136.637
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 4     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 3     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module UART_0 
+Detailed RTL Component Info : 
+Module clk 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module uart_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 7     
+Module uart_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 4     
+Module uart_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Loading clock regions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/cpg236/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.2/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/ConfigModes.xml
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 404.129 ; gain = 275.270
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 404.129 ; gain = 275.270
+---------------------------------------------------------------------------------
+Finished Parallel Reinfer  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 404.129 ; gain = 275.270
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3332] Sequential element (\inst/TX/n_reg[3] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_4/\inst/CLK_div/count_reg[30] )
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[13] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[14] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[15] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[16] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[17] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[18] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[19] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[20] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[21] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[22] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[23] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[24] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[25] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[26] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[27] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[28] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[29] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[30] ) is unused and will be removed from module UART_0.
+INFO: [Synth 8-3332] Sequential element (\inst/CLK_div/count_reg[31] ) is unused and will be removed from module UART_0.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 425.199 ; gain = 296.340
+---------------------------------------------------------------------------------
+Finished Parallel Area Opt  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 425.199 ; gain = 296.340
+Finished Parallel Section  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 425.199 ; gain = 296.340
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 425.199 ; gain = 296.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 425.199 ; gain = 296.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 425.199 ; gain = 296.340
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 425.199 ; gain = 296.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 425.199 ; gain = 296.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     3|
+|2     |LUT2   |    22|
+|3     |LUT3   |    12|
+|4     |LUT4   |    11|
+|5     |LUT5   |     7|
+|6     |LUT6   |    15|
+|7     |FDCE   |    52|
+|8     |FDRE   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+---------+------+
+|      |Instance    |Module   |Cells |
++------+------------+---------+------+
+|1     |top         |         |   123|
+|2     |  inst      |uart_top |   123|
+|3     |    CLK_div |clk      |    32|
+|4     |    RX      |uart_rx  |    46|
+|5     |    TX      |uart_tx  |    44|
++------+------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 425.199 ; gain = 296.340
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 425.199 ; gain = 296.340
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 473.930 ; gain = 287.004
+# rename_ref -prefix_all UART_0_
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+# write_checkpoint -noxdef UART_0.dcp
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 855.445 ; gain = 381.516
+# report_utilization -file UART_0_utilization_synth.rpt -pb UART_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.364 . Memory (MB): peak = 855.445 ; gain = 0.000
+# if { [catch {
+#   file copy -force C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.runs/UART_0_synth_1/UART_0.dcp C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/UART_0.dcp
+#   write_verilog -force -mode synth_stub C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/UART_0_stub.v
+#   write_vhdl -force -mode synth_stub C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/UART_0_stub.vhdl
+#   write_verilog -force -mode funcsim C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/UART_0_funcsim.v
+#   write_vhdl -force -mode funcsim C:/xilinx_workspace/bluetooth_uart/bluetooth_uart.srcs/sources_1/ip/UART_0/UART_0_funcsim.vhdl
+# } _RESULT ] } { 
+#   send_msg_id runtcl-3 error "Unable to successfully create or copy supporting IP files."
+#   return -code error
+# }
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 12 01:58:03 2014...

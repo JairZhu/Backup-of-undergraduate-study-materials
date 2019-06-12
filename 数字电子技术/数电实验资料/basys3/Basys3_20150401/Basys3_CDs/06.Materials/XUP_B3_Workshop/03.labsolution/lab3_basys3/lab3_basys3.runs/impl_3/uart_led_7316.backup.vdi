@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Tue Aug 19 11:33:21 2014
+# Process ID: 9664
+# Log file: C:/xup/fpga_flow/labs/lab3/lab3.runs/impl_3/uart_led.vdi
+# Journal file: C:/xup/fpga_flow/labs/lab3/lab3.runs/impl_3\vivado.jou
+#-----------------------------------------------------------
+source uart_led.tcl -notrace
+Command: open_checkpoint C:/xup/fpga_flow/labs/lab3/lab3.runs/impl_3/uart_led.dcp
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+Loading clock regions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/cpg236/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.2/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/ConfigModes.xml
+Parsing XDC File [C:/xup/fpga_flow/labs/lab3/lab3.runs/impl_3/.Xil/Vivado-9664-XSJYCW33/dcp/uart_led.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_clock' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/xup/fpga_flow/labs/lab3/lab3.srcs/constrs_1/imports/lab2/uart_led_timing.xdc:6]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/xup/fpga_flow/labs/lab3/lab3.srcs/constrs_1/imports/lab2/uart_led_timing.xdc:19]
+set_operating_conditions: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 860.770 ; gain = 425.816
+Finished Parsing XDC File [C:/xup/fpga_flow/labs/lab3/lab3.runs/impl_3/.Xil/Vivado-9664-XSJYCW33/dcp/uart_led.xdc]
+Reading XDEF placement.
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 860.770 ; gain = 0.000
+Restoring placement.
+Restored 12 out of 12 XDEF sites from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-484] Checkpoint was created with build 932637
+open_checkpoint: Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 860.770 ; gain = 684.105
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 860.770 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.2/data/ip'.
+INFO: [IP_Flow 19-3806] Generating IP xilinx.com:ip:labtools_xsdb_master_lib:3.0 for dbg_hub_CV.
+INFO: [IP_Flow 19-3806] Generating IP xilinx.com:ip:ila:4.0 for u_ila_0_CV.

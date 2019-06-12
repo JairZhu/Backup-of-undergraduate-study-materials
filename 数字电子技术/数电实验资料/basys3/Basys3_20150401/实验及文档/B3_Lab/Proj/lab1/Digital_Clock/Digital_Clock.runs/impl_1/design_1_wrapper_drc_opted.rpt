@@ -1,0 +1,109 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Thu Mar 05 17:44:29 2015
+| Host         : LZY-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : report_drc
+------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+           Max violations: <unlimited>
+         Violations found: 9
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+CKLD-2#1 Warning
+Clock Net has direct IO Driver  
+Clock net GND_IBUF is directly driven by an IO rather than a Clock Buffer. Driver(s): GND_IBUF_inst/O2000
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT design_1_i/decimal_counter_0/inst/qa_INST_0 is driving clock pin of 4 cells. This could lead to large hold time violations. First few involved cells are:
+    design_1_i/decimal_counter_0/inst/count_reg[0] {FDCE}
+    design_1_i/decimal_counter_0/inst/count_reg[2]_P {FDPE}
+    design_1_i/decimal_counter_0/inst/count_reg[2]_C {FDCE}
+    design_1_i/decimal_counter_0/inst/count_reg[1] {FDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT design_1_i/decimal_counter_0/inst/qd_INST_0 is driving clock pin of 2 cells. This could lead to large hold time violations. First few involved cells are:
+    design_1_i/decimal_counter_1/inst/a_reg_P {FDPE}
+    design_1_i/decimal_counter_1/inst/a_reg_C {FDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT design_1_i/decimal_counter_1/inst/qa_INST_0 is driving clock pin of 4 cells. This could lead to large hold time violations. First few involved cells are:
+    design_1_i/decimal_counter_1/inst/count_reg[0] {FDCE}
+    design_1_i/decimal_counter_1/inst/count_reg[2]_C {FDCE}
+    design_1_i/decimal_counter_1/inst/count_reg[2]_P {FDPE}
+    design_1_i/decimal_counter_1/inst/count_reg[1] {FDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT design_1_i/decimal_counter_2/inst/qa_INST_0 is driving clock pin of 4 cells. This could lead to large hold time violations. First few involved cells are:
+    design_1_i/decimal_counter_2/inst/count_reg[0] {FDCE}
+    design_1_i/decimal_counter_2/inst/count_reg[1] {FDCE}
+    design_1_i/decimal_counter_2/inst/count_reg[2]_C {FDCE}
+    design_1_i/decimal_counter_2/inst/count_reg[2]_P {FDPE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#5 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT design_1_i/decimal_counter_2/inst/qd_INST_0 is driving clock pin of 2 cells. This could lead to large hold time violations. First few involved cells are:
+    design_1_i/decimal_counter_3/inst/a_reg_P {FDPE}
+    design_1_i/decimal_counter_3/inst/a_reg_C {FDCE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#6 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT design_1_i/decimal_counter_3/inst/qa_INST_0 is driving clock pin of 4 cells. This could lead to large hold time violations. First few involved cells are:
+    design_1_i/decimal_counter_3/inst/count_reg[1] {FDCE}
+    design_1_i/decimal_counter_3/inst/count_reg[0] {FDCE}
+    design_1_i/decimal_counter_3/inst/count_reg[2]_C {FDCE}
+    design_1_i/decimal_counter_3/inst/count_reg[2]_P {FDPE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#7 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT design_1_i/four_2_input_and_gate_0/y1_INST_0 is driving clock pin of 2 cells. This could lead to large hold time violations. First few involved cells are:
+    design_1_i/decimal_counter_2/inst/a_reg_C {FDCE}
+    design_1_i/decimal_counter_2/inst/a_reg_P {FDPE}
+
+Related violations: <none>
+
+

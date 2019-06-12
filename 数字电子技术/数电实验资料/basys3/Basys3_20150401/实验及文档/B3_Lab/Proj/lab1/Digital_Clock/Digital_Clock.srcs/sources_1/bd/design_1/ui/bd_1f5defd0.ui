@@ -1,0 +1,49 @@
+{
+   guistr: "# # String gsaved with Nlview 6.4.10  2014-10-02 bk=1.3207 VDI=35 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port GND -pg 1 -y 200 -defaultsOSRD
+preplace port clr -pg 1 -y 600 -defaultsOSRD
+preplace port dp -pg 1 -y 640 -defaultsOSRD
+preplace port clk -pg 1 -y 400 -defaultsOSRD
+preplace portBus an -pg 1 -y 620 -defaultsOSRD
+preplace portBus seg -pg 1 -y 600 -defaultsOSRD
+preplace inst decimal_counter_0 -pg 1 -lvl 3 -y 120 -defaultsOSRD
+preplace inst decimal_counter_1 -pg 1 -lvl 1 -y 290 -defaultsOSRD
+preplace inst decimal_counter_2 -pg 1 -lvl 2 -y 160 -defaultsOSRD
+preplace inst decimal_counter_3 -pg 1 -lvl 3 -y 540 -defaultsOSRD
+preplace inst seg7decimal_0 -pg 1 -lvl 4 -y 620 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -y 350 -defaultsOSRD
+preplace inst four_2_input_and_gate_0 -pg 1 -lvl 1 -y 550 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 400 -defaultsOSRD
+preplace inst clk_div_0 -pg 1 -lvl 3 -y 310 -defaultsOSRD
+preplace netloc decimal_counter_3_qa 1 2 2 710 440 950
+preplace netloc decimal_counter_0_qb 1 3 1 980
+preplace netloc clr_1 1 0 4 NJ 700 NJ 700 NJ 700 1000
+preplace netloc decimal_counter_3_qb 1 0 4 130 680 NJ 680 NJ 680 960
+preplace netloc decimal_counter_1_qa 1 0 4 130 390 360 300 NJ 260 950
+preplace netloc decimal_counter_0_qc 1 3 1 970
+preplace netloc seg7decimal_0_a_to_g 1 4 1 N
+preplace netloc decimal_counter_3_qc 1 0 4 140 690 NJ 690 NJ 690 990
+preplace netloc decimal_counter_1_qb 1 0 4 140 430 370 320 NJ 360 950
+preplace netloc decimal_counter_0_qd 1 0 4 140 190 NJ 290 NJ 250 960
+preplace netloc decimal_counter_3_qd 1 3 1 970
+preplace netloc decimal_counter_1_qc 1 0 4 120 670 350 330 NJ 370 960
+preplace netloc clk_in1_1 1 0 2 NJ 420 400
+preplace netloc decimal_counter_1_qd 1 1 3 340 340 NJ 380 NJ
+preplace netloc seg7decimal_0_an 1 4 1 N
+preplace netloc seg7decimal_0_dp 1 4 1 N
+preplace netloc four_2_input_and_gate_0_y1 1 0 3 140 400 390 270 650
+preplace netloc r9_1_1 1 0 3 110 410 380 280 700
+preplace netloc xlconcat_0_dout 1 3 2 1000 550 1230
+preplace netloc four_2_input_and_gate_0_y2 1 1 2 410 530 640
+preplace netloc decimal_counter_2_qa 1 1 3 420 260 640 390 NJ
+preplace netloc clk_div_0_clk_out 1 2 2 620 10 940
+preplace netloc clk_wiz_0_clk_out1 1 2 1 630
+preplace netloc decimal_counter_2_qb 1 2 2 620 400 NJ
+preplace netloc clk_wiz_0_clk_out2 1 2 2 NJ 430 940
+preplace netloc decimal_counter_2_qc 1 2 2 680 410 NJ
+preplace netloc decimal_counter_2_qd 1 2 2 660 420 NJ
+preplace netloc decimal_counter_0_qa 1 2 2 710 20 990
+levelinfo -pg 1 80 240 520 840 1130 1250
+",
+}

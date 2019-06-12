@@ -1,0 +1,176 @@
+Proteus 元件名称对照1
+元件名称 中文名 说明
+7407        驱动门      
+1N914        二极管      
+74Ls00        与非门      
+74LS04        非门      
+74LS08        与门      
+74LS390        TTL 双十进制计数器      
+7SEG        4针BCD-LED 输出从0-9 对应于4根线的BCD码
+7SEG        3-8译码器电路BCD-7SEG[size=+0]转换电路      
+ALTERNATOR 交流发电机      
+AMMETER-MILLI mA安培计      
+AND        与门      
+BATTERY        电池/电池组      
+BUS        总线      
+CAP        电容      
+CAPACITOR 电容器      
+CLOCK        时钟信号源      
+CRYSTAL        晶振      
+D-FLIPFLOP D触发器      
+FUSE        保险丝      
+GROUND        地      
+LAMP        灯      
+LED-RED        红色发光二极管      
+LM016L        2行16列液晶 可显示2行16列英文字符，有8位数据总线D0-D7，RS，R/W，EN三个控制端口（共14线），工作电压为5V。没背光，和常用的1602B功能和引脚一样（除了调背光的二个线脚）
+LOGIC ANALYSER 逻辑分析器      
+LOGICPROBE 逻辑探针      
+LOGICPROBE[BIG] 逻辑探针 用来显示连接位置的逻辑状态
+LOGICSTATE 逻辑状态 用鼠标点击,可改变该方框连接位置的逻辑状态
+LOGICTOGGLE 逻辑触发      
+MASTERSWITCH 按钮 手动闭合,立即自动打开
+MOTOR        马达      
+OR        或门      
+POT-LIN        三引线可变电阻器      
+POWER        电源
+RES        电阻      
+RESISTOR 电阻器      
+SWITCH        按钮 手动按一下一个状态
+SWITCH-SPDT 二选通一按钮      
+VOLTMETER 伏特计      
+VOLTMETER-MILLI mV伏特计      
+VTERM        串行口终端      
+Electromechanical 电机      
+Inductors 变压器      
+Laplace Primitives 拉普拉斯变换      
+Memory Ics         
+Microprocessor Ics         
+Miscellaneous 各种器件 AERIAL-天线；ATAHDD；ATMEGA64；BATTERY；CELL；CRYSTAL-晶振；FUSE；METER-仪表；
+Modelling Primitives 各种仿真器件 是典型的基本元器模拟，不表示具体型号，只用于仿真，没有PCB
+Optoelectronics 各种发光器件 发光二极管，LED，液晶等等
+PLDs & FPGAs         
+Resistors 各种电阻      
+Simulator Primitives 常用的器件      
+Speakers & Sounders      
+Switches & Relays 开关，继电器，键盘      
+Switching Devices 晶阊管
+Transistors 晶体管（三极管，场效应管）
+TTL 74 series         
+TTL 74ALS series         
+TTL 74AS series         
+TTL 74F series         
+TTL 74HC series         
+TTL 74HCT series         
+TTL 74LS series         
+TTL 74S series         
+Analog Ics 模拟电路集成芯片
+Capacitors 电容集合
+CMOS 4000 series         
+Connectors 排座，排插
+Data Converters ADC,DAC
+Debugging Tools 调试工具
+ECL 10000 Series
+------------------------------------------------------------
+
+PROTEUS 元件库元件名称及中英对照
+AND 与门
+ANTENNA 天线
+BATTERY 直流电源
+BELL 铃,钟
+BVC 同轴电缆接插件
+BRIDEG 1 整流桥(二极管)
+BRIDEG 2 整流桥(集成块)
+BUFFER 缓冲器
+BUZZER 蜂鸣器
+CAP 电容
+CAPACITOR 电容
+CAPACITOR POL 有极性电容
+CAPVAR 可调电容
+CIRCUIT BREAKER 熔断丝
+COAX 同轴电缆
+CON 插口
+CRYSTAL 晶体整荡器
+DB 并行插口
+DIODE 二极管
+DIODE SCHOTTKY 稳压二极管
+DIODE VARACTOR 变容二极管
+DPY_3-SEG 3段LED
+DPY_7-SEG 7段LED
+DPY_7-SEG_DP 7段LED(带小数点)
+ELECTRO 电解电容
+FUSE 熔断器
+INDUCTOR 电感
+INDUCTOR IRON 带铁芯电感
+INDUCTOR3 可调电感
+JFET N N沟道场效应管
+JFET P P沟道场效应管
+LAMP 灯泡
+LAMP NEDN 起辉器
+LED 发光二极管
+METER 仪表
+MICROPHONE 麦克风
+MOSFET MOS管
+MOTOR AC 交流电机
+MOTOR SERVO 伺服电机
+NAND 与非门
+NOR 或非门
+NOT 非门
+NPN NPN三极管
+NPN-PHOTO 感光三极管
+OPAMP 运放
+OR 或门
+PHOTO 感光二极管
+PNP 三极管
+NPN DAR NPN三极管
+PNP DAR PNP三极管
+POT 滑线变阻器
+PELAY-DPDT 双刀双掷继电器
+RES1.2 电阻
+RES3.4 可变电阻
+RESISTOR BRIDGE ? 桥式电阻
+RESPACK ? 电阻
+SCR 晶闸管
+PLUG ? 插头
+PLUG AC FEMALE 三相交流插头
+SOCKET ? 插座
+SOURCE CURRENT 电流源
+SOURCE VOLTAGE 电压源
+SPEAKER 扬声器
+SW ? 开关
+SW-DPDY ? 双刀双掷开关
+SW-SPST ? 单刀单掷开关
+SW-PB 按钮
+THERMISTOR 电热调节器
+TRANS1 变压器
+TRANS2 可调变压器
+TRIAC ? 三端双向可控硅
+TRIODE ? 三极真空管
+VARISTOR 变阻器
+ZENER ? 齐纳二极管
+DPY_7-SEG_DP 数码管
+SW-PB 开关 
+----------------------------------------------------------------------
+
+      PROTEUS原理图元器件库详细说明
+Device.lib           包括电阻、电容、二极管、三极管和PCB的连接器符号
+ACTIVE.LIB           包括虚拟仪器和有源器件
+DIODE.LIB          包括二极管和整流桥
+DISPLAY.LIB       包括LCD、LED
+BIPOLAR.LIB       包括三极管
+FET.LIB                 包括场效应管
+ASIMMDLS.LIB    包括模拟元器件
+VALVES .LIB           包括电子管
+ANALOG.LIB           包括电源调节器、运放和数据采样IC
+CAPACITORS.LIB 包括电容
+COMS.LIB             包括   4000系列
+ECL.LIB                包括ECL10000系列
+MICRO.LIB             包括 通用微处理器
+OPAMP.LIB              包括 运算放大器
+RESISTORS.LIB    包括 电阻
+FAIRCHLD .LIB        包括FAIRCHLD 半导体公司的分立器件
+LINTEC.LIB             包括 LINTEC公司的运算放大器
+NATDAC.LIB          包括 国家半导体公司的数字采样器件
+NATOA.LIB             包括 国家半导体公司 的运算放大器
+TECOOR.LIB          包括TECOOR公司的 SCR 和TRIAC
+TEXOAC.LIB              包括 德州仪器公司的运算放大器和比较器
+ZETEX .LIB                 包括ZETEX 公司的分立器件 

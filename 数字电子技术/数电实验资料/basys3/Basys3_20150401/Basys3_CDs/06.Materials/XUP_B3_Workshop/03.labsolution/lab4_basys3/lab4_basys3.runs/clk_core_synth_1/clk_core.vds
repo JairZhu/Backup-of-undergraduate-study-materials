@@ -1,0 +1,353 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Mon Aug 18 17:27:03 2014
+# Process ID: 13404
+# Log file: C:/xup/fpga_flow/labs/lab4/lab4.runs/clk_core_synth_1/clk_core.vds
+# Journal file: C:/xup/fpga_flow/labs/lab4/lab4.runs/clk_core_synth_1\vivado.jou
+#-----------------------------------------------------------
+source clk_core.tcl
+# set_param gui.test TreeTableDev
+# set_param xicom.use_bs_reader 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# set_msg_config -id {Labtools 27-147} -limit 4294967295
+# set_msg_config -id {Synth 8-256} -limit 10000
+# set_msg_config -id {Synth 8-638} -limit 10000
+# create_project -in_memory -part xc7a35tcpg236-1
+# set_property target_language Verilog [current_project]
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_property default_lib xil_defaultlib [current_project]
+# read_ip c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'clk_core' generated file not found 'c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clk_core' generated file not found 'c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clk_core' generated file not found 'c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clk_core' generated file not found 'c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_funcsim.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clk_core' generated file not found 'c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_funcsim.vhdl'. Please regenerate to continue.
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property is_locked true [get_files c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.xci]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir C:/xup/fpga_flow/labs/lab4/lab4.cache/wt [current_project]
+# set_property parent.project_dir C:/xup/fpga_flow/labs/lab4 [current_project]
+# catch { write_hwdef -file clk_core.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top clk_core -part xc7a35tcpg236-1 -mode out_of_context
+Command: synth_design -top clk_core -part xc7a35tcpg236-1 -mode out_of_context
+
+Starting synthesis...
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 239.480 ; gain = 105.582
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'clk_core' [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.v:70]
+INFO: [Synth 8-638] synthesizing module 'clk_core_clk_wiz' [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_clk_wiz.v:68]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:10250]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:10250]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:15990]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter CLKOUT1_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:15990]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:606]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:606]
+INFO: [Synth 8-256] done synthesizing module 'clk_core_clk_wiz' (4#1) [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_clk_wiz.v:68]
+INFO: [Synth 8-256] done synthesizing module 'clk_core' (5#1) [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.v:70]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 272.332 ; gain = 138.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/cpg236/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.2/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/ConfigModes.xml
+
+Processing XDC Constraints
+Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.xdc] for cell 'inst'
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clk_core_propImpl.xdc].
+Resolution: To avoid this message, exclude constraints listed in [.Xil/clk_core_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_board.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_board.xdc] for cell 'inst'
+Parsing XDC File [C:/xup/fpga_flow/labs/lab4/lab4.runs/clk_core_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/xup/fpga_flow/labs/lab4/lab4.runs/clk_core_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 465.520 ; gain = 331.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/xup/fpga_flow/labs/lab4/lab4.runs/clk_core_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 465.520 ; gain = 331.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 465.520 ; gain = 331.621
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clk_core 
+Detailed RTL Component Info : 
+Module clk_core_clk_wiz 
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 465.520 ; gain = 331.621
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 465.520 ; gain = 331.621
+---------------------------------------------------------------------------------
+Finished Parallel Reinfer  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 465.520 ; gain = 331.621
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 465.520 ; gain = 331.621
+---------------------------------------------------------------------------------
+Finished Parallel Area Opt  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 465.520 ; gain = 331.621
+Finished Parallel Section  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 465.520 ; gain = 331.621
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 520.578 ; gain = 386.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 520.578 ; gain = 386.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 529.984 ; gain = 396.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 529.984 ; gain = 396.086
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 529.984 ; gain = 396.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 529.984 ; gain = 396.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     3|
+|2     |MMCME2_ADV |     1|
+|3     |IBUF       |     1|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------+-----------------+------+
+|      |Instance |Module           |Cells |
++------+---------+-----------------+------+
+|1     |top      |                 |     5|
+|2     |  inst   |clk_core_clk_wiz |     5|
++------+---------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 529.984 ; gain = 396.086
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 529.984 ; gain = 396.086
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.xdc] for cell 'inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.xdc:56]
+INFO: [Timing 38-2] Deriving generated clocks [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.xdc:56]
+get_clocks: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 954.219 ; gain = 415.723
+Finished Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.xdc] for cell 'inst'
+Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_board.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_board.xdc] for cell 'inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 954.219 ; gain = 762.379
+# rename_ref -prefix_all clk_core_
+# write_checkpoint -noxdef clk_core.dcp
+# report_utilization -file clk_core_utilization_synth.rpt -pb clk_core_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 954.219 ; gain = 0.000
+# if { [catch {
+#   file copy -force C:/xup/fpga_flow/labs/lab4/lab4.runs/clk_core_synth_1/clk_core.dcp c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core.dcp
+#   write_verilog -force -mode synth_stub c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_stub.v
+#   write_vhdl -force -mode synth_stub c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_stub.vhdl
+#   write_verilog -force -mode funcsim c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_funcsim.v
+#   write_vhdl -force -mode funcsim c:/xup/fpga_flow/labs/lab4/lab4.srcs/sources_1/ip/clk_core_0/clk_core_funcsim.vhdl
+# } _RESULT ] } { 
+#   send_msg_id runtcl-3 error "Unable to successfully create or copy supporting IP files."
+#   return -code error
+# }
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 18 17:28:07 2014...

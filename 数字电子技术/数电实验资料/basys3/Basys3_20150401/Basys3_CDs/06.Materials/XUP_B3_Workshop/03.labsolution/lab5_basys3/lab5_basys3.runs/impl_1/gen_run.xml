@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1408656535">
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="PWROPT-DCP" Name="ios_pwropt.dcp"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="ROUTE-TIMING-PB" Name="ios_timing_summary_routed.pb"/>
+  <File Type="PA-TCL" Name="ios.tcl"/>
+  <File Type="OPT-DRC" Name="ios_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="ios_opt.dcp"/>
+  <File Type="PWROPT-DRC" Name="ios_drc_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="ios_placed.dcp"/>
+  <File Type="PLACE-IO" Name="ios_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="ios_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="ios_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ios_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="ios_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="ios_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ios_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ios_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="ios_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="ios_drc_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="ios_routed.dcp"/>
+  <File Type="ROUTE-DRC" Name="ios_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="ios_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="ios_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="ios_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="ios_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="ios_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ios_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="ios_incremental_reuse_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ios_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ios_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ios_timing_summary_postroute_physopted.pb"/>
+  <File Type="RDI-RDI" Name="ios.vdi"/>
+  <File Type="BG-BIT" Name="ios.bit"/>
+  <File Type="BG-BIN" Name="ios.bin"/>
+  <File Type="BITSTR-MSK" Name="ios.msk"/>
+  <File Type="BITSTR-RBT" Name="ios.rbt"/>
+  <File Type="BITSTR-NKY" Name="ios.nky"/>
+  <File Type="BITSTR-BMM" Name="ios_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="ios.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="ios.sysdef"/>
+  <File Type="BG-BGN" Name="ios.bgn"/>
+  <File Type="BG-DRC" Name="ios.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/uart_led.xdc">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab5/lab5.srcs/constrs_1/new/uart_led.xdc"/>
+        <Attr Name="ImportTime" Val="1408656516"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../lab5/lab5.ioplanning/constrs_1/designprops.xml">
+      <FileInfo SFType="CompatPartsDb">
+        <Attr Name="Library" Val="xil_defaultlib"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../lab5/lab5.ioplanning/constrs_1/usercols.xml">
+      <FileInfo SFType="UserColsDb">
+        <Attr Name="Library" Val="xil_defaultlib"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/uart_led.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

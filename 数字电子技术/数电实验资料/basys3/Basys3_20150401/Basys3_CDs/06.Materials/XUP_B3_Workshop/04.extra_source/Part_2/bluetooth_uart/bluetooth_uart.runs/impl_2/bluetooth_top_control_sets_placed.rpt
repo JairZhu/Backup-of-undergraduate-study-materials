@@ -1,0 +1,63 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
+| Date         : Sun Oct 12 03:35:30 2014
+| Host         : xshxup31 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file bluetooth_top_control_sets_placed.rpt
+| Design       : bluetooth_top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    10 |
+| Minimum Number of register sites lost to control set restrictions |    25 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |            7 |
+| No           | No                    | Yes                    |              43 |           14 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               8 |            2 |
+| Yes          | No                    | Yes                    |              36 |           10 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------+----------------------------------+------------------+------------------+----------------+
+|  Clock Signal |           Enable Signal          | Set/Reset Signal | Slice Load Count | Bel Load Count |
++---------------+----------------------------------+------------------+------------------+----------------+
+| ~xlnx_opt__23 |                                  | xlnx_opt__17     |                1 |              1 |
+|  xlnx_opt__23 | UART/inst/TX/n_0_s[3]_i_1__0     | xlnx_opt__17     |                1 |              4 |
+|  xlnx_opt__23 | UART/inst/RX/n_0_s[3]_i_1        | xlnx_opt__17     |                1 |              4 |
+|  xlnx_opt__23 | UART/inst/RX/n_0_n[3]_i_1        | xlnx_opt__17     |                1 |              4 |
+|  xlnx_opt__23 | uart_reg0                        |                  |                2 |              8 |
+|  xlnx_opt__23 | UART/inst/TX/n_0_data_reg[7]_i_1 | xlnx_opt__17     |                3 |              8 |
+|  xlnx_opt__23 | UART/inst/RX/n_0_rx_reg[7]_i_1   | xlnx_opt__17     |                3 |              8 |
+| ~xlnx_opt__23 | n_0_bin[7]_i_1                   | xlnx_opt__17     |                1 |              8 |
+|  xlnx_opt__23 |                                  |                  |                7 |             16 |
+|  xlnx_opt__23 |                                  | xlnx_opt__17     |               13 |             42 |
++---------------+----------------------------------+------------------+------------------+----------------+
+
+

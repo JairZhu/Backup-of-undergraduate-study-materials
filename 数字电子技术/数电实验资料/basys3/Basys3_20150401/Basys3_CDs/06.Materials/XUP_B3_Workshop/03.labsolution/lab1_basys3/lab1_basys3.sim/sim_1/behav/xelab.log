@@ -1,0 +1,20 @@
+Vivado Simulator 2014.2
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.2/bin/unwrapped/win64.o/xelab.exe --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot lab1_tb_behav --prj C:/xup/fpga_flow/2014_2_artix7_labs/lab1/lab1.sim/sim_1/behav/lab1_tb.prj xil_defaultlib.lab1_tb xil_defaultlib.glbl 
+Multi-threading is on. Using 6 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/xup/fpga_flow/2014_2_artix7_labs/lab1/lab1.srcs/sources_1/imports/lab1/lab1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab1
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/xup/fpga_flow/2014_2_artix7_labs/lab1/lab1.srcs/sim_1/imports/lab1/lab1_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab1_tb
+INFO: [VRFC 10-165] Analyzing Verilog file "C:/Xilinx/Vivado/2014.2/data/verilog/src/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.lab1
+Compiling module xil_defaultlib.lab1_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot lab1_tb_behav

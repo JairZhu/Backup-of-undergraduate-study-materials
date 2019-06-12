@@ -1,0 +1,14 @@
+{
+   guistr: "# # String gsaved with Nlview 6.4.10  2014-10-02 bk=1.3207 VDI=35 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port UART -pg 1 -y 20 -defaultsOSRD
+preplace port clk_in1 -pg 1 -y 20 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 1 -y 470 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 1 -y 590 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 1 -y 280 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -y 110 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 380 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 1 -y 740 -defaultsOSRD
+levelinfo -pg 1 80 320 560
+",
+}

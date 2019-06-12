@@ -1,0 +1,62 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
+| Date         : Sat Oct 11 18:38:55 2014
+| Host         : LBDZ-20130305AX running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file xadc_top_control_sets_placed.rpt
+| Design       : xadc_top
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |     9 |
+| Minimum Number of register sites lost to control set restrictions |    33 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              14 |            5 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              15 |            5 |
+| Yes          | No                    | No                     |              37 |           16 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              29 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------+-------------------------------------+------------------+------------------+----------------+
+|           Clock Signal           |            Enable Signal            | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------------------------+-------------------------------------+------------------+------------------+----------------+
+|  u_clk/inst/clk_out1             |                                     | RESET_IBUF       |                1 |              1 |
+|  u_clk/inst/clk_out1             |                                     |                  |                2 |              3 |
+|  u_clk/inst/clk_out1             | u_xadc/n_0_daddr[6]_i_1             |                  |                4 |              5 |
+|  u_clk/inst/clk_out1             | u_xadc/n_0_di_drp[9]_i_1            | RESET_IBUF       |                2 |             10 |
+|  u_seg_disp/n_0_leda_reg[11]_i_2 |                                     |                  |                3 |             11 |
+|  u_clk/inst/clk_out1             |                                     | u_seg_disp/clear |                4 |             14 |
+|  u_clk/inst/clk_out1             | u_xadc/n_0_MEASURED_AUX3[15]_i_1    |                  |                6 |             16 |
+|  u_clk/inst/clk_out1             | u_xadc/n_0_MEASURED_AUX2[15]_i_1    |                  |                6 |             16 |
+|  u_clk/inst/clk_out1             | u_xadc/n_0_FSM_onehot_state[19]_i_1 | RESET_IBUF       |                9 |             19 |
++----------------------------------+-------------------------------------+------------------+------------------+----------------+
+
+

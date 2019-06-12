@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1413026497">
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="PWROPT-DCP" Name="vga_pwropt.dcp"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DRC" Name="vga_drc_opted.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="vga_timing_summary_routed.pb"/>
+  <File Type="PA-TCL" Name="vga.tcl"/>
+  <File Type="OPT-DCP" Name="vga_opt.dcp"/>
+  <File Type="PWROPT-DRC" Name="vga_drc_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="vga_placed.dcp"/>
+  <File Type="PLACE-IO" Name="vga_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="vga_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="vga_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="vga_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="vga_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="vga_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="vga_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="vga_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="vga_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="vga_drc_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="vga_routed.dcp"/>
+  <File Type="ROUTE-DRC" Name="vga_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="vga_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="vga_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="vga_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="vga_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="vga_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="vga_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="vga_incremental_reuse_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="vga_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="vga_timing_summary_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="vga.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="vga_timing_summary_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="vga.bit"/>
+  <File Type="BG-BIN" Name="vga.bin"/>
+  <File Type="BITSTR-MSK" Name="vga.msk"/>
+  <File Type="BITSTR-RBT" Name="vga.rbt"/>
+  <File Type="BITSTR-NKY" Name="vga.nky"/>
+  <File Type="BITSTR-BMM" Name="vga_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="vga.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="vga.sysdef"/>
+  <File Type="BG-BGN" Name="vga.bgn"/>
+  <File Type="BG-DRC" Name="vga.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/file_vga/vga.xdc">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../file_vga/vga.xdc"/>
+        <Attr Name="ImportTime" Val="1413026108"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+      <Desc>Vivado Implementation Defaults</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>

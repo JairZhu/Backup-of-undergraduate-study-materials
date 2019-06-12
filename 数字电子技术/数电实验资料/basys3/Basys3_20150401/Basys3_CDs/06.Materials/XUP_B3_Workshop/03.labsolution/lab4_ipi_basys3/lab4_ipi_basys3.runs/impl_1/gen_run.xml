@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1408675911">
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="PWROPT-DCP" Name="wave_gen_pwropt.dcp"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DRC" Name="wave_gen_drc_opted.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="wave_gen_timing_summary_routed.pb"/>
+  <File Type="PA-TCL" Name="wave_gen.tcl"/>
+  <File Type="OPT-DCP" Name="wave_gen_opt.dcp"/>
+  <File Type="PWROPT-DRC" Name="wave_gen_drc_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="wave_gen_placed.dcp"/>
+  <File Type="PLACE-IO" Name="wave_gen_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="wave_gen_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="wave_gen_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="wave_gen_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="wave_gen_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="wave_gen_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="wave_gen_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="wave_gen_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="wave_gen_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="wave_gen_drc_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="wave_gen_routed.dcp"/>
+  <File Type="ROUTE-DRC" Name="wave_gen_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="wave_gen_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="wave_gen_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="wave_gen_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="wave_gen_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="wave_gen_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="wave_gen_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="wave_gen_incremental_reuse_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="wave_gen_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="wave_gen_timing_summary_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="wave_gen.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="wave_gen_timing_summary_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="wave_gen.bit"/>
+  <File Type="BG-BIN" Name="wave_gen.bin"/>
+  <File Type="BITSTR-MSK" Name="wave_gen.msk"/>
+  <File Type="BITSTR-RBT" Name="wave_gen.rbt"/>
+  <File Type="BITSTR-NKY" Name="wave_gen.nky"/>
+  <File Type="BITSTR-BMM" Name="wave_gen_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="wave_gen.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="wave_gen.sysdef"/>
+  <File Type="BG-BGN" Name="wave_gen.bgn"/>
+  <File Type="BG-DRC" Name="wave_gen.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/lab4/wave_gen_timing.xdc">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/lab4/wave_gen_timing.xdc"/>
+        <Attr Name="ImportTime" Val="1375928352"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/lab4/wave_gen_pins_basys3.xdc">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Users/ycw/Desktop/XUP_Apps_Stuff/Workshops/FPGA_design_flow_using_Vivado/ZedBoard_2014-2/docs_source/N4_docs/artix_packaging/2014_2_artix7_sources/lab4/wave_gen_pins_basys3.xdc"/>
+        <Attr Name="ImportTime" Val="1408675899"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/lab4/wave_gen_timing.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_core"/>
+</GenRun>

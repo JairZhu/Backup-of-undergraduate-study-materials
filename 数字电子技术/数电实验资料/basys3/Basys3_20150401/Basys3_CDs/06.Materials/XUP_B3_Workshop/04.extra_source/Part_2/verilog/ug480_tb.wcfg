@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ug480_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="ug480_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/ug480_tb/DCLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DCLK</obj_property>
+      <obj_property name="ObjectShortName">DCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/RESET" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider615" type="divider">
+      <obj_property name="label">Alarms</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/OT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OT</obj_property>
+      <obj_property name="ObjectShortName">OT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/ALM[2]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">ALM[2]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/ALM[0]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">ALM[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider617" type="divider">
+      <obj_property name="label">Measured values with analog waveforms</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/MEASURED_AUX3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MEASURED_AUX3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MEASURED_AUX3[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">25</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/MEASURED_TEMP" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MEASURED_TEMP[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MEASURED_TEMP[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">25</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/MEASURED_VCCINT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MEASURED_VCCINT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MEASURED_VCCINT[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">25</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/MEASURED_VCCAUX" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MEASURED_VCCAUX[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MEASURED_VCCAUX[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">25</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/MEASURED_VCCBRAM" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MEASURED_VCCBRAM[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MEASURED_VCCBRAM[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">25</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/MEASURED_AUX0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MEASURED_AUX0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MEASURED_AUX0[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">25</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/MEASURED_AUX1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MEASURED_AUX1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MEASURED_AUX1[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">25</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/MEASURED_AUX2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MEASURED_AUX2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MEASURED_AUX2[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">25</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider628" type="divider">
+      <obj_property name="label">drp control signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/eoc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">eoc</obj_property>
+      <obj_property name="ObjectShortName">eoc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/eos" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">eos</obj_property>
+      <obj_property name="ObjectShortName">eos</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/daddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">daddr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">daddr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/di_drp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">di_drp[15:0]</obj_property>
+      <obj_property name="ObjectShortName">di_drp[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/do_drp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">do_drp[15:0]</obj_property>
+      <obj_property name="ObjectShortName">do_drp[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/drdy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">drdy</obj_property>
+      <obj_property name="ObjectShortName">drdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/dwe_reg[0]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">dwe_reg[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/den_reg[0]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">den_reg[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ug480_tb/uut/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[7:0]</obj_property>
+      <obj_property name="ObjectShortName">state[7:0]</obj_property>
+   </wvobject>
+</wave_config>

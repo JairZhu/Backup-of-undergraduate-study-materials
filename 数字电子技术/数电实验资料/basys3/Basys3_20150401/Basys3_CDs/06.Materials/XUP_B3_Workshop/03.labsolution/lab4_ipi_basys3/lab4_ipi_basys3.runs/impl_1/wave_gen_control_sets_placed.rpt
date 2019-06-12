@@ -1,0 +1,96 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
+| Date         : Thu Aug 21 19:55:12 2014
+| Host         : XSJYCW33 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file wave_gen_control_sets_placed.rpt
+| Design       : wave_gen
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    43 |
+| Minimum Number of register sites lost to control set restrictions |   137 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              27 |           16 |
+| No           | No                    | Yes                    |              98 |           22 |
+| No           | Yes                   | No                     |             129 |           58 |
+| Yes          | No                    | No                     |              51 |           16 |
+| Yes          | No                    | Yes                    |              50 |           15 |
+| Yes          | Yes                   | No                     |             236 |           71 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------+------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|              Clock Signal             |                                                Enable Signal                                               |                                                    Set/Reset Signal                                                   | Slice Load Count | Bel Load Count |
++---------------------------------------+------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1                   |                                                                                                                       |                1 |              1 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1                   |                                                                                                                       |                1 |              1 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 |                                                                                                            | clk_gen_i0/O1                                                                                                         |                1 |              2 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 |                                                                                                            | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/n_0_ngwrdrst.grst.g7serrst.wr_rst_reg[1]_i_1 |                1 |              2 |
+|  clk_gen_i0/clk_samp                  |                                                                                                            | clk_gen_i0/O1                                                                                                         |                1 |              2 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 |                                                                                                            | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_d2                                       |                1 |              2 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 |                                                                                                            | clk_gen_i0/O1                                                                                                         |                1 |              2 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 |                                                                                                            | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/n_0_ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1 |                2 |              3 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | resp_gen_i0/n_0_char_cnt[3]_i_2                                                                            | resp_gen_i0/n_0_char_cnt[3]_i_1                                                                                       |                2 |              4 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 | dac_spi_i0/n_0_bit_cnt[4]_i_1                                                                              | rst_gen_i0/reset_bridge_clk_tx_i0/rst_clk_tx                                                                          |                2 |              4 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 | uart_tx_i0/uart_tx_ctl_i0/n_0_over_sample_cnt[3]_i_1                                                       | rst_gen_i0/reset_bridge_clk_tx_i0/rst_clk_tx                                                                          |                1 |              4 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 |                                                                                                            | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/O1[2]                                        |                1 |              5 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/n_0_FSM_onehot_state[6]_i_1                                                                   | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                3 |              6 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | rst_gen_i0/reset_bridge_clk_rx_i0/O1                                                                       |                                                                                                                       |                3 |              6 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/n_0_cur_cmd[6]_i_1                                                                            | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                2 |              7 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/O2[0] | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/O1[0]                                        |                2 |              8 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | uart_rx_i0/uart_rx_ctl_i0/new_char                                                                         | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                4 |              8 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 |                                                                                                            |                                                                                                                       |                7 |             10 |
+|  clk_gen_i0/clk_samp                  | samp_gen_i0/samp_cnt0                                                                                      | samp_gen_i0/meta_harden_samp_gen_go_i0/SR[0]                                                                          |                2 |             10 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/n_0_cmd_samp_ram_addr[9]_i_1                                                                  | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                6 |             10 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/E[0]                                                                                          | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                3 |             11 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 | clkx_nsamp_i0/meta_harden_bus_new_i0/E[0]                                                                  |                                                                                                                       |                4 |             11 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/n_0_nsamp[10]_i_1                                                                             | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                2 |             11 |
+|  clk_gen_i0/clk_samp                  |                                                                                                            | rst_gen_i0/reset_bridge_clk_samp_i0/rst_clk_samp                                                                      |                4 |             12 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | rst_gen_i0/reset_bridge_clk_rx_i0/O1                                                                       | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                7 |             13 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/n_0_cmd_samp_ram_din[15]_i_1                                                                  | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                2 |             16 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/n_0_prescale[15]_i_1                                                                          | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                3 |             16 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/O1[0]                                                                                         | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                4 |             16 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 | clkx_spd_i0/meta_harden_bus_new_i0/E[0]                                                                    |                                                                                                                       |                3 |             16 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/n_0_send_resp_data[15]_i_1                                                                    | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                5 |             16 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/n_0_speed[15]_i_1                                                                             | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                3 |             16 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 | clkx_pre_i0/meta_harden_bus_new_i0/E[0]                                                                    |                                                                                                                       |                4 |             16 |
+|  clk_gen_i0/clk_samp                  | samp_gen_i0/meta_harden_samp_gen_go_i0/O1                                                                  | rst_gen_i0/reset_bridge_clk_samp_i0/rst_clk_samp                                                                      |                4 |             16 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/O2[0]                                                                                         | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                6 |             16 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 |                                                                                                            |                                                                                                                       |                9 |             17 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 |                                                                                                            | lb_ctl_i0/debouncer_i0/meta_harden_signal_in_i0/SR[0]                                                                 |                5 |             18 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/E[0]  | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/O1[2]                                        |                8 |             20 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | cmd_parse_i0/n_0_arg_sav[27]_i_1                                                                           | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |                8 |             28 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0]  | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[1]                                         |                7 |             30 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 |                                                                                                            | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/O1[1]                                        |                7 |             40 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 |                                                                                                            | char_fifo_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[0]                                         |                7 |             40 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out1 |                                                                                                            | rst_gen_i0/reset_bridge_clk_rx_i0/rst_clk_rx                                                                          |               23 |             45 |
+|  clk_gen_i0/clk_core_i0/inst/clk_out2 |                                                                                                            | rst_gen_i0/reset_bridge_clk_tx_i0/rst_clk_tx                                                                          |               26 |             54 |
++---------------------------------------+------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

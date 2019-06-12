@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probeData version="1" minor="1">
+  <probeset name="EDA_PROBESET" active="true">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="HW_ILA" value="ila_led_i0"/>
+        <Option Id="PROBE_PORT" value="0"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="rx_data_rdy"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="HW_ILA" value="ila_led_i0"/>
+        <Option Id="PROBE_PORT" value="1"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="8"/>
+      </probeOptions>
+      <nets>
+        <net name="led_pins[7]"/>
+        <net name="led_pins[6]"/>
+        <net name="led_pins[5]"/>
+        <net name="led_pins[4]"/>
+        <net name="led_pins[3]"/>
+        <net name="led_pins[2]"/>
+        <net name="led_pins[1]"/>
+        <net name="led_pins[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="CORE_LOCATION" value="1:1"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="0"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="8"/>
+      </probeOptions>
+      <nets>
+        <net name="rx_data[7]"/>
+        <net name="rx_data[6]"/>
+        <net name="rx_data[5]"/>
+        <net name="rx_data[4]"/>
+        <net name="rx_data[3]"/>
+        <net name="rx_data[2]"/>
+        <net name="rx_data[1]"/>
+        <net name="rx_data[0]"/>
+      </nets>
+    </probe>
+  </probeset>
+</probeData>

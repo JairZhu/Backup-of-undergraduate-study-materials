@@ -1,0 +1,369 @@
+
+*** Running vivado
+    with args -log uart_led.vds -m64 -mode batch -messageDb vivado.pb -source uart_led.tcl
+
+
+****** Vivado v2014.2 (64-bit)
+  **** SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+  **** IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source uart_led.tcl
+# set_param gui.test TreeTableDev
+# set_param xicom.use_bs_reader 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# set_msg_config -id {Labtools 27-147} -limit 4294967295
+# set_msg_config -id {Synth 8-256} -limit 10000
+# set_msg_config -id {Synth 8-638} -limit 10000
+# create_project -in_memory -part xc7a100tcsg324-1
+# set_property target_language Verilog [current_project]
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_property default_lib xil_defaultlib [current_project]
+# read_verilog -library xil_defaultlib {
+#   C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_rx_ctl.v
+#   C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_baud_gen.v
+#   C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/meta_harden.v
+#   C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_rx.v
+#   C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/led_ctl.v
+#   C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_led.v
+# }
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_rx_ctl.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_baud_gen.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/meta_harden.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_rx.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/led_ctl.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_led.v]
+# read_xdc C:/xup/fpga_flow/labs/lab2/lab2.srcs/constrs_1/imports/lab2/uart_led_timing.xdc
+# set_property used_in_implementation false [get_files C:/xup/fpga_flow/labs/lab2/lab2.srcs/constrs_1/imports/lab2/uart_led_timing.xdc]
+# read_xdc C:/xup/fpga_flow/labs/lab2/lab2.srcs/constrs_1/imports/lab2/uart_led_pins.xdc
+# set_property used_in_implementation false [get_files C:/xup/fpga_flow/labs/lab2/lab2.srcs/constrs_1/imports/lab2/uart_led_pins.xdc]
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir C:/xup/fpga_flow/labs/lab2/lab2.cache/wt [current_project]
+# set_property parent.project_dir C:/xup/fpga_flow/labs/lab2 [current_project]
+# catch { write_hwdef -file uart_led.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top uart_led -part xc7a100tcsg324-1
+Command: synth_design -top uart_led -part xc7a100tcsg324-1
+
+Starting synthesis...
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 231.941 ; gain = 97.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'uart_led' [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_led.v:25]
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLOCK_RATE bound to: 100000000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'meta_harden' [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/meta_harden.v:27]
+INFO: [Synth 8-256] done synthesizing module 'meta_harden' (1#1) [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/meta_harden.v:27]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_rx.v:37]
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLOCK_RATE bound to: 100000000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'uart_baud_gen' [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_baud_gen.v:35]
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLOCK_RATE bound to: 100000000 - type: integer 
+	Parameter OVERSAMPLE_RATE bound to: 1843200 - type: integer 
+	Parameter DIVIDER bound to: 54 - type: integer 
+	Parameter OVERSAMPLE_VALUE bound to: 53 - type: integer 
+	Parameter CNT_WID bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_baud_gen' (2#1) [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_baud_gen.v:35]
+INFO: [Synth 8-638] synthesizing module 'uart_rx_ctl' [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_rx_ctl.v:52]
+	Parameter IDLE bound to: 2'b00 
+	Parameter START bound to: 2'b01 
+	Parameter DATA bound to: 2'b10 
+	Parameter STOP bound to: 2'b11 
+INFO: [Synth 8-4512] found unpartitioned construct node [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_rx_ctl.v:109]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx_ctl' (3#1) [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_rx_ctl.v:52]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (4#1) [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_rx.v:37]
+INFO: [Synth 8-638] synthesizing module 'led_ctl' [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/led_ctl.v:27]
+INFO: [Synth 8-256] done synthesizing module 'led_ctl' (5#1) [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/led_ctl.v:27]
+INFO: [Synth 8-256] done synthesizing module 'uart_led' (6#1) [C:/xup/fpga_flow/labs/lab2/lab2.srcs/sources_1/imports/lab2/uart_led.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 265.898 ; gain = 131.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+Loading clock regions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.2/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/ConfigModes.xml
+
+Processing XDC Constraints
+Parsing XDC File [C:/xup/fpga_flow/labs/lab2/lab2.srcs/constrs_1/imports/lab2/uart_led_timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_clock' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/xup/fpga_flow/labs/lab2/lab2.srcs/constrs_1/imports/lab2/uart_led_timing.xdc:6]
+Finished Parsing XDC File [C:/xup/fpga_flow/labs/lab2/lab2.srcs/constrs_1/imports/lab2/uart_led_timing.xdc]
+Parsing XDC File [C:/xup/fpga_flow/labs/lab2/lab2.srcs/constrs_1/imports/lab2/uart_led_pins.xdc]
+Finished Parsing XDC File [C:/xup/fpga_flow/labs/lab2/lab2.srcs/constrs_1/imports/lab2/uart_led_pins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/xup/fpga_flow/labs/lab2/lab2.srcs/constrs_1/imports/lab2/uart_led_pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/uart_led_propImpl.xdc].
+Resolution: To avoid this message, exclude constraints listed in [.Xil/uart_led_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 473.668 ; gain = 339.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 473.668 ; gain = 339.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 473.668 ; gain = 339.559
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module uart_led 
+Detailed RTL Component Info : 
+Module meta_harden 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module uart_baud_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module uart_rx_ctl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 7     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module uart_rx 
+Detailed RTL Component Info : 
+Module led_ctl 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 477.738 ; gain = 343.629
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 477.738 ; gain = 343.629
+---------------------------------------------------------------------------------
+Finished Parallel Reinfer  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 477.738 ; gain = 343.629
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 504.035 ; gain = 369.926
+---------------------------------------------------------------------------------
+Finished Parallel Area Opt  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 504.035 ; gain = 369.926
+Finished Parallel Section  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 504.035 ; gain = 369.926
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 547.734 ; gain = 413.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 547.734 ; gain = 413.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 559.082 ; gain = 424.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 559.082 ; gain = 424.973
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 559.082 ; gain = 424.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 559.082 ; gain = 424.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |LUT2 |     2|
+|4     |LUT3 |    10|
+|5     |LUT4 |     7|
+|6     |LUT5 |     6|
+|7     |LUT6 |    22|
+|8     |FDRE |    44|
+|9     |FDSE |     4|
+|10    |IBUF |     4|
+|11    |OBUF |     8|
++------+-----+------+
+
+Report Instance Areas: 
++------+------------------------+--------------+------+
+|      |Instance                |Module        |Cells |
++------+------------------------+--------------+------+
+|1     |top                     |              |   109|
+|2     |  led_ctl_i0            |led_ctl       |    25|
+|3     |  meta_harden_btn_i0    |meta_harden   |     2|
+|4     |  meta_harden_rst_i0    |meta_harden_0 |     2|
+|5     |  uart_rx_i0            |uart_rx       |    67|
+|6     |    meta_harden_rxd_i0  |meta_harden_1 |     2|
+|7     |    uart_baud_gen_rx_i0 |uart_baud_gen |    14|
+|8     |    uart_rx_ctl_i0      |uart_rx_ctl   |    51|
++------+------------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 559.082 ; gain = 424.973
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 559.082 ; gain = 424.973
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 559.270 ; gain = 377.781
+# write_checkpoint uart_led.dcp
+# report_utilization -file uart_led_utilization_synth.rpt -pb uart_led_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 559.270 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 14 17:30:33 2014...
