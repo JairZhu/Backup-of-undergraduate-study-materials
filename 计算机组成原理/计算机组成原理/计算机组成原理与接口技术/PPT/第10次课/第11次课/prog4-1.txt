@@ -1,0 +1,47 @@
+	TITLE        PROG4-1     SIMPLE DISPLAY PROGRAM
+        PAGE         60,132
+             .MODEL SMALL
+             .STACK 64
+;--------------
+             .DATA
+MESSAGE DB           'This is a test of the display routine','$'
+;--------------
+             .CODE
+MAIN         PROC    FAR
+             MOV     AX,@DATA
+             MOV     DS,AX
+             CALL    CLEAR                   ;CLEAR THE SCREEN
+             CALL    CURSOR          ;SET CURSOR POSITION
+             CALL    DISPLAY         ;DISPLAY MESSAGE
+             MOV     AH,4CH
+             INT     21H                     ;GO BACK TO DOS
+MAIN         ENDP
+;---------------
+;THIS SUBROUTINE CLEARS THE SCREEN
+CLEAR        PROC
+             MOV     AX,0600H               ;SCROLL SCREEN FUNCTION
+             MOV     BH,07                  ;NORMAL ATTRIBUTE
+             MOV     CX,0000                ;SCROLL FROM ROW=00,COL=00
+             MOV     DX,184FH               ;TO ROW=18H,COL=4FH
+             INT     10H                    ;INVOKE INTERRUPT TO CLEAR SCREEN
+             RET
+CLEAR        ENDP
+;---------------
+;THIS SUBROUTINE SETS THE CURSOR AT THE CENTER OF THE SCREEN
+CURSOR       PROC
+             MOV     AH,02              ;SET CURSOR FUNCTION
+             MOV     BH,00              ;PAGE 00
+             MOV     DH,12              ;CENTER ROW
+             MOV     DL,39              ;CENTER COLUMN
+             INT     10H             ;INVOKE INTERRUPT TO SET CURSOR POSITION
+             RET
+CURSOR   ENDP
+;---------------
+;THIS SUBROUTINE DISPLAYS A STRING ON THE SCREEN
+DISPLAY      PROC
+             MOV     AH,09                ;DISPLAY FUNCTION
+             MOV     DX,OFFSET MESSAGE    ;DX POINTS TO OUTPUT BUFFER
+             INT     21H                  ;INVOKE INTERRUPT TO DISPLAY STRING
+             RET
+DISPLAY      ENDP
+             END     MAIN

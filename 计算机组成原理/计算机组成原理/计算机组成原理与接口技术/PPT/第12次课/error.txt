@@ -1,0 +1,72 @@
+
+      .MODEL SMALL
+      .STACK 64
+      .DATA
+DATA1  DB  '0123456789'
+
+DATA   DB   'werrer'
+
+     
+
+DATA2  DB 5 DUP(00), C0H
+
+HIGHEST  DB  ?
+
+MAX      DB  2 dup(?)
+
+
+DA1    DW  472
+
+CR     EQU  0DH
+LF     EQU  0AH 
+
+        
+     .CODE
+    
+
+MAIN:    PROC  FAR
+        PUSH DS
+        MOV AX,0
+        PUSH AX
+        MOV  AX, DATA
+        MOV  DS, AX
+        MOV CX, 12
+
+        MOV SI, offset DATA
+
+        DEC CX
+  
+        MOV HIGHEST, AL
+
+        MOV BX, offset DATA1
+        MOV DI,offset MAX
+
+        MOV BYTE PTR [DI], BYTE PTR [BX]
+
+        MOV HIGHEST, MAX
+
+        SUB MAX, [BX]
+
+        MOV AL,0
+        MOV SI, offset data1
+        CMP BL, [SI]+AL
+
+        MOV CL, AL[SI]
+
+        DEC CX
+        JNZ  CALL SUBPROC1
+
+        MOV DX, offset DATA1
+
+        MOV AX, [DX]
+       
+        RET
+MAIN    ENDP
+
+SUBPROC1  PROC NEAR
+
+    MOV AX, 0
+
+     RET
+SUBPROC1 ENDP
+        END MAIN

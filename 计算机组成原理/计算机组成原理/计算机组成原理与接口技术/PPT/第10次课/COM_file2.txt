@@ -1,0 +1,19 @@
+TITLE     	PROG2-5 COM PROGRAM TO ADD TWO WORDS
+PAGE      	60,132
+CODSG     	SEGMENT 
+             	ASSUME  CS:CODSG,DS:CODSG,ES:CODSG
+             	ORG  	100H
+START:    	JMP 	PROGCODE 	;go around the data area
+;---THIS IS THE DATA AREA
+DATA1     	DW   	2390H
+DATA2		DW	3456H
+SUM		DW	?
+;---THIS IS THE CODE AREA
+PROGCODE:	MOV	AX,DATA1	;move the first word into AX
+		ADD	AX,DATA1	;add the second word
+                MOV     SUM,AX          ;move the sum
+		MOV	AH,4CH
+		INT	21H
+;-----------------------------------------
+CODSG		ENDS
+		END	START

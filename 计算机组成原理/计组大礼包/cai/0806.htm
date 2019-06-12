@@ -1,0 +1,120 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>通用I/O接口标准</title>
+
+      
+<p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="968" height="24"></p>
+<div align="center">
+	<p>  <a href="0800.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">8.6 通用I/O接口标准</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+	</font></p>
+<p></p>
+<p><b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.6.1 并行I/O标准接口SCSI</a><br>
+			<a href="#.4"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.6.2 串行</a><a href="#.2">I/O标准接口IEEE1394</a>　</font></b></p>
+<p align="center"><b><font size="6">    </font></b>　</p>
+<p>　</p>
+<p><font size="6">　</font></p>
+<table border="0" width="992" height="1579" cellspacing="0" cellpadding="0" id="table1">
+  <tr height="27"> 
+    <td colspan="2" bgcolor="#000080" height="27">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".1">8</a></font><a name=".1"><font size="6" color="#FFFFFF">.6.1</font></a><font color="#FFFFFF" size="6"><a name=".1">
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">并行I/O标准接口SCSI</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+		<td height="73"></td>
+		<td width="967" height="73">
+			<p><font size="6">　　<b><font color="#ff0000">SCSI</font></b>是小型计算机系统接口的简称，其设计思想来源于IBM大型机系统的I/O通道结构，目的是使CPU摆脱对各种设备的繁杂控制。它是一个高速智能接口，可以混接各种磁盘、光盘、磁 带机、打印机、扫描仪、条码阅读器以及通信设备。它首先应用于Macintosh和Sun平台上，后来发展到工作站、网络服务器和pentium系统中，并成为ANSI(美国国家标准局)标准。</font></p>
+			<p><font size="6" color="#0000ff"><u><i><b>SCSI有如下性能特点：</b></i></u></font></p>
+			<p><font size="6">(1)SCSI接口总线由8条数据线、一条奇偶校验线、9条控制线组成。使用50芯电缆，规定了两种电气条件：单端驱动，电缆长6m；差分驱动，电缆最长25m。</font></p>
+			<p><font size="6">(2)总线时钟频率为5MHz，异步方式数据传输率是2.5MB/s，同步方式数据传输率是5MB/s。</font></p>
+			<p><font size="6">(3)SCSI接口总线以菊花链形式最多可连接8台设备。在pentium中通常是：由一个主适配器HBA与最多7台外围设备相接，HBA也算作一个SCSI设备，由HBA经系统总线(如PCI)与CPU相连。</font></p>
+			<blockquote></blockquote>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:20pt"> </span></div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O" align="center">
+				<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+					 <img border="0" src="素材库/fig/图片/图_通用IO接口标准.png" width="805" height="173"></div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<p></p>
+				</div>
+			</div>
+			<div align="center">
+				<font size="6">图8.21 SCSI接口配置实例</font></div>
+			<div align="left">
+				<p><font size="6">(4)每个SCSI设备有自己的唯一设备号ID0—7。ID=7的设备具有最高优先权，ID=0的设备优先权最低。SCSI采用</font><font size="6" color="#ff80c0"><b>分布式总线仲裁</b></font><font size="6">策略。在仲裁阶段，竞争的设备以自己的设备号驱动数据线中相应的位线(如ID=7的设备驱动DB<sub>7</sub>线)，并与数据线上的值进行比较。因此仲裁逻辑比较简单，而且在SCSI的总线选择阶段，启动设备和目标设备的设备号能同时出现在数据线上。</font></p>
+				<p><font size="6">(5)所谓</font><font size="6" color="#ff0000"><b>SCSI设备</b></font><font size="6">是指连接在SCSI总线上的智能设备，即除主适配器HBA外，其他SCSI设备实际是外围设备的适配器或控制器。每个适配器或控制器通过各自的设备级I/O线可连接一台或几台同类型的外围设备(如一个SCSI磁盘控制器接2台硬盘驱动器)。标准允 许每个SCSI设备最多有8个逻辑单元，每个逻辑单元可以是物理设备也可以是虚拟设备。每个逻辑单元有一个逻辑单元号(LUN0—LUN7)。</font></p>
+				<p><font size="6">(6)由于SCSI设备是智能设备，对SCSI总线以至主机屏蔽了实际外设的固有物理属性(如磁盘柱面数、磁头数等参数)，各SCSI设备之间就可用一套标准的命令进行数据传送，也为设备的升级或系统的系列化提供了灵活的处理手段。</font></p>
+				<p><font size="6">(7)SCSI设备之间是一种对等关系，而不是主从关系。SCSI设备分为启动设备(发命令的设备 )和目标设备(接受并响应命令的设备)。但启动设备和目标设备是依当时总线运行状态来划分的，而不是预先规定的。</font></p>
+			</div>
+			<blockquote>
+				
+			</blockquote>
+			<p><font size="6">　 　总之，SCSI是系统级接口，是处于主适配器和智能设备控制器之间的并行I/O接口。一块主适配器可以接7台具有SCSI接口的设备，这些设备可以是类 型完全不同的设备，主适配器却只占主机的一个槽口。这对于缓解计算机挂接外设的数量和类型越来越多、主机槽口日益紧 张的状况很有吸引力。</font></p>
+			<p><font size="6">　 　为提高数据传输率和改善接口的兼容性，90年代又陆续推出了SCSI-2和SCSI-3标准。SCSI-2扩充了SCSI的命令集，通过提高时钟速率和 数据线宽度，最高数据传输率可达40MB/s，采用68芯电缆，且对电缆采用有源终端器。SCSI-3标准允许SCSI总线上连接的设备 由8提高到16，可支持16位数据传输。另一个变化是发展串行SCSI，使串行数据传输率达到640Mb/s(电缆)或1Gb/s(光纤)，从而使串行 SCSI成为IEEE1394标准的基础。</font></p>
+			<p></p>
+		</td>
+	</tr>
+	<tr>
+		<td height="73"></td>
+		<td width="967" height="73"></td>
+	</tr>
+	<tr height="27">
+		<td colspan="2" bgcolor="navy" height="27"><strong><font size="6" color="#FFFFFF"><a name=".1">8</a></font><a name=".1"><font size="6" color="#FFFFFF">.6.2</font></a><font color="#FFFFFF" size="6"><a name=".1">
+	</a></font><font size="6"><a name=".2"><font color="#FFFFFF">串行I/O标准接口IEEE1394</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td>
+	</tr>
+	<tr>
+		<td height="73"></td>
+		<td width="967" height="73">
+			<p><b><font size="6"><i><font color="#ff0000">1.</font></i></font><font size="6" color="#8080ff"><i> </i></font><font size="6"><i><font color="#ff0000">1394性能特点</font></i></font></b></p>
+			<p><font size="6" color="#0000ff"><u><i><b>IEEE1394串行接口与SCSI等并行接口相比，有如下三个显著特点：</b></i></u> </font></p>
+			<p><font size="6" color="#0000ff"><b>(1)数据传送的高速性</b>：</font><font size="6">1394的数据传输率分为100Mb/s、200Mb/s、400Mb/s三档。而SCSI-2也只有40MB/s(相当于320Mb/s)。这样的高速 特性特别适合于新型高速硬盘及多媒体数据传送。1394之所以达到高速，一是串行传送比并行传送容易提高数据传送时钟速率；二是采用了DS-Link编码 技术，把时钟信号的变化转变为选通信号的变化，即使在高的时钟速率下也不易引起信号失真。</font></p>
+			<p><font size="6"><b><font color="#0000ff">(2)数据传送的实时性</font><font color="#0080c0">：</font></b>实时性可保证图像和声音不会出现时断时续的现象，因此对多媒体数据传送特别重要。1394之所以做到实时性，原因有二：一是它除了异步传送外，还提供了一 种等步传送方式，数据以一系列的固定长度的包规整间隔地连续发送，端到端既有最大延时限制而又有最小延时限制；二是总线仲裁除优先权仲裁之外，还有均等仲 栽和紧急仲栽方式。</font></p>
+			<p><font size="6"><b><font color="#0000ff">(3)体积小易安装，连接方便</font></b></font><font size="6" color="#0000ff">：</font><font size="6">1394使用6芯电缆，直径约为6mm，插座也小。而SCSI使用50芯或68芯电缆，插座体积也大。 在当前个人机要连接的设备越来越多、主机箱的体积越显窄小情况下，电缆细、插座小的1394是很有吸引力的，尤其对笔记本电脑一类机器。1394的电缆不 需要与电缆阻抗匹配的终端，而且电缆上的设备随时可从插座重拔出或插入， 即具有热插入能力。这对用户安装和使用1394设备很有利。</font></p>
+			<blockquote>
+				<blockquote>
+					
+				</blockquote>
+			</blockquote>
+			<p><b><i><font size="6" color="#ff0000">2. 1394配置结构</font></i></b></p>
+			<p><font size="6">　　1394采用</font><font size="6" color="#0000ff"><b>菊花链式</b></font><font size="6">配置，也允许</font><font size="6" color="#0000ff"><b>树形结构</b></font><font size="6">配置。事实上，菊花链结构是树型结构的一种特殊情况。</font></p>
+			<p><font size="6">　　1394接口也需要一个主适配器和系统总线相连。这个主适配器的功能逻辑在高档的pentium机中集成在主板的核心芯片组的PCI总线到ISA总线的桥芯片中。机箱的背面只看到主适配器的外接端口插座。</font></p>
+			<p><font size="6">　　我们将主适配器及其端口称为</font><font size="6" color="#0000ff"><b>主端口</b></font><font size="6">。主端口是1394接口树形配置结构的根节点。一个主端口最多可连接63台设备，这些设备称为</font><font size="6" color="#0000ff"><b>节点</b></font><font size="6">，它们构成亲子关系。两个相邻节点之间 的电缆最长为4.5m，但两个节点之间进行通信时中间最多可经过15个节点的转接再驱动，因此通信的最大距离是72m。电缆不需要终端器。</font></p>
+			<div align="center">
+				<blockquote>
+					<p><a href="素材库/fig/Flash/8.22.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+					<p><font size="6">图8.22 IEEE 1394串行接口配置实例</font></p>
+				</blockquote>
+			</div>
+			<div align="left">
+				<blockquote>
+					<p><font size="6">　</font><font size="6">1394采用</font><font size="6" color="#0000ff"><b>集中式总线仲裁</b></font><font size="6">方 式。中央仲裁逻辑在主端口内，并以先到先服务方法来处理节点提出的总线访问请求。在n个节点同时提出使用总线请求时，按照优先权进行仲裁。最靠根节点的竞 争节点有高的优先权；同样靠近根节点的竞争节点，其设备标识号ID大的有更高优先权。1394具有PnP功能，设备标识号是系统自动指定的，而不是用户设定的。</font></p>
+				</blockquote>
+			</div>
+			<p><b><i><font size="6" color="#ff0000">3.1394协议集</font></i></b></p>
+			<p><font size="6">　　</font><font size="6" color="#0000ff"><u><i><b>1394的一个重要特色是</b></i></u></font><font size="6">：它规范了一个三层协议集，将串行总线与各外围设备的交互动作标准化。</font></p>
+			<div align="center">
+				<blockquote>
+					<p><a href="素材库/fig/Flash/8.23.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				</blockquote>
+			</div>
+			<blockquote>
+				<div align="center">
+					<p><font size="6">图8.23 IEEE 1394协议集</font></p>
+				</div>
+			</blockquote>
+		</td>
+	</tr>
+	<tr height="19">
+		<td height="19"></td>
+		<td width="967" height="19"></td>
+	</tr>
+</table>

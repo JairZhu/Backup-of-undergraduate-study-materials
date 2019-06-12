@@ -1,0 +1,18 @@
+   TITLE        PROG5-3
+   PAGE 	60,132
+             	INCLUDE   MYMACRO2.MAC
+   		.MODEL SMALL
+		.STACK 64
+   ;--------------
+   		.DATA
+   MESSAGE1   DB        'This is a test of macro concepts','$'
+   		.CODE
+   MAIN      	PROC  	FAR
+             	MOV  	AX,@DATA
+             	MOV  	DS,AX
+             	CLEARSCR		;INVOKE CLEAR SCREEN MACRO
+             	DISPLAY  MESSAGE1	;INVOKE DISPLAY MACRO
+             	MOV  	AH,4CH
+             	INT  	21H            	;GO BACK TO DOS
+   MAIN      	ENDP
+                END     MAIN

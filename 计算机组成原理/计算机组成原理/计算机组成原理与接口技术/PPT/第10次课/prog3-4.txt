@@ -1,0 +1,31 @@
+TITLE     	PROG3-4  (EXE)   LOWERCASE TO UPPERCASE CONVERSION
+   PAGE 	60,132
+   .MODEL SMALL
+   .STACK 64
+   ;--------------
+   		.DATA
+   DATA1    	DB        	'mY NAME is jOe'
+             	ORG	0020H
+   DATA2  	DB        	14 DUP(?)
+   ;--------------
+   		.CODE
+   MAIN      	PROC  	FAR
+             	MOV 	AX,@DATA
+             	MOV 	DS,AX
+             	MOV 	SI,OFFSET DATA1	;SI points to original data
+             	MOV 	BX,OFFSET DATA2	;BX points to uppercase data
+             	MOV 	CX,14			;CX is loop counter
+   BACK:     	MOV 	AL,[SI]			;get next character   
+             	CMP 	AL,61H			;if less than 'a'           
+                JB      OVER            ;then no need to convert
+             	CMP  	AL,7AH 		;if greater than 'z'
+                JA      OVER            ;then no need to convert 
+             	AND  	AL,11011111B	;mask d5 to convert to uppercase
+   OVER:     	MOV  	[BX],AL		;store uppercase character   
+             	INC  	SI		;increment pointer to original 
+             	INC  	BX		;increment pointer to uppercase data
+             	LOOP 	BACK		;continue looping if CX > 0
+             	MOV  	AH,4CH
+             	INT  	21H		;go back to dos
+   MAIN      	ENDP
+               	END  	MAIN

@@ -1,0 +1,59 @@
+TITLE        PROG4-3 READS IN LAST NAME AND DISPLAYS LENGTH
+PAGE         60,132
+                .MODEL SMALL
+                .STACK 64
+;--------------
+                .DATA
+MESSAGE1  DB    'What is your last name?','$'
+                ORG          20H
+BUFFER1   DB    9,?,9 DUP (0)
+                ORG          30H
+MESSAGE2  DB    CR,LF,'The number of letters in your name is: ','$'
+
+ROW       EQU       08
+COLUMN    EQU       05
+CR        EQU       0DH      ;EQUATE CR WITH ASCII CODE FOR CARRIAGE RETURN
+LF        EQU       0AH      ;EQUATE LF WITH ASCII CODE FOR LINE FEED
+;--------------
+          .CODE
+MAIN      PROC    FAR
+          MOV     AX,@DATA
+          MOV     DS,AX
+          CALL    CLEAR
+          CALL    CURSOR
+          MOV     AH,09                           ;DISPLAY THE PROMPT
+          MOV     DX,OFFSET MESSAGE1
+          INT     21H
+          MOV     AH,0AH                          ;GET LAST NAME FROM KEYBOARD
+          MOV     DX,OFFSET BUFFER1
+          INT     21H
+          MOV     BX,OFFSET BUFFER1       ;FIND OUT NUMBER OF LETTERS IN NAME
+          MOV     CL,[BX+1]                       ;GET NUMBER OF LETTERS
+          OR      CL,30H                          ;MAKE IT ASCII
+          MOV     MESSAGE2+40,CL          ;PLACE AT END OF STRING
+          MOV     AH,09                           ;DISPLAY SECOND MESSAGE
+          MOV     DX,OFFSET MESSAGE2
+          INT     21H
+          MOV     AH,4CH
+          INT     21H                             ;GO BACK TO DOS
+MAIN      ENDP
+;---------------
+CLEAR     PROC                               ;CLEAR THE SCREEN
+          MOV     AX,0600H
+          MOV     BH,07
+          MOV     CX,0000
+          MOV     DX,184FH
+          INT     10H
+          RET
+CLEAR     ENDP
+;---------------
+CURSOR    PROC                         ;SET CURSOR POSITION
+          MOV     AH,02
+          MOV     DL,COLUMN         
+
+          MOV     DH,ROW          
+          INT     10H
+          RET
+CURSOR    ENDP
+          END     MAIN
+

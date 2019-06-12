@@ -1,0 +1,910 @@
+
+       <script src="expand.js"></script><title>5.4 微程序控制器</title>
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="969" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0500.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">5.4 微程序控制器</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6"><a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">5.4.1 
+	微程序控制原理</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">5.4.2 
+	微程序设计技术</a><br>
+  　</font></b></p>
+	<p>　</p>
+</form>
+
+<table border="0" width="991" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".1"></a></font><font size="6"><a name=".1"><font color="#FFFFFF">导入</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="3" height="73"></td>
+    <td width="988" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<font size="6" face="楷体_GB2312" color="#0000FF">一、发展</font><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-3.65%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">微程序的概念和原理是由英国剑桥大学的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">M</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">·</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">V</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">·</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Wilkes</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">教授于</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1951</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">年在曼彻斯特大学计算机会议上首先提出来的，当时还没有合适的存放微程序的控制存储器的元件。 
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.58%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">到</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1964</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">年，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">IBM</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">公司在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">IBM 
+			360</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">系列机上成功地采用了微程序设计技术。 
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">20</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">世纪</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">70</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">年代以来，由于</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">VLSI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">技术的发展，推动了微程序设计技术的发展和应用。 
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.82%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">目前，从大型机到小型机、微型机都普遍采用了微程序设计技</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">术。</span></font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt"> </span></div>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6" face="楷体_GB2312" color="#0000FF">二、基本思想</font></div>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+		<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		<font size="6">
+		仿照解题的方法，把操作控制信号编制成微指令，存放到控制存储器里，运行时，从控存中取出微指令，产生指令运行所需的操作控制信号。从上述可以看出，微程序设计技术是用软件方法来设计硬件的技术。</font></span></div>
+	</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".2">5.4.1 
+	微程序控制原理</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="3" height="73"></td>
+    <td width="988" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">一、微命令和微操作</font></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:360;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:144%">
+			<span style="mso-special-format:&quot;numbullet3\,1&quot;;color:#330066;mso-color-index:3;
+position:absolute;left:-5.89%;top:.39em;font-size:70%">1.</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">控制部件向执行部件发出的各种控制命令叫作微命令，它是构成控制序列的最小单位。 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:529;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.26%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">例如：打开或关闭某个控制门的电位信号、某个寄存器的打入脉冲等。 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:529;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.89%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">微命令是控制计算机各部件完成某个基本微操作的命令。</font></span></div>
+			</li>
+		</ul>
+	</div>
+	<p>&nbsp;</p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:360;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:144%">
+			<span style="mso-special-format:&quot;numbullet3\,1&quot;;color:#330066;mso-color-index:3;
+position:absolute;left:-7.32%;top:.39em;font-size:70%">1.</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" face="楷体_GB2312" color="#0000FF">微操作</font><font size="6">是微命令的操作过程。 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:529;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -6.5%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">微命令和微操作是一一对应的。 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:529;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.67%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">微命令是微操作的控制信号，微操作是微命令的操作过程。 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:529;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -6.5%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">微操作是执行部件中最基本的操作。</font></span></div>
+			</li>
+		</ul>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:360;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			  <font size="6">由于数据通路的结构关系，微操作可分为相容的和互斥的两种：</font></p>
+			<p style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#FF0000" size="6">互斥的微操作</font><font size="6">：是指不能同时或不能在同一个节拍内并行执行的微操作。可以编码 <br />
+		        <font color="#0000FF">相容的微操作</font>：是指能够同时或在同一个节拍内并行执行的微操作。必须各占一位 </font></p>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:360;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+		  <p align="center"><a href="素材库/fig/Flash/5.20.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图5.20 简单运算器数据通路图</font> </p>
+		</div>
+	</div>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">二、微指令和微程序</font></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">把在同一</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">周期内并行执行的微操作控制信息，存储在控制存储器里，称为一条微指令（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Microinstruction</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）。 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.96%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">它是微命令的组合，微指令存储在控制器中的控制存储器中 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">一条微指令通常至少包含两大部分信息： 
+				</font></span></div>
+			<ul>
+				<li>
+				<div class="O2" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.25%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作控制字段，又称微操作码字段，用以产生某一步操作所需的各个微操作控制信号。 
+					</font></span></div>
+				<ul>
+					<li>
+					<div class="O3" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.77%; top: .3em; font-family: Wingdings">
+						<font size="6">§</font></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><font size="6">某位为</font></span><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">1</span></font><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial"><font size="6">，表明发微指令 </font></span></div>
+					<div class="O3" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.39%; top: .3em; font-family: Wingdings">
+						<font size="6">§</font></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><font size="6">微指令发出的控制信号都是节拍电位信号，持续时间为一个</font></span><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">CPU</span></font><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial"><font size="6">周期 </font></span></div>
+					<div class="O3" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.77%; top: .3em; font-family: Wingdings">
+						<font size="6">§</font></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><font size="6">微命令信号还要引入时间控制 
+						</font></span></div>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.25%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">顺序控制字段，又称微地址码字段，用以控制产生下一条要执行的微指令地址。</font></span></div>
+			</li>
+		</ul>
+	</div>
+	<p>&nbsp;</p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:144%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.06%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">一系列微指令的有序集合就是微程序。 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.08%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">一段微程序对应一条机器指令。 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.93%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">微地址</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">&nbsp;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">：存放微指令的控制存储器的单元地址</font></span></div>
+			</li>
+		</ul>
+	</div>
+	<p>&nbsp;</p>
+	<p align="center">&nbsp;</p>
+	<p align="center"><a href="素材库/fig/Flash/5.21.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图5.21 </font><font face="宋体" size="6">微指令基本格式</font></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:167%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-5.64%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span></div>
+	  </div>
+	<p align="center">&nbsp;</p>
+	<p align="center">&nbsp;</p>
+	<p>&nbsp;</p>
+	<p align="center">&nbsp;</p>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">三、微程序控制器原理</font></p>
+	<p>&nbsp;</p>
+	<p align="center"><a href="素材库/fig/Flash/5.23.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图5.23 </font><font size="6">微程序控制器组成原理框图</font></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:144%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.14%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">控制存储器</font></span><font color="#0000FF" size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(</span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">μ</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">CM)</span></font></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<ul>
+				<li>
+				  <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+				l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">这是微程序控制器的核心部件，用来存放微程序。其性能</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">包括容量、速度、可靠性等</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">与计算机的性能密切相关。</span></font> </li>
+			</ul>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6">
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+			</font>
+			<div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">
+					<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.28%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><font color="#0000FF">微指令寄存器</font></span><font color="#0000FF"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">(</span><span lang="EN-US" style="font-family:宋体; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">μ</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">IR)
+					</span></font></font></div>
+				<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<ul>
+						<li><font size="6">
+						<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.18%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">用来存放从μ</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">CM</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">取出的正在执行的微指令，它的位数同微指</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">令字长相等。 </span></font></li>
+					</ul>
+				</div>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">
+					<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.28%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">微地址形成部件 </span></font></div>
+				<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<ul>
+						<li><font size="6">
+						<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.25%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">用来产生初始微地址和后继微地址，以保证微指令的连续执</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">行。 </span></font></li>
+					</ul>
+				</div>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">
+					<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.28%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><font color="#0000FF">微地址寄存器</font></span><font color="#0000FF"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">(</span><span lang="EN-US" style="font-family:宋体; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">μ</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">MAR)
+					</span></font></font></div>
+				<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<ul>
+						<li><font size="6">
+						<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.18%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">它接受微地址形成部件送来的微地址，为下一步从μ</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">CM</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">中读</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">取微指令作准备。</span></font></li>
+					</ul>
+				</div>
+			</div>
+			<font size="6">
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+			</font>
+			<div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">
+					<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.28%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">微程序控制器的工作过程 </span></font></div>
+				<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">(1)</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">执行取指令的公共操作。取指令的公共操作通常由一段取指微程序</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">来完成，在机器开始运行时，自动将取指微程序的入口微地址送</span><span lang="EN-US" style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">μ</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">MAR</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">，并从μ</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">CM</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">中读出相应的微指令送入μ</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">IR</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">。微指令的操作</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">控制字段产生有关的微命令，用来控制实现取机器指令的公共操</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">作。取指微程序的入口地址一般为μ</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">CM</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">的</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">0</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">号单元，当取指微程序</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">执行完后，从主存中取出的机器指令就已存人指令寄存器</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">IR</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">中了。</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"> </span></font></div>
+				<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">(2)</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">由机器指令的操作码字段通过微地址形成部件产生出该机器指令所</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">对应的微程序的入口地址，并送入μ</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">MA</span><span lang="EN-US" style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial;mso-fareast-language:ZH-CN"> </span></font></div>
+				<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">(3)</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">从μ</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">CM</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">中逐条取出对应的微指令并执行之，每条微指令都能自动</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">产生下一条微指令的地址。 </span></font></div>
+				<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">
+					<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+					</font>
+					<div v:shape="_x0000_s1026" class="O2">
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+							(4)一条机器指令对应的微程序的最后一条微指令执行完毕后，其下一条微指令地址又回到取指微程序的人口地址，从而继续第(1)步，以完成取下条机器指令的公共操作。 
+							</span></font></div>
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+							<span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+							l</span>以上是一条机器指令的执行过程，如此周而复始，直到整个程序的所有机器指令执行完毕。</span></font></div>
+				  </div>
+			        <p align="left"><font face="楷体_GB2312" size="6" color="#0000FF">四、微程序举例</font></p>
+			        <p align="center"><a href="素材库/fig/Flash/5.24.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			        <p align="center"><font size="6">图5.24 十进制加法微程序</font></p>
+		          <p>              
+			  <p><font face="楷体_GB2312" size="6" color="#0000FF">五、CPU周期和微指令周期的关系</font>
+				</div>
+		  </div>
+			<p>
+			<p align="center"><font size="6"><a href="素材库/fig/Flash/5.25.swf"></a></font><a href="素材库/fig/Flash/5.25.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图5.25</font> <font size="6">CPU周期与微指令周期的关系</font></p>
+		</div>
+	</div>
+	<p>&nbsp;</p>
+	<p align="center"><a href="素材库/fig/Flash/5.26.swf"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图5.26</font> <font size="6">机器指令与微指令的关系</font>　</p>
+	</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">5</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.4.2 
+	微程序设计技术</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="3" height="73"></td>
+    <td width="988" height="73"><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font face="楷体_GB2312" size="6" color="#0000FF">一、设计微指令应当追求的目标</font><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:30pt"> </span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:144%">
+				<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.44%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">有利于缩短微指令的长度 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.44%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">有利于缩小</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CM</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的容量 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.44%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">有利于提高微程序的执行速度 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.44%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">有利于对微指令的修改 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.44%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">有利于提高微程序设计的灵活性</font></span></div>
+			</li>
+		</ul>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026">
+			<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+				<font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、微命令的编码方法 
+				</font></span></div>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+				<b><font color="#0000FF" size="6">编码有三种方法：直接表示法</font></b></span><font color="#0000FF"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><b><font size="6">/</font></b></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><font size="6">编码表示法</font></b></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><b><font size="6">/</font></b></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><font size="6">混合表示法 
+				</font></b></span></font></div>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			  <ul>
+				  <li>
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+				  <font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6"><span class="O" style="mso-margin-left-alt:360;mso-char-wrap:
+1;mso-kinsoku-overflow:1">1<font color="#0000FF"><font size="6">、</font></font></span>直接表示法：</font><font size="6">操作控制字段中的各位分别可以直接控制</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">计算机，不需要进行译码。</span></font> </li>
+					<li>
+					  <div align="center"><img border="0" src="素材库/fig/图片/图_微程序设计.png" width="331" height="144"></div>
+					</li>
+			    <li><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+    <div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+						<font size="6">直接表示法举例，操作控制字段的每一个独立的二进制位代表一个微命令，该位为</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示这个微命令有效，为</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示这个微命令无效。</font></span>
+				      <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+					</div>
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+							<font size="6">直接表示法特点： </font></span></div>
+						<ul>
+							<li>
+							<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+								<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.27%; top: .39em; font-family: Wingdings">
+								<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">这种方法结构简单，并行性强，操作速度快，但是微指令字太长，若微命令的总数为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">N</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个，则微指令字的操作控制字段就要有</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">N</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位。 
+								</font></span></div>
+							</li>
+							<li>
+							<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+								<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.31%; top: .39em; font-family: Wingdings">
+								<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">另外，在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">N</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个微命令中，有许多是互斥的，不允许并行操作，将它们安排在一条微指令中是毫无意义的，只会使信息的利用率下降。</font></span></div>
+							</li>
+						</ul>
+					</div>
+					<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+					<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:360;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+						<font color="#0000FF" size="6">2</font></span><font color="#0000FF"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、编码表示法：</font></span></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">将操作控制字段分为若干个小段，每段内采用最短编码法，段与段之间采用直接控制法。</font></span><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026" class="O">
+							<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-char-wrap:1;mso-kinsoku-overflow:
+1">
+								<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial"><font size="6">编码表示法特点：可以避免互斥，使指令字大大缩短，但增加了</font></span><font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">译码电路，使微程序的执行速度减慢 </span></font></div>
+							<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-char-wrap:1;mso-kinsoku-overflow:
+1">
+								<div align="center"><img border="0" src="素材库/fig/图片/图_编码表示法.png" width="442" height="180"></div>
+							</div>
+						</div>
+						<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+						<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:360;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><font color="#0000FF" size="6">3</font></span><font color="#0000FF" size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">、混合编码法：</span></font><font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">将前两种结合在一起，兼顾两者特点。一个字段的某些编码不能独立地定义某些微命令，而需要与其他字段的编码来联合定义，如例</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">2</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">：</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">F1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">与</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">RW</span></font>
+							<p align="center">						</div>
+						<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+						<div v:shape="_x0000_s1026">
+							<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<span style="font-size:122%">
+								<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-3.27%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><font size="6">编码注意几点：字段编码法中操作控制字段并非是任意的，必须要遵</font></span><font size="6"><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">循如下的原则： 
+								</span></font></div>
+							<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">①把互斥性的微命令分在同一段内，兼容性的微命令分在不同段内。</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">这样不仅有助于提高信息的利用率，缩短微指令字长，而且有助</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">于充分利用硬件所具有的并行性，加快执行的速度。 </span></font></div>
+							<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">②应与数据通路结构相适应。 </span></font></div>
+							<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">③每个小段中包含的信息位不能太多，否则将增加译码线路的复杂性</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">和译码时间。</span></font></div>
+							<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">④一般每个小段还要留出一个状态，表示本字段不发出任何微命令。</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">因此当某字段的长度为三位时，最多只能表示七个互斥的微命</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">令，</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;color:#FF3300">通常用</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;color:#FF3300;mso-fareast-language:ZH-CN">000</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;color:#FF3300">表示不操作。</span></font></div>
+						</div>
+					  <p>　</div>
+					<p><font face="楷体_GB2312" size="6" color="#0000FF">
+					二、微指令地址的形成</font><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026">
+						<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-size:156%">
+							<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-3.52%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">入口地址：</font><font size="6">每条机器指令对应一段微程序，当公用的取指微程序从主存中取出机器指令之后，由机器指令的操作码字段指出各段微程序的入口地址，这是一种多分支</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">或多路转移</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的情况。 
+							</font></span></div>
+						<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.52%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">机器指令的操作码转换成初始微地址的方式主要有两种。 
+							</font></span></div>
+						<ul>
+						  <li>
+							<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.34%; top: .39em; font-family: Wingdings">
+								<font size="6">&Oslash;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">计数器的方式 
+							  </font></span></div>
+						  </li>
+							<li>
+							<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font color="#0000FF"><span style="mso-special-format: bullet; mso-color-index: 5; position: absolute; left: -4.34%; top: .39em; font-family: Wingdings">
+								<font size="6">&Oslash;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">多路转移的方式 
+								</font></span></font></div>
+							</li>
+						</ul>
+						<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+							<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+								<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+								<font color="#0000FF" size="6">1</font></span><font color="#0000FF"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、入口地址形成</font></span></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">：如果机器指令操作码字段的位数和位置固定，可以直接使操作码与微程序入口地址的部分位相对应。</font></span></div>
+							<p align="center">
+						</div>
+					</div>
+					<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+					<div v:shape="_x0000_s1026">
+						<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><font color="#0000FF" size="6">2</font></span><font color="#0000FF" size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">、后继微地址形成方法 </span></font></div>
+						<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">（</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">）计数器的方式 </span></font></div>
+						<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6">
+							<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.82%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">方法： </span></font></div>
+						<ul>
+							<li>
+							<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6">
+								<span style="mso-special-format:bullet;color:#330066; mso-color-index:3;position:absolute;left:-3.37%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">微程序顺序执行时，其后继微地址就是现行微地址加上</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">一个增量</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">(</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">通常为</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">1)</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">； </span></font></div>
+							</li>
+							<li>
+							<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6">
+								<span style="mso-special-format:bullet;color:#330066; mso-color-index:3;position:absolute;left:-3.37%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">当微程序遇到转移或转子程序时，由微指令的转移地址</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">段来形成转移微地址。 </span></font></div>
+							</li>
+							<li>
+							<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6">
+								<span style="mso-special-format:bullet;color:#330066; mso-color-index:3;position:absolute;left:-3.32%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">在微程序控制器中也有一个微程序计数器μ</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">PC</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">，一般情</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">况下都是将微地址寄存器μ</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">MAR</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">作为μ</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">PC </span> </font></div>
+							</li>
+						</ul>
+						<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6">
+							<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.82%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">特点： </span></font></div>
+						<ul>
+							<li>
+							<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6">
+								<span style="mso-special-format:bullet;color:#330066; mso-color-index:3;position:absolute;left:-3.97%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">优点是简单、易于掌握，编制微程序容易 </span></font></div>
+							</li>
+							<li>
+							<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6">
+								<span style="mso-special-format:bullet;color:#330066; mso-color-index:3;position:absolute;left:-3.37%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">缺点是这种方式不能实现两路以上的并行微程序转移，</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">因而不利于提高微程序的执行速度。 </span></font></div>
+							</li>
+						</ul>
+						<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6">
+							<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+							</font>
+							<div v:shape="_x0000_s1026">
+								<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+									（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">2</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">）多路转移的方式 
+									</span></font></div>
+								<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.12%; top: .39em; font-family: Wingdings">
+									l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">根据条件转移如图 
+									</span></font></div>
+								<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.02%; top: .39em; font-family: Wingdings">
+									l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">条件：状态条件</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">/</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">测试</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">/</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">微指令中微地址</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">/</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">操作码 
+									</span></font></div>
+								<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<div align="center"></div>
+									<p align="center">&nbsp;</p>
+									<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+									<div v:shape="_x0000_s1026">
+										<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+											<font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+											<font color="#0000FF">3</font></span><font color="#0000FF"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">、微指令格式分为两类</span></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">：水平型微指令和垂直型微指令 
+											</span></font></div>
+										<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+											<font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+											<font color="#0000FF">（</font></span><font color="#0000FF"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">1</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">）水平型微指令</span>
+											<span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> </span></font><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">&nbsp;&nbsp;</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> 
+											</span></font></div>
+										<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+											<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.24%; top: .39em; font-family: Wingdings">
+											l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">水平型微指令是指一次能定义并能并行执行多个微命令的微指令。 
+											</span></font></div>
+										<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+											<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.84%; top: .39em; font-family: Wingdings">
+											l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">格式如下 
+											</span></font></div>
+										<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+											<table border="1" width="96%" id="table2">
+												<tr>
+													<td width="192" bordercolor="#66CC66"><div align="center"><font color="#0000FF" size="6">控制字段</font></div></td>
+													<td width="275" bordercolor="#66CC66"><div align="center"><font color="#0000FF" size="6">判断测试字段</font></div></td>
+													<td bordercolor="#66CC66"><div align="center"><font color="#0000FF" size="6">下地址字段</font></div></td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<font size="6">
+									<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+									</font>
+									<div v:shape="_x0000_s1026">
+										<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+											<font size="6">
+											<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.32%;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">水平型微指令特点</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">：</span> </font></div>
+										<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+											<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.64%; top: .39em; font-family: Wingdings">
+											&Oslash;</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">优点： 
+											</span></font></div>
+										<ul>
+											<li>
+											<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+												<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.0%; top: .3em; font-family: Wingdings">
+												&Oslash;</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">微指令字较长，速度越快。 </span></font></div>
+											</li>
+											<li>
+											<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+												<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.0%; top: .3em; font-family: Wingdings">
+												&Oslash;</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">微指令中的微操作有高度的并行性。 </span></font></div>
+											</li>
+											<li>
+											<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+												<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.0%; top: .3em; font-family: Wingdings">
+												&Oslash;</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">微指令译码简单。 </span></font></div>
+											</li>
+											<li>
+											<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+												<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.0%; top: .3em; font-family: Wingdings">
+												&Oslash;</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">控制存储器的纵向容量小，灵活性强。 </span></font></div>
+											</li>
+										</ul>
+										<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+											<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.64%; top: .39em; font-family: Wingdings">
+											&Oslash;</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">缺点： 
+											</span></font></div>
+										<ul>
+											<li>
+											<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+												<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.52%; top: .3em; font-family: Wingdings">
+												&Oslash;</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">微指令字比较长，明显地增加了控制存储器的横向容</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">量。 </span></font></div>
+											</li>
+											<li>
+											<div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+												<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.52%; top: .3em; font-family: Wingdings">
+												&Oslash;</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">水平微指令与机器指令差别很大，一般要熟悉机器结</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">构、数据通路、时序系统以及指令执行过程的人才能进</span><span style="font-family:宋体; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">行微程序设计，这对用户来说是很困难的。</span></font></div>
+											</li>
+										</ul>
+									</div>
+									<font size="6">
+									<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+									</font>
+									<div v:shape="_x0000_s1026">
+										<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+											<font size="6"><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><font color="#0000FF">（</font></span><font color="#0000FF"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">2</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">）垂直型微指令：</span></font><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">采用编码方式。 </span></font></div>
+										<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+											<ul>
+												<li>
+												  <font size="6">
+												  <span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-3.68%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">设置微操作控制字段时，一次只能执行一到二个微命令的微指令</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">称为垂直型微指令。</span></font>
+												  <div align="center"><font size="6"><img border="0" src="素材库/fig/图片/图_垂直型微指令.png" width="494" height="83"></font></div>
+												</li>
+											</ul>
+											<font size="6">
+											<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+											</font>
+											<div v:shape="_x0000_s1026">
+												<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+													<font size="6">
+													<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.96%;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">垂直型微指令的</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">特点： </span></font></div>
+												<ul>
+													<li>
+													<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+														<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+														l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">微指令字短，一般为</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">10</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">～</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">20</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">位左右。 
+														</span></font></div>
+													</li>
+													<li>
+													<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+														<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.78%; top: .39em; font-family: Wingdings">
+														l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">微指令的并行微操作能力有限，一条微指令一般只包含一个微操作命令。 
+														</span></font></div>
+													</li>
+													<li>
+													<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+														<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.65%; top: .39em; font-family: Wingdings">
+														l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">微指令译码比较复杂。全部微命令用一个微操作控制字段进行编码，微指令执行时需行完全译码。 
+														</span></font></div>
+													</li>
+													<li>
+													<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+														<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.68%; top: .39em; font-family: Wingdings">
+														l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">设计用户只需注意微指令的功能，而对微命令及其选择、数据通路的结构则不用过多地考虑，因此，便于用户编制微程序。而且，编制的微程序规整、直观，便于实现设计的自动化。 
+														</span></font></div>
+													</li>
+													<li>
+													<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+														<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+														l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">垂直微指令字较短，使控制存储器的横向容量少。 
+														</span></font></div>
+													</li>
+													<li>
+													<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+														<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.68%; top: .39em; font-family: Wingdings">
+														l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">用垂直微指令编制微程序要使用较多的微指令，微程序较长；要求控制存储器的纵向容量大。垂直微指令产生微命令要经过译码，微程序执行速度慢。 
+														</span></font></div>
+													</li>
+													<li>
+													<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+														<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+														l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">不能充分利用数据通路具有多种并行操作能力。</span></font></div>
+													</li>
+												</ul>
+												<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+													<font size="6">
+													<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+													</font>
+													<div v:shape="_x0000_s1026" class="O1">
+														<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+															<font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+															
+															水平型微指令和垂直型微指令的比较															</span></font></div>
+														<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+															<font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+															(1)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">水平型微指令并行操作能力强，效率高，灵活性强，垂直型微指令则较差。 
+															</span></font></div>
+														<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+															<font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+															(2)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">水平型微指令执行一条指令的时间短，垂直型微指令执行时间长。 
+															</span></font></div>
+														<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+															<font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+															(3)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">由水平型微指令解释指令的微程序，有微指令字较长而微程序短的特点。垂直型微指令则相反。 
+															</span></font></div>
+														<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+															<font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+															(4)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">水平型微指令用户难以掌握，而垂直型微指令与指令比较相似，相对来说，比较容易掌握。</span></font></div>
+													</div>
+													<font size="6">
+													<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+													</font>
+													<div v:shape="_x0000_s1026">
+														<div class="O" style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+															<font color="#0000FF" size="6"><nobr>
+															<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+															4、</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">动态微程序设计</span>
+																														</nobr></font></div>
+														<div class="O1" style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+															<font size="6"><span style="font-family: 宋体">
+															<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.27%; text-align: left; top: .39em; font-family: Wingdings">
+															l</span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">对应于一台计算机的机器指令只有一组微程序，这一组微程序设计好之后，一般无须改变而且也不好改变，这种微程序设计技术称为静态微程序设计。</span> </font></div>
+														<div class="O1" style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+															<font size="6"><span style="font-family: 宋体">
+															<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.27%; text-align: left; top: .39em; font-family: Wingdings">
+															l</span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">采用</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">EEPROM</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">作为控制存储器，可以通过改变微指令和微程序来改变机器的指令系统，这种微程序设计技术称为动态微程序设计。</span></font></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</li>
+				</ul>
+		  </div>
+		</div>
+		<p>　</div>
+	<p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	</td>
+  </tr>
+							
+	   </table>

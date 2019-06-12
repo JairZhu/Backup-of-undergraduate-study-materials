@@ -1,0 +1,34 @@
+;THIS PROGRAM FINDS THE SUM OF TWO EXTERNALLY DEFINED WORDS
+;AND STORES THE SUM IN A LOCATION DEFINED BY THE CALLING MODULE
+TITLE    SUBPROG1 PROGRAM TO ADD TWO WORDS 
+PAGE     60,132
+         
+         EXTRN DATA2:BYTE
+         PUBLIC SUBPROG1
+         PUBLIC  DATA1
+
+DTSEG   SEGMENT PARA 'DATA'
+
+  DATA1  DB 0DH,0AH,'This is in submodule.','$'
+
+DTSEG   ENDS
+
+CODSG    SEGMENT PARA PUBLIC 'CODE'
+SUBPROG1 PROC    FAR
+         ASSUME CS:CODSG DS:DTSEG
+         mov ax, DTSEG
+         mov ds,ax
+        
+         
+         mov ah,09H
+         mov dx, offset data2
+         int 21h
+  
+         mov ah,07H
+         int 21h
+        
+        
+         RET
+SUBPROG1 ENDP
+CODSG    ENDS
+         END

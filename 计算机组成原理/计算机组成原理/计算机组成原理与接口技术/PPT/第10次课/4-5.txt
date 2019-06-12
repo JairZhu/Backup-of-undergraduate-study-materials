@@ -1,0 +1,46 @@
+PAGE   60,132
+TITLE  Datatype   
+
+       .MODEL SMALL
+       .STACK 64
+
+;----------------------------------
+       .DATA
+    
+;----------------------------------
+
+      .CODE
+
+MAIN   PROC  FAR
+       MOV  AX, @DATA
+       MOV  DS, AX
+
+       MOV AX, 0600H
+       MOV BH, 07H
+       MOV CX,0000H
+       MOV DX,184FH
+       INT 10H
+ 
+       MOV AH,00H
+       MOV AL,06H
+       INT 10H
+
+       MOV CX,100
+       MOV DX,50
+BACK:  MOV AH,0CH
+       MOV AL,01H
+       INT 10H
+       INC CX
+       CMP CX,200
+       JNZ BACK
+
+
+    
+       MOV AH, 07H
+       INT 21H       
+
+
+        MOV AH, 4CH
+        INT 21H
+MAIN    ENDP
+        END MAIN

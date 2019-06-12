@@ -1,0 +1,97 @@
+TITLE PROGRAM 5-5:MOUSE BOX PROGRAM 
+;Performs the following: (a) gets the current video mode and saves it, (b) sets the video mode to a new one and 
+;clears screen, (c) draws a colored box and gets the mouse position, (d) displays different messages depending
+;on whether the mouse is clicked inside or outside the box  Pressing any key will return to DOS.  
+
+CURSOR  	MACRO ROW,COLUMN
+        	MOV 	AH,02H
+        	MOV 	BH,00
+        	MOV 	DH,ROW
+        	MOV 	DL,COLUMN
+        	INT 	10H
+        	ENDM
+DISPLAY 	MACRO STRING
+        	MOV 	AH,09H
+        	MOV 	DX,OFFSET STRING 	;load string address
+        	INT 	21H
+        	ENDM
+FILL    	MACRO ROW_START,COL_START,ROW_END,COL_END,COLOR
+        	LOCAL START,AGAIN
+        	MOV 	DX,ROW_START
+START:  	MOV 	CX,COL_START
+AGAIN:  	MOV 	AH,0CH
+        	MOV 	AL,COLOR
+        	INT 	10H
+        	INC 	CX
+        	CMP	CX,COL_END
+        	JNE 	AGAIN
+        	INC 	DX
+        	CMP 	DX,ROW_END
+        	JNE 	START
+        	ENDM
+                	.MODEL SMALL
+                	.STACK
+                	.DATA
+MESSAGE_1       DB 'AN EXAMPLE OF HOW TO USE INTERRUPT 33H FOR MOUSE.','$'
+MESSAGE_2       DB 'IT WORKS!','$'
+MESSAGE_3       DB 'CLICK IN THE BOX TO SEE WHAT HAPPENS!','$'
+MESSAGE_4       DB 'No, NO, NO I SAID IN THE BOX!','$'
+MESSAGE_5       DB 'NOW PRESS ANY KEY TO GET BACK TO DOS. $'
+OLDVIDEO        DB ?
+NEWVIDEO        DB 12H
+                	.CODE
+MAIN      	PROC FAR
+		MOV 	AX,@DATA
+                MOV 	DS,AX
+	        MOV 	AH,0FH              	;get the current video mode
+          	INT 	10H
+          	MOV 	OLDVIDEO,AL             ;save it
+          	MOV 	AX,0600H            	;clear screen
+          	MOV 	BH,07
+          	MOV 	CX,0
+          	MOV 	DX,184FH
+          	INT 	10H
+          	MOV 	AH,00H              	;set new video mode
+          	MOV 	AL,NEWVIDEO
+          	INT 	10H
+          	CURSOR 0,0
+          	FILL 150,250,250,350,4  	;draw red box
+          	CURSOR 1,1
+          	DISPLAY MESSAGE_1;
+          	CURSOR 5,22
+          	DISPLAY MESSAGE_3;
+         	MOV 	AX,0000H            	;initialize mouse
+         	INT 	33H
+          	MOV 	AX,01H
+          	INT     33H                 	;show mouse cursor
+BACK:     	MOV     AX,03H              	;check for mouse button press
+          	INT 	33H               	;now CX =COL and DX=ROW location
+          	CMP 	BX,0001H    	        ;check to see if left button is pressed   
+		JNE  	BACK               	;If not keep checking
+          	CMP 	CX,250              	;see if on right side of box
+          	JB 	NOT_INSIDE              ;if less it must be outside box
+          	CMP 	CX,350             	;see if on left side of box
+          	JA 	NOT_INSIDE              ;if not then it is outside the box
+          	CMP 	DX,150            	;check for the top of the box
+	        JB 	NOT_INSIDE              ;if not then outside the box
+	        CMP 	DX,250            	;see if bottom of the box
+          	JA 	NOT_INSIDE         
+		CURSOR 18,18		        ;then it must be inside box 	
+          	DISPLAY MESSAGE_2   	        ;indicate mouse is inside the box
+          	JMP 	EXIT               	;go prepare to exit to DOS
+NOT_INSIDE: 
+		CURSOR 20,18             	;indicate mouse is not inside box
+          	DISPLAY MESSAGE_4       
+EXIT:     	MOV 	AH,02H       	        ;hide mouse before exiting to DOS
+          	INT 	33H
+          	CURSOR 22,18
+          	DISPLAY MESSAGE_5
+          	MOV 	AH,07              	 ;wait for a key press
+          	INT 	21H
+          	MOV 	AH,0               	 ;restore original video mode
+          	MOV 	AL,OLDVIDEO
+          	INT 	10H
+          	MOV 	AH,4CH              	;exit
+          	INT 	21H                	;to DOS
+MAIN      	ENDP
+          	END MAIN

@@ -1,0 +1,55 @@
+Microsoft (R) Macro Assembler Version 5.00                  11/14/17 08:26:05
+                                                             Page     1-1
+
+
+       1 0000				data segment 
+       2 0000  5A 68 75 20 5A 68 69	name1 db 'Zhu Zhiru',0dh,0ah 
+       3       72 75 0D 0A		
+       4 000B  31 36 33 33 37 33 34	m2 db '16337341','$' 
+       5       31 24			
+       6 0014				data ends 
+       7 0000				code segment 
+       8				    assume cs:code,ds:data 
+       9				 
+      10 0000				begin: 
+      11 0000  B8 ---- R		    mov ax,data 
+      12 0003  8E D8			    mov ds,ax 
+      13 0005  8D 16 0000 R		    lea dx,name1 
+      14 0009  B4 09			    mov ah,9 
+      15 000B  CD 21			    int 21h 
+      16 000D  B4 4C			    mov ah,4ch 
+      17 000F  CD 21			    int 21h                   
+      18 0011				code ends 
+      19				    end begin 
+Microsoft (R) Macro Assembler Version 5.00                  11/14/17 08:26:05
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODE . . . . . . . . . . . . . .  	0011	PARA	NONE	
+DATA . . . . . . . . . . . . . .  	0014	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+BEGIN  . . . . . . . . . . . . .  	L NEAR	0000	CODE
+
+M2 . . . . . . . . . . . . . . .  	L BYTE	000B	DATA
+
+NAME1  . . . . . . . . . . . . .  	L BYTE	0000	DATA
+
+@FILENAME  . . . . . . . . . . .  	TEXT  f1		
+
+
+     17 Source  Lines
+     17 Total   Lines
+      7 Symbols
+
+  50690 + 465854 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

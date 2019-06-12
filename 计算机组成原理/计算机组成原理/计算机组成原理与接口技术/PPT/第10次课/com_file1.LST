@@ -1,0 +1,55 @@
+Microsoft (R) Macro Assembler Version 5.00                  3/21/10 12:26:35
+PROG2-4 COM PROGRAM TO ADD TWO WORDS                        Page     1-1
+
+
+				 TITLE 	PROG2-4 COM PROGRAM TO ADD TWO WORDS 
+				PAGE  	60,132 
+ 0000				CODSG      	SEGMENT 
+ 0100				 	  	ORG  	100H 
+					  	ASSUME   CS:CODSG,DS:CODSG,ES:CODSG 
+				;---THIS IS THE CODE AREA 
+ 0100				PROGCODE 	PROC 	NEAR 
+ 0100  A1 010A R			  	MOV  	AX,DATA1       	;move the first word into AX 
+ 0103  A3 010E R				MOV  	SUM,AX         	;move the sum 
+ 0106  B4 4C				  	MOV  	AH,4CH         	;return to DOS 
+ 0108  CD 21				  	INT  	21H 
+ 010A				PROGCODE 	ENDP 
+				;---THIS IS THE DATA AREA 
+ 010A  2390			DATA1      	DW  	2390H 
+ 010C  3456			DATA2      	DW  	3456H 
+ 010E  ????			SUM        	DW  	? 
+				;---------------- 
+ 0110				CODSG   	ENDS 
+					  	END 	PROGCODE 
+Microsoft (R) Macro Assembler Version 5.00                  3/21/10 12:26:35
+PROG2-4 COM PROGRAM TO ADD TWO WORDS                        Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODSG  . . . . . . . . . . . . .  	0110	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+DATA1  . . . . . . . . . . . . .  	L WORD	010A	CODSG
+DATA2  . . . . . . . . . . . . .  	L WORD	010C	CODSG
+
+PROGCODE . . . . . . . . . . . .  	N PROC	0100	CODSG	Length = 000A
+
+SUM  . . . . . . . . . . . . . .  	L WORD	010E	CODSG
+
+@FILENAME  . . . . . . . . . . .  	TEXT  t		
+
+
+     19 Source  Lines
+     19 Total   Lines
+      7 Symbols
+
+  50352 + 450832 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

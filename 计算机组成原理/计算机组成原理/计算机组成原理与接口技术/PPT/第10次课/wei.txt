@@ -1,0 +1,46 @@
+PAGE   60,132
+TITLE  Datatype   
+
+       .MODEL SMALL
+       .STACK 64
+
+;----------------------------------
+       .DATA
+    ORG 0000H
+DATA1  DB   25H, 12H, 15H, 1FH, 2BH
+DATA2  DB   34H
+COUNT  EQU  5
+DATA3  DB   '1234567890'
+DATA4  DW   3456H, 0E567H, 6789H
+NUM1   EQU  ($-DATA4)/2
+DATA5  DD   34567832H, 87654, 0C456E678H
+DATA6  DB   5 DUP(?)
+NUM2    EQU  $-DATA6
+NUM3    EQU  1234H
+DATA7  DB   ?
+
+
+
+
+;----------------------------------
+
+      .CODE
+
+MAIN   PROC  FAR
+       MOV  AX, @DATA
+       MOV  DS, AX
+
+       MOV AX, NUM2
+       
+       MOV BX, TYPE DATA1
+
+       MOV CX, LENGTH DATA6
+
+       MOV DH, HIGH NUM3
+
+       MOV DL, LOW NUM3
+       
+        MOV AH, 4CH
+        INT 21H
+MAIN    ENDP
+        END MAIN

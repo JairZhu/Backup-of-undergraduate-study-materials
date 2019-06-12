@@ -1,0 +1,264 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>程序中断方式</title>
+
+      
+<p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="967" height="23"></p>
+<div align="center">
+	<p>  <a href="0800.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">8.3 程序中断方式</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.3.1 
+	中断的基本概念</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.3.2 
+	程序</a><a href="#.3">中断</a><a href="#.2">方式的基本I/O接口</a><br>
+			<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.3.3 
+	单级中断</a><br>
+			<a href="#.4"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.3.4 
+	多级中断</a><br>
+			<a href="#.5"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.3.5 
+	中断控制器</a><br>
+			<a href="#.6"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.3.6 Pentium中断机制</a>　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="990" height="1703" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font color="#FFFFFF" size="6"><a name=".1">8.3.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">中断的基本概念</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+		<td width="2" height="73"></td>
+		<td height="73">
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+				<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">　　<strong>中断</strong></font><font size="6">是指</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">暂时中止现行程序，转去处理随机发生的紧急事件，处理完后自动返回原程序的功能和技术。中断系统是计算机实现中断功能的软硬件总称。一般在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中设置中断机构，在外设接口中设置中断控制器，在软件上设置相应的中断服务程序。</font></span></div>
+			<div align="center">
+				<p> <a href="素材库/fig/Flash/8.4.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<p><font size="6">图8.4中断处理示意图</font></p>
+			</div>
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">　　</font></span><font size="6">在速度较慢的外围设备准备自己的数据时，CPU照常执行自己的主程序。在这个意义上说，CPU和外围设备的一些操作是</font><font size="6" color="blue">并行</font><font size="6">地进行的，因而同串行进行的程序查询方式相比，计算机系统的效率是大大提高了。</font>
+			<div align="center">
+				<p> <a href="素材库/fig/Flash/8.5.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<p><font size="6">图8.5中断处理过程流程图</font></p>
+			</div>
+			<div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"></div>
+				<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026">
+						<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">　　</font></span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:26pt">中断处理过程需要注意几个问题：</span>
+							<p><font size="6" color="blue">第一个问题</font><font size="6">，尽管外界中断请求是随机的，但CPU只有在当前一条指令执行完毕后，即转入公操作时才受理设备的中断请求，这样才不至于使当前指令的执行受到干扰。<br>
+								</font><font size="6" color="blue">第二个问题</font><font size="6">，为了在中断服务程序执行完毕以后，能够正确地返回到原来主程序被中断的断点（PC内容）而继续执行主程序，必须把程序计数器PC的内容，以及当前指令执行结束后CPU的状态（包括寄存器的内容和一些状态标志位）都保存到堆栈中去。这些操作叫做</font><font size="6" color="red">保存现场</font><font size="6">。<br>
+								</font><font size="6" color="#0066ff">第三个问题</font><font size="6">，当CPU响应中断后，正要去执行中断服务程序时，可能有另一个新的中断源向它发出中断请求。为了不致造成混乱，在CPU的中断管理部件中必须有一个“</font><font size="6" color="red">中断屏蔽</font><font size="6">”触发器，它可以在程序的控制下置“1”（设置屏蔽），或置“0”（取掉屏蔽）。只有在“中断屏蔽”标志为“0”时，CPU才可以受理中断。当一条指令执行完毕CPU接受中断请求并作出响应时，它一方面发出中断响应信号INTA，另一方面把“中断屏蔽”标志置“1”，即关闭中断。这样，CPU不能再受理另外的新的中断源发来的中断请求。只有在CPU把中断服务程序执行完毕以后，它才重新使“中断屏蔽”标志置“0”，即开放中断，并返回主程序。<br>
+								</font><font size="6" color="#0066ff">第四个问题</font><font size="6">，中断处理过程是由硬件和软件结合来完成的。</font><br>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p></p>
+		</td>
+	</tr>
+	<tr>
+		<td width="2" height="73"></td>
+		<td height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><a name=".2"><font size="6" color="#FFFFFF">8</font></a><font size="6"><font color="#FFFFFF"><a name=".2">.3.2 
+	程序中断方式的基本I/O接口</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="2" height="73"></td>
+    <td height="73">
+			<div align="center">
+				 <a href="素材库/fig/Flash/8.6.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a>
+				<p><font size="6">图8.6程序中断方式基本接口示意图</font></p>
+			</div>
+			<div align="left">
+				<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">　　</font></span><font size="6">程序中断由外设接口的状态和CPU两方面来控制。在接口方面，有决定是否向CPU发出中断请求的机构，主要是接口中的</font><font size="6" color="red">“准备就绪”标志（RD）</font><font size="6">和</font><font size="6" color="red">“允许中断”标志（EI）</font><font size="6">两个触发器。在CPU方面，有决定是否受理中断请求的机构，主要是</font><font size="6" color="red">“中断请求”标志（IR）</font><font size="6">和</font><font size="6" color="red">“中断屏蔽”标志（IM）</font><font size="6">两个触发器。</font></p>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="2" height="73"></td>
+		<td height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">8</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.3.3 
+	单级中断</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="2" height="73"></td>
+    <td height="73"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">　　</font></span><font size="6">在</font><font size="6" color="red">单级中断系统</font><font size="6">中，所有的中断源都属于同一级，所有中断源触发器排成一行，其优先次序是离CPU近的优先权高。当响应某一中断请求时，执行该中断源的中断服务程序。在此过程中，不允许其他中断源再打断中断服务程序，即使优先权比它高的中断源也不能再打断。只有该中断服务程序执行完毕之后，才能响应其他中断。</font>
+			<div align="center">
+				<p> <a href="素材库/fig/Flash/8.7.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<p><font size="6">图8.7单级中断</font></p>
+				<p></p>
+			</div>
+			<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					</div>
+				<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026">
+						<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">　　</font></span><font size="6">在单级中断中，采用串行排队链法来实现具有公共请求线的中断源判优识别。</font></div>
+					</div>
+					<div v:shape="_x0000_s1026" align="center">
+						<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+							<p> <a href="素材库/fig/Flash/8.8.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+						</div>
+					</div>
+					<div v:shape="_x0000_s1026">
+						<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+							<p><font size="6">图8.8串行排队链判优识别逻辑及中断向量的产生</font></p>
+							<p></p>
+						</div>
+						<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">　　</font><font size="6">当CPU响应中断时，由硬件直接产生一个固定的地址（即</font><font size="6" color="red">向量地址</font><font size="6">），由向量地址指出每个中断源设备的中断服务程序入口，这种方法通常称为</font><font size="6" color="red">向量中断</font><font size="6">。显然，每个中断源分别有一个中断服务程序，而每个中断服务程序又有自己的向量地址。当CPU识别出某中断源时，由硬件直接产生一个与该中断源对应的向量地址，很快便引入中断服务程序。<br>
+									</font></span></p>
+						</div>
+					</div>
+					<p></p>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="2" height="73"></td>
+		<td height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".4">8</a></font><font size="6"><font color="#FFFFFF"><a name=".4">.3.4 
+	多级中断</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="2" height="73"></td>
+    <td height="73"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">　　</font></span><font size="6" color="red">多级中断系统</font><font size="6">是指计算机系统中有相当多的中断源，根据各中断事件的轻重缓急程度不同而分成若干级别，每一中断级分配给一个优先权。一般说来，优先权高的中断级可以打断优先权低的中断服务程序，以程序嵌套方式进行工作。根据系统的配置不同，多级中断又可分为</font><font size="6" color="#0066ff">一维多级中断</font><font size="6">和</font><font size="6" color="#0066ff">二维多级中断</font><font size="6">。<br>
+			</font>
+			<div align="center">
+				<p> <a href="素材库/fig/Flash/8.9.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<p><font size="6">图8.9多级中断</font></p>
+			</div>
+			<div v:shape="_x0000_s1026" align="left">
+				<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1" align="left">
+					<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">　　</font></span><font size="6">在多级中断中，每一级均有一根中断请求线送往CPU的中断优先级排队电路，对每一级赋予了不同的优先级。显然这种结构就是独立请求方式的逻辑结构。</font></div>
+			</div>
+			<div v:shape="_x0000_s1026" align="center">
+				<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+					<p><font size="6"> </font><a href="素材库/fig/Flash/8.10.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+					<p><font size="6">图8.10独立请求方式的优先级排队逻辑</font></p>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<p><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="red">　　</font></span>在多级中断中，如果每一级请求线上还连接有多个中断源设备，那么在识别中断源时，还需要进一步用串行链式方式查询。这意味着要用二维方式来设计中断排队逻辑。</font></p>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="2" height="73"></td>
+		<td height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong>
+	<font color="#FFFFFF" size="6">
+	<a name=".5">8.3.5 </a></font><font size="6"><a name=".5">
+	<font color="#FFFFFF">中断控制器</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="2" height="73"></td>
+    <td height="73">
+			<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="red">　　</font></span></font><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">8259</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中断控制器是一个集成电路芯片，它将中断接口与优先级判断等功能汇集于一身，常用于微型机系统。</font></span></div>
+			</div>
+			<div v:shape="_x0000_s1026" align="center">
+				<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+					<p><a href="素材库/fig/Flash/8.11.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"> </font></span></p>
+					<p><font size="6">图8.11 8259中断控制器</font></p>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026">
+						<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="red">　　</font></span>每个8259中断控制器最多能控制</font><font size="6" color="red">8</font><font size="6">个外部中断信号，但是可以将多个8259进行</font><font size="6" color="#0066ff">级联</font><font size="6">以处理多达</font><font size="6" color="red">64</font><font size="6">个中断请求。</font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:25pt">在这种情况下</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:25pt">允许有一个主中断控制器和多个从中断控制器，称为主从系</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:25pt">统。 </span>
+							<p><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="red">　　</font>8259的</span></font><font size="6" color="red"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">中断优先级</span></font><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">选择方式有四种</span></font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:25pt">： </span></p>
+						</div>
+						<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt">①完全嵌套方式：是一种固定优先级方式，连至</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:24pt;mso-fareast-language:ZH-CN">IR</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt; mso-fareast-language:ZH-CN">0</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt">的设</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">备优先级最高，</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:24pt;mso-fareast-language:ZH-CN">IR</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt; mso-fareast-language:ZH-CN">7</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt">的优先级最低。这种固定优先级方式</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:24pt">对级别低的中断不利，在有些情况下最低级别的中断请求可</span><span style="font-family:宋体; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">能一直不能被处理。 </span><span lang="ZH-CN" style="font-family:宋体; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt; mso-fareast-language:ZH-CN">②轮换优先级方式</span><span lang="ZH-CN" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">A</span><span lang="ZH-CN" style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial;font-size:24pt;mso-fareast-language:ZH-CN">：每个级别的中断保证有机会被处理，将给定的中断级别处理完后，立即把它放到最低级别的位置上去。</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:24pt"> </span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt">③轮换优先级方式</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt; mso-fareast-language:ZH-CN">B</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt">：要求</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt; mso-fareast-language:ZH-CN">CPU</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt">可在任何时间规定最优优先</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:24pt">级，然后顺序地规定其他</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">IR</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:24pt">线上的优先级。 </span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt">④查询方式：由</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt; mso-fareast-language:ZH-CN">CPU</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt">访问</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt; mso-fareast-language:ZH-CN">8259</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt">的中断状态寄存器，一个状态</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:24pt">字能表示出正在请求中断的最高优先级</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">IR</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:24pt">线，并能表示出中</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:24pt">断请求是否有效。 </span></div>
+						<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="red">　　</font></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:26pt;mso-fareast-language:ZH-CN">8259</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:26pt">提供了两种</span></font><font size="6" color="red"><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:26pt">屏蔽方式</span></font><font size="6"><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:26pt">： </span></font>
+							<div v:shape="_x0000_s1026">
+								<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<font size="6"><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:22pt">①简单屏蔽方式，提供</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:22pt;mso-fareast-language:ZH-CN">8</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:22pt">位屏蔽字，每位对应着各自的</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:22pt;mso-fareast-language:ZH-CN">IR</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:22pt">线。被置</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:22pt">位的任一位则禁止了对应</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN">IR</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:22pt">线上的中断。 </span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:22pt">②特殊屏蔽方式，允许</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:22pt;mso-fareast-language:ZH-CN">CPU</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:22pt">让来自低优先级的外设中断请求去中</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:22pt">断高优先级的服务程序。</span></font>
+									<p><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="red">　　</font></span></font><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:26pt;mso-fareast-language:ZH-CN">8259</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:26pt">中断控制器的不同工作方式是通过编程来实现的。</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:26pt;mso-fareast-language:ZH-CN">CPU</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:26pt">送出一系列的初始化控制字和操作控制字来执行选定</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:26pt">的操作。</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="2" height="73"></td>
+		<td height="73"></td>
+	</tr>
+	<tr height="27">
+		<td width="2" height="27"></td>
+		<td bgcolor="#000080" height="27"><strong><font color="#FFFFFF" size="6"><a name=".6">8.3.6 Pentium</a></font><font size="6"><a name=".5"><font color="#FFFFFF">中断机制</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td>
+	</tr>
+	<tr>
+		<td width="2" height="73"></td>
+		<td height="73">
+			<p><b><font size="5"><i><font size="6" color="#ff0000">1.中断类型</font></i></font></b></p>
+			<ul>
+				<li><font size="6"><b><font color="red">中断</font></b>：通常称为外部中断，它是由CPU的外部硬件信号引发的。有两种情况 ：</font><font size="6"><i><b><font color="#0000ff">(1)可屏蔽中断</font></b></i></font><font size="6" color="#0000ff">：</font><font size="6">CPU的INTR引脚收到中断请求信号，如果CPU中标志寄存器IF=1时，可引发中断；IF=0时，中断请求信号在CPU内部被禁止。</font><font size="6"><i><b><font color="#0000ff">(2)非屏蔽中断</font></b></i></font><font size="6" color="#0000ff">：</font><font size="6">CPU的NMI引脚收到的中断请求信号而引发的中断，这类中断不能被禁止。</font>
+				<li><font size="6"><b><font color="red">异常</font></b>：通常称为异常中断，它是由指令执行引发的。有两种情况：</font><font size="6"><i><b><font color="#0000ff">(1)执行异常：</font></b></i></font><font size="6" color="#0000ff"> </font><font size="6">CPU执行一条指令过程中出现错误、故障等不正常条件引发的中断；</font><font size="6"><i><b><font color="#0000ff">(2)执行软件中断指令</font></b></i></font><font size="6" color="#0000ff">： </font><font size="6">如执行INT 0，INT 3，INT n等指令，执行时产生异常中断。</font>
+			</ul>
+			<p><b><i><font size="6" color="#ff0000">2.中断服务子程序进入过程</font></i></b></p>
+			<blockquote>
+				<p><font size="6">　　中断服务子程序的入口地址信息存于中断向量号检索表内。实模式为中断向量表IVT，保护模式为中断描述符表IDT。</font></p>
+				<p><b><font size="6" color="#0000ff">实模式下使用中断向量表</font></b></p>
+				<p><font size="6">　　中断向量表IVT位于内存地址0开始的1KB空间。实模式是16位寻址，中断服务子程序入口地址(段，偏移)的段寄存器和段内偏移量各为16位。它们直接登 记在IVT表中，每个中断向量号对应一个中断服务子程序入口地址。每个入口地址占4字节。 256个中断向量号共占1KB。CPU取得向量号后自动乘以4，作为访问IVT的偏移，读取IVT相应 表项，将段地址和偏移量设置到CS和IP寄存器，从而进入相应的中断服务子程序。</font></p>
+				<p><b><font size="6" color="#0000ff">保护模式下使用中断描述符表</font></b></p>
+				<p><font size="6">　　保护模式为32位寻址。中断描述符表IDT每一表项对应一个中断向量号，表项称为中断门描述符、陷阱门描述符。这些门描述符为8字节长，对应256个中断向量号，IDT表长为2KB。由中断描述符表寄存器IDTR来指示IDT的内存地址。</font></p>
+				<p><font size="6">　　以中断向量号乘以8作为访问IDT的偏移，读取相应的中断门/陷阱门描述符表项。门描述符 给出中断服务子程序入口地址(段，偏移)，其中32位偏移量装入EIP寄存器，16位的段值装 入CS寄存器。由于此段值是选择符，还必须访问GDT或LDT，才得到段的基地址。</font></p>
+				<div align="center">
+					<p><a href="素材库/fig/Flash/8.12.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+					<p><font size="6">图8.12中断服务子程序的进入过程</font></p>
+				</div>
+			</blockquote>
+		</td>
+	</tr>
+	<tr>
+		<td width="2" height="73"></td>
+		<td height="73"></td>
+	</tr>
+</table>

@@ -1,0 +1,60 @@
+TITLE     PROGRAM 4-4   ;written with simplified segment definition
+PAGE 60,132
+		.MODEL SMALL
+		.STACK 64
+;--------------
+		.DATA
+   PROMPT1 	 DB      	'There is a message for you from Mr. Jones. '
+             	 DB        	'To read it enter Y','$'
+   MESSAGE  DB       	CR,LF,'Hi!  I must leave town tomorrow, '
+             	 DB        	'therefore I will not be able to see you','$'
+   PROMPT2	 DB   	CR,LF,'No more messages for you','$' 
+   CR        	 EQU      0DH
+   LF       	 EQU      0AH
+;--------------
+		.CODE
+   MAIN    	PROC  	
+             	MOV  	AX,@DATA
+             	MOV  	DS,AX
+             	CALL 	CLEAR		;CLEAR THE SCREEN
+             	CALL 	CURSOR	;SET CURSOR POSITION
+             	MOV  	AH,09          	;DISPLAY THE PROMPT
+             	MOV  	DX,OFFSET PROMPT1
+             	INT  	21H
+             	MOV  	AH,07          	;GET ONE CHAR, NO ECHO
+             	INT  	21H
+             	CMP  	AL,'Y'         	;IF 'Y', CONTINUE
+             	JZ   		OVER
+             	CMP  	AL,'y'
+             	JZ   		OVER
+             	MOV  	AH,09          	;DISPLAY SECOND PROMPT IF NOT Y
+             	MOV  	DX,OFFSET PROMPT2
+             	INT  	21H
+             	JMP  	EXIT
+   OVER:     	MOV  	AH,09          	;DISPLAY THE MESSAGE
+             	MOV  	DX,OFFSET MESSAGE
+             	INT  	21H
+   EXIT:     	MOV  	AH,4CH
+             	INT  	21H            	;GO BACK TO DOS
+   MAIN     	ENDP
+;---------------
+   CLEAR    	PROC	  		;CLEARS THE SCREEN
+             	MOV  	AX,0600H
+             	MOV  	BH,07
+             	MOV  	CX,0000
+            	MOV  	DX,184FH
+             	INT  	10H
+             	RET
+   CLEAR    	ENDP
+;---------------
+   CURSOR       PROC
+		MOV  	AH,02
+             	MOV  	BH,00
+             	MOV  	DL,05          	;COLUMN 5
+             	MOV  	DH,08          	;ROW 8
+             	INT  	10H
+             	RET
+   CURSOR 	ENDP
+             	END	MAIN
+
+

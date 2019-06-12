@@ -1,0 +1,838 @@
+
+       <script src="expand.js"></script><title>5.7 流水CPU</title>
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="969" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0500.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">5.7 流水CPU</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">导入</a><br>
+	<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">5.7.1 
+	并行处理技术</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">5.7.2 
+	流水CPU的结构</a><br>
+	<a href="#.4">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">5.7.3 
+	流水线中的主要问题</a><br>
+	<a href="#.5">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">5.7.4 
+	Pentium CPU</a><br>
+  　</font></b></p>
+	</form>
+
+<table border="0" width="991" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><a name=".1"><font color="#FFFFFF">导入</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:167%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-3.92%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Enslow</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">统计过： 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.96%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1965~1975</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">间，反映器件性能级延迟大约为原来的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1/10</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，而反映计算机系统性能之一的平均指令时间为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1%</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">结论：同一时期计算机系统性能比器件性能提高的速度快得多 
+				</font></span></div>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.27%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">促使计算机性能提高的因素除了器件性能得提高外还有哪些呢？</font></span></div>
+	</div>
+	<p>　</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">5</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.7.1 
+	并行处理技术</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:167%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.14%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">并行性（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Parrelism</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）概念 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.84%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">问题中具有可以同时进行运算或操作的特性 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.24%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">例：在相同时延的条件下，用</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">n</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位运算器进行</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">n</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位并行运算速度几乎是一位运算器进行</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">n</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位串行运算的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">n</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">倍（狭义） 
+				</font></span></div>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.14%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（广义）含义 
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<ul>
+				<li>
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">只要在</font><u><font size="6">同一时刻</font></u><font size="6">（同时性）或在</font><u><font size="6">同一时间间隔</font></u><font size="6">内（并发性）完成两种或两种以上性质相同或不同的工作，他们</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">在时间上相互重叠，都体现了并行性</span></font><span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:26pt"> </span>				</li>
+			</ul>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-size:167%">
+					<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.14%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">三种形式 
+					</font></span></div>
+				<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<ul>
+						<li>
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.79%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">时间并行（重叠）：让多个处理过程在时间上相互错开，轮流使用同一套硬件设备的各个部件，以加快硬件周转而赢得速度，实现方式就是采用流水处理部件 
+						</font></span></li>
+					</ul>
+				</div>
+				<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<ul>
+						<li>
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">空间并行（资源重复）：以数量取胜 
+						</font></span></li>
+					</ul>
+				</div>
+				<blockquote>
+					<ul>
+						<li>
+						<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.84%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">它能真正的体现同时性 
+							</font></span></div>
+						</li>
+						<li>
+						<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.84%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">LSI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">VLSI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为其提供了技术保证 
+							</font></span></div>
+						</li>
+					</ul>
+				</blockquote>
+				<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<ul>
+						<li>
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">时间</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">+</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">空间并行 
+						</font></span></li>
+					</ul>
+				</div>
+				<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<blockquote>
+						<ul>
+							<li>
+							<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.84%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Pentium</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">中采用了超标量流水线技术</span></font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:23pt"> </span></li>
+						</ul>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p>
+	　</p>	  </td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".3">5.7.2 
+	流水CPU的结构</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><font size="6">
+      <p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/>
+      <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	　</font>    <div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+		<font size="6">
+		<p align="center"><a href="素材库/fig/Flash/5.32.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+		</font><p align="center"><font size="6">图5.32 <span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">流水计算机的系统组成</span>
+		  <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+		</font></p>
+		
+		<div v:shape="_x0000_s1026">
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.88%;top:.39em;font-family:Wingdings">l</span></font></div>
+			<ul>
+				<li>
+				<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.82%; top: .3em; font-family: Wingdings">
+					§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">存储器体系：主存采用多体交叉存储器；</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Cache
+					</span></font></div>
+				</li>
+				<li>
+				<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.82%; top: .3em; font-family: Wingdings">
+					§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">流水方式</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">CPU</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">：指令部件、指令队列、执行部件 
+					</span></font></div>
+				<ul>
+					<li>
+					<div class="O4" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:1007;
+mso-text-indent-alt:808;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font size="6"><span style="mso-special-format: bullet; color: #D8D8EC; mso-color-index: 7; position: absolute; left: -4.69%; top: .22em; font-family: Wingdings">
+						§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">指令流水线 
+						</span></font></div>
+					<div class="O4" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:1007;
+mso-text-indent-alt:808;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font size="6"><span style="mso-special-format: bullet; color: #D8D8EC; mso-color-index: 7; position: absolute; left: -4.69%; top: .22em; font-family: Wingdings">
+						§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">指令队列：</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">FIFO
+						</span></font></div>
+					<div class="O4" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:1007;
+mso-text-indent-alt:808;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font size="6"><span style="mso-special-format: bullet; color: #D8D8EC; mso-color-index: 7; position: absolute; left: -4.0%; top: .22em; font-family: Wingdings">
+						§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">执行部件：可以有多个采用流水线方式构成的算术逻辑部件构成，可以将定点运算部件和浮点运算部件分开。 
+						</span></font></div>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+				</font>
+				<div v:shape="_x0000_s1026">
+					<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font size="6">
+						<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-4.72%;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">流水线</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">CPU</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">时空图 
+						</span></font></div>
+					<ul>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.96%; top: .39em; font-family: Wingdings">
+							l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">IF</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Instruction 
+							Fetch</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">取指）</span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">&nbsp;&nbsp;
+							</span></font></div>
+						</li>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.92%; top: .39em; font-family: Wingdings">
+							l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">ID</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Instruction 
+							Decode</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">指令译码） 
+							</span></font></div>
+						</li>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.96%; top: .39em; font-family: Wingdings">
+							l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">EX</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Execution</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">执行）</span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</span></font></div>
+						</li>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.96%; top: .39em; font-family: Wingdings">
+							l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">WB</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Write 
+							Back</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">写回）</span></font></div>
+						</li>
+					</ul>
+				</div>
+				<p>&nbsp;</p>
+				<p align="center">
+				  <font size="6"><img border="0" src="素材库/fig/图片/图_非流水CPU.png" width="340" height="221"></font></p>
+				<p align="center">
+				  <font size="6"><img border="0" src="素材库/fig/图片/图_流水CPU.png" width="341" height="221"></font></p>
+				<p align="center">
+				  <font size="6"><img border="0" src="素材库/fig/图片/图_超标量流水线时空图.png" width="337" height="220"></font></p>
+				<font size="6">
+				<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+				</font>
+				<div v:shape="_x0000_s1026" class="O">
+					<ul>
+						<li>
+						<div style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="layout-flow:vertical"><span style="mso-special-format:bullet;position:
+absolute;left:-1.22%">&#8226;</span></span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;layout-flow:vertical">具有两条以上的指令流水线 
+							</span></font></div>
+						</li>
+						<li>
+						<div style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="layout-flow: vertical">
+							<span style="mso-special-format:bullet;position:
+absolute;left:-1.1%">&#8226;</span></span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;layout-flow:vertical">上图中流水线满载时，每一个时钟周期可以执行</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;layout-flow:vertical;mso-fareast-language:ZH-CN">2</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;layout-flow:vertical">条指令 </span></font></div>
+						</li>
+						<li>
+						<div style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="layout-flow: vertical">
+							<span style="mso-special-format:bullet;position:
+absolute;left:-1.22%">&#8226;</span></span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;layout-flow:vertical">采用时间和空间并行</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; layout-flow: vertical">技术</span></font></div>
+						</li>
+					</ul>
+				</div>
+				<font size="6">
+				<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+				</font>
+				<div v:shape="_x0000_s1026">
+					<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font size="6">
+						<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-4.37%;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">流水线（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Pipelining</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">）的分类 
+						</span></font></div>
+					<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<ul>
+							<li>
+							  <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.82%; top: .39em; font-family: Wingdings">
+							l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">按级别分为 
+							</span></font></li>
+						</ul>
+					</div>
+					<blockquote>
+						<ul>
+							<li>
+							<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+								l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">指令流水线 
+								</span></font></div>
+							</li>
+							<li>
+							<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+								l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">算术流水线 
+								</span></font></div>
+							</li>
+							<li>
+							<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+								l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">处理机流水线（宏流水线）</span></font></div>
+							</li>
+						</ul>
+					</blockquote>
+				</div>
+				<font size="6">
+				<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+				</font>
+				<div v:shape="_x0000_s1026">
+					<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<ul>
+							<li><font size="6">
+							<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.32%;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">瓶颈问题（流水线中有速度慢的段） 
+							</span></font></li>
+						</ul>
+					</div>
+					<blockquote>
+						<ul>
+							<li>
+							<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.84%; top: .39em; font-family: Wingdings">
+								l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">再分成几个段 
+								</span></font></div>
+							</li>
+							<li>
+							<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.84%; top: .39em; font-family: Wingdings">
+								l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">用资源重复的方法也可以解决 
+								</span></font></div>
+							</li>
+						</ul>
+					</blockquote>
+					<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<ul>
+							<li>
+							  <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+							l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">资源相关：多条指令进入流水线后在同一时钟周期内争用同一功能部件。 
+							</span></font></li>
+						</ul>
+					</div>
+					<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<blockquote>
+							<ul>
+								<li>
+								  <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.52%; top: .39em; font-family: Wingdings">
+								l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">解决办法：后边指令拖一拍再推进；增设一个功能部件</span></font></li>
+							</ul>
+						</blockquote>
+					</div>
+				</div>
+				<p align="center">
+				  <font size="6"><img border="0" src="素材库/fig/图片/图_流水线中的主要问题.png" width="508" height="211"></font></p>
+				<font size="6">
+				<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+				</font>
+				<div v:shape="_x0000_s1026">
+					<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<ul>
+							<li><font size="6">
+							<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.84%;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">数据相关 
+							</span></font></li>
+						</ul>
+					</div>
+					<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<blockquote>
+							<ul>
+								<li>
+								  <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+								l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">RAW(Read 
+								After Write) </span></font></li>
+							</ul>
+						</blockquote>
+					</div>
+					<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<blockquote>
+							<blockquote>
+								<ul>
+									<li>
+									  <font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.28%; top: .3em; font-family: Wingdings">
+									§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">后面指令用到前面指令所写的数据 
+									</span></font></li>
+								</ul>
+							</blockquote>
+						</blockquote>
+					</div>
+					<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<blockquote>
+							<ul>
+								<li>
+								  <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+								l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">WAW(Write 
+								After Write) </span></font></li>
+							</ul>
+						</blockquote>
+					</div>
+					<blockquote>
+						<blockquote>
+							<ul>
+								<li>
+								<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.28%; top: .3em; font-family: Wingdings">
+									§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">两条指令写同一个单元 
+									</span></font></div>
+								</li>
+								<li>
+								<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.17%; top: .3em; font-family: Wingdings">
+									§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">在简单流水线中没有此类相关，因为不会乱序执行 
+									</span></font></div>
+								</li>
+							</ul>
+						</blockquote>
+					</blockquote>
+					<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<blockquote>
+							<ul>
+								<li>
+								  <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+								l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">WAR(Write 
+								After Read) </span></font></li>
+							</ul>
+						</blockquote>
+					</div>
+					<blockquote>
+						<blockquote>
+							<ul>
+								<li>
+								<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.28%; top: .3em; font-family: Wingdings">
+									§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">后面指令覆盖前面指令所读的单元 
+									</span></font></div>
+								</li>
+								<li>
+								<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.28%; top: .3em; font-family: Wingdings">
+									§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">在简单流水线中没有此类相关 
+									</span></font></div>
+								</li>
+							</ul>
+						</blockquote>
+					</blockquote>
+					<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<blockquote>
+							<ul>
+								<li>
+								  <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+								l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">解决办法： 
+								</span></font></li>
+							</ul>
+						</blockquote>
+					</div>
+					<blockquote>
+						<blockquote>
+							<ul>
+								<li>
+								<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.28%; top: .3em; font-family: Wingdings">
+									§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">可以推后后继指令对相关单元的读操作 
+									</span></font></div>
+								</li>
+								<li>
+								<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.28%; top: .3em; font-family: Wingdings">
+									§</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">设置相关的直接通路（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Forwarding</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">）</span></font> </div>
+								</li>
+							</ul>
+						</blockquote>
+					</blockquote>
+					<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1"><font size="6">
+　                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </font></div>
+				</div>
+				<p><font size="6">　</font></p>
+				<p><font size="6">　</font></div>
+		</div>
+	<p><font size="6">　</font></div>	</td></tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".4">5</a></font><font size="6"><font color="#FFFFFF"><a name=".4">.7.3 
+	流水线中的主要问题</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><font size="6">
+      <p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/>
+      <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+      <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	</font>
+    <div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6">
+			<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.91%;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">控制相关 
+			</span></font></div>
+		<ul>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.4%; top: .39em; font-family: Wingdings">
+				l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">引起原因：转移指令 
+				</span></font></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+				l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">解决办法：延迟转移法，转移预测法 
+				</span></font></div>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1"><font size="6">
+　                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </font></div>
+	</div>
+	<p><font size="6">
+	　</font></p>	  </td></tr>
+					
+		<tr>
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong>
+	<font color="#FFFFFF" size="6">
+	<a name=".5">5.7.4 </a></font><font size="6"><a name=".5">
+	<font color="#FFFFFF">Pentium CPU</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><font size="6">
+      <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+      
+      </font>
+      <div v:shape="_x0000_s1026">
+        <div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+          <font size="6">
+          <span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-4.13%;top:.39em;font-family:Wingdings">l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Pentium 
+              CPU </span>
+            <span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+            （第一代） </span></font></div>
+	    <div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <ul>
+		      <li>
+		          <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+	              l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">1989</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">年初</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">0.8um</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">工艺，</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">310</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">万晶体管 
+                </span></font></li>
+		    </ul>
+	    </div>
+	    <div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <ul>
+		      <li>
+		          <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+	              l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">有</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">60M</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">和</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">66MHz</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">外频两种版本 
+                </span></font></li>
+		    </ul>
+	    </div>
+	    <div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <ul>
+		      <li>
+		          <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+	              l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">5V</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">电压，功耗</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">20W
+                </span></font></li>
+		    </ul>
+	    </div>
+	    <div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <ul>
+		      <li>
+		          <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+	              l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">超标量流水线结构 
+                </span></font></li>
+		    </ul>
+	    </div>
+	    <div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <blockquote>
+		      <ul>
+		        <li>
+		            <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.83%; top: .39em; font-family: Wingdings">
+	                l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">486</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">有一条流水线 
+                  </span></font></li>
+			    </ul>
+		    </blockquote>
+	    </div>
+	    <div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <blockquote>
+		      <ul>
+		        <li>
+		            <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.83%; top: .39em; font-family: Wingdings">
+	                l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Pentium</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">有</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">U</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">和</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">V</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">两条指令流水线 
+                  </span></font></li>
+			    </ul>
+		    </blockquote>
+	    </div>
+	    <div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <blockquote>
+		      <blockquote>
+		        <ul>
+		          <li>
+		              <font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.99%; top: .3em; font-family: Wingdings">
+                    §</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">U</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">流水线可以执行所有的整数和浮点指令 </span>                      </font></li>
+				  </ul>
+			    </blockquote>
+		    </blockquote>
+	    </div>
+	    <div class="O3" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <blockquote>
+		      <blockquote>
+		        <ul>
+		          <li>
+		              <font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.99%; top: .3em; font-family: Wingdings">
+                    §</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">V</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">流水线可以执行简单的整数和</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:
+ZH-CN">FXCH</span><span style="font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial">浮点指令 </span></font></li>
+				  </ul>
+			    </blockquote>
+		    </blockquote>
+	    </div>
+	    <div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <ul>
+		      <li>
+		          <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+	              l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">双重分离式</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Cache</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">，减少了等待和搬移数据时间 
+                </span></font></li>
+		    </ul>
+	    </div>
+	    <div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <ul>
+		      <li>
+		          <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.62%; top: .39em; font-family: Wingdings">
+                l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">32</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">位</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">CPU</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">，外部数据总线宽度为</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">64</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">位，外部地址总线宽度为</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">36</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">位</span></font> </li>
+		    </ul>
+	    </div>
+	    <div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <font size="6">
+		      <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	      </font>
+		    <div v:shape="_x0000_s1026">
+		      <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		        <ul>
+		          <li><font size="6">
+	              <span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-3.6%;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">非固定长度指令格式，</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">9</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">种寻址方式，</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">191</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">条指令，兼具有</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">RISC</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">和</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">CISC</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">特性，不过我们还是将其看成</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">CISC
+	                </span></font></li>
+				  </ul>
+			    </div>
+			    <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				    <ul>
+				      <li>
+				          <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.3%; top: .39em; font-family: Wingdings">
+			              l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">SL</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">电源管理技术 
+		                </span></font></li>
+				    </ul>
+			    </div>
+			    <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				    <ul>
+				      <li>
+				          <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.67%; top: .39em; font-family: Wingdings">
+			              l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">提供了更加灵活的存储器寻址结构，可以支持传统的</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">4k</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">大小的页面，也可以支持</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">4M</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">大小的页面 
+		                </span></font></li>
+				    </ul>
+			    </div>
+			    <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				    <ul>
+				      <li>
+				          <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.3%; top: .39em; font-family: Wingdings">
+			              l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">动态转移预测技术 
+		                </span></font></li>
+				    </ul>
+			    </div>
+			    <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				    <ul>
+				      <li>
+				          <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.3%; top: .39em; font-family: Wingdings">
+			              l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Pentium</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">结构图 
+		                </span></font></li>
+				    </ul>
+			    </div>
+			    <div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				    <blockquote>
+				      <ul>
+				        <li>
+				            <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.82%; top: .39em; font-family: Wingdings">
+			                l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">MESI</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Modified<span style="mso-spacerun:yes">&nbsp;&nbsp;
+			                </span>Exclusion<span style="mso-spacerun:yes">&nbsp;
+		                    </span>Share Invalid</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">） 
+	                      </span></font></li>
+					    </ul>
+				    </blockquote>
+			    </div>
+			    <div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				    <blockquote>
+				      <ul>
+				        <li>
+				            <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.82%; top: .39em; font-family: Wingdings">
+			                l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">BTB</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Branch 
+				                Target Buffer</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">） 
+		                  </span></font></li>
+					    </ul>
+				    </blockquote>
+			    </div>
+			    <div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				    <blockquote>
+				      <ul>
+				        <li>
+				            <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.82%; top: .39em; font-family: Wingdings">
+			                l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">TLB</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">Translation 
+		                  Lookaside Buffer</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">）</span></font> </li>
+					    </ul>
+				    </blockquote>
+				    <div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+				      <p align="center"><a href="素材库/fig/Flash/5.34.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+					    <p align="center"><font size="6">图5.34</font><font size="6"> Pentium CPU结构框图</font></p>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	  </div>
+	  <p><font size="6">　</font></td></tr>
+	   </table>
+       

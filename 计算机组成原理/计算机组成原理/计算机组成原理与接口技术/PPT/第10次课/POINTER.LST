@@ -1,0 +1,87 @@
+Microsoft (R) Macro Assembler Version 5.00                  4/1/10 21:16:54
+                                                             Page     1-1
+
+
+				; The   Form of an assembly language program 
+				; Note: Using simplified segment definition 
+				      .MODEL SMALL 
+ 0040				      .STACK 64 
+ 0000				      .DATA 
+				 
+ 0000  52 34 54 67		DATA1     DB   52H,34H,54H,67H 
+ 0004  29 35 67 FF		DATA2     DB   29H,35H,67H,0ffH 
+ 0008  DE 34 26 98 98		DATA3     DB   0DEH,34H,26H,98H,98H 
+				 
+ 000D  3456 2376 7898 9876	DATA4     dw   3456H,2376H,7898H,9876H 
+				 
+ 0015  2345 5678		DATA5     DW   2345H,5678H 
+				 
+				 
+				 
+				 
+ 0000				      .CODE 
+				 
+ 0000				MAIN    PROC  FAR 
+ 0000  B8 ---- R		        MOV  AX, @DATA 
+ 0003  8E D8			        MOV  DS, AX 
+				 
+ 0005  BB 0002			        mov bx,0002H 
+ 0008  BE 0000			        mov si,0000H 
+ 000B  BF 0000			        mov di,0H 
+				 
+ 000E  8A 84 0000 R		        mov al,data1[si] 
+ 0012  8A A5 0004 R		        mov ah,data2[di] 
+				 
+ 0016  8A 87 0000 R		        mov al, data1[bx] 
+ 001A  8A A7 0001 R		        mov ah, data1+1[bx] 
+				 
+ 001E  8A BF 0004 R		        mov bh, data2[bx] 
+ 0022  8A 9F 0005 R		        mov bl, data2+1[bx] 
+				 
+				         
+				    
+				 
+ 0026  B4 4C			       MOV AH,4CH       
+ 0028  CD 21			       int 21H 
+				       
+ 002A				MAIN    ENDP 
+ 002A				        END MAIN 
+Microsoft (R) Macro Assembler Version 5.00                  4/1/10 21:16:54
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0019	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	0040	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	002A	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+DATA1  . . . . . . . . . . . . .  	L BYTE	0000	_DATA
+DATA2  . . . . . . . . . . . . .  	L BYTE	0004	_DATA
+DATA3  . . . . . . . . . . . . .  	L BYTE	0008	_DATA
+DATA4  . . . . . . . . . . . . .  	L WORD	000D	_DATA
+DATA5  . . . . . . . . . . . . .  	L WORD	0015	_DATA
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	_TEXT	Length = 002A
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  pointer		
+
+
+     44 Source  Lines
+     44 Total   Lines
+     20 Symbols
+
+  50032 + 451056 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

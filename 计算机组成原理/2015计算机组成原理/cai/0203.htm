@@ -1,0 +1,251 @@
+
+       <script src="expand.js"></script><title>2.3 定点乘法运算</title>
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="965" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0200.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">2.3 定点乘法运算</font><font face="宋体" size="6" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="fpweb:///_private/form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.3.1 
+	原码并行乘法</a><br>
+	<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.3.2 
+	直接补码并行乘法</a><br>
+	　</font></b></p>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="991" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong>
+	<font color="#FFFFFF" size="6">
+	<a name=".1">2.3.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">原码并行乘法</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="3" height="73"></td>
+    <td width="988" height="73"><font size="6" face="楷体_GB2312" color="#0000FF">
+	一、乘法实现方法</font>
+      <p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><p><span style="font-size:144%">
+	<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-3.88%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O1">
+		<ul>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:144%">
+				<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute;
+left:-3.63%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">在现有的加法和减法器的基础上增加适当的以为线路及控制逻辑可以实现 
+				</font></span></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">用</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">LSI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">VLSI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">工艺实现专用的乘法器 
+				</font></span></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">编制子程序</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">单片机等低端机器</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">)</font></span></div>
+			</li>
+		</ul>
+	</div>
+	<p align="center"><img border="0" src="素材库/fig/图片/图_定点原码乘法原理.bmp" width="630" height="453">
+	  <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	
+	<div v:shape="_x0000_s1026">
+		<ul>
+			<li>
+			<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:167%">
+				<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.15%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">n</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位乘</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">n</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位积可能为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2n</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">.
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.51%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">乘积的最后是所有部分积之和，有</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">n</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个数相加，而</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">FA</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">只有两个输入端 
+				</font></span></div>
+			</li>
+		</ul>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<blockquote>
+				<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+				<font size="6">所以需要改造 </font></span>
+			</blockquote>
+		</div>
+		<blockquote>
+			<ul>
+				<li>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-size:144%">
+					<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-4.03%;top:.39em;font-family:Wingdings;
+font-size:70%">&Oslash;</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">方法一：硬件实现方法</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">串行的</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">加法和移位</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">),</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">硬件结构简单</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">,</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">速度太慢</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(</font></span><span style="font-family: &quot;宋体&quot;; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">已经淘汰</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">).
+					</font></span></div>
+				</li>
+				<li>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+					<font size="6">&Oslash;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">方法二：不带符号位的阵列乘法器 
+					</font></span></div>
+				</li>
+			</ul>
+		</blockquote>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<div align="center"></div>
+		</div>
+	</div>
+	<p><font size="6" face="楷体_GB2312" color="#0000FF">二、不带符号位的阵列乘法器</font>
+	<p>
+	  
+	<p align="center"><a href="素材库/fig/Flash/2.4.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图2.4 </font><font face="楷体_GB2312" size="6" color="#330066">不带符号阵列乘法器逻辑图</font></p>
+	<p>
+	  
+	<p>
+	  
+	<p align="center"><a href="素材库/fig/Flash/2.5.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图2.5 </font><font face="楷体_GB2312" size="6" color="#330066">5 X 5位</font><font face="楷体_GB2312" size="6" color="#330066">不带符号阵列乘法器逻辑图</font></p>
+	<p>　<p>　</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">2</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.3.2 
+	直接补码并行乘法</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    	
+    	<td width="3" height="26" rowspan="2"></td> 
+  </tr>
+	<tr>
+    <td width="988" height="3">
+	<p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6" face="楷体_GB2312" color="#0000FF">一、求补电路原理</font><p>
+			<font face="楷体_GB2312" size="6" color="#0000FF">&nbsp; </font>
+			<font size="6" color="#330066" face="宋体">算前求补-乘法器-算后求补</font></p>
+			<p>　</p>
+			<p align="center"><a href="素材库/fig/Flash/2.6.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图2.6 </font><font face="楷体_GB2312" size="6" color="#330066">对2求补电路图</font></p>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-size:133%">
+					<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-4.12%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">E=0</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">时，输入和输出相等 </span></div>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-size:133%">
+					<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-3.45%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">E=1</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">时，则从数最右端往左边扫描，直到第一个</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN">1</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">的时候，该位</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">和右边各位保持不变</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">0</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-size: 24pt; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">⊕</span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-size: 24pt; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">A=A</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">，左边各数值位按位取反</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">1</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-size: 24pt; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">⊕</span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-size: 24pt; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">A=</span><span style="font-family: 宋体; mso-ascii-font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-size: 24pt; mso-bidi-font-family: Times New Roman">乛</span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-size: 24pt; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">A
+					</span></div>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-size:133%">
+					<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-4.12%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">可以用符号作为</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">E
+					</span>
+					<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">的输入</span></div>
+			</div>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1"></div>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">时间延迟分析：转换</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN">n+1</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">位带符号的时间延迟为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN">t=n*2T+5T</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">，其中</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">n*2T</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">为或门延迟时间，</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">5T</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">为最高位与门和异或门的时延。</span></div>
+			<p>　</p>
+			<p align="center"><a href="素材库/fig/Flash/2.7.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图2.7 </font><font face="楷体_GB2312" size="6" color="#330066">带符号的阵列乘法器</font></p>
+			<p align="left"><span class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1"><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">例20 </span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">设x=+15,y=-13,用带求补器的原码阵列乘法器求x.y=?</span></span></p>
+			<p align="left"><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt"><font color="#0000FF">解：</font></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">[x]原=<font color="#FF0000">0</font>1111 ,[y]原=<font color="#FF0000">1</font>1101</span></p>
+			<p align="left"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt"><font color="#FF0000">1</font>1101符号位运算：</span><span style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1"><span style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN" lang="EN-US" xml:lang="EN-US"><font color="#FF0000">0</font></span><span style="font-family: 宋体; mso-ascii-font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-size: 24pt; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman" lang="EN-US" xml:lang="EN-US">⊕<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt"><font color="#FF0000">1</font></span>=<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt"><font color="#FF0000">1</font></span></span></span></p>
+			<p align="center"><img src="素材库/fig/图片/ex_20.jpg" width="813" height="472" /></p>
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.54%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span></div></div>
+	</div></td>
+	
+  </tr>
+					
+	   </table>

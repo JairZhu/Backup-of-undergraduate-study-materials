@@ -1,0 +1,29 @@
+TITLE   PROG7-5 BINARY TO DECIMAL CONVERSION MODULE
+PAGE 	60,132
+;this module converts a binary (hex) number up to FFFFH to decimal
+; then makes it displayable (ASCII)
+;CALLING PROGRAM SETS
+; AX = BINARY VALUE TO BE CONVERTED TO ASCII
+; SI = OFFSET ADDRESS WHERE ASCII VALUE TO BE STORED
+          .MODEL SMALL
+          PUBLIC B2ASC_CON 
+          .CODE
+B2ASC_CON PROC	 FAR
+          PUSHF          ;STORE REGS CHANGED BY THIS MODULE
+          PUSH   BX
+          PUSH   DX
+          MOV    BX,10          ;BX=10 THE DIVISOR 
+          ADD    SI,4           ;SI POINTS TO LAST ASCII DIGIT
+B2A_LOOP: SUB    DX,DX          ;DX MUST BE 0 IN WORD DIVISION
+          DIV    BX             ;DIVIDE HEX NUMBER BY 10 (BX=10)
+          OR     DL,30H         ;TAG '3' TO REMAINDER TO MAKE IT ASCII
+          MOV    [SI],DL        ;MOVE THE ASCII DIGIT
+          DEC    SI             ;DECREMENT POINTER
+          CMP    AX,0           ;CONTINUE LOOPING WHILE AX >0
+          JA     B2A_LOOP
+          POP    DX             ;RESTORE REGISTERS
+          POP    BX
+          POPF
+          RET 
+B2ASC_CON ENDP
+          END

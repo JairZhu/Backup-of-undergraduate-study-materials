@@ -1,0 +1,147 @@
+Microsoft (R) Macro Assembler Version 5.00                  4/16/11 23:25:52
+                                                             Page     1-1
+
+
+				 
+				      .MODEL SMALL 
+ 0040				      .STACK 64 
+ 0000				      .DATA 
+ 0000  30 31 32 33 34 35 36	DATA1  DB  '0123456789' 
+       37 38 39			
+				 
+				DATA   DB   'werrer' 
+error.ASM(7): error A2015: Symbol already different kind: DATA
+				 
+				      
+				 
+ 000A  0005[			DATA2  DB 5 DUP(00), C0H 
+	   00			
+			 ]	
+       00			
+error.ASM(11): error A2009: Symbol not defined: C0H
+				 
+ 0010  ??			HIGHEST  DB  ? 
+				 
+ 0011  0002[			MAX      DB  2 dup(?) 
+	    ??			
+			 ]	
+				
+				 
+				 
+ 0013  01D8			DA1    DW  472 
+				 
+ = 000D				CR     EQU  0DH 
+ = 000A				LF     EQU  0AH  
+				 
+				         
+ 0000				     .CODE 
+				     
+				 
+ 0000				MAIN:    PROC  FAR 
+error.ASM(27): error A2105: Expected: instruction or directive
+ 0000  1E			        PUSH DS 
+ 0001  B8 0000			        MOV AX,0 
+ 0004  50			        PUSH AX 
+ 0005  A1 0000 U		        MOV  AX, DATA 
+error.ASM(31): error A2052: Improper operand type: DATA
+ 0008  8E D8			        MOV  DS, AX 
+ 000A  B9 000C			        MOV CX, 12 
+				 
+ 000D  BE 0000 U		        MOV SI, offset DATA 
+error.ASM(35): error A2052: Improper operand type: DATA
+				 
+ 0010  49			        DEC CX 
+				   
+ 0011  A2 0010 R		        MOV HIGHEST, AL 
+				 
+ 0014  BB 0000 R		        MOV BX, offset DATA1 
+ 0017  BF 0011 R		        MOV DI,offset MAX 
+Microsoft (R) Macro Assembler Version 5.00                  4/16/11 23:25:52
+                                                             Page     1-2
+
+
+				 
+				        MOV BYTE PTR [DI], BYTE PTR [BX] 
+error.ASM(44): error A2052: Improper operand type
+				 
+				        MOV HIGHEST, MAX 
+error.ASM(46): error A2052: Improper operand type
+				 
+				        SUB MAX, [BX] 
+error.ASM(48): error A2052: Improper operand type
+				 
+ 001A  B0 00			        MOV AL,0 
+ 001C  BE 0000 R		        MOV SI, offset data1 
+ 001F  3A 9C 0000 R		        CMP BL, [SI]+AL 
+error.ASM(52): error A2049: Illegal use of register
+				 
+ 0023  8A 8C 0000 R		        MOV CL, AL[SI] 
+error.ASM(54): error A2049: Illegal use of register
+				 
+ 0027  49			        DEC CX 
+ 0028  75 14			        JNZ  CALL SUBPROC1 
+error.ASM(57): error A2009: Symbol not defined: CALL
+				 
+ 002A  BA 0000 R		        MOV DX, offset DATA1 
+				 
+ 002D  B8 0000			        MOV AX, [DX] 
+error.ASM(61): error A2048: Must be index or base register
+				        
+ 0030  C3			        RET 
+				MAIN    ENDP 
+error.ASM(64): error A2000: Block nesting error
+				 
+				SUBPROC1  PROC NEAR 
+error.ASM(66): error A2006: Phase error between passes
+				 
+ 003E  B8 0000			    MOV AX, 0 
+				 
+ 0041  C3			     RET 
+ 0042				SUBPROC1 ENDP 
+ 0042				        END MAIN 
+Microsoft (R) Macro Assembler Version 5.00                  4/16/11 23:25:52
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0015	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	0040	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	0042	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+CR . . . . . . . . . . . . . . .  	NUMBER	000D	
+
+DA1  . . . . . . . . . . . . . .  	L WORD	0013	_DATA
+DATA1  . . . . . . . . . . . . .  	L BYTE	0000	_DATA
+DATA2  . . . . . . . . . . . . .  	L BYTE	000A	_DATA	Length = 0005
+
+HIGHEST  . . . . . . . . . . . .  	L BYTE	0010	_DATA
+
+LF . . . . . . . . . . . . . . .  	NUMBER	000A	
+
+MAIN . . . . . . . . . . . . . .  	L NEAR	0000	_TEXT
+MAX  . . . . . . . . . . . . . .  	L BYTE	0011	_DATA	Length = 0002
+
+SUBPROC1 . . . . . . . . . . . .  	N PROC	003E	_TEXT	Length = 0004
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  error		
+
+
+     72 Source  Lines
+     72 Total   Lines
+     23 Symbols
+
+  50046 + 450402 Bytes symbol space free
+
+      0 Warning Errors
+     14 Severe  Errors

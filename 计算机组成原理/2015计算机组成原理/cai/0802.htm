@@ -1,0 +1,117 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>程序查询方式</title>
+
+      
+<p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="968" height="24"></p>
+<div align="center">
+	<p>  <a href="0800.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">8.2 程序查询方式</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.2.1 
+	设备编址</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.2.2 
+	输入输出指令</a><br>
+			<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.2.3 
+	程序查询接口</a><br>
+		</font></b><b><font size="6"><a href="#.4"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.2.4 程序查询输入/输出方式</a></font></b>
+	<p align="center">　</p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="990" height="1305" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".1">8.2.1
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">设备编址</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td height="73"></td>
+    <td width="963" height="73"><font size="6">　　用程序实现输入/输出的数据传送，外围设备有两种不同的编址方法。一种是</font><font size="6" color="red"><strong>统一编址</strong></font><font size="6">： 输入/输出设备中的控制寄存器、数据寄存器、状态寄存器等和内存单元一样看待，它们和内存单元联合在一起编排地址。这样就可用访问内存的指令（读、写指令）去访问I/O设备的某个寄存器，因而不需要专门的I/O指令组。另一种是</font><font size="6" color="red"><strong>单独编址</strong></font><font size="6">： 内存地址和I/O设备地址是分开的，访问内存和访问I/O设备使用不同操作码的指令，即访问I/O设备有专门的I/O指令组。<br>
+			</font></td>
+  </tr>
+	<tr>
+		<td height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><a name=".2"><font size="6" color="#FFFFFF">8</font></a><font size="6"><font color="#FFFFFF"><a name=".2">.2.2 
+	输入输出指令</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td height="73"></td>
+    <td width="963" height="73"><font size="6">　　当用程序实现输入/输出传送时，</font><font size="6" color="red">I/O指令</font><font size="6">一般具有如下功能：<br>
+				① 置“1”或置“0”I/O接口的某些控制触发器，用于控制设备进行某些动作，如启动、关闭设备等。<br>
+				② 测试设备的某些状态，如“忙”、“准备就绪”等，以便决定下一步的操作。<br>
+				③ 传送数据，当输入数据时，将I/O接口中数据寄存器的内容送到CPU某一寄存器；当输出数据时，将CPU中某一寄存器的内容送到I/O接口的数据寄存器。<br>
+				　　不同的机器，所采用的I/O指令格式和操作也不相同。</font>
+			<p>
+	</p>
+		</td>
+  </tr>
+	<tr>
+		<td height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">8</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.2.3 
+	程序查询接口</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026" class="O1">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<p><font size="6">　　</font><font size="6"><br>
+					  程序查询方式的接口，包括</font></p>
+					<p><font size="6">（1）</font><font size="6" color="red">设备选择电路</font><font size="6">接到总线上的每个设备预先都给定了设备地址码。CPU执行I/O指令时需要把指令中的设备地址送到地址总线上，用以指示CPU要选择的设备。每个设备接口电路都包含一个设备选择电路，用它判别地址总线上呼叫的设备是不是本设备。<br>
+				    （2）</font><font size="6" color="red">数据缓冲寄存器</font><font size="6">当输入操作时，用数据缓冲寄存器来存放从外部设备读出的数据，然后送往CPU；当输出操作时，用数据缓冲寄存器来存放CPU送来的数据，以便送给外部设备输出。<br>
+				    （3）</font><font size="6" color="red">设备状态标志</font><font size="6">是接口中的标志触发器，如“忙”、“准备就绪”、“错误”等，用来标志设备的工作状态，以便接口对外设动作进行监视。一旦CPU用程序询问外部设备时，将状态标志信息取至CPU进行分析。<br>
+					      </font></p>
+			  </div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O1" align="center">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+					<p>　<a href="素材库/fig/Flash/8.2.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+					<p><font size="6">图8.2 程序查询方式接口示意图</font></p>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr height="27">
+		<td colspan="2" bgcolor="#000080" height="27"><strong><font size="6" color="white"><a name=".4">8</a><a name=".3">.2.4 程序查询输入/输出方式</a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td>
+	</tr>
+	<tr>
+		<td height="73"></td>
+		<td width="963" height="73"><font size="6">　　程序查询方式是利用程序控制实现CPU和外部设备之间的数据传送。程序执行的动作如下： <br>
+				（1） 先向I/O设备发出命令字，请求进行数据传送。<br>
+				（2） 从I/O接口读入状态字。<br>
+				（3） 检查状态字中的标志，看看数据交换是否可以进行。<br>
+				（4） 假如这个设备没有准备就绪，则第（2）、第（3）步重复进行，直到这个设备发出准备就绪信号“Ready”为止。<br>
+				（5） CPU从I/O接口的数据缓冲寄存器输入数据，或者将数据从CPU输出至接口的数据缓冲寄存器。与此同时，CPU将接口中的状态标志复位。</font><br>
+			<div align="center">
+				<p> <a href="素材库/fig/Flash/8.3.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<p><font size="6">图8.3程序查询I/O设备流程图</font></p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+</table>

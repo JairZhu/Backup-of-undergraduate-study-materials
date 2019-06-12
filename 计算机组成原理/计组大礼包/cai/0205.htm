@@ -1,0 +1,575 @@
+
+       <script src="expand.js"></script><title>2.5 定点运算器的组成</title>
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="967" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0200.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">2.5 定点运算器的组成</font><font face="宋体" size="6" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="fpweb:///_private/form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.5.1 
+	逻辑运算</a><br>
+	<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.5.2 
+	多功能算术/逻辑运算单元ALU</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.5.3 
+	内部总线</a><br>
+	<a href="#.4">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.5.4 
+	定点运算器的基本结构</a><br>
+	　</font></b><b><font size="6">&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="991" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong>
+	<font color="#FFFFFF" size="6">
+	<a name=".1">2.5.1	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">逻辑运算</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="3" height="73"></td>
+    <td width="988" height="73"><font size="6">自学P44</font></td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">2</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.5.2 
+	多功能算术/逻辑运算单元ALU</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="3" height="73"></td>
+    <td width="988" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">一、基本思想</font></p><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<p>
+	<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+	<font size="6">解决两个基本问题：</font></span></p>
+	<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（1） 实现多种逻辑运算 </font></span></p>
+	<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（2）并行进位</font></span></p>
+	<p>
+	<font face="宋体" size="6">一位全加器FA的逻辑表达式</font></p>
+	<p align="center">
+	<img border="0" src="素材库/fig/图片/图_2.5ALU1.wmf" width="559" height="69"><img border="0" src="素材库/fig/图片/图_2.5ALU2.wmf" width="557" height="64"></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O" style="mso-line-spacing:&quot;90 0 0&quot;;
+mso-margin-left-alt:216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		<font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">为了实现多种算术逻辑运算，可将</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">Ai</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">和</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">Bi</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">输入一个函数发生器（进位传递函数和进位产生函数）得到输出</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">Xi</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">和</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">Yi</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">，作为一位全加器的输入</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">。</span></font></div>
+	<p align="center">&nbsp;</p>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">二、ALU逻辑表达式</font></p>
+	<p align="center">
+	<img border="0" src="素材库/fig/图片/图_2.5ALU逻辑表达式.wmf" width="424" height="100"></p>
+	<p>
+	<font size="6">Xi,Yi 与控制参数和输入量的关系构造如下真值表</font></p>
+	<p align="center"><img src="素材库/fig/图片/图_ALU逻辑真值表.bmp" /></p>
+	<p align="center"><img src="素材库/fig/图片/图_2.5ALU逻辑表达式2.wmf" /></p>
+	<p>
+	<font size="6">进一步化简得到下式</font></p>
+	<p align="center">
+	<img border="0" src="素材库/fig/图片/图_2.5ALU逻辑表达式3.wmf" width="424" height="96"></p>
+	<p>
+	<font size="6">ALU的某一位逻辑表达式见下:</font></p>
+	<p align="center"><img src="素材库/fig/图片/图_ALU逻辑表达式4.bmp" /></p>
+	<p>
+	<font face="楷体_GB2312" size="6" color="#0000FF">三、4位ALU</font></p>
+	<p align="center"><br>
+	</p>
+	<div v:shape="_x0000_s1026" class="O">
+	  <p><img src="素材库/fig/图片/F_2-3.png" width="207" height="38" /></p>
+	  <p><font size="6">4位之间采用先行进位公式，根据上式，每一位的进位公式可递推如下：</font></p>
+	  <p><img src="素材库/fig/图片/ex_p.bmp" /></p>
+	  <p>&nbsp;</p>
+	</div>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">四、74181器件</font></p><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-size:167%">
+			<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-5.22%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">具有正逻辑和负逻辑两种 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<div align="center"><img border="0" src="素材库/fig/图片/图_ALU内部逻辑结构.png" width="503" height="204"></div>
+			<p align="center">&nbsp;</p>
+		</div>
+	</div>
+	<p align="center">&nbsp;</p>
+	<p align="center">
+	  <font size="6">&nbsp;&nbsp;</font></p>
+	<p>&nbsp;</p>
+	<p align="center"><a href="素材库/fig/Flash/2.11.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图2.11 </font><span class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">正逻辑操作数表示的</font></span><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN" lang="EN-US" xml:lang="EN-US"><font size="6">74181</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ALU的逻辑电路图</font></span></span></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1"></div>
+		<blockquote>
+			<ul>
+				<li>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.29%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">M=0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">时，对进位信号没有影响，做算术运算 
+					</font></span></div>
+				</li>
+				<li>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.29%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">M=1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">时，封锁各位的进位输出，做逻辑运算 
+					</font></span></div>
+				</li>
+			</ul>
+		</blockquote>
+		<div class="O" style="mso-line-spacing:&quot;75 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.11%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">说明： 
+			</font></span></div>
+		<blockquote>
+			<ul>
+				<li>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.62%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">74181</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">执行正逻辑输入</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">/</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">输出方式的一组算术运算和逻辑运算和负逻辑输入</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">/</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">输出方式的一组算术运算和逻辑运算是等效的。 
+					</font></span></div>
+				</li>
+				<li>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.29%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">A=B</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">端可以判断两个数是否相等。 
+					</font></span></div>
+				</li>
+			</ul>
+		</blockquote>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6" face="楷体_GB2312" color="#0000FF">五、16位ALU</font></div>
+	</div>
+	<p align="center">&nbsp;</p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O1">
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:111%">
+			<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute;
+left:-5.49%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n+x</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>0</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>0</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</span></b></span>
+			<span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n+y</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n+x
+			</b></span></div>
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:111%">
+			<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute;
+left:-5.49%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt;
+mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:13pt;position:relative;top:.37em;
+mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n+x</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n+y<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</span></b></span>
+			<span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n+4</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>3</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>3</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:13pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n+z
+			</b></span></div>
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:111%">
+			<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute;
+left:-5.49%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">片内先行进位</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">,</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">片间串行进位</span></div>
+	</div>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">六、两级先行进位的ALU</font></p><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.0%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN">4</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt">片（组）的先行进位逻辑 </span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.0%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>n+x</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>0</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>0</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>n<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b>
+			</span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.0%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>n+y</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>n+x</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>+G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>0</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>0</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>n </b></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.0%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:14pt;position:relative;top:.37em;
+mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b><span style="mso-spacerun:yes">&nbsp;</span></b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n+x</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n+y
+			</b></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.0%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:14pt;position:relative;top:.37em;
+mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</span></b></span>
+			<span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>+G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>+G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>0</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>0</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:14pt;
+position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:ZH-CN"><b>n<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</span></b></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.0%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>n+4</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>3</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>3</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>n+z </b></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.0%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+			</span>=G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>3</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>+G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>3</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>+G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>3</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>+G</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>0</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>3</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>+P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>0</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>1</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>2</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>P</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>3</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b>C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>n </b></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.0%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN"><b><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+			</span>=G*+P*C</b></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:14pt;position:relative;top:.37em;mso-text-raise:-25%;mso-fareast-language:
+ZH-CN"><b>n </b></span></div>
+		<ul>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:128%">
+				<span style="mso-special-format:bullet;color:#CCCC00;
+mso-color-index:4;position:absolute;left:-4.47%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:23pt;mso-fareast-language:ZH-CN">G*</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:23pt">为成组先行进位发生输出 </span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:128%">
+				<span style="mso-special-format:bullet;color:#CCCC00;
+mso-color-index:4;position:absolute;left:-4.47%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:23pt;mso-fareast-language:ZH-CN">P*</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:23pt">为成组先行进位传送输出 </span></div>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+		  <p align="center"><a href="素材库/fig/Flash/2.12.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图2.12 </font><font size="6">成组先行进位部件CLA的逻辑图</font></p>
+			<p>
+		</div>
+	</div>
+	<p>&nbsp;</p>
+	<p align="center"><a href="素材库/fig/Flash/2.13.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图2.13 
+      <font size="6">32位ALU逻辑方框图</font></font></p>
+	<p>&nbsp;</p>
+	<p align="center">&nbsp;</p>
+	</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">2</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.5.3 
+	内部总线</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="3" height="73"></td>
+    <td width="988" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-3.65%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><font size="6">机器内部各部份数据传送频繁</font></span><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">,</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">可以把寄存器间的数据传送通路加</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">以归并</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">,</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">组成总线结构。 </span></font></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6">
+			<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.32%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">分类 </span></font></div>
+		<blockquote>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.64%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">所处位置 </span></font></div>
+			<blockquote>
+				<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.78%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">内部总线（</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">CPU</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">内） </span></font></div>
+				<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.78%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">外部总线（系统总线） 
+					</span></font></div>
+			</blockquote>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.64%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">逻辑结构 </span></font></div>
+			<blockquote>
+				<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.78%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">单向传送总线 
+					</span></font></div>
+				<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.78%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">双向传送总线 
+					</span></font></div>
+			</blockquote>
+		</blockquote>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O" style="mso-char-wrap:1;mso-kinsoku-overflow:
+1"></div>
+			<p align="center"><a href="素材库/fig/Flash/2.14.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图2.14 <font size="6">32位ALU逻辑方框图</font></font></p>
+			<p>
+		</div>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O" style="mso-char-wrap:1;mso-kinsoku-overflow:
+1"></div>
+	<p align="center">&nbsp;</p>	  </td>
+  </tr>
+	   </table>
+
+<table border="0" width="992" height="225" cellspacing="0" cellpadding="0" id="table2">
+		<tr>
+    <td colspan="2" height="43" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".4">2</a></font><font size="6"><font color="#FFFFFF"><a name=".4">.5.4 
+	定点运算器的基本结构</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="182"></td>
+    <td width="965" height="182"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<font size="6" face="楷体_GB2312" color="#0000FF">1、单总线结构的运算器</font>
+	<p align="center">
+	<img border="0" src="素材库/fig/图片/图_单总线结构的运算器.jpg" width="561" height="416"></p>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">2、双总线结构的运算器</font></p>
+	<p align="center">
+	<img border="0" src="素材库/fig/图片/图_双总线结构的运算器.jpg" width="564" height="419"></p>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">3、三总线结构的运算器</font></p>
+	<p align="center">
+	<img border="0" src="素材库/fig/图片/图_三总线结构的运算器.jpg" width="561" height="417"></p>
+	<p align="center"><a href="素材库/fig/Flash/2.15.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图2.15 运算器的基本结构</font> </p></td>
+  </tr>
+					
+	   </table>

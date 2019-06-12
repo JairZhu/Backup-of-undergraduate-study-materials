@@ -1,0 +1,44 @@
+TITLE 	PROG7-2	PROG7-1 REWRITTEN WITH FULL SEGMENT DEFINITION
+PAGE 	60,132
+ 	EXTRN SUBPROG1:FAR
+        EXTRN DATA1:byte
+ 	
+ 	PUBLIC DATA2
+;----------------------------
+STSEG 	SEGMENT PARA STACK 'STACK'
+ 	DB 		100 DUP(?)
+STSEG 	ENDS
+;----------------------------
+DTSEG 	SEGMENT PARA PUBLIC 'DATA'
+VALUE1 	DW 2050
+VALUE2 	DW 500
+SUM 	DW 2 DUP (?)
+PRODUCT DW 2 DUP (?)
+
+DATA2   DB  0DH, 0AH, 'This is from the main module.','$'
+DTSEG 	ENDS
+;-----------------------------
+CODSG   SEGMENT PARA PUBLIC 'CODE'
+MAIN 	PROC 	FAR
+ 	ASSUME CS:CODSG,DS:DTSEG,SS:STSEG
+ 	MOV 	AX,DTSEG
+ 	MOV 	DS,AX
+
+        CALL 	SUBPROG1 	
+        
+               
+
+        mov ah, 09H
+        mov dx, offset data1
+        int 21h
+
+        mov ah,07
+        int 21h
+        
+ 	
+ 	
+ 	MOV 	AH,4CH
+ 	INT 	21H 	;GO BACK TO DOS
+MAIN 	ENDP
+CODSG   ENDS
+ 	END 	MAIN

@@ -1,0 +1,409 @@
+
+       <script src="expand.js"></script><title>5.3 时序产生器和控制方式</title>
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="966" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0500.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">5.3 时序产生器和控制方式</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">5.3.1 
+	时序产生器作用和体制</a><br>
+	<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">5.3.2 
+	时序信号产生器</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">5.3.3 
+	控制方式</a><br>
+	　</font></b></p>
+	<p>　</p>
+</form>
+
+<table border="0" width="960" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".1">5.3.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">时序产生器作用和体制</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="933" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	  <p><font size="6" face="楷体_GB2312" color="#000000">我们学习、工作和休息都有一个严格的作息时间。</font></p>
+	  <p><font size="6" face="楷体_GB2312" color="#000000">比如早晨6∶00起床；8∶00～12∶00上课，12∶00～14∶00午休……每个教师和学生都必须严格遵守这一规定，否则就难以保证正常的教学秩序。<br />
+	    CPU中也有一个类似“作息时间”的东西，它称为<font color="#FF0000">时序信号</font>。</font></p>
+	  <p><font size="6" face="楷体_GB2312" color="#0000FF">一、作用</font>
+      </p>
+	  <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026" class="O2">
+		<ul>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:128%">
+				<span style="mso-special-format:bullet;color:#CCCC00;mso-color-index:4;position:absolute;
+left:-5.61%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">计算机所以能够准确、迅速、有条不紊地工作，正是因为在CPU中有一个时序信号产生器</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"> 
+				</font></span></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -4.81%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">用二进制码表示的指令和数据都放在内存里，那么CPU是怎样识别出它们是数据还是指令呢？</font></span></div>
+			</li>
+			<li>
+			  <div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">从时间上来说，取指令事件发生在指令周期的第一个CPU周期中，即发生在“取指令”阶段，而取数据事件发生在“执行指令”阶段。</font></span></div>
+		  </li>
+			<li>
+			  <div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">在一个CPU周期中，又把时间为分若干个小段，以便规定在这一小段时间中CPU干什么，在那一小段时间中CPU又干什么，这种时间约束对CPU来说是非常必要的，否则就可能造成丢失信息或导致错误的结果。</font></span></div>
+		  </li>
+			<li>
+			  <div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">时间进度既不能来得太早，也不能来得太晚。</font></span></div>
+		  </li>
+			<li>
+			  <div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font color="#FF0000" size="6">时间控制对计算机来说是太重要了</font><font size="6">。</font></span></div>
+		  </li>
+			<li>
+			  <div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1"></div>
+		  </li>
+		</ul>
+	</div>
+	<p><font face="楷体_GB2312" size="6" color="#0000FF">二、体制</font></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<ul>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:117%">
+				<span style="mso-special-format:bullet;color:#CCCC00;
+mso-color-index:4;position:absolute;left:-4.96%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">组成计算机硬件的器件特性决定了时序信号的基本体制是电位</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">—</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">脉冲制（以触发器为例） 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -5.88%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">D</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为电位输入端，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CP</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Clock 
+				Pulse</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）为脉冲输入端 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -5.88%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">R,S</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为电位输入端 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -5.88%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">特性方程如下 
+				</font></span></div>
+			<ul>
+			  <li>
+				<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:863;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -5.18%; top: .3em; font-family: Wingdings">
+					<font size="6">§</font></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN"><font size="6">D=0</font></span><font size="6"><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">时，</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">CP</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">上升沿到来时，</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">D</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">触发器状态置</span></font><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><font size="6">0
+					</font></span></div>
+				<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:863;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -5.18%; top: .3em; font-family: Wingdings">
+					§</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">D=1</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">时，</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">CP</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">上升沿到来时，</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">D</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">触发器状态置</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">1
+				  </span></font></div>
+			  </li>
+			</ul>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:360;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<div align="center"></div>
+			<p align="center">
+		</div>
+	</div>
+	<font size="6">
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	</font>
+	<div v:shape="_x0000_s1026">
+		<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6">
+			<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.25%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">硬布线控制器，采用主状态周期</span><span lang="EN-US" style="font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial;mso-fareast-language:ZH-CN">—</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">节拍电位</span><span lang="EN-US" style="font-family:Arial; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">—</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">节拍脉冲三级</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">体制 </span></font></div>
+		<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<ul>
+				<li><font size="6">
+				<span style="mso-special-format:bullet;color:#330066; mso-color-index:3;position:absolute;left:-4.0%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">时序信号产生电路复杂</span></font></li>
+			</ul>
+		</div>
+	</div>
+	<p align="center"><font size="6">
+	  <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	</font>	</p>
+	<div v:shape="_x0000_s1026">
+		<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6">
+			<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-4.22%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">微程序控制器，节拍电位</span><span lang="EN-US" style="font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial;mso-fareast-language:ZH-CN">—</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">节拍脉冲二级体制 </span></font></div>
+		<ul>
+			<li>
+			<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<span style="mso-special-format:bullet;color:#330066; mso-color-index:3;position:absolute;left:-4.54%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">利用微程序顺序执行来实现微操作 </span></font></div>
+			</li>
+			<li>
+			<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<span style="mso-special-format:bullet;color:#330066; mso-color-index:3;position:absolute;left:-4.54%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">时序信号产生电路简单</span></font></div>
+		  </li>
+		</ul>
+	</div>
+	</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">5</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.3.2 
+	时序信号产生器</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="933" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/>
+      <p><font size="6" face="楷体_GB2312" color="#0000FF">一、功能</font></p>
+      <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:529;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:144%">
+			<span style="mso-special-format:&quot;numbullet3\,1&quot;;
+color:#669999;mso-color-index:5;position:absolute;left:-6.25%;top:.39em;
+font-size:70%">1.</span></span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><font size="6">产生时序信号 </font></span></div>
+		<ul>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-5.61%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">各型计算机产生时序电路不相同 </span></font></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-4.7%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">大、中型计算机的时序电路复杂，微型计算机的时序电路简</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">单</span></font></div>
+		  </li>
+		</ul>
+	</div>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">二、构成</font></p><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O2">
+		<ul>
+		  <li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:144%">
+			  <span style="mso-special-format:bullet;color:#CCCC00;mso-color-index:4;position:absolute;
+left:-7.47%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">时钟源 </span></font></div>
+		  </li>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<span style="mso-special-format:bullet;color:#CCCC00;mso-color-index:4;position:absolute; left:-7.47%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">环形脉冲发生器 </span></font></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<span style="mso-special-format:bullet;color:#CCCC00;mso-color-index:4;position:absolute; left:-7.47%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">节拍脉冲和读写时序译码逻辑 </span></font></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:713;mso-text-indent-alt:
+437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<span style="mso-special-format:bullet;color:#CCCC00;mso-color-index:4;position:absolute; left:-7.47%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">启停控制逻辑</span></font></div>
+			</li>
+		</ul>
+	</div>
+	<p>&nbsp;</p>
+	<p align="center"><font size="6"><a href="素材库/fig/Flash/5.17.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></font></p>
+	<p align="center"><font size="6">图5.17</font> <font size="6">时序信号产生器框图</font></p>
+	<p>
+	  <font size="6" face="楷体_GB2312" color="#0000FF">三、时钟脉冲源</font><font size="6">
+	  <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	  </font> </p>
+	<div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6">
+			<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-3.65%;top:.39em;font-family:Wingdings">l</span>时钟源时钟源用来为环形脉冲发生器提供频率稳定且电平匹配的方波时钟脉冲信号。它通常由石英晶体振荡器和与非门组成的正反馈振荡电路组成，其输出送至环形脉冲发生器。</font></div>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6" face="楷体_GB2312" color="#0000FF">四、环行脉冲发生器</font><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-size:144%">
+					<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-4.15%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">环形脉冲发生器环形脉冲发生器的作用是产生一组有序的间隔相等或不等的脉冲序列，以便通过译码电路来产生最后所需的节拍脉冲</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"> 
+					</font></span></div>
+				<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<div align="center"></div>
+				</div>
+			</div>
+		  <p>&nbsp;</p>
+			<p align="center"><a href="素材库/fig/Flash/5.18.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图5.18</font> <font size="6">节拍点位于节拍脉冲时序关系图</font></p>
+			<p align="center">&nbsp;</p>
+			<p><font size="6" face="楷体_GB2312" color="#0000FF">五、节拍脉冲和读/写时序的编码</font></p>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O" style="mso-line-spacing:&quot;90 0 0&quot;;
+mso-margin-left-alt:216;mso-char-wrap:1;mso-kinsoku-overflow:1"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">假定在一个CPU周期中产生四个等间隔的节拍脉冲T1～T4，每个节拍脉冲的脉冲宽度均为200ns，因此一个CPU周期便是800ns，在下一个CPU周期中，它们又按固定的时间关系重复。</font></span></div>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p><font size="6" face="楷体_GB2312" color="#0000FF">六、启停控制逻辑</font></p>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-size:
+133%"><span style="mso-special-format:bullet;position:absolute;left:-.95%">&#8226;</span></span><span style="font-family: 宋体; mso-fareast-font-family: 华文楷体; mso-hansi-font-family: Arial"><font size="6">启动、停机是随机的，对读</font></span><font size="6" face="宋体"><span lang="EN-US" style="mso-fareast-font-family: 华文楷体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">/</span></font><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 华文楷体; mso-hansi-font-family: Arial">写时序信号也需要由启停逻辑加以控制。 
+					</span></font></div>
+				<div style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="mso-special-format:bullet;position:absolute;left:-.95%">
+					<font face="宋体">&#8226;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 华文楷体; mso-hansi-font-family: Arial">当运行触发器为“</span><font face="宋体"><span lang="EN-US" style="mso-fareast-font-family:华文楷体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">1</span></font><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 华文楷体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">”</span><span style="font-family: 宋体; mso-fareast-font-family: 华文楷体; mso-hansi-font-family: Arial">时，打开时序电路。当计算机启动时，一定要从第</span><font face="宋体"><span lang="EN-US" style="mso-fareast-font-family: 华文楷体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">1</span></font><span style="font-family: 宋体; mso-fareast-font-family: 华文楷体; mso-hansi-font-family: Arial">个节拍脉冲前沿开始工作。 
+					</span></font></div>
+				<div style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="mso-special-format:bullet;position:absolute;left:-.97%">
+					<font face="宋体">&#8226;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 华文楷体; mso-hansi-font-family: Arial">当运行触发器“</span><font face="宋体"><span lang="EN-US" style="mso-fareast-font-family:华文楷体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">0</span></font><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 华文楷体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">”</span><span style="font-family: 宋体; mso-fareast-font-family: 华文楷体; mso-hansi-font-family: Arial">时，关闭时序产生器。停机时一定要在第</span><font face="宋体"><span lang="EN-US" style="mso-fareast-font-family:华文楷体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">4</span></font><span style="font-family: 宋体; mso-fareast-font-family: 华文楷体; mso-hansi-font-family: Arial">个节拍脉冲结束后关闭时序产生器。 
+					</span></font></div>
+			  <div style="mso-line-spacing:&quot;100 50 0&quot;;mso-char-wrap:1;mso-kinsoku-overflow:
+1">
+			    <p align="center"><font size="6"><a href="素材库/fig/Flash/5.19.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></font></p>
+			    <p align="center"><font size="6">图5.19</font> <font size="6">启停控制逻辑</font></p>
+			  </div>
+			</div>
+		</div>
+	</div>	  </td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".3">5.3.3 
+	控制方式</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="933" height="73"><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p><span style="font-size:167%">
+		    <span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-3.42%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">控制不同操作序列时序信号的方法，称为<font color="#FF0000">控制器的控制方式</font>。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">常用的有三种方式，其实质反映了时序信号的定时方式：</font></span> 
+		    </p>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.1%; top: .39em; font-family: Wingdings">
+			l</span></font>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			  <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.28%; top: .39em; font-family: Wingdings">
+		      l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">1.同步控制方式</span></font>
+		    <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		      <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.28%; top: .39em; font-family: Wingdings">
+		      l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">2.异步控制方式 
+			        </span></font></div>
+		  </div>
+		  <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.28%; top: .39em; font-family: Wingdings">
+	        l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">3.联合控制方式</span></font></div>
+		</div>
+	  </div>
+	<font size="6">
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	</font>
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p><font size="6">
+		    <span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.79%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><font color="#0000FF">同步控制方式</font>（指令的机器周期和时钟周期数不变）</span></font></p>
+			<p><font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">根据不同情况，同步控制方式可选取如下<font color="#FF0000">方案</font>：</span></font></p>
+			<p><font color="#000000" size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">1.完全统一的机器周期执行各种不同的指令 <br />
+		    2.采用不定长机器周期 <br />
+		    3.中央控制于局部控制的结合 </span></font></p>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-4.16%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><font color="#0000FF">异步控制方式</font> </span></font></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"><font size="6"><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">每条指令需要多长时间就占多长时间 </span></font></div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font color="#0000FF" size="6">
+			<span style="mso-special-format:bullet;mso-color-index:3;position:absolute; left:-4.16%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">联合控制方式 </span></font>
+		  <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			  <font size="6">
+		      <span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-3.68%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">大部分指令在固定的周期内完成，少数难以确定的操作采用异步</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">方式 </span></font></div>
+		  <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		    <font size="6">
+	          <span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-3.68%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">机器周期的节拍脉冲固定，但是各指令的机器周期数不固定（微</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">程序控制器采用） </span></font></div>
+		</div>
+		</div>
+	<p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>	</td>
+  </tr>
+							
+      </table>

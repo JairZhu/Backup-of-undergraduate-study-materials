@@ -1,0 +1,126 @@
+Microsoft (R) Macro Assembler Version 5.00                  3/25/9PROG5-2                                                     Page     1-1
+
+
+				   TITLE     PROG5-2 
+				   PAGE 60,132 
+				;-------------- 
+				   MULTIPLY  MACRO  VALUE1, VALUE2, RESULT 
+				             LOCAL BACK 
+				;THIS MACRO COMPUTES RESULT = VALUE1 X VALUE2 
+				;;BY REPEATED ADDITION 
+				;;VALUE1 AND VALUE2 ARE WORD OPERANDS; RESULT IS A DOUBLEWORD 
+				             	MOV  	BX,VALUE1	;BX=MULTIPLIER 
+				             	MOV  	CX,VALUE2	;CX=MULTIPLICAND 
+				             	SUB  	AX,AX		;CLEAR AX  
+				             	MOV  	DX,AX		;CLEAR DX 
+				   BACK: 	ADD  	AX,BX		;ADD BX TO AX  
+				             	ADC  	DX,00		;ADD CARRIES IF THERE IS ONE 
+				             	LOOP 	BACK		;CONTINUE UNTIL CX=0 
+				             	MOV  	RESULT,AX	;SAVE THE LOW WORD  
+				             	MOV  	RESULT+2,DX	;SAVE THE HIGH WORD 
+				             	ENDM 
+				   ;-------------- 
+				   		.MODEL SMALL 
+ 0040						.STACK 64 
+				   ;-------------- 
+ 0000				   		.DATA 
+ 0000  0002[			   RESULT1 	DW        	2 DUP (0) 
+	   0000			
+			 ]	
+				
+ 0004  0002[			   RESULT2 	DW        	2 DUP (0) 
+	   0000			
+			 ]	
+				
+ 0008  0002[			   RESULT3 	DW        	2 DUP (0) 
+	   0000			
+			 ]	
+				
+				   ;-------------- 
+ 0000				   		.CODE 
+ 0000				   MAIN      	PROC  	FAR 
+ 0000  B8 ---- R		             	MOV  	AX,@DATA 
+ 0003  8E D8			             	MOV  	DS,AX 
+				             	MULTIPLY 2000,500,RESULT1 
+ 0005  BB 07D0               1	             	MOV  	BX,2000	;BX=MULTIPLIER 
+ 0008  B9 01F4               1	             	MOV  	CX,500	;CX=MULTIPLICAND 
+ 000B  2B C0                 1	             	SUB  	AX,AX		;CLEAR AX 
+ 000D  8B D0                 1	             	MOV  	DX,AX		;CLEAR DX 
+ 000F  03 C3                 1	   ??0000: 	ADD  	AX,BX		;ADD BX TO AX 
+ 0011  83 D2 00              1	             	ADC  	DX,00		;ADD CARRIES IF THERE IS ONE 
+ 0014  E2 F9                 1	             	LOOP 	??0000		;CONTINUE UNTIL CX=0 
+ 0016  A3 0000 R             1	             	MOV  	RESULT1,AX	;SAVE THE LOW WORD 
+ 0019  89 16 0002 R          1	             	MOV  	RESULT1+2,DX	;SAVE THE HIGH WORD 
+				             	MULTIPLY 2500,500,RESULT2 
+ 001D  BB 09C4               1	             	MOV  	BX,2500	;BX=MULTIPLIER 
+ 0020  B9 01F4               1	             	MOV  	CX,500	;CX=MULTIPLICAND 
+ 0023  2B C0                 1	             	SUB  	AX,AX		;CLEAR AX 
+ 0025  8B D0                 1	             	MOV  	DX,AX		;CLEAR DX 
+ 0027  03 C3                 1	   ??0001: 	ADD  	AX,BX		;ADD BX TO AX 
+Microsoft (R) Macro Assembler Version 5.00                  3/25/9PROG5-2                                                     Page     1-2
+
+
+ 0029  83 D2 00              1	             	ADC  	DX,00		;ADD CARRIES IF THERE IS ONE 
+ 002C  E2 F9                 1	             	LOOP 	??0001		;CONTINUE UNTIL CX=0 
+ 002E  A3 0004 R             1	             	MOV  	RESULT2,AX	;SAVE THE LOW WORD 
+ 0031  89 16 0006 R          1	             	MOV  	RESULT2+2,DX	;SAVE THE HIGH WORD 
+				             	MULTIPLY   300,400,RESULT3 
+ 0035  BB 012C               1	             	MOV  	BX,300	;BX=MULTIPLIER 
+ 0038  B9 0190               1	             	MOV  	CX,400	;CX=MULTIPLICAND 
+ 003B  2B C0                 1	             	SUB  	AX,AX		;CLEAR AX 
+ 003D  8B D0                 1	             	MOV  	DX,AX		;CLEAR DX 
+ 003F  03 C3                 1	   ??0002: 	ADD  	AX,BX		;ADD BX TO AX 
+ 0041  83 D2 00              1	             	ADC  	DX,00		;ADD CARRIES IF THERE IS ONE 
+ 0044  E2 F9                 1	             	LOOP 	??0002		;CONTINUE UNTIL CX=0 
+ 0046  A3 0008 R             1	             	MOV  	RESULT3,AX	;SAVE THE LOW WORD 
+ 0049  89 16 000A R          1	             	MOV  	RESULT3+2,DX	;SAVE THE HIGH WORD 
+ 004D  B4 4C			             	MOV  	AH,4CH 
+ 004F  CD 21			             	INT  	21H            		;GO BACK TO DOS 
+ 0051				   MAIN      	ENDP 
+ 0051				                END     MAIN 
+
+Microsoft (R) Macro Assembler Version 5.00                  3/25/9PROG5-2                                                     Symbols-1
+
+
+Macros:
+
+		N a m e			Lines
+
+MULTIPLY . . . . . . . . . . . .  	  12
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	000C	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	0040	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	0051	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	_TEXT	Length = 0051
+
+RESULT1  . . . . . . . . . . . .  	L WORD	0000	_DATA	Length = 0002
+RESULT2  . . . . . . . . . . . .  	L WORD	0004	_DATA	Length = 0002
+RESULT3  . . . . . . . . . . . .  	L WORD	0008	_DATA	Length = 0002
+
+??0000 . . . . . . . . . . . . .  	L NEAR	000F	_TEXT
+??0001 . . . . . . . . . . . . .  	L NEAR	0027	_TEXT
+??0002 . . . . . . . . . . . . .  	L NEAR	003F	_TEXT
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  prog5-2		
+
+
+     38 Source  Lines
+     74 Total   Lines
+     22 Symbols
+
+  50106 + 450870 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

@@ -1,0 +1,84 @@
+;Program 4-2 performs the following,  (1) clears the screen,  (2) sets the cursor at the beginning of the third line   ;from the top of the screen,  (3) accepts the message "IBM perSonal COmputer" from the keyboard,  
+
+;(4) converts lowercase letters of the message to uppercase, (5) displays the converted results on the next line.
+TITLE        PROG4-2
+PAGE         60,132
+             .MODEL SMALL
+             .STACK 64
+;--------------
+        .DATA
+BUFFER  DB              22,?,22 DUP (?)         ;BUFFER FOR KEYED-IN DATA
+        ORG     18H
+DATAREA DB      CR,LF,22 DUP (?),'$'    ;AREA TO PLACE DATA AFTER CONVERSION
+;
+CR      EQU       0DH
+LF      EQU       0AH
+;------------
+        .CODE
+MAIN    PROC    FAR
+        MOV     AX,@DATA
+        MOV     DS,AX
+        CALL    CLEAR           ;CLEAR THE SCREEN
+        CALL    CURSOR          ;SET CURSOR POSITION
+        CALL    GETDATA         ;INPUT A STRING INTO BUFFER
+        CALL    CONVERT         ;CONVERT STRING TO UPPER CASE
+        CALL    DISPLAY         ;DISPLAY STRING DATAREA
+        MOV     AH,4CH
+        INT     21H                     ;GO BACK TO DOS
+MAIN    ENDP
+;---------------
+;THIS SUBROUTINE CLEARS THE SCREEN
+CLEAR   PROC
+        MOV     BH,07                   ;NORMAL ATTRIBUTE
+        MOV     CX,0000                 ;SCROLL FROM ROW=00,COL=00
+        MOV     DX,184FH                ;TO ROW=18H,4FH
+        INT     10H                     ;INVOKE INTERRUPT TO CLEAR SCREEN
+        RET
+CLEAR   ENDP
+;THIS SUBROUTINE SETS THE CURSOR TO THE BEGINNING OF THE 3RD LINE
+CURSOR  PROC
+        MOV     AH,02                   ;SET CURSOR FUNCTION
+        MOV     BH,00                   ;PAGE 0
+        MOV     DL,01                   ;COLUMN 1
+        MOV     DH,03                   ;ROW 3
+        INT     10H                     ;INVOKE INTERRUPT TO SET CURSOR
+        RET
+CURSOR  ENDP
+;---------------
+;THIS SUBROUTINE DISPLAYS A STRING ON THE SCREEN
+DISPLAY PROC
+        MOV     AH,09                   ;DISPLAY STRING FUNCTION
+        MOV     DX,OFFSET DATAREA       ;DX POINTS TO BUFFER
+        INT     21H                     ;INVOKE INTERRUPT TO DISPLAY STRING
+        RET
+DISPLAY ENDP
+;---------------
+;THIS SUBROUTINE PUTS DATA FROM THE KEYBOARD INTO A BUFFER
+GETDATA PROC
+        MOV     AH,0AH                  ;INPUT STRING FUNCTION
+        MOV     DX,OFFSET BUFFER        ;DX POINTS TO BUFFER
+        INT     21H                     ;INVOKE INTERRUPT TO INPUT STRING
+        RET
+GETDATA ENDP
+;---------------
+;THIS SUBROUTINE CONVERTS ANY SMALL LETTER TO ITS CAPITAL
+CONVERT PROC
+        MOV     BX,OFFSET BUFFER
+        MOV     CL,[BX]+1                       ;GET THE CHAR COUNT
+        SUB     CH,CH                           ;CX = TOTAL CHARACTER COUNT
+        MOV     DI,CX                           ;INDEXING INTO BUFFER
+        MOV     BYTE PTR[BX+DI]+2,20H           ;REPLACE CR WITH SPACE
+        MOV     SI,OFFSET DATAREA+2             ;STRING ADDRESS
+AGAIN:  MOV     AL,[BX]+2                       ;GET THE KEYED-IN DATA
+        CMP     AL,61H                          ;CHECK FOR 'a'
+        JB              NEXT                            ;IF BELOW, GO TO NEXT
+        CMP     AL,7AH                          ;CHECK FOR 'z'
+        JA              NEXT                            ;IF ABOVE GO TO NEXT
+        AND     AL,11011111B                    ;CONVERT TO CAPITAL
+NEXT:   MOV     [SI],AL                         ;PLACE IN DATA AREA
+        INC     BX
+        INC     SI
+        LOOP    AGAIN                           ;LOOP IF COUNTER NOT ZERO
+        RET
+CONVERT ENDP
+        END     MAIN

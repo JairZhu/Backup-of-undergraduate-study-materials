@@ -1,0 +1,108 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>奔腾系列机的虚拟组织</title>
+
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="969" height="23"></p>
+		<p align="center"> <a href="0900.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">9.6 奔腾系列机的虚拟组织</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.6.1 
+	存储器模型</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.6.2 
+	虚地址模式</a><br>
+			<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.6.3 
+	分页模式下的地址转换</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="990" height="371" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><a name=".1"><font size="6" color="#FFFFFF">9</font></a><font color="#FFFFFF" size="6"><a name=".1">.6.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">存储器模型</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026" class="O" align="center">
+		<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1" align="center">
+					<div v:shape="_x0000_s1026" class="O" align="center">
+				<div style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1" align="center">
+							<a href="素材库/fig/Flash/9.12.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></div>
+			</div>
+				</div>
+	</div>
+			<p align="center"><font size="6">图9.12 IA-32的三种存储器模型</font></p>
+			<p><font size="6" color="blue">平坦存储器模型</font><font size="6">(Flat memory Model)：内存被组织成单一的、连续的地址空间，称为“线性地址空间”。所有的代码、数据和堆栈均包含在该地址空间内，该空间的字节地址范围为0～2<sup>32</sup>-1。<br>
+				</font><font size="6" color="blue">分段存储器模型</font><font size="6">(Segmented memory model)：每个程序均使用一组独立的地址空间，每个地址空间就是一个段，段的最大长度为2<sup>32</sup>B。逻辑地址由段选择器和偏移量组成，处理机将逻辑地址透明地转换为线性地址。<br>
+				</font><font size="6" color="blue">实地址模式存储器模型</font><font size="6">(Realaddress mode memory model)：这是为保持与早期的8086处理机兼容的存储器模式。线性地址空间被分为段，段的最大长度为64KB。线性地址空间的最大长度为2<sup>20</sup>B。<br>
+				</font></p>
+			<p>　
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">9</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.6.2 
+	虚地址模式</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+								<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+						<font size="6">IA-32</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">体系结构微处理机的虚拟存储器可以通过两种方式实现：分段和分页。存储管理部件包括分段部件</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">SU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和分页部件</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">两部分。分段部件将程序中使用的虚地址转换成线性地址。而分页部件则将线性地址转换为物理地址。</font></span></div>
+							<p></div>
+			</div>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><a name=".3"><font size="6" color="#FFFFFF">9</font></a><font size="6"><font color="#FFFFFF"><a name=".3">.6.3 
+	分页模式下的地址转换</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div align="center">
+				<a href="素材库/fig/Flash/9.13.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></div>
+			<div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<p align="center">　<font size="6">图9.13 4MB分页方式的地址转换</font>
+				</div>
+	</div>
+		</td>
+  </tr>
+							
+	   </table>

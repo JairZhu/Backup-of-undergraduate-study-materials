@@ -1,0 +1,794 @@
+
+       <script src="expand.js"></script><title>4.2 指令格式</title>
+      <style type="text/css">
+<!--
+.STYLE1 {font-family: "宋体"}
+.STYLE2 {font-size: x-large}
+.STYLE5 {color: #0000FF}
+-->
+      </style><p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="969" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0400.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">4.2 指令格式</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6"><a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">4.2.1 
+	操作码</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">4.2.2 
+	地址码</a><br>
+	<a href="#.4">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">4.2.3 
+	指令长度</a><br>
+	<a href="#.5">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">4.2.4 
+	指令助记符</a><br>
+	<a href="#.6">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">4.2.5 
+	指令格式举例</a><br>
+	<a href="#.7"></a><br>
+  　</font></b></p>
+	<p>　</p>
+</form>
+
+<table border="0" width="987" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><a name=".1"><font color="#FFFFFF">引入</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="4" height="73"></td>
+    <td width="983" height="73"><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:167%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-5.31%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">影响计算机指令格式的因素 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.61%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">机器的字长 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.61%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">存储器的容量 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.61%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令的功能 
+				</font></span></div>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -5.31%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令能反映以下信息 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.61%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">做什么操作 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.61%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">如果需要操作数，从哪里取 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.61%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">结果送哪里 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.61%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">下一条指令从哪里取 
+				</font></span></div>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -5.31%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></div>
+		<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1"></div>
+	</div>
+	</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".2">4.2.1 
+	操作码</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="4" height="73"></td>
+    <td width="983" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p><span style="font-size:117%">
+		    <span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-3.48%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">设计计算机时，对指令系统的每一条指令都要规定一个操作码。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令的<font color="#FF0000">操作码</font></font></span><font color="#FF0000"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">OP</font></span></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示该指令应进行什么性质的操作，如进行加法、减法、乘法、除法、取数、存数等等。不同的指令用操作码字段的不同编码来表示，每一种编码代表一种指令。 
+			  </font></span></p>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.48%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">组成操作码字段的位数一般取决于计算机指令系统的规模。较大的指令系统就需要更多的位数来表示每条特定的指令。 
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"></div>
+		<blockquote>
+			<ul>
+				<li>
+				<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.24%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">例如</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">IBM 
+					370</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">机，该机字长</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">32</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">16</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个通用寄存器</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">R0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">～</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">R15</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">，共有</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">183</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">条指令；指令的长度可以分为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">16</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">32</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">48</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位等几种，所有指令的操作码都是</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">8</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位固定长度。 
+					</font></span></div>
+				</li>
+				<li>
+				<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.25%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">固定长度编码的主要缺点是</font><font size="6">：信息的冗余极大，使程序的总长度增加。</font></span></div>
+				</li>
+			</ul>
+		</blockquote>
+	</div>
+	<p>
+	　</p>
+	  </td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">4</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.2.2 
+	地址码</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="4" height="73"></td>
+    <td width="983" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	  <span class="STYLE2">　
+	  <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	  </span>
+	  <div v:shape="_x0000_s1026">
+		<div class="O STYLE2" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		  <span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-4.1%;text-align:left;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">根据一条指令中有几个操作数地址，可将该指令称为几操作数指令或几地址指令。</span>		  </div>
+		<ul>
+			<li class="STYLE2">
+			<div class="O1" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<nobr><span style="font-family: 宋体">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -24.41%; text-align: left; top: .39em; font-family: Wingdings">				&Oslash;</span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">三地址指令 
+				</span></nobr></div>
+			</li>
+			<li class="STYLE2">
+			<div class="O1" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<nobr><span style="font-family: 宋体">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -24.41%; text-align: left; top: .39em; font-family: Wingdings">				&Oslash;</span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">二地址指令 
+				</span></nobr></div>
+			</li>
+			<li class="STYLE2">
+			<div class="O1" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<nobr><span style="font-family: 宋体">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -24.41%; text-align: left; top: .39em; font-family: Wingdings">				&Oslash;</span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">单地址指令 
+				</span></nobr></div>
+			</li>
+			<li class="STYLE2"><span class="O1" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"><nobr><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">零地址指令</span></nobr></span></li>
+			<li><div class="O1" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			    <span class="STYLE2">
+			    <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+				</span>
+			    <div class="STYLE2" v:shape="_x0000_s1026">
+					<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					  <span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-4.14%;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#FF0000">三地址指令</font>
+					  </span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+						l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">指令格式如下： 
+						</span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<div align="center"></div>
+					</div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.79%; top: .39em; font-family: Wingdings">
+						l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">操作码OP</span>
+						<span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"> &nbsp;&nbsp;</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">第一操作数</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">A1</span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">&nbsp;</span>
+						<span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">						&nbsp;</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">第二操作数</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">A2</span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+						结果</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">A3
+						</span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+						l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">功能描述：</span>					  </div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+						l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(A1)</span><span class="STYLE1">OP</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(A2)</span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">→</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">A3</span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"> 
+						</span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+						l</span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+						l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">这种格式虽然省去了一个地址，但指令长度仍比较长，所以只在字长较长的大、中型机中使用，而小型、微型机中很少使用。</span></div>
+				</div>
+				<span class="STYLE2">
+				<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+				</span>
+				<div class="STYLE2" v:shape="_x0000_s1026">
+					<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					  <span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.92%;top:.39em;font-family:Wingdings">l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#FF0000">二地址指令</font>
+					  </span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.3%; top: .39em; font-family: Wingdings">
+						l</span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<div align="center">
+						  <![if ppt]>
+						  <span style="visibility: hidden">
+					      <span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.3%; font-family: Wingdings">
+					      l</span></span>
+						  <![endif]>
+						</div>
+					</div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.3%; top: .39em; font-family: Wingdings">
+						l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> 
+						</span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.3%; top: .39em; font-family: Wingdings">
+						l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">操作码OP 第一操作数</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">A1</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> 第二操作数</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">A2
+						</span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.3%; top: .39em; font-family: Wingdings">
+						l</span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">&nbsp;</span>
+						<span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"> &nbsp;&nbsp;</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">功能描述： 
+						</span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.3%; top: .39em; font-family: Wingdings">
+						l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(A1) OP (A2)</span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">→</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">A1</span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"> 
+						</span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.3%; top: .39em; font-family: Wingdings">
+						l</span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+						l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">二地址指令在计算机中得到了广泛的应用，但是在使用时有一点必须注意：指令执行之后，</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">A1</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">中原存的内容已经被新的运算结果替换了。</span></div>
+				</div>
+				<span class="STYLE2">
+				<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+				</span>
+				<div v:shape="_x0000_s1026">
+					<div class="O1 STYLE2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					  <span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.84%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">二地址地址根据操作数的物理位置分为： </span></div>
+					<ul>
+						<li class="STYLE2">
+						<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						  <span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-4.41%;top:.39em;font-family:Wingdings">l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">SS<span style="mso-spacerun:yes">&nbsp;&nbsp;
+						  </span></span>
+							<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">存储器</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">-</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">存储器类型 </span></div>
+						</li>
+						<li class="STYLE2">
+						<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						  <span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-4.41%;top:.39em;font-family:Wingdings">l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">RS<span style="mso-spacerun:yes">&nbsp;&nbsp;
+						  </span></span>
+							<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">寄存器</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">-</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">存储器类型 </span></div>
+						</li>
+						<li>
+						<div class="O2 STYLE2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						  <span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-4.41%;top:.39em;font-family:Wingdings">l</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">RR<span style="mso-spacerun:yes">&nbsp;&nbsp;
+						  </span></span>
+							<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">寄存器</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">-</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">寄存器类型</span></div>
+					  </li>
+				  </ul>
+			  </div>
+				<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+				<div v:shape="_x0000_s1026">
+					<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="font-size:167%">
+						<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.69%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"><font color="#FF0000">一地址指令</font>
+						</font></span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.92%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令格式为： 
+						</font></span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<![if ppt]><span style="visibility: hidden">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.92%; font-family: Wingdings">
+						<font size="6">l</font></span></span><![endif]><![if ppt]><span style="visibility: hidden"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.92%; font-family: Wingdings"><font size="6">l</font></span></span><![endif]><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">
+						</font></span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.92%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">&nbsp;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作码OP</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">&nbsp;&nbsp;&nbsp;</font></span>
+						
+						<span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+						<font size="6">&nbsp;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">第一操作数</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">A1
+						</font></span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.92%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">功能描述： 
+						</font></span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.92%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(AC)</font></span><span class="STYLE1"><font size="6"> OP </font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(A1)
+						</font></span>
+						<span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+						<font size="6">→</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">A1</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"> 
+						</font></span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.83%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">单操作数运算指令，如</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">+1</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">-1</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">求反</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">
+						</font></span></div>
+					<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.92%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">指令中给出一个源操作数的地址</span></font><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:26pt"> </span></div>
+					<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+						<div v:shape="_x0000_s1026">
+							<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<span style="font-size:189%">
+								<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.42%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="#FF0000">零地址指令</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">&nbsp;&nbsp;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">
+								</font></span></div>
+							<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.63%; top: .39em; font-family: Wingdings">
+								<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">其格式为： 
+								</font></span></div>
+							<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<div align="center">
+								  <![if ppt]>
+								  <span style="visibility: hidden">
+							      <span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.63%; font-family: Wingdings">
+							      <font size="6">l</font></span></span>
+								  <![endif]>
+								</div>
+							</div>
+							<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.63%; top: .39em; font-family: Wingdings">
+								<font size="6">l</font></span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">&nbsp;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作码OP 
+								</font></span></div>
+							<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+								<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.2%; top: .39em; font-family: Wingdings">
+								<font size="6">l</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">“</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">停机</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">空操作</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">清除</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">等控制类指令。</font></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		  </li>
+		</ul>
+	</div>	</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".4">4</a></font><font size="6"><font color="#FFFFFF"><a name=".4">.2.3 
+	指令长度</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="4" height="73"></td>
+    <td width="983" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:117%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.14%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:6px">概念 </span></div>
+		<ul class="STYLE2">
+			
+		  <li>
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			  指令字长度（一个指令字包含二进制代码的位数） 			</div>
+			
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			  机器字长：计算机能直接处理的二进制数据的位数。 			</div>
+			
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			  单字长指令 </div>
+			
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			  半字长指令 </div>
+			</li>
+		  <li>
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			  双字长指令 </div>
+			</li>
+		</ul>
+		<div class="O STYLE2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-4.14%;top:.39em">l</span><span class="STYLE5" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><b><i>多字长指令</i></b>的优缺点: 
+			</span></div>
+		<ul class="STYLE2">
+			<li>
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				优点:提供足够的地址位来解决访问内存任何单元的寻址问题
+				
+				； </div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				缺点:必须两次或多次访问内存以取出一整条指令，降低了CPU的运算速度，又占用了更多的存储空间。 </div>
+			</li>
+		</ul>
+		<div class="O STYLE2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.48%;top:.39em">l</span><span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">指令系统中指令采用</span><span style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><b><i>等长指令</i></b></span><span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">的优点：各种指令字长度是相等的，</span><span style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><u>指令</u></span><span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><u>字结构简单，且指令字长度是不变的</u></span> 
+			<span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">；			</span></div>
+		<div class="O STYLE2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+		  <span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.6%;top:.39em">l</span><span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">采用</span><span style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><b><i>非等长指令</i></b></span><span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">的的优点：各种指令字长度随指令功能而异，<u>结构灵活，能充分利用指令长度，但指令的控制较复杂</u></span> 
+			<span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">。			</span></div>
+		<div class="O STYLE2" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+　</div>
+	</div>
+	<p class="STYLE2">
+	　</p>	  </td>
+  </tr>
+					
+		<tr>
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong>
+	<font color="#FFFFFF" size="6">
+	<a name=".5">4.2.4 </a></font><font size="6"><a name=".5">
+	<font color="#FFFFFF">指令助记符</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="4" height="73"></td>
+    <td width="983" height="73"><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:167%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-3.42%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">由于硬件只能识别</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，所以采用二进制操作码是必要的，但是我们用二进制来书写程序却非常麻烦。 
+			</font></span></div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.42%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为了便于书写和阅读程序，每条指令通常用</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">3</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个或</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个英文缩写字母来表示。这种缩写码叫做指令助记符 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.28%; top: .39em; font-family: Wingdings">
+				<font size="6">&Oslash;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">用</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">3</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">～</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个英文字母来表示操作码，一般为英文缩写 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.28%; top: .39em; font-family: Wingdings">
+				<font size="6">&Oslash;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">不同的计算机系统，规定不一样 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.28%; top: .39em; font-family: Wingdings">
+				<font size="6">&Oslash;</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">必须用汇编语言翻译成二进制代码</span></font><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt"> </span></div>
+			</li>
+		</ul>
+	</div>
+	<p>　</td>
+  </tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".6">4</a></font><font size="6"><font color="#FFFFFF"><a name=".6">.2.5 指令格式举例</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="4" height="73"></td>
+    <td width="983" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	　<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:144%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.9%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">8</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位微型计算机的指令格式 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.15%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">如</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">8088</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，字长</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">8</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位，指令结构可变 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.15%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">包括单字长指令、双字长指令和三字长指令 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.15%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作码长度固定 
+				</font></span></div>
+			</li>
+		</ul>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+　</div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.9%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PDP/11</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">系列机的指令格式 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.15%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">字长</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">16</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.15%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">单字长指令 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.15%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作码字段不固定 
+				</font></span></div>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+　</div>
+	</div>
+	</td>
+  </tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080"><p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".7">Pentium指令格式</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="4" height="73"></td>
+    <td width="983" height="73"><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-size:111%">
+			<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-3.77%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令长度可变，最短</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个字节，最长</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">12</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个字节，典型的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CISC</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令系统 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.65%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">由可选前缀（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0~4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）、操作码（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1~2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）、</font><u><font size="6">一个由</font></u></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><u><font size="6">mod-R/M</font></u></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><u><font size="6">字节和一个</font></u></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><u><font size="6">SIB</font></u></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><u><font size="6">（</font></u></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><u><font size="6">Scale 
+			Index Base</font></u></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><u><font size="6">）比例变址字节组成的地址指定器</font></u><font size="6">、一个可选的位移量（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0~4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）和一个可选的立即数字段（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0~4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）构成。</font></span><p>
+			<img border="0" src="素材库/fig/图片/图_指令格式1.bmp" width="946" height="145"></p>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-size:144%">
+					<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-3.78%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令前缀中的重复前缀指定串的重复操作，这样使</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Pentium</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">处理串比软循环快得多。 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.35%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">LOCK</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">前缀用于多</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">环境中对共享存储器的排他性访问 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.95%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">段取代用于改变默认段寄存器的情况 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.32%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作数长度取代和地址长度取代用于在保护模式下决定操作数和指令的长度 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.83%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">以下</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个指令前缀都是可选的，分别为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">或</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个字节 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<img border="0" src="素材库/fig/图片/图_指令格式2.bmp" width="968" height="67"></div>
+			</div>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-size:167%">
+					<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-3.96%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作码是必须的，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">～</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个字节 
+					</font></span></div>
+				<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.75%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Mod</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Reg</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">R/M</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为共</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个字节，是可选的。 
+					</font></span></div>
+				<ul>
+					<li>
+					<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">mod-R/M</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指定的操作数是在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">R</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中还是在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">M</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中。 
+						</font></span></div>
+					</li>
+					<li>
+					<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.7%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">mod</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位）</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">R/M</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">3</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位）的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">32</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">种值构成了</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">8</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">种寄存器方式和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">24</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">种变址方式（参考汇编语言教材）； 
+						</font></span></div>
+					</li>
+					<li>
+					<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.66%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Reg</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">或</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">OP</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">3</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位）指定另一个操作数（寄存器）或用作</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">OP</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的补充。</font></span></div>
+					</li>
+				</ul>
+			</div>
+			<p>
+			<img border="0" src="素材库/fig/图片/图_指令格式3.bmp" width="817" height="170"></p>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-size:144%">
+					<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-3.47%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">S</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">I</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">B</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">共</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个字节，分别是比例系数、变址寄存器号、基址寄存器号，可选。</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">mod-R/M</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中的某些编码要求</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">SIB</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">字节来完成寻址方式的指定； 
+					</font></span></div>
+				<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">SS</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）指定比例变换的因子， 
+					</font></span></div>
+				<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Index</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）指定变址寄存器， 
+					</font></span></div>
+				<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.31%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Base</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">3</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）指定基址寄存器 
+					</font></span></div>
+				<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.13%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位移量：可以是</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个字节 
+					</font></span></div>
+				<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.13%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">立即数：可以是</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个字节</font></span></div>
+			</div>
+			<p>
+			<img border="0" src="素材库/fig/图片/图_指令格式4.bmp" width="942" height="67"></div>
+	</div>
+	<p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	　</td>
+  </tr>
+					
+      </table>

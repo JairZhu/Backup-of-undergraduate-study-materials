@@ -1,0 +1,21 @@
+;------------------- in a separate file: ----------------------------
+TITLE 	SUBPROG6 MODULE TO ADD THREE WORDS BROUGHT IN FROM THE STACK
+PAGE 	60,132
+         .MODEL SMALL
+         PUBLIC SUBPROG6
+         .CODE
+SUBPROG6 PROC    FAR
+         SUB     BX,BX          ;CLEAR BX FOR CARRIES
+         PUSH    BP             ;SAVE BP
+         MOV     BP,SP          ;SET BP FOR INDEXING
+         MOV     AX,[BP]+6      ;MOV VALUE1 TO AX
+         MOV     CX,[BP]+8      ;MOV VALUE2 TO CX
+         MOV     DX,[BP]+10     ;MOV VALUE3 TO DX
+         ADD     AX,CX          ;ADD VALUE2 TO VALUE1
+         ADC     BX,00          ;KEEP THE CARRY IN BX
+         ADD     AX,DX          ;ADD VALUE3
+         ADC     BX,00          ;KEEP THE CARRY IN BX
+         POP     BP             ;RESTORE BP BEFORE RETURNING
+         RET     6              ;RETURN AND ADD 6 TO SP TO BYPASS DATA
+SUBPROG6 ENDP
+         END

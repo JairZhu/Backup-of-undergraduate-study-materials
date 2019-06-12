@@ -1,0 +1,40 @@
+TITLE   PROG7-7 CALLING PROGRAM TO CONVERT ASCII TO BINARY
+PAGE 	60,132
+;
+         PUBLIC TEN
+         .MODEL SMALL
+         .STACK  64
+;----------------------------------------------------------------------------------------
+         .DATA
+ASC_AREA LABEL BYTE
+MAX_LEN  DB 6
+ACT_LEN  DB ?
+ASC_NUM  DB 6 DUP (?)
+         ORG 10H
+BINNUM   DW 0
+PROMPT1  DB 'PLEASE ENTER A 5 DIGIT NUMBER','$'
+TEN      DW 10
+;----------------------------------------------------------------------------------------
+         .CODE 
+         EXTRN ASC2B_CON:FAR
+MAIN     PROC    FAR
+         MOV     AX,@DATA
+         MOV     DS,AX
+;DISPLAY THE PROMPT
+         MOV     AH,09
+         MOV     DX,OFFSET PROMPT1
+         INT     21H
+;INPUT STRING
+         MOV     AH,0AH
+         MOV     DX,OFFSET ASC_AREA
+         INT     21H
+         MOV     SI,OFFSET ASC_NUM 
+         MOV     BH,00
+         MOV     BL,ACT_LEN
+         DEC     BX
+         CALL    ASC2B_CON
+         MOV     BINNUM,AX       ;SAVE THE BINARY (HEX) RESULT 
+         MOV     AH,4CH
+         INT     21H            ;GO BACK TO DOS
+MAIN     ENDP
+         END     MAIN

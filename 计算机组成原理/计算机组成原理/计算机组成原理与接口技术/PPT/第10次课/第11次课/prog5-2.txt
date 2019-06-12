@@ -1,0 +1,38 @@
+   TITLE     PROG5-2
+   PAGE 60,132
+;--------------
+   MULTIPLY  MACRO  VALUE1, VALUE2, RESULT
+             LOCAL BACK
+;THIS MACRO COMPUTES RESULT = VALUE1 X VALUE2
+;;BY REPEATED ADDITION
+;;VALUE1 AND VALUE2 ARE WORD OPERANDS; RESULT IS A DOUBLEWORD
+             	MOV  	BX,VALUE1	;BX=MULTIPLIER
+             	MOV  	CX,VALUE2	;CX=MULTIPLICAND
+             	SUB  	AX,AX		;CLEAR AX 
+             	MOV  	DX,AX		;CLEAR DX
+   BACK: 	ADD  	AX,BX		;ADD BX TO AX 
+             	ADC  	DX,00		;ADD CARRIES IF THERE IS ONE
+             	LOOP 	BACK		;CONTINUE UNTIL CX=0
+             	MOV  	RESULT,AX	;SAVE THE LOW WORD 
+             	MOV  	RESULT+2,DX	;SAVE THE HIGH WORD
+             	ENDM
+   ;--------------
+   		.MODEL SMALL
+		.STACK 64
+   ;--------------
+   		.DATA
+   RESULT1 	DW        	2 DUP (0)
+   RESULT2 	DW        	2 DUP (0)
+   RESULT3 	DW        	2 DUP (0)
+   ;--------------
+   		.CODE
+   MAIN      	PROC  	FAR
+             	MOV  	AX,@DATA
+             	MOV  	DS,AX
+             	MULTIPLY 2000,500,RESULT1
+             	MULTIPLY 2500,500,RESULT2
+             	MULTIPLY   300,400,RESULT3
+             	MOV  	AH,4CH
+             	INT  	21H            		;GO BACK TO DOS
+   MAIN      	ENDP
+                END     MAIN

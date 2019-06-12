@@ -1,0 +1,28 @@
+TITLE   PROG7-8 PASSING PARAMETERS VIA THE STACK
+PAGE 	60,132
+;
+        .MODEL   SMALL
+ 	EXTRN SUBPROG6:FAR
+;----------------------------
+        .STACK  64
+;----------------------------
+        .DATA
+VALUE1 	DW 3F62H
+VALUE2 	DW 1979H
+VALUE3 	DW 25F1H
+RESULT 	DW 2 DUP (?)
+;----------------------------
+        .CODE
+MAIN 	PROC 	FAR
+ 	MOV 	AX,@DATA
+ 	MOV 	DS,AX
+        PUSH    VALUE3          ;SAVE VALUE3 ON STACK
+        PUSH    VALUE2          ;SAVE VALUE2 ON STACK
+        PUSH    VALUE1          ;SAVE VALUE1 ON STACK
+ 	CALL 	SUBPROG6 	;CALL THE ADD ROUTINE
+ 	MOV 	RESULT,AX	;STORE
+ 	MOV 	RESULT+2,BX	; THE RESULT
+ 	MOV 	AH,4CH
+ 	INT 	21H
+MAIN 	ENDP
+ 	END 	MAIN

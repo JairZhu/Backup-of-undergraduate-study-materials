@@ -1,0 +1,141 @@
+Microsoft (R) Macro Assembler Version 5.00                  3/25/9PROG5-1                                                     Page     1-1
+
+
+				   TITLE     	PROG5-1 
+				   PAGE 	60,132 
+				   ;-------------- 
+				   CLEARSCR  	MACRO 
+				;THIS MACRO CLEARS THE SCREEN 
+				;;USING OPTION 06 OF INT 10H 
+				             	MOV  	AX,0600H	;SCROLL SCREEN FUNCTION 
+				             	MOV  	BH,07		;NORMAL ATTRIBUTE 
+				             	MOV  	CX,0		;FROM ROW=00,COLUMN=00 
+				             	MOV  	DX,184FH	;TO ROW=18H,COLUMN=4FH 
+				             	INT  	10H		;INVOKE THE INTERRUPT 
+				             	ENDM 
+				;-------------- 
+				   DISPLAY   		MACRO   STRING 
+				;THIS MACRO DISPLAYS A STRING OF DATA 
+				;;DX = ADDRESS OF STRING.  USES FUNCTION 09 INT 21H. 
+				             	MOV  	AH,09			;DISPLAY STRING FUNCTION 
+				             	MOV  	DX,OFFSET STRING     	;DX = OFFSET ADDRESS OF DATA 
+				             	INT  	21H			;INVOKE THE INTERRUPT 
+				             	ENDM 
+				;-------------- 
+				   CURSOR    	MACRO   ROW,COLUMN 
+				;THIS MACRO SETS THE CURSOR LOCATION TO ROW,COLUMN 
+				;;USING BIOS INT 10H FUNCTION 02 
+				             	MOV  	AH,02		;SET CURSOR FUNCTION 
+				             	MOV  	BH,00		;PAGE 00 
+				             	MOV  	DH,ROW	;ROW POSITION 
+				             	MOV  	DL,COLUMN	;COLUMN POSITION 
+				             	INT  	10H		;INVOKE THE INTERRUPT 
+				            	ENDM 
+				;-------------- 
+				   		.MODEL SMALL 
+ 0040						.STACK 64 
+				;-------------- 
+ 0000				   		.DATA 
+ 0000  4D 79 20 6E 61 6D 65	   MESSAGE1  DB        'My name ','$' 
+       20 24			
+ 0009  69 73 20 4A 6F 65 24	   MESSAGE2  DB        'is Joe','$' 
+ 0010  57 68 61 74 20 69 73	   MESSAGE3  DB        'What is ','$' 
+       20 24			
+ 0019  79 6F 75 72 20 6E 61	   MESSAGE4  DB        'your name?','$' 
+       6D 65 3F 24		
+				;-------------- 
+ 0000				   		.CODE 
+ 0000				   MAIN      	PROC  	FAR 
+ 0000  B8 ---- R		             	MOV  	AX,@DATA 
+ 0003  8E D8			             	MOV  	DS,AX 
+				             	.LALL			;LIST ALL 
+				             	CLEARSCR		;INVOKE CLEAR SCREEN MACRO 
+			     1	;THIS MACRO CLEARS THE SCREEN 
+			     1	; 
+ 0005  B8 0600               1	             	MOV  	AX,0600H	;SCROLL SCREEN FUNCTION 
+ 0008  B7 07                 1	             	MOV  	BH,07		;NORMAL ATTRIBUTE 
+ 000A  B9 0000               1	             	MOV  	CX,0		;FROM ROW=00,COLUMN=00 
+ 000D  BA 184F               1	             	MOV  	DX,184FH	;TO ROW=18H,COLUMN=4FH 
+ 0010  CD 10                 1	             	INT  	10H		;INVOKE THE INTERRUPT 
+Microsoft (R) Macro Assembler Version 5.00                  3/25/9PROG5-1                                                     Page     1-2
+
+
+				     	        CURSOR  2,4		;SET CURSOR TO ROW2,COL 2 
+			     1	;THIS MACRO SETS THE CURSOR LOCATION TO ROW,COLUMN 
+			     1	; 
+ 0012  B4 02                 1	             	MOV  	AH,02		;SET CURSOR FUNCTION 
+ 0014  B7 00                 1	             	MOV  	BH,00		;PAGE 00 
+ 0016  B6 02                 1	             	MOV  	DH,2	;ROW POSITION 
+ 0018  B2 04                 1	             	MOV  	DL,4	;COLUMN POSITION 
+ 001A  CD 10                 1	             	INT  	10H		;INVOKE THE INTERRUPT 
+				             	DISPLAY MESSAGE1	;INVOKE DISPLAY MACRO 
+			     1	;THIS MACRO DISPLAYS A STRING OF DATA 
+			     1	; 
+ 001C  B4 09                 1	             	MOV  	AH,09			;DISPLAY STRING FUNCTION 
+ 001E  BA 0000 R             1	             	MOV  	DX,OFFSET MESSAGE1     	;DX = OFFSET ADDRESS OF DATA 
+ 0021  CD 21                 1	             	INT  	21H			;INVOKE THE INTERRUPT 
+				             	.XALL			;LIST ALL EXECUTABLE  
+				             	CURSOR  7,24		;SET CURSOR TO ROW 7,COL 24 
+ 0023  B4 02                 1	             	MOV  	AH,02		;SET CURSOR FUNCTION 
+ 0025  B7 00                 1	             	MOV  	BH,00		;PAGE 00 
+ 0027  B6 07                 1	             	MOV  	DH,7	;ROW POSITION 
+ 0029  B2 18                 1	             	MOV  	DL,24	;COLUMN POSITION 
+ 002B  CD 10                 1	             	INT  	10H		;INVOKE THE INTERRUPT 
+				             	DISPLAY MESSAGE2	;INVOKE DISPLAY MACRO 
+ 002D  B4 09                 1	             	MOV  	AH,09			;DISPLAY STRING FUNCTION 
+ 002F  BA 0009 R             1	             	MOV  	DX,OFFSET MESSAGE2     	;DX = OFFSET ADDRESS OF DATA 
+ 0032  CD 21                 1	             	INT  	21H			;INVOKE THE INTERRUPT 
+				             	.SALL			;SUPPRESS ALL  
+				             	CURSOR  12,44		;SET CURSOR TO ROW 12,COL 44 
+				             	DISPLAY MESSAGE3	;INVOKE DISPLAY MACRO 
+				             	CURSOR  19,64		;SET CURSOR TO ROW 19,COL 64 
+				             	DISPLAY MESSAGE4	;INVOKE DISPLAY MACRO 
+ 0056  B4 4C			             	MOV  	 AH,4CH 
+ 0058  CD 21			             	INT  	 21H            	;GO BACK TO DOS 
+ 005A				   MAIN      	ENDP 
+ 005A				                END      MAIN 
+
+Microsoft (R) Macro Assembler Version 5.00                  3/25/9PROG5-1                                                     Symbols-1
+
+
+Macros:
+
+		N a m e			Lines
+
+CLEARSCR . . . . . . . . . . . .  	   7
+CURSOR . . . . . . . . . . . . .  	   7
+DISPLAY  . . . . . . . . . . . .  	   5
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0024	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	0040	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	005A	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	_TEXT	Length = 005A
+MESSAGE1 . . . . . . . . . . . .  	L BYTE	0000	_DATA
+MESSAGE2 . . . . . . . . . . . .  	L BYTE	0009	_DATA
+MESSAGE3 . . . . . . . . . . . .  	L BYTE	0010	_DATA
+MESSAGE4 . . . . . . . . . . . .  	L BYTE	0019	_DATA
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  prog5-1		
+
+
+     60 Source  Lines
+    115 Total   Lines
+     22 Symbols
+
+  50108 + 450868 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

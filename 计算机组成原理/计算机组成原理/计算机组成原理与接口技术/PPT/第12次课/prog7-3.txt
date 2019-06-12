@@ -1,0 +1,35 @@
+TITLE    PROG7-3 CONVERT BINARY TO ASCII
+;USING SIMPLIFIED SEGMENT DEFINITION
+PAGE 	 60,132
+         .MODEL  SMALL
+;----------------------------
+         .STACK  64
+         .DATA
+BINNUM 	 DW 0FFFFH
+ 	 ORG 	10H
+ASCNUM 	 DB 	5 DUP ('0') ,'$'
+;----------------------------
+         .CODE
+B2ASC_CON PROC 	FAR
+ 	 MOV 	AX,@DATA
+ 	 MOV 	DS,AX
+         MOV    BX,10               ;BX=10 THE DIVISOR  
+ 	 MOV 	SI,OFFSET ASCNUM    ;SI = BEGINNING OF ASCII STRING
+ 	 ADD 	SI,5 		    ;ADD LENGTH OF STRING
+ 	 DEC 	SI 		    ;SI POINTS TO LAST ASCII DIGIT
+ 	 MOV 	AX,BINNUM 	    ;LOAD BINARY (HEX) NUMBER
+BACK:    SUB    DX,DX               ;DX MUST BE 0 IN WORD DIVISION
+ 	 DIV 	BX 		    ;DIVIDE HEX NUMBER BY 10 (BX=10)
+         OR     DL,30H              ;TAG '3' TO MAKE IT ASCII
+ 	 MOV 	[SI],DL 	    ;MOVE THE ASCII DIGIT
+ 	 DEC 	SI 		    ;DECREMENT POINTER
+ 	 CMP 	AX,0 		    ;CONTINUE LOOPING WHILE AX >0
+ 	 JA 	BACK
+
+         mov ah,09H
+         mov dx,offset ascnum
+         int 21h
+ 	 MOV 	AH,4CH
+ 	 INT 	21H 		;GO BACK TO DOS
+B2ASC_CON ENDP
+ 	 END 	B2ASC_CON

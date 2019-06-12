@@ -1,0 +1,42 @@
+CLEARSCR MACRO
+
+    MOV AX, 0600H
+    MOV BH, 07
+    MOV CX, 0000
+    MOV DX,184FH
+    INT 10H
+   
+    ENDM
+
+DISPLAY  MACRO STRING
+
+    MOV  AH,09
+    MOV  DX,OFFSET STRING
+    INT  21H
+
+    ENDM
+
+REGSAVE MACRO
+
+    PUSH AX
+    PUSH BX
+    PUSH CX
+    PUSH DX
+    PUSH DI
+    PUSH SI
+    PUSH BP
+    PUSHF
+ 
+    ENDM
+
+REGRESTO MACRO
+
+   POPF
+   POP SI
+   POP DI
+   POP DX
+   POP CX
+   POP BX
+   POP AX
+
+   ENDM

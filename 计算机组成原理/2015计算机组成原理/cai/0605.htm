@@ -1,0 +1,229 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>HOST总线和PCI总线</title>
+
+      
+<p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="967" height="24"></p>
+<div align="center">
+	<p>  <a href="0600.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">6.5 HOST总线和PCI总线</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">6.5.1 
+	多总线结构</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16"></a><a href="#.1">6.5.2 </a><a href="#.2">PCI总线信号线</a><br>
+			<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16"></a><a href="#.1">6.5.3 </a><a href="#.3">总线周期类型</a><br>
+			<a href="#.4"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">6.5.4 
+	总线周期操作</a><br>
+			<a href="#.5"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">6.5.5 
+	总线仲裁</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="965" height="517" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080" width="965">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".1">6.5.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">多总线结构</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="1" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">在典型的多总线结构中包含三种总线：</font></span><font color="red"><strong><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">HOST</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线</font></span></strong></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><font color="red"><strong><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线</font></span></strong></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><strong><font color="red"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">LAGACY</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线</font></span></font></strong><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。</font></span></div>
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+				<p> <a href="素材库/fig/Flash/6.16.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<p><font size="6">图6.16 多总线结构框图</font></p>
+			</div>
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+				<div v:shape="_x0000_s1026" class="O">
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<span style="font-size:161%"><font size="6">1、</font></span><font color="red"><strong><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">HOST</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线</font></span></strong></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">：该总线有</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线、系统总线、主存总线、前端总线等多种名称，各自反映了总线功能的一个方面。这里称</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">宿主</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线，也许更全面，因为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">HOST</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线不仅连接主存，还可以连接多个</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。 
+				</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">HOST</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线是连接</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">北桥</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">芯片与</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">之间的信息通路，它是一个</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">64</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位数据线和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">32</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位地址线的同步总线。</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">32</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位的地址线可支持处理器</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">4GB</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的存储寻址空间。总线上还接有</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">L2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">级</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，主存与</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">控制器芯片。后者用来管理</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">对主存和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的存取操作。</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">拥有</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">HOST</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线的控制权，但在必要情况下可放弃总线控制权。</font></span>
+						<p></p>
+					</div>
+				</div>
+				<span style="font-size:139%"><font size="6">2、</font></span><font color="red"><strong><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线</font></span></strong></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">：连接各种高速的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">设备。</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">是一个与处理器无关的高速外围总线，又是至关重要的层间总线。它采用同步时序协议和集中式仲裁策略，并具有自动配置能力。</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">设备可以是主设备，也可以是从设备，或兼而有之。在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">设备中不存在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">DMA</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（直接存储器传送）的概念，这是因为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线支持无限的猝发式传送。这样，传统总线上用</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">DMA</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">方式工作的设备移植到</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线上时，采用主设备工作方式即可。系统中允许有多条</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线，它们可以使用</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">HOST</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">桥与</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">HOST</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线相连，也可使用</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI/PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">桥与已和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">HOST</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线相连的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线相连，从而得以扩充</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线负载能力。</font></span>
+				<p></p>
+				<p><font size="6">3、</font><font color="red"><strong><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">LAGACY</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线</font></span></strong></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">：可以是</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">ISA</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">EISA</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">MCA</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">等这类性能较低的传统总线，以便充分利用市场上丰富的适配器卡，支持中、低速</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">I/O</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">设备。 </font></span></p>
+				<div v:shape="_x0000_s1026" class="O">
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<p></p>
+					</div>
+					<div style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<div v:shape="_x0000_s1026" class="O">
+							<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+								<span style="font-size:161%">          </span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线体系结构中有三种</font><font size="6" color="red"><strong>桥</strong></font><font size="6">。其中</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">HOST</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">桥又是</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线控制器，含有中央仲裁器。桥起着重要的作用，它连接两条总线，使彼此间相互通信。桥又是一个总线转换部件，可以把一条总线的地址空间映射到另一条总线的地址空间上，从而使系统中任意一个总线主设备都能看到同样的一份地址表。桥本身的结构可以十分简单，如只有信号缓冲能力和信号电平转换逻辑，也可以相当复杂，如有规程转换、数据快存、装拆数据等。</font></span></div>
+						</div>
+						<p>
+					</div>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="1" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" width="965" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">6</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.5.2 
+	PCI总线信号线</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="1" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<strong><font color="red"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线</font></span></font></strong><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的基本传输机制是猝发式传送，利用桥可以实现总线间的猝发式传送。写操作时，桥把上层总线的写周期先缓存起来，以后的时间再在下层总线上生成写周期，即延迟写。读操作时，桥可早于上层总线，直接在下层总线上进行预读。无论延迟写和预读，桥的作用可使所有的存取都按</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的需要出现在总线上。</font></span></div>
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<u><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线信号线</font></span><span style="font-family: \000B?; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B?; mso-bidi-font-family: \000B?; mso-hansi-font-family: Arial"><font size="6">：</font></span></u></div>
+		<ul>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">必要引脚控设备</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6" color="blue">49</font></span><span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">条</font></span><span style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">
+				</font></span></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">目标设备</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6" color="blue">47</font></span><span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">条</font></span><span style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">
+				</font></span></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">可选引脚</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6" color="blue">51</font></span><span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">条（主要用于</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">64</font></span><span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">位扩展、中</font></span><span style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">
+				</font></span>
+				<span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial">
+				<font size="6">断请求、高速缓存支持等） </font></span></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">总引脚数</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6" color="blue">120</font></span><span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial"><font size="6">条（包含电源、地、保留</font></span><span style="font-family: \000B; mso-ascii-font-family: Arial; mso-fareast-font-family: \000B; mso-bidi-font-family: \000B; mso-hansi-font-family: Arial">
+				<font size="6">引脚等）</font></span><span style="font-family:Arial;mso-ascii-font-family:Arial;mso-fareast-font-family:
+&quot;\000B&quot;;mso-bidi-font-family:&quot;\000B&quot;;mso-hansi-font-family:Arial;font-size:
+30pt"> </span></div>
+			</li>
+		</ul>
+	</div>
+			<p>
+	</p>
+	  </td>
+  </tr>
+	<tr>
+		<td width="1" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" width="965" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">6</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.5.3 
+	总线周期类型</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="1" height="73"></td>
+    <td width="964" height="73">　
+			<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<strong><font color="red"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线周期</font></span></font></strong><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">由当前被授权的主设备发起。</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">支持任何主设备和从设备之间点到点的对等访问，也支持某些主设备的广播读写。 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6" color="blue"><strong><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">存储器读</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">/</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">写总线周期</span></strong></font><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">：</span>以猝发式传送为基本机制，一次猝发式传送总线周期通常由一个地址期和一个或几个数据周期组成。<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> </span></font></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6" color="blue"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><strong>存储器写和使无效周期</strong></span></font><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">：</span>与存储器写周期的区别在于，前者不仅保证一个完整的cache行被写入，而且在总线上广播“无效”信息，命令其他cache中的同一行地址变为无效。<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> </span></font></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6" color="blue"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><strong>特殊周期</strong></span></font><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">：</span>用于主设备将其信息(如状态信息)广播到多个目标方。<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> </span></font></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6" color="blue"><strong><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">配置读</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">/</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">写周期</span></strong></font><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">：</span>是PCI具有自动配置能力的体现。PCI有三个相互独立的物理地址空间，即存储器、I/O、配置空间。<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> </span></font></div>
+			</li>
+					<li><font size="6" color="blue"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><strong>双地址周期</strong></span></font><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">：</span>用于主方指示它正在使用64位地址。</font>
+				</ul>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+　</div>
+	</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="1" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" width="965" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".4">6</a></font><font size="6"><font color="#FFFFFF"><a name=".4">.5.4 
+	总线周期操作</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="1" height="73"></td>
+    <td width="964" height="73">
+			<div align="center">
+				<p> <a href="素材库/fig/Flash/6.17.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<p><font size="6">图6.17 读操作总线周期的时序示例</font></p>
+			</div>
+			<p>
+	<font size="6"><u>PCI总线周期的操作过程有如下特点：</u><br>
+					（1）采用</font><font size="6" color="blue"><strong>同步时序</strong></font><font size="6">协议。总线时钟周期以上跳沿开始，半个周期高电平，半个周期低电平。总线上所有事件，即信号电平转换出现在时钟信号的下跳沿时刻，而对信号的采样出现在时钟信号的上跳沿时刻。<br>
+					（2）总线周期由被授权的主方启动，以帧FRAME#信号变为有效来指示一个总线周期的开始。<br>
+					（3）一个总线周期由一个地址期和一个或多个数据期组成。在地址期内除给出目标地址外，还在C/BE#线上给出总线命令以指明总线周期类型。<br>
+					（4）地址期为一个总线时钟周期，一个数据期在没有等待状态下也是一个时钟周期。一次数据传送是在挂钩信号IRDY#和TRDY#都有效情况下完成，任一信号无效（在时钟上跳沿被对方采样到），都将加入等待状态。<br>
+					（5）总线周期长度由主方确定。在总线周期期间FRAME#持续有效，但在最后一个数据期开始前撤除。即以FRAME#无效后，IRDY#也变为无效的时刻表明一个总线周期结束。由此可见，PCI的数据传送以猝发式传送为基本机制，单一数据传送反而成为猝发式传送的一个特例。并且PCI具有无限制的猝发能力，猝发长度由主方确定，没有对猝发长度加以固定限制。<br>
+					（6）主方启动一个总线周期时要求目标方确认。即在FRAME#变为有效和目标地址送上AD线后，目标方在延迟一个时钟周期后必须以DEVSEL#信号有效予以响应。否则，主设备中止总线周期。<br>
+					（7）主方结束一个总线周期时不要求目标方确认。目标方采样到FRAME#信号已变为无效时，即知道下一数据传送是最后一个数据期。目标方传输速度跟不上主方速度，可用TRDY#无效通知主方加入等待状态时钟周期。当目标方出现故障不能进行传输时，以STOP#信号有效通知主方中止总线周期。</font></p>
+			<p>
+	</p>
+		</td>
+  </tr>
+	<tr>
+		<td width="1" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" bgcolor="#000080" width="965">
+	<p align="left"><strong>
+	<font color="#FFFFFF" size="6">
+	<a name=".5">6.5.5 </a></font><font size="6"><a name=".5">
+	<font color="#FFFFFF">总线仲裁</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="1" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+		<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+		<font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线采用</font><font size="6" color="blue"><strong>集中式仲裁方式</strong></font><font size="6">，每个</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">主设备都有独立的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">REQ</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">#</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（总线请求）和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">GNT</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">#</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（总线授权）两条信号线与中央仲裁器相连。由中央仲裁器根据一定的算法对各主设备的申请进行仲裁，决定把总线使用权授予谁。但</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">PCI</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">标准并没有规定仲裁算法。</font></span></div>
+			<p>　</td>
+  </tr>
+						
+	   </table>

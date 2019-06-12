@@ -1,0 +1,108 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>9.5 存储保护</title>
+
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="966" height="24"></p>
+		<p align="center"> <a href="0900.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">9.5 存储保护</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.5.1 
+	存储区域保护</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.5.2 
+	访问方式保护</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+<table border="0" width="990" height="298" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font color="#FFFFFF" size="6"><a name=".1">9.5.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">存储区域保护</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+					<font size="6">
+					任何软件都存在着出现错误的可能。一旦程序出错，应尽量将错误的影响限制在最小范围内。当多个用户共享主存时，应防止由于一个用户的程序有意或无意破坏其他用户的程序和系统软件，以及一个用户程序非法地访问不是分配给它的主存区域。在虚拟存储系统中，通常采用页表保护、段表保护和键保护等方法。 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<div v:shape="_x0000_s1026" class="O">
+								<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+							<font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font><font size="6" color="red">页表保护和段表保护</font><font size="6"> </font></span></div>
+							</div>
+						</div>
+						<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+							<a href="素材库/fig/Flash/9.9.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></div>
+						<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+							<p align="center"><font size="6">图9.9段页式虚拟存储系统中段表保护方式的实现过程</font></p>
+							<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+								<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font><font size="6" color="red">键保护方式</font></span></div>
+							<p><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><font size="6">键保护方式是由操作系统为主存的每一页配一个键，称为</font><font size="6" color="blue">存储键</font><font size="6">，相当于一把锁，指明保护的等级。而每个用户的所有实存页面的存储键都相同。为了打开这把锁，必须有相应的钥匙，这称为</font><font size="6" color="blue">访问键</font><font size="6">。访问键由操作系统赋予每道程序，并在程序运行时加载到程序状态字寄存器中。当要访问主存的某一页时，访问键要与存储键相比较。若两键相符，则允许访问该页，否则拒绝访问。因此，即使在访存过程中错误地形成了访问其他程序的地址空间的地址，也会因键不同而无法完成访存。</font><br>
+							<p align="center"><a href="素材库/fig/Flash/9.10.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+							<p align="center"><font size="6">图9.10键保护方式实例</font></p>
+						</div>
+					</div>
+					<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+				<font size="6">3</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font><font size="6" color="red">环保护方式</font></span></div>
+					<p><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><font size="6">前面两种方式仅仅保护“别的”程序，不保护程序自身。环保护方式可以做到对正在执行的程序本身的核心部分或关键部分进行保护。<br>
+						</font><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><font size="6">环保护方式是按照系统程序和用户程序的重要性，以及对整个系统的正常运行的影响程序对所有页面进行分层，每一层叫做一个环。环号大小表示保护的级别： 环号越大，等级越低。例如，虚拟存储空间分成8段，每段512M字节，构成8层嵌入式结构。每层设一个保护环，保护环的环号和段的编号相同。并规定0～3段用于操作系统，4～7段用于用户程序。每个用户最多可用4段。<br>
+						</font>
+					<p align="center"><a href="素材库/fig/Flash/9.11.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+					<p align="center"><font size="6">图9.11环保护方式</font></p>
+				</div>
+	</div>
+			<p>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">9</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.5.2 
+	访问方式保护</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<p><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">对主存信息的使用可以有三种方式：读</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(R)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、写</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(W)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和执行</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(E)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，相应的访问方式保护就有</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">R</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">W</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">E</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">三种方式形成的逻辑组合。</font></span></p>
+			<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<p></p>
+					<p></p>
+				</div>
+	</div>
+		</td>
+  </tr>
+									
+	   </table>
+<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+　</div>
+

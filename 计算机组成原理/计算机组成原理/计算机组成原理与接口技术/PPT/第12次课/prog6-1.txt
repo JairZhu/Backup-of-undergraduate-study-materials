@@ -1,0 +1,36 @@
+TITLE        PROG 6-1                FIND THE AVERAGE TEMPERATURE
+PAGE         60,132
+;--------------
+             .MODEL STMALL
+             .STACK 64
+;--------------
+             .DATA
+SIGN_DAT     DB        +13,-10,+19,+14,-18,-9,+12,-9,+16
+             ORG       0010H
+AVERAGE      DW        ?
+REMAINDER    DW        ?
+--------------
+        .CODE
+MAIN    PROC    FAR
+        MOV     AX,@DATA
+        MOV     DS,AX
+        MOV     CX,9                            ;LOAD COUNTER
+        SUB     BX,BX                           ;CLEAR BX, USED AS ACCUMULATOR
+        MOV     SI,OFFSET SIGN_DAT              ;SET UP POINTER
+BACK:   MOV     AL,[SI]                         ;MOVE BYTE INTO AL
+        CBW                                     ;SIGN EXTEND INTO AX
+        ADD     BX,AX                           ;ADD TO BX
+        INC     SI                              ;INCREMENT POINTER
+        LOOP    BACK                            ;LOOP IF NOT FINISHED
+        MOV     AL,9                            ;MOVE COUNT TO AL
+        CBW                                     ;SIGN EXTEND INTO AX
+        MOV     CX,AX                           ;SAVE DENOMINATOR IN CX
+        MOV     AX,BX                           ;MOVE SUM TO AX
+        CWD                                     ;SIGN EXTEND THE SUM
+        IDIV    CX                              ;FIND THE AVERAGE
+        MOV     AVERAGE,AX                      ;STORE THE AVERAGE (QUOTIENT)
+        MOV     REMAINDER,DX                    ;STORE THE REMAINDER
+        MOV     AH,4CH 
+        INT     21H                             ;GO BACK TO DOS
+MAIN    ENDP
+        END     MAIN

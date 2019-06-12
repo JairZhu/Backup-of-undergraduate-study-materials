@@ -1,0 +1,42 @@
+;This program adds the following two multiword numbers and saves the result:
+; DATA1=548FB9963CE7H  and DATA2=3FCD4FA23B8DH.
+
+   TITLE     	PROG3-2  (EXE)   MULTIWORD ADDITION
+   PAGE 	60,132
+   .MODEL SMALL
+   .STACK 64
+   ;--------------
+   		.DATA
+      DATA1     DQ 	548FB9963CE7H
+          	
+             	ORG	0010H
+     DATA2      DQ      3FCD4FA23B8DH
+     DATA3      DQ 	?
+   ;--------------
+   		.CODE
+   MAIN      	PROC 	FAR
+             	MOV  	AX,@DATA
+             	MOV  	DS,AX
+
+                CLC                       ;clear carry before first addition
+                MOV  	SI,OFFSET DATA1	  ;SI is the pointer for operand1
+             	MOV  	DI,OFFSET DATA2   ;DI is the pointer for operand2
+             	MOV  	BX,OFFSET DATA3   ;BX is the pointer for the sum
+                MOV     cx,04
+             	
+   BACK:      	MOV     AX,[SI]
+                ADC  	AX,[DI]
+                MOV     [BX],AX		
+             	INC  	SI		 
+             	INC  	SI	
+                INC     DI
+                INC     DI
+                INC     BX
+                INC     BX	  
+             	LOOP  	BACK		  
+             			 
+             		
+             	MOV  	AH,4CH
+             	INT  	21H		  ;go back to DOS
+   MAIN      	ENDP
+               	END  	MAIN

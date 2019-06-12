@@ -1,0 +1,138 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>外围设备的速度分级和信息交换方式</title>
+
+      
+<p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="971" height="24"></p>
+<div align="center">
+	<p> <a href="0800.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">8.1 外围设备的速度分级和信息交换方式</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.1.1 
+	外围设备的速度分级</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.1.2 
+	信息交换方式</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="990" height="1938" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".1">8.1.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">外围设备的速度分级</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt">外设种类繁多，存在以下几种情况： </span></div>
+		<ul>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:23pt">不同种类的外设数据传输速率差别很大；</span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:23pt">同一种设备在不同时刻传输速率也可能不同。</span></div>
+			</li>
+		</ul>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt">　　高速的</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:22pt;
+mso-fareast-language:ZH-CN">CPU</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt">与速度参差不齐的外设怎样在时间上同步呢？ </span><font size="6"><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:23pt">解决办法时在</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:23pt;
+mso-fareast-language:ZH-CN">CPU</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:23pt">和外设之间数据传送时加以定时</span></font><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:23pt">。</span><font size="6"><u>对于不同速度的外围设备，需要有不同的定时方式。</u></font></div>
+				<ul>
+					<li>
+			
+			</li>
+				</ul>
+				<div class="O2" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:622; mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<p><font color="#ff0000"><b><font size="6"><i>1.速度极慢或简单的外围设备</i></font></b></font></p>
+					<blockquote>
+						<p><font size="6">　 　对这类设备，如机械开关、显示二极管等等，CPU总是能足够快地作出响应。换句话说，对机械开关来讲，CPU可以认为输入的数据一直有效，因为机械开关的动作相对CPU的速度来讲是非常慢的，对显示二极管来讲，CPU可以认为输出一定准备就绪，因为只要给出数据，显示二极管就能进行显示，所以，在这种情 况下，CPU只要接收或发送数据就可以了。</font></p>
+					</blockquote>
+					<p><font color="#ff0000"><b><font size="6"><i>2.慢速或中速的外围设备</i></font></b></font></p>
+					<blockquote>
+						<p><font size="6">　　由于这类设备的速度和CPU的速度并不在一个数量级，或者由于设备(如键盘)本身是在不规则时间间隔下操作的，因此，CPU与这类设备之间的数据交换通常采用</font><font size="6" color="#0000ff"><b>异步定时方式</b></font><font size="6">。其定时过程如下：</font></p>
+						<p><font size="6">　　如果CPU从外设接收一个字，则它首先询问外设的状态，如果该外设的状态标志表明设备已“准备就绪”，那么CPU就从总线上接收数据。CPU在接收数 据以后，发出输入响应信号，告诉外设已经把数据总线上的数据取走。然后，外设把“准备就绪”的状态标志复位，并准备下一个字的交换。如果CPU起先询问外 设时，外设没有“准备就绪”，那么它就发出表示外设“忙”的标志。于是，CPU将进入一个循环程序中等待，并在每次循环中询问外设的状态，一直到外设发出 “准备就绪”信号以后，才从外设接收数据。</font></p>
+						<p><font size="6">　　CPU发送数据的情况也与上述情况相似，外设先发出请求输出信号，而后，CPU询问外设是否准备就绪。如果外设已准备就绪，CPU便发出准备就绪信号，并送出数据。外设接收数据以后，将向CPU发出“数据已经取走”的通知。</font></p>
+						<p><font size="6">　　通常，把这种在CPU和外设间用问答信号进行定时的方式叫做</font><font size="6" color="#0000ff"><b>应答式</b></font><font size="6">数据交换 。</font></p>
+					</blockquote>
+					<p><font color="#ff0000"><b><font size="6"><i>3.高速的外围设备</i></font></b></font></p>
+					<blockquote>
+						<p><font size="6">　　由于这类外设是以相等的时间间隔操作的，而CPU也是以等间隔的速率执行输入/输出指令的 ，因此，这种方式叫做</font><font size="6" color="#0000ff"><b>同步定时方式</b></font><font size="6">。一旦CPU和外设发生同步，它们之间的数据交换便靠时钟脉冲控制来进行。</font></p>
+					</blockquote>
+				</div>
+				<div class="O" style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<p></p>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr height="43">
+		<td width="27" height="43"></td>
+		<td width="963" height="43"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">8</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.1.2 
+	信息交换方式</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<b><font size="5"><i><font size="6" color="#ff0000">1　程序查询方式</font></i></font></b>
+					<blockquote>
+						<p><font size="6">　 　程序查询方式是早期计算机中使用的一种方式。数据在CPU和外围设备之间的传送完全靠计算机程序控制，优点是CPU的操作和外围设备的操作能够同步，硬件结构比较简单。但问题是，外围设备动作很慢，程序进入查询循环时将白白浪费掉CPU很多时间。这种情况下，CPU此时只能等待，不能处理其他业务。即使CPU采用定期地由主程序转向查询设备状态的子程序进行扫描轮询的办法，CPU宝贵资源的浪费也是可观的。</font></p>
+					</blockquote>
+					<p><b><i><font size="6" color="#ff0000">2　程序中断方式</font></i></b></p>
+					<blockquote>
+						<p><font size="6"><b><font color="#ff0000">　　中断</font></b>是外围设备用来“主动”通知CPU，准备送出输入数据或接收输出数据的一种方法。通常，当一个中断发生时，CPU暂停它的现行程序，而转向中断处理程序，从而可以输入或输出一个数据。当中断处理完毕后，CPU又返回到它原来的任务，并从它停止的地方开始执行程序。这种方式节省了CPU宝贵的时间，是管理I/O操作的一个比较有效的方法。中断方式一般适用于随机出现的服务，并且一旦提出要求，应立即进行。</font></p>
+					</blockquote>
+					<p><b><i><font size="6" color="#ff0000">3　直接内存访问(DMA)方式</font></i></b></p>
+					<blockquote>
+						<p><font size="6">　　用中断方式交换数据时，每处理一次I/O交换，约需几十微秒到几百微秒。对于一些高速的外围设备，以及成组交换数据的情况，仍然显得速度太慢。直接内 存访问(DMA)方式是一种完全由硬件执行I/O交换的工作方式。这种方式既考虑到中断响应，同时又要节约中断开销。此时，DMA控制器从CPU完全接管 对总线的控制，数据交换不经过CPU，而直接在内存和外围设备之间进行，以高速传送数据。这种方式主要优点是数据传送速度很高，传送速率仅受到内存访问时间的限制。与中断方式相比，需要更多的硬件。DMA方式适用于内存和高速外围设备之间大批数据交换的场合。</font></p>
+					</blockquote>
+					<p><b><i><font size="6" color="#ff0000">4　通道方式</font></i></b></p>
+					<blockquote>
+						<p><font size="6">　　DMA方式的出现已经减轻了CPU对I/O操作的控制，使得CPU的效率有显著的提高，而通道的出现则进一步提高了CPU的效率。这是因为，CPU将部分权力下放给通道。通道是一个具有特殊功能的处理器，某些应用中称为</font><font size="6" color="#ff0000"><b>输入输出处理器(IOP)</b></font><font size="6">，它可以实现对外围设备的统一管理和外围设备与内存之间的数据传送。这种方式大大提高了CPU的工作效率。然而这种提高CPU效率的办法是以花费更多硬件为代价的。</font></p>
+					</blockquote>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026" align="center">
+				<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+					　<a href="素材库/fig/Flash/8.1.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></div>
+			</div>
+			<div align="center">
+				<p><font size="6">图８.１ 外围设备的输入／输出控制方式</font></p>
+			</div>
+		</td>
+  </tr>
+							
+	   </table>

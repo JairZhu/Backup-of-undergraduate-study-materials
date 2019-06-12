@@ -1,0 +1,962 @@
+
+       <script src="expand.js"></script><title>2.6 浮点运算方法和浮点运算器</title>
+       <blockquote>&nbsp;</blockquote>
+       <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="967" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0200.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">2.6 浮点运算方法和浮点运算器</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.6.1 
+	浮点加法、减法运算</a><br>
+	<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.6.2 
+	浮点乘法、除法运算</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.6.3 
+	浮点运算流水线</a><br>
+	<a href="#.4">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.6.4 
+	浮点运算器实例</a><br>
+	　</font></b></p>
+</form>
+
+<table border="0" width="935" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong>
+	<font color="#FFFFFF" size="6">
+	<a name=".1">2.6.1 
+	浮点加法、减法运算</a></font><font size="6">&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="2" height="73"></td>
+    <td width="933" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<font size="6" face="楷体_GB2312" color="#0000FF">一、浮点加减运算</font><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026" class="O">
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">设有两个浮点数ｘ和ｙ</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">它们分别为</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></nobr></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr></nobr></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p><nobr></nobr><img src="素材库/fig/图片/2.6.1.jpg" width="204" height="86" /></p>
+		</div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		    <font size="6">　　其中</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｘ和</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｙ分别为数ｘ和ｙ的阶码</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">,M</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｘ和</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">M</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｙ为数ｘ和ｙ的尾数。两浮点数进行加法和减法的运算规则是:</font></span></p>
+			<p><img src="素材库/fig/图片/2.6.1.2.jpg" width="520" height="84" /></p>
+		</div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr></nobr></div>
+		<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<font size="6" face="楷体_GB2312" color="#0000FF">二、浮点运算步骤</font></div>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O1">
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			<font size="6">1. 0 </font></span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">操作数的检查,</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">看有无简化操作的可能</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">； 
+			</font></span></nobr></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			<font size="6">2.</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">比较阶码大小并完成对阶（小阶向大阶对齐）； 
+			</font></span></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			<font size="6">3. </font></span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">尾数进行加或减运算； </font></span></nobr></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			<font size="6">4. </font></span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">结果规格化并进行舍入处理</font></span></nobr></div>
+	</div>
+	<p align="center">
+	<img border="0" src="素材库/fig/图片/图_浮点加法、减法运算.png" width="799" height="508"></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<b><font size="6">[例28] 设x＝2</font></b></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: -.45em; mso-text-raise: 30%; mso-fareast-language: ZH-CN"><b><font size="4">010</font></b></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><b><font size="6">×0.11011011,y=-2</font></b></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: -.45em; mso-text-raise: 30%; mso-fareast-language: ZH-CN"><b><font size="4">100</font></b></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><b><font size="6">×0.10101100
+			求x+y</font></b></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作数检查（非</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">） 
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、对阶：阶码对齐后才能加减。规则是阶码小的向阶码大的数对齐； 
+			</font></span></div>
+		<div class="O2" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+622;mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr><span style="font-family: 宋体">
+			<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -5.34%; text-align: left; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">若</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">△E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＝</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">0,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示两数阶码相等</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">即</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｘ＝</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｙ；</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></nobr></div>
+		<div class="O2" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+622;mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr><span style="font-family: 宋体">
+			<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -9.62%; text-align: left; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">若</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">△E&gt;0,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｘ</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">&gt;E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｙ；</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></nobr></div>
+		<div class="O2" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+622;mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr><span style="font-family: 宋体">
+			<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -9.62%; text-align: left; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">若</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">△E&lt;0,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｘ</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">&gt;E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｙ。</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></nobr></div>
+		<div class="O2" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+622;mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体">
+			<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.8%; text-align: left; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">当</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｘ</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">≠E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｙ</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">时</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">要通过尾数的移动以改变</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｘ或</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｙ</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">使之相等。</font></span></div>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr><span style="font-family: 宋体">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -13.9%; text-align: left; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">原则</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">:</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">小阶向大阶</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></nobr></div>
+		<div class="O" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p><span style="font-family: 宋体">
+		    <span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.1%; text-align: left; top: .39em; font-family: Wingdings">
+	      <font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">设</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">△E&gt;0,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｘ</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">&gt;E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｙ，则移动</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">y</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的尾数，</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">M</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">ｙ右移</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">△E</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位</font></span></p>
+			<p><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">问题：为什么要小阶向大阶看齐？</font></span>
+		    </p>
+		</div>
+		<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.8%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">阶差</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">=Ex-Ey=00 
+			010- 00 100 =11 110 </font></span></div>
+		<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.8%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">即阶差为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">-2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Mx</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">右移两位，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Ex</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">加</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2
+			</font></span></div>
+		<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.8%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">x=00100 
+			, 0.00110110</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">11</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）</font></span></div>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">3、尾数相加 </font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p align="center"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+		    <font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">   <span style="mso-spacerun:yes">&nbsp;<img src="素材库/fig/图片/weishu.png" width="426" height="177" />&nbsp;&nbsp;&nbsp;&nbsp;</span></font></span></p>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<font size="6">4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、结果规格化 
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.12%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(1)在浮点加减运算时</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">尾数求和的结果也可以得到</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">01.ф</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">…</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">ф</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">或</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">10.ф</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">…</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">ф,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">即两符号位不等</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">此时将运算结果右移以实现规格化表示</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">,</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">称为向右规格化。</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></div>
+		<div class="O1" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr><span style="font-family: 宋体">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -10.44%; text-align: left; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">规则：尾数右移</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位，阶码加</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">1
+			</font></span></nobr></div>
+		<div class="O1" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr><span style="font-family: 宋体">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.23%; text-align: left; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">(2)</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">结果是</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">00.0..01.....</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">或</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">11.1...10...</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">时，则向左规格化</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></nobr></div>
+		<div class="O1" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr><span style="font-family: 宋体">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -7.16%; text-align: left; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">规则：尾数左移</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位，阶码减</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">1</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，直到规格化</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></nobr></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">右规，阶码加</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，左规，阶码减</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">刚才例子左规为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">11.00010101</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">10</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">），阶码减</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">00011
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></div>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<ul>
+						<li><span style="font-size:144%">
+						<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.16%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">舍入处理（对阶和向右规格化时） 
+						</font></span></li>
+					</ul>
+				</div>
+				<blockquote>
+					<ul>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.22%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">就近舍入</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">舍</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">入</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">):</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">类似</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">四舍五入</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">,</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">丢弃的最高位为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1,</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">进</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1
+							</font></span></div>
+						</li>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.34%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">朝</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">舍入</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">:</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">截尾 
+							</font></span></div>
+						</li>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.34%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">朝</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＋</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">∞舍入</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">:</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">正数多余位不全为</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">”</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">,</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">进</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">负数</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">,</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">截尾 
+							</font></span></div>
+						</li>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体">
+							<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.34%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">朝－</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">∞</font></span><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">
+							</font></span>
+							<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+							<font size="6">舍入</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">:</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">负数多余位不全为</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">”</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">,</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">进</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">正数</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">,</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">截尾 
+							</font></span></div>
+						</li>
+					</ul>
+				</blockquote>
+			  <div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			    <blockquote>&nbsp;</blockquote>
+				</div>
+				<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<ul>
+						<li>
+						<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.16%; top: .39em; font-family: Wingdings">
+						<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">溢出判断和处理 
+						</font></span></li>
+					</ul>
+				</div>
+				<blockquote>
+					<ul>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.34%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">阶码上溢</font><font size="6">，</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">一般将其认为是＋</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">∞</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和－</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">∞</font></span>
+							<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+							<font size="6">。 </font></span></div>
+						</li>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.34%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#FF0000" size="6">阶码下溢</font><font size="6">，则数值为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0
+							</font></span></div>
+						</li>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.68%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">尾数上溢</font><font size="6">，两个同符号位的数相加。处理方法是尾数右移，阶码</font></span>
+							<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+							<u><font size="6">加</font></u></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><u><font size="6">1</font></u></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。 
+							</font></span></div>
+						</li>
+						<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.68%; top: .39em; font-family: Wingdings">
+							<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#FF0000" size="6">尾数下溢</font><font size="6">。尾数右移时，最低位从最右端流出。进行</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><u><font size="6">要进行舍入处理</font></u></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">。</span></font> </div>
+						</li>
+					</ul>
+				</blockquote>
+			</div>
+		</div>
+	</div>	</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">2</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.6.2 
+	浮点乘法、除法运算</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="2" height="73"></td>
+    <td width="933" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:360;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family:宋体;font-size:
+144%"><span style="mso-special-format:bullet;color:#330066;mso-color-index:
+3;position:absolute;left:-8.97%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">设有两个浮点数ｘ和ｙ：</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6"><br>
+			</font></span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">　　　　　　　　<img src="素材库/fig/图片/2.6.2.jpg" width="496" height="165" /></font></span></div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:360;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -8.97%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></div>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:360;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+				<font size="6">浮点数的阶码运算</font></span></div>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-size:144%">
+					<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-5.96%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span></div>
+				<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+　</div>
+			</div>
+			<p align="center"><img src="素材库/fig/图片/图_浮点乘除法.bmp" />
+		</div>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-size:167%">
+			<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-4.2%;top:.39em;
+font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">移码采用双符号位，为了对溢出进行判断 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.52%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">01</font><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;
+			</font></span></span>
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">为正</font></span><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</font></span><font size="6">00</font><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</font></span></span>
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">为负 </font></span></div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.52%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">10</font><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;
+			</font></span></span>
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">上溢</font></span><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</font></span><font size="6">11</font><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</font></span></span>
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">下溢</font></span></div>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O" style="mso-char-wrap:1;mso-kinsoku-overflow:
+1">
+		<p>&nbsp;</p>
+		<p><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Arial;layout-flow:vertical"><font size="6"><b><font color="#0000FF">[例]</font></b> <i>ｘ</i></font></span><font size="6"><span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical">＝＋</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+layout-flow:vertical;mso-fareast-language:ZH-CN">011,</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+layout-flow:vertical"><i>ｙ</i></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;layout-flow:vertical">＝＋</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical;
+mso-fareast-language:ZH-CN">110</span></font></p>
+		<p><font size="6"><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;layout-flow:vertical">求</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical;
+mso-fareast-language:ZH-CN">[</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;layout-flow:vertical"><i>ｘ</i></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+layout-flow:vertical">＋</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;layout-flow:vertical"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+layout-flow:vertical;mso-fareast-language:ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; position: relative; top: .37em; mso-text-raise: -25%">移</span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">&nbsp;</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+layout-flow:vertical">和</span><span style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;layout-flow:vertical"> [</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+layout-flow:vertical"><i>ｘ</i></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;layout-flow:vertical">－</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+layout-flow:vertical"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;layout-flow:vertical;mso-fareast-language:ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; position: relative; top: .37em; mso-text-raise: -25%">移</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:
+Arial;layout-flow:vertical;mso-fareast-language:ZH-CN">,</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+layout-flow:vertical">并判断是否溢出。</span> </font></p>
+		<font size="6">
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		</font>
+		<div v:shape="_x0000_s1026" class="O">
+			<div style="text-align:center;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<p align="left"><font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">
+			    [</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><i>ｘ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">移＝</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">01 
+			    011,</span></font></p>
+				<p align="left"><font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN"> [</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">补＝</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">00 
+				  110, [</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">－<i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">补＝</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">11 
+				    010<br>
+			      [</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><i>ｘ</i>＋<i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">移＝</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">[</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><i>ｘ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">移＋</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">[</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">补＝</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">10 
+				      001, </span>
+	            <span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">
+	            结果上溢。<br>
+	                  </span></font></p>
+		  </div>
+			<div style="text-align:center;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<div align="left">
+				  <p><font size="6"><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">
+			      [</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><i>ｘ</i>－<i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">移＝</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">[</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><i>ｘ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">移＋</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">[</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">－<i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">补＝</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">00 
+				      101, </span>
+			      <span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">
+			      结果正确</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">,</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">为－</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">3</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">。</span></font></p>
+				  <p>&nbsp;</p>
+				</div>
+			</div>
+		</div>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026">
+			<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:144%">
+				<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.16%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:26pt"><font color="#0000FF">尾数处理</font> </span></div>
+			<ul>
+			  <li>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-size:122%">
+				  <span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-4.34%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><font size="6">截断 </font></span></div>
+			  </li>
+				<li>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">
+					<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-4.34%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">舍入 </span></font></div>
+				<ul>
+					<li>
+					<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font size="6">
+						<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.87%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">尾数用原码表示时 </span></font></div>
+					<ul>
+						<li>
+						<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.8%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">只要尾数最低为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">1</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">或者移出位中有</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:
+ZH-CN">1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial">数值位，使最低位置</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">1
+							</span></font></div>
+						<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.8%; top: .3em; font-family: Wingdings">
+							§</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">0</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">舍</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">入 
+							</span></font></div>
+						</li>
+					</ul>
+					<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font size="6">
+						<span style="mso-special-format:bullet;color:#CCCC00; mso-color-index:4;position:absolute;left:-3.87%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">尾数用补码表示时</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">						</span></font></div>
+					<ul>
+						<li>
+						<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-3.8%;top:.3em;font-family:Wingdings">§</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">丢失的位全为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">0</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">，不必舍入。 </span></font></div>
+						<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.26%; top: .3em; font-family: Wingdings">
+							§</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">丢失的最高位为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">0</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">，以后各位不全为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:
+ZH-CN">0</span><span style="font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial">时；或者最高为</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">，以后各位全为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">0</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">时，不必舍入。 </span></font></div>
+						<div class="O3" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:807;
+mso-text-indent-alt:623;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.22%; top: .3em; font-family: Wingdings">
+							§</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">丢失的最高位为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">1</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">，以后各位不全为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:
+ZH-CN">0</span><span style="font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial">时，则在尾数的最低位入</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:
+ZH-CN">1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial">的修正操</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">作。 </span></font></div>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font size="6">
+				<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+				</font>
+				<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+					<b>[例30] </b>设有浮点数<i>ｘ</i>＝</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">2</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: -.45em; mso-text-raise: 30%">－</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: -.45em; mso-text-raise: 30%; mso-fareast-language: ZH-CN">5</span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">×</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">0.0110011,</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><i>ｙ</i>＝</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">2</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: -.45em; mso-text-raise: 30%; mso-fareast-language: ZH-CN">3</span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">×</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">－</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">0.1110010),</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">阶码用</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">4</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">位移码表示</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">,</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">尾数</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">含符号位</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">用</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">8</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">位补码表示。求</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">[</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><i>ｘ</i></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">×</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">]</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">浮。要求用补码完成尾数乘法运算</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">,</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">运算结果尾数保留高</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">8</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">位</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">含符号位</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">),</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">并用尾数低位字长值处理舍入操作。</span></font></div>
+				<font size="6">
+				<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+				</font>
+				<div v:shape="_x0000_s1026" class="O">
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<font color="#0000FF" size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><b>[</b></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><b>解</b></span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><b>:]</b></span> </font></div>
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<font size="6"><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">　　移码采用双符号位</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">,</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">尾数补码采用单符号位</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">,</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">则有</span></font><font size="6"><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><br>
+						</span>
+						<span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">
+						<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>[</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><i>M</i></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｘ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">补＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">0.0110011, 
+						[</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><i>M</i></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">补＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">1.0001110,<br>
+						</span>
+						<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">　</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><i>E</i></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">移＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">01 011, [</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><i>E</i></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">补＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">00 011, [</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><i>E</i></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｘ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">移＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">00 011,<br>
+						</span>
+						<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">　</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｘ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">浮＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">00 011, 
+						0.0110011, [</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">浮＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">01 011, 
+						1.0001110 </span></font></div>
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<p align="left"><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">(1)</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">判断操作是否为</span><span style="font-family:Arial;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">”</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">0</span><span lang="EN-US" style="font-family:Arial; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">”</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">,</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">求阶码和</span></font></p>
+						<p align="center"><font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><i>E</i></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｘ</i></span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">＋</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN"><i>E</i></span><span style="font-family:宋体; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">移＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN"><i>E</i></span><span style="font-family:宋体; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｘ</i></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">移＋</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN"><i>E</i></span><span style="font-family:宋体; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">补</span></font></p>
+						<p align="center"><font size="6"><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"> ＝</span></font><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">00 011</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">＋</span></font><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">00 011</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">＝</span></font><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">00 110</span></font></p>
+				  </div>
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<div align="left"><font size="6"><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN" lang="EN-US"> &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">值为移码形式－</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">2</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">。 </span></font></div>
+					</div>
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">(2)
+						</span>
+						<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">尾数乘法运算可采用补码阵列乘法器实现</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">,</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">即有<br>
+						</span>
+						<span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><i>M</i></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｘ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">补×</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><i>M</i></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">补＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[0.0110011]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">补×</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[1.0001110]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">补<br>
+						</span>
+						<span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+						&nbsp;</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">　　　　　　　</span> 
+						<span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[1.1010010,1001010]</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">补 </span></font></div>
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">(3)
+						</span>
+						<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">规格化处理<br>
+						</span>
+						<span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+						<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">乘积的尾数符号位与最高数值位符号相同</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">,</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">不是规格化的数</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">,</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">需要左规</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">,</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">阶</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">码变为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">00 101(-3), </span></font></div>
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<font size="6"><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">　</span> 
+						<span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">尾数变为</span><span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"> 
+						1.0100101,0010100</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">。 </span></font></div>
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">(4)
+						</span>
+						<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">舍入处理<br>
+						</span>
+						<span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">　　尾数为负数</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">,</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">取尾数高位字长，按舍入规则</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">,</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">舍去低位字长，故尾数为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">1.0100101 </span>
+						<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">。 </span></font></div>
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<font size="6"><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">　　最终相乘结果为<br>
+						</span>
+						<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">　　</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">[</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｘ</i></span><span lang="EN-US" style="font-family:宋体; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">×</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><i>ｙ</i></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">]</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">浮＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; mso-fareast-language:ZH-CN">00 101,1.0100101 </span></font></div>
+					<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<font size="6"><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">其真值为<br>
+						</span>
+						<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">　　</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial"><i>ｘ</i></span><span lang="EN-US" style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">×</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><i>ｙ</i></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">＝</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">2</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;position:relative;top:-.45em;mso-text-raise:30%"><font size="3">－</font></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;position:relative;top:-.45em;mso-text-raise:30%;mso-fareast-language: ZH-CN"><font size="4">3</font></span><span lang="EN-US" style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">×</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">(</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">－</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">0.1011011) </span></font></div>
+					<div style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<div align="center"></div>
+					</div>
+				</div>
+				<p align="center">
+			</div>
+		</div>
+	</div>	  </td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">2</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.6.3 
+	浮点运算流水线</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="2" height="73"></td>
+    <td width="933" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<font size="6" face="楷体_GB2312" color="#0000FF">一、</font><font size="6" face="楷体_GB2312" color="#0000FF">提高并行性的两个渠道</font><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026" class="O" style="mso-line-spacing:&quot;90 0 0&quot;;
+mso-margin-left-alt:216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O">
+			<ul>
+				<li>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-size:156%">
+					<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-3.52%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">空间并行性：增加冗余部件，如增加多操作部件处理机和超标量处理机 
+					</font></span></div>
+				</li>
+				<li>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.16%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">时间并行性：改善操作流程如：流水线技术</span></font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:28pt"> </span></div>
+				</li>
+			</ul>
+			<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<font size="6" face="楷体_GB2312" color="#0000FF">二、流水技术原理</font></div>
+		</div>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O1">
+			<ul>
+			  <li>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-size:122%">
+					<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute;
+left:-3.68%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><font size="6">在流水线中必须是连续的任务，只有不断的提供任务才能充分发</font></span><font size="6"><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">挥流水线的效率 
+				  </span></font></div>
+			  </li>
+				<li>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">
+					<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute; left:-3.68%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">把一个任务分解为几个有联系的子任务。每个子任务由一个专门</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">的功能部件实现 
+					</span></font></div>
+				</li>
+				<li>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">
+					<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute; left:-3.68%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">在流水线中的每个功能部件之后都要有一个缓冲寄存器，或称为</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">锁存器 
+					</span></font></div>
+				</li>
+				<li>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">
+					<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute; left:-3.63%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">流水线中各段的时间应该尽量相等，否则将会引起</span><span style="font-family:Arial; mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">“</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">堵塞</span><span style="font-family:Arial;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">”</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">和</span><span style="font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">“</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">断流</span><span style="font-family: Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">”</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">的现象 </span></font></div>
+				</li>
+				<li>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">
+					<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute; left:-3.68%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">流水线需要有装入时间和排空时间，只有当流水线完全充满时，</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">才能充分发挥效率</span></font></div>
+				</li>
+			</ul>
+		</div>
+	    <p align="center"><a href="素材库/fig/Flash/2.18.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图2.18 线性流水线的硬件结构图</font></p>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O1">
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">设过程段</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6"> 
+			S</font></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .45em; mso-text-raise: -30%; mso-fareast-language: ZH-CN"><font size="6">i</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">所需的时间为</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">τ</font></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .45em; mso-text-raise: -30%; mso-fareast-language: ZH-CN"><font size="6">i</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">,</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">缓冲寄存器的延时为</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">τ</font></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .45em; mso-text-raise: -30%; mso-fareast-language: ZH-CN"><font size="6">l</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">,</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线性流水线的时钟周期定义为</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman">
+			<font size="6">τ</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＝</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">max{τ</font></span><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .45em; mso-text-raise: -30%; mso-fareast-language: ZH-CN"><font size="6">i</font></span></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">}</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＋</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">τ</font></span><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .45em; mso-text-raise: -30%; mso-fareast-language: ZH-CN"><font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＝</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">τ</font></span><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .45em; mso-text-raise: -30%; mso-fareast-language: ZH-CN"><font size="6">m</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＋</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">τ</font></span><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .45em; mso-text-raise: -30%; mso-fareast-language: ZH-CN"><font size="6">l</font></span></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></nobr></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<nobr>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">　流水线处理的频率为</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6"> 
+			f</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＝</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">1/τ</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。</font></span></nobr></div>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family:宋体;
+font-size:133%">
+			<span style="mso-special-format:bullet;color:#330066;
+mso-color-index:3;position:absolute;left:-4.1%;text-align:left;top:.39em;
+font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial"><font size="6">一个具有</font></span><font size="6"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">k
+			</span>
+			<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">级过程段的流水线处理</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"> 
+			n </span>
+			<span style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">
+			个任务需要的时钟周期数为</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">T</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;position:relative;top:.45em; mso-text-raise:-30%;mso-fareast-language:ZH-CN">k</span></span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">＝</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">k</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">＋</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">(n</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">－</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">1)</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">，</span><nobr><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">所需要的时间为： </span>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			T</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">＝</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">T</span><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; position:relative;top:.45em;mso-text-raise:-30%;mso-fareast-language:ZH-CN">k</span></span><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><span style="mso-spacerun:yes">&nbsp;</span>×
+			</span>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			τ</span></nobr> </font></div>
+		<div class="O1" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+436;mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><nobr>
+			<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">而同时，顺序完成的时间为：T＝n×k×</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">τ
+			</span></nobr></font></div>
+		<div class="O" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><nobr><span style="font-family: 宋体">
+			<span style="mso-special-format:bullet;color:#330066; mso-color-index:3;position:absolute;left:-9.85%;text-align:left;top:.39em; font-family:Wingdings">l</span></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">k</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">级线性流水线的加速比：</span>
+			</nobr></font></div>
+		<div class="O" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><nobr><span style="mso-spacerun: yes; font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman">&nbsp;
+			</span></nobr></font></div>
+		<div class="O" style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><nobr></nobr></font></div>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6" face="楷体_GB2312" color="#0000FF">三、流水线浮点运算器</font></div>
+	</div>
+	<font size="6">
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	</font>
+	<div v:shape="_x0000_s1026" class="O">
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><nobr>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			A</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">＝</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">a×2</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: -.45em; mso-text-raise: 30%; mso-fareast-language: ZH-CN">P,</span></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: -.45em; mso-text-raise: 30%">　　</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">B</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">＝</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">b×2</span><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: -.45em; mso-text-raise: 30%; mso-fareast-language: ZH-CN">q</span></span>
+			</nobr></font></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			　　在</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">4</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">级流水线加法器中实现上述浮点加法时</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">,</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">分为以下操作：</span>			</font></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><nobr>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			(1) </span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			求阶差</span>
+			</nobr></font></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><nobr>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			(2) </span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			对阶</span>
+			</nobr></font></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><nobr>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			(3) </span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			相加</span>
+			</nobr></font></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><nobr>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">
+			(4) </span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			规格化</span></nobr></font></div>
+	</div>
+	<p>&nbsp;</p>	  
+	<p align="center"><a href="素材库/fig/Flash/2.20.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图2.20 向量加法计算的流水时空图</font></p></td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".4">2</a></font><font size="6"><font color="#FFFFFF"><a name=".4">.6.4 
+	浮点运算器实例</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="2" height="73"></td>
+    <td width="933" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-4.51%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">之外的浮点运算器（数学协处理器）如</font></span><font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">80287</span></font><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:22pt;mso-fareast-language:ZH-CN">
+			</span></div>
+		<ul>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:117%">
+				<span style="mso-special-format:bullet;color:#CCCC00;
+mso-color-index:4;position:absolute;left:-3.62%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt">完成浮点运算功能，不能单用。 </span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:117%">
+				<span style="mso-special-format:bullet;color:#CCCC00;
+mso-color-index:4;position:absolute;left:-3.62%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt">可以和</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt;
+mso-fareast-language:ZH-CN">80386</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt">或</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt;
+mso-fareast-language:ZH-CN">80286</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt">异步并行工作。 </span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:117%">
+				<span style="mso-special-format:bullet;color:#CCCC00;
+mso-color-index:4;position:absolute;left:-3.04%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt">高性能的</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt;
+mso-fareast-language:ZH-CN">80</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt">位字长的内部结构。有</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:21pt;mso-fareast-language:ZH-CN">8</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt">个</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:21pt;mso-fareast-language:ZH-CN">80</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt">位字长以堆栈方式管理的</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:21pt">寄存器组。 </span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:117%">
+				<span style="mso-special-format:bullet;color:#CCCC00;
+mso-color-index:4;position:absolute;left:-3.62%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt">浮点数格式完全符合</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:21pt;mso-fareast-language:ZH-CN">IEEE</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt">标准。 
+				</span></div>
+			</li>
+		</ul>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:122%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-4.51%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">之内的浮点运算器（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">486DX</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">以上）</font></span></div>
+	</div>
+	<p>&nbsp;</p>	  
+	<p align="center"><a href="素材库/fig/Flash/2.21.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图2.21 80X87浮点运算逻辑框图 </font></p></td>
+  </tr>
+</table>
+

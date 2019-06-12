@@ -1,0 +1,181 @@
+
+       <script src="expand.js"></script><title>3.2 SRAM存储器</title>
+      <p>
+		<a name="top"><font size="6"></font></a></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img border="0" src="素材库/items/slider.jpg" width="968" height="112" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0300.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">3.2 SRAM存储器</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6"><a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.2.1 
+	基本的静态存储元阵列</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.2.2 
+	基本的SRAM逻辑结构</a><br>
+	<a href="#.4">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.2.3 
+	存储器的读写周期</a></font></b><b><font size="6">&nbsp;
+	<br>
+  　</font></b></p>
+	</form>
+
+<table border="0" width="991" height="225" cellspacing="0" cellpadding="0" id="table1">
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".2">3.2.1 
+	基本的静态存储元阵列</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font color="#0000FF" size="6">1、存储元 </font></span>
+			<ul>
+			  <li>
+			    <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">SRAM中,用一个锁存器(触发器)作为存储元。</font></span></div>
+		      </li>
+			  <li>
+                <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">只要直流供电电源一直加在这个记忆电路上，它就无限期地保持记忆的1状态或0状态。如果<font color="#FF0000">电源断电</font>，那么存储的数据(1或0)就会丢失。</font></span></div>
+		      </li>
+		  </ul>
+			</div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+		    <font color="#0000FF" size="6">2</font></span><font color="#0000FF"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、三组信号线</font></span></font></p>
+			<p><font color="#0000FF" size="6">地址线 <br />
+		    数据线 <br />
+		    控制线 </font></p>
+			<p><font size="6">地址译码器<br />
+		        <font color="#0000FF">行线</font> </font></p>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+		  <p align="center"><a href="素材库/fig/Flash/3-2.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a> </p>
+	<p align="center"><font size="6" face="宋体">图3.2 基本的静态存储元阵列</font></p>
+		</div>
+	</div>
+	<p>
+	　</p>	  </td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".3">3.2.2 
+	基本的SRAM逻辑结构</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	　
+	  <p><font size="6">SRAM芯大多采用双译码方式，以便组织更大的存储容量。</font></p>
+	  <p align="center"><a href="素材库/fig/Flash/3-3.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a> </p>
+	  <p align="center"><font size="6" face="宋体">图3.3 32K×8位的SRAM逻辑结构图</font></p>
+	  <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:288;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:167%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-5.58%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">存储阵列为<font color="#FF0000">三维结构</font>，即256行×128列×8位</font></span></div>
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:288;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -5.58%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">地址译码器 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:647;
+mso-text-indent-alt:360;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -6.0%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"><font color="#0000FF">二级译码</font>： 将地址分成x向、y向两部分，第一级进行x向<font color="#0000FF">(行译码)</font>和y向<font color="#FF0000">(列译码)</font>的独立译码,然后在存储阵列中完成第二级的交叉译码。</font></span></div>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:288;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-size:122%">
+					<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-4.1%;top:.39em;
+font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">读与写的互锁逻辑 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<ul>
+						<li>
+						<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+						<font size="6">控制信号中/</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CS</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">是片选信号，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">/CS</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">有效时（低电平），门</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">G1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">G2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">均被打开。/</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">OE</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为读出使能信号，/</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">OE</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">有效时（低电平），门</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">G2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">开启，当写命令/</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">WE=1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">时（高电平），门</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">G1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">关闭，存储器进行读操作。写操作时，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">/WE=0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，门</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">G1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">开启，门</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">G2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">关闭。注意，门</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">G1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">G2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">是互锁的，一个开启时另一个必定关闭，这样保证了读时不写，写时不读。</font></span></li>
+					</ul>
+				</div>
+			</div>
+			<p align="center">
+			<img border="0" src="素材库/fig/图片/图_SRAM存储器.png" width="248" height="132"></div>
+	</div>
+	<p>　</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".4">3</a></font><font size="6"><font color="#FFFFFF"><a name=".4">.2.3 存储器的读写周期</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p><span style="font-size:167%">
+		    <span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-5.48%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">在读周期中，地址线先有效，以便进行地址译码，选中存储单元。为了读出数据，片选信号/CS和读出使能信号/OE也必须有效(由高电平变为低电平)。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">从地址有效开始经tAQ(读出)时间，数据总线I/O上出现了有效的读出数据。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">之后/CS、/OE信号恢复高电平，tRC以后才允许地址总线发生改变。tRC时间称为<font color="#0000FF">读周期时间</font>。</font></span></p>
+			<p>&nbsp;</p>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -5.48%; top: .39em; font-family: Wingdings">
+		    <font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">在写周期中，也是地址线先有效，接着片选信号/CS有效，写命令/WE有效(低电平)。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">此时数据总线I/O上必须置写入数据，在tWD时间段将数据写入存储器。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">之后撤消写命令/WE和/CS。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为了写入可靠，I/O线的写入数据要有维持时间thD，/CS的维持时间也比读周期长。tWC时间称为<font color="#FF0000">写周期时间</font>。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为了控制方便，一般取tRC=tWC，通常称为<font color="#800000">存取周期</font>。</font></span></p>
+		</div>
+	  </div>
+	<p>&nbsp;</p>
+	  <p align="center"><a href="素材库/fig/Flash/3-4.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a> </p>
+	  <p align="center"><font size="6" face="宋体">图3.4 SRAM工作的时间关系</font></p>
+	  <p align="left"><font size="6">【例3.1】图3.5(a)是SRAM的写入时序图。其中R/W是读/写命令控制线，当R/W线为低电平时，存储器按给定地址把数据线上的数据写入存储器。请指出图3.5(a)写入时序中的错误，并画出正确的写入时序图。<br />
+          <font color="#0000FF">解：</font> 写入存储器的时序信号必须同步。通常，当R/W线加负脉冲时，地址线和数据线的电平必须是稳定的。当R/W线达到低电平时，数据立即被存储。因此，当R/W线处于低电平时，如果数据线改变了数值，那么存储器将存储新的数据⑤。同样，当R/W线处于低电平时地址线如果发生了变化，那么同样数据将存储到新的地址②或③。<br />
+正确的写入时序图见图3.5(b)。</font></p>
+	  <p align="center"><a href="素材库/fig/Flash/3-5.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a> </p>
+	  <p align="center"><font size="6" face="宋体">图3.5 读/</font><font size="6">写入时序图</font></p>
+	  <p align="center">&nbsp;</p></td>
+  </tr>
+	   </table>
+      

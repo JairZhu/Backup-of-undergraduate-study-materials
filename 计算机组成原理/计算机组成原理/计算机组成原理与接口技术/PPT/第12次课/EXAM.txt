@@ -1,0 +1,45 @@
+;  3)符号函数的实现
+;   符号函数sgn（X)的定义是：
+;           -1, x<0
+;  sgn(x)=  0, x=0
+;           1, x>0
+;   假设内存中有一系列的X值，现在我们通过编写程序来求这些x对应的sgn(x)的值。
+;   这是一个典型的分支程序设计，我们先将x的值读入到寄存器AL中，然后利用指令“OR AL,AL"(注意该指令并不会改变AL的值），
+;   将x的值的特征（包括X是否为0及x的符号位是否为0）反映到标志寄存器上，
+;   最后根据标志寄存器来实现跳转：如果零标志位ZF=0, 则sgn(x）＝0；如果符号标志位SF＝1，则说
+;   明x<0, 因此sgn(x)=-1; 如果以上两种情况都不满足，则说明x>0, 因此sgn(x)=1.
+
+data   segment
+x      db  12h,34h,00h,0ffh,0abh
+count  equ $-x
+sgnx   db  count dup(?)
+
+data   ends
+code   segment
+       assume cs:code,ds:data,es:data
+main   proc far
+       push ds
+       mov ax,0
+       push ax
+       mov ax,data
+       mov ds,ax
+       mov es,ax
+       lea si,x
+       lea di,sgnx
+       mov cx,count
+again: lodsb
+       or al,al
+       jz zero
+       js minus
+       mov al,01h
+       jmp next
+zero:  mov al,00h
+       jmp next
+minus: mov al,0ffh
+next:  stosb
+       loop again
+       ret
+main   endp
+code   ends
+       end main
+ 

@@ -1,0 +1,36 @@
+TITLE   PROG7-6 ASCII TO BINARY CONVERSION MODULE 
+PAGE 	60,132
+;this module converts any ASCII number between 0 to 65535 to binary 
+;CALLING PROGRAM SETS
+; SI = OFFSET OF ASCII STRING
+; BX = STRING LENGTH - 1 (USED AS INDEX INTO ASCII NUMBER)
+;THIS MODULE SETS
+; AX = BINARY NUMBER
+;-------------------------
+          .MODEL SMALL
+          EXTRN TEN:WORD
+          PUBLIC ASC2B_CON
+          .CODE
+ASC2B_CON PROC FAR
+          PUSHF          ;STORE REGS CHANGED IN THIS MODULE
+          PUSH   DI
+          PUSH   CX
+          SUB    DI,DI          ;CLEAR DI FOR THE BINARY(HEX) RESULT
+          MOV    CX,1           ;CX = WEIGHT FACTOR 
+A2B_LOOP: MOV    AL,[SI+BX]     ;GET THE ASCII DIGIT
+          AND    AL,0FH         ;STRIP OFF '3'
+          SUB    AH,AH          ;CLEAR AH FOR WORD MULTIPLICATION 
+          MUL    CX             ;MULTIPLY BY THE WEIGHT 
+          ADD    DI,AX          ;ADD IT TO BINARY (HEX) RESULT
+          MOV    AX,CX          ;MULTIPLY THE WEIGHT FACTOR
+          MUL    TEN            ; BY TEN
+          MOV    CX,AX          ; FOR NEXT ITERATION
+          DEC    BX             ;DECREMENT DIGIT POINTER
+          JNS    A2B_LOOP       ;JUMP IF OFFSET >=0
+          MOV    AX,DI          ;STORE BINARY NUMBER IN AX
+          POP    CX             ;RESTORE FLAGS
+          POP    DI
+          POPF
+          RET 
+ASC2B_CON ENDP
+          END

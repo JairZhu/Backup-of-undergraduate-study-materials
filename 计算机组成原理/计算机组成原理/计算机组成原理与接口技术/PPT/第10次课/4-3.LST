@@ -1,0 +1,76 @@
+Microsoft (R) Macro Assembler Version 5.00                  4/1/10 22:14:23
+Datatype                                                    Page     1-1
+
+
+				PAGE   60,132 
+				TITLE  Datatype    
+				 
+				       .MODEL SMALL 
+ 0040				       .STACK 64 
+				 
+				;---------------------------------- 
+ 0000				       .DATA 
+				     
+				;---------------------------------- 
+				 
+ 0000				      .CODE 
+				 
+ 0000				MAIN   PROC  FAR 
+ 0000  B8 ---- R		       MOV  AX, @DATA 
+ 0003  8E D8			       MOV  DS, AX 
+				 
+ 0005  B4 00			       MOV AH, 00H 
+ 0007  B0 07			       MOV AL, 07H 
+ 0009  CD 10			       INT 10H 
+				 
+				 
+ 000B  B4 09			       MOV AH, 09H 
+ 000D  B7 00			       MOV BH, 00H 
+ 000F  B0 44			       MOV AL, 44H 
+ 0011  B9 0200			       MOV CX, 200H 
+ 0014  B3 F0			       MOV BL, 0F0H 
+ 0016  CD 10			       INT 10H 
+				 
+				        
+				     
+ 0018  B4 07			       MOV AH, 07H 
+ 001A  CD 21			       INT 21H        
+				 
+				 
+ 001C  B4 4C			        MOV AH, 4CH 
+ 001E  CD 21			        INT 21H 
+ 0020				MAIN    ENDP 
+ 0020				        END MAIN 
+Microsoft (R) Macro Assembler Version 5.00                  4/1/10 22:14:23
+Datatype                                                    Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0000	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	0040	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	0020	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	_TEXT	Length = 0020
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  4-3		
+
+
+     39 Source  Lines
+     39 Total   Lines
+     15 Symbols
+
+  50292 + 450796 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

@@ -1,0 +1,29 @@
+
+      .MODEL SMALL
+      .STACK 64
+      .DATA      
+      .CODE    
+
+MAIN    PROC  FAR
+        MOV  AX, @DATA
+        MOV  DS, AX
+
+       
+       MOV AL, 64
+       MOV CL, 76
+       ADD AL, CL
+       INTO
+       
+ 
+       mov cx, 5555H
+       mov ax, 0000H   
+
+       mov ah,07H
+       int 21H
+
+       MOV AH,4CH      
+       int 21H
+      
+MAIN    ENDP
+       
+        END MAIN

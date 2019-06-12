@@ -1,0 +1,123 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>总线的定时和数据传送模式</title>
+
+      
+<div align="left">
+	<p><a name="top"><font size="6"></font></a><img border="0" src="素材库/items/slider.jpg" width="969" height="24"></p>
+</div>
+<div align="center">
+	<p> <a href="0600.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">6.4 总线的定时和数据传送模式</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">6.4.1 
+	总线定时</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16"></a><a href="#.1">6.4.2</a><a href="#.2"> 总线数据传送模式</a><br>
+			　</font></b><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+			　</font></b>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="965" height="298" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080" width="965">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".1">6.4.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">总线定时</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="1" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6">总线的一次信息传送过程，大致可分为如下五个阶段：</font><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="blue">请求总线、总线仲裁、寻址、信息传送、状态返回</font><font size="6">。 </font></span>
+					<p></p>
+				</div>
+				<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red"><strong>定时</strong></font><font size="6">：事件出现在总线上的时序关系。 
+			</font></span></div>
+			</div>
+			<p><font size="6">1、</font><font size="6" color="red"><strong>同步定时</strong></font></p>
+			<ul>
+				<li><font size="6">在同步定时协议中，事件出现在总线上的时刻由总线时钟信号来确定。由于采用了公共时钟，每个功能模块什么时候发送或接收信息都由统一时钟规定，因此，同步定时具有较高的传输频率。</font>
+				<li><font size="6">同步定时适用于总线长度较短、各功能模块存取时间比较接近的情况。</font>
+			</ul>
+			<div align="center">
+				<p> <a href="素材库/fig/Flash/6.12.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<p><font size="6">图6.12 同步总线操作时序</font></p>
+			</div>
+			<p><font size="6">2、</font><font size="6" color="red"><strong>异步定时</strong></font></p>
+			<ul>
+				<li><font size="6">在异步定时协议中，后一事件出现在总线上的时刻取决于前一事件的出现，即建立在应答式或互锁机制基础上。在这种系统中，不需要统一的共公时钟信号。总线周期的长度是可变的。</font>
+			</ul>
+			<div align="center">
+				<p> <a href="素材库/fig/Flash/6.13.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<p><font size="6">图6.13 异步总线操作时序</font></p>
+			</div>
+			<p></p>
+		</td>
+  </tr>
+	<tr>
+		<td width="1" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" width="965" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".2">6.4.2 
+	总线数据传送模式</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+		<td width="1" height="73"></td>
+		<td width="964" height="73">
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+				<font size="6">当代的总线标准大都能支持以下四类模式的数据传送：</font>
+				<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">(1)</font><b><font size="6" color="red">读、写操作</font></b><font size="6">：读操作是由从方到主方的数据传送；写操作是由主方到从方的数据传送。一般，主方先以一个总线周期发出命令和从方地址，经过一定的延时再开始数据传送总线周期。为了提高总线利用率，减少延时损失，主方完成寻址总线周期后可让出总线控制权，以使其他主方完成更紧迫的操作。然后再重新竞争总线，完成数据传送总线周期。</font></span></p>
+				<p></p>
+				<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">(2)</font><b><font size="6" color="red">块传送操作</font></b><font size="6">：只需给出块的起始地址，然后对固定块长度的数据一个接一个地读出或写入。对于</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（主方）存储器（从方）而言的块传送，常称为猝发式传送，其块长一般固定为数据线宽度（存储器字长）的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">倍。例如一个</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">64</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位数据线的总线，一次猝发式传送可达</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">256</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位。这在超标量流水中十分有用。</font></span>
+					<p></p>
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">(3)</font><b><font size="6" color="red">写后读、读修改写操作</font></b><font size="6">：这是两种组合操作。只给出地址一次（表示同一地址），或进行先写后读操作，或进行先读后写操作。前者用于校验目的，后者用于多道程序系统中对共享存储资源的保护。这两种操作和猝发式操作一样，主方掌管总线直到整</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">个操作完成。</span></font>
+							<p></p>
+							<div v:shape="_x0000_s1026" class="O">
+								<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+									<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">(4)</font><b><font size="6" color="red">广播、广集操作</font></b><font size="6">：一般而言，数据传送只在一个主方和一个从方之间进行。但有的总线允许一个主方对多个从方进行写操作，这种操作称为广播。与广播相反的操作称为广集，它将选定的多个从方数据在总线上完成</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">AND</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">或</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">OR</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作，用以检测多个中断</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">源。</span></font>
+									<p></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div v:shape="_x0000_s1026" class="O" align="center">
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+							<div v:shape="_x0000_s1026" class="O" align="center">
+								<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+									 <a href="素材库/fig/Flash/6.15.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></div>
+							</div>
+						</div>
+					</div>
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+							<div v:shape="_x0000_s1026" class="O" align="center">
+								<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+									<p><font size="6">图6.15 总线数据传送模式</font></p>
+								</div>
+							</div>
+						</div>
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>

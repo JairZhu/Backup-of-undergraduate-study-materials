@@ -1,0 +1,348 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>指令级并行机制</title>
+
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="968" height="25"></p>
+		<p align="center"> <a href="1000.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">10.4 指令级并行机制</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">10.4.1 
+	推断执行技术</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">10.4.2 
+	推测技术</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="990" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".1">10.4.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">推断执行技术</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73"><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+			<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6" face="楷体_GB2312" color="#0000FF">一、分支对系统性能的影响</font><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><br>
+						</span></font><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">分支是在两个指令序列中根据判定条件选择其中一个序列执行。为了判定最终选择哪一个指令序列执行，必须等待一些条件判断指令的执行结果。 
+			</span></font></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令执行一旦遇到分支转移，在执行判定操作之前，多个功能部件由于无法确定程序的执行方向而空闲等待，使系统性能明显下降。 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="blue">分支预测</font><font size="6">并不能充分利用处理机流水线的功能部件。</font></span></div>
+			</li>
+		</ul>
+	</div>
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<font size="6" face="楷体_GB2312" color="#0000FF">二、安腾的推断技术原理</font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt"> </span></div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt"><font color="red">推断技术</font>处理分支的方法是利用多个功能部件并行执行各个分</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">支，然后根据判定结果选取某一分支的运行结果，因而可消除</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">大部分的转移，使得整个系统的运行速度得到提高。 
+			</span></div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">采用显式并行指令计算技术的安腾处理机将处理机的多个功能</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">部件的并行处理能力与编译器的强大功能相结合，允许在编译</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">时让编译器对程序进行优化，消除转移，提高效率。 
+			</span></div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">安腾处理机的指令系统允许在每条指令中都指定一个推断寄存</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">器。</span>
+					<p><font size="6"><font face="楷体_GB2312" color="#0000FF">三、推断执行的实现</font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+					</span></font></p>
+				</div>
+		<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+					<font size="6">【例</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2】</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">考察下面的一个典型的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">if-then-else</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">结构：<br>
+					</font></span>
+					<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+					<font size="6">If </font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">(</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">x=0) </font></span></div>
+						<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+					<span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</font></span><font size="6">then m=m+1 </font></span></div>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+					<span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</font></span><font size="6">else m=m-1 </font></span></div>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+					<font size="6">在传统的超标量流水线体系结构中，完成上述判断通常要首先安排一条比较语句，将</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">x</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">与</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">进行比较。得到比较结果后，再选择执行</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">then</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">分支或</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">else</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">分支。</font></span></div>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+					<font size="6">相应的汇编语句大致如下所示：<br>
+								</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+					<font size="6">cmp x</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">比较</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">x</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"><br>
+								</font></span>
+					<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+					<font size="6">je L1;</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">若相等则转移至标号</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">L1</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"><br>
+								</font></span>
+					<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+					<font size="6">sub m,1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">；</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">m=m-1</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"><br>
+								</font></span>
+					<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+					<font size="6">jmp L2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">；无条件转移至标号</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">L2</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"><br>
+								</font></span>
+					<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+					<font size="6">L1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">：</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">add 
+					m</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">；</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">m=m+l</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"><br>
+								</font></span>
+					<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+					<font size="6">L2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">： 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">而安腾处理机可以通过编译优化消除条件语句中的分支指令，将</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">该结构转化成顺序的推测执行结构：<br>
+									</span>
+							<span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">①</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN">cmp</span><span lang="EN-US" style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN"> </span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">eq P1</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">，</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">P2=0</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">，</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">x</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">；</span>
+									<p><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">//</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">无条件执行：将</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">r4</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">寄存器的值与</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">0</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">比较，若相等则置推断寄存器</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN">P1</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN">1</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">，</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN">P2</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN">0</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">，否则置推断寄存</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">器</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">P1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">0</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">，</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">P2</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">1</span></p>
+								</div>
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Arial;font-size:24pt;mso-fareast-language:ZH-CN">②</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">(P1)add m=1</span><span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">，</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN">m<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</span></span>
+									<p><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:24pt;mso-fareast-language:ZH-CN">//</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">若</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">P1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">，则</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">m+1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">送</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">m<br>
+										</span><span lang="EN-US" style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Arial;font-size:24pt;mso-fareast-language:ZH-CN">③</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">(P2)add m=-1</span><span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">，</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt;mso-fareast-language:ZH-CN">m<span style="mso-spacerun:yes">??????</span></span></p>
+									<p><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:24pt;mso-fareast-language:ZH-CN">//</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">若</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">P2</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">为</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">，则</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">m-1</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">送</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">m</span><span lang="EN-US" style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Arial;font-size:24pt;mso-fareast-language:ZH-CN"><br>
+										</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">从判定流程上，似乎上面的三条语句并没有从逻辑上改变</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">if-</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt;mso-fareast-language:ZH-CN">then-else</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">结构的执行过程。但如果我们能够把这个例子和安腾</span><span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">体系结构结合起来，还是可以从这个简单的例子中体会到安腾</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:24pt">处理机的设计思想。 </span></p>
+									<p><font size="6"><font face="楷体_GB2312" color="#0000FF">四、安腾处理机设计思想</font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+									</span></font></p>
+									<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">首先，安腾指令系统中的每条指令都能够支持推断执行，所以第二条指令和第三条指令中的条件判断并不需要使用专门的判断指令。虽然后面两条指令是条件执行的，但整体条件判断结构不再需要分支指令。</font></span></p>
+									<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">其次，指令中的推断操作的安排是由编译器在编译过程中完成的，不需要处理机在执行指令的非常短的时间内动态安排各条指令的条件执行。</font></span></p>
+									<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">最后，每条指令中虽然可以指定推断寄存器，但取指令、指令译码和执行操作并不需要等到推断寄存器的取值确定后再进行。 </font></span></p>
+								</div>
+						<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<div v:shape="_x0000_s1026" class="O">
+										
+									</div>
+								</div>
+								<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+									<div v:shape="_x0000_s1026" class="O" align="center">
+										<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1" align="center">
+											<span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">&nbsp; </font></span><a href="素材库/fig/Flash/10.4.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></div>
+									</div>
+								</div>
+								<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+									<p align="center"><font size="6">图10.4传统流水线分支与推断执行的比较　</font>
+								</div>
+							</div>
+						</div>
+			</div>
+				</div>
+	</div>
+			<p>　
+		</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><a name=".2"><font size="6" color="#FFFFFF">1</font></a><font size="6"><font color="#FFFFFF"><a name=".2">0.4.2 
+	推测技术</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font><font size="6" color="red">存储器访问延迟与指令级并行</font><font size="6"> </font></span></div>
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">在现代计算机体系结构中，多级存储体系能够有效提高存储系统的性能价格比。但是，在多个功能单元实现并行处理的处理机中，执行指令的速度仍然受到存储器访问速度的制约。 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">现代</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">RISC</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">处理机用专用指令访问内存，取数指令往往成为影响处理机性能的瓶颈。</font></span>
+					<p align="center"><a href="素材库/fig/Flash/10.5.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+					<p align="center"><font size="6">图10.5取数指令对处理机并行执行指令的影响</font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"> </font></span></p>
+				</div>
+		<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+	</div>
+	</div>
+			<div v:shape="_x0000_s1026" class="O" style="mso-char-wrap:1;mso-kinsoku-overflow:
+1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		<font size="6">给出的实例显示了取数指令对处理机并行执行指令的影响。现利用具有四个并行执行单元的超标量处理机完成如下的指令序列：<br>
+						①</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">load(a)//</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">从内存单元取数至寄存器</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">a</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"><br>
+		②</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">k=k+1</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"><br>
+		③</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">i=i-1</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"><br>
+		④</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">n=n+3</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"><br>
+		⑤</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">q=q+a</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"><br>
+		</font></span>
+		<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		<font size="6">
+		假设所有的算术运算指令可以在一个时钟周期中完成，而访存指令需要三个时钟周期。前四条指令可以分别安排在四个执行单元中并行执行。如果</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">load</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令所要访问的内存单元并没有被调入</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，那么</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">load</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令直接访问内存需要三个时钟周期才能执行完毕。而第五条指令依赖于</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">load</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令取得的操作数，所以在执行第五条指令之前需要等待两个时钟周期，从而所有的执行单元都必须闲置两个时钟周期，这就大大降低了执行效率。</font></span></div>
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font><font size="6" color="red">控制推测</font><font size="6"> </font></span></div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">解决处理机访存延迟的办法就是将访存操作尽可能提前执行。 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">在安腾处理机中，控制推测技术用于解决上述与取数指令有关的控制相关问题。</font></span>
+					<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">由编译器将一条取数指令分解为两条指令：<br>
+							</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(1)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">推测取数指令</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(load</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"> </font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">s)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，可以提前到适当位置先期执行取数操作，但如果需要进行异常处理时，并不真正调用操作系统的异常处理例程，而仅仅设置一个与被装入寄存器相关联的标志。这一标志就是每个通用寄存器中</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">64</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位以外的延迟异常标记</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(NaT)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位。<br>
+							</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(2)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">推测检查指令(</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">chk</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"> </font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">s)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">安排在原来的取数指令位置，也即真正使用数据之前的位置。</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">chk</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"> </font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">s</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令检查被装入的寄存器的延迟异常标记位：如果有未被执行的异常处理，则转入异常处理程序；否则，处理机将</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">load</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"> </font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">s</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令的执行结果保存，并继续执行下一条指令。</font></span></p>
+				</div>
+	</div>
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<font size="6">3</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font><font size="6" color="red">数据推测</font><font size="6"> </font></span></div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">控制推测技术能够解决分支和取数操作中的控制相关，但在指令优化过程中还可能存在数据相关。</font></span>
+					<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">与控制推测技术的解决办法类似，由编译器将一条取数指令分解为两条指令： 
+					</font></span></p>
+				</div>
+	</div>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+					<font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）高级取数指令</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(load</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"> </font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">a)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，可以提前到适当位置先期执行取数操作，但该指令执行时除了从给定的内存单元取数据之外，还将被访问的内存单元的地址登记到一个名为高级取数地址表</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(ALAT)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: 宋体"><font size="6">的硬件数据结构中。该地址表中保存了所有已经被取数指令访问过、且未被存数指令修改过的内存单元的地址、相应的寄存器以及存取数据的字节数。安腾的所有存数指令在执行时均会根据存数的目标内存地址检索该地址表，如果检索到地址匹配，则从地址表中删除该地址。 
+					</font></span></div>
+						<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+					<font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）取数检查指令</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(load 
+					c)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">&nbsp;
+					</font></span>
+					<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+					<font size="6">
+					安排在原来的取数指令位置，也即真正使用数据之前的位置。该指令执行时将检索高级取数地址表，以便确认在高级取数指令执行后、取数检查指令执行前是否有任何指令修改了高级取数指令访问过的内存单元：如果检索到匹配项，则说明没有任何指令修改过高级取数指令访问过的内存单元，取数检查指令不再执行其他操作；如果检索不成功，则取数检查指令重新执行一次取数操作，以便加载到最新的数据。 
+					</font></span></div>
+			</div>
+				</div>
+			</div>
+			<p>
+	</p>
+		</td>
+  </tr>
+							
+	   </table>

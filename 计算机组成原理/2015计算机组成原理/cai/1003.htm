@@ -1,0 +1,289 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>安腾指令系统结构</title>
+
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="966" height="24"></p>
+		<p align="center"><a href="1000.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">10.3 安腾指令系统结构</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">10.3.1 
+	执行单元与指令类型</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">10.3.2 
+	安腾寄存器结构</a><br>
+			<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">10.3.3 
+	安腾指令格式</a><br>
+			<a href="#.4"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">10.3.4 
+	安腾汇编语言格式</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="991" height="444" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".1">10.3.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">执行单元与指令类型</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="25" height="73"></td>
+    <td width="966" height="73">
+	<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		<font size="6">为提高并行处理能力，安腾处理机内部设置了多个执行单元。这些执行单元被分为四类： </font></span>
+	</div>
+			<ul>
+		<li>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font color="blue"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><b><font size="6">I</font></b></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><font size="6">单元</font></b></span></font><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">：</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">整数执行单元，用于执行整数算术运算、逻辑运算、移位和比特处理等指令，以及</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">32</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位数据和指针操作。 
+			</font></span></div>
+		</li>
+		<li>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font color="blue"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><b><font size="6">M</font></b></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><font size="6">单元</font></b></span></font><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">：</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">存储器执行单元，用于执行通用寄存器、浮点寄存器和存储器之间的取数（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">load)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令、存数</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(store)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令以及某些整数</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">ALU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">运算指令。 
+			</font></span></div>
+		</li>
+		<li>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font color="blue"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><b><font size="6">B</font></b></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><font size="6">单元</font></b></span></font><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">：</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">转移执行单元，用于执行转移分支类指令。 
+			</font></span></div>
+		</li>
+				<li>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font color="blue"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><b><font size="6">F</font></b></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><font size="6">单元</font></b></span></font><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">：</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">浮点执行单元，用于执行浮点运算指令。 
+			</font></span></div>
+		</li>
+			</ul>
+			<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">相应地，安腾指令系统中的所有指令被分成六种类</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">型，每种指令使用一种或多种执行单元。</span></font></p>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="25" height="73"></td>
+		<td width="966" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">1</a></font><font size="6"><font color="#FFFFFF"><a name=".2">0.3.2 
+	安腾寄存器结构</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="25" height="73"></td>
+    <td width="966" height="73">
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:26pt">与</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:26pt;
+mso-fareast-language:ZH-CN">RISC</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:26pt">体系结构类似，安腾体系结构大量使用寄存器操</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:26pt">作</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:26pt;mso-fareast-language:ZH-CN">。</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:26pt">只有取数</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:26pt;
+mso-fareast-language:ZH-CN">load</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:26pt">和存数</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:26pt;
+mso-fareast-language:ZH-CN">store</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:26pt">指令才能够访问内存，所有其</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:26pt">他指令都在寄存器上操作。</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:26pt">在以安腾为基础的处理机内，用户可直接使用的寄存器</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:26pt">数量甚至大大超过了主流</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:26pt;mso-fareast-language:ZH-CN">RISC</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:26pt">处理机。 </span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:26pt">一方面可以加快数据存取的速度，减少访存延迟，另一</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:26pt">方面可以更好地支持并行操作。</span></div>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<p align="center"><a href="素材库/fig/Flash/10.1.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a>
+	
+			</div>
+			<p align="center"><font size="6">　图10.1安腾的主要寄存器</font></p>
+	  </td>
+  </tr>
+	<tr>
+		<td width="25" height="73"></td>
+		<td width="966" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">1</a></font><font size="6"><font color="#FFFFFF"><a name=".3">0.3.3 
+	安腾指令格式</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="25" height="73"></td>
+    <td width="966" height="73">　
+			<div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt;
+mso-fareast-language:ZH-CN">1、</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt"><font color="red">典型指令格式</font></span>
+					<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt">安腾的每条指令占</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt;
+mso-fareast-language:ZH-CN">41</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt">位。<br>
+						</span></p>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026" align="center">
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+					<span style="font-size:117%;visibility:hidden"><span style="mso-special-format:bullet;
+color:#669999;mso-color-index:5;position:absolute;left:-4.3%;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt">
+			<img border="0" src="素材库/fig/图片/图_安腾指令格式.png" width="455" height="103"></span></div>
+			</div>
+			<div v:shape="_x0000_s1026">
+				<ul>
+					<li>
+						<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">对于寄存器操作数，需要</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">7</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">位选择</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">128</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">个通用寄存器或浮点寄存器。故</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">一条典型的</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">R</span><span lang="EN-US" style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Arial;font-size:20pt;mso-fareast-language:ZH-CN">-</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt;
+mso-fareast-language:ZH-CN">R</span><span lang="EN-US" style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt;
+mso-fareast-language:ZH-CN">-</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">R</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">型安腾指令需要</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">21</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">位来标识两个源寄存器操作数</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">和一个目标寄存器操作数。 </span></div>
+					</li>
+					<li>
+						<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">大多数指令还需要一个</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">6</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">位字段选择</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">64</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">个推断寄存器之一，用于支持</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">推断执行、软件流水等功能。 </span></div>
+					</li>
+				</ul>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt;
+mso-fareast-language:ZH-CN">2、</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt"><font color="red">指令束格式<br>
+						</font></span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　安腾体系结构采用超长指令字技术，利用集束指令（Bundled Instructions）将三条独立指令包装在一个指令束中。每条指令占据指令束中的一个指令槽（Instruction slot）。</font></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:21pt"> </span></div>
+			</div>
+			<div v:shape="_x0000_s1026" align="center">
+				<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+					<img border="0" src="素材库/fig/图片/图_安腾指令格式2.png" width="801" height="83"></div>
+			</div>
+			<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt;
+mso-fareast-language:ZH-CN">3、</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:25pt"><font color="red">指令组</font> </span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><font size="6">在安腾体系结构中，将相互之间没有读后写相关（WAR）、写后写相关（WAW），可以并行执行的一组指令称为一个</font><font size="6" color="red">指令组</font><font size="6">。<br>
+						</font><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><font size="6">每个指令组至少包含一条指令。由于一个指令组内的指令之间不存在冲突，故在一个给定的时钟周期内，处理机尽可能并行执行同一个指令组中的指令。<br>
+						</font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:21pt"> </span></p>
+				</div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt;
+mso-fareast-language:ZH-CN">4、</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:25pt"><font color="red">指令束模版</font> </span></div>
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<p><font size="6"><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt">　　</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;font-size:21pt">模版字段正是为实现</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:21pt;mso-fareast-language:ZH-CN">EPIC</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt">的设计思想服务的：一方面，编译器可以</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:21pt">通过</span><span lang="EN-US" style="mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;font-size:21pt;mso-fareast-language:ZH-CN">5</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:21pt">位模版字段指明每个指令槽中的指令使用哪一个执行单元；另</span><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:21pt">一方面，编译器可以通过模板字段明确给出指令束内或指令束间的依</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:21pt">赖关系。</span></font></p>
+					<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; font-size:21pt"><font size="6">这样，当一个指令流中有多条互不相关的指令可以并行执行时，模版中隐含的停止（stop）标志可以指明这一指令组的结尾。处理机可以将这些指令安排到多个不同的执行单元中并行执行。因此，编译器能够把任意长的可并行执行的程序段提交给处理机硬件，从而提高处理机并行执行指令的能力。</font><br>
+						</span></p>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="25" height="73"></td>
+		<td width="966" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".4">1</a></font><font size="6"><font color="#FFFFFF"><a name=".4">0.3.4 
+	安腾汇编语言格式</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="25" height="73"></td>
+    <td width="966" height="73">
+			<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　</font></span><font size="6"><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt">　</span>汇编语言中指令的一般格式为：</font>
+				<p align="center"><font size="6" face="宋体"><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:21pt;mso-fareast-language:ZH-CN">[qp]Mnemonic[. 
+		Comp1][. Comp2] dest=src </span></font></p>
+			</div>
+			<ul>
+		<li>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt; mso-fareast-language: ZH-CN"><b><font size="6">mnemonic为</font><font size="6" color="blue">指令助记符</font><font size="6">。 </font></b></span></div>
+		</li>
+		<li>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt; mso-fareast-language: ZH-CN"><b><font size="6">dest为</font><font size="6" color="navy">目标操作数</font><font size="6">，指明存放运算结果的寄存器。 
+			</font></b></span></div>
+		</li>
+		<li>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt; mso-fareast-language: ZH-CN"><b><font size="6">src为</font><font size="6" color="blue">源操作数</font><font size="6">，给出若干个寄存器操作数或立即数。 
+			</font></b></span></div>
+		</li>
+		<li>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font size="6"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt; mso-fareast-language: ZH-CN"><b>[qp]选择64个</b></span></font><font size="6" color="navy"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt; mso-fareast-language: ZH-CN"><b>推断寄存器</b></span></font><font size="6"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt; mso-fareast-language: ZH-CN"><b>之一。在指令执行时，如果选定的一比特推</b></span><span style="font-family: 宋体; mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt"><b>断寄存器的当前值为1，则该指令的执行结果最终会被硬件采用；否则，该指令的执行结果将被硬件放弃。对于不需要推断寄存器的指令，在机器指令中将默认指定推断寄存器0，该寄存器的值固定为0。因此，所有的指令都可以看作是条件执行的。 
+			</b></span></font></div>
+		</li>
+		<li>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font size="6"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt; mso-fareast-language: ZH-CN"><b>[.comp1][. 
+			Comp2] 为</b></span></font><font size="6" color="navy"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt; mso-fareast-language: ZH-CN"><b>指令完成符</b></span></font><font size="6"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt; mso-fareast-language: ZH-CN"><b>，用于进一步限定指令所需完成的</b></span><b><font face="宋体"><span style="mso-ascii-font-family: 楷体_GB2312; mso-fareast-font-family: 楷体_GB2312; mso-hansi-font-family: Arial; font-size: 21pt">操作。</span></font><span style="font-family:楷体_GB2312;mso-ascii-font-family:楷体_GB2312;mso-fareast-font-family:
+楷体_GB2312;mso-hansi-font-family:Arial;font-size:21pt"> </span></b></font></div>
+		</li>
+	</ul>
+	<p><font size="6">　</font></p>
+	  </td>
+  </tr>
+					
+	   </table>

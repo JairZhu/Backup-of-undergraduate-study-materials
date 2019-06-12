@@ -1,0 +1,85 @@
+Microsoft (R) Macro Assembler Version 5.00                  4/1/10 22:32:40
+Datatype                                                    Page     1-1
+
+
+				PAGE   60,132 
+				TITLE  Datatype    
+				 
+				       .MODEL SMALL 
+ 0040				       .STACK 64 
+				 
+				;---------------------------------- 
+ 0000				       .DATA 
+				     
+				;---------------------------------- 
+				 
+ 0000				      .CODE 
+				 
+ 0000				MAIN   PROC  FAR 
+ 0000  B8 ---- R		       MOV  AX, @DATA 
+ 0003  8E D8			       MOV  DS, AX 
+				 
+ 0005  B8 0600			       MOV AX, 0600H 
+ 0008  B7 07			       MOV BH, 07H 
+ 000A  B9 0000			       MOV CX,0000H 
+ 000D  BA 184F			       MOV DX,184FH 
+ 0010  CD 10			       INT 10H 
+				  
+ 0012  B4 00			       MOV AH,00H 
+ 0014  B0 06			       MOV AL,06H 
+ 0016  CD 10			       INT 10H 
+				 
+ 0018  B9 0064			       MOV CX,100 
+ 001B  BA 0032			       MOV DX,50 
+ 001E  B4 0C			BACK:  MOV AH,0CH 
+ 0020  B0 01			       MOV AL,01H 
+ 0022  CD 10			       INT 10H 
+ 0024  41			       INC CX 
+ 0025  81 F9 00C8		       CMP CX,200 
+ 0029  75 F3			       JNZ BACK 
+				 
+				 
+				     
+ 002B  B4 07			       MOV AH, 07H 
+ 002D  CD 21			       INT 21H        
+				 
+				 
+ 002F  B4 4C			        MOV AH, 4CH 
+ 0031  CD 21			        INT 21H 
+ 0033				MAIN    ENDP 
+ 0033				        END MAIN 
+Microsoft (R) Macro Assembler Version 5.00                  4/1/10 22:32:40
+Datatype                                                    Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0000	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	0040	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	0033	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+BACK . . . . . . . . . . . . . .  	L NEAR	001E	_TEXT
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	_TEXT	Length = 0033
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  4-5		
+
+
+     46 Source  Lines
+     46 Total   Lines
+     16 Symbols
+
+  50292 + 450796 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

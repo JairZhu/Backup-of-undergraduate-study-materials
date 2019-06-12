@@ -1,0 +1,278 @@
+
+       <script src="expand.js"></script><title>3.5 并行存储器</title>
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="968" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0300.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">3.5 并行存储器</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6"><a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.5.1 
+	双端口存储器</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.5.2 多模块交叉存储器</a><br>
+  　</font></b></p>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="946" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><a name=".1"><font color="#FFFFFF">导入</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="26" height="73"></td>
+    <td width="920" height="73"><font size="6">
+	由于CPU和主存储器之间在速度上是不匹配的，这种情况便成为限制高速计算机设计的主要问题。为了提高CPU和主存之间的数据传输率，除了主存采用更高速的技术来缩短读出时间外，还可以采用并行技术的存储器。 
+	</font>
+      <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1"></div>
+		<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1"><blockquote>&nbsp;</blockquote>
+		</div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"></div>
+	  </div>
+	</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">3</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.5.1 
+	双端口存储器</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="26" height="73"></td>
+    <td width="920" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">一、双端口存储器的逻辑结构</font></p>
+	<p>
+	<font size="6">
+	双端口存储器由于同一个存储器具有两组相互独立的读写控制电路而得名。由于进行并行的独立操作，因而是一种高速工作的存储器，在科研和工程中非常有用。</font></p>
+	<p align="center"><a href="素材库/fig/Flash/3-24.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图3.24 双端口存储器IDT7133的逻辑框图</font></p>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">二、无冲突读写控制</font></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O" style="mso-line-spacing:&quot;90 0 0&quot;;
+mso-margin-left-alt:216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+		<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		<font size="6">
+		当两个端口的地址不相同时，在两个端口上进行读写操作，一定不会发生冲突。当任一端口被选中驱动时，就可对整个存储器进行存取，每一个端口都有自己的片选控制</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(CE)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和输出驱动控制</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(OE)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。读操作时，端口的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">OE(</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">低电平有效</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">打开输出驱动器，由存储矩阵读出的数据就出现在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">I/O</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线上。</font></span></div>
+	<p>
+	<font face="楷体_GB2312" size="6" color="#0000FF">三、有冲突读写控制</font></p>
+	<p>
+	<font size="6">
+	当两个端口同时存取存储器同一存储单元时，便发生读写冲突。为解决此问题，特设置了BUSY标志。在这种情况下，片上的判断逻辑可以决定对哪个端口优先进行读写操作，而对另一个被延迟的端口置BUSY标志(BUSY变为低电平)，即暂时关闭此端口。</font></p>
+	<p>
+	<font face="楷体_GB2312" size="6" color="#0000FF">四、有冲突读写控制判断方法</font></p>
+	<p>
+	<font size="6">(1)如果地址匹配且在CE之前有效，片上的控制逻辑在CEL和CER之间进行判断来选择端口(CE判断)。<br>
+	(2)如果CE在地址匹配之前变低，片上的控制逻辑在左、右地址间进行判断来选择端口(地址有效判断)。<br>
+	无论采用哪种判断方式，延迟端口的BUSY标志都将置位而关闭此端口，而当允许存取的端口完成操作时，延迟端口BUSY标志才进行复位而打开此端口。</font></p>
+	<p>&nbsp;</p>
+	  <p align="center"><a href="素材库/fig/Flash/3-25.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	  <p align="center"><font size="6">图3.25 读写时序 </font></p></td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">3</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.5.2 
+	多模块交叉存储器</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="26" height="73"></td>
+    <td width="920" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<font size="6">一个由若干个模块组成的主存储器是线性编址的。这些地址在各模块中如何安排，有两种方式：一种是顺序方式，一种是交叉方式。</font><p><span style="font-size:144%"><span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute;
+left:-3.73%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span>
+		  </p>
+	<div v:shape="_x0000_s1026" class="O1"><div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1"><p>&nbsp;</p>
+			<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">一、顺序方式</font></p>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="text-align:justify;mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">如,M0</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">－</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">M3</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">共四个模块，则每个模块</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">8</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">个字</span>
+					</nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr>
+					<span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial">顺序方式：</span><span style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman">&nbsp;</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"> 
+					M0</span><span style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">：</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">0</span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">—</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">7
+					</span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr>
+					<span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+					</span>M1</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">：</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">8</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">－</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">15
+					</span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr>
+					<span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">&nbsp;&nbsp; 
+					M2</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">：</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">16</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">－</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">23
+					</span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr>
+					<span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">&nbsp;&nbsp; 
+					M3</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">：</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">24</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">－</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">31
+					</span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr><span style="font-family: 宋体">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -7.92%; text-align: left; top: .39em; font-family: Wingdings">
+					l</span></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">5</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">位地址组织如下：</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"> 
+					X X</span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">&nbsp;&nbsp;&nbsp;</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"> 
+					X X X </span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<p><nobr><span style="font-family: 宋体">
+				    <span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -8.71%; text-align: left; top: .39em; font-family: Wingdings">
+				    <font size="6">l</font></span></span><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial"><font size="6">高位选模块，低位选块内地址</font> </span></nobr></p>
+					<p>&nbsp;</p>
+				    <p align="center"><a href="素材库/fig/Flash/3-26.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+				    <p align="center"><font size="6">图3.26 顺序方式</font></p>
+				    <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+                    <div v:shape="_x0000_s1026" class="O1">
+                      <div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1"> </div>
+                    </div>
+				</div>
+				<div style="text-align:justify;mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="layout-flow: vertical">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.1%; text-align: left; top: .39em; font-family: Wingdings">
+					l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">特点：某个模块进行存取时，其他模块不工作，优点是某一模块出现故障时，其他模块可以照常工作，通过增添模块来扩充存储器容量比较方便。缺点是各模块串行工作，存储器的带宽受到了限制。</span> </font></div>
+				<div style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<font size="6" face="楷体_GB2312" color="#0000FF">二、交叉方式</font></div>
+			</div>
+			<font size="6">
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+			</font>
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+				可以实现多模块流水式并行存取</span></font></div>
+			<p>&nbsp;</p>
+			<font size="6">
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+			</font>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">如,M0</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">－</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">M3</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">共四个模块，则每个模块</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">8</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">个字 
+					</span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr><span style="font-family: 宋体">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -22.58%; text-align: left; top: .39em; font-family: Wingdings">
+					l</span></span><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial">交叉方式：</span>
+					</nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr><span style="font-family: 宋体">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -6.81%; text-align: left; top: .39em; font-family: Wingdings">
+					l</span></span><span style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"> 
+					M0</span><span style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">：</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">0</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">，</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">4,...</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">除以</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">4</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">余数为</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">0
+					</span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr><span style="font-family: 宋体">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -6.81%; text-align: left; top: .39em; font-family: Wingdings">
+					l</span></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"> 
+					M1</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">：</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">1</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">，</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">5,...</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">除以</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">4</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">余数为</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">1
+					</span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr><span style="font-family: 宋体">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -6.81%; text-align: left; top: .39em; font-family: Wingdings">
+					l</span></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"> 
+					M2</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">：</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">2</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">，</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">6,...</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">除以</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">4</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">余数为</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">2
+					</span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr><span style="font-family: 宋体">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -6.81%; text-align: left; top: .39em; font-family: Wingdings">
+					l</span></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"> 
+					M3</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">：</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">3</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">，</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">7,...</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial">除以</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">4</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">余数为</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">3
+					</span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr><span style="font-family: 宋体">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -7.92%; text-align: left; top: .39em; font-family: Wingdings">
+					l</span></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">5</span><span style="font-family:宋体; mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">位地址组织如下：</span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"> 
+					X X X</span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman">&nbsp;&nbsp;&nbsp;</span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"> 
+					X X </span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><nobr><span style="font-family: 宋体">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -8.71%; text-align: left; top: .39em; font-family: Wingdings">
+					l</span></span><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial">高位选块内地址，低位选模块 </span></nobr></font></div>
+				<div style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="layout-flow: vertical">
+					<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.1%; text-align: left; top: .39em; font-family: Wingdings">
+					l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">特点：连续地址分布在相邻的不同模块内，同一个模块内的地址都是不连续的。优点是对连续字的成块传送可实现多模块流水式并行存取，大大提高存储器的带宽。使用场合为成批数据读取。</span></font><font size="6"> </font></div>
+				<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<font size="6" face="楷体_GB2312" color="#0000FF">
+					三、多模块交叉存储器的基本结构</font></div>
+			</div>
+			<p><font size="6">
+			主存被分成4个相互独立、容量相同的模块M0，M1，M2，M3，每个模块都有自己的读写控制电路、地址寄存器和数据寄存器，各自以等同的方式与CPU传送信息。在理想情况下，如果程序段或数据块都是连续地在主存中存取，那么将大大提高主存的访问速度。 
+			</font></p>
+		  <p>&nbsp;</p>
+			<p align="center"><a href="素材库/fig/Flash/3-27.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图3.27 </font><font size="6">四模块交叉存储器</font></p>
+			<p align="left"><font size="6">通常在一个存储器周期内，n个存储体必须分时启动，则各个存储体的启动间隔为t=T/n（n为交叉存取度），整个存储器的存取速度有望提高n倍。</font></p>
+			<p align="center"><br>
+		      <img border="0" src="素材库/fig/图片/图_并行存储器存取速度.wmf" width="408" height="117"></p>
+		  <p>&nbsp;</p>
+			<p align="center"><a href="素材库/fig/Flash/3-28.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图3.28 流水线方式</font></p>
+			<p><br>
+		      <font size="6">二模块交叉存储器举例:</font></p>
+		  <p>&nbsp;</p>
+			<p align="center"><a href="素材库/fig/Flash/3-29.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图3.29 <font size="6">二模块交叉存储器</font>逻辑框图</font></p>
+			<p align="center"><a href="素材库/fig/Flash/3-30.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图3.30 无等待状态成块存取图</font></p>
+			<p>&nbsp;</p>
+			</div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:144%">
+			<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute;
+left:-4.37%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span></div>
+	</div>
+	<p>　</td>
+  </tr>
+							
+      </table>

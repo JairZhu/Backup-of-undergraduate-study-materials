@@ -1,0 +1,76 @@
+;THIS PROGRAM WAITS FOR THE MOUSE PRESS COUNT AND DISPLAYS IT WHEN
+;ANY KEY IS PRESSED.
+;PRESS ANY KEY TO GO BACK TO DOS
+PAGE    60,132
+CURSOR  	MACRO ROW,COLUMN
+        	MOV 	AH,02H
+        	MOV 	BH,00
+        	MOV 	DH,ROW
+        	MOV 	DL,COLUMN
+                INT     10H
+        	ENDM
+DISPLAY         MACRO STRING
+        	MOV 	AH,09H
+        	MOV 	DX,OFFSET STRING ;LOAD STRING ADDRESS
+                INT     21H
+                ENDM
+       .MODEL   SMALL
+       .STACK
+       .DATA
+MESSAGE_1  DB 'PRESS LEFT BUTTON A NUMBER OF TIMES:LESS THAN 99.','$'
+MESSAGE_2  DB 'TO FIND OUT HOW MANY TIMES, PRESS ANY KEY','$'
+MESSAGE_3  DB 'YOU PRESSED IT ','$'
+P_COUNT    DB ?,?, ' TIMES $'
+MESSAGE_4  DB 'NOW PRESS ANY KEY TO GO BACK TO DOS','$'
+OLDVIDEO   DB ?    ;current video mode
+NEWVIDEO   DB 12H ;new video mode
+        .CODE
+MAIN    PROC FAR
+ 	MOV 	AX,@DATA
+ 	MOV 	DS,AX
+ 	MOV 	AH,0FH 	;get current video mode
+        INT     10H
+ 	MOV 	OLDVIDEO,AL 	;save it
+ 	MOV 	AX,0600H 	;clear screen
+ 	MOV 	BH,07
+ 	MOV 	CX,0
+ 	MOV 	DX,184FH
+        INT     10H
+ 	MOV 	AH,00H 	;set new video mode
+ 	MOV 	AL,NEWVIDEO
+        INT     10H
+ 	MOV 	AX,0 		;initialize mouse
+        INT     33H
+ 	MOV 	AX,01 	;show mouse cursor
+        INT     33H 
+ 	CURSOR 2,1
+ 	DISPLAY MESSAGE_1
+ 	CURSOR 4,1
+ 	DISPLAY MESSAGE_2
+ 	MOV 	AH,07 	;wait for key press 
+        INT     21H
+	MOV 	AX,05H 	;get mouse press count
+ 	MOV 	BX,0 	;check press count for left button
+        INT     33H 
+	MOV 	AX,BX 	;BX=button press count
+ 	MOV 	BL,10	
+        DIV     BL
+        OR      AX,3030H        ;convert it to ASCII
+ 	MOV 	P_COUNT,AL 	;save the number
+ 	MOV 	P_COUNT+1,AH
+ 	CURSOR 10,2 
+ 	DISPLAY MESSAGE_3 
+ 	DISPLAY P_COUNT
+ 	CURSOR 20,2
+ 	DISPLAY MESSAGE_4 
+        MOV     AH,07           ;wait for a key press to get out
+        INT     21H
+        MOV     AH,02           ;hide mouse
+        INT     33H 
+        MOV     AH,0            ;restore original video mode
+ 	MOV 	AL,OLDVIDEO 	;load original vide mode
+        INT     10H
+        MOV     AH,4CH          ;go back to DOS 
+        INT     21H 
+MAIN 	ENDP
+ 	END MAIN

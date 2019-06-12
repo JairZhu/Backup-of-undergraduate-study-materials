@@ -1,0 +1,47 @@
+PAGE   60,132
+TITLE  CRLF   
+
+       .MODEL SMALL
+       .STACK 64
+
+;----------------------------------
+       .DATA
+CR   EQU   0DH
+LF   EQU   0AH
+DATA1  DB  CR, LF, 'This is a test string1! $'
+DATA2  DB  LF, 'This is a test string2! $'
+DATA3  DB  CR, 'test3! $'
+    
+;----------------------------------
+
+      .CODE
+
+MAIN   PROC  FAR
+       MOV  AX, @DATA
+       MOV  DS, AX
+
+       MOV AH, 09H
+       MOV DX, offset data1
+       INT 21H
+
+       MOV AH, 09H
+       MOV DX, offset data1
+       INT 21H  
+
+       MOV AH, 09H
+       MOV DX, offset data2
+       INT 21H 
+
+       MOV AH, 09H
+       MOV DX, offset data1
+       INT 21H
+    
+       MOV AH, 09H
+       MOV DX, offset data3
+       INT 21H
+
+
+        MOV AH, 4CH
+        INT 21H
+MAIN    ENDP
+        END MAIN

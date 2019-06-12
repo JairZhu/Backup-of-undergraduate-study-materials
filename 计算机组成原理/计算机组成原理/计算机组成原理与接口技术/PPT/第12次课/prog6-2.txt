@@ -1,0 +1,28 @@
+TITLE     	PROG6-2	;FIND THE LOWEST TEMPERATURE
+PAGE         60,132
+;--------------
+             .MODEL SMALL
+             .STACK 64
+;--------------
+             .DATA
+SIGN_DAT     DB              +13,-10,+19,+14,-18,-9,+12,-9,+16
+             ORG             0010H
+LOWEST       DB              ?
+;--------------
+        .CODE
+MAIN    PROC    FAR
+        MOV     AX,@DATA
+        MOV     DS,AX
+        MOV     CX,8                    ;LOAD COUNTER (NUMBER ITEMS - 1)
+        MOV     SI,OFFSET SIGN_DAT      ;SET UP POINTER
+        MOV     AL,[SI]                 ;AL HOLDS LOWEST VALUE FOUND SO FAR
+BACK:   INC     SI                      ;INCREMENT POINTER
+        CMP     AL,[SI]                 ;COMPARE NEXT BYTE TO LOWEST
+        JLE     SEARCH                  ;IF AL IS LOWEST, CONTINUE SEARCH
+        MOV     AL,[SI]                 ;OTHERWISE SAVE NEW LOWEST
+SEARCH: LOOP    BACK                    ;LOOP IF NOT FINISHED
+        MOV     LOWEST,AL               ;SAVE LOWEST TEMPERATURE
+        MOV     AH,4CH
+        INT     21H                     ;GO BACK TO DOS
+MAIN    ENDP
+        END     MAIN

@@ -1,0 +1,203 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>总线的仲裁</title>
+
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="968" height="24"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0600.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">6.3 总线的仲裁</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">导入</a><br>
+				<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">6.3.1 集中式仲裁</a><br>
+				<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">6.3.2 分布式仲裁</a><br>
+				　</font></b></p>
+	<p align="center"><b><font size="6"> 　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="966" height="3598" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080" width="966">
+	<p align="left"><strong><font size="6"><a name=".1"><font color="#FFFFFF">导入</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr height="404">
+    <td width="1" height="404"></td>
+    <td width="965" height="404">
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					</div>
+			</div>
+			<ul>
+				<div v:shape="_x0000_s1026" class="O">
+					<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+						<li><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">连接到总线上的功能模块有主动和被动两种形态，其中主方可以启动一个总线周期，而从方只能响应主方请求。每次总线操作，只能有一个主方，但是可以有多个从方。 </font></span>
+					</div>
+				</div>
+			</ul>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					</div>
+			</div>
+			<ul>
+				<div v:shape="_x0000_s1026" class="O">
+					<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+						<li><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为了解决多个功能模块争用总线的问题，必须设置总线仲裁部件。 </font></span>
+					</div>
+				</div>
+			</ul>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					</div>
+			</div>
+			<ul>
+				<div v:shape="_x0000_s1026" class="O">
+					<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+						<li><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">总线占用期：主方持续控制总线的时间。 </font></span>
+					</div>
+				</div>
+			</ul>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<p></p>
+					<font size="6"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">按照总线仲裁电路的位置不同，仲裁方式分为</span></font><font size="6" color="red"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><strong>集中式</strong></span></font><font size="6"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">和</span></font><font size="6" color="red"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><strong>分布式</strong></span></font><font size="6"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">两种。</span></font><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;font-size:30pt"> </span></div>
+				<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					</div>
+			</div>
+		</td>
+  </tr>
+		<tr height="36">
+    <td colspan="2" width="966" height="36" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".2">6.3.1 集中式仲裁</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr height="2174">
+    <td width="1" height="2174"></td>
+    <td width="965" height="2174">
+			<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:26pt">集中式仲裁有三种： </span>
+					<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><font size="6">1、</font></span><span style="font-family:
+宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Arial;font-size:22pt"><font color="red"><strong>链式查询方式</strong></font>：</span><font size="6">总线授权信号BG串行地从一个I/O接口传送到下一个I/O接口。假如BG到达的接口无总线请求，则继续往下查询；假如BG到达的接口有总线请求，BG信 号便不再往下查询，该I/O接口获得了总线控制权。离中央仲裁器最近的设备具有最高优先级，通过接口的优先级排队电路来实现。</font></p>
+				</div>
+		<ul>
+					<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:
+宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Arial;font-size:22pt"><u>优点：</u>只用很少几根线就能按一定优先次序实现总线控制，并且</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:22pt">这种链式结构很容易扩充设备。 </span></div>
+			</li>
+					<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:
+宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Arial;font-size:22pt"><u>缺点：</u>是对询问链的电路故障很敏感，优先级固定。</span></div>
+			</li>
+		</ul>
+	</div>
+			<div align="center">
+				<p> <img border="0" src="素材库/fig/图片/图_集中式仲裁.jpg" width="560" height="417"></p>
+			</div>
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><font size="6">2、</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red"><strong>计数器定时查询方式</strong></font><font size="6">：总线上的任一设备要求使用总线时，通过</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">BR</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线发出总线请求。中央仲裁器接到请求信号以后，在</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">BS</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线为</font></span><span style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">“</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">0</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">”</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的情况下让计数器开始计数，计数值通过一组地址线发向各设备。每个设备接口都有一个设备地址判别电路，当地址线上的计数值与请求总线的设备地址相一致时，该设备</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">置</font></span><span style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">“</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">1</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">”</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">BS</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线，获得了总线使用权，此时中止计数查询。</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span>
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">每次计数可以从</font></span><span style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">“</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">0</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">”</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">开始，也可以从中止点开发始。如果从</font></span><span style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">“</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">0</font></span><span lang="EN-US" style="font-family: Arial; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN; mso-bidi-font-family: Times New Roman"><font size="6">”</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">开始，各设备的优先次序与链式查询法相同，优先级的顺序是固定的。如果从中止点开始，则每个设备使用总线的优级相等。</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-bidi-font-family: Times New Roman"><font size="6">
+			</font></span></div>
+		<div style="text-align:justify;mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:
+216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">计数器的初值也可用程序来设置，这可以方便地改变优先次序，但这种灵活性是以增加线数为代价的。可方便的改变优先级。 
+			</font></span>
+					<p><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.49%; top: .39em; font-family: Wingdings"><font size="6">l</font></span></p>
+				</div>
+	</div>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><font size="6">3、</font><font size="6" color="red"><strong>独立请求方式</strong></font><font size="6">：</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">每一个共享总线的设备均有一对总线请求线</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">BRi</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和总线授权线</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">BGi</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。当设备要求使用总线时，便发出该设备的请求信号。总线仲裁器中有一个排队电路，它根据一定的优先次序决定首先响应哪个设备的请求，给设备以授权信号</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">BGi</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。</font></span>
+					<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">独立请求方式的优点是响应时间快，即确定优先响应的设备所花费的时间少，用不着一个设备接一个设备地查询。其次，对优先次序的控制相当灵活。它可以预先固定，例如</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">BR0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">优先级最高，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">BR1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">次之</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">…</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">BRn</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">最低；也可以通过程序来改变优先次序；还可以用屏蔽（禁止）某个请求的办法，不响应来自无效设备的</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">请求。因此当代总线标准普遍采用独立请求方式。</span></font><span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:26pt"> </span></p>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O" align="center">
+				<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1" align="center">
+					 <img border="0" src="素材库/fig/图片/图_独立请求方式总线仲裁.jpg" width="558" height="415">
+					<p>  <a href="素材库/fig/Flash/6.10.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+					<p><font size="6">图6.10 集中式总线仲裁方式</font></p>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<p></p>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr height="73">
+		<td width="1" height="73"></td>
+		<td width="965" height="73"></td>
+	</tr>
+	<tr height="36">
+    <td colspan="2" width="966" height="36" bgcolor="#000080">
+	<p align="left"><strong><a name=".3"><font size="6" color="#FFFFFF">6</font></a><font size="6"><font color="#FFFFFF"><a name=".3">.3.2 分布式仲裁</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr height="907">
+    <td width="1" height="907"></td>
+    <td width="965" height="907">
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<font size="6" color="red"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><strong>分布式仲裁</strong></span></font><font size="6"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">：不需要中央仲裁器，每个潜在的主方模块都有自己的仲裁号和仲裁器，多个仲裁器竞争使用总线。当它们有总线请求时，把它们唯一的仲裁号发送到共享的仲裁总线上，每个仲裁器将仲裁总线上得到的号与自己的号进行比较。如果仲裁总线上的号大，则它的总线请求不予响应，并撤消它的仲裁号。最后，获胜者的仲裁号保留在仲裁总线上。显然，分布式仲裁是以优先级仲裁策略为基础。</span></font><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:30pt"> </span></div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O" align="center">
+				<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1" align="center">
+					  <a href="素材库/fig/Flash/6.11.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+					<p><font size="6">图6.11 分布式总线仲裁方式</font></p>
+				</div>
+				<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<ul>
+						<div v:shape="_x0000_s1026" class="O">
+							<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+								<li><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">所有参与本次竞争的各主设备将设备竞争号</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CN</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">取反后打到仲裁总线</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">AB</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">上，以实现</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线或</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">逻辑。</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">AB</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线低电平时表示至少有一个主设备的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CNi</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">AB</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线高电平时表示所有主设备的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CNi</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。 </font></span>
+								<li><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">竞争时</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CN</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">与</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">AB</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">逐位比较，从最高位（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">b7</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）至最低位（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">b0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）以一维菊花链方式进行，只有上一位竞争得胜者</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Wi+1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。当</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CN</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"></font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">i=1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，或</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CNi=0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">且</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">ABi</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为高电平时，才使</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Wi</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位为</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。若</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Wi=0</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">时，将一直向下传递，使其竞争号后面的低位不能送上</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">AB</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线。 </font></span>
+								<li><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">竞争不到的设备自动撤除其竞争号。在竞争期间，由于</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">W</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位输入的作用，各设备在其内部的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CN</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线上保留其竞争号并不破坏</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">AB</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">线上的信息。 </font></span>
+								<li><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">由于参加竞争的各设备速度不一致，这个比较过程反复（自动）进行，才有最后稳定的结果。竞争期的时间要足够，保证最慢的设备也能参与竞</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">争。</span></font><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt"></span>
+							</div>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</td>
+  </tr>
+							
+	   </table>

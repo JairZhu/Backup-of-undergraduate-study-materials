@@ -1,0 +1,61 @@
+   Assume  CS:CODE,DS:NOTHING,ES:NOTHING,ES:NOTHING,SS:NOTHING
+         ORG   0E05BH
+
+
+    ...     ...
+
+   START:
+         CLI                           ;Disable interrupts
+         MOV  AH, 0D5H                 ;SET  SF,CF,ZF AND AF FLAGS ON
+         SAHF
+         JNC      ERRO1                ;GO to ERR ROUTINE IF CF NOT SET
+         JNZ      ERRO1                ;GO to ERR ROUTINE IF ZF NOT SET
+         JNP      ERRO1                ;GO to ERR ROUTINE PF ZF NOT SET
+         JNS      ERRO1                ;GO to ERR ROUTINE IF SF NOT SET
+         LAHF                          ;LOAD FLAG IMAGE TO AH
+         MOV   CL, 5                   ;LOAD CNT FEG WITH SHIFT CNT
+         SHR   AH, CL                  ;SHIFT AF INTO CARRY BIT POS
+         JNC      ERRO1                ;GO to ERR ROUTINE IF AF NOT SET 
+         MOV   AL,40H                  ;SET the OF FLAG ON
+         SHL  AL,1                     ;SETUP for testing
+         JNO      ERRO1                ;GO to ERR ROUTINE IF OF NOT SET
+         XOR  AH, AH                   ;SET AH=0
+         SAHF                          ;CLEAR  SF, CF, ZF, and PF
+         JBE      ERRO1                ;GO to ERR ROUTINE IF CF ON
+                                       ;or GO to ERR ROUTINE IF ZF ON
+         JS       ERRO1                ;GO to ERR ROUTINE IF SF ON
+         JP       ERRO1                ;GO to ERR ROUTINE IF PF ON
+         LAHF
+         MOV   CL,5                    ;LOAD CNT FEG WITH SHIFT CNT
+         SHR   AH,CL                   ;SHIFT 'AF' INTO CARRY BIT POS
+         JC      ERRO1                 ;GO to ERR ROUTINE IF AF ON
+         SHL   AH,1                    ;CHECK THAT 'OF' IS CLEAR
+         JO    ERRO1                   ;GO to ERR ROUTINE IF OF ON
+
+;___ Read /Write  the general amd segmentation registers with all ones and zeroes.
+
+         MOV AX, 0FFFFH                ;SET UP ONE's PATTERN IN AX
+         STC
+      C8:
+         MOV DS,AX                     ;WRITE PATTERN TO ALL REGS
+         MOV BX,DS
+         MOV ES,BX
+         MOV CX,ES
+         MOV SS,CX
+         MOV DX,SS
+         MOV SP,DX
+         MOV BP,SP
+         MOV SI,BP
+         MOV DI,SI
+         JNC  C9                       ; TST1A
+         XOR  AX,DI                    ; PATTERN MAKE IT THRU ALL REGS
+         JNZ  ERRO1                    ; NO - GO to ERR ROUTINE
+         CLC
+         JMP C8
+      C9:
+         OR AX,DI                      ;ZERO PATTERN MAKE IT THRU?
+         JZ C10                        ;YES - GO TO NEXT TEST
+       ERRO1: HLT                      ;HALT SYSTEM
+ 
+
+        

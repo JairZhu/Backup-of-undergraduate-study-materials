@@ -1,0 +1,26 @@
+PAGE   60,132
+TITLE  Input a string from the keyboard
+       .MODEL SMALL
+       .STACK 64
+
+;----------------------------------
+       .DATA
+DATA1   DB   6, ?, 6 dup(0FFH)
+
+;----------------------------------
+
+      .CODE
+
+MAIN   PROC  FAR
+       MOV  AX, @DATA
+       MOV  DS, AX
+
+       MOV AH,0AH
+       MOV DX,OFFSET DATA1
+       INT 21H
+
+       MOV AH, 4CH
+       INT 21H
+      
+MAIN    ENDP
+        END MAIN

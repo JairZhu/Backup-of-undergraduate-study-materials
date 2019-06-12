@@ -1,0 +1,184 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>磁盘存储设备的技术发展</title>
+
+      
+<p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="971" height="24"></p>
+<div align="center">
+	<p> <a href="0700.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">7.3 磁盘存储设备的技术发展</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">7.3.1 
+	磁盘cache</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">7.3.2 
+	磁盘阵列RAID</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="991" height="298" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font color="#FFFFFF" size="6"><a name=".1">7.3.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">磁盘Cache</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">随着微电子技术的飞速发展，</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">CPU</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">的速度每年增长</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">1</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">倍左右，主存芯片容量和磁盘驱动器的容量每</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">1</span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">5</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">年增长</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">1</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">倍左右。但磁盘驱动器的存取时间没有出现相应的下降，仍停留在毫秒</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(ms)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">级。而主存的存取时间为纳秒</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">(ns)</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">级，两者速度差别十分突出，因此磁盘</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">I/O</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">系统成为整个系统的瓶颈。为了减少存取时间，可采取的措施有：提高磁盘机主轴转速，提高</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">I/O</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">总线速度，采用磁盘</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">cache</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">等。主存和</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">CPU</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">之间设置高速缓存</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">cache</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">是为了弥补主存和</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">CPU</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">之间速度上的差异。同样，</span></font><font size="6" color="red"><strong><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">磁盘</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">cache</span></strong></font><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">是为了弥补慢速磁盘和主存之间速度上的差异。</span></font>
+					<p></p>
+				</div>
+		<div style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<font size="6" color="red" face="楷体_GB2312"><strong>磁盘Cache的原理</strong></font></div>
+	</div>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">在磁盘</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">cache</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">中，由一些数据块组成的一个基本单位称为</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">cache</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">行。当一个</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">I/O</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">请求送到磁盘驱动时，首先搜索驱动器上的高速缓冲行是否已写上数</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">据？如果是读操作，且要读的数据已在</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">cache</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">中，则为命中，可从</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">cache</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">行</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">中读出数据，否则需从磁盘介质上读出。写入操作和</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt;
+mso-fareast-language:ZH-CN">CPU</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">中的</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt;
+mso-fareast-language:ZH-CN">cache</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">类似，</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">有</span><span style="font-family:Arial;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">“</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">直写</span><span style="font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">”</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">和</span><span style="font-family:
+Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">“</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">写回</span><span style="font-family:Arial;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">”</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">两种方法。</span></font>
+					<p><font size="6"><span style="font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">磁盘</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">cache</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">利用了被访问数据的空间局部性和时</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">间局部性原理。空间局部性是指当某些数据被存取时，该数据附近的其他数</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">据可能也将很快被存取；时间局部性是指当一些数据被存取后，不久这些数</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">据还可能再次存取。因此现在大多数磁盘驱动器中都使用了预读策略，而根</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">据局部性原理预取一些不久将可能读入的数据放到磁盘</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">cache</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">中。</span></font></p>
+					<p><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">CPU</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">的</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">cache</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">存取时间一般小于</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">10ns</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">，命中率</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">95%</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">以上，全用硬件来实现。磁盘</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">cache</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">一次存取的数量大，数据集中，速度要求较</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">CPU</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">的</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">cache</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">低，管理工</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">作较复杂，因此一般由硬件和软件共同完成。其中</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">cache</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">采用</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">SRAM</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">或</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">DRAM</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">。 </span></font></p>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><a name=".2"><font size="6" color="#FFFFFF">7</font></a><font size="6"><font color="#FFFFFF"><a name=".2">.3.2 
+	磁盘阵列RAID</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt;
+mso-fareast-language:ZH-CN"><strong><font color="red">RAID</font></strong></span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">称<strong><font color="red">廉价冗余磁盘阵列</font></strong>，它是用多台磁盘存储器组成的大容量外存系</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">统。其构造基础是利用数据分块技术和并行处理技术，在多个磁盘上交错存</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">放数据，使之可以并行存取。在</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">RAID</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">控制器的组织管理下，可实现数据的</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">并行存储、交叉存储、单独存储。由于阵列中的一部分磁盘存有冗余信息，</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">一旦系统中某一磁盘失效，可以利用冗余信息重建用户信息。</span>
+					<p><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt;
+mso-fareast-language:ZH-CN">RAID</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">是</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt;
+mso-fareast-language:ZH-CN">1988</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">年由美国加州大学伯克利分校一个研究小组提出的，它的设计</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">理念是用多个小容量磁盘代替一个大容量磁盘，并用分布数据的方法能够同</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">时从多个磁盘中存取数据，因而改善了</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">I/O</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">性能，增加了存储容量，现已在</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">超级或大型计算机中使用。 </span></p>
+				</div>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">工业上制定了一个称为</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">RAID</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">的标准，它分为</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">7</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">级</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">(RAID 0</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">～</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:20pt;mso-fareast-language:ZH-CN">RAID 6)</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt">。这些级</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:20pt">别不是表示层次关系，而是指出了不同存储容量、可靠性、数据传输能力、</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:20pt;mso-fareast-language:ZH-CN">I/O</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:20pt">请求速率等方面的应用需求。</span>
+					<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-size: 20pt">下面以<span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-family: 宋体; font-size: 20pt">RAID 
+			0</span>级为例来说明。考虑到低成本比可靠性更重要，<span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-family: 宋体; font-size: 20pt">RAID 
+			0</span>未采用奇偶校验等冗余技术。<span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-family: 宋体; font-size: 20pt">RAID 
+			0</span>用于高速数据传输和高速<span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-family: 宋体; font-size: 20pt">I/O</span>请求。 
+			</span></p>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-size: 20pt">对<span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-family: 宋体; font-size: 20pt">RAID 
+			0,</span>用户和系统数据分布在阵列中的所有磁盘上。与单个大容量磁盘相比，其优点是：如果两个<span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-family: 宋体; font-size: 20pt">I/O</span>请求正在等待两个不同的数据块，则被请求的块有可能在不同的盘上。因此，两个请求能够并行发出，减少了<span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; font-family: 宋体; font-size: 20pt">I/O</span>排队的时间。</span></div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1" align="center">
+				 <a href="素材库/fig/Flash/7.10.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a>
+				<p><font size="6">图7.10 RAID 0级阵列的数据映射</font>　</p>
+			</div>
+		</td>
+  </tr>
+							
+	   </table>

@@ -1,0 +1,55 @@
+
+      .MODEL SMALL
+      .STACK 64
+      .DATA      
+      .CODE
+DATA1        DB  'This is in INT 3H subprogram!','$'  
+INT03SEG     DW   ?
+INT03OFF     DW  ?  
+
+MAIN    PROC  FAR
+        MOV  AX, @DATA
+        MOV  DS, AX
+
+        MOV AL, 03
+        MOV AH, 35H
+        INT 21H
+
+        MOV INT03SEG, ES
+        MOV INT03OFF,BX
+
+        MOV AX, SEG INT03
+        MOV DS, AX
+        MOV DX, OFFSET  INT03
+        MOV AL, 03
+        MOV AH, 25H
+        INT 21H
+
+       INT 3
+
+       MOV DX,INT03OFF 
+       MOV AX,INT03SEG 
+       MOV DS,AX 
+       MOV AL,3H 
+       MOV AH,25H 
+       INT 21H 
+
+       mov ah,07H
+       int 21H
+
+       MOV AH,4CH      
+       int 21H
+      
+MAIN    ENDP
+
+INT03  PROC 
+
+      MOV AH,09H
+      MOV DX, offset DATA1
+      INT 21H
+
+      IRET
+
+INT03  ENDP
+       
+        END MAIN

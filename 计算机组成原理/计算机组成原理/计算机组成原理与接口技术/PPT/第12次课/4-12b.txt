@@ -1,0 +1,101 @@
+	TITLE        PROG4-12     ADDing two seven-digit numbers
+        PAGE         60,132
+             .MODEL SMALL
+             .STACK 64
+;--------------
+             .DATA
+NUM1     DB  8,?,8 DUP(?)
+NUM2     DB  8,?,8 DUP(?)
+PROMPT1  DB   CR, LF, 'Enter the first number   ','$'
+PROMPT2  DB   CR, LF, 'Enter the second number  ','$'
+PROMPT3  DB   CR, LF, 'The total sum is:        ','$'
+PROMPT4  DB   CR, LF, 'Press any to return DOS','$'
+SUM      DB    7 DUP(?),'$'
+CARRY    DB    ?
+CR       EQU   0DH
+LF       EQU   0AH
+;--------------
+             .CODE
+MAIN         PROC    FAR
+             MOV     AX,@DATA            
+             MOV     DS,AX
+
+             CALL    CLEAR                   ;CLEAR THE SCREEN
+             MOV AH, 09
+             MOV DX, offset PROMPT1
+             INT 21H
+             MOV AH,0AH
+             MOV DX,offset NUM1
+             INT 21H
+
+             MOV AH, 09
+             MOV DX, offset PROMPT2
+             INT 21H
+             MOV AH,0AH
+             MOV DX,offset NUM2
+             INT 21H
+
+             MOV AH,09
+             MOV DX, offset PROMPT3
+             INT 21H
+
+             MOV SI, Offset NUM1+8
+             MOV DI, offset NUM2+8
+             MOV BX, offset SUM+6
+             MOV CX,7
+             MOV AH, 00
+ADD_LP:      MOV AL, [SI]
+             ADD AL, AH
+             MOV AH, 0
+             
+             ADD AL, [DI]            
+             AAA             
+             OR AL, 30H             
+             MOV [BX], AL
+             DEC SI
+             DEC DI
+             DEC BX
+             LOOP ADD_LP
+             CMP AH, 01
+             JNZ NEXT
+             
+            
+             
+             
+             MOV AH,02
+             MOV DL, 31H
+             INT 21H
+            
+             
+NEXT:        MOV AH,09
+             MOV DX, offset SUM
+             INT 21H
+
+
+             MOV AH,09
+             MOV DX, offset PROMPT4
+             INT 21H
+
+
+             MOV AH, 07
+             INT 21H
+
+
+
+
+             MOV     AH,4CH
+             INT     21H                     ;GO BACK TO DOS
+MAIN         ENDP
+;---------------
+;THIS SUBROUTINE CLEARS THE SCREEN
+CLEAR        PROC
+             MOV     AX,0600H               ;SCROLL SCREEN FUNCTION
+             MOV     BH,07                  ;NORMAL ATTRIBUTE
+             MOV     CX,0000                ;SCROLL FROM ROW=00,COL=00
+             MOV     DX,184FH               ;TO ROW=18H,COL=4FH
+             INT     10H                    ;INVOKE INTERRUPT TO CLEAR SCREEN
+             RET
+CLEAR        ENDP
+
+
+             END     MAIN

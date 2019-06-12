@@ -1,0 +1,19 @@
+ TITLE 	PROG2-4 COM PROGRAM TO ADD TWO WORDS
+PAGE  	60,132
+CODSG      	SEGMENT
+ 	  	ORG  	100H
+	  	ASSUME   CS:CODSG,DS:CODSG,ES:CODSG
+;---THIS IS THE CODE AREA
+PROGCODE 	PROC 	NEAR
+	  	MOV  	AX,DATA1       	;move the first word into AX
+		MOV  	SUM,AX         	;move the sum
+	  	MOV  	AH,4CH         	;return to DOS
+	  	INT  	21H
+PROGCODE 	ENDP
+;---THIS IS THE DATA AREA
+DATA1      	DW  	2390H
+DATA2      	DW  	3456H
+SUM        	DW  	?
+;----------------
+CODSG   	ENDS
+	  	END 	PROGCODE

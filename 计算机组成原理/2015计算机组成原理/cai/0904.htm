@@ -1,0 +1,337 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>虚拟存储器</title>
+
+      
+<p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="966" height="24"></p>
+<div align="center">
+	<p>   <a href="0900.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">9.4 虚拟存储器</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.4.1 
+	虚拟存储器的基本概念</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.4.2 
+	页式虚拟存储器</a><br>
+			<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.4.3 
+	段式虚拟存储器和段页式虚拟存储器</a><br>
+			<a href="#.4"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.4.4 
+	虚拟的替换算法</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="990" height="444" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><a name=".1"><font size="6" color="#FFFFFF">9</font></a><font color="#FFFFFF" size="6"><a name=".1">.4.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">虚拟存储器的基本概念</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+		<font size="6">1、</font><font size="6" color="red">实地址与虚地址</font></span>
+				<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">用户编制程序时使用的地址称为</font><font size="6" color="red">虚地址</font><font size="6">或</font><font size="6" color="red">逻辑地址</font><font size="6">，其对应的存储空间称为虚存空间或逻</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">辑地址空间；而计算机物理内存的访问地址则称为</font><font size="6" color="red">实地址</font><font size="6">或</font><font size="6" color="red">物理地址</font><font size="6">，其对应的存储空间称为物理存储空间或主存空间。程序进行虚地址到实地址转换的过程称为程序的</font><font size="6" color="red">再定位</font><font size="6">。</font></span></p>
+			</div>
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">2、</font><font size="6" color="red">虚存的访问过程</font></span>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman">
+			<span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font size="6">虚存空间的用户程序按照虚地址编程并存放在辅存中。程序运行时，由地址变换机构依据当时分配给该程序的实地址空间把程序的一部分调入实存。每次访存时，首先判断该虚地址所对应的部分是否在实存中：如果是，则进行地址转换并用实地址访问主存；否则，按照某种算法将辅存中的部分程序调度进内存，再按同样的方法访问主存。由此可见，每个程序的虚地址空间可以远大于实地址空间，也可以远小于实地址空间。前一种情况以提高存储容量为目的，后一种情况则以地址变换为目的。后者通常出现在多用户或多任务系统中：实存空间较大，而单个任务并不需要很大的地址空间，较小的虚存空间则可以缩短指令中地址字段的长度。</font></span>
+					<p><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">3、</font><font size="6" color="red">cache与虚存的异同</font></span></p>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font size="6">从虚存的概念可以看出，</font><font size="6" color="blue">主存-辅存</font><font size="6">的访问机制与</font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6" color="blue">cache-主存</font><font size="6">的访问机制是类似的。这是由cache存</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">储器、主存和辅存构成的三级存储体系中的两个层次。</font></span></div>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">cache和主存之间以及主存和辅存之间分别有辅助</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">硬件和辅助软硬件负责地址变换与管理，以便各级存储器能够组成有机的三级存储体系。cache和主存构成了系统的内存，而主存和辅存依靠辅助软硬件的支持构成了虚拟存储器。</font></span></div>
+		<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font size="6">在三级存储体系中，cache-主存和主存-辅存这两个存储层次有许多相同点：</font></span></div>
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+					<font size="6">(1)</font><font size="6" color="blue">出发点相同</font><font size="6">：二者都是为了提高存储系统的性能价格比而构造的分层存储体系，</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">都力图使存储系统的性能接近高速存储器，而价格和容量接近低速存储器。</font></span></div>
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+					<font size="6">(2)</font><font size="6" color="blue">原理相同</font><font size="6">：都是利用了程序运行时的局部性原理把最近常用的信息块从相对慢速</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">而大容量的存储器调入相对高速而小容量的存储器。</font></span></div>
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font size="6">但cache-主存和主存-辅存这两个存储层次也有许多不同之处：</font></span></div>
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">(1)</font><font size="6" color="blue">侧重点不同</font><font size="6">：cache主要解决主存与CPU的速度差异问题；而就性能价格比的提高</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">而言，虚存主要是解决存储容量问题，另外还包括存储管理、主存分配和存储保护等方面。</font></span></div>
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">(2)</font><font size="6" color="blue">数据通路不同</font><font size="6">：CPU与cache和主存之间均有直接访问通路，cache不命中时可直接</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">访问主存；而虚存所依赖的辅存与CPU之间不存在直接的数据通路，当主存不命中时只能通过调页解决，CPU最终还是要访问主存。</font></span></div>
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">(3)</font><font size="6" color="blue">透明性不同</font><font size="6">：cache的管理完全由硬件完成，对系统程序员和应用程序员均透明；</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">而虚存管理由软件（操作系统）和硬件共同完成，由于软件的介入，虚存对实现存储管理的系统程序员不透明，而只对应用程序员透明（段式和段页式管理对应用程序员</font></span><span style="font-family: Times New Roman; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">“</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">半透明</font></span><span style="font-family: Times New Roman; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">”</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">）。</font></span></div>
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+					<font size="6">(4)</font><font size="6" color="blue">未命中时的损失不同</font><font size="6">：由于主存的存取时间是cache的存取时间的5～10倍，而主</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">存的存取速度通常比辅存的存取速度快上千倍，故主存未命中时系统的性能损失要远大于cache未命中时的损失。</font></span>
+							<p><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">4、</font><font size="6" color="red">虚存机制要解决的关键问题</font></span></p>
+						</div>
+				<div style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<div v:shape="_x0000_s1026">
+								<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+							<font size="6">(1)</font><font size="6" color="blue">调度问题：</font><font size="6">决定哪些程序和数据应被调入主存。</font></span></div>
+								<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+							<font size="6">(2)</font><font size="6" color="blue">地址映射问题：</font><font size="6">在访问主存时把虚地址变为主存物理地址（这一过</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">程称为内地址变换）；在访问辅存时把虚地址变成辅存的物理地址（这一过程称为外地址变换），以便换页。此外还要解决主存分配、存储保护与程序再定位等问题。</font></span></div>
+						<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+							<font size="6">(3)</font><font size="6" color="blue">替换问题：</font><font size="6">决定哪些程序和数据应被调出主存。</font></span></div>
+						<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+							<font size="6">(4)</font><font size="6" color="blue">更新问题：</font><font size="6">确保主存与辅存的一致性。</font></span>
+						</div>
+						<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font size="6">在操作系统的控制下，硬件和系统软件为用户解决了上述问题，从而使应用程序的编程大大简化。</font></span></div>
+					</div>
+						</div>
+			</div>
+				</div>
+	</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">9</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.4.2 
+	页式虚拟存储器</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73"><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">1、</font><font size="6" color="red">页式虚存地址映射</font><font size="6"> </font></span>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman">
+			<span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font size="6">页式虚拟存储系统中，虚地址空间被分成等长大小的</font><font size="6" color="red">页</font><font size="6">，称为</font><font size="6" color="blue">逻辑页</font><font size="6">；主存空间也被分成同样大小的页，称为</font><font size="6" color="blue">物理页</font><font size="6">。相应地，虚地址分为两个字段：高字段为逻辑页号，低字段为页内地址（偏移量）；实存地址也分两个字段：高字段为物理页号，低字段为页内地址。通过页表可以把虚地址（逻辑地址）转换成物理地址。 
+			</font></span></div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O" align="center">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+					<p> <a href="素材库/fig/Flash/9.5.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+					<p><font size="6">图9.5页式虚拟存储器的地址映射过程</font></p>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					</div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font size="6">在大多数系统中，每个</font><font size="6" color="red">进程</font><font size="6">对应一个</font><font size="6" color="red">页表</font><font size="6">。页表中对应每一个虚存页面有一个表项，表项的内容包含该虚存页面所在的主存页面的地址（物理页号），以及指示该逻辑页是否已调入主存的有效位。地址变换时，用逻辑页号作为页表内的偏移地址索引页表（将虚页号看作页表数组下标）并找到相应物理页号，用物理页号作为实存地址的高字段，再与虚地址的页内偏移量拼接，就构成完整的物理地址。现代的中央处理机通常有专门的硬件支持地址变换。 
+			</font></span>
+					<p></p>
+				</div>
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font><font size="6" color="red">转换后援缓冲器</font><font size="6"> </font></span></div>
+						<div style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<div v:shape="_x0000_s1026" class="O">
+								<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">由于页表通常在主存中，因而即使逻辑页已经在主存中，也至少要访问两次物理存储器才能实现一次访存，这将使虚拟存储器的存取时间加倍。为了避免对主存访问次数的增多，可以对页表本身实行二级缓存，把页表中的最活跃的部分存放在高速存储器中，组成</font><font size="6" color="red">快表</font><font size="6">。这个专用于页表缓存的高速存储部件通常称为</font><font size="6" color="red">转换后援缓冲器</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(TLB)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。保存在主存中的完整页表则称为</font><font size="6" color="red">慢表</font><font size="6">。 </font></span></div>
+							</div>
+							<div v:shape="_x0000_s1026" class="O" align="center">
+								<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+									<p> <a href="素材库/fig/Flash/9.6.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+								</div>
+							</div>
+						</div>
+						<div style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1" align="center">
+							<div v:shape="_x0000_s1026" class="O" align="center">
+								<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1" align="center">
+									<font size="6">图9.6TLB的地址映射过程</font></div>
+							</div>
+						</div>
+						<div style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+							<div v:shape="_x0000_s1026" class="O">
+								<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+									<p>
+								</div>
+							</div>
+							<div v:shape="_x0000_s1026" class="O">
+								<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font><font size="6" color="red">内页表和外页表</font><font size="6"> </font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">页表是虚地址到主存物理地址的变换表，通常称为内页表。与内页表对应的还有外页表，用于虚地址与辅存地址之间的变换。当主存缺页时，调页操作首先要定位辅存，而外页表的结构与辅存的寻址机制密切相关。例如对磁盘而言，辅存地址包括</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">磁盘机号、磁头号、磁道号和扇区号等。</span></font></div>
+							</div>
+							<p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><a name=".3"><font size="6" color="#FFFFFF">9</font></a><font size="6"><font color="#FFFFFF"><a name=".3">.4.3 
+	段式虚拟存储器和段页式虚拟存储器</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">　
+			<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+			<font size="6">1、</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">段式虚拟存储器</font></span>
+					<p><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">段</font><font size="6">是按照程序的自然分界划分的长度可以动态改变的区域。通常，程序员把子程序、操作数和常数等不同类型的数据划分到不同的段中，并且每个程序可以有多个相同类型的段。在段式虚拟存储系统中，虚地址由段号和段内地址（偏移量）组成。虚地址到实主存地址的变换通过段表实现。</font></span></p>
+					<p><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">每个程序设置一个</font><font size="6" color="blue">段表</font><font size="6">，段表的每一个表项对应一个段。每个表项至少包含下面三个字段：</font></span></p>
+				</div>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<font size="6">(1)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="blue">有效位</font><font size="6">：指明该段是否已经调入实存。</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<font size="6">(2)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="blue">段起址</font><font size="6">：指明在该段已经调入实存的情况下，该段在实存中的首地址。</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<font size="6">(3)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="blue">段长</font><font size="6">：记录该段的实际长度。设置段长字段的目的是为了保证访问某段的地址空间时，段内地址不会超出该段长度导致地址越界而破坏其他段。</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">段表本身也是一个段，可以存在辅存中，但一般驻留在主存中。</font></span>
+					<p align="center"> <a href="素材库/fig/Flash/9.7.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+					<p align="center"><font size="6">图9.7段式虚存的地址映射过程</font></p>
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">段式虚拟存储器有许多</font><font size="6" color="#0066ff"><u>优点</u></font><font size="6">：①段的逻辑独立性使其易于编译、管理、修改和保护，也便于多道程序共享。②段长可以根据需要动态改变，允许自由调度，以便有效利用主存空间。</font></span></div>
+					</div>
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">段式虚拟存储器也有一些</font><font size="6" color="#0066ff"><u>缺点</u></font><font size="6">：①因为段的长度不固定，主存空间分配比较麻烦。②容易在段间留下许多外碎片，造成存储空间利用率降低。③由于段长不一定是</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的整数次幂，因而不能简单地像分页方式那样用虚地址和实地址的最低若干二进制位作为段内偏移量，并与段号进行直接拼接，必须用加法操作通过段起址与段内偏移量的求和运算求得物理地址。因此，段式存储管理比页式存储管理方式需要更多的硬件支持。</font></span>
+							<p></p>
+						</div>
+						<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font><font size="6" color="red">段页式虚拟存储器</font><font size="6"> </font></span></div>
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">段页式虚拟存储器是</font><font size="6" color="red">段式虚拟存储器</font><font size="6">和</font><font size="6" color="red">页式虚拟存储器</font><font size="6">的结合。</font></span></div>
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">实存被等分成页。每个程序则先按逻辑结构分段，每段再按照实存的页大小分页，程序按页进行调入和调出操作，但可按段进行编程、保护和共享。 
+							</font></span>
+									<p align="center"><a href="素材库/fig/Flash/9.8.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+									<p align="center"><font size="6">图9.8段页式虚存的地址变换过程</font></p>
+								</div>
+						<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<div v:shape="_x0000_s1026" class="O">
+										
+									</div>
+									<div v:shape="_x0000_s1026" class="O">
+										<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+											
+										</div>
+									</div>
+								</div>
+					</div>
+						</div>
+			</div>
+				</div>
+	</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><a name=".4"><font size="6" color="#FFFFFF">9</font></a><font size="6"><font color="#FFFFFF"><a name=".4">.4.4 
+	虚拟的替换算法</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+								<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font size="6">当从辅存调页至主存而主存已满时，也需要进行主存页面的替换。虚拟存储器的替换算法与cache的替换算法类似，有</font><font size="6" color="red">FIFO算法</font><font size="6">、</font><font size="6" color="red">LRU算法</font><font size="6">、</font><font size="6" color="red">LFU算法</font><font size="6">等。</font></span></div>
+							<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font size="6">虚拟存储器的替换算法与cache的替换算法不同的是：</font></span></div>
+						<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">(1)cache的替换全部靠硬件实现，而虚拟存储器的替换有操作系统的支持。</font></span></div>
+						<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+							<font size="6">(2)虚存缺页对系统性能的影响比cache未命中要大得</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">多，因为调页需要访问辅存，并且要进行任务切换。</font></span></div>
+						<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+							<font size="6">(3)虚存页面替换的选择余地很大，属于一个进程的</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">页面都可替换。</font></span></div>
+					</div>
+							<p></div>
+					</div>
+				</div>
+			</div>
+		</td>
+  </tr>
+					
+	   </table>

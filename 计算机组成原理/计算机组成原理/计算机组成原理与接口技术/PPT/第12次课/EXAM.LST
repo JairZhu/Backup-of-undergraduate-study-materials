@@ -1,0 +1,98 @@
+Microsoft (R) Macro Assembler Version 5.00                  3/16/11 22:39:48
+                                                             Page     1-1
+
+
+				;  3)·ûºÅº¯ÊýµÄÊµÏÖ 
+				;   ·ûºÅº¯Êýsgn£¨X)µÄ¶¨ÒåÊÇ£º 
+				;           -1, x<0 
+				;  sgn(x)=  0, x=0 
+				;           1, x>0 
+				;   ¼ÙÉèÄÚ´æÖÐÓÐÒ»ÏµÁÐµÄXÖµ£¬ÏÖÔÚÎÒÃÇÍ¨¹ý±àÐ´³Ì
+				ÐòÀ´ÇóÕâÐ©x¶ÔÓ¦µÄsgn(x)µÄÖµ¡£ 
+				;   ÕâÊÇÒ»¸öµäÐÍµÄ·ÖÖ§³ÌÐòÉè¼Æ£¬ÎÒÃÇÏÈ½«xµÄÖµ¶Á
+				Èëµ½¼Ä´æÆ÷ALÖÐ£¬È»ºóÀûÓÃÖ¸Áî¡°OR AL,AL"(×¢Òâ¸ÃÖ
+				¸Áî²¢²»»á¸Ä±äALµÄÖµ£©£¬ 
+				;   ½«xµÄÖµµÄÌØÕ÷£¨°üÀ¨XÊÇ·ñÎª0¼°xµÄ·ûºÅÎ»ÊÇ·ñÎ
+				ª0£©·´Ó³µ½±êÖ¾¼Ä´æÆ÷ÉÏ£¬ 
+				;   ×îºó¸ù¾Ý±êÖ¾¼Ä´æÆ÷À´ÊµÏÖÌø×ª£ºÈç¹ûÁã±êÖ¾Î»Z
+				F=0, Ôòsgn(x£©£½0£»Èç¹û·ûºÅ±êÖ¾Î»SF£½1£¬ÔòËµ 
+				;   Ã÷x<0, Òò´Ësgn(x)=-1; Èç¹ûÒÔÉÏÁ½ÖÖÇé¿ö¶¼²»Â
+				ú×ã£¬ÔòËµÃ÷x>0, Òò´Ësgn(x)=1. 
+				 
+ 0000				data   segment 
+ 0000  12 34 00 FF AB		x      db  12h,34h,00h,0ffh,0abh 
+ = 0005				count  equ $-x 
+ 0005  0005[			sgnx   db  count dup(?) 
+	    ??			
+			 ]	
+				
+				 
+ 000A				data   ends 
+ 0000				code   segment 
+				       assume cs:code,ds:data,es:data 
+ 0000				main   proc far 
+ 0000  1E			       push ds 
+ 0001  B8 0000			       mov ax,0 
+ 0004  50			       push ax 
+ 0005  B8 ---- R		       mov ax,data 
+ 0008  8E D8			       mov ds,ax 
+ 000A  8E C0			       mov es,ax 
+ 000C  8D 36 0000 R		       lea si,x 
+ 0010  8D 3E 0005 R		       lea di,sgnx 
+ 0014  B9 0005			       mov cx,count 
+ 0017  AC			again: lodsb 
+ 0018  0A C0			       or al,al 
+ 001A  74 07			       jz zero 
+ 001C  78 0A			       js minus 
+ 001E  B0 01			       mov al,01h 
+ 0020  EB 08 90			       jmp next 
+ 0023  B0 00			zero:  mov al,00h 
+ 0025  EB 03 90			       jmp next 
+ 0028  B0 FF			minus: mov al,0ffh 
+ 002A  AA			next:  stosb 
+ 002B  E2 EA			       loop again 
+ 002D  CB			       ret 
+ 002E				main   endp 
+ 002E				code   ends 
+				       end main 
+Microsoft (R) Macro Assembler Version 5.00                  3/16/11 22:39:48
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODE . . . . . . . . . . . . . .  	002E	PARA	NONE	
+DATA . . . . . . . . . . . . . .  	000A	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+AGAIN  . . . . . . . . . . . . .  	L NEAR	0017	CODE
+
+COUNT  . . . . . . . . . . . . .  	NUMBER	0005	
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	CODE	Length = 002E
+MINUS  . . . . . . . . . . . . .  	L NEAR	0028	CODE
+
+NEXT . . . . . . . . . . . . . .  	L NEAR	002A	CODE
+
+SGNX . . . . . . . . . . . . . .  	L BYTE	0005	DATA	Length = 0005
+
+X  . . . . . . . . . . . . . . .  	L BYTE	0000	DATA
+
+ZERO . . . . . . . . . . . . . .  	L NEAR	0023	CODE
+
+@FILENAME  . . . . . . . . . . .  	TEXT  exam		
+
+
+     44 Source  Lines
+     44 Total   Lines
+     12 Symbols
+
+  50222 + 450802 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

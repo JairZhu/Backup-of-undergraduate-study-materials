@@ -1,0 +1,29 @@
+
+      .MODEL SMALL
+      .STACK 64
+      .DATA 
+MESSAGE2  DB  'This is a test program!','$'      
+      .CODE    
+
+MAIN    PROC  FAR
+        MOV  AX, @DATA
+        MOV  DS, AX
+
+       INT 03H
+ 
+       mov cx, 5555H
+       mov ax, 0000H 
+
+       MOV AH,09
+       MOV DX,offset MESSAGE2
+       INT 21H  
+
+       mov ah,07H
+       int 21H
+
+       MOV AH,4CH      
+       int 21H
+      
+MAIN    ENDP
+       
+        END MAIN

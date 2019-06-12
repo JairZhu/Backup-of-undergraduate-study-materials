@@ -1,0 +1,60 @@
+   TITLE     	PROG5-1
+   PAGE 	60,132
+   ;--------------
+   CLEARSCR  	MACRO
+;THIS MACRO CLEARS THE SCREEN
+;;USING OPTION 06 OF INT 10H
+             	MOV  	AX,0600H	;SCROLL SCREEN FUNCTION
+             	MOV  	BH,07		;NORMAL ATTRIBUTE
+             	MOV  	CX,0		;FROM ROW=00,COLUMN=00
+             	MOV  	DX,184FH	;TO ROW=18H,COLUMN=4FH
+             	INT  	10H		;INVOKE THE INTERRUPT
+             	ENDM
+;--------------
+   DISPLAY   		MACRO   STRING
+;THIS MACRO DISPLAYS A STRING OF DATA
+;;DX = ADDRESS OF STRING.  USES FUNCTION 09 INT 21H.
+             	MOV  	AH,09			;DISPLAY STRING FUNCTION
+             	MOV  	DX,OFFSET STRING     	;DX = OFFSET ADDRESS OF DATA
+             	INT  	21H			;INVOKE THE INTERRUPT
+             	ENDM
+;--------------
+   CURSOR    	MACRO   ROW,COLUMN
+;THIS MACRO SETS THE CURSOR LOCATION TO ROW,COLUMN
+;;USING BIOS INT 10H FUNCTION 02
+             	MOV  	AH,02		;SET CURSOR FUNCTION
+             	MOV  	BH,00		;PAGE 00
+             	MOV  	DH,ROW	;ROW POSITION
+             	MOV  	DL,COLUMN	;COLUMN POSITION
+             	INT  	10H		;INVOKE THE INTERRUPT
+            	ENDM
+;--------------
+   		.MODEL SMALL
+		.STACK 64
+;--------------
+   		.DATA
+   MESSAGE1  DB        'My name ','$'
+   MESSAGE2  DB        'is Joe','$'
+   MESSAGE3  DB        'What is ','$'
+   MESSAGE4  DB        'your name?','$'
+;--------------
+   		.CODE
+   MAIN      	PROC  	FAR
+             	MOV  	AX,@DATA
+             	MOV  	DS,AX
+             	.LALL			;LIST ALL
+             	CLEARSCR		;INVOKE CLEAR SCREEN MACRO
+     	        CURSOR  2,4		;SET CURSOR TO ROW2,COL 2
+             	DISPLAY MESSAGE1	;INVOKE DISPLAY MACRO
+             	.XALL			;LIST ALL EXECUTABLE 
+             	CURSOR  7,24		;SET CURSOR TO ROW 7,COL 24
+             	DISPLAY MESSAGE2	;INVOKE DISPLAY MACRO
+             	.SALL			;SUPPRESS ALL 
+             	CURSOR  12,44		;SET CURSOR TO ROW 12,COL 44
+             	DISPLAY MESSAGE3	;INVOKE DISPLAY MACRO
+             	CURSOR  19,64		;SET CURSOR TO ROW 19,COL 64
+             	DISPLAY MESSAGE4	;INVOKE DISPLAY MACRO
+             	MOV  	 AH,4CH
+             	INT  	 21H            	;GO BACK TO DOS
+   MAIN      	ENDP
+                END      MAIN

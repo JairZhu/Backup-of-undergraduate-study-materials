@@ -1,0 +1,239 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>DMA方式</title>
+
+      
+<p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="968" height="24"></p>
+<div align="center">
+	<p>   <a href="0800.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">8.4 DMA方式</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.4.1 
+	DMA方式的基本概念</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.4.2 
+	DMA传送方式</a><br>
+			<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.4.3 基本的DMA控制器</a><br>
+			<a href="#.4"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">8.4.4 
+	选择型和多路型DMA控制器</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6"> 　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="990" height="444" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font color="#FFFFFF" size="6"><a name=".1">8.4.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">DMA方式的基本概念</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<font size="6" color="#008040"><i><b><font color="#0000ff">　　</font></b></i></font><font color="red"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">直接存储器访问（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">DMA</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">）</font></span></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，是一种完全由硬件执行I/O交换的工作方式。在这种方式中，DMA控制器从CPU完全接管对总线的控制，数据交换不经过CPU，而直接在内存和I/O设备之间进行。DMA方式一般用于高速传送成组数据</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。</font></span>
+				<div v:shape="_x0000_s1026" class="O1">
+					<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+						<font size="6" color="#008040"><i><b><font color="#0000ff">　</font></b></i></font><font size="6"><b><i><font color="#008040"><font color="blue">DMA方式的主要优点是速度快。</font></font></i></b>由 于CPU根本不参加传送操作，因此就省去了CPU取指令、取数、送数等操作。在数据传送过程中，没有保存现场、恢复现场之类的工作。内存地址修改、传送字 个数的计数等等，也不是由软件实现，而是用硬件线路直接实现的。所以DMA方式能满足高速I/O设备的要求，也有利于CPU效率的发挥。</font>
+						<p><font size="6" color="#008040"><i><b>　<font color="#0000ff">　多种DMA至少能执行以下一些基本操作：</font></b></i></font></p>
+						<p><font size="6">(1)从外围设备发出DMA请求；</font></p>
+						<p><font size="6">(2)CPU响应请求，把CPU工作改成DMA操作方式，DMA控制器从CPU接管总线的控制；</font></p>
+						<p><font size="6">(3)由DMA控制器对内存寻址，即决定数据传送的内存单元地址及数据传送个数的计数，并执行数据传送的操作；</font></p>
+						<p><font size="6">(4)向CPU报告DMA操作的结束。</font></p>
+						<blockquote>
+							
+						</blockquote>
+						<p></p>
+					</div>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026">
+				<div class="O2" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<ul>
+				
+			</ul>
+		</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><a name=".2"><font size="6" color="#FFFFFF">8</font></a><font size="6"><font color="#FFFFFF"><a name=".2">.4.2 
+	DMA传送方式</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<p><b><font size="5"><i><font size="6" color="#ff0000">1.停止CPU访问内存</font></i></font></b></p>
+			<blockquote>
+				<p><font size="6">　 　当外围设备要求传送一批数据时，由DMA控制器发一个停止信号给CPU，要求CPU放弃对地址总线、数据总线和有关控制总线的使用权。DMA控制器获得 总线控制权以后，开始进行数据传送。在一批数据传送完毕后，DMA控制器通知CPU可以使用内存，并把总线控制权交还给CPU。在这种DMA传送过程 中，CPU基本处于不工作状态或者说保持状态。这种传送方式的时间图如下：</font></p>
+				<p align="center">&nbsp;</p>
+			</blockquote>
+			<ul>
+				<blockquote>
+					<li><font size="6"><b><font color="#0000ff">优点</font></b>: 控制简单，它适用于数据传输率很高的设备进行成组传送。</font>
+					<li><font size="6"><b><font color="#0000ff">缺点</font></b>: 在DMA控制器访内阶段，内存的效能没有充分发挥，相当一部分内存工作周期是空闲的。这是因为，外围设备传送两个数据之间的间隔一般总是大于内存存储周期，即使高速I/O设备也是如此。</font>
+				</blockquote>
+			</ul>
+			<p><b><i><font size="6" color="#ff0000">2.周期挪用</font></i></b></p>
+			<blockquote>
+				<p><font size="6">　　当I/O设备没有DMA请求时，CPU按程序要求访问内存；一旦I/O设备有DMA请求，则由I/O设备挪用一个或几个内存周期。</font></p>
+				<p><font size="6"><b><i>I/O设备要求DMA传送时可能遇到两种情况</i></b>：</font></p>
+				<blockquote>
+					<p><font size="6"><b><font color="#008040">(1)</font></b>此时CPU不需要访内，如CPU正在执行乘法指令。由于乘法指令执行时间较长，此时I/O访内与CPU访内没有冲突，即I/O设备挪用一二个内存周期对CPU执行程序没有任何影响。</font></p>
+					<p><font size="6"><b><font color="#008040">(2)</font></b>I/O设备要求访内时CPU也要求访内，这就产生了访内冲突，在这种情况下I/O设备访内优先，因为I/O访内有时间要求，前一个I/O数据必须在下一个访内请求到来之前存取完毕。显然，在这种情况下I/O 设备挪用一二个内存周期，意味着CPU延缓了对指令的执行，或者更明确地说，在CPU执行访内指令的过程中插入DMA请求，挪用了一二个内存周期。</font></p>
+					<p>&nbsp;</p>
+			  </blockquote>
+				<p><font size="6">　　与停止CPU访内的DMA方法比较，周期挪用的方法既实现了I/O传送，又较好地发挥了内存和CPU的效率，是一种广泛采用的方法。但是I/O设备每一次周期挪用都有申请总线控制权、建立总线控制权和归还总线控制权的过程，所以传送一个字对内存来说要占用一个周期，但对DMA控制器来说一般要2—5个 内存周期(视逻辑线路的延迟而定)。因此，</font><font size="6" color="#008040"><i><b>周期挪用的方法适用于I/O设备读写周期大于内存存储周期的情况。</b></i></font></p>
+			</blockquote>
+			<p><b><i><font size="6" color="#ff0000">3.DMA与CPU交替访内</font></i></b></p>
+			<blockquote>
+				<p><font size="6">　　如果CPU的工作周期比内存存取周期长很多，此时采用交替访内的方法可以使DMA传送和CPU同时发挥最高的效率。假设CPU工作周期为 1.2μs，内存存取周期小于0.6μs，那么一个CPU周期可分为C1和C2两个分周期，其中C1供DMA控制器访内，C2专供CPU访内。</font></p>
+				<p><font size="6">　 　这种方式不需要总线使用权的申请、建立和归还过程，总线使用权是通过C1和C2分时进行的。CPU和DMA控制器各自有自己的访内地址寄存器、数据寄存 器和读/写信号等控制寄存器。在C1周期中，如果DMA控制器有访内请求，可将地址、数据等信号送到总线上。在C2周期中，如CPU有访内请求，同样传送 地址、数据等信号。事实上，对于总线，这是用C1，C2控制的一个多路转换器，这种总线控制权的转移几乎不需要什么时间，所以对DMA传送来讲效率是很高的。</font></p>
+				<p><font size="6">　　这种传送方式又称为“</font><font size="6" color="#0000ff"><b>透明的DMA</b></font><font size="6">”方式，其来由是这种DMA传送对CPU来说，如同透明的玻璃一般，没有任何感觉或影响。在透明的DMA方式下工作，CPU既不停止主程序的运行，也不进入等待状态，是一种高效率的工作方式。当然，相应的硬件逻辑也就更加复杂。</font></p>
+			</blockquote>
+			<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">8</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.4.3 基本的DMA控制器</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026">
+						<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+　
+							<p><b><font size="5"><i><font size="6" color="#ff0000">1.DMA控制器的基本组成</font></i></font></b></p>
+							<p><font size="6">　　一个DMA控制器，实际上是采用DMA方式的外围设备与系统总线之间的接口电路。这个接口电路是在中断接口的基础上再加DMA机构组成。</font></p>
+							<p><font size="6"><b><font color="#0000ff"><i><u>一个最简单的DMA控制器由以下逻辑部件组成：</u></i></font></b></font></p>
+							<p><font size="6"><b><font color="#0000ff">(1)内存地址计数器</font></b> 用于存放内存中要交换的数据的地址。在DMA传送前，须通过程序将数据在内存中的起始位置(首地址)送到内存地址计数器。而当DMA传送时，每交换一次数据，将地址计数器加“1”，从而以增量方式给出内存中要交换的一批数据的地址。</font></p>
+							<p><font size="6"><b><font color="#0000ff">(2)字计数器 </font></b>用于记录传送数据块的长度(多少字数)。其内容也是在数据传送之前由程序预置，交换的字数通常以补码形式表示。在DMA传送时，每传送一个字，字计数器就加“1” ，当计数器溢出即最高位产生进位时，表示这批数据传送完毕，于是引起DMA控制器向CPU发中断信号。</font></p>
+							<p><font size="6"><b><font color="#0000ff">(3)数据缓冲寄存器</font></b> 用于暂存每次传送的数据(一个字)。当输入时，由设备(如磁盘)送往数据缓冲寄存器，再由缓冲寄存器通过数据总线送到内存。反之，输出时，由内存通过数据总线送到数据缓冲寄存器，然后再送到设备。</font></p>
+							<p><font size="6"><b><font color="#0000ff">(4)“DMA请求”标志 </font></b>每 当设备准备好一个数据字后给出一个控制信号，使“DMA请求” 标志置“1”。该标志置位后向“控制/状态”逻辑发出DMA请求，后者又向CPU发出总线使用权的请求(HOLD)，CPU响应此请求后发回响应信号 HLDA，“控制/状态”逻辑接收此信号后发出DMA响应信号，使“DMA请求”标志复位，为交换下一个字做好准备。</font></p>
+							<p><font size="6"><b><font color="#0000ff">(5)“控制/状态”逻辑</font></b> 由控制和时序电路以及状态标志等组成，用于修改内存地址计数器和字计数器，指定传送类型(输入或输出)，并对“DMA请求”信号和CPU响应信号进行协调和同步。</font></p>
+							<p><font size="6"><b><font color="#0000ff">(6)中断机构</font></b> 当字计数器溢出时(全0)，意味着一组数据交换完毕，由溢出信号触发中断机构，向CPU提出中断报告。这里的中断与上一节介绍的I/O中断所采用的技术相 同，但中断的目的不同，前面是为了数据的输入或输出，而这里是为了报告一组数据传送结束。因此它们是I/O系统中不同的中断事件。</font></p>
+						</div>
+					</div>
+					<div v:shape="_x0000_s1026" align="center">
+						<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+							<p> <a href="素材库/fig/Flash/8.14.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+						</div>
+					</div>
+					<div v:shape="_x0000_s1026">
+						<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+							<p><font size="6">图8.14简单的DMA控制器组成</font></p>
+							<blockquote>
+								<blockquote>
+									
+								</blockquote>
+							</blockquote>
+						</div>
+						<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<p><b><i><font size="6" color="#ff0000">2.DMA数据传送过程</font></i></b></p>
+							<p><font size="6">　　DMA的数据块传送过程可分为三个阶段：</font><font size="6" color="#0000ff"><b>传送前预处理；正式传送；传送后处理</b></font><font size="6">。</font></p>
+							<blockquote>
+								<p><font size="6"><b><font color="#0000ff">预处理</font></b>：由CPU执行几条输入输出指令，测试设备状态，向DMA控制器的设备地址寄存器中送入设备号并启动设备，向内存地址计数器中送入起始地址，向字计数器中送入交换的数据字个数。在这些工作完成后，CPU继续执行原来的主程序。</font></p>
+								<p><font size="6" color="#0000ff"><b>正式传送：</b></font><font size="6">当外设准备好发送数据(输入)或接受数据(输出)时，它发出DMA请求，由DMA控制器向CPU发出总线使用权的请求(HOLD)。</font></p>
+							</blockquote>
+						</div>
+					</div>
+					<div v:shape="_x0000_s1026" align="center">
+						<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+							<blockquote>
+								<p> <a href="素材库/fig/Flash/8.15.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+							</blockquote>
+						</div>
+					</div>
+					<div v:shape="_x0000_s1026">
+						<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1" align="center">
+							<blockquote>
+								<p><font size="6">图8.15 DMA传送数据的流程</font></p>
+							</blockquote>
+						</div>
+						<div class="O" style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<blockquote>
+								<p><font size="6">　　DMA的数据传送是以</font><font size="6" color="#00ff00"><b><font color="#ff80c0">数据块</font></b></font><font size="6">为基本单位进行的，因此，每次DMA控制器占用总线后，无论是数据输入操作，还是输出操作，都是通过循环来实现的。当进行输入操作时，外围设备的数据(一次一个字或一个字节)传向内存；当进行输出操作时，内存的数据传向外围设备。</font></p>
+								<p><font size="6"><b><font color="#0000ff">后处理：</font></b>一旦DMA的中断请求得到响应，CPU停止主程序的执行，转去执行中断服务程序做一些DMA的结束处理工作。这些工作包括校验送入内存的数据是否正确；决定继续用DMA方式传送下去，还是结束传送；测试在传送过程中是否发生了错误等等。</font></p>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="963" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".4">8</a></font><font size="6"><font color="#FFFFFF"><a name=".4">.4.4 
+	选择型和多路型DMA控制器</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73">
+			<div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					</div>
+			</div>
+			<i><b><font size="6" color="#ff0000">1.选择型DMA控制器</font></b></i>
+			<p><font size="6">　　选择型DMA控制器在物理上可以连接多个设备，而在逻辑上只允许连接一个设备。在某一段时间内只能为一个设备服务。</font></p>
+			<div align="center">
+				<blockquote>
+					<p><a href="素材库/fig/Flash/8.16.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+					<p><font size="6">图8.16选择型DMA控制器</font></p>
+				</blockquote>
+			</div>
+			<div align="left">
+				<blockquote>
+					<p><font size="6"><b><font color="#0000ff"><u>选择型DMA控制器的工作原理</u></font></b>：</font></p>
+				</blockquote>
+			</div>
+			<blockquote>
+				<p><font size="6">　 　与前面的简单DMA控制器基本相同。除了前面讲到的基本逻辑部件外，还有一个设备号寄存器。数据传送是以数据块为单位进行的，在每个数据块传送之前的预 置阶段，除了用程序中I/O指令给出数据块的传送个数、起始地址、操作命令外，还要给出所选择的设备号。从预置开始，一直到这个数据块传送结束，DMA控 制器只为所选设备服务。下一次预置再根据I/O指令指出的设备号，为另一选择的设备服务。显然，选择型DMA控制器相当于一个逻辑开关，根据I/O指令来 控制此开关与某个设备连接。</font></p>
+				<p><font size="6">　　选择型DMA控制器只增加少量硬件达到了为多个外围设备服务的目的，它特别适合数据传输率很高以至接近内存存取速度的设备。在很快地传送完一个数据块后，控制器又可为其他设备服务。</font></p>
+			</blockquote>
+			<p><i><b><font size="6" color="#ff0000">2.多路型DMA控制器</font></b></i></p>
+			<p><font size="6">　　多路型DMA不仅在物理上可以连接多个外围设备，而且在逻辑上也允许这些外围设备同时工作，各设备以字节交叉方式通过DMA控制器进行数据传送。多路型DMA控制器适合于同时为多个慢速外围设备服务。</font></p>
+			<div align="center">
+				<p> <a href="素材库/fig/Flash/8.17.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<p><font size="6">图8.17 多路型DMA控制器原理示意图</font></p>
+				<p> <a href="素材库/fig/Flash/8.18.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a></p>
+				<blockquote>
+					<font size="6">图8.18 一个多路DMA控制器芯片</font></blockquote>
+			</div>
+			<p>
+	　</p>
+		</td>
+  </tr>
+					
+	   </table>

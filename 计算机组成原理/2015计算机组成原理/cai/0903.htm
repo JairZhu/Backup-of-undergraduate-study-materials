@@ -1,0 +1,133 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>存储管理</title>
+
+      
+<p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="967" height="24"></p>
+<div align="center">
+	<p>  <a href="0900.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">9.3 存储管理</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">导入</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.3.1 分区式存储管理</a><br>
+			<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.3.2 交换技术和分页技术</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="991" height="371" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><a name=".1"><font color="#FFFFFF">导入</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+						<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman">
+				<font size="6" color="red">存储管理</font><font size="6">主要解决存储器的</font><font size="6" color="blue">分配与回收</font><font size="6">，</font><font size="6" color="blue">存储器地址变换</font><font size="6">，</font><font size="6" color="blue">存储器扩充</font><font size="6">，</font><font size="6" color="blue">存储器共享与保护</font><font size="6">等问题。</font></span></div>
+					<p>
+			
+
+		</div>
+	</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">9</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.3.1 分区式存储管理</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">早期的单用户、单任务的操作系统将内存空间简单地分为两个区域：</font><font size="6" color="blue">系统区</font><font size="6">和</font><font size="6" color="blue">用户区</font><font size="6">。操作系统使用系统区；应用程序则装入到用户区，并使用用户区全部空间。这种方式管理简单，但浪费内存空间。</font></span>
+							<div v:shape="_x0000_s1026" class="O">
+								<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">为了支持多个程序并发执行，现代操作系统引入了分区式存储管理。内存被分为若干个区域，操作系统占用其中一个分区，其余的分区则提供给应用程序使用，每个应用程序占用其中一个或几个分区。</font></span></div>
+								<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+									<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">根据分区的大小是否固定，可以将分区式存储管理机制分为</font><font size="6" color="blue">固定分区</font><font size="6">和</font><font size="6" color="blue">动态分区</font><font size="6">两种类型。</font></span><font size="6">动态分区在进程申请内存空间时按其要求的容量分配内存，或根据进程的要求在其执行过程中动态改变分区大小。</font>
+									<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><font size="6">分区存储管理</font><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">的优点是易于实现，但缺点是容易造成空间浪费，产生</font><font size="6" color="red">碎片</font><font size="6">。</font></span></p>
+								</div>
+					</div>
+							<p>
+
+				</div></div>
+				</div>
+	</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">9</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.3.2 交换技术和分页技术</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">根据程序的</font><font size="6" color="red">局部性原理</font><font size="6">，在一个较短的时间间隔内，程序所访问的存储器地址在很大比例上集中在存储器地址空间的很小范围内。交换技术正是利用了程序的局部性原理实现多任务并发环境中的存储管理。</font></span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">交换过程由</font><font size="6" color="blue">换入和换出</font><font size="6">两个过程组成：换入过程将外存交换区的数据和程序代码换至内存，而换出过程将内存中的数据换到外存交换区中。</font></span>
+			<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			</div>
+	</div>
+			<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">操作系统将暂时不执行的程序代码保存在外存中，并将这些进程排入进程请求的长期调度队列。队列中的一部分进程被调到主存中执行。当由于输入/输出操作等原因使得存储器中无进程处于就绪状态时，操作系统将部分进程换出至外存，并排入中期队列。腾出的内存空间则换入中期队列或长期队列中的一个可执行的进程。 
+			</font></span>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">交换技术的优点是增加了并发运行的进程数目。缺点是换入和换出操作增加了处理机的时间开销；而且交换的单位为整个进程的地址空间，没有考虑程序执行过程中地址访问的统计特性。 
+			</font></span></div>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">交换技术和早期采用的覆盖技术一样，虽然都是从逻辑上利用外存扩大主存空间，但并没有将主存和外存组成一个有机的整体。 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6" color="blue">分页技术</font><font size="6">引申出一种非常重要的存储管理策略</font></span><span lang="EN-US" style="font-family: Times New Roman; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">——</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">虚拟存储器(简称虚存)。在存储管理部件(MMU)的支持下，虚拟存储器技术可以彻底解决存储器的调</font></span><font size="6"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman">度与管理问题。</span></font><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt"></span></div>
+	</div>
+			<p></p>
+		</td>
+  </tr>
+							
+	   </table>

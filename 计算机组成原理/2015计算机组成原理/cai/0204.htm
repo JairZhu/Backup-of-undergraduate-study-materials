@@ -1,0 +1,189 @@
+
+       <script src="expand.js"></script><title>2.4 定点除法运算</title>
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="968" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0200.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font color="#0000FF" size="6">2.4 定点除法运算</font><font face="宋体" size="6">&nbsp;</font><font face="宋体" size="6" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="fpweb:///_private/form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.4.1 
+	原码除法算法原理</a><br>
+	<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">2.4.2 
+	并行除法器</a><br>
+	　</font></b></p>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="1000" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong>
+	<font color="#FFFFFF" size="6">
+	<a name=".1">2.4.1 
+	原码</a></font><font size="6"><a name=".1"><font color="#FFFFFF">除法算法原理</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="16" height="73"></td>
+    <td width="984" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	  <div align="center"><img border="0" src="素材库/fig/图片/图_定点除法运算.bmp" width="700" height="568">        </div>
+	  <p align="center">&nbsp;</p>
+	<p align="center">&nbsp;</p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O1">
+		<ul>
+			<li>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:144%">
+				<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute;
+left:-3.63%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span></div>
+			</li>
+		</ul>
+	</div></td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">2</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.4.2 
+	并行除法器</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    	
+    	<td width="16" height="26" rowspan="3">　</td> 
+  </tr>
+	<tr>
+    <td width="984" height="3">
+	<font size="6" face="楷体_GB2312" color="#0000FF">一、加减交替法（不恢复余数法）</font>
+	<p>
+	<font face="宋体" size="6">&nbsp;&nbsp;&nbsp; 当i-1次求商的余数为正时,下一次求商的办法是Ri=2Ri-Y，若Ri&lt;0时,则I位上商0,而恢复余数作加法Ri+Y，下一次即I+1次求商作减法时Ri+1=2(Ri+Y)-Y=2Ri+Y。上述式子表明,当某一次商差为负时,本次商0,继续求下一位商不必恢复余数,而直接将商的差值左移动一位,在加Y的办法得到。</font></p>
+	<p><font size="6" face="楷体_GB2312" color="#0000FF">二、法则</font></p>
+	<p><font face="宋体" size="6">&nbsp;&nbsp;&nbsp; 
+	余数为正,商1,求下一位商的办法是余数左移,减除数；余数为负,商0,求下一位商的办法是余数左移,加除数；</font></p>
+	<div v:shape="_x0000_s1026" class="O2"></div>
+	<p>&nbsp;</p>
+	<div v:shape="_x0000_s1026">
+	  <div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+		  <p align="center"><a href="素材库/fig/Flash/2.9 a.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图2.9 可控加法/减法（CAS）单元的逻辑图</font></p>
+		</div>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">
+			<font size="6">可控的加法</font></span><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">/</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial">减法单元</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN">CAS</span></font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><font size="6">单元 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O2" style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format:bullet;position:absolute;left:-1.59%">
+				<font size="6">&#8226;</font></span><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">P=0</span></font><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial"><font size="6">，作加法运算 </font></span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format:bullet;position:absolute;left:-1.59%">
+				<font size="6">&#8226;</font></span><font size="6"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN">P=1</span></font><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial"><font size="6">，作减法运算</font></span></div>
+			</li>
+		</ul>
+	</div>
+	<p>　</p>
+	<p align="center"><a href="素材库/fig/图片/2.9b.bmp"><img src="素材库/fig/图片/2.9b.bmp" width="776" height="640" border="0" /></a></p>
+	<p align="center"><font size="6">图2.9b </font></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O">
+		<ul>
+			<li></li>
+			<li>
+			<div style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format:
+bullet;position:absolute;left:-1.47%"><font size="6">&#8226;</font></span><font size="6"><span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">商</span></font><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN"><font size="6">Q=0.q</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .37em; mso-text-raise: -25%; mso-fareast-language: ZH-CN"><font size="6">3</font></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:
+ZH-CN"><font size="6">q</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .37em; mso-text-raise: -25%; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><font size="6">q</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .37em; mso-text-raise: -25%; mso-fareast-language: ZH-CN"><font size="6">1
+				</font></span></div>
+			</li>
+			<li>
+			<div style="mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format:
+bullet;position:absolute;left:-1.47%"><font size="6">&#8226;</font></span><font size="6"><span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">余数</span></font><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+mso-fareast-language:ZH-CN"><font size="6">R=0.00r</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .37em; mso-text-raise: -25%; mso-fareast-language: ZH-CN"><font size="6">6</font></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;mso-fareast-language:
+ZH-CN"><font size="6">r</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .37em; mso-text-raise: -25%; mso-fareast-language: ZH-CN"><font size="6">5</font></span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN"><font size="6">r</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .37em; mso-text-raise: -25%; mso-fareast-language: ZH-CN"><font size="6">4</font></span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:
+Arial;mso-fareast-language:ZH-CN"><font size="6">r</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; position: relative; top: .37em; mso-text-raise: -25%; mso-fareast-language: ZH-CN"><font size="6">3
+				</font></span></div>
+			</li>
+		</ul>
+	</div>	  </td>
+  </tr>
+	<tr>
+    <td width="984" height="3">
+	<p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.54%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span></div></div>
+	</div></td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">&nbsp;</td> 
+  		</tr>
+	<tr>
+    	
+    	<td width="16" height="26" rowspan="3"></td> 
+  </tr>
+	<tr>
+    <td width="984" height="3">&nbsp;</td>
+  </tr>
+					
+	<tr>
+    <td width="984" height="3">
+	<p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.54%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span></div></div>
+	</div></td>
+  </tr>
+	   </table>
+      

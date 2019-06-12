@@ -1,0 +1,29 @@
+#       This is the file "instr.ord".  It gives the order preferences that
+#       must be respected by the assembler.
+
+#       Comments are as described in "instr.set".
+
+#       Each (non-comment) line should be a pair of keys.  The table-generating
+#       program will check that the order of instruction variants for each
+#       instruction in the file "instr.set" is compatible with each pair.
+#       If not, it will scream.
+
+03 01
+03 02
+11 10
+20 22
+26 27
+28 0C
+2F 02
+30 02
+2D 05
+2E 04
+11 29
+29 0E
+37 36
+38 3A
+3F 04
+3F 05
+40 04
+40 05
+1F 19

@@ -1,0 +1,57 @@
+Microsoft (R) Macro Assembler Version 5.00                  3/21/10 12:18:54
+PROG2-5 COM PROGRAM TO ADD TWO WORDS                        Page     1-1
+
+
+				TITLE     	PROG2-5 COM PROGRAM TO ADD TWO 
+				WORDS 
+				PAGE      	60,132 
+ 0000				CODSG     	SEGMENT  
+				             	ASSUME  CS:CODSG,DS:CODSG,ES:CODSG 
+ 0100				             	ORG  	100H 
+ 0100  EB 07 90			START:    	JMP 	PROGCODE 	;go around the data area 
+				;---THIS IS THE DATA AREA 
+ 0103  2390			DATA1     	DW   	2390H 
+ 0105  3456			DATA2		DW	3456H 
+ 0107  ????			SUM		DW	? 
+				;---THIS IS THE CODE AREA 
+ 0109  A1 0103 R		PROGCODE:	MOV	AX,DATA1	;move the first word into AX 
+ 010C  03 06 0103 R				ADD	AX,DATA1	;add the second word 
+ 0110  A3 0107 R		                MOV     SUM,AX          ;move the sum 
+ 0113  B4 4C					MOV	AH,4CH 
+ 0115  CD 21					INT	21H 
+				;----------------------------------------- 
+ 0117				CODSG		ENDS 
+						END	START 
+Microsoft (R) Macro Assembler Version 5.00                  3/21/10 12:18:54
+PROG2-5 COM PROGRAM TO ADD TWO WORDS                        Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODSG  . . . . . . . . . . . . .  	0117	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+DATA1  . . . . . . . . . . . . .  	L WORD	0103	CODSG
+DATA2  . . . . . . . . . . . . .  	L WORD	0105	CODSG
+
+PROGCODE . . . . . . . . . . . .  	L NEAR	0109	CODSG
+
+START  . . . . . . . . . . . . .  	L NEAR	0100	CODSG
+SUM  . . . . . . . . . . . . . .  	L WORD	0107	CODSG
+
+@FILENAME  . . . . . . . . . . .  	TEXT  com_file		
+
+
+     19 Source  Lines
+     19 Total   Lines
+      8 Symbols
+
+  50296 + 450888 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

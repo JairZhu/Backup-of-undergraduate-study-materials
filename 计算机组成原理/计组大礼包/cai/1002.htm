@@ -1,0 +1,250 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>安腾体系结构的基本设计思想</title>
+
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="969" height="24"></p>
+		<p align="center"> <a href="1000.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">10.2 安腾体系结构的基本设计思想</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<b><font size="6"><a href="#.1"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">导入</a><br>
+			<a href="#.2"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">10.2.1.显式并行指令计算（EPIC）技术</a><br>
+			<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16"></a><a href="#.2">10.2.</a><a href="#.3">2</a><a href="#.2">.</a><a href="#.3">超长指令字（VLIW）技术</a><br>
+			<a href="#.4"><img border="0" src="pic/items/section_lb.gif" width="16" height="16"></a><a href="#.2">10.2.</a><a href="#.4">3</a><a href="#.2">.</a><a href="#.4">分支推断技术</a><br>
+			<a href="#.5"><img border="0" src="pic/items/section_lb.gif" width="16" height="16"></a><a href="#.2">10.2.</a><a href="#.5">4</a><a href="#.2">.</a><a href="#.5">推测技术</a><br>
+			<a href="#.6"><img border="0" src="pic/items/section_lb.gif" width="16" height="16"></a><a href="#.2">10.2.</a><a href="#.6">5.软件流水技术</a><br>
+			<a href="#.7"><img border="0" src="pic/items/section_lb.gif" width="16" height="16"></a><a href="#.2">10.2.</a><a href="#.7">6.寄存器堆栈技术</a><br>
+			　</font></b>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="991" height="590" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><a name=".1"><font color="#FFFFFF">导入</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:25pt">安腾体系结构脱离了</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:25pt;mso-fareast-language:ZH-CN">IA-32 CISC</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:25pt">体系结构的束缚，但并没有</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:25pt">完全照搬</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:25pt;
+mso-fareast-language:ZH-CN">RISC</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:25pt">处理机的设计思想。</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:25pt;mso-fareast-language:ZH-CN">EPIC</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:25pt">既不是</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:25pt;mso-fareast-language:ZH-CN">RISC</span><span style="font-family:
+宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:25pt">，也不</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:25pt">是</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:25pt;mso-fareast-language:ZH-CN">CISC</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:25pt">，而是一种吸收了</span><span lang="EN-US" style="mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:25pt;mso-fareast-language:ZH-CN">CISC</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:25pt">和</span><span lang="EN-US" style="mso-fareast-font-family:宋体;
+mso-hansi-font-family:Arial;font-size:25pt;mso-fareast-language:ZH-CN">RISC</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:25pt">两者长处的全新的体</span><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:25pt">系结构。主要体现在以下几个方面：</span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font color="red"><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">显式并行指令计算</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">(EPIC)</span><span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">技术</span></font></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font color="red"><span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt">超长指令字</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt;
+mso-fareast-language:ZH-CN">(VLIW)</span><span style="font-family:宋体;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:24pt">技术</span></font></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt"><font color="red">分支推断技术</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt"><font color="red">推测技术</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt"><font color="red">软件流水技术</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:24pt"><font color="red">寄存器堆栈技术</font><br>
+			  　</span></div>
+			</li>
+		</ul>
+	</div>
+			<p>　</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">10.2.1</a></font><font color="#FFFFFF" size="6"><a name=".2">. 显式并行指令计算（EPIC）</a></font><font size="6"><font color="#FFFFFF"><a name=".2">技术</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+			<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		<font size="6">
+		安腾的指令中设计了属性字段，用于指明哪些指令可以并行执行。这些属性信息并不是在指令执行过程中由处理机判定后获得的，而是由编译程序在编译时通过对源代码的分析获取指令级的并行性信息，并填写到执行代码中。这就是所谓</font><font size="6" color="red">显式并行</font><font size="6">的概念。 </font></span></div>
+			<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">EPIC</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">技术则充分利用现代编译程序强大的对程序执行过程的调度能力，由专用的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">EPIC</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">编译器首先分析源代码，根据指令之间的依赖关系最大限度地挖掘指令级的并行性，从而确定哪些指令可以并行执行，然后把并行指令放在一起并重新排序，提取并调度其指令级的并行，并将这种并行性通过属性字段</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">显式</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">地告知指令执行部件。</font></span><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">
+		</font></span></div>
+	<p>
+	　</p>
+	  </td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".3">10.2.2. 超长指令字（VLIW）技术</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+	<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><font color="red"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">超长指令字</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(VLIW)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">技术</font></span></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">是提高计算机系统并行性的有效手段。</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">VLIW</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: 宋体"><font size="6">系统中指令字长可多达几百位，编译器经过优化，能将多条能够并行执行的指令合并成一个具有多个操作码的超长指令字，控制多个独立的功能部件工作。 
+		</font></span></div>
+			<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+	  </div>
+	  </td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".4">10.2.3. 分支推断技术</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6" color="red">推断技术</font><font size="6">能将传统的</font></span><span style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">“</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">if</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"> </font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">then</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"> </font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">else</font></span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">”</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">分支结构转变为无分支的顺序</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">/</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">并行代码，以避免由于错误预测分支而付出代价。当处理机在运行中遇到分支时，它并不是进行传统的分支预测并选择可能性最大的一个分支执行，而是按分支的所有可能的后续路径开始并行执行多段代码并暂存各段代码的执行结果，直到处理机能够确认分支转移与否的条件是真是假时，处理机再把应该选择的路径上的指令执行结果保留下来。</font></span><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">
+		</font></span></div>
+	<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">采用了推断技术后，原有的转移指令被转换成条件执行指令。原有的转移指令的所有的分支都被并行执行，无论哪条分支将被命中，都不会出现流水线断流现象，故消除了因分支预测失误而重新装载流水线导致的低效率现象。更进一步，以前由于程序分支和指令依赖等因素不能并行执行的许多指令现在完全可以并行执行，从而提高了处理机的执行效率。</font></span></div>
+	<p>
+	　</p>
+	  </td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font color="#FFFFFF" size="6"><a name=".5">10.2.4. </a></font><font size="6"><a name=".5"><font color="#FFFFFF">推测技术</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+	<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		<font size="6" color="red">推测技术</font><font size="6">，包括</font><font size="6" color="blue">控制推测</font><font size="6">和</font><font size="6" color="blue">数据推测</font><font size="6">，以减少存储器访问响应时间的影响。 </font></span></div>
+	<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">控制推测技术和数据推测技术允许提前执行从内存单元至通用寄存器的取数指令。当程序中有分支时，控制推测技术将位于分支指令之后的取数指令提前若干周期执行，以此消除访存延时，提高指令执行的并行度。而数据推测技术则用于解决提前取数指令后的数据相关性问题。 
+		</font></span></div>
+	<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">推测技术避免了</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">命中失败而导致访存延迟的损失，消除了因处理机空闲而导致的并行性降低的缺憾。</font></span></div>
+	<p>　</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".6">10.2.5. 软件流水技术</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+	<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		<font size="6">
+		安腾体系结构提供了很强的硬件支持，使循环执行过程中一次循环的代码执行与下一次循环代码的执行在时间上部分重叠，也即下一个循环步可以在上一个循环步结束前开始执行。</font></span><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">
+		这种实现并行性的方式称为</font><font size="6" color="red">软件流水</font><font size="6">。</font></span></div>
+	<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">安腾体系结构引入了新机制来支持软件流水，包括自动寄存器重命名、推断执行和特殊的循环终止指令。因此，安腾处理机能够通过旋转寄存器机制为每个循环步提供自己的寄存器，并且不需要把循环扩展开来。 
+		</font></span></div>
+			<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">安腾体系结构中硬件对编译器管理软件流水线的支持使得编译器能够生成精简的代码，以高度并行的方式实现循环操作。</font></span><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">
+		</font></span></div>
+	  </td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".7">10.2.6. 寄存器堆栈技术</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73"><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+	<font size="6">安腾处理机利用</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">128</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个通用寄存器中的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">96</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个堆栈寄存器实现寄存器堆栈，并在处理机内部设置一个寄存器堆栈引擎</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">RSE</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">来管理寄存器堆栈。当</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">96</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">个堆栈寄存器不够用时，寄存器堆栈引擎能够自动将寄存器堆栈与内存储器对接，将寄存器堆栈溢出的数据转移到内存储器中保存，或在寄存器堆栈弹出数据时执行反向操作。这样，编译器将看到一个容量没有限制的寄存器堆栈空间。</font></span><span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:30pt">
+	</span></td>
+  </tr>
+					
+      </table>

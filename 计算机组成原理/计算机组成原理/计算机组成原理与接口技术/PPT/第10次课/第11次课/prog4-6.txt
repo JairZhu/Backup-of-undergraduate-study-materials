@@ -1,0 +1,29 @@
+TITLE PROGRAM 4-6: MODIFIED VERSION OF PROGRAM 4-5
+;THIS PROGRAM SOUNDS THE BELL CONTINUOUSLY UNTIL 'Q' OR 'q' IS PRESSED
+          .MODEL SMALL
+          .STACK
+          .DATA
+MESSAGE DB  'TO STOP THE BELL SOUND PRESS Q (or q) KEY$'
+          .CODE
+MAIN      PROC
+          MOV     AX,@DATA
+          MOV     DS,AX
+          MOV     AH,09
+          MOV     DX,OFFSET MESSAGE   ;DISPLAY THE MESSAGE
+          INT     21H
+AGAIN:    MOV     AH,02                      
+          MOV     DL,07             ;SOUND THE BELL BY SENDING OUT BELL CHAR 
+          INT     21H
+          MOV     AH,01             ;CHECK FOR KEY PRESS
+          INT     16H               ;USING INT 16H
+          JZ      AGAIN             ;IF NO KEY PRESS KEEP SOUNDING THE BELL
+          MOV     AH,0              ;TO GET THE CHARACTER 
+          INT     16H               ;WE MUST USE INT 16H ONE MORE TIME
+          JE      EXIT              ;IF YES EXIT
+          CMP     AL,'q'            ;IS IT 'q'
+          JE      EXIT              ;IF YES EXIT
+          JMP     AGAIN             ;NO. KEEP SOUNDING THE BELL
+EXIT:     MOV     AH,4CH            ;GO BACK TO DOS
+          INT     21H
+MAIN      ENDP
+          END

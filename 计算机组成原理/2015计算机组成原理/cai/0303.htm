@@ -1,0 +1,275 @@
+
+       <script src="expand.js"></script><title>3.3 DRAM存储器</title>
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="969" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0300.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">3.3 DRAM存储器</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.3.1 
+	DRAM存储位元的记忆原理</a><br>
+	<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.3.2 
+	DRAM芯片的逻辑结构</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.3.3 
+	读/写周期</a><br>
+	<a href="#.5">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.3.4 
+	存储器容量的扩充</a><br>
+	<a href="#.6">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.3.5 
+	高级的DRAM结构</a><br>
+	<a href="#.7">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.3.6 
+	DRAM主存读/写的正确性校验</a><br>
+	　</font></b></p>
+  <p>　</p>
+</form>
+
+<table border="0" width="990" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><a name=".1"><font size="6" color="#FFFFFF">3</font></a><font color="#FFFFFF" size="6"><a name=".1">.3.1 
+	</a></font><a name=".1"><font size="6" color="#FFFFFF">DRAM</font></a><font size="6"><a name=".1"><font color="#FFFFFF">存储位元的记忆原理</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="23" height="73"></td>
+    <td width="967" height="73"><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+		<p><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+		  <font size="6">SRAM</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">存储器的存储位元是一个触发器，它具有两个稳定的状态。</font></span></p>
+		<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">而</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font color="#FF0000" size="6">DRAM</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">存储器的存储元是由一个</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">MOS</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">晶体管和电容器组成的记忆电路:</font></span></p>
+	  </div>
+	<p>
+	<p align="center"><a href="素材库/fig/Flash/3-6.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a> </p>
+	<p align="center"><font size="6" face="宋体">图3.6 一个DRAM存储元的写、读、刷新操作</font></p></td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">3</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.3.2 
+	DRAM芯片的逻辑结构</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="23" height="73"></td>
+    <td width="967" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:111%;layout-flow:
+vertical"><span style="mso-special-format:bullet;color:#330066;mso-color-index:
+3;position:absolute;left:-3.49%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><font size="6"><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical">图</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;layout-flow:vertical;mso-fareast-language: ZH-CN">3.7(a)</span><span style="font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;layout-flow:vertical">示出</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical;mso-fareast-language:ZH-CN">1M</span><span lang="EN-US" style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: Arial;layout-flow:vertical;mso-fareast-language:ZH-CN">×</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical;mso-fareast-language:ZH-CN">4</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical">位</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;layout-flow:vertical;mso-fareast-language: ZH-CN">DRAM</span><span style="font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;layout-flow:vertical">芯片的管脚图，其中有两个电源脚、两个地线</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical">脚，为了对称，还有一个空脚（</span><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial; layout-flow:vertical;mso-fareast-language:ZH-CN">NC</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical">）。 </span></font></div>
+		<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><span style="layout-flow: vertical"><span style="mso-special-format:bullet;color:#330066;mso-color-index: 3;position:absolute;left:-4.1%;top:.39em;font-family:Wingdings">l</span></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical">图</span><span lang="EN-US" style="mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial;layout-flow:vertical;mso-fareast-language: ZH-CN">3.7(b)</span><span style="font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:Arial;layout-flow:vertical">是该芯片的逻辑结构图。<font color="#FF0000">与</font></span><font color="#FF0000"><span lang="EN-US" style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical;mso-fareast-language:ZH-CN">SRAM</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical">不同的是</span></font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;layout-flow:vertical">：</span></font><font size="6"> </font></div>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">
+			<font size="6">（</font></span><font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">1</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">）<font color="#0000FF">增加了行地址锁存器和列地址锁存器</font>。由于</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">DRAM</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">存储器容量很大，地址线宽度相应要增加，这势必增加芯片地址线的管脚数目。为避免这种情况，采取的办法是分时传送地址码。若地址总线宽度为</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">10</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">位，先传送地址码</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">A0</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">～</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">A9</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">，由行选通信号</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">RAS</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">打入到行地址锁存器；然后传送地址码</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">A10</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">～</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">A19</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">，由列选通信号</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">CRS</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">打入到列地址锁存器。芯片内部两部分合起来，地址线宽度达</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">20</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">位，存储容量为</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">1M</span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">×</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">4</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">位。 
+			</span></font></div>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">
+			（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">2</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">）<font color="#0000FF">增加了刷新计数器和相应的控制电路</font>。</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">DRAM</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">读出后必须刷新，而未读写的存储元也要定期刷新，而且要按行刷新，所以刷新计数器的长度等于行地址锁存器。刷新操作与读</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">/</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">写操作是交替进行的，所以通过</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">2</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">选</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">1</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">多路开关来提供刷新行地址或正常读</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN">/</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">写的行地址。</span></font></div>
+	</div>
+	<p>&nbsp;</p>
+	  <p align="center"><a href="素材库/fig/Flash/3-7.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a> </p>
+	  <p align="center"><font size="6" face="宋体">图3.7 一个DRAM存储元的写、读、刷新操作</font></p></td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">3</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.3.3 
+	读/写周期</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="23" height="73"></td>
+    <td width="967" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	  <font size="6">　<font color="#0000FF">读周期、写周期的定义</font>是从行选通信号RAS下降沿开始，到下一个RAS信号的下降沿为止的时间，也就是连续两个读周期的<font color="#FF0000">时间间隔</font>。通常为控制方便，读周期和写周期时间相等。</font>
+	  <p>
+	  <p align="center"><a href="素材库/fig/Flash/3-8.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a> </p>
+	  <p align="center"><font size="6" face="宋体">图3.8 DRAM的周期波形</font></p></td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	  <p align="left"></td> 
+  		</tr>
+	<tr>
+    <td width="23" height="73"></td>
+    <td width="967" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:167%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-3.28%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">刷新周期</font><font size="6">：</font></span><font size="6"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">DRAM</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">存储位元是基于电容器上的电荷量存储，这个电荷量随着时间和温度而减少，因此必须定期地刷新，以保持它们原来记忆的正确信息。 
+			</span></font></div>
+		<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.92%; top: .39em; font-family: Wingdings">
+			l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">刷新操作有两种刷新方式： 
+			</span></font></div>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<ul>
+				<li>
+				  <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.74%; top: .39em; font-family: Wingdings">
+				l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#FF0000">集中式刷新</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">:DRAM</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">的所有行在每一个刷新周期中都被刷新。 
+				</span></font></li>
+			</ul>
+		</div>
+		<div class="O2" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<blockquote>
+				<blockquote>
+					<p>
+					  <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.22%; top: .39em; font-family: Wingdings">
+					l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">例如刷新周期为</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">8ms</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">的内存来说，所有行的集中式刷新必须每隔</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">8ms</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">进行一次。为此将</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">8ms</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">时间分为两部分：前一段时间进行正常的读</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">/</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">写操作，后一段时间（</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">8ms</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">至正常读</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">/</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">写周期时间）做为集中刷新操作时间。 
+					</span></font></p>
+				</blockquote>
+			</blockquote>
+		</div>
+		<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<ul>
+				<li>
+				  <font size="6"><span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.68%; top: .39em; font-family: Wingdings">
+				l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF">分散式刷新</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">:</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">每一行的刷新插入到正常的读</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">/</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">写周期之中。 
+				</span></font></li>
+			</ul>
+		</div>
+		<div class="O2" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:622;
+mso-text-indent-alt:437;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<blockquote>
+				<blockquote>
+					<p>
+					  <font size="6"><span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.46%; top: .39em; font-family: Wingdings">
+					l</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">例如</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">p72</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">图</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">3.7</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">所示的</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">DRAM</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">有</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">1024</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">行，如果刷新周期为</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">8ms</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">，则每一行必须每隔</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">8ms</span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">÷</span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">1024=7.8us</span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">进行一次。 
+					</span></font></p>
+			  </blockquote>
+		  </blockquote>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;80 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+　</div>
+	</div>
+	<p>
+	　</p>	  </td>
+  </tr>
+					
+		<tr>
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong>
+	<font color="#FFFFFF" size="6">
+	<a name=".5">3.3.4 </a></font><font size="6"><a name=".5">
+	<font color="#FFFFFF">存储器容量的扩充</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="23" height="73"></td>
+    <td width="967" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<font size="6" face="楷体_GB2312" color="#0000FF">1、字长位数扩展</font>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<p style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">
+			  <font size="6">
+		      给定的芯片字长位数较短，不满足设计要求的存储器字长，此时需要用多片给定芯片扩展字长位数。</font></p>
+			<p style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><font size="6">一般原则：三组信号线中，地址线和控制线公用而数据线单独分开连接。 </font></p>
+		</div>
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<p align="center"><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical">
+		    <font color="#0000FF" size="6">d =</font></span><font color="#0000FF"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><font size="6"> 设计要求的存储器容量 </font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical; mso-fareast-language: ZH-CN"><font size="6">/</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><font size="6"> 选择芯片存储器容量</font></span></font></p>
+		  <p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; layout-flow: vertical"><font size="6"><b><font size="6">【</font></b>例3.2】利用1M×4位的SRAM芯片，设计一个存储容量为1M×8位的SRAM存储器。<br />
+		          <font color="#0000FF">解：</font> 所需芯片数：d=（1M×8） / （1M×4）=2(片)<br />
+		    设计的存储器字长为8位，存储器容量不变。连接的三组信号线与例相似，即地址线、控制线公用，数据线分高4位、低4位，但是数据线是双向的，与SRAM芯片的I/O端相连接。</font></span></p>
+		    </div>
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1"></div>
+		<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+<font face="楷体_GB2312" size="6" color="#0000FF">2、字存储容量扩展</font></div>
+	</div>
+	<p><font size="6">
+	给定的芯片存储容量较小（字数少），不满足设计要求的总存储容量，此时需要用多片给定芯片来扩展字数。三组信号组中给定芯片的地址总线和数据总线公用，控制总线中R/W公用，使能端EN不能公用，它由地址总线的高位段译码来决定片选信号。所需芯片数仍由（d=设计要求的存储器容量/选择芯片存储器容量）决定。</font></p>
+	<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"><span class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"><font size="6">【例3.3】利用1M×8位的DRAM芯片设计2M×8位的DRAM存储器。<br />
+              <font color="#0000FF">解：</font> 所需芯片数：d=（2M×8） / （1M×8）=2(片)<br />
+设计的存储器如图3.10所示。字长位数不变，地址总线A0~A19同时连接到两片DRAM的地址输入端，地址总线最高位有A20、/A20之分：A20作为DRAM1的片选信号，/A20作为DRAM2的片选信号，这两个芯片不会同时工作。<br />
+    </font></span></font></span></p>
+	<p align="center">&nbsp;</p>
+	<font size="6"><font color="#0000FF">3.存储器模块条</font><br />
+存储器通常以插槽用模块条形式供应市场。这种模块条常称为内存条。它们是在一个条状形的小印制电路板上，用一定数量的存储器芯片(如8个RAM芯片)，组成一个存储容量固定的存储模块。然后，通过它下部的插脚插到系统板的专用插槽中，从而使存储器的总容量得到扩充。<br />
+      </font></span></p>
+			<p align="center">&nbsp;</p>	  </td>
+  </tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".6">3</a></font><font size="6"><font color="#FFFFFF"><a name=".6">.3.5
+	高级的DRAM结构</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="23" height="73"></td>
+    <td width="967" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<font size="6">FPM 
+	DRAM：快速页模式动态存储器，它是根据程序的局部性原理来实现的。读周期和写周期中，为了寻找一个确定的存储单元地址，首先由低电平的行选通信号/RAS确定行地址，然后由低电平的列选信号/CAS确定列地址。下一次寻找操作，也是由/RAS选定行地址，/CAS选定列地址，依此类推。</font> 
+	<p align="center"><a href="素材库/fig/Flash/3-12.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a> </p>
+	<p align="center"><font size="6">图3.12 时序图 </font></p>
+	<p><br>
+	<font size="6">CDRAM带高速缓冲存储器（cache）的动态存储器，它是在通常的DRAM芯片内又集成了一个小容量的SRAM，从而使DRAM芯片的性能得到显著改进。如图所示出1M×4位CDRAM芯片的结构框图，其中SRAM为512×4位。</font></p>
+	<p><font size="6">如果连续的地址高11位相同，意味着属于同一行地址，那么连续变动的9位列地址就会使SRAM中相应位组连续读出，这称为猝发式读取。 </font></p>
+	<p align="center"><a href="素材库/fig/Flash/3-13.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图3.13 1M×4位CDRAM芯片的结构框图</font></p>
+	<p><font size="6">SDRAM同步型动态存储器。计算机系统中的CPU使用的是系统时钟，SDRAM的操作要求与系统时钟相同步，在系统时钟的控制下从CPU获得地址、数据和控制信息。换句话说，它与CPU的数据交换同步于外部的系统时钟信号，并且以CPU/存储器总线的最高速度运行，而不需要插入等待状态。</font></p>
+	<p align="center"><a href="素材库/fig/Flash/3-14.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图3.14 SDRAM内部结构和读操作时序图</font></p>
+	<p><font size="6">【例3.4】CDRAM内存条组成实例。<br />
+	  一片CDRAM的容量为1M×4位，8片这样的芯片可组成1M×32位(4MB)的存储模块，其组成如图3.15所示。<br />
+	</font></p>
+	<p align="center"><a href="素材库/fig/Flash/3-15.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图3.15 1M×32位CDRAM模块的组成</font></p>
+	<p></td>
+  </tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".7">3</a></font><font size="6"><font color="#FFFFFF"><a name=".7">.3.6 
+	DRAM主存读/写的正确性校验</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="23" height="73"></td>
+    <td width="967" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<font size="6">
+	DRAM通常用做主存储器，其读写操作的正确性与可靠性至关重要。为此除了正常的数据位宽度，还增加了附加位，用于读/写操作正确性校验。增加的附加位也要同数据位一起写入DRAM中保存。其原理如图3.16所示。</font>
+	<p align="center"><a href="素材库/fig/Flash/3-16.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a>    
+	<p align="center"><font size="6">图3.16 主存正确性校验</font></td>
+  </tr>
+	   </table>
+      

@@ -1,0 +1,266 @@
+
+       
+<meta http-equiv="content-type" content="text/html;charset=gb18030">
+<script src="expand.js"></script>
+<title>9.2 调度</title>
+
+      
+<p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="967" height="24"></p>
+<div align="center">
+	<p>   <a href="0900.htm"><img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+</div>
+<p><font size="6" color="#0000FF">9.2 调度</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.2.1 
+	进程</a><br>
+				<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.2.2 
+	</a><a href="#.3">调度</a><a href="#.2">的层次</a><br>
+				<a href="#.3"><img border="0" src="pic/items/section_lb.gif" width="16" height="16">9.2.3 
+	处理机调度的实现</a><br>
+				　</font></b></p>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="991" height="371" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><font color="#FFFFFF" size="6"><a name=".1">9.2.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">进程</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6" color="red">1、进程的概念</font>
+							<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">在操作系统中，通常使用</font><font size="6" color="red"><strong>进程</strong></font></span><span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN"><font size="6">(process)这一概念描述程序的动态执行过程。 </font></span></p>
+						</div>
+				<ul>
+					<li>
+					<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">程序是静态实体； 
+						</font></span></div>
+					</li>
+					<li>
+					<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+									<span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">进程是动态实体，是执行中的程序。进程不仅仅包含程</font></span><font size="6"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman">序代码，也包含了当前的状态（这由程序计数器和处理机中的相关寄存器表示）和资源。因此，如果两个用户用同样一段代码分别执行相同功能的程序，那么其中的每一个都是一个独立的进程。虽然其代码是相同的，但是数据却未必相同。</span></font></div>
+					</li>
+				</ul>
+			</div>
+					<p><font size="6" color="red">2、进程的状态</font><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;; font-size:24pt">进程在不同阶段会处于不同状态。进程的状态会随着进程当前进</span>
+					<p></p>
+					<div v:shape="_x0000_s1026">
+						<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<div v:shape="_x0000_s1026" class="O">
+								<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+									<div v:shape="_x0000_s1026" class="O">
+										<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+											<span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: &quot;Times New Roman&quot;;font-size:24pt">行的活动而改变。 </span></div>
+										<ul>
+											<li>
+												<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+													<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt"><font color="blue">创建</font>：正在被创建，并未准备好运行。 </span></div>
+											<li>
+												<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+													<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt"><font color="blue">就绪</font>：已经准备好运行，并正等待分配处理器时间。 </span></div>
+											<li>
+												<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+													<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt"><font color="blue">运行</font>：正占用处理机执行。 </span></div>
+											<li>
+												<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+													<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt"><font color="blue">阻塞</font>：由于等待I/O操作完成或某些事件出现而被系统挂起。 </span></div>
+											<li>
+												<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+													<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt"><font color="blue">终止</font>：完成操作结束运行。 </span></div>
+											
+										</ul>
+										<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+											<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;; font-size:24pt">在不同的系统中，进程的状态种类和名称不尽相同。系统</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt">中可能有多个进程处于创建、就绪、阻塞和终止等状态，但是处理机在任意时刻只能运行一个进程。</span>
+											<p><font size="6" color="red">3、进程控制块</font></p>
+											<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt">为了管理和控制进程，操作系统必须保存与每个进程有关的状态等信息。为此，操作系统为每个进程设置一个<strong><font color="red">进程控制块</font></strong>PCB（Process Control Block）。PCB中记录了操作系统所需要的用于描述进程情况及控制进程运行所需的全部信息。PCB通常包含以下信息：</span></p>
+											<p><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt;mso-fareast-language: ZH-CN"><font size="6">(1)进程标识符用于唯一标识当前进程； </font></span></p>
+											<p><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt;mso-fareast-language: ZH-CN"><font size="6">(2)状态记录进程当前状态；</font></span></p>
+											<p><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt;mso-fareast-language: ZH-CN"><font size="6">(3)程序计数器将要执行的下一条指令的地址；</font></span></p>
+											<p><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt;mso-fareast-language: ZH-CN"><font size="6">(4)进程上下文进程执行时CPU内部寄存器的取值，是进程执行的现场数据； </font></span></p>
+											<p><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt;mso-fareast-language: ZH-CN"><font size="6">(5)存储管理信息指明进程占用的内存空间的范围；</font></span></p>
+											<p><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt;mso-fareast-language: ZH-CN"><font size="6">(6)I/O状态信息例如打开的文件、未完成的I/O请求、占用的I/O设备等。</font></span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	</div>
+			<div v:shape="_x0000_s1026">
+				<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+							<div v:shape="_x0000_s1026">
+								<div class="O" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216; mso-char-wrap:1;mso-kinsoku-overflow:1"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>　<font size="6" color="red">4、进程调度的模式</font>
+			<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;; font-size:24pt">通常将进程调度分为<font color="red">抢占式</font>和</span><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: &quot;Times New Roman&quot;;font-size:24pt">非<font color="red">抢占式</font>两种模式。</span></p>
+			<p><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;; font-size:24pt;mso-fareast-language:ZH-CN">(1)<font color="red">非抢占模式</font>：非抢占模式是指一旦将处理机时间分配给某个进</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt">程后，便让该进程一直运行，直到该进程因运行完毕或因发生某事件而被阻塞，才把处理机时间重新分配给其它进程。否则，不允许其他进程抢占已经分配出去的处理机时间。</span><span style="font-family:&quot;Times New Roman&quot;;mso-ascii-font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt">“</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt">先来先服务</span><span style="font-family:&quot;Times New Roman&quot;;mso-ascii-font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt">”</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt">策略就是一种非抢占调度模式，先进入就绪队列的进程首先运行，直到运行结束或被阻塞为止。这种调度模式的优点是实现简单、系统开销小，但无法满足实时系统对紧急事件处理的时间要求。</span></p>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<span lang="EN-US" style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;; font-size:24pt;mso-fareast-language:ZH-CN">(2)<font color="red">抢占模式</font>：在抢占调度模式中，允许进程调度程序根据某种策</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:24pt">略，暂停某个正在运行的进程，将处理机时间重新分配给另一个进程。</span></div>
+				<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					
+				</div>
+			</div>
+			<span style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;; font-size:24pt">常用的抢占策略有： </span>
+			<div v:shape="_x0000_s1026">
+				<ul>
+					<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6" color="blue"><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: &quot;Times New Roman&quot;;font-size:20pt">时间片策略</span></font><font size="6"><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: &quot;Times New Roman&quot;;font-size:20pt">：处理机时间被分割为等长的时间单位，称为时间片。每个进</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt">程被分配一个时间片运行，当该时间片超时时，由操作系统重新进行进程调度，将处理机时间交给另一个就绪进程。这种策略适用于分时系统和要求较高的批处理系统。 </span></font></div>
+					<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6" color="blue"><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: &quot;Times New Roman&quot;;font-size:20pt">优先权策略</span></font><font size="6"><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: &quot;Times New Roman&quot;;font-size:20pt">：操作系统为某些重要或紧急的进程指定较高的优先级。当这</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt">种进程就绪时，如果其优先级比正在运行的进程的优先级高，便暂停正在运行的进程，将处理机时间分配给优先级高的进程。 </span></font></div>
+					<li>
+						<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436; mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+							<font size="6" color="blue"><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: &quot;Times New Roman&quot;;font-size:20pt">短进程优先策略</span></font><font size="6"><span style="font-family: 宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family: &quot;Times New Roman&quot;;font-size:20pt">：当就绪队列中的某个进程比正在运行的进程的运行时间</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt">明显地短时，操作系统将剥夺长进程的执行，将处理机分配给短进程，使之优先运行。该调度策略能有效地降低进程的平均等待时间，提高系统的吞吐量。</span></font></div>
+				</ul>
+			</div>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">9</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.2.2 
+	调度的层次</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<p><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">1、</font><font size="6" color="red">高级调度</font></span></p>
+					<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt"><font size="6">高级调度</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">是指按一定原则把辅存上处于后备队列中的作业调入内存，并为它们创建进程、分配必要的资源，再将新创建的进程排在就绪队列上准备执行。高级调度决定哪些作业可以进入系统竞争系统资源。</font></span></p>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt"><font size="6">操作系统在进行高级调度时必须考虑两个因素：</font></span></div>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<font size="6"><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;; font-size:20pt;mso-fareast-language:ZH-CN">(1)接纳多少个作业系统允许有多少个作业同时在内存中运行用多道程序度表</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt">征。内存中同时运行的作业太多可能会影响到系统的服务质量，同时运行的作业太少又会导致系统资源利用率和系统吞吐量太低。因此，多道程序度的确定应根据系统的规模和运行速度等做适当折衷。</span></font></div>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<font size="6"><span lang="EN-US" style="font-family:宋体;mso-ascii-font-family: 宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;; font-size:20pt;mso-fareast-language:ZH-CN">(2)接纳哪些作业操作系统根据所采用的调度算法决定哪些作业从辅存调入内</span><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt">存。例如，先来先服务调度算法将最早进入辅存的作业最先调入内存；短作业优先调度算法将辅存上最短的作业最先调入内存；而基于作业优先权的调度算法则需根据作业的重要程度与轻重缓急选择调入内存的作业。 </span></font></div>
+				<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><font size="6"><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt">高级调度在较大的粒度上决定对处理机时间的使用权分配，故又称</span></font><font size="6" color="red"><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt"><strong>作业调度</strong></span></font><font size="6"><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt">、收容调度或长程调度。</span></font>
+					<p><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">2、</font><font size="6" color="red">低级调度</font></span><font size="6"><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt"> </span></font></p>
+				</div>
+				<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">低级调度即进程调度，决定当存在多个就绪进程时，哪一个就绪进程将分配到中央处理机的运行时间，并且把中央处理机实际分配给这个进程。 </font></span></div>
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap: 1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><font size="6"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman">低级调度在较小的粒度上决定对处理机时间的使用权分配，又称为短程调度。低级调度执行非常频繁，进程调度程序每秒钟可执行多次进程调度，故进程调度程序必须常驻内存。</span></font>
+							<p><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">3、</font><font size="6" color="red">中级调度</font></span><font size="6"><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体; mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:20pt"> </span></font></p>
+						</div>
+					</div>
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">中级调度的目的是为了提高内存的利用率和系统吞吐量。为了让那些因为某些原因暂时不能运行的进程不再占用宝贵的内存资源，操作系统通过中级调度将这些进程调出至辅存等待。当这些处于挂起状态的进程再次准备好运行，且内存又出现空闲空间时，由中级调度决定将辅存上的哪些处于就绪驻外存状态的进程重新调入内存。被调入的进程将转换为就绪状态挂在就绪队列上，等待进程调度。</font></span></div>
+			</div>
+			<p>
+	　</p>
+		</td>
+  </tr>
+	<tr>
+		<td width="27" height="73"></td>
+		<td width="964" height="73"></td>
+	</tr>
+	<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">9</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.2.3 
+	处理机调度的实现</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="964" height="73">
+			<div align="center">
+				 <a href="素材库/fig/Flash/9.4.swf" target="_blank"><img src="pic/items/cai.jpg" height="100" width="100" border="0"></a>
+				<p><font size="6">图9.4三级处理机调度队列模型</font></p>
+			</div>
+			<p><span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">为了调度的方便，操作系统会建立并维护若干个</font><font size="6" color="red">进程队列</font><font size="6">。每个队列均用于维护一个等待某些资源的进程的列表。</font></span></p>
+			<div v:shape="_x0000_s1026" class="O">
+				<div style="mso-line-spacing:&quot;90 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<div v:shape="_x0000_s1026" class="O">
+						<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+							<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">在</font><font size="6" color="blue">批处理系统</font><font size="6">中，作业进入系统后，先驻留在辅存的后备队列中，作业调度从辅存的后备队列中选择作业调入内存，并为之创建进程，然后送入内存就绪队列，并等待进程调度。交互型作业则直接进入内存就绪队列。</font></span></div>
+					</div>
+				</div>
+			</div>
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">进程调度根据某种调度算法从就绪队列中选择一个进程运行。每个进程运行时都可能在分配给其运行的时间出现以下三种情况： 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+			<font size="6">(1)该进程在分配给其运行的时间内运行完成，该进程释放处</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">理机后转入完成状态；</font></span></div>
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+			<font size="6">(2)该进程在运行期间因等待某些事件（如等待某些资源可用</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">或等待某些I/O操作完成）而无法继续运行，操作系统将该进程送入内存阻塞队列；</font></span></div>
+		<div style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman; mso-fareast-language: ZH-CN">
+			<font size="6">(3)该进程在分配给其运行的时间超时时尚未运行完成，操作</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">系统将暂停该进程运行,并将该进程重新排入内存就绪队列。</font></span></div>
+	</div>
+			<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman"><font size="6">一旦进程等待的事件发生，操作系统进程调度程序可以将其从内存阻塞队列重新挂入内存就绪队列。而内存就绪队列中的进程可以被重新调度到运行状态。</font></span></div>
+		<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+					<span style="font-family:宋体;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;font-size:22pt"><font size="6">　　</font></span><font size="6"><span style="font-family: 宋体; mso-ascii-font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Times New Roman">在某个进程运行过程中，某些事件会使进程暂停执行而转入操作系统的进程调度程序执行。其一是该进程调用系统服务程序，例如请求系统进行I/O服务操作；其二是该进程引发中断，无论是硬件引发的输入/输出中断、软件错误引发的系统异常，还是系统定时器超时中断；其三是某些和该进程无关但影响系统状态的事件需要操作系统处理。</span></font></div>
+	</div>
+		</td>
+  </tr>
+							
+	   </table>

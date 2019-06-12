@@ -1,0 +1,397 @@
+
+       <script src="expand.js"></script><title>4.4 指令和数据的寻址方式</title>
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="968" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0400.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">4.4 指令和数据的寻址方式</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">导入</a><br>
+	<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">4.4.1 
+	指令的寻址方式</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">4.4.2 
+	操作数的寻址方式</a><br>
+  　</font></b></p>
+	<p align="center"><b><font size="6">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	　</font></b></p>
+	<p>　</p>
+	<p>　</p>
+</form>
+
+<table border="0" width="992" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080"><p align="left"><strong><font size="6"><a name=".1"><font color="#FFFFFF">导入</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="3" height="73"></td>
+    <td width="989" height="73"><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:167%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-4.1%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">研究问题 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.28%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">确定本条指令中各操作数的地址 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.28%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">下一条指令的地址 
+				</font></span></div>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.42%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">寻址方式是指</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">根据指令中给出的地址码字段寻找相应的操作数的方式，它与计算机硬件结构紧密相关，而且对指令的格式和功能有很大的影响。</font></span></div>
+	</div>
+	</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6"><font color="#FFFFFF"><a name=".2">4.4.1 
+	指令的寻址方式</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="3" height="73"></td>
+    <td width="989" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:144%">
+				<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-7.34%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">1. 顺序寻址方式<br />
+				由于指令地址在内存中按顺序安排，当执行一段程序时，通常是一条指令接一条指令的顺序进行。</font></span></div>
+			</li>
+			<li>
+			  <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">图4.1(a)是指令顺序寻址方式的示意图。<br />
+			  <br />
+		      2. 跳跃寻址方式<br />
+		      当程序转移执行的顺序时，指令的寻址就采取跳跃寻址方式。所谓跳跃，是指下条指令的地址码不是由程序计数器给出，而是由本条指令给出。</font></span></div>
+		  </li>
+		    <li>
+		      <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">图4.1(b)画出了指令跳跃寻址方式的示意图。<br />
+	          采用指令跳跃寻址方式，可以实现程序转移或构成循环程序，从而能缩短程序长度，或将某些程序作为公共程序引用。</font></span></div>
+	      </li>
+		    <li>
+		      <div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令系统中的各种条件转移或无条件转移指令，就是为了实现指令的跳跃寻址而设置的。</font></span></div>
+	      </li>
+		</ul>
+	</div>
+	<p align="center"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.15%; top: .39em; font-family: Wingdings"> <font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><i><u><font size="6">
+	<p:onmouseclick hyperlinktype="url"
+ href="../计算机组织与体系结构第四版资源库/第十一章/swf/11.9.swf"/>
+	</font></u></i></b></span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.93%; top: .39em; font-family: Wingdings"> <font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><i><u><font size="6">
+    <p:onmouseclick hyperlinktype="url"
+ href="../计算机组织与体系结构第四版资源库/第十一章/swf/11.7.swf"/>
+    </font></u></i></b></span> </font></span><a href="素材库/fig/Flash/4.1.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	  <p align="center"><font size="6">图4.1 指令的寻址方式</font></p></td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">4</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.4.2 
+	操作数的寻址方式</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="3" height="73"></td>
+    <td width="989" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	　
+	  <div v:shape="_x0000_s1026" class="O1">
+	  <p><span style="font-size:167%">
+		<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-3.92%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">由于指令中操作数字段的地址码是由形式地址和寻址方式特征位等组合形成</font></span></p>
+	  <p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">因此，一般来说，指令中所给出的地址码，并不是操作数的<font color="#FF0000">有效地址</font>。</font></span></p>
+	  <p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">
+	    <p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	  </font></span></p>
+	  <div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1"> <span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"> <font size="6">形成操作数的<font color="#FF0000">有效地址</font>的方法，称为操作数的<font color="#0000FF">寻址方式</font>。</font></span></div>
+	  <p><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.77%; top: .39em; font-family: Wingdings"><font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作数包含在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的某一个内部寄存器中； 
+		</font></span></p>
+	  <p>
+		<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.92%; top: .39em; font-family: Wingdings">
+		<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作数包含在主存储器中； 
+		</font></span></p>
+		<p>
+		<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.92%; top: .39em; font-family: Wingdings">
+		<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作数包含在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">I/O</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">设备的端口中 
+		</font></span></p>
+		<p>
+		<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.27%; top: .39em; font-family: Wingdings">
+		<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">根据操作数放在不同的地方，从而派生各种不同的寻址方式，往往不同的计算机具有不同的寻址方式。</font></span></p>
+		<p align="center"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.15%; top: .39em; font-family: Wingdings"> <font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><i><u><font size="6">
+	<p:onmouseclick hyperlinktype="url"
+ href="../计算机组织与体系结构第四版资源库/第十一章/swf/11.9.swf"/>
+	</font></u></i></b></span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.93%; top: .39em; font-family: Wingdings"> <font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><i><u><font size="6">
+    <p:onmouseclick hyperlinktype="url"
+ href="../计算机组织与体系结构第四版资源库/第十一章/swf/11.7.swf"/>
+    </font></u></i></b></span> </font></span><a href="素材库/fig/Flash/4.2.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+		<p align="center"><font size="6">图4.2 基本寻址方式</font> </p>
+		<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">一、隐含寻址</font></p>
+		<p><font face="宋体" size="6">
+		指令中隐含着操作数的地址，如某些运算，隐含了累加器AC作为源和目的寄存器，如8086汇编中的STC指令，设置标志寄存器的C为1。</font></p>
+		<p><font size="6" face="楷体_GB2312" color="#0000FF">二、立即寻址</font></p>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O">
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-size:144%">
+				<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-3.32%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">立即寻址是一种特殊的寻址方式，指令中在操作码字段后面的部分不是通常意义上的操作数地址，而是操作数本身，也就是说数据就包含在指令中，只要取出指令，就取出了可以立即使用的操作数，因此，这样的操作数被称为立即数。 
+				</font></span></div>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.95%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令格式：操作码OP </font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作数</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">A
+				</font></span></div>
+		</div>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O">
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-size:144%">
+				<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-3.49%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">特点：在取指令时，操作码和操作数被同时取出，不必再次访问存储器，从而提高了指令的执行速度。 
+				</font></span></div>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.96%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">但是，因为操作数是指令的一部分，不能被修改； 
+				</font></span></div>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.45%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">而且对于定</font></span><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">
+				</font></span>
+				<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+				<font size="6">长指令格式，操作数的大小将受到指令长度的限制，所以这种寻址方式灵活性最差 </font>
+				</span></div>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.49%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">通常用于给某一寄存器或主存单元赋初值，或者用于提供一个常数。</font></span></div>
+		</div>
+		<p><font size="6" face="楷体_GB2312" color="#0000FF">三、直接寻址</font></p>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">指令中地址码字段给出的地址</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">A</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">就是操作数的有效地址</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">EA(Effective 
+			Address)</font></span></div>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O1">
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-size:144%">
+				<span style="mso-special-format:bullet;color:#669999;mso-color-index:5;position:absolute;
+left:-3.79%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">操作数地址是不能修改的，与程序本身所在的位置无关，所以又叫做绝对寻址方式 
+				</font></span></div>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">在早期的计算机中，主存储器的容量较小，指令中地址码的位数要求不长，采用直接寻址方式简单快速，也便于硬件实现，因此，常被作为主要的寻址方式。 
+				</font></span></div>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">但在现代，随着计算机主存容量的不断扩大，所需的地址码将会越来越长。指令中地址码的位数将不能满足整个主存空间寻址的要求，因此直接寻址方式受到了很大的限制。另外，在指令的执行过程中，为了取得操作数，必须进行访存操作，降低了指令的执行速度。</font></span></div>
+		</div>
+		<p><font size="6" face="楷体_GB2312" color="#0000FF">四、间接寻址</font></p>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-family:Arial;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Arial;font-size:30pt"><b>&nbsp;</b></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">间接寻址意味着指令的地址码部分给出的地址</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">A</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">不是操作数的地址，而是存放操作数地址的主存单元的地址，简称操作数地址的地址。操作数的有效地址的计算公式为：</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">EA</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＝</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(A)</font></span><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+				<font size="6">
+				特点：因为操作数的有效地址在主存储器中，可以被灵活的修改而不必修改指令，从而使间接寻址要比直接寻址灵活得多。但是，间接寻址在指令执行过程中至少需要两次访问主存储器才能取出操作数，严重降低了指令执行的速度。</font></span></div>
+		</div>
+		<p><font size="6" face="楷体_GB2312" color="#0000FF">五、寄存器寻址</font></p>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">在指令的地址码部分给出</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">内某一通用寄存器的编号，指令的操作数存放在相应的寄存器中，即</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">EA=Ri
+			</font></span>
+			<p align="center">
+		</div>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O1">
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+				<font size="6">优点： </font></span></div>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+				<font size="6">(1)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">由于寄存器在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的内部，指令在执行时从寄存器中取操作数比访问主存要快得多； 
+				</font></span></div>
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+				<font size="6">(2)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">由于寄存器的数量较少，因此寄存器编号所占位数也较少，从而可以有效减少指令的地址码字段的长度。</font></span></div>
+		</div>
+		<p><font size="6" face="楷体_GB2312" color="#0000FF">六、寄存器间接寻址</font></p>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O" style="mso-line-spacing:&quot;90 0 0&quot;;
+mso-margin-left-alt:216;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">
+			寄存器间接寻址与寄存器寻址的区别在于： 指令格式中的寄存器内容不是操作数，而是操作数的地址，该地址指明的操作数在内存中</font></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><font size="6">。</font></span>
+		  <p align="center">
+		</div>
+		<p><font size="6" face="楷体_GB2312" color="#0000FF">七、偏移寻址</font></p>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<p style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		  <font size="6">一种强有力的寻址方式是直接寻址和寄存器间接寻址方式的结合，它有几种形式，我们称它为偏移寻址。</font></p>
+			<p style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">有效地址计算公式为EA=A+(R)它要求指令中有两个地址字段，至少其中一个是显示的。容纳在一个地址字段中的形式地址A直接被使用；</font></p>
+			<p style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">另一个地址字段，或基于操作码的一个隐含引用，指的是某个专用寄存器。此寄存器的内容加上形式地址A就产生有效地址EA。<br />
+		    常用的三种偏移寻址是<font color="#0000FF">相对寻址、基址寻址、变址寻址</font>。</font></p>
+			<p style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">相对寻址</font><font size="6">隐含引用的专用寄存器是程序计数器(PC)，即EA=A+(PC)，它是当前PC的内容加上指令地址字段中A的值。</font>		        </p>
+			<p style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">&nbsp;</p>
+		  <p align="center">
+		</div>
+		<p>&nbsp;</p>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">在基址寻址方式中，指令的地址码部分给出偏移量</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">D</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，而基准地址放在基址寄存器</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Rb</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中，最后操作数的有效地址仍然是由基准地址</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">A</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">与偏移量</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">D</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">相加而成，即：</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">EA</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＝</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(Rb)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＋</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">D</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。用哪一个寄存器作为基址寄存器也必须在硬件设计时就事先规定，基址寄存器</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Rb</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中的内容称为基准地址，该值可正可负。</font></span><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/><div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-size:144%">
+					<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-3.63%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">基址寄存器的位数可以设置得很长，从而可以在较大的</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">存储空间中寻址。</span></font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:26pt"> </span></div>
+				<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<div align="center"></div>
+				</div>
+			</div>
+			<p><font face="楷体_GB2312" size="6" color="#0000FF">变址寻址</font></div>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O">
+			<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="font-size:167%">
+				<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-3.27%;
+top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">变址寻址就是将指令的地址码部分给出的基准地址</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">A</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">与</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">内某特定的变址寄存器</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Rx</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中的内容相加，以形成操作数的有效地址，即：</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">EA</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＝</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">A</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">＋</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">(Rx)</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。用哪一个寄存器作为变址寄存器必须在硬件设计时就事先规定，变址寄存器</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Rx</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中的内容称为变址值，</font></span><font size="6"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">该值可正可负。</span></font><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:30pt"> </span></div>
+			<div style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<div align="center"></div>
+			</div>
+		</div>
+		<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+		<div v:shape="_x0000_s1026" class="O" style="mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">变址寻址方式是一种被广泛采用的寻址方式，最典型的应用就是将指令的地址码部分给出的地址</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">A</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">作为基准地址，而将变址寄存器</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Rx</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中的内容作为修改量。在遇到需要频繁修改操作数地址时，无须修改指令，只要修改</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Rx</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中的变址值就可以了，这对于数组运算、字符串操作等一些进行成批数据处理的指令是很有用的。</font></span></div>
+		<p><font face="楷体_GB2312" size="6" color="#0000FF">八、段寻址方式</font></p>
+		<p><font size="6">微型机中采用了段寻址方式，例如它们可以给定一个20位的地址，从而有220=1M存储空间的直接寻址能力。为此将整个1M空间存储器以64K为单位划分成若干段。</font></p>
+		<p><font size="6">在寻址一个内存具体单元时，由一个基地址再加上某些寄存器提供的16位偏移量来形成实际的20位物理地址。</font></p>
+		<p><font size="6">这个基地址就是CPU中的段寄存器。在形成20位物理地址时，段寄存器中的16位数会自动左移4位，然后与16位偏移量相加，即可形成所需的内存地址</font></p>
+		<p align="center">&nbsp;</p>
+		<p align="left"><font face="楷体_GB2312" size="6" color="#0000FF">九. 堆栈寻址</font></p>
+		<p align="left"><font size="6">堆栈有寄存器堆栈和存储器堆栈两种形式，它们都以先进后出的原理存储数据。</font></p>
+		<p align="left"><font size="6">数据进栈时使用PUSH指令，将数据压入栈顶地址，堆栈指示器减1；</font></p>
+		<p align="left"><font size="6">数据退栈时，使用POP指令，数据从栈顶地址弹出，堆栈指示器加1。</font></p>
+		<p align="left"><font size="6">这保证了堆栈中数据先进后出的存取顺序。</font></p>
+		<p><font face="楷体_GB2312" size="6" color="#0000FF">十一、寻址方式举例：Pentium</font></p>
+		<p><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.15%; top: .39em; font-family: Wingdings"> <font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><i><u><font size="6">
+	<p:onmouseclick hyperlinktype="url"
+ href="../计算机组织与体系结构第四版资源库/第十一章/swf/11.9.swf"/>
+	</font></u></i></b></span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"><span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.93%; top: .39em; font-family: Wingdings"> <font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><b><i><u><font size="6">
+    <p:onmouseclick hyperlinktype="url"
+ href="../计算机组织与体系结构第四版资源库/第十一章/swf/11.7.swf"/>
+    </font></u></i></b></span> </font></span> </p>
+		<p align="center"><a href="素材库/fig/Flash/4.4.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+		<p align="center"><font size="6">图4.4 寻址方式举例：Pentium</font></p>
+		<p><font size="6">Pentium的外部地址总线宽度是36位，但它也支持32位物理地址空间。</font></p>
+		<p><font size="6"><br />
+		  在<font color="#FF0000">实地址模式</font>下，逻辑地址形式为段寻址方式： 将段名所指定的段寄存器内容(16位)左移4位，低4位补全0，得到20位段基地址，再加上段内偏移，即得20位物理地址。</font></p>
+		<p><font size="6"><br />
+		  在<font color="#0000FF">保护模式下</font>，32位段基地址加上段内偏移得到32位线性地址LA。由存储管理部件将其转换成32位的物理地址，如图4.4所示。这个转换过程对指令系统和程序员是透明的。有6个用户可见的段寄存器，每个保存相应段的起始地址、段长和访问权限。</font></p>
+		<p align="center">&nbsp;</p>
+	  </div>
+	</td>
+  </tr>
+	<tr>
+    <td width="3" height="73"></td>
+    <td width="989" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	　</td>
+  </tr>
+					
+	   </table>

@@ -1,0 +1,102 @@
+Microsoft (R) Macro Assembler Version 5.00                  4/1/10 20:44:45
+Datatype                                                    Page     1-1
+
+
+				PAGE   60,132 
+				TITLE  Datatype    
+				 
+				       .MODEL SMALL 
+ 0040				       .STACK 64 
+				 
+				;---------------------------------- 
+ 0000				       .DATA 
+ 0000				    ORG 0000H 
+ 0000  25 12 15 1F 2B		DATA1  DB   25H, 12H, 15H, 1FH, 2BH 
+ 0005  34			DATA2  DB   34H 
+ = 0005				COUNT  EQU  5 
+ 0006  31 32 33 34 35 36 37	DATA3  DB   '1234567890' 
+       38 39 30			
+ 0010  3456 E567 6789		DATA4  DW   3456H, 0E567H, 6789H 
+ = 0003				NUM1   EQU  ($-DATA4)/2 
+ 0016  327856346656010078E6	DATA5  DD   34567832H, 87654, 0C456E678H 
+       56C4			
+ 0022  0005[			DATA6  DB   5 DUP(?) 
+	    ??			
+			 ]	
+				
+ = 0005				NUM2    EQU  $-DATA6 
+ = 1234				NUM3    EQU  1234H 
+ 0027  ??			DATA7  DB   ? 
+				 
+				 
+				 
+				 
+				;---------------------------------- 
+				 
+ 0000				      .CODE 
+				 
+ 0000				MAIN   PROC  FAR 
+ 0000  B8 ---- R		       MOV  AX, @DATA 
+ 0003  8E D8			       MOV  DS, AX 
+				 
+ 0005  B8 0005			       MOV AX, NUM2 
+				        
+ 0008  BB 0001			       MOV BX, TYPE DATA1 
+				 
+ 000B  B9 0005			       MOV CX, LENGTH DATA6 
+				 
+ 000E  B6 12			       MOV DH, HIGH NUM3 
+				 
+ 0010  B2 34			       MOV DL, LOW NUM3 
+				        
+ 0012  B4 4C			        MOV AH, 4CH 
+ 0014  CD 21			        INT 21H 
+ 0016				MAIN    ENDP 
+ 0016				        END MAIN 
+Microsoft (R) Macro Assembler Version 5.00                  4/1/10 20:44:45
+Datatype                                                    Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0028	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	0040	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	0016	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+COUNT  . . . . . . . . . . . . .  	NUMBER	0005	
+
+DATA1  . . . . . . . . . . . . .  	L BYTE	0000	_DATA
+DATA2  . . . . . . . . . . . . .  	L BYTE	0005	_DATA
+DATA3  . . . . . . . . . . . . .  	L BYTE	0006	_DATA
+DATA4  . . . . . . . . . . . . .  	L WORD	0010	_DATA
+DATA5  . . . . . . . . . . . . .  	L DWORD	0016	_DATA
+DATA6  . . . . . . . . . . . . .  	L BYTE	0022	_DATA	Length = 0005
+DATA7  . . . . . . . . . . . . .  	L BYTE	0027	_DATA
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	_TEXT	Length = 0016
+
+NUM1 . . . . . . . . . . . . . .  	NUMBER	0003	
+NUM2 . . . . . . . . . . . . . .  	NUMBER	0005	
+NUM3 . . . . . . . . . . . . . .  	NUMBER	1234	
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  wei		
+
+
+     46 Source  Lines
+     46 Total   Lines
+     26 Symbols
+
+  50174 + 450930 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

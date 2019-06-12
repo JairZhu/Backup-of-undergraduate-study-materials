@@ -1,0 +1,542 @@
+
+       <script src="expand.js"></script><title>3.6 Cache存储器</title>
+      <p>
+		<a name="top"><font size="6"></font></a>
+		<img border="0" src="素材库/items/slider.jpg" width="968" height="112"></p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="0300.htm">
+		<img border="0" src="素材库/items/Leave.gif" width="26" height="26"></a></p>
+<p><font size="6" color="#0000FF">3.6 Cache存储器</font><font face="宋体" size="6" color="#0000FF">&nbsp;</font><font size="6"><br>
+　</font></p>
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="E:\ztl\WEB-计算机组织与体系结构\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><b><font size="6">
+	<a href="#.1">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.6.1 
+	基本原理</a><br>
+	<a href="#.2">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.6.2 
+	主存与Cache的地址映射</a><br>
+	<a href="#.3">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.6.3 
+	替换策略</a><br>
+	<a href="#.4">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.6.4 
+	写操作策略</a><br>
+	<a href="#.5">
+	<img border="0" src="pic/items/section_lb.gif" width="16" height="16">3.6.5 
+	Pentium 4 的Cache</a><br>
+	　</font></b></p>
+	<p>　</p>
+</form>
+
+<table border="0" width="990" height="225" cellspacing="0" cellpadding="0" id="table1">
+  <tr> 
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong><a name=".1"><font size="6" color="#FFFFFF">3</font></a><font color="#FFFFFF" size="6"><a name=".1">.6.1 
+	</a></font><font size="6"><a name=".1"><font color="#FFFFFF">基本原理</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr> 
+  <tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<font size="6" face="楷体_GB2312" color="#0000FF">一、功能</font><p>
+	<font color="#FF0000" size="6">解决CPU和主存之间的速度不匹配问题</font><font size="6">。</font><br>
+	<font size="6">
+	一般采用高速的SRAM构成。CPU和主存之间的速度差别很大采用两级或多级Cache系统。早期的一级Cache在CPU内，二级在主板上。现在的CPU内带L1 
+	Cahe和L2 Cahe。全由硬件调度，对用户透明。</font></p>
+	<p align="center">
+	<img border="0" src="素材库/fig/图片/图_CPU与存储器系统.bmp" width="555" height="283"></p>
+	<p>
+	<font size="6">图 CPU与存储器系统的关系</font></p>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">二、Cache基本原理</font></p>
+	<p>
+	<font face="宋体" size="6">地址映射；<br>
+	替换策略；<br>
+	写一致性；<br>
+	性能评价。</font></p>
+	<p>&nbsp;</p>
+	<p align="center"><a href="素材库/fig/Flash/3-32.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图3.32 Cache原理</font></p>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+			<font color="#FF0000" size="6">cache</font></span><font color="#FF0000"><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">基本原理小结： 
+			</font></span></font></div>
+		<ul>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.76%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">是介于</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和主存</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">M2</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">之间的小容量存储器，但存取速度比主存快。主存容量配置几百</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">MB</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的情况下，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的典型值是几百</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">KB</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">。</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">能高速地向</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">提供指令和数据，从而加快了程序的执行速度。从功能上看，它是主存的缓冲存储器，由高速的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">SRAM</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">组成。为追求高速，包括管理在内的全部功能由硬件实现，因而对程序员是透明的。 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.62%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的设计依据</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">:CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">这次访问过的数据，下次有很大的可能也是访问附近的数据。 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">与</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">之间的数据传送是以字为单位 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">主存与</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">之间的数据传送是以块为单位 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.67%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">读主存时，便把地址同时送给</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和主存，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">控制逻辑依据地址判断此字是否在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中，若在此字立即传送给</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU
+				</font></span>
+				<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+				<font size="6">，否则，则用主存读周期把此字从主存读出送到</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，与此同时，把含有这个字的整个数据块从主存读出送到</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中。</font></span></div>
+			</li>
+		</ul>
+	</div>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">三、Cache的命中率</font></p>
+	<p>
+	<font size="6">
+	从CPU来看，增加一个cache的目的，就是在性能上使主存的平均读出时间尽可能接近cache的读出时间。为了达到这个目的，在所有的存储器访问中由cache满足CPU需要的部分应占很高的比例，即cache的命中率应接近于1。由于程序访问的局部性，实现这个目标是可能的。 
+	</font></p><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-size:111%">
+			<span style="mso-special-format:
+bullet;color:#330066;mso-color-index:3;position:absolute;left:-3.5%;top:.39em;
+font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">在一个程序执行期间，设</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Nc</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">完成存取的总次数，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Nm</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示主存完成存取的总次数，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">h</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">定义为命中率，则有: 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<span style="mso-spacerun:yes"><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span>
+			<font size="6">h=Nc/</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Nc+Nm)</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"> 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.44%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">若</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">tc</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示命中时的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">访问时间，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">tm</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示未命中时的主存访问时间，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1-h</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示未命中率，则</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"></font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">/</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">主存系统的平均访问时间</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">ta</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">为： 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<div align="center"><span style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		    <font size="6">ta=h*tc+</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">（</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1-h)tm</font></span><span lang="EN-US" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6"> 
+			    </font></span></div>
+		</div>
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.46%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">我们追求的目标是，以较小的硬件代价使</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache/</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">主存系统的平均访问时间</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">ta</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">越接近</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">tc</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">越好。 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.1%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">设</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">r=tm/tc</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示主存慢于</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的倍率，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">e</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">表示访问效率，则有</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<div align="center"> <span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">e=tc/ta=tc/</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">（</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">h*tc+</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">（</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1-h</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">）</font></span><span lang="ZH-CN" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">*tm
+			    </font></span></div>
+		</div>
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<div align="center">
+			  <p><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN">
+		        <span style="mso-spacerun:yes"><font size="6">&nbsp; </font></span><font size="6"> =1/</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">（</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">h+</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">（</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1-h</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">）</font></span><span lang="ZH-CN" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">*r</font></span></p>
+			  <p><span lang="ZH-CN" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">=1/</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">（</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">r+</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">（</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1-r)*h
+			    </font></span></p>
+			</div>
+		</div>
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.43%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">由表达式看出，为提高访问效率，命中率</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">h</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">越接近</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">1</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">越好，</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">r</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">值以</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">5</font></span><span lang="PT-BR" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">—</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">10</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">为宜，不宜太大。 
+			</font></span></div>
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.88%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">命中率</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">h</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">与程序的行为、</font></span><span lang="PT-BR" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span lang="ZH-CN" style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-ansi-language: PT-BR"><font size="6">的容量、组织方式、块的大小有关。</font></span></div>
+	</div>
+	</td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".2">3</a></font><font size="6"><font color="#FFFFFF"><a name=".2">.6.2 
+	</a>主存与Cache的地址映射</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family:Tahoma;
+font-size:167%">
+			<span style="mso-special-format:bullet;color:#330066;
+mso-color-index:3;position:absolute;left:-3.51%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">无论选择那种映射方式，都要把主存和</font></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">划分为同样大小的</font></span><span style="font-family: Arial; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">“</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">块</font></span><span style="font-family: Arial; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">”</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">。 
+			</font></span></div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family: Tahoma">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.15%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">选择哪种映射方式，要考虑： 
+			</font></span></div>
+		<ul>
+		  <li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-family: Tahoma">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">硬件是否容易实现 
+			  </font></span></div>
+		  </li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font color="#0000FF"><span style="font-family: Tahoma">
+				<span style="mso-special-format: bullet; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">地址变换的速度是否快 
+				</font></span></font></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font color="#0000FF"><span style="font-family: Tahoma">
+				<span style="mso-special-format: bullet; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">主存空间的利用率是否高 
+				</font></span></font></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<font color="#0000FF"><span style="font-family: Tahoma">
+				<span style="mso-special-format: bullet; mso-color-index: 5; position: absolute; left: -4.33%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">主存装入一块时，发生冲突的概率</font></span></font><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6"> 
+				</font></span></div>
+			</li>
+		</ul>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-family: Tahoma">
+			<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -4.15%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span></span><font size="6"><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black">以下我们介绍三种映射方法</span><span style="font-family: 宋体">。</span></font><span style="font-family:宋体;mso-ascii-font-family:
+Tahoma;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:30pt;
+color:black"> </span></div>
+		<div class="O" style="mso-line-spacing:&quot;100 50 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6" face="楷体_GB2312" color="#0000FF">一、全相联的映射方式</font></div>
+	</div>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:144%">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-5.15%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial"><font size="6">映射方法（多对多） </font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<ul>
+				<li><font size="6">
+				<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-5.44%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">主存内容可以拷贝到任意行 </span></font></li>
+			</ul>
+		</div>
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<font size="6">
+			<span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute; left:-5.15%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial">地址变换 </span></font></div>
+		<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<ul>
+				<li><font size="6">
+				<span style="mso-special-format:bullet;color:#669999; mso-color-index:5;position:absolute;left:-5.44%;top:.39em;font-family:Wingdings">l</span><span style="font-family:宋体;mso-fareast-font-family: 宋体;mso-hansi-font-family:Arial">标记实际上构成了一个目录表。</span></font></li>
+			</ul>
+		</div>
+	</div>
+	<p align="center"><a href="素材库/fig/Flash/3-33.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图3.33 全相联映射Cache</font></p>
+	<p>
+	<font size="6">1、将地址分为两部分（块号和字），在内存块写入Cache时，同时写入块号标记；<br>
+	2、CPU给出访问地址后，也将地址分为两部分（块号和字），比较电路块号与Cache 
+	表中的标记进行比较，相同表示命中，访问相应单元；如果没有命中访问内存，CPU 直接访问内存，并将被访问内存的相对应块写入Cache。<br>
+	3、特点：<br>
+	<font color="#FF0000">优点：</font>冲突概率小，Cache的利用高。<br>
+	<font color="#0000FF">缺点：</font>比较器难实现，需要一个访问速度很快代价高的相联存储器<br>
+	4、应用场合：<br>
+	适用于小容量的Cache</font></p>
+	<p>
+	<font size="6" face="楷体_GB2312" color="#0000FF">二、直接映射方式</font></p>
+	<p><font face="宋体" size="6">1、映射方法（一对多）如：<br>
+&nbsp; ⑴i= j mod m<br>
+&nbsp; ⑵主存第j块内容拷贝到Cache的i行<br>
+&nbsp; ⑶一般I和m都是2N级<br>
+	[例]cache容量16字，主存容量256字，则地址2，18，34…..242等都存放在cache的地址2内，如果第一次2在cache中，下次访问34内容，则不管cache其他位置的内容访问情况，都会引起2块内容的替换</font></p>
+	<p><font face="宋体" size="6">2、基本原理<br>
+	⑴利用行号选择相应行；<br>
+	⑵把行标记与CPU访问地址进行比较，相同表示命中，访问Cache；<br>
+	⑶如果没有命中，访问内 存，并将相应块写入Cache</font></p>
+	<p><font face="宋体" size="6">3、特点<br>
+	优点：比较电路少m倍线路，所以硬件实现简单，Cache地址为主存地址的低几位，不需变换。<br>
+	缺点：冲突概率高（抖动）<br>
+	4、应用场合<br>
+	适合大容量Cache</font></p>
+	<p>&nbsp;</p>
+	<p align="center"><a href="素材库/fig/Flash/3-34.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+	<p align="center"><font size="6">图3.34 直接相联映射Cache</font></p>
+	<p><font face="楷体_GB2312" size="6" color="#0000FF">三、组相联映射方式</font></p>
+	<p><font size="6" face="宋体">组相联映射方式是前两者的组合</font></p><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:647;
+mso-text-indent-alt:360;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="font-size:144%">
+			<span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-5.08%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">分组，组间采用直接映射方式，组内采用全相联的映射方式 
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:647;
+mso-text-indent-alt:360;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.99%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">分组</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">U</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，组内容量</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">V
+			</font></span></div>
+		<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:647;
+mso-text-indent-alt:360;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.99%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">映射方法（一对多） 
+			</font></span></div>
+		<ul>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:863;
+mso-text-indent-alt:719;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.13%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">q= 
+				j mod u </font></span></div>
+			</li>
+			<li>
+			<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:863;
+mso-text-indent-alt:719;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -3.13%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">主存第</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">j</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">块内容拷贝到</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">q</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">组中的某行 
+				</font></span></div>
+			</li>
+		</ul>
+		<div class="O1" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:647;
+mso-text-indent-alt:360;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -5.99%; top: .39em; font-family: Wingdings">
+			<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">地址变换 
+			</font></span></div>
+		<div class="O2" style="mso-line-spacing:&quot;90 20 0&quot;;mso-margin-left-alt:863;
+mso-text-indent-alt:719;mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<ul>
+				<li><span style="font-family: Tahoma">
+				<span style="mso-special-format: bullet; color: #CCCC00; mso-color-index: 4; position: absolute; left: -2.63%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">设主存地址</font></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">x</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">，看是不是在</font></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">中，先</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">y= 
+				x mod u</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">，则在</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">y</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">组中一次查找 
+				</font></span></li>
+			</ul>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026" class="O1">
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family:Tahoma;
+font-size:183%"><span style="mso-special-format:bullet;color:#669999;
+mso-color-index:5;position:absolute;left:-4.38%;top:.39em;font-family:Wingdings;
+font-size:70%">l</span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">分析：比全相联容易实现，冲突低 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family: Tahoma">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.38%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">v=1</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">，则为直接相联映射方式 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family: Tahoma">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.38%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">u=1</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">，则为全相联映射方式 
+					</font></span></div>
+				<div style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;mso-text-indent-alt:
+217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+					<span style="font-family: Tahoma">
+					<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.75%; top: .39em; font-family: Wingdings">
+					<font size="6">l</font></span></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">v</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">的取值一般比较小，</font></span><span style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">
+					</font></span>
+					<span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black">
+					<font size="6">一般是</font></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">2</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">的幂，称之为</font></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">v</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">路组相联</font></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">cache.</font></span></div>
+			</div>
+		    <p align="center"><a href="素材库/fig/Flash/3-35.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+		    <p align="center"><font size="6">图3.35 组相联映射Cache</font></p>
+	      <p>
+		</div>
+	</div>
+	  </td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".3">3</a></font><font size="6"><font color="#FFFFFF"><a name=".3">.6.3 
+	替换策略</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<font size="6">LFU（最不经常使用 ）：被访问的行计数器增加1，换值小的行，不能反映近期cache的访问情况，<br>
+	LRU（近期最少使用） ：被访问的行计数器置0，其他的计数器增加1，换值大的行，符合cache的工作原理<br>
+	随机替换：随机替换策略实际上是不要什么算法，从特定的行位置中随机地选取一行换出即可。这种策略在硬件上容易实现，且速度也比前两种策略快。缺点是随意换出的数据很可能马上又要使用，从而降低命中率和cache工作效率。但这个不足随着cache容量增大而减小。随机替换策略的功效只是稍逊于前两种策略。</font></td>
+  </tr>
+		<tr>
+    <td colspan="2" height="27" bgcolor="#000080">
+	<p align="left"><strong><font size="6" color="#FFFFFF"><a name=".4">3</a></font><font size="6"><font color="#FFFFFF"><a name=".4">.6.4 
+	写操作策略</a>&nbsp;</font><a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  		</tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73"><p:colorscheme
+ colors="#FFFFFF,#000000,#808080,#330066,#CCCC00,#669999,#7E9CE8,#D8D8EC"/><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+	<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026">
+		<div class="O" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:216;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p><span style="font-size:167%">
+		    <span style="mso-special-format:bullet;color:#330066;mso-color-index:3;position:absolute;
+left:-3.49%;top:.39em;font-family:Wingdings;font-size:70%">l</span></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">由于</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的内容只是主存部分内容的拷贝，它应当与主存内容保持一致。而</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">CPU</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">对</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的写入更改了</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的内容。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">如何与主存内容保持一致，可选用如下三种写操作策略。</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">
+		    </font></span></p>
+		</div>
+		<ul>
+		  <li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-family: Tahoma">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.63%; top: .39em; font-family: Wingdings">
+				<font size="6">&Oslash;</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">写回法：</font><font size="6"></font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">换出时，对行的修改位进行判断，决定是写回还是舍掉。 
+				</font></span></div>
+		  </li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-family: Tahoma">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -4.32%; top: .39em; font-family: Wingdings">
+				<font size="6">&Oslash;</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">全写法：</font><font size="6"></font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">写命中时，</font></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">与内存一起写 
+				</font></span></div>
+			</li>
+			<li>
+			<div class="O1" style="mso-line-spacing:&quot;100 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1">
+				<span style="font-family: Tahoma">
+				<span style="mso-special-format: bullet; color: #669999; mso-color-index: 5; position: absolute; left: -3.69%; top: .39em; font-family: Wingdings">
+				<font size="6">&Oslash;</font></span></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">写一次法：</font><font size="6"></font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">与写回法一致，但是第一次</font></span><span lang="EN-US" style="font-family: Tahoma; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black; mso-fareast-language: ZH-CN"><font size="6">Cache</font></span><span style="font-family: 宋体; mso-ascii-font-family: Tahoma; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; color: black"><font size="6">命中时采用全写法。</font></span></div>
+			</li>
+		</ul>
+	</div>
+	<p>
+	　</p>
+	  </td>
+  </tr>
+					
+		<tr>
+    <td colspan="2" bgcolor="#000080">
+	<p align="left"><strong>
+	<font color="#FFFFFF" size="6">
+	<a name=".5">3.6.5 </a></font><font size="6"><a name=".5">
+	<font color="#FFFFFF">Pentium 4 的Cache</font></a>&nbsp;<a href="#top"><img border="0" src="pic/items/Top.gif" width="26" height="26"></a></font></strong></td> 
+  </tr>
+	<tr>
+    <td width="27" height="73"></td>
+    <td width="963" height="73"><p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+	<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+			<font size="6">主要包括四个部分： </font></span></div>
+		<ul>
+			<li>
+			<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.54%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">取指</font></span><font color="#0000FF"><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">/</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">译码单元</font></span></font><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">：顺序从</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">L2cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中取程序指令，将它们译成一系列的微指令，并存入</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">L1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">指令</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中。 
+				</font></span></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.44%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">乱序执行逻辑</font><font size="6">：依据数据相关性和资源可用性，调度微指令的执行，因而微指令可按不同于所取机器指令流的顺序被调度执行。 
+				</font></span></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.46%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">执行单元</font><font size="6">：它执行微指令，从</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">L1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">数据</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">中取所需数据，并在寄存器组中暂存运算结果。 
+				</font></span></div>
+			</li>
+			<li>
+			<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+				<span style="mso-special-format: bullet; color: #330066; mso-color-index: 3; position: absolute; left: -3.82%; top: .39em; font-family: Wingdings">
+				<font size="6">l</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font color="#0000FF" size="6">存储器子系统</font><font size="6">：这部分包括</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">L2cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">L3cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">和系统总线。当</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">L1</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">、</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">L2cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">未命中时，使用系统总线访问主存。系统总线还用于访问</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">I/O</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">资源。 
+				</font></span></div>
+			</li>
+		</ul>
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial">
+		    <font size="6">&nbsp;&nbsp;&nbsp; 不同于所有先前</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Pentium</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">模式和大多数处理器所采用的结构，</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Pentium 
+			    4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">的指令</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">cache</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">位于指令译码逻辑和执行部件之间。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">其设计理念是：</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">Pentium 
+			  4</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">将机器指令译成由微指令组成的简单</font></span><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; mso-fareast-language: ZH-CN"><font size="6">RISC</font></span><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">类指令，而使用简单定长的微指令可允许采用超标量流水线和调度技术，从而增强机器的性能。</font></span></p>
+			<p><span style="font-family: 宋体; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial"><font size="6">关于流水线技术，将留在<a href="0507.htm">第5章</a>中讨论。</font></span></p>
+			<p>&nbsp;</p>
+			<p align="center"><a href="素材库/fig/Flash/3-36.swf" target="_blank"><img src="cai.jpg" width="107" height="98" border="0" /></a></p>
+			<p align="center"><font size="6">图3.36 Pentium 
+			4的Cache</font></p>
+			<p:colorscheme
+ colors="#ffffff,#000000,#808080,#330066,#cccc00,#669999,#7e9ce8,#d8d8ec"/>
+
+			<div v:shape="_x0000_s1026">
+				<div class="O1" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:436;
+mso-text-indent-alt:217;mso-char-wrap:1;mso-kinsoku-overflow:1"></div>
+		  </div>
+		</div>
+	</div>
+	</td>
+  </tr>
+						
+      </table>

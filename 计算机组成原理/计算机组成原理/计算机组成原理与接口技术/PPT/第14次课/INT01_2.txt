@@ -1,0 +1,33 @@
+
+      .MODEL SMALL
+      .STACK 64
+      .DATA      
+      .CODE    
+
+MAIN    PROC  FAR
+        MOV  AX, @DATA
+        MOV  DS, AX
+        
+     
+      
+    
+      PUSHF
+      POP AX
+      OR AX, 0100H
+      PUSH AX
+      POPF     
+ 
+      mov cx, 5555H
+      mov ax, 0000H
+      mov bx, 2222H
+
+
+      mov ah,07H
+      int 21H
+
+       MOV AH,4CH      
+       int 21H
+      
+MAIN    ENDP
+       
+        END MAIN
