@@ -1,0 +1,110 @@
+/* 改变排列方向 */
+#wrapper>#container>.content {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+}
+/* 文章列表 */
+#tinyimage {
+	width: 100px;
+	height: 80px;
+}
+
+.all-article {
+	background-color: white;
+	margin-top: 10px;
+	padding: 15px;
+	display: block;
+}
+
+.all-article:hover {
+	background-color: ghostwhite;
+}
+
+#next {
+	background-color: white;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	display: block;
+	border-top: 0.5px solid lightgray;
+}
+
+#next:hover {
+	background-color: ghostwhite;
+}
+
+.all-article>header {
+	margin: auto;
+}
+
+.all-article>header>.sign {
+	position: relative;
+	float: left;
+}
+
+.all-article>header>.sign>span {
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 8px;
+
+}
+
+#sign1 {
+	background-color: darkslategray;
+}
+
+#sign2 {
+	background-color: pink;
+}
+
+.all-article>header>h3 {
+	float: left;
+	margin-left: 10px;
+}
+
+.all-article>section {
+	margin-top: 30px;
+	overflow: auto;
+	height: 85px;
+	overflow: hidden;
+}
+
+.tiny-article {
+	color: darkgray;
+}
+
+.all-article>section>img {
+	max-width: 100px;
+	float: left;
+	margin-right: 10px;
+}
+
+.all-article>footer {
+	margin-top: 5px;
+	text-align: right;
+}
+
+.more {
+	margin: 10px;
+	text-align: center;
+}
+
+#moreclick {
+	background-color: transparent;
+	border: transparent;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+#moreclick:hover {
+	color: gray;
+}
+
+h3>a {
+	text-decoration: none;
+}
+
+h3>a:hover {
+	color: cornflowerblue;
+}

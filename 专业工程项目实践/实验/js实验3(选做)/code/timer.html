@@ -1,0 +1,83 @@
+<!DOCTYPE  html>
+<html  lang="zh-cn">
+<head>
+<title>计时器</title>
+  <style> 
+     .time {display:inline-block;width:3.6em;text-align:right;margin-right:4px}
+     #container,h1 {width:20em;margin:10px auto;text-align:center}
+     .timer {margin-top:20px}
+     .pressed {background:yellow};     
+  </style>
+</head>
+<body>
+  <h1>计时器</h1>
+  <div id="container">
+     <input type="button" class="add" value="增加计时器" onclick="addTimer()">
+     <div class="timer s0" style="display:none">
+          <span class="time">0.00</span>
+          <input type="button" class="start" value="启动">
+          <input type="button" class="stop" value="停止">
+          <input type="button" class="pause" value="暂停">
+     </div>
+  </div>
+</body>
+<script>
+  var array = new Array(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+  var begin = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+  function addTimer() {
+    var timer = document.getElementsByClassName("timer");
+    var container = document.getElementById("container");
+    var newnode = container.children[1].cloneNode(true);
+    newnode.style.display = "block";
+    container.appendChild(newnode);
+    var time = document.getElementsByClassName("time");
+    var start = document.getElementsByClassName("start");
+    var stop = document.getElementsByClassName("stop");
+    var pause = document.getElementsByClassName("pause");
+    var index = start.length - 1;
+    (function(index) { 
+      start[index].addEventListener("click", function() {
+        if (begin[index] == 0) {
+          time[index].innerHTML = "0.00";
+          array[index] = 0.0;
+        }
+        begin[index] = 1;
+        start[index].setAttribute("class", "start pressed");
+        stop[index].setAttribute("class", "stop");
+        pause[index].setAttribute("class", "pause");
+      })
+    })(index);
+    (function(index) {
+      stop[index].addEventListener("click",  function() {
+        if (begin[index] == 1) {
+          stop[index].setAttribute("class", "stop pressed");
+          start[index].setAttribute("class", "start");
+          pause[index].setAttribute("class", "pause");
+          begin[index] = 0;
+        }
+      })
+    })(index);
+    (function(index) {
+      pause[index].addEventListener("click", function() {
+        if (begin[index] == 1) {
+          begin[index] = 2;
+          start[index].setAttribute("class", "start");
+          stop[index].setAttribute("class", "stop");
+          pause[index].setAttribute("class", "pause pressed");
+        }
+      })
+    })(index);
+  }
+  function times() {
+    var time = document.getElementsByClassName("time");
+    for (var i = 0; i < time.length; ++i) {
+      if (begin[i] == 1) {
+        array[i] += 0.01;
+        time[i].innerHTML = array[i].toFixed(2);
+      }
+    }
+    window.setTimeout(times, 10);
+  }
+</script>
+</html>
+<script>times();</script>

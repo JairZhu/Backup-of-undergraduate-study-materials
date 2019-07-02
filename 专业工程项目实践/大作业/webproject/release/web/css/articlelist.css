@@ -1,0 +1,151 @@
+#container>.content {
+	display: flex;
+	flex-direction: row;
+}
+
+section {
+	margin-top: 10px;
+	background-color: white;
+	width: 690px;
+	padding: 5px;
+	min-height: 500px;
+}
+
+section>.title {
+	padding-bottom: 5px;
+	margin-left: 10px;
+	border-bottom: 1px solid steelblue;
+}
+
+section>.title>span {
+	color: darkblue;
+	font-weight: 600;
+}
+
+/* 写日志按键 */
+#write-article {
+	width: 100px;
+	margin: 10px;
+	border: 0;
+	font-size: 1em;
+	border-radius: 10px;
+	background-color: skyblue;
+	color: white;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.sign{
+	position: relative;
+	top:-2px;
+	margin-right: 1px;
+}
+
+.sign-original{
+	position: relative;
+	float: left;
+	border-radius: 20px;
+	background-color: darkslategray;
+	top:3px;
+	margin-right: 5px;
+}
+
+.sign-reprint{
+	position: relative;
+	float: left;
+	border-radius: 20px;
+	background-color: lightpink;
+	top:3px;
+	margin-right: 5px;
+}
+.sign>span {
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* 日志列表 */
+.article-list {
+	margin-left: 10px;
+	list-style-type: none;
+	min-height: 320px;
+}
+
+.single-article {
+	display: flex;
+	flex-direction: row;
+	white-space: nowrap;
+	margin-bottom: 10px;
+}
+
+.article-date,
+.article-stat {
+	font-size: 0.8em;
+	position: relative;
+	top: 2.5px;
+}
+
+.article-ontop,
+.article-delete {
+	font-size: 0.8em;
+	margin-right: 5px;
+}
+
+.article-date {
+	margin-left: auto;
+	margin-right: 3%;
+}
+
+.article-operation {
+	margin-left: 3%;
+	cursor: pointer;
+
+}
+
+.article-delete {
+	margin-right: 7%;
+
+}
+
+.article-delete:hover,
+.article-ontop:hover {
+	color: slategray;
+}
+
+/* 换页栏 */
+.pagi {
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+.pagination {
+	padding: 0;
+	height: 40px;
+	white-space: nowrap;
+	float: left;
+	position: relative;
+	right: 50%;
+}
+
+.pagination li {
+	display: inline;
+}
+
+.pagination li a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.pagination li a.active {
+	background-color: #99CCCC;
+	color: white;
+	border-radius: 5px;
+}
+
+.pagination li a:hover:not(.active) {
+	background-color: #ddd;
+}

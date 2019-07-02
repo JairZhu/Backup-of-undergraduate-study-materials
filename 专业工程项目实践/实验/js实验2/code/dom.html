@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DOM</title>
+        <style>
+        p {font-size:20px}
+        </style>
+    </head>
+    <body>
+    </body>
+    <script>
+        var h = document.createElement("h1");
+        var title = document.createTextNode("静夜思")
+        var p = document.createElement("p");
+        var txt1 = document.createTextNode("床前明月光");
+        var txt2 = document.createTextNode("，疑是地上霜");
+        var txt3 = document.createTextNode("。");
+        var txt4 = document.createTextNode("(1)");
+        var span = document.createElement("span");
+        span.appendChild(txt4);
+        span.style.verticalAlign = "super";
+        span.style.fontSize = "12px";
+        document.body.appendChild(h);
+        h.appendChild(title);
+        document.body.appendChild(p);
+        p.appendChild(txt1);
+        p.appendChild(span);
+        p.appendChild(txt2);
+        var span2 = span.cloneNode(true);
+        span2.firstChild.nodeValue = "(2)";
+        p.appendChild(span2);
+        p.appendChild(txt3);
+        var p2 = p.cloneNode(true);
+        p2.childNodes[0].nodeValue = "举头望明月";
+        p2.childNodes[1].nodeValue = "(3)";
+        p2.childNodes[2].nodeValue = "，低头思故乡";
+        p2.childNodes[3].nodeValue = "(4)";
+        document.body.appendChild(p2);
+    </script>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>游呢娃子的博客</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/mainpage.css">
+		<link rel="stylesheet" type="text/css" href="css/mainpage_header.css">
+		<link rel="stylesheet" type="text/css" href="css/mainpage_article.css">
+		<link rel="stylesheet" type="text/css" href="css/mainpage_aside.css">
+		<meta name="Description" content="666的博客,心随你动!"/>
+		<!-- <script src="js/mainpage.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="js/DOM.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var mainpage;
+			window.onload = function(){mainpage = new Mainpage();}
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<!-- 头部 -->
+			<header>
+				<div id="header-text">
+					<h1>游呢娃子的博客</h1>
+					<div id="signature">这个人很懒，什么都没有说。</div>
+				</div>
+				<div class="login">
+					您好，请 <a href="sign_in.html">登录</a>
+				</div>
+			</header>
+			<!-- 导航条 -->
+			<nav>
+				<ul>
+					<li class="first-page"><a href="#">主页</a></li>
+					<li><a href="#">日志</a></li>
+					<li><a href="#">相册</a></li>
+					<li><a href="#">留言板</a></li>
+					<li><a href="#">我的访客</a></li>
+					<input type="text" id="search" value="文章搜索..." onfocus="if (value =='文章搜索...'){value =''}" onblur="if (value ==''){value='文章搜索...'}" >
+					<button type="button"></button>
+					
+				</ul>
+
+			</nav>
+			<div id="container">
+				<!-- 浮动横幅 -->
+				<div class="flytext">
+					<img src="img/widespread.png" />
+					<marquee behavior="scroll" direction="left">
+						这是用来测试的无意义的一句话啦啦啦。
+					</marquee>
+				</div>
+				<!-- 主内容区 -->
+				<div class="content">
+					<section>
+						<!-- 置顶文章 -->
+						<div class="top-article">
+							<div class="top-title">
+								<div class="text-title">置顶文章</div>
+							</div>
+
+							<div class="cont">
+								<div class="art">
+									<div class="art-title">
+										<span id="s1">顶</span>
+										<a href="#">玲珑，玲珑！</a>
+									</div>
+									<div class="count">
+										评论（<div class="cnt">10</div>）
+										<span id="like"> ♡ 320 </span>
+									</div>
+
+								</div>
+								<div class="art">
+									<div class="art-title">
+										<span id="s2">顶</span>
+										<a href="#">我什么亚子与女无瓜</a>
+									</div>
+									<div class="count">
+										评论（<div class="cnt">2</div>)
+										<span id="like"> ♡ 11 </span>
+									</div>
+
+								</div>
+								<div class="art">
+									<div class="art-title">
+										<span id="s3">顶</span>
+										<a href="#">今天去骑了竟车</a>
+									</div>
+									<div class="count">
+										评论（<div class="cnt">9</div>）
+										<span id="like"> ♡ 6 </span>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<!-- 文章列表 -->
+						<div class="article-list">
+							<article class="all-article">
+								<header>
+									<div class="sign">
+										<span id="sign1">原创</span>
+										<div></div>
+									</div>
+									<h3><a href="#">小朋友要有小朋友的亚子</a></h3>
+								</header>
+								<section>
+									<img src="img/lengtu.jpg" id="tinyimage">
+									<div class="tiny-article">
+										好好读术！接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。
+										接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。
+									</div>
+								</section>
+								<footer>
+									<img src="img/time_gray.png" /> 2019-6-13 22:00
+									<img src="img/eye_gray.png" /> 22
+									<img src="img/comment_gray.png" /> <span class="comment-count">6</span>
+									<img src="img/fabulous_gray.png" /> <span class="fabulous-count">5</span>
+								</footer>
+							</article>
+
+							<article class="all-article" id="next">
+								<header>
+									<div class="sign">
+										<span id="sign2">转载</span>
+										<div></div>
+									</div>
+									<h3><a href="#">二营长，来碗意大利面</a></h3>
+
+								</header>
+								<section>
+									<img src="img/lengtu.jpg" id="tinyimage">
+									<div class="tiny-article">
+										意大利面真好吃。
+									</div>
+
+								</section>
+								<footer>
+									<img src="img/time_gray.png" /> 2019-6-13 22:00
+									<img src="img/eye_gray.png" /> 22
+									<img src="img/comment_gray.png" /> <span class="comment-count">6</span>
+									<img src="img/fabulous_gray.png" /> <span class="fabulous-count">5</span>
+								</footer>
+							</article>
+							<article class="all-article" id="next">
+								<header>
+									<div class="sign">
+										<span id="sign1">原创</span>
+										<div></div>
+									</div>
+									<h3><a href="#">我练习时长两年半</a></h3>
+
+								</header>
+								<section>
+									<img src="img/lengtu.jpg" id="tinyimage">
+									<div class="tiny-article">
+										喜欢唱、跳、rap、篮球。
+									</div>
+
+								</section>
+								<footer>
+									<img src="img/time_gray.png" /> 2019-6-13 22:00
+									<img src="img/eye_gray.png" /> 22
+									<img src="img/comment_gray.png" /> <span class="comment-count">6</span>
+									<img src="img/fabulous_gray.png" /> <span class="fabulous-count">5</span>
+								</footer>
+							</article>
+						</div>
+						<div class="more">
+							<button type="button" id="moreclick" onclick="mainpage.loadMore()">点击加载更多...</button>
+						</div>
+					</section>
+					<!-- 右边栏 -->
+					<aside>
+						<div class="shareclick">
+							<img alt="qq" src="img/qq.png" />
+							<img alt="qzone" src="img/qqzone.png" />
+							<img alt="sina" src="img/weibo.png" />
+						</div>
+						<div class="label-cloud">
+							<div class="title">
+								<span>标签云</span>
+							</div>
+							<div class="content">
+									<div class="labels">
+										<span>#打码好难</span>
+									</div>
+									<div class="labels">
+										<span>#不想打了</span>
+									</div>
+									<div class="labels">
+										<span>#什么时候才能做完鸭</span>
+									</div>
+									
+							</div>
+						</div>
+						<div class="lately-comment">
+							<div class="title">
+								<span>最新留言</span>
+							</div>
+							<div class="content">
+								<div class="visitor" id="v1">
+									<div class="name" id="n1">
+										<a href="#">摸鲜女王</a>:
+									</div>
+									<div class="message" id="m1">
+										游乐，你妈妈喊你回家吃饭哟。
+									</div>
+								</div>
+								<div class="visitor" id="v2">
+									<div class="name" id="n2">
+										<a href="#">摸鲜女王</a>:
+									</div>
+									<div class="message" id="m2">
+										游乐，你妈妈喊你回家吃饭哟。游乐，你妈妈喊你回家吃饭哟。游乐，你妈妈喊你回家吃饭哟。游乐，你妈妈喊你回家吃饭哟。
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="album">
+							<div class="title">
+								<span>相册</span>
+							</div>
+							<div class="content">
+								<img src="img/lengtu2.jfif">
+							</div>
+						</div>
+					</aside>
+				</div>
+
+			</div>
+
+			<footer>&copy;2019-2030 啦啦啦</footer>
+		</div>
+	</body>
+
+</html>

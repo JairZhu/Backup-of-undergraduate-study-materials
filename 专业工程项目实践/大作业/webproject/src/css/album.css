@@ -1,0 +1,372 @@
+/* 相册整体布局 */
+.subalbum {
+	background: white;
+	height: 600px;
+	border-radius: 8px;
+	margin: 5px auto;
+	width:960px;
+	position: relative;
+}
+
+.subalbum>.title {
+	padding: 5px;
+	background: rgb(235, 247, 253);
+
+}
+
+.subalbum>.title>span {
+	margin: 10px;
+	color: midnightblue;
+	font-weight: 600;
+}
+
+.album-content {
+	margin: 10px;
+}
+
+.cover {
+	width: 70px;
+	height: 70px;
+}
+
+.album-header {
+	display: flex;
+	flex-direction: row;
+	margin: 15px;
+}
+
+.album-title>span {
+	margin-left: 10px;
+}
+
+/* 相册标题 */
+.album-inf {
+	margin-left: 15px;
+}
+
+.album-title {
+	font-size: larger;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.album-desription {
+	font-size: 0.9em;
+	margin-bottom: 10px;
+}
+
+.add-photos {
+	width: 100px;
+	border: 0;
+	font-size: 1em;
+	border-radius: 10px;
+	background-color: skyblue;
+	color: white;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.album-stat {
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: 10px;
+	position: relative;
+	top: 20px
+}
+
+.album-comment {
+	margin-right: 50px;
+}
+
+.comment-title,
+.like-title,
+.comment-count,
+.like-count {
+	font-size: large;
+	text-align: center;
+}
+
+.comment-count,
+.like-count {
+	color: lightgray;
+	text-align: center;
+}
+
+/* 相册列表 */
+.photo-list {
+	list-style-type: none;
+	margin:0 10px 0 30px;
+	position: relative;
+}
+
+.single-photo-inf {
+	margin: 10px;
+	height: 170px;
+	width: auto;
+	float: left;
+	text-align: center;
+}
+.single-photo-inf>a{text-decoration: none; height: 150px;}
+.single-photo {
+	display: inline;
+	margin: 3px;
+}
+.photo-operation{
+	display: flex;
+	flex-direction: row;
+	width: 145px;
+	position: relative;
+	background-color: rgba(255,255,255,0.8);
+	padding:5px;
+	top:-35px;
+	z-index: 99;
+	visibility: hidden;
+}
+.photo-reblog{margin-left:auto;font-size: 0.9em;}
+.photo-reblog:hover{color:darkgray;}
+.photo-description {
+	text-align: center;
+	font-weight: normal;
+	width: 150px;
+	font-size: 12px;
+	position:relative;
+	top:-35px;
+	
+}
+.like-icon{margin-right:15px;}
+.like-icon,.comment-icon{width: 20px;height:20px;}
+.like-icon,.comment-icon,.photo-reblog{cursor:pointer;}
+
+/* 换页栏 */
+.pagi {
+	position: absolute;
+	left:50%;
+	top:90%;
+}
+
+.pagination {
+	padding: 0;
+	height: 40px;
+	white-space: nowrap;
+	float: left;
+	position: relative;
+	right: 50%;
+}
+
+.pagination li {
+	display: inline;
+}
+
+.pagination li a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.pagination li a.active {
+	background-color: #99CCCC;
+	color: white;
+	border-radius: 5px;
+}
+
+.pagination li a:hover:not(.active) {
+	background-color: #ddd;
+}
+
+/* 隐藏层 */
+#popBox{
+    position: fixed;
+    display:none;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    width:1000px;
+    height:650px;
+    z-index:11;
+    background:aliceblue; 
+}
+#popBox-comment{
+	position: fixed;
+	display:none;
+	width:500px;
+	height:220px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	z-index:11;
+	background:aliceblue; 
+}
+#popBox-comment>.title{
+	margin:15px;	
+}
+#popBox-comment>.title>span{
+	font-weight: 600;
+}
+#popBox-addphoto{
+	position: fixed;
+	display:none;
+	width:350px;
+	height:200px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	z-index:11;
+	background:aliceblue; 
+}
+#popBox-addphoto>.title{
+	margin:15px;	
+}
+#popBox-addphoto>.title>span{
+	font-weight: 600;
+}
+.photoinf{
+	position: relative;
+	left:10px;
+	top:70px;
+	display:flex;
+}
+.personal-icon{
+	width:100px;
+	height:100px;
+	margin-right: 10px;
+}
+.photo-comment-list{
+	width:400px;
+	margin-left:50px;
+	padding:10px;
+}
+.photo-comment-list>.title{
+	margin-bottom:10px;
+	font-weight: 600;
+}
+.single-comment{
+	margin-top:10px;
+	padding-bottom:10px;
+	display: flex;
+	border-bottom: 1px dashed lightblue;
+}
+.personal-name>a{
+	font-size: small;
+	text-decoration: none;
+	color:midnightblue;
+}
+.personal-name>a:hover{
+	color:purple;
+}
+.floor{
+	font-size: small;
+}
+.floor{
+	margin-bottom:5px;
+}
+.floor>span{
+	font-size: small;
+}
+
+.comment-opration{
+	display: flex;
+	margin-left: auto;
+	position: relative;
+	top:-3px;
+}
+.delete{
+	margin-left:10px;
+}
+.delete>span,.reply>span{
+	font-size: small;
+	color:steelblue;
+	cursor: pointer;
+}
+.delete>span:hover,.reply>span:hover{
+	color:lightskyblue;
+}
+.more{
+	text-align: center;
+	margin-top: 5px;
+}
+#moreclick{
+	background: transparent;
+	border:0;
+	cursor:pointer;
+}
+
+#popLayer{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+    display:none;
+    left:0;
+    top:0;
+	margin:auto;
+    z-index:10;
+    background:black;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+.close{
+	position: absolute;
+	left: 96%;
+	top:2px;
+}
+.close2{
+	position: absolute;
+	left: 93%;
+	top:2px;
+}
+.close3{
+	position: absolute;
+	left: 90%;
+	top:2px;
+}
+.close3>a{
+	height: 20px;	
+}
+.photo-comment-button{
+	width:80px;
+	margin-left: 10px;
+	height:30px;
+	font-size: 1em;
+	cursor: pointer;
+	border:0;
+	color: white;
+	background-color: skyblue;
+}
+
+#photo-title-p{
+	margin-left: 20px;
+}
+#submit-photo-p,#submit-button-p{
+	margin-left: 20px;
+	margin-top:20px;
+}
+#submit-photo{
+	color:white;
+	border:0;
+	width:70px;
+	height:30px;
+	font-size: 1em;
+	background-color: skyblue ;
+}
+#write-textarea {
+	padding: 10px;
+	resize: none;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+#write-textarea:focus{
+	border: 1px solid;
+	border-color: rgba(82, 168, 236, 0.8);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+	
+}

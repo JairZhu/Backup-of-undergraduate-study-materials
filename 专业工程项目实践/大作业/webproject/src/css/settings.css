@@ -1,0 +1,109 @@
+.settings{
+	background-color:white;
+	width:960px;
+	height:520px;
+}
+.settings>.title{
+	background-color: rgb(235,247,253);
+	height: 30px;
+}
+.settings>.title>span{
+	color:darkblue;
+	font-weight: 600;
+	position: relative;
+	left: 15px;
+	top:2px;
+}
+.setting-content{
+	margin:20px 100px;
+	display: flex;
+	flex-direction: row;
+}
+/* 修改框 */
+
+.input-areas>.input-title{
+	margin-bottom: 20px;
+	border-bottom: 1px solid skyblue;
+	width:300px;
+	padding-bottom: 10px;
+}
+.input-title>span{
+	color:darkslateblue;
+	font-weight: 600;
+}
+.input-area{
+	margin-bottom: 20px;
+}
+.textareas{
+	height: 20px;
+	width:200px;
+}
+.correct-inf{
+	font-family: Microsoft Yahei;
+    height: 41px;
+    background: steelblue;
+    width: 100px;
+    position: relative;
+	border:0;
+	left:80px;
+	top:20px;
+	color:white;
+	font-family: Microsoft Yahei;
+	font-size: 15px;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+/* 修改头像 */
+.icon{
+		margin-left: 150px;
+}
+.icon-title{
+	margin-bottom: 20px;
+	border-bottom: 1px solid skyblue;
+	width:300px;
+	padding-bottom: 10px;
+
+	position: relative;
+	top:-2px;
+}
+.icon-title>span{
+	color:darkslateblue;
+	font-weight: 600;
+}
+
+.icon-pre>img{
+	width:150px;
+	height:150px;
+}
+.icon-upload{
+	font-family: Microsoft Yahei;
+    height: 41px;
+    background: steelblue;
+    width: 140px;
+    position: relative;
+	top:110px;
+	left:20px;
+}
+.upload-icon-text{
+	color: white;
+    text-align: center;
+    padding-top: 12px;
+    font-size: 15px;
+    font-weight: 800;
+}
+.input-icon{
+	width: 144px;
+    height: 41px;
+    font-size: 30px;
+    outline: medium none;
+    position: absolute;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    left: 0px;
+    top: 0px;	
+}
+.icon-pre{
+	display: flex;
+}

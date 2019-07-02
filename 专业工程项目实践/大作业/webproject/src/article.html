@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>日志详情</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/mainpage.css">
+		<link rel="stylesheet" type="text/css" href="css/mainpage_header.css">
+		<link rel="stylesheet" type="text/css" href="css/articlecontent.css">
+		<meta name="Description" content="666的博客,心随你动!" />
+	<script type="text/javascript">
+		function reprintClick(){
+			var reprintButton=document.getElementById("reprint-article");
+			if (reprintButton.innerHTML=="转载"){
+				reprintButton.innerHTML="取消转载";
+				reprintButton.style.backgroundColor="lightblue";
+			}
+			else{
+				reprintButton.innerHTML="转载";
+				reprintButton.style.backgroundColor="#6495ED";
+			}
+		}
+	</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<div id="header-text">
+					<h1>游呢娃子的博客</h1>
+					<div id="signature">这个人很懒，什么都没有说。</div>
+					
+				</div>
+				<div class="login">
+					您好，请 <a href="sign_in.html">登录</a>
+				</div>
+			</header>
+			<nav>
+				<ul>
+					<li class="first-page"><a href="#">主页</a></li>
+					<li><a href="#">日志</a></li>
+					<li><a href="#">相册</a></li>
+					<li><a href="#">留言板</a></li>
+					<li><a href="#">我的访客</a></li>
+					<input type="text" id="search" value="文章搜索..." onfocus="if (value =='文章搜索...'){value =''}" onblur="if (value ==''){value='文章搜索...'}" >
+					<button type="button"></button>
+				</ul>
+
+			</nav>
+			<div id="container">
+				<div class="flytext">
+					<img src="img/widespread.png" />
+					<marquee behavior="scroll" direction="left">
+						这是用来测试的无意义的一句话啦啦啦。
+					</marquee>
+				</div>
+				<div class="subcontent-aricle">
+					<div class="title">
+						<span>日志详情</span>
+					</div>
+					<div class="article-title">
+						<div class="sign">
+							<span id="sign1">原创</span>
+						</div>
+						<h3>小朋友要有小朋友的亚子</h3>
+					</div>
+					<div class="button-list">
+						<div class="like">
+							<img src="img/good.png" ><span>赞</span>
+						</div>
+						<div class="comment">
+							<img src="img/comment.png" ><span>评论</span>
+						</div>
+						<button type="button" id="reprint-article" onclick="reprintClick()">转载</button>
+						<div class="labels"><span>#电视剧</span></div>
+						<div class="last-article">
+							<img src="img/left.png" ><span>上一篇</span>
+						</div>
+						<div class="next-article">
+							<span>下一篇</span><img src="img/right.png" >
+						</div>
+					</div>
+					<div class="article-content">
+						好好读术！接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。
+						接下来别看了都是测试。接下来别看了都是测试。接下来别看了都是测试。
+					</div>
+					<div class="comment">
+						<div class="comment-title">
+							<span>评论</span>
+						</div>
+						<div class="comment-content">
+							<div class="single-comment">
+								<div class="personal-commentinf">
+									<img class="personal-icon" src="img/lengtu3.jpg" >
+									<div class="personal-name">
+										<a href="#">鲲鲲</a>
+									</div>	
+								</div>
+								<div class="personal-comment">
+										<div class="floor">
+											<span id="floor-count"><span >1</span>楼</span>
+											<span id="comment-time">评论时间：<span>2019-6-15 15:43:24</span></span>
+										</div>
+										<div class="personal-comment-content">
+											鸡你太美！
+										</div>
+								</div>
+							</div>
+							<div class="single-comment">
+								<div class="personal-commentinf">
+									<img class="personal-icon" src="img/lengtu3.jpg" >
+									<div class="personal-name">
+										<a href="#">鲲鲲</a>
+									</div>	
+								</div>
+								<div class="personal-comment">
+										<div class="floor">
+											<span id="floor-count"><span >2</span>楼</span>
+											<span id="comment-time">评论时间：<span>2019-6-15 15:43:24</span></span>
+										</div>
+										<div class="personal-comment-content">
+											鸡你实在是太美！
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="write-comment">
+						<div class="title">
+							发表评论
+						</div>
+						<div class="my-comment">
+							<img class="personal-icon" src="img/lengtu.jpg">
+							<div class="write-block">
+								<textarea rows="10" cols="120" id="write-textarea"></textarea>
+								<button type="submit">发表</button>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+			</div>
+			<footer>&copy;2019-2030 啦啦啦</footer>
+		</div>
+	</body>
+
+</html>

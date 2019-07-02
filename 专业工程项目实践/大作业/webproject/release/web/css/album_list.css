@@ -1,0 +1,140 @@
+/* div头部 */
+.album-collection{
+	background: white;
+	height: 600px;
+	border-radius: 8px;
+	margin: 5px auto;
+	width:960px;
+}
+.album-collection>.title{
+	padding: 5px;
+	background: rgb(235, 247, 253);
+}
+.album-collection>.title>span {
+	margin: 10px;
+	color: midnightblue;
+	font-weight: 600;
+}
+.add-album{
+	border:0;
+	background-color: cadetblue;
+	padding:10px 15px 10px 15px;
+	border-radius: 8px;
+	margin:10px;
+	cursor: pointer;
+}
+.add-album>span{
+	color:white;
+	font-size:large;
+}
+/* 相册列表 */
+.album-list{
+	width:960px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.single-album-inf{
+	list-style-type: none;
+	height:170px;
+	width:160px;
+	padding:10px;
+	margin-left:10px;
+	margin-top:20px;
+	background-color:rgba(230,230,250,0.2);
+	text-align: center;
+}
+.single-album-inf>a{
+	margin:5px;
+}
+.photo-description{
+	text-align: center;
+	font-size: 0.9em;
+}
+/* 换页栏 */
+.pagi {
+	margin-top:30px;
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+.pagination {
+	padding: 0;
+	height: 40px;
+	white-space: nowrap;
+	float: left;
+	position: relative;
+	right: 50%;
+}
+
+.pagination li {
+	display: inline;
+}
+
+.pagination li a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.pagination li a.active {
+	background-color: #99CCCC;
+	color: white;
+	border-radius: 5px;
+}
+
+.pagination li a:hover:not(.active) {
+	background-color: #ddd;
+}
+/* 隐藏层 */
+#popBox{
+    position: fixed;
+    display:none;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    width:200px;
+    height:100px;
+    z-index:11;
+    background:aliceblue; 
+}
+#popLayer{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+    display:none;
+    left:0;
+    top:0;
+	margin:auto;
+    z-index:10;
+    background:black;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+.input-area{
+	margin-left: 10px;
+	margin-top:10px;
+}
+.close{
+	position: absolute;
+	left: 90%;
+}
+.close>a>img{
+	width:20px;
+	height:20px;
+}
+#create-album{
+	margin-top:10px;
+	color:white;
+	border:0;
+	background: skyblue;
+	width:70px;
+	height:30px;
+	cursor: pointer;
+}

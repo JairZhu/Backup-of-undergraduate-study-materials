@@ -1,0 +1,104 @@
+.messages{
+	background-color:white;
+	width:960px;
+	 min-height:520px;
+}
+.messages>.title{
+	background-color: rgb(235,247,253);
+	height: 30px;
+}
+.messages>.title>span{
+	color:darkblue;
+	font-weight: 600;
+	position: relative;
+	left: 15px;
+	top:2px;
+}
+
+/* 我要留言 */
+
+.write-message>.title,.message-list>.title{
+	width:850px;
+	border-bottom: 1px solid skyblue;
+	margin:auto;
+	padding: 10px;
+}
+.write-message>.title>span,.message-list>.title>span{
+	font-weight: 600;
+}
+.write-block{
+	width:850px;
+	margin:auto;
+	padding: 10px;
+}
+/* 留言列表 */
+.message-list{
+	margin-top:40px;
+}
+.message-list>.title{
+	margin-bottom:20px;
+}
+.single-message{
+	width:830px;
+	display: flex;
+	position: relative;
+	left:70px;
+	border-bottom: 1px dashed lightgray;
+	padding-bottom: 25px;
+	margin-top:25px;
+}
+
+.personal-icon{
+	width:100px;
+	height:100px;
+}
+.personal-name>a{
+	font-size: small;
+	text-decoration: none;
+	color:midnightblue;
+}
+.personal-name>a:hover{
+	color:purple;
+}
+.personal-message{
+	margin-left:20px;
+}
+.floor{
+	margin-bottom:5px;
+}
+.floor>span{
+	font-size: small;
+}
+
+.message-opration{
+	display: flex;
+	margin-left: auto;
+}
+.delete{
+	margin-left:10px;
+}
+.delete>span,.reply>span{
+	font-size: small;
+	color:steelblue;
+	cursor: pointer;
+}
+.delete>span:hover,.reply>span:hover{
+	color:lightskyblue;
+}
+
+.more {
+	margin: 10px;
+	text-align: center;
+}
+
+#moreclick {
+	background-color: transparent;
+	border: transparent;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+#moreclick:hover {
+	color: gray;
+}
+

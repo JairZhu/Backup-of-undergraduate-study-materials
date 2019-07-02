@@ -1,0 +1,128 @@
+/* 头部样式 */
+#wrapper>header {
+	background-color: rgb(73, 101, 149);
+	height: 100px;
+	overflow: hidden;
+}
+
+#header-text {
+	margin-left: 19%;
+	position: relative;
+	transition-duration: 1.5s;
+	width: 50%;
+}
+
+#header-text:hover {
+	transform: translateX(20px);
+	text-shadow: darkblue 1px 1px 10px;
+}
+
+h1 {
+	color: white;
+	margin: auto;
+	font-size: 25px;
+	padding-top: 15px;
+	font-family: 华文细黑;
+	text-shadow: gray 2px 2px;
+
+}
+
+#signature {
+	color: white;
+	text-shadow: gray 2px 2px;
+	padding-top: 5px;
+
+}
+
+.login{
+	display: inline-block;
+	position: relative;
+	top:-60px;
+	left:80%;
+	color: white;
+}
+.login>a{
+	color: skyblue;
+}
+
+/*导航栏样式*/
+.first-page {
+	background-color: rgb(73, 90, 130);
+}
+
+#wrapper>nav {
+	height: 50px;
+	background-color: rgb(143, 167, 195);
+	overflow: hidden;
+
+}
+
+#wrapper>nav li {
+	padding-left: 20px;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+}
+
+#wrapper>nav li:hover {
+	background-color: rgb(73, 90, 130);
+}
+
+#wrapper>nav ul {
+	max-width: 960px;
+	margin: auto;
+}
+
+#wrapper>nav a {
+	color: white;
+	font-family: 黑体;
+	font-size: large;
+	text-decoration: none;
+	position: relative;
+	left: -9px;
+}
+
+#wrapper>nav>ul>button {
+	width:25px;
+	height:25px;
+	position: relative;
+	left:40%;
+	top:8px;
+	border: 0;
+	background-color: transparent;
+	background-image: url(../img/lookup2.png);
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+#search{
+	position: relative;
+	left:40%;
+	margin-right: 10px;
+	color:darkgray;
+	padding:2px 3px 2px 3px;
+	border:0;
+	border-radius: 2px;
+	
+}
+#wrapper>nav>ul>button:hover {
+	background-image: url(../img/lookup22.png);
+}
+
+/* 飞字条 */
+
+#wrapper>#container>.flytext {
+	padding: 5px 10px;
+	position: relative;
+}
+
+#wrapper>#container>.flytext>img {
+	position: absolute;
+	top: 9px;
+	padding-right: 5px;
+
+}
+
+#wrapper>#container>.flytext>marquee {
+	max-width: 900px;
+	margin-left: 25px;
+}

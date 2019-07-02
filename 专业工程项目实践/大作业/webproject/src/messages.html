@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人设置</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/mainpage.css">
+		<link rel="stylesheet" type="text/css" href="css/mainpage_header.css">
+		<link rel="stylesheet" type="text/css" href="css/messages.css">
+		<meta name="Description" content="666的博客,心随你动!" />		
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<div id="header-text">
+					<h1>游呢娃子的博客</h1>
+					<div id="signature">这个人很懒，什么都没有说。</div>
+					
+				</div>
+				<div class="login">
+					您好，请 <a href="sign_in.html">登录</a>
+				</div>
+			</header>
+			<nav>
+				<ul>
+					<li class="first-page"><a href="#">主页</a></li>
+					<li><a href="#">日志</a></li>
+					<li><a href="#">相册</a></li>
+					<li><a href="#">留言板</a></li>
+					<li><a href="#">我的访客</a></li>
+					<input type="text" id="search" value="文章搜索..." onfocus="if (value =='文章搜索...'){value =''}" onblur="if (value ==''){value='文章搜索...'}" >
+					<button type="button"></button>
+				</ul>
+		
+			</nav>
+			<div id="container">
+				<div class="flytext">
+					<img src="img/widespread.png" />
+					<marquee behavior="scroll" direction="left">
+						这是用来测试的无意义的一句话啦啦啦。
+					</marquee>
+				</div>
+				<div class="messages">
+					<div class="title">
+						<span>留言板</span>
+					</div>
+					<div class="write-message">
+						<div class="title">
+							<span>我要留言</span>
+						</div>
+						<div class="write-block">
+							文本编辑框todo
+						</div>
+					</div>
+					<div class="message-list">
+						<div class="title">
+							<span>留言列表</span>
+						</div>
+						<div class="single-message" id="single-message-0"> 
+							<div class="personal-messageinf">
+								<img class="personal-icon" src="img/lengtu3.jpg" >
+								<div class="personal-name">
+									<a href="#">鲲鲲</a>
+								</div>	
+							</div>
+							<div class="personal-message">
+									<div class="floor">
+										<span id="floor-count"><span >1</span>楼</span>
+										<span id="message-time">留言发表于：<span>2019-6-15 15:43:24</span></span>
+									</div>
+									<div class="personal-message-content">
+										鸡你太美！
+									</div>
+							</div>
+							<div class="message-opration">
+								<div class="reply">
+									<span>回复</span>
+								</div>
+								<div class="delete">
+									<span>删除</span>
+								</div>								
+							</div>							
+						</div>					
+					</div>
+				</div>
+				<div class="more">
+					<button type="button" id="moreclick" >点击加载更多...</button>
+				</div>
+			</div>
+			<footer>&copy;2019-2030 啦啦啦</footer>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var sourceNode = document.getElementById("single-message-0");
+		for (var i = 1; i < 5; i++) {
+			var clonedNode = sourceNode.cloneNode(true);
+			clonedNode.setAttribute("id", "single-message-" + i);
+			sourceNode.parentNode.appendChild(clonedNode);
+		}
+	</script>
+</html>

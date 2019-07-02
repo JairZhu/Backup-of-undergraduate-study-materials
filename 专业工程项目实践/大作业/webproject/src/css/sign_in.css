@@ -1,0 +1,76 @@
+/* 背景图设置 */
+body{
+	background-image:url(../img/sign_bk.jpg);
+	background-size:150% 150%;
+	background-repeat:no-repeat center;
+}
+/* 登录框 */
+.signin_box{
+	background-color: rgba(255,255,255,0.8);
+	height: 350px;
+	width:400px;
+	margin:30px auto;
+	border-radius: 20px;
+	padding:50px;
+}
+.sign-title{
+	position: relative;
+}
+.sign-title>span{
+	color: rgba(0,0,0,0.8);
+	font-size: 1.5em;
+    text-shadow: 5px 5px 5px cornflowerblue;
+}
+.input-area{
+	display: flex;
+	flex-direction: column;
+	margin-top:30px;
+}
+.username-label,.password-label{
+	margin-bottom: 10px;
+	font-size:1.1em ;
+}
+#username,#password{
+	height:25px;
+	font-size: 1em;
+}
+#submitbutton{
+	display: block;
+	margin:auto;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	top:40px;
+	width:100px;
+	height:50px;
+	font-size:large;
+	border: 0;
+	border-radius: 10px;
+	color: white;
+	background-color:cadetblue;
+}
+#submitbutton:hover{
+	background-color: lightblue;
+}
+.change_link{
+	position: relative;
+	top:80px;
+	left:250px;
+}
+.to-register{
+	text-decoration: none;
+	color:royalblue;
+}
+.to-register:hover{
+	color:rgba(0,0,255,0.4);
+}
+/* 尾部 */
+footer {
+	margin: auto;
+	color: white;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	position: relative;
+	top:210px;
+}

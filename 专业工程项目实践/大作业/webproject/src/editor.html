@@ -1,0 +1,79 @@
+<html>
+<head>
+    <script type="text/javascript" src="jscolor/jscolor.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body onLoad="txtboxload()" style="width:800px;margin: auto;margin-top: 40px;">
+  博客标题:
+  <script type="text/javascript">
+    var headbox = document.createElement("iframe");
+    headbox.name = headbox.id = "headlineEditor";
+    headbox.style = "width:800px;height:40px;margin:auto;";
+    if (headbox.addEventListener){
+        headbox.addEventListener("load",function(e){this.contentWindow.document.designMode = "on";}, false);
+    } else if (headbox.attachEvent){
+        headbox.attachEvent("load", function(e){this.contentWindow.document.designMode = "on";});
+    }
+    document.body.appendChild(headbox);
+    headlineEditor.document.designMode="on";
+    headlineEditor.document.open();
+    headlineEditor.document.write('<head><style type="text/css">body{font-family:arial; font-size:20px; margin:}</style> </head>');
+    headlineEditor.document.close();
+    headlineEditor.document.focus();
+  </script>
+<div style="margin:auto; margin-bottom:10px;margin-top: 10px;">
+  <input type="button" id="bold" style="height:20px; width:auto; font-weight:bold;font-size:20px;" value="Bold" onClick="fontEdit('bold')" />
+  <input type="button" id="italic" style="height:20px; width:auto; font-style:italic;font-size:20px;" value="Italic" onClick="fontEdit('italic')" />
+  <input type="button" id="underline" style="height:20px; width:auto; text-decoration:underline;font-size:20px;" value="Underline" onClick="fontEdit('underline')" /> |
+  <input type="button" style="height:20px; width:auto;font-size:20px;"value="Left" onClick="fontEdit('justifyleft')" title="align left" />
+  <input type="button" style="height:20px; width:auto;font-size:20px;"value="Center" onClick="fontEdit('justifycenter')" title="center" />
+  <input type="button" style="height:20px; width:auto;font-size:20px;"value="Right" onClick="fontEdit('justifyright')" title="align right" /> |
+  <select id="fonts" onChange="fontEdit('fontName',this[this.selectedIndex].value)">
+     <option value="Arial" >Arial</option>
+     <option value="Comic Sans MS">Comic Sans MS</option>
+     <option value="Courier New">Courier New</option>
+     <option value="Monotype Corsiva">Monotype</option>
+     <option value="Tahoma">Tahoma</option>
+     <option value="Times">Times</option>
+  </select>
+  <select id="size" onChange="fontEdit('fontSize',this[this.selectedIndex].value)">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+     <option value="6">6</option>
+     <option value="7">7</option>
+  </select> |
+  <!--Color: <input class="color {hash:true}" value="000000" onChange="fontEdit('foreColor','#'+this.color)" />-->
+  颜色: <input class="color" value="000000" onChange="fontEdit('foreColor','#'+this.color)">
+</div>
+正文:
+<script type="text/javascript">
+//Creates a new iframe with id "textEditor"
+function txtboxload()
+{
+    var textbox = document.createElement("iframe");
+    textbox.name = textbox.id = "textEditor";
+    textbox.style = "width:800px;height:600px;margin:auto;";
+    if (textbox.addEventListener){
+        textbox.addEventListener("load",function(e){this.contentWindow.document.designMode = "on";}, false);
+    } else if (textbox.attachEvent){
+        textbox.attachEvent("load", function(e){this.contentWindow.document.designMode = "on";});
+    }
+    document.body.appendChild(textbox);
+    textEditor.document.designMode="on";
+    textEditor.document.open();
+    textEditor.document.write('<head><style type="text/css">body{font-family:arial; font-size:20px; margin:}</style> </head>');
+    textEditor.document.close();
+}
+function fontEdit(x,y)
+{
+    textEditor.document.execCommand(x,"",y);
+    textEditor.focus();
+}
+
+</script>
+</body>
+</html>

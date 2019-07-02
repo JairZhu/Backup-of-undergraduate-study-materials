@@ -1,0 +1,111 @@
+/* 侧边 */
+#wrapper>#container>.content>aside {
+	width: 260px;
+	margin-left: 10px;
+}
+/* 侧边分享 */
+.shareclick {
+	background-color: white;
+	padding: 5px;
+
+}
+
+.shareclick>img {
+	cursor: pointer;
+	margin-left: 10px;
+}
+/* 标签 */
+.label-cloud{
+	margin-top:10px;
+	background-color:white ;
+}
+.label-cloud>.title{
+	font-weight: 600;
+	padding: 5px;
+	border-bottom:1px solid lightgray;
+}
+.label-cloud>.title>span{
+	color:rgb(75,0,130);
+	margin: 10px;
+}
+
+.label-cloud>.content>.labels{
+	display: inline-block;
+	margin-left:10px;
+	margin-top:5px;
+}
+.label-cloud>.content>.labels>span{
+	color: rgb(147,112,219);
+	font-size:small;
+	cursor: pointer;
+}
+.label-cloud>.content>.labels>span:hover{
+	background-color: ghostwhite;
+	
+}
+
+/* 留言 */
+.lately-comment{
+	margin-top:10px;
+	background-color:white ;
+	overflow: hidden;
+}
+.lately-comment>.title{
+	font-weight: 600;
+	padding: 5px;
+	border-bottom:1px solid lightgray;
+}
+.lately-comment>.title>span{
+	color: darkslateblue;
+	margin: 10px;
+}
+.lately-comment>.content{
+	padding: 5px;
+	
+}
+.comment-spliter{
+	border-bottom: 1px dashed lightsteelblue;
+}
+.lately-comment>.content>.visitor{
+	height: 70px;
+	padding: 5px;
+	font-size:smaller;
+	overflow: hidden;
+	padding-bottom: 8px;
+}
+.lately-comment>.content>.visitor>.name{
+	margin-bottom:5px;
+	color:rgb(4,177,204);
+}
+.lately-comment>.content>.visitor>.name>a{
+	color:rgb(4,177,204);
+	cursor: pointer;
+	text-decoration: none;
+}
+.lately-comment>.content>.visitor>.name>a:hover{
+	text-decoration: underline;
+}
+
+/* 相册 */
+.album{
+	margin-top:10px;
+	background-color:white ;
+	height: 250px;
+}
+.album>.title{
+	font-weight: 600;
+	padding: 5px;
+	border-bottom:1px solid lightgray;
+	margin-bottom: 5px;
+}
+.album>.title>span{
+	color: darkslategray;
+	margin: 10px;
+}
+
+.album>.content>img{
+	width: 200px;
+	display: block;
+	margin: auto;
+	
+}

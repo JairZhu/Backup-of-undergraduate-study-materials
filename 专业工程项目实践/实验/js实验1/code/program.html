@@ -1,0 +1,40 @@
+<!DOCTYPE  html>
+<html  lang="zh-cn">
+ <head>
+   <title>编程器</title>
+   <style>
+     #content {width: 300px; height: 200px;}
+     input[type="text"] {width: 15em}
+     [for="content"] {vertical-align: top;}
+     [for="x"] {text-align: right;padding-left: 58px;}
+     button {width: 70px; margin-left: 75px;}
+   </style>
+   <script>
+     function run() {
+      var x = document.getElementById("x").value;
+      var y = document.getElementById("y").value;
+      var prog_body = document.getElementById("content").value;
+      var prog = new Function("x", "y", prog_body);
+      prog(x, y);
+     }
+   </script>
+ </head>
+ <body>
+    <h1>编程器</h1>
+    <p>
+      <label for="x">x:</label> 
+      <input type="text" id="x">
+    </p>
+    <p>
+      <label for="x">y:</label>
+      <input type="text" id="y">
+    </p>
+    <p>
+      <label for="content">program:</label>
+      <textarea name="content" id="content"></textarea>
+    </p>
+    <p>
+      <button name="run" onclick="run()">运行</button>
+    </p>
+ </body>
+</html>

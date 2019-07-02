@@ -1,0 +1,217 @@
+.subcontent-aricle{
+	background-color: white;
+	margin: auto;
+	max-width: 960px;
+	border-radius: 8px;
+}
+.subcontent-aricle>.title{
+	background: rgb(235,247,253);
+	height:30px;
+}
+.subcontent-aricle>.title>span{
+	position: relative;
+	left: 15px;
+	top:5px;
+	font-weight: 600;
+	color:midnightblue;
+}
+#sign1 {
+	position: relative;
+	float: left;
+	border-radius: 20px;
+	background-color: darkslategray;
+	top:3px;
+	margin-right: 5px;
+}
+#sign2 {
+	position: relative;
+	float: left;
+	border-radius: 20px;
+	background-color: lightpink;
+	top:3px;
+	margin-right: 5px;
+}
+.sign>span {
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+}
+.article-title{
+	margin:15px;
+}
+/* 按键操作行 */
+.article-content{
+	margin:15px;
+	line-height: 22px;
+	min-height: 300px;
+}
+.button-list{
+	display: flex;
+	flex-direction: row;
+	white-space:nowrap;
+	
+}
+.button-list>.like,.button-list>.comment,.button-list>.last-article,.button-list>.next-article{
+	width:70px;
+	margin-left:25px;
+	padding: 5px;
+	
+}
+.button-list>.like{border-right:1px solid powderblue;}
+.button-list>.like>span,.button-list>.comment>span,.button-list>.last-article>span,.button-list>.next-article>span{
+	margin-left: 10px;
+	position: relative;
+	top:-3px;
+	font-size: 0.8em;
+	cursor:pointer;
+}
+.button-list>.last-article{
+	margin-left: auto;
+    margin-right: 10px;
+	
+	
+}
+.button-list>.like>span:hover,.button-list>.comment>span:hover,.button-list>.last-article>span:hover,.button-list>.next-article>span:hover{
+	color:darkgray;
+}
+.button-list>.next-article{
+	margin-left: initial;
+	margin-right: 20px;
+	border-left: 1px solid powderblue;
+}
+.button-list>.next-article>img{
+	margin-left:10px;
+}
+#reprint-article{
+	border: 0;
+	cursor: pointer;
+	width:80px;
+	color: white;
+	background-color: #6495ED;
+	border-radius: 8px;
+}
+.labels{
+	position: relative;
+	left:30px;
+	top:4px;
+}
+.labels>span{
+	font-size:small;
+}
+/* 评论区 */
+.subcontent-aricle>.comment{
+	min-height: 100px;
+	padding:10px;
+}
+.subcontent-aricle>.comment>.comment-title{
+	border-bottom:1px solid powderblue;
+}
+.subcontent-aricle>.comment>.comment-title>span{
+	background-color:white;
+	font-size: 0.8em;
+	border-top: 1px solid powderblue;
+	border-left: 1px solid powderblue;
+	border-right: 1px solid powderblue;
+	border-bottom: 1px solid white;
+	padding-left:10px;
+	padding-top:3px;
+	padding-right: 10px;
+	position: relative;
+	top:1px;
+	border-top-left-radius:5px ;
+	border-top-right-radius:5px ;
+}
+.subcontent-aricle>.comment>.comment-content{
+	margin-top:20px;
+}
+.comment-content>.single-comment{
+	display: flex;
+	flex-direction: row;
+	padding:10px;
+	padding-bottom: 30px;
+	border-bottom: 1px dashed powderblue ;
+}
+.personal-icon{
+	width:100px;
+	height:100px;
+}
+.comment-content>.single-comment>.personal-commentinf>.personal-name>a{
+	font-size: small;
+	margin-top: 5px;
+	text-decoration: none;
+	color:rgb(70,130,180);
+}
+.comment-content>.single-comment>.personal-commentinf>.personal-name>a:hover{
+	text-decoration: underline;
+}
+.single-comment>.personal-commentinf>.personal-name{
+	position: relative;
+	top:5px;
+	
+}
+.comment-content>.single-comment>.personal-comment{
+	margin-left: 20px;
+}
+.floor{
+	position: relative;
+	top:-5px;
+}
+.floor>span{
+	font-size:small;
+}
+.floor>#floor-count{
+	font-weight: 600;
+	margin-right:10px;
+}
+.floor>#comment-time,.floor>#comment-time>span{
+	color:darkgray;
+}
+.personal-comment-content{
+	font-size: 0.9em;
+}
+
+/* 发表评论 */
+.write-comment{
+	margin:10px;
+	padding:10px;
+}
+.my-comment{
+	display: flex;
+	flex-direction: row;
+}
+.write-comment>.title{
+	margin-bottom:15px;
+	font-size: small;
+	font-weight: 600;
+}
+.write-block{
+	display: flex;
+	flex-direction: column;
+	margin-left:10px;
+}
+.write-block>button{
+	height:30px;
+	width:60px;
+	font-size: 0.9em;
+	background-color:skyblue;
+	color:white;
+	border:0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.write-block>button:hover{
+	background-color:lightblue;
+}
+#write-textarea {
+	padding: 10px;
+	resize: none;
+	margin-bottom: 10px;
+}
+
+#write-textarea:focus{
+	border: 1px solid;
+	border-color: rgba(82, 168, 236, 0.8);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+	
+}

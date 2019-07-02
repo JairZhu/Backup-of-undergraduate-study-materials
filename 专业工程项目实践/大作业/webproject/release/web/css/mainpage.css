@@ -1,0 +1,113 @@
+/* 正文 */
+#wrapper {
+	background-color: rgb(245, 245, 245)
+}
+
+#wrapper>#container {
+	margin: auto;
+	max-width: 960px;
+}
+
+#wrapper>#container>.content {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+}
+
+#wrapper>#container>.content>section {
+	min-width: 60%;
+	max-width: 695px;
+}
+
+#wrapper>#container>.content>section>.top-article {
+	background-color: white;
+}
+
+
+/* 置顶文章 */
+.top-title,
+.cont {
+	padding: 5px;
+}
+
+.top-title {
+	font-weight: 600;
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 10px;
+}
+
+.text-title {
+	color: darkblue;
+	margin-left: 10px;
+}
+
+.art {
+	overflow: auto;
+	margin: 7px;
+}
+
+.art>.art-title>span {
+	display: inline-block;
+	width: 20px;
+	color: white;
+	text-align: center;
+	background-color: orangered;
+}
+
+.sign-span{
+	font-family: 楷体;
+	margin-right: 5px;
+	background-color: red;
+}
+
+
+.art-title {
+	float: left;
+}
+
+.art-title>a {
+	text-decoration: none;
+}
+
+.art-title>a:hover {
+	color: royalblue;
+	text-decoration: underline;
+}
+
+.count {
+	float: right;
+}
+
+.cnt {
+	display: inline-block;
+}
+
+#like {
+	color: rgb(220, 20, 60);
+}
+
+
+
+/* 尾部 */
+#wrapper>footer {
+	width: 960px;
+	margin: auto;
+	color: white;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background-color: rgb(143, 167, 195);
+}
+
+
+
+/* 移动端兼容操作 */
+@media (max-width:500px) {
+	#wrapper>nav {
+		overflow: scroll;
+	}
+
+	#wrapper>#container>.content>aside {
+		display: none;
+	}
+}
