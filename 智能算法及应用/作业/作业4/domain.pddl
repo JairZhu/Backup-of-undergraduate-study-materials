@@ -1,0 +1,11 @@
+(define (domain puzzle)
+    (:requirements :strips :equality :typing)
+    (:types number position)
+    (:predicates (locate ?X - number ?Y - position)
+                (neighbor ?X - position ?Y - position))
+    (:action slide
+        :parameters (?blank_pos - position ?num - number ?num_pos - position)
+        :precondition (and (locate n0 ?blank_pos) (locate ?num ?num_pos) (neighbor ?blank_pos ?num_pos)) 
+        :effect (and (locate n0 ?num_pos) (not (locate n0 ?blank_pos)) (locate ?num ?blank_pos) (not (locate ?num ?num_pos)))
+    )
+)
